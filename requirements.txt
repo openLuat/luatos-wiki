@@ -29,7 +29,6 @@ requests==2.25.1
 rsa==4.6
 six==1.15.0
 snowballstemmer==2.1.0
-socks==0
 soupsieve==2.1
 Sphinx==3.4.3
 sphinx-rtd-theme==0.5.1
