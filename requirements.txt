@@ -1,2 +1,3 @@
-furo==2020.12.30b24
 Sphinx==3.4.3
+furo==2020.12.30b24
+recommonmark==0.7.1
