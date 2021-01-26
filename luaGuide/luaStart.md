@@ -2324,12 +2324,6 @@ print(test.addB())--输出5
 
 <script>
 window.onload = function(){
-    //新窗口打开链接，更方便运行Lua代码
-    $(".section").find("a").each(function () {
-        if ($(this).attr("target") !== "_blank") {
-            $(this).attr('target', '_blank');
-        }
-    });
     //在代码块附近加上快速测试代码链接
     $("pre").each(function () {
         if($(this).text().indexOf("print") >= 0)
