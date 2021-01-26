@@ -14,7 +14,7 @@
 
 
 | LuatOS是一款针对嵌入式的脚本运行框架，可以极大提升开发效率。
-| 使用Lua作为主要语言，并针对源较少的嵌入式资环境进行了优化，极大提升了运行效率，并且可适配更多的单片机和无线芯片模组。
+| 使用Lua作为主要语言，针对资源较少的嵌入式环境进行了优化，极大提升了运行效率，并且可适配更多的单片机和无线芯片模组。
 
 #. 基于Lua 5.3
 #. 低内存需求, 最低32kb, 96kb flash空间
@@ -43,7 +43,7 @@
    <script>
    window.onload = function(){
       //新窗口打开链接
-      $(".section").find("a").each(function () {
+      $(".content").find("a").each(function () {
          if ($(this).attr("target") !== "_blank") {
                $(this).attr('target', '_blank');
          }
