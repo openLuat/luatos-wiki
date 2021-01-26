@@ -37,6 +37,7 @@
 
    luaGuide/luaStart
    luaGuide/test
+   luaGuide/aliyun
 
 .. raw:: html
 
