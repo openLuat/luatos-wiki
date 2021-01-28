@@ -77,3 +77,4 @@ html_static_path = ['_static']
 html_show_sphinx = False
 html_search_language = 'zh'
 html_baseurl = 'https://luatos.wiki/'
+sitemap_url_scheme = "{link}"
