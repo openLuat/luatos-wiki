@@ -160,8 +160,7 @@ function print(...)
     js.global:luaPrint(table.concat(out,"\t"))
 end
 package.path = "./lua/?.lua"
-require("head")
-gpio = require("gpio")`);
+require("head")`);
     luaTask_bindFn(function (L) {
         var io = fengari.lua.lua_tointeger(L,1);
         var state = fengari.lua.lua_tointeger(L,2);
