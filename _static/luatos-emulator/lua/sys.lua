@@ -305,8 +305,6 @@ function sys.trigger(param)
     end
 end
 
---触发请求的回调
-local triggers = {}
 --异步返回的回调
 local asyncTable = {}
 --是否启用了task？
@@ -320,14 +318,10 @@ function sysTriggerCB(id,t,data)
     if not taskEnable then return end
     if id >= 0 and t == 'timer' then--定时器消息
         sys.trigger(id)
-    elseif type(triggers[t]) == 'function' then---其他外部触发
-        triggers[t](data)
+    elseif type(_G["@jsTriggerList"][t]) == 'function' then---其他外部触发
+        _G["@jsTriggerList"][t](data)
     end
 end
 
---注册回调触发函数
-function sys.triggerRegister(t,f)
-    triggers[t] = f
-end
 
 return sys

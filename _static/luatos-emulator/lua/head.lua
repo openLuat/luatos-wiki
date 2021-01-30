@@ -20,3 +20,10 @@ json = {
 
 log = require("log")
 
+
+--触发请求的回调
+_G["@jsTriggerList"] = {}
+--注册回调触发函数
+function jsTriggerRegister(t,f)
+    _G["@jsTriggerList"][t] = f
+end

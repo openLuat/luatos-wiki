@@ -58,8 +58,11 @@ sys.timerLoopStart(function()
     last = not last--更改状态标志
 end,1000)
 
---运行lua task，只能调用一次，而且必须写在末尾
-sys.run()</textarea>
+-- 用户代码已结束---------------------------------------------
+-- 运行lua task，只能调用一次，而且必须写在末尾
+-- 结尾总是这一句
+sys.run()
+-- sys.run()之后后面不要加任何语句!!!!!</textarea>
             </div>
             <div class="col-md-6">
                 <div id="main-svg-div" class="row" style="

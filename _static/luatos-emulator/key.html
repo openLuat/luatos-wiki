@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LuatOS 在线模拟 - task框架</title>
+    <title>LuatOS 在线模拟 - 按键输入</title>
     <meta name="description" content="在线模拟LuatOS">
     <meta name="author" content="chenxuuu">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -19,6 +19,13 @@
             font-family:  'Sarasa Mono SC',Consolas, 'Microsoft Yahei' !important;
             font-size: 14px !important;
         }
+        .key-a {
+            display: block;
+            position: absolute;
+            width: 35px;
+            height: 20px;
+            text-decoration:none
+        }
     </style>
 </head>
 
@@ -27,7 +34,7 @@
         <div class="row">
             <div class="col-md-12">
                 <h3>
-                    实验项目：task框架
+                    实验项目：按键输入
                 </h3>
             </div>
         </div>
@@ -40,23 +47,27 @@
                     停止
                 </button>
                 <textarea class="form-control" id="luaCode" name="code">
---加载sys库
 sys = require("sys")
 
---启动一个定时器
+G6 = gpio.setup(6, function() -- 中断模式, 下降沿触发，开启上拉
+    log.info("gpio6", "gpio6 button down",G6())
+end, gpio.PULLUP,gpio.FALLING)
+
+G7 = gpio.setup(7, function(state) -- 中断模式, 上升下降都触发，开启上拉
+    log.info("gpio7", "gpio7 button",G7())
+end, gpio.PULLUP,gpio.BOTH)
+
+G8 = gpio.setup(8, nil, gpio.PULLUP)--输入模式，手动读取状态，开启上拉
 sys.timerLoopStart(function()
-    log.info("定时器",os.time())
+    log.info("gpio8",G8())
 end,1000)
 
---新建任务，每休眠2000ms继续一次
-sys.taskInit(function()
-    local count = 0
-    while true do
-        sys.wait(2000)--等待2000ms
-        count = count + 1
-        log.info("任务","运行了",count,"次")
-    end
-end)
+-- 设置gpio4为输出模式，初始状态为低电平，返回的led4为控制gpio的函数
+led4 = gpio.setup(4,0,gpio.PULLUP)
+-- 中断模式, 上升下降都触发，开启上拉，触发后改变led4状态
+G9 = gpio.setup(9, function(state)
+    led4(G9() == 1 and 0 or 1)
+end, gpio.PULLUP,gpio.BOTH)
 
 -- 用户代码已结束---------------------------------------------
 -- 运行lua task，只能调用一次，而且必须写在末尾
@@ -65,9 +76,27 @@ sys.run()
 -- sys.run()之后后面不要加任何语句!!!!!</textarea>
             </div>
             <div class="col-md-6">
+                <div id="main-svg-div" class="row" style="
+                position: relative;
+                width: 100%;
+                height: 300px;">
+                    <object id="mainsvg" id="svgObject" data="image/key_mcu.svg" type="image/svg+xml" preserveAspectRatio="none meet"></object>
+                    <a id="svg_key6" onmousedown="keyDown(6)" onmouseup="keyUp(6)" href="#" class="key-a"
+                    style="top: 30px;left: 315px;"></a>
+                    <a id="svg_key7" onmousedown="keyDown(7)" onmouseup="keyUp(7)" href="#" class="key-a"
+                    style="top: 53px;left: 315px;"></a>
+                    <a id="svg_key8" onmousedown="keyDown(8)" onmouseup="keyUp(8)" href="#" class="key-a"
+                    style="top: 80px;left: 315px;"></a>
+                    <a id="svg_key9" onmousedown="keyDown(9)" onmouseup="keyUp(9)" href="#" class="key-a"
+                    style="top: 106px;left: 315px;"></a>
+                    <a id="svg_key10" onmousedown="keyDown(10)" onmouseup="keyUp(10)" href="#" class="key-a"
+                    style="top: 134px;left: 315px;"></a>
+                </div>
                 <p>日志输出：</p>
-                <textarea class="form-control" id="output" readonly="true"
-                    style="position: relative;width: 100%;height: 500px;">虚拟机未加载</textarea>
+                <div class="row" style="position: relative;width: 100%;height: 300px;">
+                    <textarea class="form-control" id="output" readonly="true">虚拟机未加载</textarea>
+                </div>
+
             </div>
         </div>
     </div>
@@ -152,12 +181,41 @@ function print(...)
     js.global:luaPrint(table.concat(out,"\t"))
 end
 package.path = "./lua/?.lua"
-require("head")`);
+require("head")
+gpio = require("gpio")`);
+    luaTask_bindFn(function (L) {
+        var io = fengari.lua.lua_tointeger(L,1);
+        var state = fengari.lua.lua_tointeger(L,2);
+        if(io < 1 || io > 5 || (state != 1 && state != 0)) return 0;
+        var led = "svg_led"+io;
+        var color = "";
+        if(state == 1)
+            color = "yellow";
+        else
+            color = "lightgrey";
+        console.log(led,color);
+        document.getElementById("mainsvg").getSVGDocument().getElementById(led).setAttribute("fill", color);
+        return 0;
+    },"set_gpio_state");
+    $("#main-svg-div").html($("#main-svg-div").html());
     $("#output").text("");
     luaPrint("虚拟机初始化完毕");
     luaTask_print = luaPrint;
 }
 $("#stopButton").prop("disabled", true);
+
+
+function keyDown(key) {
+    console.log("key",key,"down");
+    $("#svg_key"+key).css("background-image","url(image/key_down.svg)");
+    luaTask_trigger("gpio_trigger_cb",key);
+}
+
+function keyUp(key) {
+    console.log("key",key,"up");
+    $("#svg_key"+key).css("background-image","");
+    luaTask_trigger("gpio_trigger_cb",0x100+key);
+}
     </script>
     <script>
         var _hmt = _hmt || [];
