@@ -36,7 +36,7 @@
    :hidden:
    :caption: Lua 教程
 
-   luaGuide/luaStart
-   luaGuide/test
-   luaGuide/aliyun
+   luaGuide/introduction
+   luaGuide/advanced
+   luaGuide/source
 
