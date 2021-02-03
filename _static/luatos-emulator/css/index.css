@@ -112,8 +112,43 @@ html {
   }
 }
 
+.content .operation > button:first-child {
+  background-image: url(icon/add.svg);
+}
+.content .operation > button:last-child {
+  background-image: url(icon/min.svg);
+}
+
+.content .operation > button:hover {
+  background-color: rgba(201, 201, 201, 0.6);
+}
+
+.content .operation {
+  width: 57px;
+  height: 30px;
+  margin: 0px auto;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+  z-index: 999;
+  position: absolute;
+  left: calc(45%);
+}
+
+.content .operation > button {
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  background-size: 22px 22px;
+  outline: none;
+  cursor: pointer;
+  margin: 4px 0;
+  display: inline-block;
+}
 
 .show-things-div {
+  z-index: -1;
   background-image: linear-gradient(90deg, rgba(180, 180, 180, 0.15) 10%, rgba(0, 0, 0, 0) 10%),
     linear-gradient(rgba(180, 180, 180, 0.15) 10%, rgba(0, 0, 0, 0) 10%);
   background-size: 20px 20px;
@@ -130,10 +165,11 @@ html {
   color: #7d7d7d;
 }
 
-#mainsvg {
-  z-index: -1;
+.main-svg-div {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
+
+

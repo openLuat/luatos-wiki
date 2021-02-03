@@ -12,6 +12,8 @@ local gpioSettings = {}
 local function setGpio(io,state)
     if set_gpio_state then
         set_gpio_state(io,state)
+    else
+        log.warn("GPIO", "GPIO lib not found")
     end
 end
 

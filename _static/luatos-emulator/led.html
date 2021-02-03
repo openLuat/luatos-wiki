@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <title>LuatOS 在线模拟 - task框架</title>
+  <title>LuatOS 在线模拟 - 点灯</title>
   <meta name="description" content="在线模拟LuatOS">
   <meta name="author" content="chenxuuu">
   <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -18,9 +18,9 @@
         <button id="svg-small" title="停止"></button>
       </div>
       <div class="left show-things-div">
-        <h1 class="page-title">实验项目：task框架</h1>
-        <div class="main-svg-div">
-          <object id="main-svg" data="image/simple.svg" type="image/svg+xml"></object>
+        <h1 class="page-title">实验项目：点灯</h1>
+        <div class="main-svg-div" id="main-svg-div">
+          <object id="main-svg" data="image/led.svg" type="image/svg+xml"></object>
         </div>
       </div>
       <div class="right">
@@ -45,20 +45,21 @@
 `--加载sys库
 sys = require("sys")
 
---启动一个定时器
-sys.timerLoopStart(function()
-    log.info("定时器",os.time())
-end,1000)
+-- 设置gpio1为输出模式，初始状态为低电平，返回的led1为控制gpio的函数
+led1 = gpio.setup(1,0,gpio.PULLUP)
+-- 设置gpio1为高电平，点亮led1
+led1(1)
 
---新建任务，每休眠2000ms继续一次
-sys.taskInit(function()
-    local count = 0
-    while true do
-        sys.wait(2000)--等待2000ms
-        count = count + 1
-        log.info("任务","运行了",count,"次")
-    end
-end)
+-- 设置gpio2为输出模式，初始状态为低电平，返回的led1为控制gpio的函数
+led2 = gpio.setup(2,0,gpio.PULLUP)
+-- 记录上次的led状态
+local last = false
+-- 一秒改变一次led2的状态
+sys.timerLoopStart(function()
+    led2(last and 0 or 1)-- 根据上次状态决定是否亮灯
+    log.info("led2",last)
+    last = not last--更改状态标志
+end,1000)
 
 -- 用户代码已结束---------------------------------------------
 -- 运行lua task，只能调用一次，而且必须写在末尾
@@ -85,6 +86,25 @@ function print(...)
 end
 package.path = "./lua/?.lua"
 require("head")`);
+    luaTask_bindFn(function (L) {
+        var io = fengari.lua.lua_tointeger(L,1);
+        var state = fengari.lua.lua_tointeger(L,2);
+        if(io < 1 || io > 5 || (state != 1 && state != 0)) return 0;
+        var led = "svg_led"+io;
+        var color = "";
+        if(state == 1)
+            color = "yellow";
+        else
+            color = "lightgrey";
+        console.log(led,color);
+        document.getElementById("main-svg").getSVGDocument().getElementById(led).setAttribute("fill", color);
+        return 0;
+    },"set_gpio_state");
+    document.getElementById("main-svg").getSVGDocument().getElementById("svg_led1").setAttribute("fill", "lightgrey");
+    document.getElementById("main-svg").getSVGDocument().getElementById("svg_led2").setAttribute("fill", "lightgrey");
+    document.getElementById("main-svg").getSVGDocument().getElementById("svg_led3").setAttribute("fill", "lightgrey");
+    document.getElementById("main-svg").getSVGDocument().getElementById("svg_led4").setAttribute("fill", "lightgrey");
+    document.getElementById("main-svg").getSVGDocument().getElementById("svg_led5").setAttribute("fill", "lightgrey");
     $("#output").text("");
     luaPrint("虚拟机初始化完毕");
 }
