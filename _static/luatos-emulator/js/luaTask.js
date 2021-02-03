@@ -101,3 +101,55 @@ function luaTask_clean() {
     }
     fengari.lua.lua_close(luaTask_L);
 }
+
+Date.prototype.Format = function (fmt) {
+    var o = {
+        "M+": this.getMonth() + 1, //月份
+        "d+": this.getDate(), //日
+        "H+": this.getHours(), //小时
+        "m+": this.getMinutes(), //分
+        "s+": this.getSeconds(), //秒
+        "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+        "S": this.getMilliseconds() //毫秒
+    };
+    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    return fmt;
+}
+
+function luaPrint(s) {
+    $("#output").append("["+new Date().Format("HH:mm:ss")+"] ");
+    if(typeof(s) != "string")
+        s = "";
+    var textarea = $("#output").append(s.replace("<","&lt;") + "\r\n");
+    textarea.scrollTop(textarea[0].scrollHeight - textarea.height());
+}
+luaTask_print = luaPrint;
+luaPrint("加载完毕，等待运行");
+
+function runCode(code) {
+    newLuaState();
+    $("#code-run").prop("disabled", true);
+    $("#code-stop").prop("disabled", false);
+    try {
+        var r = luaTask_doString(code);
+        if(!r.success) {
+            luaPrint("虚拟机报错：");
+            luaPrint(r.error);
+        }
+    }
+    catch (err) {
+        luaPrint("js环境报错：");
+        luaPrint(err);
+    }
+}
+
+function stopCode() {
+    $("#code-run").prop("disabled", false);
+    $("#code-stop").prop("disabled", true);
+    luaTask_clean();
+    luaPrint("虚拟机已停止运行");
+}
+
+

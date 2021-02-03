@@ -1,46 +1,42 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LuatOS 在线模拟 - 日志输出</title>
-    <meta name="description" content="在线模拟LuatOS">
-    <meta name="author" content="chenxuuu">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="js/fengari-web.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="codemirror-5.49.2/lib/codemirror.css" />
-    <script src="codemirror-5.49.2/lib/codemirror.js"></script>
-    <script src="codemirror-5.49.2/mode/lua/lua.js"></script>
-    <link rel="stylesheet" href="codemirror-5.49.2/theme/mdn-like.css" />
-    <style>
-        .CodeMirror-line {
-            font-family:  'Sarasa Mono SC',Consolas, 'Microsoft Yahei' !important;
-            font-size: 14px !important;
-        }
-    </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>LuatOS 在线模拟 - 日志输出</title>
+  <meta name="description" content="在线模拟LuatOS">
+  <meta name="author" content="chenxuuu">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
-
+<script src="js/jquery.js"></script>
+<script src="js/fengari-web.js" type="text/javascript"></script>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <h3>
-                    实验项目：日志输出
-                </h3>
-            </div>
+  <div class="box">
+    <div class="content">
+      <div class="left show-things-div">
+        <h1 class="page-title">实验项目：日志输出</h1>
+        <object id="mainsvg" data="image/simple.svg" type="image/svg+xml"></object>
+      </div>
+      <div class="right">
+        <div class="operation">
+          <button id="code-run" title="运行" ></button>
+          <button id="code-stop" title="停止" disabled="disabled"></button>
+          <button id="code-reset" title="恢复原始代码"></button>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <button id="runButton" class="btn btn-sm btn-success" type="button" onclick="runCode()">
-                    运行
-                </button>
-                <button id="stopButton" class="btn btn-sm btn-danger" type="button" onclick="stopCode()" disabled>
-                    停止
-                </button>
-                <textarea class="form-control" id="luaCode" name="code">
---使用print可以打印数据
+        <div id="container"></div>
+      </div>
+      <div class="log">
+        <textarea readonly="true" id="output"></textarea>
+      </div>
+    </div>
+  </div>
+  <span class="luatos-url">
+    <a href="https://luatos.wiki" target="_blank">LuatOS 文档</a>
+  </span>
+  <script src="vs/loader.js"></script>
+  <script>
+    var defaultCode =
+`--使用print可以打印数据
 print("这是我打印出来的东西")
 
 --一般使用log库来打印日志，更加直观
@@ -55,82 +51,11 @@ log.trace("日志测试","这是一条trace日志，因为日志等级限制，�
 LOG_LEVEL = 1
 log.debug("日志测试","这是一条调试日志，现在能看到了")
 log.trace("日志测试","这是一条trace日志，现在能看到了")
-</textarea>
-            </div>
-            <div class="col-md-6">
-                <p>日志输出：</p>
-                <textarea class="form-control" id="output" readonly="true"
-                    style="position: relative;width: 100%;height: 500px;">虚拟机未加载</textarea>
-            </div>
-        </div>
-    </div>
-    <div style="text-align: center;"><a href="https://luatos.wiki" target="_blank">LuatOS 资料库</a>
-    <div id="qrcode"></div>
-    </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/luaTask.js"></script>
-    <script>
-
-Date.prototype.Format = function (fmt) {
-    var o = {
-        "M+": this.getMonth() + 1, //月份
-        "d+": this.getDate(), //日
-        "H+": this.getHours(), //小时
-        "m+": this.getMinutes(), //分
-        "s+": this.getSeconds(), //秒
-        "q+": Math.floor((this.getMonth() + 3) / 3), //季度
-        "S": this.getMilliseconds() //毫秒
-    };
-    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
-    for (var k in o)
-    if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
-    return fmt;
-}
-
-var editor = CodeMirror.fromTextArea(document.getElementById("luaCode"), {
-    mode: "text/x-lua", //实现lua代码高亮
-    lineNumbers: true,  //显示行号
-    theme: "mdn-like",  //设置主题
-    indentUnit: 4,
-    indentWithTabs: true,
-    matchBrackets: true,
-});
-editor.setSize("100%", 600);
-
-function luaPrint(s) {
-    $("#output").append("["+new Date().Format("HH:mm:ss.S")+"] ");
-    if(typeof(s) != "string")
-        s = "";
-    var textarea = $("#output").append(s.replace("<","&lt;") + "\r\n");
-    textarea.scrollTop(textarea[0].scrollHeight - textarea.height());
-}
-
-function runCode() {
-    var code = editor.getValue();
-    newLuaState();
-    $("#runButton").prop("disabled", true);
-    $("#stopButton").prop("disabled", false);
-    try {
-        var r = luaTask_doString(code);
-        if(!r.success) {
-            luaPrint("虚拟机报错：");
-            luaPrint(r.error);
-        }
-    }
-    catch (err) {
-        luaPrint("js环境报错：");
-        luaPrint(err);
-    }
-}
-
-function stopCode() {
-    $("#runButton").prop("disabled", false);
-    $("#stopButton").prop("disabled", true);
-    luaTask_clean();
-    luaPrint("虚拟机已停止运行");
-}
-
+`;
+  </script>
+  <script src="js/luaTask.js"></script>
+  <script src="js/editor.js"></script>
+  <script>
 function newLuaState() {
     luaTask_clean();
     luaTask_create();
@@ -148,19 +73,11 @@ package.path = "./lua/?.lua"
 require("head")`);
     $("#output").text("");
     luaPrint("虚拟机初始化完毕");
-    luaTask_print = luaPrint;
 }
-$("#stopButton").prop("disabled", true);
-    </script>
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?2e02fb796d5ae8812686e6270227de97";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
+
+$("#code-stop").prop("disabled", true);
+  </script>
+
 </body>
 
 </html>

@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  overflow: hidden;
+}
+.box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 100%;
+}
+.content .left {
+  width: calc(51vw - 1px);
+  height: 70%;
+  border-right: 1px solid #ddd;
+}
+.content .right {
+  width: 49vw;
+  height: 70%;
+  position: relative;
+  overflow: hidden;
+}
+.content .right .operation {
+  width: 88px;
+  height: 30px;
+  margin: 0px auto;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+  z-index: 999;
+  position: absolute;
+  left: calc(40%);
+}
+
+.content .right .operation > button {
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid transparent;
+  background-size: 22px 22px;
+  outline: none;
+  cursor: pointer;
+  margin: 4px 0;
+  display: inline-block;
+}
+.content .right .operation > button:disabled {
+  cursor: not-allowed;
+  background-color: rgba(175, 175, 175, 0.6);
+  filter: grayscale(80%);
+}
+.content .right .operation > button:hover {
+  background-color: rgba(201, 201, 201, 0.6);
+}
+.content .right .operation > button:first-child {
+  background-image: url(icon/start.svg);
+}
+.content .right .operation > button:nth-child(2) {
+  background-image: url(icon/stop.svg);
+}
+.content .right .operation > button:last-child {
+  background-image: url(icon/reload.svg);
+}
+.content #container {
+  width: 100%;
+  height: 100%;
+}
+.box .log {
+  width: calc(100%);
+  height: calc(30%);
+  border-top: 1px solid #ddd;
+}
+.box .log > textarea {
+  resize: none;
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: 1px solid transparent;
+  padding: 10px;
+  font-family: Consolas,"Ubuntu Mono",Monaco,Menlo,"Andale Mono","Liberation Mono",'微软雅黑',Courier,monospace;
+  background-color:rgb(255, 247, 227);
+  color: rgb(135, 143, 136);
+}
+@media (max-width: 980px) {
+  body,
+  html {
+    overflow: visible;
+    height: auto;
+    overflow-x: hidden;
+  }
+  .content {
+    height: 100%;
+  }
+  .content .left {
+    width: calc(100% - 25px);
+    height: 33%;
+  }
+  .content .right {
+    width: calc(100% - 25px);
+    height: 33%;
+  }
+  .content .log {
+    height: 33%;
+  }
+}
+
+
+.show-things-div {
+  background-image: linear-gradient(90deg, rgba(180, 180, 180, 0.15) 10%, rgba(0, 0, 0, 0) 10%),
+    linear-gradient(rgba(180, 180, 180, 0.15) 10%, rgba(0, 0, 0, 0) 10%);
+  background-size: 20px 20px;
+  z-index: -2;
+}
+
+.luatos-url {
+  position: absolute; right: 0; bottom: 0;
+}
+
+.page-title {
+  position: absolute;
+  color: #7d7d7d;
+}
+
+#mainsvg {
+  padding-left: calc(50% - 151px);
+  padding-top: 30px;
+}
