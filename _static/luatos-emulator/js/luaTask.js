@@ -129,6 +129,7 @@ luaTask_print = luaPrint;
 luaPrint("加载完毕，等待运行");
 
 function runCode(code) {
+    luaPrint("正在加载Lua环境，请稍侯。。。");
     newLuaState();
     $("#code-run").prop("disabled", true);
     $("#code-stop").prop("disabled", false);
@@ -153,13 +154,27 @@ function stopCode() {
 }
 
 
-var svg_scale = 1;
+var svgScale = 1;
+function setSvgScale() {
+    if(svgScale < 0.05)
+        svgScale = 0.05;
+    $("#svg-div").css("transform","scale("+svgScale+")");
+}
+
 $("#svg-big").click(function () {
-    svg_scale += 0.1;
-    $("#main-svg").css("transform","scale("+svg_scale+")");
+    svgScale += 0.1;
+    setSvgScale();
 });
 
 $("#svg-small").click(function () {
-    svg_scale -= 0.1;
-    $("#main-svg").css("transform","scale("+svg_scale+")");
+    svgScale -= 0.1;
+    setSvgScale();
 });
+
+function onSvgDivWheel() {
+    if(event.deltaY < 0)
+        svgScale += 0.1;
+    else
+        svgScale -= 0.1;
+        setSvgScale();
+};

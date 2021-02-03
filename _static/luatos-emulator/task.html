@@ -17,10 +17,15 @@
         <button id="svg-big" title="运行" ></button>
         <button id="svg-small" title="停止"></button>
       </div>
-      <div class="left show-things-div">
-        <h1 class="page-title">实验项目：task框架</h1>
+      <div class="left show-things-div" onwheel="onSvgDivWheel()">
+        <span class="page-title">
+          <h1>实验项目：task框架</h1>
+          <p>鼠标放空白处，用滚轮缩放图片</p>
+        </span>
         <div class="main-svg-div">
-          <object id="main-svg" data="image/simple.svg" type="image/svg+xml"></object>
+          <div id="svg-div">
+            <object id="main-svg" data="image/simple.svg" type="image/svg+xml"></object>
+          </div>
         </div>
       </div>
       <div class="right">
