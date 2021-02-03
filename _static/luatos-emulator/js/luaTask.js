@@ -156,10 +156,10 @@ function stopCode() {
 var svg_scale = 1;
 $("#svg-big").click(function () {
     svg_scale += 0.1;
-    $("#main-svg").css("scale",""+svg_scale);
+    $("#main-svg").css("transform","scale("+svg_scale+")");
 });
 
 $("#svg-small").click(function () {
     svg_scale -= 0.1;
-    $("#main-svg").css("scale",""+svg_scale);
+    $("#main-svg").css("transform","scale("+svg_scale+")");
 });
