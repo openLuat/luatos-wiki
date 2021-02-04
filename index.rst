@@ -40,3 +40,9 @@
    luaGuide/advanced
    luaGuide/source
 
+.. toctree::
+   :hidden:
+   :caption: api 文档
+
+   api/index
+
