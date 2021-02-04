@@ -133,7 +133,7 @@ $("#code-stop").prop("disabled", true);
 
 function keyDown(key) {
     console.log("key",key,"down");
-    $("#svg_key"+key).css("background-image","url(/image/key_down.svg)");
+    $("#svg_key"+key).css("background-image","url(image/key_down.svg)");
     luaTask_trigger("gpio_trigger_cb",key);
 }
 
