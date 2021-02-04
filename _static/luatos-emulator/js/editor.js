@@ -1,12 +1,17 @@
 require.config({ paths: { 'vs': 'vs' } });
 require(['vs/editor/editor.main'], function () {
     var snippets = [];
-    $.get("https://gitee.com/openLuat/vscode-luatos-debug/raw/master/snippet.json", function (result) {
-        var j = JSON.parse(result);
+    $.get("vs/snippet.json", function (result) {
+        var j;
+        if(typeof(result)=="object")
+            j = result;
+        else
+            j= JSON.parse(result);
         for (var i in j) {
             snippets.push({
                 l: j[i].prefix,
-                t: j[i].body
+                t: j[i].body,
+                d: j[i].description,
             });
         }
     });
@@ -27,7 +32,8 @@ require(['vs/editor/editor.main'], function () {
                         label: snippets[i].l,
                         kind: monaco.languages.CompletionItemKind.Snippet,
                         insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
-                        insertText: snippets[i].t
+                        insertText: snippets[i].t,
+                        documentation: snippets[i].description,
                     });
                 }
             }
