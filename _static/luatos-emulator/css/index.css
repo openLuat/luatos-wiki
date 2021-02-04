@@ -171,3 +171,17 @@ html {
 }
 
 
+#main-svg {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #00000038;
+  background-color: #0000000a;
+}
+
+.key-float {
+  display: block;
+  position: absolute;
+  text-decoration:none;
+  width: 26px;
+  height: 8.86px;
+}

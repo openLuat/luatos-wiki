@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>LuatOS 在线模拟 - 按键输入</title>
+  <meta name="description" content="在线模拟LuatOS">
+  <meta name="author" content="chenxuuu">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<script src="js/jquery.js"></script>
+<script src="js/fengari-web.js" type="text/javascript"></script>
+<body>
+  <div class="box">
+    <div class="content">
+      <div class="operation">
+        <button id="svg-big" title="运行" ></button>
+        <button id="svg-small" title="停止"></button>
+      </div>
+      <div class="left show-things-div" onwheel="onSvgDivWheel()">
+        <span class="page-title">
+          <h1>实验项目：按键输入</h1>
+          <p>鼠标放空白处，用滚轮缩放图片</p>
+        </span>
+        <div class="main-svg-div">
+          <div id="svg-div">
+            <a id="svg_key11" href="javascript:void(0)" class="key-float" style="top: 43px; left: 248px;"
+ontouchstart="keyDown(11)" ontouchmove="keyUp(11)" ontouchend="keyUp(11)" onmousedown="keyDown(11)" onmouseup="keyUp(11)"></a>
+            <a id="svg_key12" href="javascript:void(0)" class="key-float" style="top: 58px; left: 248px;"
+ontouchstart="keyDown(12)" ontouchmove="keyUp(12)" ontouchend="keyUp(12)" onmousedown="keyDown(12)" onmouseup="keyUp(12)"></a>
+            <a id="svg_key13" href="javascript:void(0)" class="key-float" style="top: 73px; left: 248px;"
+ontouchstart="keyDown(13)" ontouchmove="keyUp(13)" ontouchend="keyUp(13)" onmousedown="keyDown(13)" onmouseup="keyUp(13)"></a>
+            <a id="svg_key14" href="javascript:void(0)" class="key-float" style="top: 89px; left: 248px;"
+ontouchstart="keyDown(14)" ontouchmove="keyUp(14)" ontouchend="keyUp(14)" onmousedown="keyDown(14)" onmouseup="keyUp(14)"></a>
+            <a id="svg_key15" href="javascript:void(0)" class="key-float" style="top: 103px;left: 248px;"
+ontouchstart="keyDown(15)" ontouchmove="keyUp(15)" ontouchend="keyUp(15)" onmousedown="keyDown(15)" onmouseup="keyUp(15)"></a>
+            <object id="main-svg" data="image/key.svg" type="image/svg+xml"></object>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="operation">
+          <button id="code-run" title="运行" ></button>
+          <button id="code-stop" title="停止" disabled="disabled"></button>
+          <button id="code-reset" title="恢复原始代码"></button>
+        </div>
+        <div id="container"></div>
+      </div>
+      <div class="log">
+        <textarea readonly="true" id="output"></textarea>
+      </div>
+    </div>
+  </div>
+  <span class="luatos-url">
+    <a href="https://luatos.wiki" target="_blank">LuatOS 文档</a>
+  </span>
+  <script src="vs/loader.js"></script>
+  <script>
+    var defaultCode =
+`--加载sys库
+sys = require("sys")
+
+K1 = gpio.setup(11, function() -- 中断模式, 下降沿触发，开启上拉
+    log.info("gpio11", "gpio11 button down",K1())
+end, gpio.PULLUP,gpio.FALLING)
+
+K2 = gpio.setup(12, function(state) -- 中断模式, 上升下降都触发，开启上拉
+    log.info("gpio12", "gpio12 button",K2())
+end, gpio.PULLUP,gpio.BOTH)
+
+K3 = gpio.setup(13, nil, gpio.PULLUP)--输入模式，手动读取状态，开启上拉
+sys.timerLoopStart(function()
+    log.info("gpio13",K3())
+end,1000)
+
+-- 设置gpio4为输出模式，初始状态为低电平，返回的led4为控制gpio的函数
+led4 = gpio.setup(4,0,gpio.PULLUP)
+-- 中断模式, 上升下降都触发，开启上拉，触发后改变led4状态
+K4 = gpio.setup(14, function(state)
+    led4(K4() == 1 and 0 or 1)
+end, gpio.PULLUP,gpio.BOTH)
+
+-- 用户代码已结束---------------------------------------------
+-- 运行lua task，只能调用一次，而且必须写在末尾
+-- 结尾总是这一句
+sys.run()
+-- sys.run()之后后面不要加任何语句!!!!!
+`;
+  </script>
+  <script src="js/luaTask.js"></script>
+  <script src="js/editor.js"></script>
+  <script>
+function newLuaState() {
+    luaTask_clean();
+    luaTask_create();
+    luaTask_doString(`
+js = require "js"
+--重写print函数
+function print(...)
+    local out = {}
+    for i=1,select('#', ...) do
+        table.insert(out,tostring(select(i, ...)))
+    end
+    js.global:luaPrint(table.concat(out,"\t"))
+end
+package.path = "./lua/?.lua"
+require("head")`);
+    luaTask_bindFn(function (L) {
+        var io = fengari.lua.lua_tointeger(L,1);
+        var state = fengari.lua.lua_tointeger(L,2);
+        if(io < 1 || io > 5 || (state != 1 && state != 0)) return 0;
+        var led = "svg_led"+io;
+        var color = "";
+        if(state == 1)
+            color = "yellow";
+        else
+            color = "lightgrey";
+        console.log(led,color);
+        document.getElementById("main-svg").getSVGDocument().getElementById(led).setAttribute("fill", color);
+        return 0;
+    },"set_gpio_state");
+    document.getElementById("main-svg").getSVGDocument().getElementById("svg_led1").setAttribute("fill", "lightgrey");
+    document.getElementById("main-svg").getSVGDocument().getElementById("svg_led2").setAttribute("fill", "lightgrey");
+    document.getElementById("main-svg").getSVGDocument().getElementById("svg_led3").setAttribute("fill", "lightgrey");
+    document.getElementById("main-svg").getSVGDocument().getElementById("svg_led4").setAttribute("fill", "lightgrey");
+    document.getElementById("main-svg").getSVGDocument().getElementById("svg_led5").setAttribute("fill", "lightgrey");
+    $("#output").text("");
+    luaPrint("虚拟机初始化完毕");
+}
+
+$("#code-stop").prop("disabled", true);
+
+
+function keyDown(key) {
+    console.log("key",key,"down");
+    $("#svg_key"+key).css("background-image","url(/image/key_down.svg)");
+    luaTask_trigger("gpio_trigger_cb",key);
+}
+
+function keyUp(key) {
+    console.log("key",key,"up");
+    $("#svg_key"+key).css("background-image","");
+    luaTask_trigger("gpio_trigger_cb",0x100+key);
+}
+  </script>
+
+</body>
+
+</html>
