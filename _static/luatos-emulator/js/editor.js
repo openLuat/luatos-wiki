@@ -1,7 +1,7 @@
 require.config({ paths: { 'vs': 'vs' } });
 require(['vs/editor/editor.main'], function () {
     var snippets = [];
-    $.get("https://raw.githubusercontent.com/chenxuuu/luatcode/master/snippets/snippets.json", function (result) {
+    $.get("https://gitee.com/openLuat/vscode-luatos-debug/raw/master/snippet.json", function (result) {
         var j = JSON.parse(result);
         for (var i in j) {
             snippets.push({
