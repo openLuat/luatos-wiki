@@ -6,25 +6,25 @@ LuatOS接口文档
 .. toctree::
    :hidden:
 
-   wlan
-   uart
-   socket
-   sensor
-   http
-   crypto
-   lpmem
-   log
-   eink
-   disp
-   libgnss
-   i2c
-   spi
    adc
+   crypto
+   ctiot
+   disp
+   eink
    gpio
+   http
+   i2c
+   libcoap
+   libgnss
+   log
+   lpmem
+   pm
+   pwm
    rtos
+   sensor
+   socket
+   spi
    timer
    u8g2
-   pwm
-   ctiot
-   pm
-   libcoap
+   uart
+   wlan
