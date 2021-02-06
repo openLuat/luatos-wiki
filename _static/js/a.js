@@ -5,4 +5,7 @@ window.onload = function () {
             $(this).attr('target', '_blank');
         }
     });
+    //表头宽度别改了
+    $("col").css("width","");
+    $(".highlight").css("background","#fafafa");
 }

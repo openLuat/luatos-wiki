@@ -23,7 +23,15 @@
 #. 在线升级
 #. 可裁剪、可扩展
 
+**目前已经适配的模组和芯片：**
 
+- Air724（4G Cat.1 模组）*
+- Air820（4G Cat.1 + GPS/北斗 模组）*
+- Air302（nbiot模组）
+- Air640w（wifi模组）
+- STM32F103RE
+
+（带*号的表示开发中）
 
 .. toctree::
    :hidden:
@@ -34,15 +42,20 @@
 
 .. toctree::
    :hidden:
-   :caption: Lua 教程
+   :caption: 快速上手
 
-   luaGuide/introduction
-   luaGuide/advanced
-   luaGuide/source
+   boardGuide/index
+   luaGuide/index
 
 .. toctree::
    :hidden:
-   :caption: api 文档
+   :caption: API参考手册
 
    api/index
 
+.. toctree::
+   :hidden:
+   :caption: 内核开发
+
+   develop/compile
+   develop/clib
