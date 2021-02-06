@@ -31,6 +31,7 @@ extensions = [
     'recommonmark',
     'sphinx_markdown_tables',
     'sphinx_sitemap',
+    'sphinx_copybutton',
 ]
 
 
