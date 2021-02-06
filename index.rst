@@ -37,7 +37,7 @@
    :hidden:
    :caption: LuatOS 介绍
 
-   首页 <https://luatos.wiki>
+   首页 <https://wiki.luatos.com>
    pages/emulator
 
 .. toctree::
