@@ -178,6 +178,12 @@ html {
   background-color: #0000000a;
 }
 
+.item-float {
+  display: block;
+  position: absolute;
+  text-decoration:none;
+}
+
 .key-float {
   display: block;
   position: absolute;

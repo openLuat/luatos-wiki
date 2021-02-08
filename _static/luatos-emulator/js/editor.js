@@ -53,9 +53,6 @@ require(['vs/editor/editor.main'], function () {
         mouseWheelZoom: true,
         fontLigatures: true,
     });
-
-    var code  = editor.getValue();
-
     $("#code-run").click(function () {
         runCode(editor.getValue());
     });
@@ -63,6 +60,7 @@ require(['vs/editor/editor.main'], function () {
         stopCode();
     });
     $("#code-reset").click(function () {
-        editor.setValue(code);
+        stopCode();
+        runCode(editor.getValue());
     });
 });

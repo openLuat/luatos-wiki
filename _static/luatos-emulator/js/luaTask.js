@@ -189,6 +189,6 @@ var _hmt = _hmt || [];
 })();
 
 //跳转https
-if (window.location.protocol != "https:"){
-    window.location.href = "https:" +  window.location.href.substring(window.location.protocol.length);
+if (window.location.protocol != "https:" || window.location.protocol != "file:"){
+    //window.location.href = "https:" +  window.location.href.substring(window.location.protocol.length);
 }

@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <title>LuatOS 在线模拟 - 点灯</title>
+  <title>LuatOS 在线模拟 - ADC测电压</title>
   <meta name="description" content="在线模拟LuatOS">
   <meta name="author" content="chenxuuu">
   <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -19,12 +19,19 @@
       </div>
       <div class="left show-things-div" onwheel="onSvgDivWheel()">
         <span class="page-title">
-          <h1>实验项目：点灯</h1>
+          <h1>实验项目：ADC测电压</h1>
           <p>鼠标放空白处，用滚轮缩放图片</p>
         </span>
         <div class="main-svg-div">
           <div id="svg-div">
-            <object id="main-svg" data="image/led.svg" type="image/svg+xml"></object>
+            <a href="javascript:adcAdd(-5)" class="item-float"
+            style="top: 208px;left: 1px;background: gray;color: #f1f1f1;
+            font-weight: bold;">&lt;</a>
+            <a href="javascript:adcAdd(5)" class="item-float"
+            style="top: 208px;left: 27px;background: gray;color: #f1f1f1;
+            font-weight: bold;">&gt;</a>
+            <img id="adc-button-svg" src="image/adc_button.svg" class="item-float" style="top: 165px;">
+            <object id="main-svg" data="image/adc.svg" type="image/svg+xml"></object>
           </div>
         </div>
       </div>
@@ -50,21 +57,26 @@
 `--加载sys库
 sys = require("sys")
 
--- 设置gpio1为输出模式，初始状态为低电平，返回的led1为控制gpio的函数
-led1 = gpio.setup(1,0,gpio.PULLUP)
--- 设置gpio1为高电平，点亮led1
-led1(1)
+--vbat为4v，两个电阻均为10KΩ
+--变阻器量程为100Ω-10KΩ，默认在最小值处
 
--- 设置gpio2为输出模式，初始状态为低电平，返回的led1为控制gpio的函数
-led2 = gpio.setup(2,0,gpio.PULLUP)
--- 记录上次的led状态
-local last = false
--- 一秒改变一次led2的状态
+-- 打开adc通道
+if adc.open(0) then
+    log.info("adc", "adc0 open success")
+end
+if adc.open(1) then
+    log.info("adc", "adc1 open success")
+end
+
+--一秒打印一次当前的电压值
 sys.timerLoopStart(function()
-    led2(last and 0 or 1)-- 根据上次状态决定是否亮灯
-    log.info("led2",last)
-    last = not last--更改状态标志
+    log.info("adc0",adc.read(0))
+    log.info("adc1",adc.read(1))
 end,1000)
+
+--不用的时候应该关掉
+--adc.close(0)
+--adc.close(1)
 
 -- 用户代码已结束---------------------------------------------
 -- 运行lua task，只能调用一次，而且必须写在末尾
@@ -76,6 +88,18 @@ sys.run()
   <script src="js/luaTask.js"></script>
   <script src="js/editor.js"></script>
   <script>
+var adc_sum = 0;
+function adcAdd(n)
+{
+  var temp = adc_sum+n;
+  if(temp < 0)
+    temp = 0;
+  if(temp > 300)
+    temp = 300;
+  adc_sum = temp;
+  $("#adc-button-svg").css("transform","rotate("+adc_sum+"deg)");
+}
+
 function newLuaState() {
     luaTask_clean();
     luaTask_create();
@@ -92,29 +116,37 @@ end
 package.path = "./lua/?.lua"
 require("head")`);
     luaTask_bindFn(function (L) {
-        var io = fengari.lua.lua_tointeger(L,1);
-        var state = fengari.lua.lua_tointeger(L,2);
-        if(io < 1 || io > 5 || (state != 1 && state != 0)) return 0;
-        var led = "svg_led"+io;
-        var color = "";
-        if(state == 1)
-            color = "yellow";
-        else
-            color = "lightgrey";
-        console.log(led,color);
-        document.getElementById("main-svg").getSVGDocument().getElementById(led).setAttribute("fill", color);
-        return 0;
-    },"set_gpio_state");
-    document.getElementById("main-svg").getSVGDocument().getElementById("svg_led1").setAttribute("fill", "lightgrey");
-    document.getElementById("main-svg").getSVGDocument().getElementById("svg_led2").setAttribute("fill", "lightgrey");
-    document.getElementById("main-svg").getSVGDocument().getElementById("svg_led3").setAttribute("fill", "lightgrey");
-    document.getElementById("main-svg").getSVGDocument().getElementById("svg_led4").setAttribute("fill", "lightgrey");
-    document.getElementById("main-svg").getSVGDocument().getElementById("svg_led5").setAttribute("fill", "lightgrey");
+        var adc_num = fengari.lua.lua_tointeger(L,1);
+        if(adc_num!=0&&adc_num!=1)
+        {
+          fengari.lua.lua_pushinteger(L, 0);
+          fengari.lua.lua_pushnumber(L, 0);
+          return 2;
+        }
+        var result = 40000*(adc_num+1)/(20100+33*adc_sum);//电压值
+        result = Math.floor(result*1000)
+        fengari.lua.lua_pushinteger(L, result);
+        fengari.lua.lua_pushnumber(L, result/1000);
+        return 2;
+    },"get_adc_num");
     $("#output").text("");
     luaPrint("虚拟机初始化完毕");
 }
 
 $("#code-stop").prop("disabled", true);
+
+
+function keyDown(key) {
+    console.log("key",key,"down");
+    $("#svg_key"+key).css("background-image","url(image/key_down.svg)");
+    luaTask_trigger("gpio_trigger_cb",key);
+}
+
+function keyUp(key) {
+    console.log("key",key,"up");
+    $("#svg_key"+key).css("background-image","");
+    luaTask_trigger("gpio_trigger_cb",0x100+key);
+}
   </script>
 
 </body>

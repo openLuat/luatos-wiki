@@ -27,3 +27,4 @@ end
 
 log = require("log")
 gpio = require("gpio")
+adc = require("adc")
