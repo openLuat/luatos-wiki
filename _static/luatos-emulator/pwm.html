@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-  <title>LuatOS 在线模拟 - 日志输出</title>
+  <title>LuatOS 在线模拟 - PWM控制转速</title>
   <meta name="description" content="在线模拟LuatOS">
   <meta name="author" content="chenxuuu">
   <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -19,12 +19,13 @@
       </div>
       <div class="left show-things-div" onwheel="onSvgDivWheel()">
         <span class="page-title">
-          <h1>实验项目：日志输出</h1>
+          <h1>实验项目：PWM控制转速</h1>
           <p>鼠标放空白处，用滚轮缩放图片</p>
         </span>
         <div class="main-svg-div">
           <div id="svg-div">
-            <img src="image/simple.svg">
+            <img id="pwm-fan-svg" src="image/pwm_fan.svg" class="item-float rotate" style="top: 55px;left:10px;">
+            <img src="image/pwm.svg">
           </div>
         </div>
       </div>
@@ -47,26 +48,49 @@
   <script src="vs/loader.js"></script>
   <script>
     var defaultCode =
-`--使用print可以打印数据
-print("这是我打印出来的东西")
+`--加载sys库
+sys = require("sys")
 
---一般使用log库来打印日志，更加直观
-log.info("日志测试","这是一条普通日志")
-log.error("日志测试","这是一条错误提示日志")
-log.fatal("日志测试","这是一条致命错误提示日志")
-log.debug("日志测试","这是一条调试日志，因为日志等级限制，不会打印")
-log.trace("日志测试","这是一条trace日志，因为日志等级限制，不会打印")
+-- 打开PWM0, 频率1kHz, 占空比1%
+pwm.open(0, 1000, 1)
 
---把日志等级改成最高
---如果LOG_LEVEL为0，那么log库所有日志都不会输出
-LOG_LEVEL = 1
-log.debug("日志测试","这是一条调试日志，现在能看到了")
-log.trace("日志测试","这是一条trace日志，现在能看到了")
+--开个任务，让pwm转速慢慢增大后，循环
+sys.taskInit(function()
+    local speed = 0
+    while true do
+        speed = speed + 10
+        if speed > 100 then speed = 0 end
+        log.info("pwm","speed now",speed,"%")
+        pwm.open(0, 1000, speed)
+        sys.wait(5000)
+    end
+end)
+
+--不用的时候应该关掉
+--pwm.close(0)
+
+-- 用户代码已结束---------------------------------------------
+-- 运行lua task，只能调用一次，而且必须写在末尾
+-- 结尾总是这一句
+sys.run()
+-- sys.run()之后后面不要加任何语句!!!!!
 `;
   </script>
   <script src="js/luaTask.js"></script>
   <script src="js/editor.js"></script>
   <script>
+var adc_sum = 0;
+function adcAdd(n)
+{
+  var temp = adc_sum+n;
+  if(temp < 0)
+    temp = 0;
+  if(temp > 300)
+    temp = 300;
+  adc_sum = temp;
+  $("#adc-button-svg").css("transform","rotate("+adc_sum+"deg)");
+}
+
 function newLuaState() {
     luaTask_clean();
     luaTask_create();
@@ -82,11 +106,34 @@ function print(...)
 end
 package.path = "./lua/?.lua"
 require("head")`);
+    luaTask_bindFn(function (L) {
+        var speed = fengari.lua.lua_tointeger(L,1);
+        if(speed == 0){
+          $("#pwm-fan-svg").css("animation-duration","0s");
+          return 0;
+        }
+        var real_time = 1/(0.1*speed);
+        $("#pwm-fan-svg").css("animation-duration",real_time+"s");
+        return 0;
+    },"set_pwm_speed");
     $("#output").text("");
     luaPrint("虚拟机初始化完毕");
 }
 
 $("#code-stop").prop("disabled", true);
+
+
+function keyDown(key) {
+    console.log("key",key,"down");
+    $("#svg_key"+key).css("background-image","url(image/key_down.svg)");
+    luaTask_trigger("gpio_trigger_cb",key);
+}
+
+function keyUp(key) {
+    console.log("key",key,"up");
+    $("#svg_key"+key).css("background-image","");
+    luaTask_trigger("gpio_trigger_cb",0x100+key);
+}
   </script>
 
 </body>
