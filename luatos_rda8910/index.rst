@@ -1,11 +1,21 @@
 LuatOS@RDA8910 固件说明书
 =========================================
 
-基本信息
+关于LuatOS
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+致力于使用Lua语言提高硬件开发效率 `LuatOS官网 <https://luatos.com>`_ `LuatOS@Gitee <https://gitee.com/openLuat/LuatOS>`_
+
+关于RDA8910DM
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+展锐的一款4G LTE Cat.1 芯片, 官网链接 `RDA8910DM <https://www.unisoc.com/#/home/prodList?id=1279985958166523906&pid=1282568784258859009&cdx=1&t=1>`_
+
+固件基本信息
 ~~~~~~~~~~~~~~~~~~~~
 
 - 适配芯片: 展锐RDA8910DM, RDA8910DM-C1
-- 可用内存: 总内存4M字节, 默认配置下, lua虚拟独占1.5M字节, appimg预留128kb, 剩余为系统内存
+- 可用内存: 总内存4M字节, 系统与Lua虚拟机各占一半
 - flash空间: 固件+文件系统,大概5m字节
 - sdk版本: 基于sdk 1.4分支
 
@@ -21,15 +31,55 @@ LuatOS@RDA8910 固件说明书
 
 关于1.3/1.2固件的更新信息, 请查阅Luat固件的文档 `Air724/723/722/720U的Luat固件特别说明 <http://doc.openluat.com/article/1334/0>`_
 
-关于API兼容性
+功能特性
 ~~~~~~~~~~~~~~~~~~~~~
 
-LuatOS与Luat固件的API, 会有明显的差异, 希望大家能理解
+- 基于Lua 5.3, 支持64bit整形和移位运算
+- 内置Lua虚拟机独占内存 1.5M字节
+- 内置可读写的文件系统,掉电不丢失
+- 支持高速GPIO,输入输出中断模式均可动态配置
+- 支持3个用户可用的UART,支持高达128k的缓冲区
+- 支持作为标准I2C主机,提供3个独立的I2C接口
+- 支持作为标准SPI主机
+- 支持独立的LCD驱动
+- 支持电子墨水屏驱动
+- 支持挂载SD卡作为额外存储
+- 支持挂载SPI FLASH作为额外存储
+- 支持30W像素的I2C摄像头,支持动态预览及图像处理
+- 支持LVGL,并提供高帧率的输出
+- 支持双卡单待,支持自动/手动选卡
+- 支持Lua脚本调试
+- 支持appimg形式的C开发包
+- 支持SSL/TLS加密通信,最高支持8路SOCKET连接
+- 支持固件底层/lua脚本/appimg的远程升级
 
 
-.. toctree::
-    :hidden:
+.. highlight:: sh
+
+::
  
-    introduction
-    gpio
+    基础
+        获取固件
+        刷机帮助
+        与Luat固件的对比
+    设备驱动
+        GPIO库
+        UART库
+        RTOS和sys.lua库
+        I2C库及Sensor库
+        SPI库 
+        SD卡
+    网络相关
+        LTE库
+        SOCKET库
+    音视频相关
+        disp库/u8g2库
+        lvgl库
+        tts库
+        audio库
+    进阶
+        如何扩展功能
+        如何参与开发
+    附录
+        术语表
  
