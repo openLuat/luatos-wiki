@@ -3,6 +3,10 @@
 
 .. toctree::
  
-    diff_luat
+    first_warn
+    feature
     getrom
     useluatools
+    diff_luat
+    bugs
+    versions
