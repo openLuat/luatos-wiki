@@ -54,32 +54,13 @@ LuatOS@RDA8910 固件说明书
 - 支持固件底层/lua脚本/appimg的远程升级
 
 
-.. highlight:: sh
-
-::
+.. toctree::
+    :hidden:
  
-    基础
-        获取固件
-        刷机帮助
-        与Luat固件的对比
-    设备驱动
-        GPIO库
-        UART库
-        RTOS和sys.lua库
-        I2C库及Sensor库
-        SPI库 
-        SD卡
-    网络相关
-        LTE库
-        SOCKET库
-    音视频相关
-        disp库/u8g2库
-        lvgl库
-        tts库
-        audio库
-    进阶
-        如何扩展功能
-        如何参与开发
-    附录
-        术语表
+    basic/index
+    devices/index
+    network/index
+    media/index
+    advanced/index
+    appendix/index
  
