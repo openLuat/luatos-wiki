@@ -155,7 +155,7 @@ nil        无返回值
 
 .. code:: lua
 
-   uart.on("receive", function(id, len)
+   uart.on(1, "receive", function(id, len)
        local data = uart.read(id, len)
        log.info("uart", id, len, data)
    end)
