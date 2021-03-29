@@ -4,7 +4,7 @@ http - 执行http请求
 http.req(url, params, cb)
 -------------------------
 
-发起一个http get请求（推荐用http.get/post/put/delete方法）
+发起一个http请求,推荐用http.get/post/put/delete方法
 
 **参数**
 
@@ -36,7 +36,7 @@ http.req(url, params, cb)
    -- GET请求
    http.req("http://www.baidu.com/", nil, function(ret, code, headers, body)
        log.info("http", ret, code, header, body)
-   end)
+   end) 
 
 --------------
 
@@ -70,7 +70,7 @@ function   回调方法
    -- GET请求
    http.get("http://www.baidu.com/", nil, function(ret, code, headers, body)
        log.info("http", ret, code, header, body)
-   end)
+   end) 
 
 --------------
 
@@ -104,7 +104,7 @@ function   回调方法
    -- POST请求
    http.post("http://www.baidu.com/", {body=json.encode(data)}, function(ret, code, headers, body)
        log.info("http", ret, code, header, body)
-   end)
+   end) 
 
 --------------
 
@@ -138,7 +138,7 @@ function   回调方法
    -- PUT请求
    http.put("http://www.baidu.com/", {body=json.encode(data)}, function(ret, code, headers, body)
        log.info("http", ret, code, header, body)
-   end)
+   end) 
 
 --------------
 
@@ -170,8 +170,8 @@ function   回调方法
 .. code:: lua
 
    -- DELETE请求
-   http.delete("http://www.baidu.com/", nil, function(ret, code, headers, body)
+   http.put("http://www.baidu.com/", nil, function(ret, code, headers, body)
        log.info("http", ret, code, header, body)
-   end)
+   end) 
 
 --------------
