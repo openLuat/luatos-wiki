@@ -311,6 +311,7 @@ local asyncTable = {}
 local taskEnable
 function sys.run()--假装是需要调用这句话才能运行
     taskEnable = true
+    JS_FUNCTION_SYS_RUN()
 end
 
 --外部触发

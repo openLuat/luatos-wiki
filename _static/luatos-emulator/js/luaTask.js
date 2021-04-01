@@ -2,6 +2,7 @@ var luaTask_L;
 var luaTask_timerPool = {};
 var luaTask_print;//给内部使用的函数输出函数
 var luaTask_startTask = false;
+var luaTask_sysRunDone = false;
 
 //绑定一个函数到某名字
 function luaTask_bindFn(fn,name) {
@@ -94,6 +95,7 @@ function luaTask_create() {
 function luaTask_clean() {
     if(typeof(luaTask_L) == "undefined")
         return;
+    luaTask_sysRunDone = false;
     for(var i in luaTask_timerPool)
     {
         clearTimeout(luaTask_timerPool[i].timer);
@@ -131,6 +133,10 @@ luaPrint("加载完毕，等待运行");
 function runCode(code) {
     luaPrint("正在加载Lua环境，请稍侯。。。");
     newLuaState();
+    luaTask_bindFn(function (L) {
+        luaTask_sysRunDone = true;
+        return 0;
+    },"JS_FUNCTION_SYS_RUN");
     $("#code-run").prop("disabled", true);
     $("#code-stop").prop("disabled", false);
     try {
@@ -138,6 +144,12 @@ function runCode(code) {
         if(!r.success) {
             luaPrint("虚拟机报错：");
             luaPrint(r.error);
+        }
+        else{
+            //如果没开启task，自动结束所有任务
+            if(!luaTask_sysRunDone){
+                stopCode();
+            }
         }
     }
     catch (err) {
