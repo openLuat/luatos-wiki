@@ -1,6 +1,8 @@
 wlan - wifi操作库
 =================
 
+   本页文档由\ `这个文件 <https://gitee.com/openLuat/LuatOS/tree/master/luat/rtt/luat_lib_wlan.c>`__\ 自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+
 wlan.getMode(dev)
 -----------------
 

@@ -1,6 +1,8 @@
 uart - 串口操作库
 =================
 
+   本页文档由\ `这个文件 <https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_uart.c>`__\ 自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+
 uart.setup(id, baud_rate, data_bits, stop_bits, partiy, bit_order, buff_size)
 -----------------------------------------------------------------------------
 

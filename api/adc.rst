@@ -1,6 +1,8 @@
 adc - 数模转换
 ==============
 
+   本页文档由\ `这个文件 <https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_adc.c>`__\ 自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+
 adc.open(id)
 ------------
 
