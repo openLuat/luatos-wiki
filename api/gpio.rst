@@ -1,8 +1,8 @@
 gpio - GPIO操作
 ===============
 
-gpio.setup(pin, mode, pull)
----------------------------
+gpio.setup(pin, mode, pull, irq)
+--------------------------------
 
 设置管脚功能
 
@@ -22,11 +22,10 @@ gpio.setup(pin, mode, pull)
 |                                   | gpio.PULLDOWN,                    |
 |                                   | 需要根据实际硬件选用              |
 +-----------------------------------+-----------------------------------+
-| int                               | irq 中断触发模式,                 |
+| int                               | irq 默认gpio.BOTH。中断触发模式,  |
 |                                   | 上升沿gpio.RISING,                |
 |                                   | 下降沿gpio.FALLING,               |
-|                                   | 上升                              |
-|                                   | 和下降都要gpio.BOTH.默认是RISING  |
+|                                   | 上升和下降都要gpio.BOTH           |
 +-----------------------------------+-----------------------------------+
 
 **返回值**
@@ -43,13 +42,13 @@ gpio.setup(pin, mode, pull)
 .. code:: lua
 
    -- 设置gpio17为输入
-   gpio.setup(17, nil) 
-   @usage 
+   gpio.setup(17, nil)
+   @usage
    -- 设置gpio17为输出
-   gpio.setup(17, 0) 
-   @usage 
+   gpio.setup(17, 0)
+   @usage
    -- 设置gpio27为中断
-   gpio.setup(27, function(val) print("IRQ_27") end, gpio.RISING)
+   gpio.setup(27, function(val) print("IRQ_27",val) end, gpio.PULLUP)
 
 --------------
 
@@ -82,7 +81,7 @@ nil        无返回值
 .. code:: lua
 
    -- 设置gpio17为低电平
-   gpio.set(17, 0) 
+   gpio.set(17, 0)
 
 --------------
 
@@ -112,7 +111,7 @@ value      电平, 高电平gpio.HIGH, 低电平gpio.LOW, 对应数值1和0
 .. code:: lua
 
    -- 获取gpio17的当前电平
-   gpio.get(17) 
+   gpio.get(17)
 
 --------------
 
