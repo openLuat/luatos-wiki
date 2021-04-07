@@ -13,3 +13,4 @@ LuatOS源码仓库：https://gitee.com/openLuat/LuatOS
 
    compile/Air640w
    compile/Air302
+   compile/Win32
