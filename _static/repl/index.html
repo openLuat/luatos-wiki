@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en-US">
+<html>
+<head>
+    <title>Lua online REPL</title>
+    <meta name="description" content="run lua repl online">
+    <meta name="author" content="chenxuuu">
+    <link rel="stylesheet" href="xterm.css" />
+    <script src="xterm.js"></script>
+    <script src="fengari-web.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="terminal"></div>
+    <script>
+        // HACK: This should be window.Terminal once upgraded to 4.0.1
+        var term = new Terminal();
+        term.setOption("fontFamily", "consolas, monospace");
+        term.setOption("fontSize", 18);
+        term.open(document.getElementById('terminal'));
+
+        term._initialized = true;
+
+        term.prompt = () => {
+            term.write('\r\n> ');
+        };
+
+        term.writeln('Welcome to Lua 5.3');
+
+        var buffer = "";
+        var lastline
+        term.onData(e => {
+            switch (e) {
+                case '\r': // Enter
+                    term.write("\r\n");
+                    var code = 'RUNCODE([['+buffer.replace(']]','] ] ')+']])';
+                    console.log(code);
+                    fengari.load(code)();
+                    buffer = "";
+                    break;
+                case '\u007F': // 退格
+                    if (term._core.buffer.x > 2) {
+                        term.write('\b \b');
+                    }
+                    buffer = buffer.substr(0,buffer.length-1);
+                    break;
+                default: // Print all other characters for demo
+                    if(e.charCodeAt(0) <= 0x1F)
+                        return;
+                    buffer += e;
+                    term.write(e);
+            }
+        });
+
+
+        function luaPrint(s) {
+            term.writeln(s);
+        }
+
+        function luaOut(s) {
+            term.write(s);
+        }
+
+        function luaIn() {
+            return buffer;
+        }
+
+        fengari.load(`
+js = require "js"
+--重写print函数
+function print(...)
+    local out = {}
+    for i=1,select('#', ...) do
+        table.insert(out,tostring(select(i, ...)))
+    end
+    js.global:luaPrint(table.concat(out,"\t"))
+end
+function os.getenv() return "" end
+io={}
+function io.open() end
+require("rep")
+`)();
+
+    </script>
+</body>
+
+</html>

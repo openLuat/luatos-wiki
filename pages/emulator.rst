@@ -13,7 +13,12 @@ LuatOS提供了在线模拟器，可快速体验开发流程、熟悉开发接�
 PWM输出
 ========  ======  =======  ========  =======
 
+Lua在线REPL
+-----------
 
+我们也为普通的Lua开发，提供了在线的交互调试工具：
+
+`Lua在线REPL工具 <https://wiki.luatos.com/_static/repl>`_
 
 
 .. |i1| image:: ../_static/emulator/log.svg
