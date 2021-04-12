@@ -38,7 +38,8 @@ function sync_repl:run()
   -- self:shutdown()
 end
 
-_G.RUNCODE = function (line)
+_G.RUNCODE = function ()
+  local line = js.global.buffer
   local level = temp:handleline(line)
   temp:prompt(level)
 end

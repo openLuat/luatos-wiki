@@ -42,8 +42,7 @@
             switch (e) {
                 case '\r': // Enter
                     term.write("\r\n");
-                    var code = 'RUNCODE([['+buffer.replace(']]','] ] ')+']])';
-                    console.log(code);
+                    var code = 'RUNCODE()';
                     fengari.load(code)();
                     buffer = "";
                     break;
