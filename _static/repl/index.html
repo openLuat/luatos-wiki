@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en-US">
+<html lang="zh-CN">
 <html>
 <head>
     <title>Lua online REPL</title>
@@ -14,7 +14,7 @@
     <div id="terminal"></div>
     <script>
         // HACK: This should be window.Terminal once upgraded to 4.0.1
-        var term = new Terminal();
+        var term = new Terminal({cols:120,rows:40});
         term.setOption("fontFamily", "consolas, monospace");
         term.setOption("fontSize", 18);
         term.open(document.getElementById('terminal'));
@@ -25,11 +25,20 @@
             term.write('\r\n> ');
         };
 
-        term.writeln('Welcome to Lua 5.3');
+        term.write("\x1B[1;34m");
+        term.writeln("    _/                              _/        _/_/      _/_/_/   ");
+        term.writeln("   _/        _/    _/    _/_/_/  _/_/_/_/  _/    _/  _/          ");
+        term.writeln("  _/        _/    _/  _/    _/    _/      _/    _/    _/_/       ");
+        term.writeln(" _/        _/    _/  _/    _/    _/      _/    _/        _/      ");
+        term.writeln("_/_/_/_/    _/_/_/    _/_/_/      _/_/    _/_/    _/_/_/         ");
+        term.write("\x1B[0m");
+        term.writeln('Loading, please wait...');
 
         var buffer = "";
         var lastline
+        var loading = true;
         term.onData(e => {
+            if(loading) return;
             switch (e) {
                 case '\r': // Enter
                     term.write("\r\n");
@@ -64,8 +73,10 @@
         function luaIn() {
             return buffer;
         }
-
-        fengari.load(`
+setTimeout(function () {
+    term.writeln('\x1B[1;31mWelcome to Lua 5.3.\x1B[0m');
+    term.writeln('\x1B[1;32mpowered by LuatOS!\x1B[0m');
+    fengari.load(`
 js = require "js"
 --重写print函数
 function print(...)
@@ -78,8 +89,11 @@ end
 function os.getenv() return "" end
 io={}
 function io.open() end
+package.path = "./?.lua;./?/init.lua"
 require("rep")
 `)();
+    loading = false;
+},100);
 
     </script>
 </body>

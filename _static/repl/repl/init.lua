@@ -49,7 +49,7 @@ end
 --- Returns the prompt for a given level.
 -- @param level The prompt level. Either 1 or 2.
 function repl:getprompt(level)
-  return level == 1 and '>' or '>>'
+  return level == 1 and '\x1B[1;33m>\x1B[0m' or '\x1B[1;34m>>\x1B[0m'
 end
 
 --- Displays a prompt for the given prompt level.
