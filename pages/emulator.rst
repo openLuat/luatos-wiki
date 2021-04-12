@@ -18,7 +18,7 @@ Lua在线REPL
 
 我们也为普通的Lua开发，提供了在线的交互调试工具：
 
-`Lua在线REPL工具 <https://wiki.luatos.com/_static/repl>`_
+`Lua在线REPL工具 <https://wiki.luatos.com/_static/repl/index.html>`_
 
 
 .. |i1| image:: ../_static/emulator/log.svg
