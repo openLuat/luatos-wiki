@@ -35,8 +35,24 @@
         term.writeln('Loading, please wait...');
 
         var buffer = "";
-        var lastline
+        var cmd_history = [""];
+        var history_now = cmd_history.length;
         var loading = true;
+        var insert = 0;
+
+        function get_history(add) {
+            history_now += add;
+            if(history_now<0)history_now=0;
+            if(history_now>cmd_history.length-1)history_now=cmd_history.length-1;
+            return cmd_history[history_now];
+        }
+        function set_insert(add) {
+            var temp = insert;
+            insert += add;
+            if(insert< -buffer.length)insert=-buffer.length;
+            if(insert>0)insert=0;
+            return temp != insert;
+        }
         term.onData(e => {
             if(loading) return;
             switch (e) {
@@ -44,19 +60,65 @@
                     term.write("\r\n");
                     var code = 'RUNCODE()';
                     fengari.load(code)();
+                    cmd_history.push(buffer);
+                    history_now = cmd_history.length;
+                    insert = 0;
                     buffer = "";
                     break;
                 case '\u007F': // 退格
-                    if (term._core.buffer.x > 2) {
-                        term.write('\b \b');
+                    if(insert<0)
+                    {
+                        var head = buffer.substr(0,buffer.length+insert);
+                        var tail = buffer.substr(buffer.length+insert,-insert);
+                        buffer = head.substr(0,head.length-1) + tail;
+                        if(head.length>0)
+                            term.write("\x1B["+head.length+"D\x1B[K");
+                        term.write(buffer + "\x1B["+(-insert)+"D");
                     }
-                    buffer = buffer.substr(0,buffer.length-1);
+                    else
+                    {
+                        if (buffer.length > 0) {
+                            term.write('\b \b');
+                        }
+                        buffer = buffer.substr(0,buffer.length-1);
+                    }
                     break;
+                case '\u001b[A':
+                    if(buffer.length>0)
+                        term.write("\x1B["+buffer.length+"D\x1B[K");
+                    buffer = get_history(-1);
+                    term.write(buffer);
+                    break;
+                case '\u001b[B':
+                    if(buffer.length>0)
+                        term.write("\x1B["+buffer.length+"D\x1B[K");
+                    buffer = get_history(1);
+                    term.write(buffer);
+                    break;
+                case '\u001b[C':
+                    if(set_insert(1))
+                        term.write(e);
+                        break;
+                case '\u001b[D':
+                    if(set_insert(-1))
+                        term.write(e);
+                        break;
                 default: // Print all other characters for demo
                     if(e.charCodeAt(0) <= 0x1F)
                         return;
-                    buffer += e;
-                    term.write(e);
+                    if(insert<0)
+                    {
+                        var head = buffer.substr(0,buffer.length+insert);
+                        var tail = buffer.substr(buffer.length+insert,-insert);
+                        buffer = head + e + tail;
+                        term.write("\x1B[K");
+                        term.write(e + tail + "\x1B["+(-insert)+"D");
+                    }
+                    else
+                    {
+                        buffer += e;
+                        term.write(e);
+                    }
             }
         });
 
