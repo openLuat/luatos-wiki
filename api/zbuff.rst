@@ -492,8 +492,8 @@ bool       画成功会返回true
 
 --------------
 
-buff:drawRect(x,y,r,color,fill)
--------------------------------
+buff:drawCircle(x,y,r,color,fill)
+---------------------------------
 
 画一个圆形
 
@@ -521,7 +521,8 @@ bool       画成功会返回true
 
 .. code:: lua
 
-   rerult = buff:drawRect(0,0,2,3,0xffff)
+   rerult = buff:drawCircle(15,5,3,0xC)
+   rerult = buff:drawCircle(15,5,3,0xC,true)
 
 --------------
 
