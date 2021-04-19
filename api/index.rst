@@ -13,6 +13,7 @@ C库接口
    gpio
    http
    i2c
+   json
    libcoap
    libgnss
    log
