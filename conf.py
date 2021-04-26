@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'LuatOS'
-copyright = '2021, luatos'
+copyright = 'LuatOS团队'
 author = 'luatos'
 
 

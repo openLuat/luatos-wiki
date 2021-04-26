@@ -1,0 +1,14 @@
+<div class="sidebar-tree">
+  {{ furo_navigation_tree }}
+</div>
+<div id="google_translate_element"></div>
+<script>
+  function googleTranslateElementInit() {
+    if (navigator.language.indexOf("CN") < 0) {
+      new google.translate.TranslateElement({
+        pageLanguage: 'cn'
+      }, 'google_translate_element');
+    }
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
