@@ -22,6 +22,7 @@ C库接口
    pwm
    rtos
    sensor
+   sfd
    socket
    spi
    timer
