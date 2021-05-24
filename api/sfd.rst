@@ -3,19 +3,20 @@ sfd - SPI FLASH操作库
 
    本页文档由\ `这个文件 <https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_sfd.c>`__\ 自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
-sfd.init(spi_id, spi_cs)
-------------------------
+sfd.init(type, spi_id, spi_cs)
+------------------------------
 
 初始化spi flash
 
 **参数**
 
-========== ===========================
+========== ==================================================
 传入值类型 解释
-========== ===========================
-int        SPI总线的id
-int        SPI FLASH的片选脚对应的GPIO
-========== ===========================
+========== ==================================================
+string     类型, 可以是spi, 也可以是zbuff
+int        SPI总线的id, 或者 zbuff实例
+int        SPI FLASH的片选脚对应的GPIO, 当类型是spi时才需要传
+========== ==================================================
 
 **返回值**
 
@@ -29,15 +30,15 @@ userdata   成功返回一个数据结构,否则返回nil
 
 .. code:: lua
 
-   local w25q = sfd.init(0, 17)
-   if w25q then
-       log.info("sfd", "chip id", sfd.id(w25q):toHex())
+   local drv = sfd.init("spi", 0, 17)
+   if drv then
+       log.info("sfd", "chip id", sfd.id(drv):toHex())
    end
 
 --------------
 
-sfd.status(w25q)
-----------------
+sfd.status(drv)
+---------------
 
 检查spi flash状态
 
@@ -61,15 +62,15 @@ int        状态值,0 未初始化成功,1初始化成功且空闲,2正忙
 
 .. code:: lua
 
-   local w25q = sfd.init(0, 17)
-   if w25q then
-       log.info("sfd", "status", sfd.status(w25q))
+   local drv = sfd.init(0, 17)
+   if drv then
+       log.info("sfd", "status", sfd.status(drv))
    end
 
 --------------
 
-sfd.read(w25q, offset, len)
----------------------------
+sfd.read(drv, offset, len)
+--------------------------
 
 读取数据
 
@@ -95,15 +96,15 @@ string     数据
 
 .. code:: lua
 
-   local w25q = sfd.init(0, 17)
-   if w25q then
-       log.info("sfd", "read", sfd.read(w25q, 0x100, 256))
+   local drv = sfd.init(0, 17)
+   if drv then
+       log.info("sfd", "read", sfd.read(drv, 0x100, 256))
    end
 
 --------------
 
-sfd.write(w25q, offset, data)
------------------------------
+sfd.write(drv, offset, data)
+----------------------------
 
 写入数据
 
@@ -129,15 +130,15 @@ boolean    成功返回true,失败返回false
 
 .. code:: lua
 
-   local w25q = sfd.init(0, 17)
-   if w25q then
-       log.info("sfd", "write", sfd.write(w25q, 0x100, "hi,luatos"))
+   local drv = sfd.init(0, 17)
+   if drv then
+       log.info("sfd", "write", sfd.write(drv, 0x100, "hi,luatos"))
    end
 
 --------------
 
-sfd.erase(w25q, offset)
------------------------
+sfd.erase(drv, offset)
+----------------------
 
 写入数据
 
@@ -162,15 +163,15 @@ boolean    成功返回true,失败返回false
 
 .. code:: lua
 
-   local w25q = sfd.init(0, 17)
-   if w25q then
-       log.info("sfd", "write", sfd.erase(w25q, 0x100))
+   local drv = sfd.init(0, 17)
+   if drv then
+       log.info("sfd", "write", sfd.erase(drv, 0x100))
    end
 
 --------------
 
-sfd.id(w25q)
-------------
+sfd.id(drv)
+-----------
 
 芯片唯一id
 
@@ -194,9 +195,9 @@ string     8字节(64bit)的芯片id
 
 .. code:: lua
 
-   local w25q = sfd.init(0, 17)
-   if w25q then
-       log.info("sfd", "chip id", sfd.id(w25q))
+   local drv = sfd.init(0, 17)
+   if drv then
+       log.info("sfd", "chip id", sfd.id(drv))
    end
 
 --------------
