@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>LuatOS 在线模拟 - task框架</title>
+  <meta name="description" content="在线模拟LuatOS">
+  <meta name="author" content="chenxuuu">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <script src="js/jquery.js"></script>
+  <script src="js/fengari-web.js"></script>
+  <script src="../js/baidu.js"></script>
+</head>
+<body>
+  <div class="box">
+    <div class="content">
+      <div class="right">
+        <div class="operation">
+          <button id="code-run" title="运行" ></button>
+          <button id="code-stop" title="停止" disabled="disabled"></button>
+          <button id="code-reset" title="重新运行"></button>
+        </div>
+        <div id="container"></div>
+      </div>
+      <div class="log">
+        <textarea readonly="true" id="output"></textarea>
+      </div>
+    </div>
+  </div>
+  <span class="luatos-url">
+    <a href="https://wiki.luatos.com" target="_blank">LuatOS 文档</a>
+  </span>
+  <script src="vs/loader.js"></script>
+  <script>
+    var defaultCode =
+`--此处为纯lua5.3测试场地
+--同时，支持加载sys库，使用task框架特性
+--如下：
+
+--加载sys库
+sys = require("sys")
+
+--启动一个定时器
+sys.timerLoopStart(function()
+    log.info("定时器",os.time())
+end,1000)
+
+--新建任务，每休眠2000ms继续一次
+sys.taskInit(function()
+    local count = 0
+    while true do
+        sys.wait(2000)--等待2000ms
+        count = count + 1
+        log.info("任务","运行了",count,"次")
+    end
+end)
+
+-- 用户代码已结束---------------------------------------------
+-- 运行lua task，只能调用一次，而且必须写在末尾
+-- 结尾总是这一句
+sys.run()
+-- sys.run()之后后面不要加任何语句!!!!!
+`;
+  </script>
+  <script src="js/luaTask.js"></script>
+  <script src="js/editor.js"></script>
+  <script>
+function newLuaState() {
+    luaTask_clean();
+    luaTask_create();
+    luaTask_doString(`
+js = require "js"
+--重写print函数
+function print(...)
+    local out = {}
+    for i=1,select('#', ...) do
+        table.insert(out,tostring(select(i, ...)))
+    end
+    js.global:luaPrint(table.concat(out,"\t"))
+end
+package.path = "./lua/?.lua"
+require("head")`);
+    $("#output").text("");
+    luaPrint("虚拟机初始化完毕");
+}
+
+$("#code-stop").prop("disabled", true);
+  </script>
+
+</body>
+
+</html>
