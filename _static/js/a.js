@@ -2,7 +2,7 @@ window.onload = function () {
     //新窗口打开链接
     $("article").find("a").each(function () {
         if ($(this).attr("href") != undefined &&
-            $(this).attr("href").indexOf("https://wiki.luatos.com") !== 0 &&
+            ($(this).attr("href").indexOf("https://wiki.luatos.com") !== 0 || $(this).attr("href").indexOf("https://wiki.luatos.com/_static/") == 0) &&
             $(this).attr("href").indexOf("#") !== 0 &&
             $(this).attr("target") !== "_blank") {
             $(this).attr('target', '_blank');
