@@ -26,6 +26,7 @@ C库接口
    sfd
    socket
    spi
+   string
    timer
    u8g2
    uart
