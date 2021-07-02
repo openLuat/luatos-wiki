@@ -63,4 +63,13 @@ require(['vs/editor/editor.main'], function () {
         stopCode();
         runCode(editor.getValue());
     });
+
+    $(function () {
+        $(document).keydown(function (event) {
+            if (event.keyCode == 116) {
+                stopCode();
+                runCode(editor.getValue());
+            }
+        });
+    });
 });
