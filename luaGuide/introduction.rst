@@ -1,36 +1,12 @@
 入门
 ====
 
-变量
-~~~~
+快速入门
+~~~~~~~~
 
-变量名
-------
+.. raw:: html
 
-什么是 **变量** ？变量就是某种数据，而每一个装了某种数据的容器，都要拥有者自己的容器名字，这个名字被我们称之为 **变量名**。
-
-也就是说，每个 **变量名** 都，可以直接代表某一个 **变量** 。
-
-.. figure :: pic/vars.svg
-    :align: center
-
-    酒的名字与实际杯子里的液体对应
-
-像上图，我们可以直接用酒的名字，来称呼一杯酒；而直接称呼 **变量名** ，也代表着使用某个 **变量** 。
-
-number类型
-----------
-
-变量是有类型的，我们这里先只教一种类型： **数值型（number）** 。
-
-顾名思义，数值型，存储的就是数字。
-
-比如下面的这些数据，都是数值型：
-
-- 1
-- 123
-- 234
-- 1.234
-- 10000000
-
-睡了，待续
+    <iframe id="spjc" src="//player.bilibili.com/player.html?aid=291542005&bvid=BV1vf4y1L7Rb&cid=368202399&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> </iframe>
+    <script type="text/javascript">
+    document.getElementById("spjc").style.height=document.getElementById("spjc").scrollWidth*0.76+"px";
+    </script>
