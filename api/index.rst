@@ -18,6 +18,7 @@ C库接口
    libgnss
    log
    lpmem
+   lvgl
    nbiot
    pm
    pwm
