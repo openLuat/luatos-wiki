@@ -1,8 +1,6 @@
 lvgl - LVGL图像库
 =================
 
-   本页文档由\ `这个文件 <https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/lvgl/binding/luat_lib_lvgl_gif.c>`__\ 自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
-
 lvgl.font_get(name)
 -------------------
 
