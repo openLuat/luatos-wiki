@@ -19,6 +19,7 @@ C库接口
    log
    lpmem
    lvgl
+   nbiot
    pm
    pwm
    rtos
