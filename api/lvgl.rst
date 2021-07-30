@@ -486,10 +486,36 @@ nil        无返回值
 
 --------------
 
+lvgl.style_t()
+--------------
+
+创建一个style
+
+**参数**
+
+无
+
+**返回值**
+
+========== =========
+返回值类型 解释
+========== =========
+userdata   style指针
+========== =========
+
+**例子**
+
+.. code:: lua
+
+   local style = lvgl.style_t()
+   lvgl.style_init(style)
+
+--------------
+
 lvgl.style_create()
 -------------------
 
-创建一个style
+创建一个style并初始化
 
 **参数**
 
@@ -510,6 +536,8 @@ userdata   style指针
    local style = lvgl.style_create()
 
 --------------
+
+.. _lvgl.style_t-1:
 
 lvgl.style_t()
 --------------
