@@ -10,6 +10,7 @@ C库接口
    ctiot
    disp
    eink
+   fs
    gpio
    http
    i2c
