@@ -32,5 +32,6 @@ C库接口
    timer
    u8g2
    uart
+   wdt
    wlan
    zbuff
