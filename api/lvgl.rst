@@ -314,31 +314,6 @@ userdata   screen指针
 
 --------------
 
-lvgl.calendar_date_t()
-----------------------
-
-创建一个calendar_date_t
-
-**参数**
-
-无
-
-**返回值**
-
-========== ===============
-返回值类型 解释
-========== ===============
-userdata   calendar_date_t
-========== ===============
-
-**例子**
-
-.. code:: lua
-
-   local calendar_date_t = lvgl.calendar_date_t()
-
---------------
-
 lvgl.anim_create()
 ------------------
 
