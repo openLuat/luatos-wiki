@@ -26,8 +26,8 @@ userdata   lv_draw_mask_radius_param_t指针
 
 --------------
 
-lvgl.draw_mask_radius_param_t(radius)
--------------------------------------
+lvgl.draw_mask_radius_param_t_free(radius)
+------------------------------------------
 
 释放一个lv_draw_mask_radius_param_t
 
@@ -37,17 +37,13 @@ lvgl.draw_mask_radius_param_t(radius)
 
 **返回值**
 
-========== ===============================
-返回值类型 解释
-========== ===============================
-userdata   lv_draw_mask_radius_param_t指针
-========== ===============================
+无
 
 **例子**
 
 .. code:: lua
 
-   local lvgl.draw_mask_radius_param_t(radius)
+   local lvgl.draw_mask_radius_param_t_free(radius)
 
 --------------
 
@@ -76,8 +72,8 @@ userdata   lv_draw_mask_line_param_t指针
 
 --------------
 
-lvgl.draw_mask_line_param_t(line)
----------------------------------
+lvgl.draw_mask_line_param_t_free(line)
+--------------------------------------
 
 释放一个lv_draw_mask_line_param_t
 
@@ -87,17 +83,13 @@ lvgl.draw_mask_line_param_t(line)
 
 **返回值**
 
-========== =============================
-返回值类型 解释
-========== =============================
-userdata   lv_draw_mask_line_param_t指针
-========== =============================
+无
 
 **例子**
 
 .. code:: lua
 
-   local lvgl.draw_mask_line_param_t(line)
+   local lvgl.draw_mask_line_param_t_free(line)
 
 --------------
 
@@ -126,8 +118,8 @@ userdata   lv_draw_mask_fade_param_t指针
 
 --------------
 
-lvgl.draw_mask_fade_param_t(fade)
----------------------------------
+lvgl.draw_mask_fade_param_t_free(fade)
+--------------------------------------
 
 释放一个lv_draw_mask_fade_param_t
 
@@ -137,17 +129,13 @@ lvgl.draw_mask_fade_param_t(fade)
 
 **返回值**
 
-========== =============================
-返回值类型 解释
-========== =============================
-userdata   lv_draw_mask_fade_param_t指针
-========== =============================
+无
 
 **例子**
 
 .. code:: lua
 
-   local lvgl.draw_mask_fade_param_t(fade)
+   local lvgl.draw_mask_fade_param_t_free(fade)
 
 --------------
 
