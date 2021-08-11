@@ -1,6 +1,156 @@
 lvgl - LVGL图像库
 =================
 
+lvgl.draw_mask_radius_param_t()
+-------------------------------
+
+创建一个lv_draw_mask_radius_param_t
+
+**参数**
+
+无
+
+**返回值**
+
+========== ===============================
+返回值类型 解释
+========== ===============================
+userdata   lv_draw_mask_radius_param_t指针
+========== ===============================
+
+**例子**
+
+.. code:: lua
+
+   local radius = lvgl.draw_mask_radius_param_t()
+
+--------------
+
+lvgl.draw_mask_radius_param_t(radius)
+-------------------------------------
+
+释放一个lv_draw_mask_radius_param_t
+
+**参数**
+
+无
+
+**返回值**
+
+========== ===============================
+返回值类型 解释
+========== ===============================
+userdata   lv_draw_mask_radius_param_t指针
+========== ===============================
+
+**例子**
+
+.. code:: lua
+
+   local lvgl.draw_mask_radius_param_t(radius)
+
+--------------
+
+lvgl.draw_mask_line_param_t()
+-----------------------------
+
+创建一个lv_draw_mask_line_param_t
+
+**参数**
+
+无
+
+**返回值**
+
+========== =============================
+返回值类型 解释
+========== =============================
+userdata   lv_draw_mask_line_param_t指针
+========== =============================
+
+**例子**
+
+.. code:: lua
+
+   local line = lvgl.draw_mask_line_param_t()
+
+--------------
+
+lvgl.draw_mask_line_param_t(line)
+---------------------------------
+
+释放一个lv_draw_mask_line_param_t
+
+**参数**
+
+无
+
+**返回值**
+
+========== =============================
+返回值类型 解释
+========== =============================
+userdata   lv_draw_mask_line_param_t指针
+========== =============================
+
+**例子**
+
+.. code:: lua
+
+   local lvgl.draw_mask_line_param_t(line)
+
+--------------
+
+lvgl.draw_mask_fade_param_t()
+-----------------------------
+
+创建一个lv_draw_mask_fade_param_t
+
+**参数**
+
+无
+
+**返回值**
+
+========== =============================
+返回值类型 解释
+========== =============================
+userdata   lv_draw_mask_fade_param_t指针
+========== =============================
+
+**例子**
+
+.. code:: lua
+
+   local fade = lvgl.draw_mask_fade_param_t()
+
+--------------
+
+lvgl.draw_mask_fade_param_t(fade)
+---------------------------------
+
+释放一个lv_draw_mask_fade_param_t
+
+**参数**
+
+无
+
+**返回值**
+
+========== =============================
+返回值类型 解释
+========== =============================
+userdata   lv_draw_mask_fade_param_t指针
+========== =============================
+
+**例子**
+
+.. code:: lua
+
+   local lvgl.draw_mask_fade_param_t(fade)
+
+--------------
+
 lvgl.font_get(name)
 -------------------
 
