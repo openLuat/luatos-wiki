@@ -351,7 +351,7 @@ nil        无返回值
 
 --------------
 
-lvgl.anim_path_set_cb(anim, func)
+lvgl.anim_path_set_cb(path, func)
 ---------------------------------
 
 设置动画回调
@@ -363,7 +363,7 @@ lvgl.anim_path_set_cb(anim, func)
 ========== =============================================
 userdata   动画指针
 userdata   lvgl组件指针
-func       lua函数, 参数有1个 (anim), 其中anim是当前对象
+func       lua函数, 参数有1个 (path), 其中path是当前对象
 ========== =============================================
 
 **返回值**
