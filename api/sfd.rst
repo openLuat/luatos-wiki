@@ -1,7 +1,7 @@
 sfd - SPI FLASH操作库
 =====================
 
-   本页文档由\ `这个文件 <https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_sfd.c>`__\ 自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+   本页文档由\ `这个文件 <https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/sfd/luat_lib_sfd.c>`__\ 自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
 sfd.init(type, spi_id, spi_cs)
 ------------------------------
