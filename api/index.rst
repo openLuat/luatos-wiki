@@ -20,6 +20,7 @@ C库接口
    log
    lpmem
    lvgl
+   mcu
    nbiot
    pm
    pwm
