@@ -15,6 +15,7 @@ C库接口
    http
    i2c
    json
+   lcd
    libcoap
    libgnss
    log
