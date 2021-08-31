@@ -25,6 +25,7 @@ C库接口
    nbiot
    pm
    pwm
+   rtc
    rtos
    sensor
    sfd
