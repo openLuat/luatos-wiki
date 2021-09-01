@@ -53,7 +53,7 @@ table      时钟参数,见示例
 
 .. code:: lua
 
-   local t = rtc.set()
+   local t = rtc.get()
    -- {year=2021,mon=8,day=31,hour=17,min=8,sec=43}
    log.info("rtc", json.encode(t))
 
@@ -90,10 +90,8 @@ bool       成功返回true,否则返回nil或false
 
 --------------
 
-.. _rtc.timerstartid-tab-1:
-
-rtc.timerStart(id, tab)
------------------------
+rtc.timerStop(id, tab)
+----------------------
 
 取消RTC唤醒时间
 
