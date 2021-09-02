@@ -27,6 +27,7 @@ C库接口
    pwm
    rtc
    rtos
+   sdio
    sensor
    sfd
    socket
