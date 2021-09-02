@@ -13,7 +13,7 @@ sfd.init(type, spi_id, spi_cs)
 ========== ==================================================
 传入值类型 解释
 ========== ==================================================
-string     类型, 可以是spi, 也可以是zbuff
+string     类型, 可以是“spi”, 也可以是“zbuff”
 int        SPI总线的id, 或者 zbuff实例
 int        SPI FLASH的片选脚对应的GPIO, 当类型是spi时才需要传
 ========== ==================================================
@@ -52,17 +52,17 @@ userdata   sfd.init返回的数据结构
 
 **返回值**
 
-========== =============================================
+========== ==============================================
 返回值类型 解释
-========== =============================================
-int        状态值,0 未初始化成功,1初始化成功且空闲,2正忙
-========== =============================================
+========== ==============================================
+int        状态值, 0 未初始化成功,1初始化成功且空闲,2正忙
+========== ==============================================
 
 **例子**
 
 .. code:: lua
 
-   local drv = sfd.init(0, 17)
+   local drv = sfd.init("spi", 0, 17)
    if drv then
        log.info("sfd", "status", sfd.status(drv))
    end
@@ -96,7 +96,7 @@ string     数据
 
 .. code:: lua
 
-   local drv = sfd.init(0, 17)
+   local drv = sfd.init("spi", 0, 17)
    if drv then
        log.info("sfd", "read", sfd.read(drv, 0x100, 256))
    end
@@ -130,7 +130,7 @@ boolean    成功返回true,失败返回false
 
 .. code:: lua
 
-   local drv = sfd.init(0, 17)
+   local drv = sfd.init("spi", 0, 17)
    if drv then
        log.info("sfd", "write", sfd.write(drv, 0x100, "hi,luatos"))
    end
@@ -163,7 +163,7 @@ boolean    成功返回true,失败返回false
 
 .. code:: lua
 
-   local drv = sfd.init(0, 17)
+   local drv = sfd.init("spi", 0, 17)
    if drv then
        log.info("sfd", "write", sfd.erase(drv, 0x100))
    end
@@ -195,7 +195,7 @@ string     8字节(64bit)的芯片id
 
 .. code:: lua
 
-   local drv = sfd.init(0, 17)
+   local drv = sfd.init("spi", 0, 17)
    if drv then
        log.info("sfd", "chip id", sfd.id(drv))
    end
