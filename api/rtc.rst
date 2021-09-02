@@ -119,8 +119,8 @@ bool       成功返回true,否则返回nil或false
 
 --------------
 
-rtc.setBase_year(Base_year)
----------------------------
+rtc.setBaseYear(Base_year)
+--------------------------
 
 设置RTC基准年
 
@@ -140,6 +140,6 @@ int        基准年Base_year,通常1900
 
 .. code:: lua
 
-   rtc.setBase_year(1900)
+   rtc.setBaseYear(1900)
 
 --------------
