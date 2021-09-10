@@ -71,8 +71,8 @@ int        成功就返回1,否则返回0
 
 --------------
 
-i2c.createSoft(scl,sda,speed,slaveAddr)
----------------------------------------
+i2c.createSoft(scl,sda,slaveAddr)
+---------------------------------
 
 新建一个软件i2c对象
 
