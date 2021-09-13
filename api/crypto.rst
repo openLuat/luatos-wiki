@@ -247,8 +247,8 @@ string     计算得出的hmac_sha1值的hex字符串
 
 --------------
 
-crypto.cipher(type, padding, str, key, iv)
-------------------------------------------
+crypto.cipher_encrypt(type, padding, str, key, iv)
+--------------------------------------------------
 
 对称加密
 
@@ -287,10 +287,8 @@ string     加密后的字符串
 
 --------------
 
-.. _crypto.ciphertype-padding-str-key-iv-1:
-
-crypto.cipher(type, padding, str, key, iv)
-------------------------------------------
+crypto.cipher_decrypt(type, padding, str, key, iv)
+--------------------------------------------------
 
 对称解密
 
@@ -325,7 +323,7 @@ string     解密后的字符串
 
    -- 用AES加密,然后用AES解密
    local data = crypto.cipher_encrypt("AES-128-ECB", "PKCS7", "1234567890123456", "1234567890123456")
-   local data2 = crypto.cipher_encrypt("AES-128-ECB", "PKCS7", data, "1234567890123456")
+   local data2 = crypto.cipher_decrypt("AES-128-ECB", "PKCS7", data, "1234567890123456")
    -- data的hex为 757CCD0CDC5C90EADBEEECF638DD0000
    -- data2的值为 1234567890123456
 
