@@ -91,7 +91,7 @@ nil        无返回值
 .. code:: lua
 
    -- 用户代码请使用sys.timerStop
-   rtos.timer_stop(100000)
+   rtos.timer_stop(id)
 
 --------------
 
@@ -165,7 +165,7 @@ string     硬件bsp型号
 
 .. code:: lua
 
-   -- 获取编译日期
+   -- 获取硬件bsp型号
    local bsp = rtos.bsp()
 
 --------------
@@ -221,8 +221,8 @@ nil        无返回值
 
 .. code:: lua
 
-   -- 读取版本号
-   local luatos_version = rtos.version()
+   -- 进入待机模式
+   rtos.standby(5000)
 
 --------------
 
