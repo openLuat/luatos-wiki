@@ -30,6 +30,7 @@ C库接口
    sdio
    sensor
    sfd
+   sfud
    socket
    spi
    string
