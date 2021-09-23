@@ -267,3 +267,35 @@ int        成功返回0
    log.info("sfud.erase_write",sfud.erase_write(sfud_device,1024,"sfud"))
 
 --------------
+
+sfud.mount(flash, mount_point)
+------------------------------
+
+挂载sfud lfs文件系统
+
+**参数**
+
+========== ==========================================================
+传入值类型 解释
+========== ==========================================================
+userdata   flash Flash 设备对象 sfud.get_device_table()返回的数据结构
+string     mount_point 挂载目录名
+========== ==========================================================
+
+**返回值**
+
+========== ============
+返回值类型 解释
+========== ============
+bool       成功返回true
+========== ============
+
+**例子**
+
+.. code:: lua
+
+   log.info("sfud.mount",sfud.mount(sfud_device,"/sfud"))
+   log.info("fsstat", fs.fsstat("/"))
+   log.info("fsstat", fs.fsstat("/sfud"))
+
+--------------
