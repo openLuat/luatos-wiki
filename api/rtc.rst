@@ -90,8 +90,8 @@ bool       成功返回true,否则返回nil或false
 
 --------------
 
-rtc.timerStop(id, tab)
-----------------------
+rtc.timerStop(id)
+-----------------
 
 取消RTC唤醒时间
 

@@ -140,7 +140,7 @@ boolean    成功返回true,失败返回false
 sfd.erase(drv, offset)
 ----------------------
 
-写入数据
+擦除数据
 
 **参数**
 
