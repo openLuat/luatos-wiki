@@ -22,7 +22,6 @@ C库接口
    lpmem
    lvgl
    mcu
-   nbiot
    pm
    pwm
    rtc
