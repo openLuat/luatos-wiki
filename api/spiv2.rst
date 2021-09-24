@@ -3,8 +3,8 @@ spiv2 - spiv2操作库
 
    本页文档由\ `这个文件 <https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_spiv2.c>`__\ 自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
-spi_v2.device_setup(bus_id, cs, CPHA, CPOL, dataw, bandrate, bitdict, ms, mode)
--------------------------------------------------------------------------------
+spiv2.setup(bus_id, cs, CPHA, CPOL, dataw, bandrate, bitdict, ms, mode)
+-----------------------------------------------------------------------
 
 设置并启用SPI设备
 
@@ -37,7 +37,7 @@ int        成功返回dev_id,否则返回-1
 .. code:: lua
 
    -- 初始化spi设备
-   spiv2.setup(0,0,20,0,0,8,2000000,spi.MSB,1,1)
+   local dev_id = spiv2.setup(0,0,20,0,0,8,2000000,spi.MSB,1,1)
 
 --------------
 
