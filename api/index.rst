@@ -33,6 +33,7 @@ C库接口
    sfud
    socket
    spi
+   spiv2
    string
    timer
    u8g2
