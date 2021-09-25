@@ -1,7 +1,8 @@
-Sphinx==3.4.3
-furo==2020.12.30b24
-recommonmark==0.7.1
-sphinx-markdown-tables==0.0.15
-jieba==0.42.1
-sphinx-sitemap==2.2.0
-sphinx_copybutton==0.3.1
+Sphinx
+furo
+recommonmark
+sphinx-markdown-tables
+jieba
+sphinx-sitemap
+sphinx_copybutton
+recommonmark

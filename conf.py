@@ -32,6 +32,7 @@ extensions = [
     'sphinx_markdown_tables',
     'sphinx_sitemap',
     'sphinx_copybutton',
+    'recommonmark',
 ]
 
 
@@ -79,3 +80,4 @@ html_show_sphinx = False
 html_search_language = 'zh'
 html_baseurl = 'https://wiki.luatos.com/'
 sitemap_url_scheme = "{link}"
+html_copy_source = False

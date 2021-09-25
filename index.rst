@@ -46,9 +46,9 @@
    :hidden:
    :caption: 快速上手
 
-   boardGuide/index
    luaGuide/index
-   luatos_rda8910/index
+   boardGuide/index
+   hardware/index
 
 .. toctree::
    :hidden:
@@ -62,3 +62,9 @@
 
    develop/compile
    develop/clib
+
+.. toctree::
+   :hidden:
+   :caption: 其他资料
+
+   archives
