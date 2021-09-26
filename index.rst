@@ -48,7 +48,6 @@
 
    luaGuide/index
    boardGuide/index
-   hardware/index
 
 .. toctree::
    :hidden:

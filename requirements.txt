@@ -1,8 +1,7 @@
 Sphinx
 furo
-recommonmark
+myst-parser
 sphinx-markdown-tables
 jieba
 sphinx-sitemap
 sphinx_copybutton
-recommonmark

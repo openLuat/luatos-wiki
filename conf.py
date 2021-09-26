@@ -28,11 +28,10 @@ author = 'luatos'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'recommonmark',
+    'myst_parser',
     'sphinx_markdown_tables',
     'sphinx_sitemap',
     'sphinx_copybutton',
-    'recommonmark',
 ]
 
 
