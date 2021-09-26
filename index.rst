@@ -29,6 +29,7 @@
 - Air820（RDA8910/4G Cat.1 + GPS/北斗 模组）
 - Air302（EC6161/nbiot模组）
 - Air640w（W600/wifi模组）
+- Air101（MCU）
 - STM32F103RE
 - XY1100 (nbiot模组）*
 - W800(wifi模组）*
