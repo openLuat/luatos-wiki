@@ -3,21 +3,20 @@ sfud - SPI FLASH sfud软件包
 
    本页文档由\ `这个文件 <https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/sfud/luat_lib_sfud.c>`__\ 自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
-sfud.init(type,spi_id, spi_cs, spi_bandrate)
---------------------------------------------
+sfud.init(spi_id, spi_cs, spi_bandrate)/sfud.init(spi_device)
+-------------------------------------------------------------
 
 初始化sfud
 
 **参数**
 
-========== ======================
+========== ==================================
 传入值类型 解释
-========== ======================
-string     type “spi”或“spiv2”
-int        spi_id SPI的ID
+========== ==================================
+int        spi_id SPI的ID/userdata spi_device
 int        spi_cs SPI的片选
 int        spi_bandrate SPI的频率
-========== ======================
+========== ==================================
 
 **返回值**
 
@@ -31,8 +30,11 @@ bool       成功返回true,否则返回false
 
 .. code:: lua
 
-   log.info("sfud.init",sfud.init(0,20,20 * 1000 * 1000))--spi
-   log.info("sfud.init",sfud.init(0,20,20 * 1000 * 1000))--spiv2
+   --spi
+   log.info("sfud.init",sfud.init(0,20,20 * 1000 * 1000))
+   --spi_device
+   local spi_device = spi.device_setup(0,17,0,0,8,2000000,spi.MSB,1,1)
+   log.info("sfud.init",sfud.init(spi_device))
 
 --------------
 
