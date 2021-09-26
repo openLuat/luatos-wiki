@@ -31,8 +31,8 @@ bool       成功返回true,否则返回false
 
 .. code:: lua
 
-   log.info("sfud.init",sfud.init("spi",0,20,20 * 1000 * 1000))--spi
-   log.info("sfud.init",sfud.init("spiv2",0,20,20 * 1000 * 1000))--spiv2
+   log.info("sfud.init",sfud.init(0,20,20 * 1000 * 1000))--spi
+   log.info("sfud.init",sfud.init(0,20,20 * 1000 * 1000))--spiv2
 
 --------------
 
