@@ -33,6 +33,7 @@ LuatOS接口文档
    sfud
    socket
    spi
+   statme
    string
    timer
    u8g2
