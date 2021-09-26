@@ -29,7 +29,6 @@ author = 'luatos'
 # ones.
 extensions = [
     'myst_parser',
-    'sphinx_markdown_tables',
     'sphinx_sitemap',
     'sphinx_copybutton',
 ]
