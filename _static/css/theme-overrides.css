@@ -83,6 +83,7 @@ https://github.com/janluke/cloup/blob/master/docs/_static/styles/theme-overrides
 
 h1, h2, h3 {
     color: var(--color-brand-primary);
+    font-weight: normal;
 }
 
 h2, h3 {
