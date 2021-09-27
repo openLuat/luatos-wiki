@@ -60,13 +60,19 @@ exclude_patterns = ["README.md"]
 # a list of builtin themes.
 #
 html_theme = 'furo'
-pygments_style = "xcode"
+pygments_style = "vs"
+pygments_dark_style = "monokai"
+primary_color = "#0094ff"
+darker_primary_color = "#007bd3"
 html_theme_options = {
     "sidebar_hide_name": True,
     "navigation_with_keys": True,
     "light_logo": "logo.svg",
-    "dark_logo": "logo.svg",
+    "dark_logo": "logo-light.svg",
 }
+html_css_files = [
+    'css/theme-overrides.css',
+]
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,

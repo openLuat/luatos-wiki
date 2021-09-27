@@ -10,7 +10,6 @@ window.onload = function () {
     });
     //表头宽度别改了
     $("col").css("width","");
-    $(".highlight").css("background","#fafafa");
 }
 
 if (window.location.protocol != "https:" && window.location.protocol != "file:"){

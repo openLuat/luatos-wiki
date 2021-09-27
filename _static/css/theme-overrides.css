@@ -1,0 +1,264 @@
+/*
+copy from
+https://github.com/janluke/cloup/blob/master/docs/_static/styles/theme-overrides.css
+*/
+:root {
+    --color-primary: #0094ff;            /* custom variable */
+    --color-primary--dark: #0080dd;      /* custom variable */
+    --color-primary--light: #6cc1ff;     /* custom variable */
+    --color-brand-primary: var(--color-primary--dark);
+    --color-brand-content: var(--color-primary--dark);
+
+    --admonition-font-size: var(--font-size--normal);
+
+    --sidebar-item-font-size: 95%;
+
+    --toc-font-size: .87rem;
+    --toc-font-size--level1: .95rem;  /* custom variable */
+
+    --toc-title-font-size: var(--sidebar-caption-font-size);
+    --color-toc-item-text: var(--color-sidebar-caption-text);
+    --color-toc-title-text: var(--color-sidebar-caption-text);
+
+    --toc-item-spacing-horizontal: 1em;
+    --toc-item-spacing-vertical: 0.3em;
+    --toc-item-spacing-vertical--level1: 0.7em;
+    --color-toc-item-text: #696969;
+    --color-toc-item-text--level1: var(--color-brand-content);  /* custom variable */
+
+    --code-font-size: 90%;
+    --inline-code-font-size: 93%;
+    --color-inline-code-foreground: #005fa1;
+
+    --admonition-font-size: 95%;
+    --admonition-title-font-size: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-brand-primary: var(--color-primary--light);
+        --color-brand-content: var(--color-primary--light);
+        --color-inline-code-foreground: #b2deff;
+
+        --color-toc-item-text--level1: rgba(255, 255, 255, 95%);  /* custom variable */
+        --color-toc-item-text: #bbb;
+
+        --color-sidebar-caption-text: var(--color-brand-content);
+        --color-sidebar-link-text--top-level: rgba(255, 255, 255, 95%);
+        --color-sidebar-link-text: #ccc;
+    }
+}
+
+/*
+    Layout
+    - give more space to right ToC drawer
+    - increase .content padding to keep the right drawer on the right side
+*/
+.content {
+    padding: 0 4rem;
+    width: 46rem;
+}
+
+@media only screen and (max-width: 700px) {
+    .content {
+        padding: 0 1rem;
+    }
+}
+
+.toc-drawer {
+    flex: 1;
+    max-width: 40ch;
+}
+
+.toc-sticky {
+    padding-right: 1em;
+}
+
+/*
+    Typography
+    - increase font size and limits line width
+    - increase paragraph and list items spacing
+    - use a dark blue for code.literal
+*/
+
+h1, h2, h3 {
+    color: var(--color-brand-primary);
+}
+
+h2, h3 {
+    margin: 1.25em 0 .5em;
+}
+
+h1 + .section h2:first-of-type,
+h2 + .section h3:first-of-type {
+    margin-top: .5em;
+}
+
+.content {
+    /* blindly taken from Google web.dev website. May be non-sense. */
+    font-size: clamp(1em, 1.7578125vw, 1.125em);
+    line-height: 1.6;
+}
+
+article {
+    max-width: 72ch;
+    line-height: 1.6;
+}
+
+.section > p {
+    margin: 1.2em 0;
+}
+
+code.literal {
+  font-size: var(--inline-code-font-size);
+  padding: 0.15em 0.25em;
+  color: var(--color-inline-code-foreground);
+  background: var(--color-inline-code-background);
+}
+
+a code.literal {
+  color: var(--color-brand-content);
+}
+
+.section > p + ul, .section > p + ol {
+    margin-top: -0.25em;
+}
+
+ul > li, ol > li {
+    margin: 0.75em 0;
+}
+
+ul > li li, ol > li li {
+    margin: 0.25em 0;
+}
+
+.table-wrapper {
+    padding: .2rem .2rem 0;
+}
+
+ol li > p:last-child, ul li > p:last-child {
+    margin-top: -0.5rem;
+}
+
+
+/*
+    Admonitions
+    - use a bigger font-size, not much different from main content
+    - fix icon vertical alignment
+*/
+
+.admonition {
+ margin: 1.5em auto;
+}
+
+.admonition p.admonition-title::before {  /* adjust icon vertical centering */
+    top: 0.65em;
+}
+
+/* Version changed/added */
+
+.versionchanged, .versionadded {
+  margin: .5em 0;
+  padding: .5em .8em;
+  font-size: 90%;
+  background: var(--color-admonition-title-background--note);
+  border-radius: 5px;
+}
+
+.versionadded {
+  background: var(--color-admonition-title-background--tip);
+}
+
+.versionmodified {
+    font-weight: 600;
+}
+
+/*
+    Right table of contents
+    - replace title "Contents" with "On this page" and use the same style as
+      sidebar labels
+    - increase font-size and spacing, emphasize 1st level items
+*/
+
+.toc-drawer {
+    padding-right: 0.2rem;
+}
+
+.toc-tree {
+    line-height: 1.2;
+}
+
+.toc-tree > ul > li:first-child {
+    margin-top: 0;
+}
+
+.toc-tree > ul > li > ul > li {  /* 1st-level ToC items */
+    padding-top: var(--toc-item-spacing-vertical--level1);
+    font-size: var(--toc-font-size--level1);
+}
+
+.toc-tree > ul > li > ul > li .reference {  /* 1st-level anchors */
+    color: var(--color-toc-item-text--level1);
+}
+
+.toc-tree > ul > li > ul > li > ul li {  /* Other levels ToC items */
+    padding-top: var(--toc-item-spacing-vertical);
+    font-size: var(--toc-font-size);
+}
+
+.toc-tree > ul > li > ul > li > ul li .reference {  /* Other levels ToC items */
+    color: var(--color-toc-item-text);
+}
+
+.toc-tree .reference:hover {
+    text-decoration: underline;
+}
+
+.toc-tree .scroll-current .reference:hover {
+    text-decoration: none;
+}
+
+table.docutils td {
+    padding: .2em .3em;
+}
+
+.toc-title {
+    display: none;
+}
+
+.toc-title-container::before {
+    content: "On this page";
+    font-weight: bold;
+    font-size: var(--toc-title-font-size);
+    padding-left: var(--toc-spacing-horizontal);
+    text-transform: uppercase;
+    color: var(--color-toc-title-text);
+}
+
+/* Miscellaneous */
+
+#user-guide .caption {
+    display: none;
+}
+
+.sidebar-logo {
+    margin: .5em auto 0;
+}
+
+.field-list.simple {
+  margin-top: 1em;
+}
+
+#user-guide.section li.toctree-l1 {
+    margin-top: .25em;
+}
+
+#user-guide.section li.toctree-l2 {
+    font-size: 95%;
+    margin-top: 0;
+}
+
+.highlight .hll {
+	display: block;
+	background-color: hsla(60, 100%, 50%, .3);
+}
