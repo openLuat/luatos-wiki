@@ -137,6 +137,10 @@ ul > li li, ol > li li {
     padding: .2rem .2rem 0;
 }
 
+.align-default {
+    margin-left: inherit;
+}
+
 ol li > p:last-child, ul li > p:last-child {
     margin-top: -0.5rem;
 }
