@@ -140,6 +140,10 @@ ol li > p:last-child, ul li > p:last-child {
     margin-top: -0.5rem;
 }
 
+code, kbd, pre, samp {
+    font-family: Consolas,"Ubuntu Mono",Monaco,Menlo,"Andale Mono","Liberation Mono",'微软雅黑',Courier,monospace;
+}
+
 
 /*
     Admonitions
