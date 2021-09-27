@@ -138,7 +138,7 @@ ul > li li, ol > li li {
 }
 
 .align-default {
-    margin-left: inherit;
+    margin-left: inherit !important;
 }
 
 ol li > p:last-child, ul li > p:last-child {
