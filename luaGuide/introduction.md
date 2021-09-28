@@ -1,10 +1,17 @@
-# 白话Lua教程
+# 基础语法
 
->本教程为**零基础教程**，适合广大没有接触过`Lua`的用户进行阅读。<br>对有编程经验的用户来说，可能过于啰嗦，可以点击左侧的`简明Lua语法`查看简易文档。<br>建议读者在阅读时多运行代码进行测试，以确保牢记和巩固知识点。<br>为了方便各位测试`Lua`代码，**我们提供了[Lua在线调试网站，点击即可访问](https://wiki.luatos.com/_static/luatos-emulator/lua.html)**。
+## 视频教程
 
---------
+<div class="admonition">
+    <p class="title">Lua快速入门</p>
+    <iframe id="spjc" src="//player.bilibili.com/player.html?aid=291542005&bvid=BV1vf4y1L7Rb&cid=368202399&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%"> </iframe>
+    <script type="text/javascript">
+    document.getElementById("spjc").style.height=document.getElementById("spjc").scrollWidth*0.76+"px";
+    </script>
+</div>
 
-## 初始
+
+## 文字版教程
 
 ### 初识Lua
 

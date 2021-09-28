@@ -85,3 +85,7 @@ html_search_language = 'zh'
 html_baseurl = 'https://wiki.luatos.com/'
 sitemap_url_scheme = "{link}"
 html_copy_source = False
+
+myst_enable_extensions = [
+    "html_admonition",
+]
