@@ -7,3 +7,5 @@
     <script type="text/javascript">
     document.getElementById("spjc").style.height=document.getElementById("spjc").scrollWidth*0.76+"px";
     </script>
+
+如需文字版教程，请  `点击此处查看 <https://wiki.luatos.com/luaGuide/luaStart.html>`_

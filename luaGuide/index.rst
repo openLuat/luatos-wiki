@@ -8,6 +8,7 @@ Lua可以说是目前嵌入式方案中，资源占用 **最小** 、运行效�
 现在，可以点击下一页，按顺序学习Lua这门语言。
 
 .. toctree::
+   :hidden:
 
    introduction
    luatask

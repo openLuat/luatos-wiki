@@ -61,6 +61,12 @@ end)
 sys.run()
 -- sys.run()之后后面不要加任何语句!!!!!
 `;
+if (location.search != ""){
+  var scode = location.search.substring(1);
+  if (scode.indexOf("&") >= 0)
+    scode = scode.substring(0,scode.indexOf("&"))
+    defaultCode = unescape(scode);
+}
   </script>
   <script src="js/luaTask.js"></script>
   <script src="js/editor.js"></script>

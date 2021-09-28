@@ -1,3 +1,4 @@
+var oldonload = window.onload;
 window.onload = function () {
     //新窗口打开链接
     $("article").find("a").each(function () {
@@ -10,6 +11,8 @@ window.onload = function () {
     });
     //表头宽度别改了
     $("col").css("width","");
+    if(oldonload != undefined)
+        oldonload();
 }
 
 if (window.location.protocol != "https:" && window.location.protocol != "file:"){
