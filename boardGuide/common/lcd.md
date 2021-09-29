@@ -24,7 +24,16 @@ Air101开发板一块，SPI接口的LCD屏一个，我这里使用ST7735（128*1
 
 ```lua
 spi.setup(0, 20, 0, 0, 8, 40 * 1000 * 1000, spi.MSB, 1, 1)
-log.info("lcd.init", lcd.init("st7735",{port = 0,pin_cs = 20,pin_dc = 17, pin_pwr = 16,pin_rst = 19,direction = 0,w = 128,h = 160}))
+log.info("lcd.init", lcd.init("st7735",{
+    port = 0,
+    pin_cs = 按你板子改成自己的引脚编号,
+    pin_dc = 按你板子改成自己的引脚编号,
+    pin_pwr = 按你板子改成自己的引脚编号,
+    pin_rst = 按你板子改成自己的引脚编号,
+    direction = 0,
+    w = 128,
+    h = 160
+}))
 log.info("lcd.drawLine", lcd.drawLine(20,30,80,30,0x001F))
 log.info("lcd.drawRectangle", lcd.drawRectangle(20,40,80,80,0x001F))
 log.info("lcd.drawCircle", lcd.drawCircle(120,120,20,0x001F))

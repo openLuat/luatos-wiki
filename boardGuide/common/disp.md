@@ -36,7 +36,11 @@ end
 
 -- 初始化显示屏
 log.info("disp", "init ssd1306") -- log库是内置库,内置库均不需要require
-disp.init({mode="i2c_sw", pin0=1, pin1=4}) -- 通过PA1 SLK/PA4 SDA模拟, 也可以用硬件i2c脚
+disp.init({
+    mode="i2c_sw",
+    pin0=按你板子改成自己的引脚编号,
+    pin1=按你板子改成自己的引脚编号,
+}) -- 模拟i2c,pin0是SCL，pin1是SDA, 也可以用硬件i2c脚
 disp.setFont(1) -- 启用中文字体,文泉驿点阵宋体 12x12
 display_str("启动中 ...")
 
