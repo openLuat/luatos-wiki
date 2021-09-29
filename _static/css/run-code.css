@@ -1,0 +1,32 @@
+.run-code-btn {
+    display: inline-block;
+    border-radius: 2px;
+    line-height: normal;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    font-size: 100%;
+    padding: 6px 12px 8px 12px;
+    color: black;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: aliceblue;
+    text-decoration: none;
+    font-weight: normal;
+    font-family: "Lato","proxima-nova","Helvetica Neue",Arial,sans-serif;
+    box-shadow: 0px 1px 2px -1px rgba(255,255,255,0.5) inset,0px -2px 0px 0px rgba(0,0,0,0.1) inset;
+    vertical-align: middle;
+    zoom: 1;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all .1s linear;
+    -moz-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+.run-code-btn:hover {
+    color: white;
+    background-color: #A5A5A5;
+}

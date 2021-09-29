@@ -10,5 +10,7 @@
       }, 'google_translate_element');
     }
   }
-  var _hmt = _hmt || []; (function () { var hm = document.createElement('script'); hm.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm, s); })();
+  if (navigator.language.indexOf("CN") < 0) {
+    var _hmt = _hmt || []; (function () { var hm = document.createElement('script'); hm.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm, s); })();
+  }
 </script>

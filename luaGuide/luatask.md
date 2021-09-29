@@ -133,7 +133,7 @@ window.onload = function(){
     //在代码块附近加上快速测试代码链接
     $("pre").each(function () {
         if($(this).text().indexOf("log.info") >= 0)
-            $(this).before('<a href="https://wiki.luatos.com/_static/luatos-emulator/lua.html?'+escape($(this).text())+'" target="_blank">点我快速测试下面的代码</a>');
+            $(this).before('<a class="run-code-btn" href="https://wiki.luatos.com/_static/luatos-emulator/lua.html?'+escape($(this).text())+'" target="_blank">点我快速测试下面的代码</a>');
     });
 }
 </script>
