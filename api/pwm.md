@@ -13,6 +13,7 @@
 |int|PWM通道|
 |int|频率, 1-1000000hz|
 |int|占空比 0-100|
+|int|输出周期 0为持续输出|
 
 **返回值**
 
@@ -71,13 +72,14 @@ PWM捕获
 
 |返回值类型|解释|
 |-|-|
-|int|成功返回占空比,失败返回-1|
+|boolean|处理结果,成功返回true,失败返回false|
 
 **例子**
 
 ```lua
 -- PWM0捕获
-log.info("pwm.get(0)",pwm.capture(0))
+log.info("pwm.get(0)",pwm.capture(0,1000))
+log.info("PWM_CAPTURE",sys.waitUntil("PWM_CAPTURE", 2000))
 
 ```
 
