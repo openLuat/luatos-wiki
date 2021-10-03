@@ -8,6 +8,7 @@
       :target: https://gitee.com/openLuat/LuatOS
 
    .. image:: https://img.shields.io/badge/Lua-5.3-blue
+      :target: https://gitee.com/openLuat/LuatOS
 
    .. image:: https://img.shields.io/badge/license-MIT-green
       :target: https://gitee.com/openLuat/LuatOS/blob/master/LICENSE

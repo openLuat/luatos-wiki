@@ -272,13 +272,6 @@ table.docutils td {
 	background-color: hsla(60, 100%, 50%, .3);
 }
 
-
-main img {
-    box-shadow: 0 0 8px 5px #d9d9d9;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    transition: ease-in-out 200ms;
-}
 main img:hover {
     opacity: 0.85;
     box-shadow: 0 0 8px 8px #d9d9d9;
