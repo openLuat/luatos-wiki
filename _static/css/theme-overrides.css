@@ -272,7 +272,7 @@ table.docutils td {
 	background-color: hsla(60, 100%, 50%, .3);
 }
 
-main img {
+* {
     transition: ease-in-out 200ms;
 }
 main img:hover {
