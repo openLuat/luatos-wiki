@@ -154,7 +154,7 @@ local result = spi.send(0, buff)--把zbuff数据从指针开始，全发出去
 
 ---
 
-## spi.device_setup(id, cs, CPHA, CPOL, dataw, bandrate, bitdict, ms, mode)
+## spi.deviceSetup(id, cs, CPHA, CPOL, dataw, bandrate, bitdict, ms, mode)
 
 设置并启用SPI(对象方式)
 
@@ -182,7 +182,7 @@ local result = spi.send(0, buff)--把zbuff数据从指针开始，全发出去
 
 ```lua
 -- 初始化spi
-local spi_device = spi.device_setup(0,17,0,0,8,2000000,spi.MSB,1,1)
+local spi_device = spi.deviceSetup(0,17,0,0,8,2000000,spi.MSB,1,1)
 
 ```
 

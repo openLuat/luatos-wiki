@@ -33,7 +33,7 @@ log.info("sfud.init",sfud.init(spi_device))
 
 ---
 
-## sfud.get_device_num()
+## sfud.getDeviceNum()
 
 获取flash设备信息表中的设备总数
 
@@ -50,13 +50,13 @@ log.info("sfud.init",sfud.init(spi_device))
 **例子**
 
 ```lua
-log.info("sfud.get_device_num",sfud.get_device_num())
+log.info("sfud.getDeviceNum",sfud.getDeviceNum())
 
 ```
 
 ---
 
-## sfud.get_device(index)
+## sfud.getDevice(index)
 
 通过flash信息表中的索引获取flash设备
 
@@ -75,13 +75,13 @@ log.info("sfud.get_device_num",sfud.get_device_num())
 **例子**
 
 ```lua
-local sfud_device = sfud.get_device(1)
+local sfud_device = sfud.getDevice(1)
 
 ```
 
 ---
 
-## sfud.get_device_table()
+## sfud.getDeviceTable()
 
 获取flash设备信息表
 
@@ -98,13 +98,13 @@ local sfud_device = sfud.get_device(1)
 **例子**
 
 ```lua
-local sfud_device = sfud.get_device_table()
+local sfud_device = sfud.getDeviceTable()
 
 ```
 
 ---
 
-## sfud.chip_erase(flash)
+## sfud.chipErase(flash)
 
 擦除 Flash 全部数据
 
@@ -123,7 +123,7 @@ local sfud_device = sfud.get_device_table()
 **例子**
 
 ```lua
-sfud.chip_erase(flash)
+sfud.chipErase(flash)
 
 ```
 
@@ -209,7 +209,7 @@ log.info("sfud.write",sfud.write(sfud_device,1024,"sfud"))
 
 ---
 
-## sfud.erase_write(flash, addr, size,data)
+## sfud.eraseWrite(flash, addr, size,data)
 
 先擦除再往 Flash 写数据
 
@@ -231,7 +231,7 @@ log.info("sfud.write",sfud.write(sfud_device,1024,"sfud"))
 **例子**
 
 ```lua
-log.info("sfud.erase_write",sfud.erase_write(sfud_device,1024,"sfud"))
+log.info("sfud.eraseWrite",sfud.eraseWrite(sfud_device,1024,"sfud"))
 
 ```
 
