@@ -73,6 +73,7 @@ spi.close(0)
 |int|SPI号,例如0|
 |string/zbuff|待发送的数据，如果为zbuff数据，则会从对象所处的指针处开始读|
 |int|可选。待发送数据的长度，默认为data长度|
+|int|可选。读取数据的长度，默认为1|
 
 **返回值**
 
@@ -225,6 +226,7 @@ spi_device.close()
 |userdata|spi_device|
 |string/zbuff|待发送的数据，如果为zbuff数据，则会从对象所处的指针处开始读|
 |int|可选。待发送数据的长度，默认为data长度|
+|int|可选。读取数据的长度，默认为1|
 
 **返回值**
 
