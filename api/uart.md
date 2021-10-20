@@ -11,12 +11,12 @@
 |传入值类型|解释|
 |-|-|
 |int|串口id, uart0写0, uart1写1|
-|int|波特率 9600~115200|
-|int|数据位 7或8, 一般是8|
-|int|停止位 1或0, 一般是1|
-|int|校验位, 可选 uart.None/uart.Even/uart.Odd|
-|int|大小端, 默认小端 uart.LSB, 可选 uart.MSB|
-|int|缓冲区大小, 默认值1024|
+|int|波特率|
+|int|数据位，默认为8|
+|int|停止位，默认为1|
+|int|校验位，可选 uart.None/uart.Even/uart.Odd|
+|int|大小端，默认小端 uart.LSB, 可选 uart.MSB|
+|int|缓冲区大小，默认值1024|
 |int|485模式下的转换GPIO, 默认值0xffffffff|
 |int|485模式下的rx方向GPIO的电平, 默认值0|
 |int|485模式下tx向rx转换的延迟时间，默认值12bit的时间，单位us|
