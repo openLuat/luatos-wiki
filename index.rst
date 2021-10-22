@@ -26,14 +26,15 @@
 
 **目前已经适配的模组和芯片：**
 
-- Air724（RDA8910/4G Cat.1 模组)
-- Air820（RDA8910/4G Cat.1 + GPS/北斗 模组）
+- Air101（MCU）
+- Air103（MCU）
+- Air105（MCU）
 - Air302（EC6161/nbiot模组）
 - Air640w（W600/wifi模组）
-- Air101（MCU）
-- STM32F103RE
+- ESP32系列 (wifi芯片）*
 - XY1100 (nbiot模组）*
 - W800(wifi模组）*
+- STM32F103RE
 
 （带*号的表示开发中）
 

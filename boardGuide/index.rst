@@ -6,6 +6,7 @@
 .. toctree::
 
     Air101
+    Air103
     Air302
     Air640w
     win32
