@@ -2,6 +2,6 @@ Sphinx
 furo
 myst-parser
 sphinx-markdown-tables
-jieba==0.42.1
-sphinx-sitemap==2.2.0
-sphinx_copybutton==0.3.1
+jieba
+sphinx-sitemap
+sphinx_copybutton
