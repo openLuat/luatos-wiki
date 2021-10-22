@@ -16,6 +16,7 @@ LuatOS接口文档
    i2c
    json
    lcd
+   lcdseg
    libcoap
    libgnss
    log
