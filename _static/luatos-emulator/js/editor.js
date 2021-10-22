@@ -43,6 +43,13 @@ require(['vs/editor/editor.main'], function () {
         }
     });
 
+    if (location.search != ""){
+        var scode = location.search.substring(1);
+        if (scode.indexOf("&") >= 0)
+            scode = scode.substring(0,scode.indexOf("&"))
+        defaultCode = unescape(scode);
+    }
+
     var editor = monaco.editor.create(document.getElementById('container'), {
         value: defaultCode,
         language: 'lua',
@@ -63,6 +70,24 @@ require(['vs/editor/editor.main'], function () {
         stopCode();
         runCode(editor.getValue());
     });
+
+    var shareButton = document.getElementById("code-share");
+    var pageurl = window.location.href;
+    if (pageurl.indexOf("?") >= 0)
+        pageurl = pageurl.substring(0, pageurl.indexOf("?"));
+    $("#code-share").click(function () {
+        shareButton.setAttribute("data-clipboard-text", pageurl + "?" + escape(editor.getValue()) + "%0d%0a");
+    });
+    var btn = document.getElementById('code-share');
+    var clipboard = new ClipboardJS(btn);
+
+    clipboard.on('success', function (e) {
+        alert("复制成功~粘贴即可分享代码链接~");
+    });
+    clipboard.on('error', function (e) {
+        alert("复制失败了呢，你还是手动复制吧");
+    });
+
 
     $(function () {
         $(document).keydown(function (event) {

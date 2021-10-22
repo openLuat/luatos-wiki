@@ -30,7 +30,7 @@ html {
   overflow: hidden;
 }
 .content .right .operation {
-  width: 88px;
+  width: 115px;
   height: 30px;
   margin: 0px auto;
   text-align: center;
@@ -66,8 +66,11 @@ html {
 .content .right .operation > button:nth-child(2) {
   background-image: url(icon/stop.svg);
 }
-.content .right .operation > button:last-child {
+.content .right .operation > button:nth-child(3) {
   background-image: url(icon/reload.svg);
+}
+.content .right .operation > button:last-child {
+  background-image: url(icon/share.svg);
 }
 .content #container {
   width: 100%;
