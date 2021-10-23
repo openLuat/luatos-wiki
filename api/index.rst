@@ -23,6 +23,7 @@ LuatOS接口文档
    lpmem
    lvgl
    mcu
+   nbiot
    pm
    pwm
    rtc
