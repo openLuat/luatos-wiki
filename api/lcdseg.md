@@ -2,7 +2,7 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_lcdseg.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
-## lcdseg.setup(bias, duty, vlcd, com_number, fresh_rate)
+## lcdseg.setup(bias, duty, vlcd, com_number, fresh_rate, com_mark, seg_mark)
 
 初始化lcdseg库
 
@@ -15,6 +15,8 @@
 |int|电压, 单位100mV, 例如2.7v写27. air103支持的值有 27/29/31/33|
 |int|COM脚的数量, 取决于具体模块, air103支持1-4|
 |int|刷新率,通常为60, 对应60HZ|
+|int|COM启用与否的掩码, 默认为0xFF,全部启用.若只启用COM0/COM1, 则0x03|
+|int|seg启用与否的掩码, 默认为0xFFFF,即全部启用. 若只启用前16个, 0xFF|
 
 **返回值**
 
