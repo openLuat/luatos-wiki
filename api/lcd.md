@@ -322,7 +322,7 @@ lcd.drawCircle(120,120,20,0x001F)
 
 ---
 
-## eink.printcn(x, y, str, colored, font)
+## lcd.printcn(x, y, str, colored, font)
 
 绘制字符串,支持中文
 
