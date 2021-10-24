@@ -322,3 +322,63 @@ lcd.drawCircle(120,120,20,0x001F)
 
 ---
 
+## lcd.setFont(font)
+
+设置字体
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|font|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 设置为中文字体,对之后的drawStr有效,使用中文字体需在luat_conf_bsp.h.h开启#define USE_U8G2_WQY16_T_GB2312
+lcd.setFont(lcd.font_ncenB12_tr)
+lcd.drawStr(40,10,"drawStr")
+sys.wait(2000)
+lcd.setFont(lcd.font_wqy16_t_gb2312)
+lcd.drawStr(40,40,"drawStr测试")
+
+```
+
+---
+
+## lcd.drawStr(x,y,str,fg_color,bg_color)
+
+显示字符串
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|x 横坐标|
+|int|y 竖坐标|
+|string|str 文件内容|
+|int|fg_color str颜色|
+|int|bg_color str背景颜色|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 显示之前先设置为中文字体,对之后的drawStr有效,使用中文字体需在luat_conf_bsp.h.h开启#define USE_U8G2_WQY16_T_GB2312
+lcd.setFont(lcd.font_ncenB12_tr)
+lcd.drawStr(40,10,"drawStr")
+sys.wait(2000)
+lcd.setFont(lcd.font_wqy16_t_gb2312)
+lcd.drawStr(40,40,"drawStr测试")
+
+```
+
+---
+
