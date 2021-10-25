@@ -34,9 +34,9 @@
 
 [https://gitee.com/openLuat/LuatOS/releases](https://gitee.com/openLuat/LuatOS/releases)
 
-快照版可以直接点击[LuatOS官方仓库readme](https://gitee.com/openLuat/LuatOS)中，对应的徽标下载：
+也可以使用官方的**云编译**功能，自定义固件中包含的模块
 
-![](img/73336200_1631695428.png)
+[云编译教程点我查看](https://doc.openluat.com/article/3639)
 
 固件下载后解压，可以得到相应的固件，拓展名为soc的文件，这里用Air101的固件进行举例：
 
