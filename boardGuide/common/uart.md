@@ -18,6 +18,8 @@ Air101开发板一块，USB转TTL模块一块
 
 如图将TTL的TX、RX、GND分别连接Air101的U1_RX、U1_TX、GND。
 
+注意TTL电平是3.3V, 不能直接与RS232/RS485连接, 必须使用额外的转换芯片.
+
 ## 软件使用
 
 接口文档可参考：[uart库](https://wiki.luatos.com/api/uart.html)
@@ -38,6 +40,8 @@ local result = uart.setup(
 sys.timerLoopStart(uart.write,1000,uartid,"test")--定时器循环向串口1发送数据
 uart.on(uartid, "receive", function(id, len)
     log.info("uart", "receive", id, len, uart.read(uartid, len))
+    -- 若打印不可见字符,或者叫"二进制数据", 可以把数据转为HEX值显示
+    -- log.info("uart", "receive", id, len, uart.read(uartid, len):toHex())
 end)--注册串口1接收事件回调
 uart.on(uartid, "sent", function(id)
     log.info("uart", "sent", id)

@@ -17,12 +17,14 @@ Air101开发板一块
 代码展示
 
 ```lua
-print("getClk", mcu.getClk())--打印主频
-sys.wait(1000)--延迟
-print("setClk", mcu.setClk(240))--设置主频
-sys.wait(1000)--延迟
-print("getClk", mcu.getClk())--打印主频
-print("ticks", mcu.ticks())--打印ticks
+sys.taskInit(function()
+    print("getClk", mcu.getClk())--打印主频
+    sys.wait(1000)--延迟
+    print("setClk", mcu.setClk(240))--设置主频
+    sys.wait(1000)--延迟
+    print("getClk", mcu.getClk())--打印主频
+    print("ticks", mcu.ticks())--打印ticks
+end)
 ```
 
 上述代码打印日志

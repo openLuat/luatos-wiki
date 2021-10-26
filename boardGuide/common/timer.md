@@ -17,9 +17,14 @@ Air101开发板一块
 代码展示
 
 ```lua
-print("ticks", mcu.ticks())--打印ticks
-timer.mdelay(5000)--阻塞延迟5000
-print("ticks", mcu.ticks())--打印ticks
+log.info("ticks", mcu.ticks())--打印ticks
+-- 阻塞延迟5000ms, 绝大部分项目不会也不应该使用该方法
+-- 本demo只是为了演示API方法的可用性
+-- mdelay会阻塞整个lua vm的运行, 在阻塞的时长内,任何中断都不会响应,包括uart
+-- 对应的用法是 sys.waitXXX
+-- 如需在中断回调内使用sys.waitXXX, 可以使用sys.taskInit启动新的task
+timer.mdelay(5000)
+log.info("ticks", mcu.ticks())--打印ticks
 ```
 
 上述代码打印日志

@@ -17,10 +17,10 @@ Air101开发板一块
 代码展示
 
 ```lua
--- 请求进入休眠模式
-pm.request(pm.HIB)
 -- 添加底层定时器
 pm.dtimerStart(0, 300 * 1000) -- 5分钟后唤醒
+-- 请求进入休眠模式
+pm.request(pm.HIB)
 -- 关闭底层定时器
-pm.dtimerStop(0) -- 关闭id=0的底层定时器
+-- pm.dtimerStop(0) -- 关闭id=0的底层定时器
 ```
