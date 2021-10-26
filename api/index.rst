@@ -14,6 +14,7 @@ LuatOS接口文档
    gpio
    http
    i2c
+   ir
    json
    lcd
    lcdseg
