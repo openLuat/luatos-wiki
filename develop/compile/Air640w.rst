@@ -32,6 +32,9 @@ Air640w
 4. 获取rtt源码, 执行命令
    ``git clone https://gitee.com/rtthread/rt-thread.git`` ,
    得到rt-thread目录
+5. 进入rtt目录，切换到rtt的4.0.3版本，执行命令
+   ``cd rt-thread``
+   ``git checkout v4.0.3``
 
 开始编译
 --------
