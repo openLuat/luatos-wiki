@@ -11,6 +11,7 @@ LuatOS源码仓库：https://gitee.com/openLuat/LuatOS
 .. toctree::
    :hidden:
 
+   compile/Air101
    compile/Air640w
    compile/Air302
    compile/Win32
