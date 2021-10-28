@@ -12,3 +12,4 @@ Lua可以说是目前嵌入式方案中，资源占用 **最小** 、运行效�
 
    introduction
    luatask
+   Lua5.3参考手册 <https://wiki.luatos.com/_static/lua53doc/index.html>
