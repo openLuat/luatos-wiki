@@ -76,7 +76,18 @@ require(['vs/editor/editor.main'], function () {
     if (pageurl.indexOf("?") >= 0)
         pageurl = pageurl.substring(0, pageurl.indexOf("?"));
     $("#code-share").click(function () {
-        shareButton.setAttribute("data-clipboard-text", pageurl + "?" + escape(editor.getValue()) + "%0d%0a");
+        var url = pageurl + "?" + escape(editor.getValue()) + "%0d%0a";
+        shareButton.setAttribute("data-clipboard-text", url);
+        $.ajax({
+            type: 'POST',contentType : "application/json",
+            url: "https://xn--ugt.cc/api/set.php",
+            data: JSON.stringify({url:url}),
+            success: function(result){
+                if(result.success)
+                alert("也可以使用短链接分享："+result.content.url);
+            },
+            dataType: 'json'
+        });
     });
     var btn = document.getElementById('code-share');
     var clipboard = new ClipboardJS(btn);
