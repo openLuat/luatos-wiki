@@ -339,11 +339,11 @@ lcd.drawCircle(120,120,20,0x001F)
 **例子**
 
 ```lua
--- 设置为中文字体,对之后的drawStr有效,使用中文字体需在luat_conf_bsp.h.h开启#define USE_U8G2_WQY16_T_GB2312
-lcd.setFont(lcd.font_ncenB12_tr)
+-- 设置为中文字体,对之后的drawStr有效,使用中文字体需在luat_conf_bsp.h.h开启#define USE_U8G2_OPPOSANSM12_CHINESE
+lcd.setFont(lcd.font_opposansm12)
 lcd.drawStr(40,10,"drawStr")
 sys.wait(2000)
-lcd.setFont(lcd.font_wqy16_t_gb2312)
+lcd.setFont(lcd.font_opposansm12_chinese)
 lcd.drawStr(40,40,"drawStr测试")
 
 ```
