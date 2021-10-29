@@ -93,33 +93,7 @@
 
 ## eink.print(x, y, str, colored, font)
 
-绘制字符串(仅ASCII)
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|x坐标|
-|int|y坐标|
-|string|字符串|
-|int|默认是0|
-|font|字体大小,默认12|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|nil|无返回值|
-
-**例子**
-
-无
-
----
-
-## eink.printcn(x, y, str, colored, font)
-
-绘制字符串,支持中文
+绘制字符串
 
 **参数**
 
