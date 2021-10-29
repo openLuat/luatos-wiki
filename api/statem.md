@@ -1,4 +1,4 @@
-# statme - SM状态机
+# statem - SM状态机
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/statem/luat_lib_statem.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 

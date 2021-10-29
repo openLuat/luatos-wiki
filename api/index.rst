@@ -1,4 +1,4 @@
-LuatOS接口文档
+LuatOS-SOC接口文档
 ==============
 
 请点击左侧列表，查看各个接口。如需搜索，请直接使用搜索框进行搜索。
@@ -35,7 +35,7 @@ LuatOS接口文档
    sfud
    socket
    spi
-   statme
+   statem
    string
    timer
    u8g2
