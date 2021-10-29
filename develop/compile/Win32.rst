@@ -5,8 +5,8 @@ Win32
 ~~~~
 
 #. 底层rtos FreeRTOSv202012.00
-#. 编译环境msys, 工具cmake/make/gcc
-#. 文件系统,win32原生文件系统,以工作目录为基点
+#. 编译环境msys，工具cmake/make/gcc
+#. 文件系统，win32原生文件系统，以工作目录为基点
 #. 默认luavm和rtos内存分配均为 1MByte
 
 编译环境
@@ -31,21 +31,21 @@ MSYS2
 简单用法
 ~~~~~~~~
 
-#. 新建一个目录, 将 `luatos.exe` 拷贝进去(可选,执行时使用全路径也可以)
+#. 新建一个目录，将 `luatos.exe` 拷贝进去(可选，执行时使用全路径也可以)
 #. 拷贝sys.lua到目录内
-#. 在目录内新建main.lua, 写入以下内容
+#. 在目录内新建main.lua，写入以下内容
 
 .. code:: lua
 
     local sys = require "sys"
 
-    log.info("sys", "from win32")
+    log.info("sys","from win32")
 
     sys.taskInit(function ()
         while true do
-            log.info("hi", os.date())
-            log.info("sys", rtos.meminfo("sys"))
-            log.info("lua", rtos.meminfo("lua"))
+            log.info("hi",os.date())
+            log.info("sys",rtos.meminfo("sys"))
+            log.info("lua",rtos.meminfo("lua"))
             sys.wait(1000)
         end
     end)

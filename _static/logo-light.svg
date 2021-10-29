@@ -1,13 +1,104 @@
-<svg width="300" height="80" xmlns="http://www.w3.org/2000/svg">
- <g>
-  <title>background</title>
-  <rect fill="none" id="canvas_background" height="82" width="302" y="-1" x="-1"/>
-  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
-   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="300"
+   height="90"
+   version="1.1"
+   id="svg5573"
+   sodipodi:docname="logo-light.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5577" />
+  <sodipodi:namedview
+     id="namedview5575"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="true"
+     showgrid="false"
+     height="81px"
+     inkscape:zoom="3.2456201"
+     inkscape:cx="122.47274"
+     inkscape:cy="42.364785"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="1911"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5573" />
+  <g
+     id="g5566">
+    <title
+       id="title5560">background</title>
+    <rect
+       fill="none"
+       id="canvas_background"
+       height="82"
+       width="302"
+       y="-1"
+       x="-1" />
+    <g
+       display="none"
+       overflow="visible"
+       y="0"
+       x="0"
+       height="100%"
+       width="100%"
+       id="canvasGrid">
+      <rect
+         fill="url(#gridpattern)"
+         stroke-width="0"
+         y="0"
+         x="0"
+         height="100%"
+         width="100%"
+         id="rect5563" />
+    </g>
   </g>
- </g>
- <g>
-  <title>Layer 1</title>
-  <text font-style="italic" transform="matrix(3.43477, 0, 0, 3.75226, -98.5633, -84.4249)" font-weight="bold" xml:space="preserve" text-anchor="start" font-family="'Courier New', Courier, monospace" font-size="24" id="svg_1" y="40.542302" x="28.20506" stroke-width="0" stroke="#000" fill="#FFFFFF">LuatOS</text>
- </g>
+  <g
+     id="g5571"
+     transform="translate(0,18.518519)">
+    <title
+       id="title5568">Layer 1</title>
+    <text
+       font-style="italic"
+       transform="matrix(3.43477,0,0,3.75226,-98.5633,-84.4249)"
+       font-weight="bold"
+       xml:space="preserve"
+       text-anchor="start"
+       font-family="'Courier New', Courier, monospace"
+       font-size="24px"
+       id="svg_1"
+       y="40.542301"
+       x="28.205059"
+       stroke-width="0"
+       stroke="#000000"
+       fill="#ffffff">LuatOS</text>
+  </g>
+  <rect
+     style="fill:#000080;fill-rule:evenodd"
+     id="rect149"
+     width="56.419418"
+     height="21.374756"
+     x="238.02122"
+     y="5.2167616"
+     rx="7.5590553"
+     ry="7.5590553" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:22.5645px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.846169"
+     x="232.20441"
+     y="24.061481"
+     id="text1153"
+     transform="scale(1.0377403,0.96363223)"><tspan
+       sodipodi:role="line"
+       id="tspan1151"
+       x="232.20441"
+       y="24.061481"
+       style="font-size:22.5645px;fill:#ffffff;stroke-width:0.846169">SOC</tspan></text>
 </svg>
