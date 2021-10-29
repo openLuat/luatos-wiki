@@ -953,3 +953,27 @@ log.info("ptw", nbiot.getEDRXPtw())
 
 ---
 
+## nbiot.ticks()
+
+获取tick计数
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|tick计数|
+
+**例子**
+
+```lua
+-- 打印PTW值
+log.info("tick", nbiot.ticks())
+
+```
+
+---
+
