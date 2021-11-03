@@ -1,0 +1,114 @@
+# fdb - 基于FlashDB的kv数据库和时序数据库
+
+> 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/flashdb/src/luat_lib_fdb.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+
+## fdb.kvdb_init(name, partition)
+
+初始化kv数据库
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|数据库名,当前仅支持env|
+|string|FAL分区名,当前仅支持onchip_fdb|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+if fdb.kvdb_init("env", "onchip_fdb") then
+    log.info("fdb", "kv数据库初始化成功")
+end
+
+```
+
+---
+
+## fdb.kv_set(key, value)
+
+设置一对kv数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|key的名称,必填,不能空字符串|
+|string|用户数据,必填,不能空字符串,长度不超过512字节|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+if fdb.kvdb_init("env", "onchip_fdb") then
+    log.info("fdb", fdb.kv_set("wendal", "goodgoodstudy"))
+end
+
+```
+
+---
+
+## fdb.kv_get(key)
+
+根据key获取对应的数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|key的名称,必填,不能空字符串|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|存在则返回数据,否则返回nil|
+
+**例子**
+
+```lua
+if fdb.kvdb_init("env", "onchip_fdb") then
+    log.info("fdb", fdb.kv_get("wendal"))
+end
+
+```
+
+---
+
+## fdb.kv_del(key)
+
+根据key删除数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|key的名称,必填,不能空字符串|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+if fdb.kvdb_init("env", "onchip_fdb") then
+    log.info("fdb", fdb.kv_del("wendal"))
+end
+
+```
+
+---
+

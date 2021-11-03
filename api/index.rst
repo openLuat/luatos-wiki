@@ -10,6 +10,7 @@ LuatOS-SOC接口文档
    ctiot
    disp
    eink
+   fdb
    fs
    gpio
    http
