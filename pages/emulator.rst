@@ -20,6 +20,13 @@ Lua在线REPL
 
 `Lua在线REPL工具 <https://wiki.luatos.com/_static/repl/index.html>`_
 
+小工具
+-----------
+
+同时，为了方便大家的学习和测试，我们提供了一些小工具：
+
+`Lua正则匹配测试工具 <https://wiki.luatos.com/_static/string-match/index.html>`_
+
 .. |i0| image:: ../_static/emulator/lua.svg
     :target: https://wiki.luatos.com/_static/luatos-emulator/lua.html
     :width: 100
