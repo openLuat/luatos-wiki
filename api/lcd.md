@@ -187,7 +187,7 @@ lcd颜色填充
 
 ```lua
 -- lcd颜色填充
-buff:writeInt32(0x001F)
+local buff = zbuff.create({201,1,16},0x001F)
 lcd.draw(20,30,220,30,buff)
 
 ```
