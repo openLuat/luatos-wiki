@@ -753,6 +753,64 @@ local style_list = lvgl.style_list_create()
 
 ---
 
+## lvgl.indev_drv_register(tp, dtp)
+
+注册输入设备驱动
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|设备类型，当前支持"pointer",指针类/触摸类均可|
+|string|设备型号，当前支持"emulator",模拟器类型|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+lvgl.indev_drv_register("pointer", "emulator")
+
+```
+
+---
+
+## lvgl.indev_point_emulator_update(x, y, state)
+
+更新模拟输入设备的坐标数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|x坐标,以左上角为0,右下角为最大值|
+|int|y坐标,以左上角为0,右下角为最大值|
+|int|状态, 0 为 释放, 1 为按下|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+-- 模拟在屏幕上的点击,通过timeout模拟长按和短按
+sys.taskInit(function(x, y, timeout)
+    lvgl.indev_point_emulator_update(x, y, 1)
+    sys.wait(timeout)
+    lvgl.indev_point_emulator_update(x, y, 0)
+end, 240, 120, 50)
+
+```
+
+---
+
 ## lvgl.gif_create(parent, path)
 
 创建gif组件
