@@ -42,8 +42,12 @@
                     <input type="text" class="form-control" id="regText" placeholder="输入你要测试的正则表达式"
                     oninput="getResult()" onporpertychange="getResult()">
                 </div>
-                <br/>
                 <div class="form-group">
+                    <label>
+                        可视化：
+                    </label>
+                    <label id="resultShow" style="letter-spacing:3px;font-family: Consolas,Monaco,monospace;font-size: 23px;"></label>
+                    <br>
                     <label>
                         string.find(<span class="lua-function-input">输入, 匹配</span>) 的结果：
                     </label>
@@ -88,6 +92,22 @@ function addMatchResult(s)
 function htmlEncode(value){
     return $('<div/>').text(value).html();
 }
+function showResult(a,b) {
+    var raw = $("#rawText").val();
+    if(a > b || a <= 0 || b <= 0)
+    {
+        $("#resultShow").html("<span style='background-color: lightblue;'>"+htmlEncode(raw)+"</span>");
+        return;
+    }
+    var s1 = raw.substring(0,a-1);
+    var s2 = raw.substring(a-1,b);
+    var s3 = raw.substring(b);
+    $("#resultShow").html(
+        "<span style='background-color: lightblue;'>"+htmlEncode(s1)+"</span>"+
+        "<span style='background-color: pink;'>"+htmlEncode(s2)+"</span>"+
+        "<span style='background-color: lightblue;'>"+htmlEncode(s3)+"</span>"
+        );
+}
 function getResult(){
     var raw = $("#rawText").val();
     var reg = $("#regText").val();
@@ -112,14 +132,15 @@ function getResult(){
         fengari.lua.lua_call(L,2,2);
         if(fengari.lua.lua_toboolean(L,-2))
         {
-            $("#stringfindText").html('<table border="1" cellpadding="5"><tr><td>'+
-                fengari.lua.lua_tointeger(L,-2)+"</td><td>"+fengari.lua.lua_tointeger(L,-1)+
-                "</td></tr></table>"
-            );
+            var a = fengari.lua.lua_tointeger(L,-2);
+            var b = fengari.lua.lua_tointeger(L,-1);
+            $("#stringfindText").html('<table border="1" cellpadding="5"><tr><td>'+a+"</td><td>"+b+"</td></tr></table>");
+            showResult(a,b);
         }
         else
         {
             $("#stringfindText").html('<table border="1" cellpadding="5"><tr><td>nil</td></tr></table>');
+            showResult(0,0);
         }
 
         matchResult = [];
@@ -144,6 +165,7 @@ end`));
     }catch{
         $("#stringfindText").text("炸了，请检查正则语法是否合规");
         $("#stringmatchText").text("炸了，请检查正则语法是否合规");
+        showResult(0,0);
     }
     //清理
     fengari.lua.lua_close(L);
