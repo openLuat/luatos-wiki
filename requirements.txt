@@ -1,5 +1,5 @@
-Sphinx
-furo
+Sphinx==4.2.0
+furo==2021.10.9
 myst-parser
 sphinx-markdown-tables
 jieba
