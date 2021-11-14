@@ -9,6 +9,8 @@
     <title>Lua正则在线测试工具</title>
 
     <meta name="author" content="chenxuuu">
+    <script src="encoding-indexes.js"></script>
+    <script src="encoding.js"></script>
     <script src="fengari-web.js"></script>
     <script src="../js/baidu.js"></script>
     <link href="bootstrap.min.css" rel="stylesheet">
@@ -99,9 +101,10 @@ function showResult(a,b) {
         $("#resultShow").html("<span style='background-color: lightblue;'>"+htmlEncode(raw)+"</span>");
         return;
     }
-    var s1 = raw.substring(0,a-1);
-    var s2 = raw.substring(a-1,b);
-    var s3 = raw.substring(b);
+    var u8arr = new TextEncoder("utf-8").encode(raw);
+    var s1 = new TextDecoder("utf-8").decode(u8arr.subarray(0,a-1));
+    var s2 = new TextDecoder("utf-8").decode(u8arr.subarray(a-1,b));
+    var s3 = new TextDecoder("utf-8").decode(u8arr.subarray(b));
     $("#resultShow").html(
         "<span style='background-color: lightblue;'>"+htmlEncode(s1)+"</span>"+
         "<span style='background-color: pink;'>"+htmlEncode(s2)+"</span>"+
