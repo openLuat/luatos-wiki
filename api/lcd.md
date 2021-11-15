@@ -411,6 +411,112 @@ lcd.drawStr(40,40,"drawStr测试")
 
 ---
 
+## eink.drawGtfontGb2312(str,size,x,y)
+
+使用gtfont显示gb2312字符串
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|str 显示字符串|
+|int|size 字体大小|
+|int|x 横坐标|
+|int|y 竖坐标|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+eink.drawGtfontGb2312("啊啊啊",32,0,0)
+
+```
+
+---
+
+## eink.drawGtfontGb2312Gray(str,size,gray,x,y)
+
+使用gtfont灰度显示gb2312字符串
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|str 显示字符串|
+|int|size 字体大小|
+|int|gray 灰度[1阶/2阶/3阶/4阶]|
+|int|x 横坐标|
+|int|y 竖坐标|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+eink.drawGtfontGb2312Gray("啊啊啊",32,4,0,40)
+
+```
+
+---
+
+## eink.drawGtfontUtf8(str,size,x,y)
+
+使用gtfont显示UTF8字符串
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|str 显示字符串|
+|int|size 字体大小|
+|int|x 横坐标|
+|int|y 竖坐标|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+eink.drawGtfontUtf8("啊啊啊",32,0,0)
+
+```
+
+---
+
+## eink.drawGtfontUtf8Gray(str,size,gray,x,y)
+
+使用gtfont灰度显示UTF8字符串
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|str 显示字符串|
+|int|size 字体大小|
+|int|gray 灰度[1阶/2阶/3阶/4阶]|
+|int|x 横坐标|
+|int|y 竖坐标|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+eink.drawGtfontUtf8Gray("啊啊啊",32,4,0,40)
+
+```
+
+---
+
 ## lcd.getSize()
 
 获取屏幕尺寸
