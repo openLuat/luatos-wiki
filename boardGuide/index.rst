@@ -9,6 +9,7 @@
     Air103
     Air302
     Air640w
+    W806
     win32
     flash
     common/index
