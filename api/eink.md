@@ -324,3 +324,31 @@ eink.circle(0, 0, 10, 1, 1) -- Filled
 
 ---
 
+## eink.bitmap(x, y, h, data, mode)
+
+绘制位图
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|X坐标|
+|int|y坐标|
+|int|行数|
+|int|位图数据,每一位代表一个像素|
+|int|模式, 0值是否写入. mode=1代表写入, mode=0代表不写入, 默认mode=0|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 在(10,10)为左上角,绘制 10x4 的位图
+eink.bitmap(10, 10, 10, string.char(0x20, 0xFF, 0xFF, 0xAF, 0xDE), 1)
+
+```
+
+---
+
