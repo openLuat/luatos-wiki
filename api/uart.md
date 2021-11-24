@@ -10,8 +10,8 @@
 
 |传入值类型|解释|
 |-|-|
-|int|串口id, uart0写0, uart1写1|
-|int|波特率|
+|int|串口id, uart0写0, uart1写1, 如此类推, 最大值取决于设备|
+|int|波特率, 默认115200|
 |int|数据位，默认为8|
 |int|停止位，默认为1|
 |int|校验位，可选 uart.None/uart.Even/uart.Odd|

@@ -17,6 +17,7 @@ LuatOS-SOC接口文档
    i2c
    ir
    json
+   keyboard
    lcd
    lcdseg
    libcoap
