@@ -5,6 +5,7 @@
 
 .. toctree::
 
+    vscode
     Air101
     Air103
     Air302
