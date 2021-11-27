@@ -351,6 +351,31 @@ lcd.drawCircle(120,120,20,0x001F)
 
 ---
 
+## lcd.drawDrcode(x, y, str, version)
+
+缓冲区绘制QRCode
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|x坐标|
+|int|y坐标|
+|string|二维码的内容|
+|int|二维码版本号|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+无
+
+---
+
 ## lcd.setFont(font)
 
 设置字体
