@@ -324,7 +324,7 @@ eink.circle(0, 0, 10, 1, 1) -- Filled
 
 ---
 
-## eink.bitmap(x, y, h, data, mode)
+## eink.drawXbm(x, y, w, h, data)
 
 绘制位图
 
@@ -334,9 +334,9 @@ eink.circle(0, 0, 10, 1, 1) -- Filled
 |-|-|
 |int|X坐标|
 |int|y坐标|
-|int|行数|
+|int|位图宽|
+|int|位图高|
 |int|位图数据,每一位代表一个像素|
-|int|模式, 0值是否写入. mode=1代表写入, mode=0代表不写入, 默认mode=0|
 
 **返回值**
 
@@ -345,8 +345,12 @@ eink.circle(0, 0, 10, 1, 1) -- Filled
 **例子**
 
 ```lua
--- 在(10,10)为左上角,绘制 10x4 的位图
-eink.bitmap(10, 10, 10, string.char(0x20, 0xFF, 0xFF, 0xAF, 0xDE), 1)
+-- 取模使用PCtoLCD2002软件即可
+-- 在(0,0)为左上角,绘制 16x16 "今" 的位图
+eink.drawXbm(0, 0, 16,16, string.char(
+    0x80,0x00,0x80,0x00,0x40,0x01,0x20,0x02,0x10,0x04,0x48,0x08,0x84,0x10,0x83,0x60,
+    0x00,0x00,0xF8,0x0F,0x00,0x08,0x00,0x04,0x00,0x04,0x00,0x02,0x00,0x01,0x80,0x00
+))
 
 ```
 
