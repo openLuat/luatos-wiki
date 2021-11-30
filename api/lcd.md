@@ -351,7 +351,7 @@ lcd.drawCircle(120,120,20,0x001F)
 
 ---
 
-## lcd.drawDrcode(x, y, str, version)
+## lcd.drawQrcode(x, y, str, version)
 
 缓冲区绘制QRCode
 
