@@ -103,7 +103,7 @@ i2c发送数据
 |-|-|
 |int|设备id, 例如i2c1的id为1, i2c2的id为2|
 |int|I2C子设备的地址, 7位地址|
-|string|待发送的数据|
+|integer/string/table|待发送的数据,自适应参数类型|
 
 **返回值**
 
@@ -114,8 +114,11 @@ i2c发送数据
 **例子**
 
 ```lua
+-- 往i2c0发送1个字节的数据
+i2c.send(0, 0x68, 0x75)
 -- 往i2c1发送2个字节的数据
 i2c.send(1, 0x5C, string.char(0x0F, 0x2F))
+i2c.send(1, 0x5C, {0x0F, 0x2F})
 
 ```
 
