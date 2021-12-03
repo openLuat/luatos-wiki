@@ -19,7 +19,7 @@
 
 #. 基于Lua 5.3
 #. 低内存需求，最低32KB RAM，96KB flash
-#. 硬件抽象层兼容M3/arm/risc-v等
+#. 硬件抽象层兼容cm3/cm4/xt/risc-v等
 #. 可测试、可模拟（qemu）
 #. 在线升级
 #. 可裁剪、可扩展
@@ -44,6 +44,7 @@
 
    首页 <https://wiki.luatos.com>
    pages/emulator
+   pages/tools
 
 .. toctree::
    :hidden:
