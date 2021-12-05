@@ -27,6 +27,7 @@ LuatOS-SOC接口文档
    lvgl
    mcu
    nbiot
+   pin
    pm
    pwm
    rtc
