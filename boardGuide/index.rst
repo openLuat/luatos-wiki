@@ -11,6 +11,7 @@
     Air302
     Air640w
     W806
+    esp32c3/index
     win32
     flash
     common/index
