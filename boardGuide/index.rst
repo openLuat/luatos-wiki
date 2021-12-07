@@ -7,7 +7,7 @@
 
     vscode
     Air101
-    Air103
+    air103/index
     Air302
     Air640w
     W806
