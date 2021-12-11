@@ -26,7 +26,6 @@ LuatOS-SOC接口文档
    lpmem
    lvgl
    mcu
-   nbiot
    otp
    pin
    pm
@@ -45,5 +44,4 @@ LuatOS-SOC接口文档
    u8g2
    uart
    wdt
-   wlan
    zbuff
