@@ -64,7 +64,7 @@
    :caption: 内核开发
 
    develop/compile
-   develop/clib
+   develop/contribute/index
 
 .. toctree::
    :hidden:

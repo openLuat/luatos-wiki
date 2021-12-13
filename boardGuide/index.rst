@@ -6,12 +6,6 @@
 .. toctree::
 
     vscode
-    Air101
-    air103/index
-    Air302
-    Air640w
-    W806
-    esp32c3/index
-    win32
+    chips
     flash
     common/index
