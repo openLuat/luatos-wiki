@@ -286,7 +286,7 @@ local data2 = crypto.cipher_decrypt("AES-128-ECB", "PKCS7", data, "1234567890123
 
 |传入值类型|解释|
 |-|-|
-|string|输入模式|
+|string|CRC16模式（"IBM","MAXIM","USB","MODBUS","CCITT","CCITT-FALSE","X25","XMODEM","DNP","USER-DEFINED"）|
 |string|字符串|
 |int|poly值|
 |int|initial值|
