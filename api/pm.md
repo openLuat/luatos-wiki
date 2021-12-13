@@ -124,7 +124,7 @@ pm.dtimerCheck(0) -- 检查id=0的底层定时器
 
 ```lua
 -- 是哪种方式开机呢
-log.info("pm", "last power reson", pm.lastReson)
+log.info("pm", "last power reson", pm.lastReson())
 
 ```
 
