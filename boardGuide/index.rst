@@ -6,6 +6,5 @@
 .. toctree::
 
     vscode
-    chips
     flash
     common/index

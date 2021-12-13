@@ -5,10 +5,10 @@
 
 .. toctree::
 
-    Air101
+    air101/index
     air103/index
-    Air302
-    Air640w
+    air302/index
+    air640w/index
     W806
     esp32c3/index
     win32

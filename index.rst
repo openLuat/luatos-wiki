@@ -52,6 +52,7 @@
 
    luaGuide/index
    boardGuide/index
+   chips/index
 
 .. toctree::
    :hidden:
