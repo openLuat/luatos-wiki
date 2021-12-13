@@ -6,8 +6,6 @@ LuatOS工具大全
 
 `LuaTools下载 <http://luatos.com/luatools/download/last>`_
 
-`Air722/Air724量产工具 <https://doc.openluat.com/wiki/21?wiki_page_id=2070>`_
-
 `FOTA远程升级工具 <https://doc.openluat.com/wiki/21?wiki_page_id=2314>`_
 
 `差分包生成工具 <https://doc.openluat.com/wiki/21?wiki_page_id=2314>`_

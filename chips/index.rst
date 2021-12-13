@@ -7,8 +7,12 @@
 
     air101/index
     air103/index
+    air105/index
+    air106/index
     air302/index
     air640w/index
-    W806
+    air901/index
     esp32c3/index
+    W806
     win32
+    supported
