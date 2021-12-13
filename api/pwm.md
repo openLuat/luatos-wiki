@@ -2,7 +2,7 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_pwm.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
-## pwm.open(channel, period, pulse,pnum)
+## pwm.open(channel, period, pulse, pnum, precision)
 
 开启指定的PWM通道
 
@@ -13,8 +13,8 @@
 |int|PWM通道|
 |int|频率, 1-1000000hz|
 |int|占空比 0-分频精度|
-|int|输出周期 0为持续输出|
-|int|分频精度, 100 ~ 4096, 默认为100|
+|int|输出周期 0为持续输出, 1为单次输出|
+|int|分频精度, 100/256/1000, 默认为100, 若设备不支持会有日志提示|
 
 **返回值**
 

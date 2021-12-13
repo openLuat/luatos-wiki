@@ -8,6 +8,7 @@ LuatOS-SOC接口文档
    adc
    crypto
    ctiot
+   dac
    disp
    eink
    fdb
