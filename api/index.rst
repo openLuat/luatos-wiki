@@ -27,7 +27,6 @@ LuatOS-SOC接口文档
    lpmem
    lvgl
    mcu
-   nbiot
    otp
    pin
    pm
