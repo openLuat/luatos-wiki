@@ -84,7 +84,7 @@ end)
 --第二个任务
 sys.taskInit(function()
     while true do
-        local _,data sys.waitUntil("TASK1_DONE")--等待这个消息，这个任务阻塞在这里了
+        local _,data = sys.waitUntil("TASK1_DONE")--等待这个消息，这个任务阻塞在这里了
         log.info("task2","wow receive",data)
     end
 end)

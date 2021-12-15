@@ -45,7 +45,6 @@
    首页 <https://wiki.luatos.com>
    pages/emulator
    pages/tools
-   pages/luadb
 
 .. toctree::
    :hidden:
@@ -57,9 +56,10 @@
 
 .. toctree::
    :hidden:
-   :caption: API参考手册
+   :caption: 参考手册
 
    api/index
+   pages/luadb
 
 .. toctree::
    :hidden:
