@@ -59,7 +59,6 @@
    :caption: 参考手册
 
    api/index
-   pages/luadb
 
 .. toctree::
    :hidden:

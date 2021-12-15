@@ -8,4 +8,5 @@ LuatOS欢迎有能力的开发者共享自己的功能。
 
    style
    add_module
+   luadb
    dev_doc/index
