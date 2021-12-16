@@ -21,8 +21,13 @@
 **例子**
 
 ```lua
--- 初始化i2c1的ssd1306
+-- 初始化模拟i2c的ssd1306
 if disp.init({mode="i2c_sw", pin0=17, pin1=18}) == 1 then
+    log.info("disp", "disp init complete")
+end
+-- 初始化硬件i2c0的ssd1306
+i2c.setup(0, i2c.FAST)
+if disp.init({mode="i2c_hw", i2c_id=0}) == 1 then
     log.info("disp", "disp init complete")
 end
 
