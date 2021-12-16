@@ -29,10 +29,9 @@
 - Air101（MCU）
 - Air103（MCU）
 - Air105（MCU）
-- Air302（EC6161/nbiot模组）
+- Air302（EC616/nbiot模组）
 - Air640w（W600/wifi模组）
 - ESP32系列 (wifi芯片）*
-- XY1100 (nbiot模组）*
 - W800(wifi模组）*
 - STM32F103RE
 
