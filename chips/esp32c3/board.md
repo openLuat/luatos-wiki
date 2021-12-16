@@ -143,7 +143,7 @@ CORE-ESP32-C3核心板支持以下3种方式供电：
 
  
 
-![img](file:///C:/Users/pc/AppData/Local/Temp/msohtmlclip1/01/clip_image016.jpg)
+![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image016.jpg)
 
  
 
