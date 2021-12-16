@@ -5,6 +5,7 @@
 
 .. toctree::
 
+    chips
     air101/index
     air103/index
     air105/index
