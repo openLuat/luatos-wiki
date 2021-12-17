@@ -59,6 +59,7 @@
    :caption: 内核开发
 
    develop/compile
+   develop/add_myapi_5min
    develop/contribute/index
 
 .. toctree::
