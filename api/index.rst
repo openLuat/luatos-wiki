@@ -29,6 +29,7 @@ LuatOS-SOC接口文档
    mcu
    nbiot
    otp
+   pack
    pin
    pm
    pwm
