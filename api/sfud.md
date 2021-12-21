@@ -181,7 +181,7 @@ log.info("sfud.read",sfud.read(sfud_device,1024,4))
 
 ---
 
-## sfud.write(flash, addr, size,data)
+## sfud.write(flash, addr,data)
 
 向 Flash 写数据
 
