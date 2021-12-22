@@ -19,13 +19,13 @@ window.onload = function () {
     var link = document.createElement('link');
     link.type = 'text/css';
     link.rel = 'stylesheet';
-    link.href = "https://cdn.jsdelivr.net/npm/artalk@2.1.4/dist/Artalk.css";
+    link.href = "https://cdn.openluat-luatcommunity.openluat.com/attachment/20211222131030801_Artalk[1].css";
     head.appendChild(link);
 
     var _hmt = _hmt || [];
     (function () {
         var hm = document.createElement("script");
-        hm.src = "https://cdn.jsdelivr.net/npm/artalk@2.1.4/dist/Artalk.js";
+        hm.src = "https://cdn.openluat-luatcommunity.openluat.com/attachment/20211222131045036_Artalk[1].js";
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();
