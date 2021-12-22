@@ -8,9 +8,10 @@
 | 总Flash                                               | 2M      | 1M     | 4M    | 4M     | 1M/2M   | 256k+外接Flash|
 | 总Ram                                                 | 288k    | 288k   | 640k  | 256k   | 288k    | 64k+8M  |
 | 内核                                                  | xt804   | xt804  | m4f   | m3     | m3      | m4f    |
+| [uart](https://wiki.luatos.com/api/uart.html)         | 5(4)    | 6(5)   | 3(2)  | 3(1)   | 3(2)    | ?      |
 | [gpio](https://wiki.luatos.com/api/gpio.html)         | 16      | 41     | 55    | 20     | 16      | ?      |
 | [i2c](https://wiki.luatos.com/api/i2c.html)           | 1       | 1      | 1     | 1      | 1       | ?      |
-| [spi](https://wiki.luatos.com/api/spi.html)           | 1       | 1      | 4     | 1   | 1       | ?      |
+| [spi](https://wiki.luatos.com/api/spi.html)           | 1       | 1      | 4     | 1      | 1       | ?      |
 | [adc](https://wiki.luatos.com/api/adc.html)           | 2       | 4      | 5     | 2      | 2       | ?      |
 | [dac](https://wiki.luatos.com/api/dac.html)           | ✖      | ✖      | 1     | ✖      | ✖      | 1      |
 | [usb](https://wiki.luatos.com/api/usb.html)           | ✖      | ✖      | 1     | ✖      | ✖      | 1      |
@@ -20,20 +21,22 @@
 | [rtc](https://wiki.luatos.com/api/rtc.html)           | 1       | 1      | 1      | 1     | 1        | 1      |
 | [pwm](https://wiki.luatos.com/api/pwm.html)           | 5       | 5      | 5      | 4      | 5       | ?      |
 | [sdio](https://wiki.luatos.com/api/sdio.html)         | 1       | 1      | ✖      | ✖     | ✖      | ✖      |
-| [硬狗](https://wiki.luatos.com/api/wdt.html)           | 1       | 1     | 1      | ✖     | 1      | 1      |
-| [硬件加速算法](https://wiki.luatos.com/api/crypto.html)|md5/sha1 |md5/sha1| ?      | ?     |md5/sha1| jpeg   |
-| [hwtimer](https://wiki.luatos.com/api/hwtimer.html)   | 5       | 5      | 5      | 2      | 5      | 5      |
+| [硬狗](https://wiki.luatos.com/api/wdt.html)          | 1       | 1     | 1      | ✖     | 1      | 1      |
+| [硬件加速](https://wiki.luatos.com/api/crypto.html)   |md5/sha1 |md5/sha1| ?      | ?     |md5/sha1| jpeg   |
+| 硬件定时器                                            | 5       | 5      | 5      | 2      | 5      | 5      |
 | 2d加速                                                | ✖      | ✖      | ✖     |  ✖     | ✖      | 1      |
 | 摄像头                                                | ✖      | ✖      | 1      |  ✖     | ✖      | ✖      |
-| psram                                                 | ✖       | 支持外挂 | ✖     |  ✖     | ✖      | 内嵌    |
+| psram                                                 | ✖      | 可外挂 | ✖     |  ✖     | ✖      | 内嵌    |
 | wifi                                                  | ✖       | ✖       | ✖     |  ✖     | 1       | ✖      |
 | ble                                                   | 1       | 1        | ✖     |  ✖     | ✖       | ✖      |
 | nbiot                                                 | ✖       | ✖        | ✖     |  1     | ✖       | ✖      |
 
+* uart数量 总uart数量, 括号内的是用户通常可用的uart数量. 一般情况下,需要占用一个uart用于日志和刷机.
 * gpio数量 包含bootmode之类的启动后可用的gpio
 * 如有出入, 以硬件设计手册为准
 * 联盛德w800/w801/w805/806与air101/air103类似,属于封装与flash大小的排列组合
 * air105有1个高速SPI,最高96M, 3个低速SPI, 最高20M
+* air101/air103的BLE属于赠送, 功耗高, 不适合低功耗场景
 
 ## 图示含义 Table Legend
 
