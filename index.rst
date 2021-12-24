@@ -16,19 +16,19 @@
 
 | LuatOS是一款针对嵌入式的脚本运行框架，可以极大提升开发效率。
 | 使用Lua 5.3作为主要语言，针对资源较少的嵌入式环境进行了优化，极大提升了运行效率。
+| Powerful embedded Lua Engine for IoT devices, with many components and low memory requirements (16K RAM, 128K Flash)
 
 **目前已经适配的模组和芯片：**
 
-- Air101（MCU）
-- Air103（MCU）
-- Air105（MCU）
+- Air101（MCU）尺寸小
+- Air103（MCU）io多
+- Air105（MCU）内存大
 - Air302（EC616/nbiot模组）
 - Air640w（W600/wifi模组）
-- ESP32系列 (wifi芯片）*
-- W800(wifi模组）*
-- STM32F103RE
+- ESP32系列 (wifi芯片）`C3/S3 <https://gitee.com/dreamcmi/LuatOS-ESP32>`_
+- RT-Thread 全部bsp(内存需满足最低要求) `软件包 <https://gitee.com/openLuat/luatos-soc-rtt>`_
 
-（带*号的表示开发中） `选型表 <chips/chips.html>`_
+`选型表 <chips/chips.html>`_
 
 我们正适配更多的单片机和无线芯片模组, 欢迎您的加入^_^
 
