@@ -1,4 +1,4 @@
-# fdb - 基于FlashDB的kv数据库和时序数据库
+# fdb - kv数据库(基于FlashDB)
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/flashdb/src/luat_lib_fdb.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 

@@ -43,6 +43,7 @@ LuatOS-SOC接口文档
    spi
    statem
    string
+   sys
    timer
    u8g2
    uart
