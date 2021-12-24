@@ -246,7 +246,7 @@ end)
 
 ---
 
-## sys.subscribe(topic, func)
+## sys.unsubscribe(topic, func)
 
 取消订阅topic通道
 
