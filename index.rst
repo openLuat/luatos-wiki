@@ -26,7 +26,7 @@
 - Air302（EC616/nbiot模组）
 - Air640w（W600/wifi模组）
 - ESP32系列 (wifi/bt芯片）https://gitee.com/dreamcmi/LuatOS-ESP32
-- RT-Thread 全部bsp(内存需满足最低要求) https://gitee.com/openLuat/luatos-soc-rtt
+- RT-Thread 全部bsp(内存需满足最低要求) https://github.com/openLuat/luatos-soc-rtt
 
 `选型表 <chips/chips.html>`_
 
