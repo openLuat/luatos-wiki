@@ -1,13 +1,19 @@
-# PC端模拟器
+# PC端版本
 
-* 底层rtos FreeRTOSv202012.00
 * 编译环境msys, 工具cmake/make/gcc
 * 文件系统,win32原生文件系统,以工作目录为基点
 * 默认luavm和rtos内存分配均为 1MByte
+* 支持大部分工具库, 外设库支持模拟
 
 下载[预编译好的luatos.exe](https://nightly.link/openLuat/LuatOS/workflows/win32/master)
 
 ## 简单用法
+
+### 交互模式
+
+直接双击 luatos.exe 启动即可, 与原生lua.exe一致
+
+### 执行模式
 
 * 新建一个目录, 将 `luatos.exe` 拷贝进去(可选,执行时使用全路径也可以)
 * 在目录内新建main.lua, 写入以下内容
@@ -27,10 +33,9 @@ sys.taskInit(function ()
 end)
 
 sys.run()
-
 ```
 
-双击luatos.exe启动即可. 默认带LVGL库, 可参考 `test/`目录下的例子.
+* 进入命令行, cd到luatos.exe所在目录, 执行 `luatos.exe main.lua`
 
 ## 自行编译说明
 
