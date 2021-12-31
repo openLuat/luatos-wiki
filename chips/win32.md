@@ -13,6 +13,8 @@
 
 直接双击 luatos.exe 启动即可, 与原生lua.exe一致
 
+![](win32_console.png)
+
 ### 执行模式
 
 * 新建一个目录, 将 `luatos.exe` 拷贝进去(可选,执行时使用全路径也可以)
