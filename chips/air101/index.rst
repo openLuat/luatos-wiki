@@ -8,5 +8,6 @@ Air101
     mcu
     board
     hardware
+    Air101
     Air101_PCB <https://wiki.luatos.com/_static/bom/Air101.html>
 
