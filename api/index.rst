@@ -49,3 +49,4 @@ LuatOS-SOC接口文档
    uart
    wdt
    zbuff
+   zlib
