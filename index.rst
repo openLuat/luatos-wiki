@@ -53,6 +53,7 @@
    :caption: 参考手册
 
    api/index
+   api/question
 
 .. toctree::
    :hidden:

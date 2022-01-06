@@ -17,3 +17,4 @@
     W806
     win32
     supported
+    question
