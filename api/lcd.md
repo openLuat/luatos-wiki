@@ -416,7 +416,7 @@ lcd.drawStr(40,40,"drawStr测试")
 |int|x 横坐标|
 |int|y 竖坐标  注意:此(x,y)为左下起始坐标|
 |string|str 文件内容|
-|int|fg_color str颜色|
+|int|fg_color str颜色 注意:此参数可选，如不填写则使用之前设置的颜色，绘制只会绘制字体部分，背景需要自己清除|
 
 **返回值**
 
