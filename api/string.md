@@ -229,3 +229,33 @@ log.info("str", str:endsWith("b"))
 
 ---
 
+## string.trim(str, ltrim, rtrim)
+
+裁剪字符串,去除头尾的空格
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|需要处理的字符串|
+|bool|清理前缀,默认为true|
+|bool|清理后缀,默认为true|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|清理后的字符串|
+
+**例子**
+
+```lua
+local str = "\r\nabc\r\n"
+log.info("str", string.trim(str)) -- 打印 "abc"
+log.info("str", str:trim())       -- 打印 "abc"
+log.info("str", #string.trim(str, false, true)) -- 仅裁剪后缀,所以长度是5
+
+```
+
+---
+
