@@ -405,7 +405,7 @@ lcd.drawStr(40,40,"drawStr测试")
 
 ---
 
-## lcd.drawStr(x,y,str,fg_color,bg_color)
+## lcd.drawStr(x,y,str,fg_color)
 
 显示字符串
 
@@ -414,10 +414,9 @@ lcd.drawStr(40,40,"drawStr测试")
 |传入值类型|解释|
 |-|-|
 |int|x 横坐标|
-|int|y 竖坐标|
+|int|y 竖坐标  注意:此(x,y)为左下起始坐标|
 |string|str 文件内容|
 |int|fg_color str颜色|
-|int|bg_color str背景颜色|
 
 **返回值**
 
@@ -426,7 +425,7 @@ lcd.drawStr(40,40,"drawStr测试")
 **例子**
 
 ```lua
--- 显示之前先设置为中文字体,对之后的drawStr有效,使用中文字体需在luat_conf_bsp.h.h开启#define USE_U8G2_WQY16_T_GB2312
+-- 显示之前先设置为中文字体,对之后的drawStr有效,使用中文字体需在luat_conf_bsp.h.h开启#define USE_U8G2_OPPOSANSMxx_CHINESE xx代表字号
 lcd.setFont(lcd.font_opposansm12)
 lcd.drawStr(40,10,"drawStr")
 sys.wait(2000)
