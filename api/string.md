@@ -173,3 +173,59 @@ string.toValue("123abc") --> "\1\2\3\a\b\c"  6
 
 ---
 
+## string.startsWith(str, prefix)
+
+判断字符串前缀
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|需要检查的字符串|
+|string|前缀字符串|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|真为true, 假为false|
+
+**例子**
+
+```lua
+local str = "abc"
+log.info("str", str:startsWith("a"))
+log.info("str", str:startsWith("b"))
+
+```
+
+---
+
+## string.startsWith(str, suffix)
+
+判断字符串后缀
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|需要检查的字符串|
+|string|后缀字符串|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|真为true, 假为false|
+
+**例子**
+
+```lua
+local str = "abc"
+log.info("str", str:endsWith("c"))
+log.info("str", str:endsWith("b"))
+
+```
+
+---
+
