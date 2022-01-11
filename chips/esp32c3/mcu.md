@@ -1,3 +1,11 @@
 # ESP32-C3芯片
 
-todo
+## 刷机烧录教程
+
+[串口烧录教程](../../boardGuide/flash.html)
+
+**注意：烧录前请设置波特率为115200**
+
+## 固件下载
+
+https://gitee.com/dreamcmi/LuatOS-ESP32/releases

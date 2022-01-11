@@ -9,7 +9,7 @@
 | 总Ram                                                 | 288k    | 288k   | 640k  | 256k   | 288k    | 64k+8M  |
 | 内核                                                  | xt804   | xt804  | m4f   | m3     | m3      | m4f    |
 | [uart](https://wiki.luatos.com/api/uart.html)         | 5(4)    | 6(5)   | 3(2)  | 3(1)   | 3(2)    | ?      |
-| [gpio](https://wiki.luatos.com/api/gpio.html)         | 16      | 41     | 55    | 20     | 16      | ?      |
+| [gpio](https://wiki.luatos.com/api/gpio.html)         | 16      | 41     | 56    | 20     | 16      | ?      |
 | [i2c](https://wiki.luatos.com/api/i2c.html)           | 1       | 1      | 1     | 1      | 1       | ?      |
 | [spi](https://wiki.luatos.com/api/spi.html)           | 1       | 1      | 4     | 1      | 1       | ?      |
 | [adc](https://wiki.luatos.com/api/adc.html)           | 2       | 4      | 5     | 2      | 2       | ?      |
@@ -22,7 +22,7 @@
 | [pwm](https://wiki.luatos.com/api/pwm.html)           | 5       | 5      | 5      | 4      | 5       | ?      |
 | [sdio](https://wiki.luatos.com/api/sdio.html)         | 1       | 1      | ✖      | ✖     | ✖      | ✖      |
 | [硬狗](https://wiki.luatos.com/api/wdt.html)          | 1       | 1     | 1      | ✖     | 1      | 1      |
-| [硬件加速](https://wiki.luatos.com/api/crypto.html)   |md5/sha1 |md5/sha1| ?      | ?     |md5/sha1| jpeg   |
+| [硬件加速](https://wiki.luatos.com/api/crypto.html)   |md5/sha1 |md5/sha1| md5/sha| ✖    |md5/sha1| jpeg   |
 | 硬件定时器                                            | 5       | 5      | 5      | 2      | 5      | 5      |
 | 2d加速                                                | ✖      | ✖      | ✖     |  ✖     | ✖      | 1      |
 | 摄像头                                                | ✖      | ✖      | 1      |  ✖     | ✖      | ✖      |
