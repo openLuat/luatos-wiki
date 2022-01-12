@@ -12,6 +12,7 @@ LuatOS源码仓库：https://gitee.com/openLuat/LuatOS
    :hidden:
 
    compile/Air101
+   compile/Air105
    compile/Air640w
    compile/Air302
    compile/Win32
