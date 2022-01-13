@@ -16,12 +16,12 @@
 
 |返回值类型|解释|
 |-|-|
-|nil|无返回值|
+|int|camera_id|
 
 **例子**
 
 ```lua
-camera.init(GC032A_InitReg)--屏幕输出rgb图像
+camera_id = camera.init(GC032A_InitReg)--屏幕输出rgb图像
 
 ```
 
@@ -51,6 +51,56 @@ camera.init(GC032A_InitReg)--屏幕输出rgb图像
 camera.on(0, "scanned", function(id, str)
     print(id, str)
 end)
+
+```
+
+---
+
+## camera.start(id)
+
+开始指定的camera
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|camera id,例如0|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+camera.start(0)
+
+```
+
+---
+
+## camera.stop(id)
+
+停止指定的camera
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|camera id,例如0|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+camera.stop(0)
 
 ```
 
