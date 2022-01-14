@@ -46,6 +46,7 @@ LuatOS-SOC接口文档
    string
    sys
    timer
+   touchkey
    u8g2
    uart
    wdt

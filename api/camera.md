@@ -22,6 +22,8 @@
 
 ```lua
 camera_id = camera.init(GC032A_InitReg)--屏幕输出rgb图像
+--初始化后需要start才开始输出/扫码
+camera.start(camera_id)--开始指定的camera
 
 ```
 
