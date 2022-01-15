@@ -421,6 +421,32 @@ lvgl.scr_load(scr)
 
 ---
 
+## lvgl.init(w, h, lcd, buff_mode)
+
+初始化LVGL
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|屏幕宽,可选,默认从lcd取|
+|int|屏幕高,可选,默认从lcd取|
+|userdata|lcd指针,可选,lcd初始化后有默认值,预留的多屏入口|
+|int|缓冲区大小,默认宽*10, 不含色深.|
+|int|缓冲模式,默认0, 单buff模式, 可选1,双buff模式|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true,否则返回false|
+
+**例子**
+
+无
+
+---
+
 ## lvgl.anim_create()
 
 创建并初始化一个anim
