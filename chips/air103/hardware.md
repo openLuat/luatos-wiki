@@ -64,6 +64,8 @@
 
 ## 资料链接
 
-* [Air103_MCU设计手册](../../docs/air103/Air103_MCU设计手册V1.2.pdf)
-* [Air103_核心板设计手册](../../docs/air103/Air103_核心板设计手册V1.2.pdf)
-* [晶振datasheet](../../docs/air103/SGM2019-3.3YN5G_TR.PDF)
+硬件设计手册: [Air103_MCU设计手册V1.2.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20211202193606476_Air103_MCU设计手册V1.2.pdf)
+开发板BOM: [EVB-Air103_BOM_B_Air103_A10_V1.1_20211022.xlsx](https://cdn.openluat-luatcommunity.openluat.com/attachment/20211231152759844_EVB-Air103_BOM_B_Air103_A10_V1.1_20211022.xlsx)
+开发板晶振datasheet: [2.3.3.400001004-MDH201808109-D3102512A40000A(1)(1).pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20211013165122024_2.3.3.400001004-MDH201808109-D3102512A40000A(1)(1).pdf)
+LDO手册: [SGM2019-3.3YN5G_TR.PDF](https://cdn.openluat-luatcommunity.openluat.com/attachment/20211202193445472_SGM2019-3.3YN5G_TR.PDF)
+Air103_核心板设计手册: [Air103_核心板设计手册V1.2.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20211202193519160_Air103_核心板设计手册V1.2.pdf)
