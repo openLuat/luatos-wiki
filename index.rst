@@ -61,6 +61,7 @@
 
    develop/compile
    develop/add_myapi_5min
+   develop/filesystems
    develop/contribute/index
 
 .. toctree::
