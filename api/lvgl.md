@@ -421,7 +421,7 @@ lvgl.scr_load(scr)
 
 ---
 
-## lvgl.init(w, h, lcd, buff_mode)
+## lvgl.init(w, h, lcd, buff_size, buff_mode)
 
 初始化LVGL
 
