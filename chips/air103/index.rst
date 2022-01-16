@@ -5,7 +5,8 @@ Air103
 
     mcu
     board
-    lcdseg
     hardware
+    lcdseg
+    touchkey
     Air103_PCB <https://wiki.luatos.com/_static/bom/Air103.html>
 

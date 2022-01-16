@@ -18,7 +18,7 @@
 | 使用Lua 5.3作为主要语言，针对资源较少的嵌入式环境进行了优化，极大提升了运行效率。
 | Powerful embedded Lua Engine for IoT devices, with many components and low memory requirements (16K RAM, 128K Flash)
 
-** 本站汇聚LuatOS-SoC的所有资料 **
+**本站汇聚LuatOS-SoC的所有资料**
 
 - `快速入门 <boardGuide/index.html>`_
 - `芯片资料 <chips/index.html>`_
