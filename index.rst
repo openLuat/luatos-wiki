@@ -35,7 +35,7 @@
 - Air105（MCU）内存大
 - Air302（EC616/nbiot模组）
 - Air640w（W600/wifi模组）
-- ESP32系列 (wifi/bt芯片）https://gitee.com/dreamcmi/LuatOS-ESP32
+- ESP32系列 (wifi/bt芯片） https://gitee.com/dreamcmi/LuatOS-ESP32
 - RT-Thread 全部bsp(内存需满足最低要求) https://github.com/openLuat/luatos-soc-rtt
 
 我们正适配更多的单片机和无线芯片模组, 欢迎您的加入^_^

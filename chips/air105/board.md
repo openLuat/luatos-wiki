@@ -10,6 +10,11 @@
 
 [串口烧录教程](../../boardGuide/flash.html)
 
+## 开发板PinOut
+
+![air105_evb_pinout.png](https://gitee.com/openLuat/LuatOS/raw/master/bsp/air105/images/air105_evb_pinout.png)
+
+
 **注意：烧录前请设置波特率为1500000**
 
 
