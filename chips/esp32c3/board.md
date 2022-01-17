@@ -7,7 +7,7 @@ CORE ESP32核心板是基于乐鑫ESP32-C3进行设计的一款核心板，尺�
 ## 二、硬件资源
 
 - 尺寸长宽 21mm*51mm
-- 1路SPI FLASH，支持最高 16MB 
+- 1路SPI FLASH，板载4MB，支持最高 16MB 
 - 2路UART接口，UART0~UART1
 - 2 路 12 比特 ADC，最高采样率 100KSPS
 - 1路低速SPI接口，支持主模式
@@ -23,9 +23,9 @@ CORE ESP32核心板是基于乐鑫ESP32-C3进行设计的一款核心板，尺�
 
 ①：图3-1为功能说明;
 
-②：图3-2位左侧15 Pin管脚定义;
+②：图3-2位左侧16Pin管脚定义;
 
-③：图3-3位右侧15 Pin管脚定义;
+③：图3-3位右侧16 Pin管脚定义;
 
 图3-1
 
@@ -33,11 +33,11 @@ CORE ESP32核心板是基于乐鑫ESP32-C3进行设计的一款核心板，尺�
 
 图3-2
 
-![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image004.jpg)
+![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image002.jpg)
 
 图3-3
 
-![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image006.jpg)
+![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image002.jpg)
 
  
 
@@ -60,21 +60,25 @@ CORE ESP32核心板是基于乐鑫ESP32-C3进行设计的一款核心板，尺�
 | 13           | IO03     | GPIO03,输入，输出，高阻                 | SPI0_MOSI       | VDD3P3_RTC | UP/DOWN        |
 | 14           | IO02     | GPIO02,输入，输出，高阻                 | PWM02/SPI0_CK   | VDD3P3_CPU | UP/DOWN        |
 | 15           | 3.3V     | 芯片电源，3.3V                          |                 |            |                |
-| 16           | 5V       | 5V电源接口，与USB的VBUS相连             |                 |            |                |
-| 17           | PWB      | 芯片3.3V供电控制,高电平有效，不用可悬空 |                 |            |                |
-| 18           | GND      | 接地                                    |                 |            |                |
-| 19           | 3.3V     | 芯片电源，3.3V                          |                 |            |                |
-| 20           | RESET    | 芯片复位                                |                 | VDD3P3_RTC |                |
-| 21           | NC       |                                         |                 |            |                |
-| 22           | IO13     | GPIO13,输入，输出，高阻                 |                 | VDD3P3_CPU | UP/DOWN        |
-| 23           | U0_RX    | GPI020,输入，输出，高阻                 | UART0_RX        | VDD3P3_CPU | UP/DOWN        |
-| 24           | U0_TX    | GPIO21,输入，输出，高阻                 | UART0_TX        | VDD3P3_CPU | UP/DOWN        |
-| 25           | GND      | 接地                                    |                 |            |                |
-| 26           | IO19     | GPIO19,输入，输出，高阻                 | USB_D+          | VDD3P3_CPU | UP/DOWN        |
-| 27           | IO18     | GPIO18,输入，输出，高阻                 | USB_D-          | VDD3P3_CPU | UP/DOWN        |
-| 28           | IO12     | GPIO12,输入，输出，高阻                 | SPIHD           | VDD3P3_CPU | UP/DOWN        |
-| 29           | IO01     | GPIO1,输入，输出，高阻                  | UART1_RX        | VDD3P3_CPU | UP/DOWN        |
-| 30           | IO0      | GPIO0,输入，输出，高阻                  | UART1_TX        | VDD3P3_CPU | UP/DOWN        |
+| 16           | GND      | 接地                                    |                 |            |                |
+| 17           | 5V       | 5V电源接口，与USB的VBUS相连             |                 |            |                |
+| 18           | PWB      | 芯片3.3V供电控制,高电平有效，不用可悬空 |                 |            |                |
+| 19           | GND      | 接地                                    |                 |            |                |
+| 20           | 3.3V     | 芯片电源，3.3V                          |                 |            |                |
+| 21           | RESET    | 芯片复位                                |                 | VDD3P3_RTC |                |
+| 22           | NC       |                                         |                 |            |                |
+| 23           | IO13     | GPIO13,输入，输出，高阻                 |                 | VDD3P3_CPU | UP/DOWN        |
+| 24           | U0_RX    | GPI020,输入，输出，高阻                 | UART0_RX        | VDD3P3_CPU | UP/DOWN        |
+| 25           | U0_TX    | GPIO21,输入，输出，高阻                 | UART0_TX        | VDD3P3_CPU | UP/DOWN        |
+| 26           | GND      | 接地                                    |                 |            |                |
+| 27           | IO19     | GPIO19,输入，输出，高阻                 | USB_D+          | VDD3P3_CPU | UP/DOWN        |
+| 28           | IO18     | GPIO18,输入，输出，高阻                 | USB_D-          | VDD3P3_CPU | UP/DOWN        |
+| 29           | IO12     | GPIO12,输入，输出，高阻                 | SPIHD           | VDD3P3_CPU | UP/DOWN        |
+| 30           | IO01     | GPIO1,输入，输出，高阻                  | UART1_RX        | VDD3P3_CPU | UP/DOWN        |
+| 31           | IO0      | GPIO0,输入，输出，高阻                  | UART1_TX        | VDD3P3_CPU | UP/DOWN        |
+| 32           | GND      | 接地                                    |                 |            |                |
+
+
 
 ## 四、功能介绍
 
@@ -86,7 +90,7 @@ CORE-ESP32-C3核心板支持以下3种方式供电：
 - 5V和GND排针供电
 - 3V3 和 GND 排针供电 
 
-![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image008.jpg)
+![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image002.jpg)
 
  调试过程中优先推荐的供电方式：TYPE-C USB接口供电。 
 
