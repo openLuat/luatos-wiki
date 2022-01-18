@@ -1,5 +1,10 @@
 # 硬件资料
 
+## 资料文件
+
+硬件设计手册: https://gitee.com/openLuat/luatos-soc-air101/tree/master/doc
+开发板BOM: [Air101_CORE_BOM_B_Air101_CORE_A10_V1.4_20210909().xlsx](https://cdn.openluat-luatcommunity.openluat.com/attachment/20211013165102234_Air101_CORE_BOM_B_Air101_CORE_A10_V1.4_20210909().xlsx)
+开发板晶振datasheet: [2.3.3.400001004-MDH201808109-D3102512A40000A(1)(1).pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20211013165122024_2.3.3.400001004-MDH201808109-D3102512A40000A(1)(1).pdf)
 
 ## 管脚映射表
 
