@@ -53,8 +53,8 @@
    :caption: 快速上手
 
    luaGuide/index
-   boardGuide/index
    chips/index
+   boardGuide/index
 
 .. toctree::
    :hidden:

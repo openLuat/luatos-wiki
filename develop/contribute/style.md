@@ -107,3 +107,31 @@ static int l_module_function(lua_State *L) {
 -- --使用的例子，可多行
 -- lcoal a,b,c = module.function("test",nil,{1,2,3})
 ```
+
+## sys_pub发布的topic描述规范
+
+在`lua_call`或`lua_pushstring`附近，加上对此消息的相关解释
+
+注意，第一行的`/*`前面不能有任何缩进
+
+```c
+        lua_getglobal(L, "sys_pub");
+/*
+@sys_pub
+第一行写明消息的用途，如：WIFI扫描结束
+WLAN_SCAN_DONE  （该topic的完整名称）
+@string 第一个传递的数据，@后跟数据类型，空格后跟数据解释，如果没有就别写这几行
+@number 第二个数据
+...根据实际，列出所有传递的数据
+@usage
+--使用的例子，可多行
+sys.taskInit(function()
+    xxxxxxxxxx
+    xxxxxxx
+    sys.waitUntil("WLAN_SCAN_DONE")
+    xxxxxxxxxx
+end)
+*/
+        lua_pushstring(L, "WLAN_SCAN_DONE");
+        lua_call(L, 1, 0);
+```
