@@ -10,6 +10,8 @@ LuatOS大QQ群: 1061642968
 
 [串口烧录教程](../../boardGuide/flash.html)
 
+最新固件下载: https://gitee.com/openLuat/LuatOS/releases
+
 **注意：烧录前请设置波特率为921600**
 
 ## 模块购买

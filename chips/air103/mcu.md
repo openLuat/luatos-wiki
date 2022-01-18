@@ -12,6 +12,8 @@
 
 **注意：烧录前请设置波特率为921600**
 
+最新固件下载: https://gitee.com/openLuat/LuatOS/releases
+
 ## 模块购买
 
 * [手机访问mall.m.openluat.com](https://mall.m.openluat.com)
