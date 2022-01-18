@@ -74,6 +74,12 @@
 
 .. toctree::
    :hidden:
+   :caption: 外设及扩展板
+
+   peripherals/index
+
+.. toctree::
+   :hidden:
    :caption: 其他资料
 
    archives
