@@ -96,8 +96,8 @@
 | 31       | PD10        | I/O      | GPIO58/KeyBoard7/DCMIS_DATA5 | UP/DOWN                                                      |                                                              |
 | 32       | PD11        | I/O      | GPIO59/KeyBoard8/DCMIS_DATA6 | UP/DOWN                                                      |                                                              |
 | 33       | PE0         | I/O      | GPIO64/KeyBoard4/DCMIS_DATA7 | UP/DOWN                                                      |                                                              |
-| 34       | PD6         | I/O      | GPIO52/UART1_CTS/DCMIS_DATA8 | UP/DOWN                                                      |                                                              |
-| 35       | PD7         | I/O      | GPIO53/UART1_RTS/DCMIS_DATA9 | UP/DOWN                                                      |                                                              |
+| 34       | PD6         | I/O      | GPIO54/UART1_CTS/DCMIS_DATA8 | UP/DOWN                                                      |                                                              |
+| 35       | PD7         | I/O      | GPIO55/UART1_RTS/DCMIS_DATA9 | UP/DOWN                                                      |                                                              |
 | 36       | PC6         | I/O      | GPIO38/PWM4/DCMIS_DATA10     | UP/DOWN                                                      |                                                              |
 | 37       | PC7         | I/O      | GPIO39/PWM5/DCMIS_DATA11     | UP/DOWN                                                      |                                                              |
 | 38       | PC8         | I/O      | GPIO40/PWM6/DCMIS_DATA12     | UP/DOWN                                                      |                                                              |
