@@ -28,6 +28,7 @@ LuatOS-SOC接口文档
    lpmem
    lvgl
    mcu
+   mlx90640
    nbiot
    otp
    pack
