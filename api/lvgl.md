@@ -353,15 +353,15 @@ local scr = lvgl.scr_act()
 
 ---
 
-## lvgl.layout_top()
+## lvgl.layer_top()
 
-获取layout_top
+获取layer_top
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|return|layout指针|
+|return|layer指针|
 
 **返回值**
 
@@ -373,15 +373,15 @@ local scr = lvgl.scr_act()
 
 ---
 
-## lvgl.layout_sys()
+## lvgl.layer_sys()
 
-获取layout_sys
+获取layer_sys
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|return|layout指针|
+|return|layer指针|
 
 **返回值**
 
@@ -410,13 +410,40 @@ local scr = lvgl.scr_act()
 **例子**
 
 ```lua
-    lvgl.disp_set_bg_color(nil, lvgl.color_make(0x3F, 0x3F, 0x3F))
     local scr = lvgl.obj_create(nil, nil)
     local btn = lvgl.btn_create(scr)
     lvgl.obj_align(btn, lvgl.scr_act(), lvgl.ALIGN_CENTER, 0, 0)
     local label = lvgl.label_create(btn)
     lvgl.label_set_text(label, "LuatOS!")
     lvgl.scr_load(scr)
+
+```
+
+---
+
+## lvgl.theme_set_act(name)
+
+设置主题
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|主题名称,可选值有 default/mono/empty/material_light/material_dark/material_no_transition/material_no_focus|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true,否则返回nil|
+
+**例子**
+
+```lua
+-- 黑白主题
+lvgl.theme_set_act("mono")
+-- 空白主题
+lvgl.theme_set_act("empty")
 
 ```
 
