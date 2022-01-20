@@ -410,12 +410,13 @@ local scr = lvgl.scr_act()
 **例子**
 
 ```lua
-lvgl.disp_set_bg_color(nil, 0xFFFFFF)
-local scr = lvgl.obj_create(nil, nil)
-local btn = lvgl.btn_create(scr)
-lvgl.obj_align(btn, lvgl.scr_act(), lvgl.ALIGN_CENTER, 0, 0)
-lvgl.label_set_text(label, "LuatOS!")
-lvgl.scr_load(scr)
+    lvgl.disp_set_bg_color(nil, lvgl.color_make(0x3F, 0x3F, 0x3F))
+    local scr = lvgl.obj_create(nil, nil)
+    local btn = lvgl.btn_create(scr)
+    lvgl.obj_align(btn, lvgl.scr_act(), lvgl.ALIGN_CENTER, 0, 0)
+    local label = lvgl.label_create(btn)
+    lvgl.label_set_text(label, "LuatOS!")
+    lvgl.scr_load(scr)
 
 ```
 
