@@ -29,15 +29,15 @@ CORE ESP32核心板是基于乐鑫ESP32-C3进行设计的一款核心板，尺�
 
 图3-1
 
-![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image002.jpg)
+![image-20220121123041403](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/image-20220121123041403.png)
 
 图3-2
 
-![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image002.jpg)
+![image-20220121122912818](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/image-20220121122912818.png)
 
 图3-3
 
-![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image002.jpg)
+![image-20220121122942948](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/image-20220121122942948.png)
 
  
 
