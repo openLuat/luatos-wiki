@@ -51,12 +51,7 @@
     "files.trimTrailingWhitespace": true,
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs":"active",
-    "Lua.diagnostics.globals": [
-        "adc","crypto","ctiot","disp","eink","fdb","fs","gpio","http","i2c","ir",
-        "json","keyboard","lcd","lcdseg","libcoap","libgnss","log","lpmem","lvgl",
-        "mcu","nbiot","pm","pwm","rtc","rtos","sdio","sensor","sfd","sfud","socket",
-        "spi","statem","string","timer","u8g2","uart","wdt","wlan","zbuff","sys"
-    ],
+    "luahelper.base.showOnline": false
 }
 ```
 
