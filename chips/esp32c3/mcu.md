@@ -9,3 +9,9 @@
 ## 固件下载
 
 https://gitee.com/dreamcmi/LuatOS-ESP32/releases
+
+
+
+[开源仓库链接](https://gitee.com/dreamcmi/LuatOS-ESP32)
+
+[demo链接](https://gitee.com/dreamcmi/LuatOS-ESP32/tree/master/demo)
