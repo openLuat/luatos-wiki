@@ -126,3 +126,60 @@ gc032a，30w像素
 ## Air105或者10x系列会开放寄存器手册吗
 
 会
+
+## lvgl.img_set_src(img1, "/img/imgbtn_green.png"); 这样是不是也不行
+/luadb/xxxx.png
+
+## Air105开发板可以读SD卡吗
+能，通过spi，比sdio慢些
+
+## Air105支持can总线吗
+不支持，要外挂
+
+## rtos-sdk支持吗，提供相关资料吗
+esp32合宙只提供LuatOS支持，其他资料直接看乐鑫原厂
+
+## ESP32可接，LCD扩展板和1.8寸显示屏吗
+可以
+
+## Air105最高频率下gpio软件翻转速度多少
+3M
+
+## fdb每次初始化会清空之前保存的数据吗
+不会
+
+## Air105可以用keil开发吗
+无法用keil的debug来调试外设，没有SVD文件
+
+## 默认的固件都支持哪些功能
+可以解压soc看看 luat_conf_bsp.h
+
+## Air105是不是能跑Freertos
+105现在开放的csdk跑的就是freertos
+
+## Air101可以获取到芯片的uuid吗
+mcu.unique_id()
+
+## LCD指定位置清屏怎么操作 
+指定位置刷指定颜色
+
+## lcd.drawLine(20,20,150,20,0x001F))这个颜色在哪里查呀，标准的RGB是3字节，这里颜色是2字节
+rgb565 
+
+## Air103板子背面预留的u4是干嘛的
+psram
+
+## Air105有个示例程序camera配的哪个屏
+2.4寸TFT LCD 240X320 GC9306 SPI串口屏
+
+## Air103和105支持多线程的吧
+支持RTOS的多任务
+
+## ST7735 V1.1的屏幕显示白边
+屏幕驱动偏移设置成0就行（xoffset = 0,yoffset = 0）
+
+## Air105的PWM的最高频率是多少
+极限是26M , 最高=主频/8 
+
+## Air105支持双adc模式不
+不支持，只有1个ADC控制器
