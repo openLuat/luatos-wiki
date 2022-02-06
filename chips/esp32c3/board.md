@@ -68,7 +68,7 @@ CORE ESP32核心板是基于乐鑫ESP32-C3进行设计的一款核心板，尺�
 | 21           | RESET    | 芯片复位                                |                 | VDD3P3_RTC |                |
 | 22           | NC       |                                         |                 |            |                |
 | 23           | IO13     | GPIO13,输入，输出，高阻                 |                 | VDD3P3_CPU | UP/DOWN        |
-| 24           | U0_RX    | GPI020,输入，输出，高阻                 | UART0_RX        | VDD3P3_CPU | UP/DOWN        |
+| 24           | U0_RX    | GPIO20,输入，输出，高阻                 | UART0_RX        | VDD3P3_CPU | UP/DOWN        |
 | 25           | U0_TX    | GPIO21,输入，输出，高阻                 | UART0_TX        | VDD3P3_CPU | UP/DOWN        |
 | 26           | GND      | 接地                                    |                 |            |                |
 | 27           | IO19     | GPIO19,输入，输出，高阻                 | USB_D+          | VDD3P3_CPU | UP/DOWN        |
