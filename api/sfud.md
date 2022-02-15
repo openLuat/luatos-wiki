@@ -208,7 +208,7 @@ log.info("sfud.write",sfud.write(sfud_device,1024,"sfud"))
 
 ---
 
-## sfud.eraseWrite(flash, addr, size,data)
+## sfud.eraseWrite(flash, addr,data)
 
 先擦除再往 Flash 写数据
 
@@ -218,7 +218,6 @@ log.info("sfud.write",sfud.write(sfud_device,1024,"sfud"))
 |-|-|
 |userdata|flash Flash 设备对象 sfud.get_device_table()返回的数据结构|
 |int|addr 起始地址|
-|int|size 从起始地址开始读取数据的总大小|
 |string|data 待写入的数据|
 
 **返回值**
