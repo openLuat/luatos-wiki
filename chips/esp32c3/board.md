@@ -21,25 +21,7 @@ CORE ESP32核心板是基于乐鑫ESP32-C3进行设计的一款核心板，尺�
 
 ## 三、管脚定义
 
-①：图3-1为功能说明;
-
-②：图3-2位左侧16Pin管脚定义;
-
-③：图3-3位右侧16 Pin管脚定义;
-
-图3-1
-
-![image-20220121123041403](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/image-20220121123041403.png)
-
-图3-2
-
-![image-20220121122912818](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/image-20220121122912818.png)
-
-图3-3
-
-![image-20220121122942948](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/image-20220121122942948.png)
-
- 
+![footprint](https://cdn.openluat-luatcommunity.openluat.com/images/20220215114919363_QQ%E6%88%AA%E5%9B%BE20220215114724.png)
 
 **详细管脚描述**
 
