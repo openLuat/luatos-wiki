@@ -61,7 +61,7 @@
    :caption: 参考手册
 
    api/index
-   api/question
+   api/sys_pub
 
 .. toctree::
    :hidden:
