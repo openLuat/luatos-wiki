@@ -71,6 +71,7 @@
    develop/add_myapi_5min
    develop/filesystems
    develop/contribute/index
+   develop/add_lua_module
 
 .. toctree::
    :hidden:
