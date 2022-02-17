@@ -5,6 +5,243 @@
 
 
 
+## touchkey
+
+### TOUCHKEY_INC
+
+触摸按键消息
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|number|port, 传感器id|
+|number|state, 计数器,触摸次数统计|
+
+**例子**
+
+```lua
+sys.subscribe("TOUCHKEY_INC", function(id, count)
+    -- 传感器id
+    -- 计数器,触摸次数统计
+    log.info("touchkey", id, count)
+end)
+
+```
+
+---
+
+## keyboard
+
+### KB_INC
+
+键盘矩阵消息
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|number|port, keyboard id 当前固定为0, 可以无视|
+|number|data, keyboard 按键 需要配合init的map进行解析|
+|number|state, 按键状态 1 为按下, 0 为 释放|
+
+**例子**
+
+```lua
+sys.subscribe("KB_INC", function(port, data, state)
+    -- port 当前固定为0, 可以无视
+    -- data, 需要配合init的map进行解析
+    -- state, 1 为按下, 0 为 释放
+    log.info("keyboard", port, data, state)
+end)
+
+```
+
+---
+
+## socket
+
+### NETC_END_xx
+
+连接断开
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.taskInit(function()
+    sys.waitUntil("NETC_END_".. id, 30000)
+    log.info("GET NETC_END or timeout")
+end)
+
+```
+
+---
+
+## ctiot
+
+### CTIOT_RX
+
+CTIOT 接收回调消息
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|string|data, CTIOT 接收数据|
+
+**例子**
+
+```lua
+sys.subscribe("CTIOT_RX", function(data)
+    log.info("CTIOT_RX", data:toHex())
+end)
+
+```
+
+---
+
+### CTIOT_TX
+
+CTIOT 发送回调消息
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|bool|error, 是否成功|
+|number|error_code, 错误代码|
+|number|param, 数据|
+
+**例子**
+
+```lua
+sys.subscribe("CTIOT_TX", function (error, error_code, param)
+    log.info("CTIOT_TX", error, error_code, param)
+end)
+
+```
+
+---
+
+### CTIOT_REG
+
+CTIOT REG回调消息
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|bool|error, 是否成功|
+|number|error_code, 错误代码|
+|number|param, 数据|
+
+**例子**
+
+```lua
+sys.subscribe("CTIOT_REG", function (error, error_code, param)
+    log.info("CTIOT_REG", error, error_code, param)
+end)
+
+```
+
+---
+
+### CTIOT_DEREG
+
+CTIOT DEREG回调消息
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|bool|error, 是否成功|
+|number|error_code, 错误代码|
+|number|param, 数据|
+
+**例子**
+
+```lua
+sys.subscribe("CTIOT_DEREG", function (error, error_code, param)
+    log.info("CTIOT_DEREG", error, error_code, param)
+end)
+
+```
+
+---
+
+### CTIOT_WAKEUP
+
+CTIOT 唤醒回调消息
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|bool|error, 是否成功|
+|number|error_code, 错误代码|
+|number|param, 数据|
+
+**例子**
+
+```lua
+sys.subscribe("CTIOT_WAKEUP", function (error, error_code, param)
+    log.info("CTIOT_WAKEUP", error, error_code, param)
+end)
+
+```
+
+---
+
+### CTIOT_OTHER
+
+CTIOT 其他回调消息
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|bool|error, 是否成功|
+|number|error_code, 错误代码|
+|number|param, 数据|
+
+**例子**
+
+```lua
+sys.subscribe("CTIOT_OTHER", function (error, error_code, param)
+    log.info("CTIOT_OTHER", error, error_code, param)
+end)
+
+```
+
+---
+
+### CTIOT_FOTA
+
+CTIOT FOTA回调消息
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|bool|error, 是否成功|
+|number|error_code, 错误代码|
+|number|param, 数据|
+
+**例子**
+
+```lua
+sys.subscribe("CTIOT_FOTA", function (error, error_code, param)
+    log.info("CTIOT_FOTA", error, error_code, param)
+end)
+
+```
+
+---
+
 ## ntp
 
 ### NTP_UPDATE
