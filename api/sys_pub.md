@@ -7,9 +7,47 @@
 
 ## wlan
 
+### WLAN_READY
+
+WIFI就绪
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.taskInit(function()
+    sys.waitUntil("WLAN_READY")
+end)
+
+```
+
+---
+
+### NET_READY
+
+网络就绪
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.taskInit(function()
+    sys.waitUntil("NET_READY")
+end)
+
+```
+
+---
+
 ### WLAN_SCAN_DONE
 
-WIFI扫描结束
+扫描完成
 
 **额外返回参数**
 
@@ -28,7 +66,7 @@ end)
 
 ### WLAN_STA_CONNECTED
 
-连上wifi路由器/热点,但还没拿到ip
+连接成功,但还没拿到ip
 
 **额外返回参数**
 
@@ -47,7 +85,7 @@ end)
 
 ### WLAN_STA_CONNECTED_FAIL
 
-没有连上wifi路由器/热点,通常是密码错误
+连接失败,通常是密码错误
 
 **额外返回参数**
 
@@ -66,7 +104,7 @@ end)
 
 ### WLAN_STA_DISCONNECTED
 
-从wifi路由器/热点断开了
+断开连接
 
 **额外返回参数**
 
@@ -77,6 +115,101 @@ end)
 ```lua
 sys.taskInit(function()
     sys.waitUntil("WLAN_STA_DISCONNECTED")
+end)
+
+```
+
+---
+
+### WLAN_AP_START
+
+热点启动
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.taskInit(function()
+    sys.waitUntil("WLAN_AP_START")
+end)
+
+```
+
+---
+
+### WLAN_AP_STOP
+
+热点停止
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.taskInit(function()
+    sys.waitUntil("WLAN_AP_STOP")
+end)
+
+```
+
+---
+
+### WLAN_AP_ASSOCIATED
+
+STA 接入
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.taskInit(function()
+    sys.waitUntil("WLAN_AP_ASSOCIATED")
+end)
+
+```
+
+---
+
+### WLAN_AP_DISASSOCIATED
+
+STA 断开
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.taskInit(function()
+    sys.waitUntil("WLAN_AP_DISASSOCIATED")
+end)
+
+```
+
+---
+
+### WLAN_PW_RE
+
+配网结束
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.taskInit(function()
+    sys.waitUntil("WLAN_PW_RE")
 end)
 
 ```
