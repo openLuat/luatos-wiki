@@ -108,3 +108,30 @@ camera.stop(0)
 
 ---
 
+## camera.capture(id, quality, path)
+
+camera拍照
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|camera id,例如0|
+|int|图像资料, 通常设置为80就可以了|
+|string|存储路径|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+camera.capture(0, 80, "/sd/camera.jpg")
+
+```
+
+---
+
