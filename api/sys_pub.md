@@ -5,6 +5,27 @@
 
 
 
+## ntp
+
+### NTP_UPDATE
+
+NTP更新
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.taskInit(function()
+    sys.waitUntil("NTP_UPDATE")
+end)
+
+```
+
+---
+
 ## wlan
 
 ### WLAN_READY
