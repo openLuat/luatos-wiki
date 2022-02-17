@@ -54,6 +54,7 @@
 
    luaGuide/index
    chips/index
+   peripherals/index
    boardGuide/index
 
 .. toctree::
@@ -68,16 +69,8 @@
    :caption: 内核开发
 
    develop/compile
-   develop/add_myapi_5min
-   develop/filesystems
+   develop/docs
    develop/contribute/index
-   develop/add_lua_module
-
-.. toctree::
-   :hidden:
-   :caption: 外设及扩展板
-
-   peripherals/index
 
 .. toctree::
    :hidden:
