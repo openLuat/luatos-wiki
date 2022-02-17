@@ -108,7 +108,7 @@ camera.stop(0)
 
 ---
 
-## camera.capture(id, quality, path)
+## camera.capture(id, y_diff, save_path, quality)
 
 camera拍照
 
@@ -117,8 +117,9 @@ camera拍照
 |传入值类型|解释|
 |-|-|
 |int|camera id,例如0|
-|int|图像资料, 通常设置为80就可以了|
-|string|存储路径|
+|int|y_diff,Y分量校准量，默认是-128，越小越暗，根据实际情况修改，GC032A测试下来需要填0|
+|string|save_path,文件保存路径，空则写在上次路径里，默认是/capture.jpg|
+|int|quality, jpeg压缩质量，1最差，占用空间小，3最高，占用空间最大而且费时间，默认1|
 
 **返回值**
 
@@ -129,7 +130,7 @@ camera拍照
 **例子**
 
 ```lua
-camera.capture(0, 80, "/sd/camera.jpg")
+camera.capture(0)
 
 ```
 
