@@ -12,3 +12,4 @@
    luat_pm
    luat_timer
    luat_zbuff
+   sys_wait_pub
