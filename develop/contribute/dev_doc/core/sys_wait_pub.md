@@ -54,40 +54,66 @@ end
 添加以下功能的函数（构想）
 
 ```lua
---函数的样子
-sys.waitApi(c接口,c接口需要传的参数)
-
---内部实现
-local waitApiId = 0--等待用的编号
-function sys.waitApi(f,...)
-    waitApiId = waitApiId + 1
-    if waitApiId > 0x7ffffffe then waitApiId = 0 end
-    f(waitApiId,...)--调用c函数，并传入等待的编号和其他参数
-    --等待回调并返回给用户
-    local r = {sys.waitUntil("SYS_WAIT_"..string.pack("I",waitApiId))}
-    table.remove(r,1)
-    return table.unpack(r)
+sys.cwait_mt = {}
+sys.cwait_mt.__index = function(t,i)
+    if i == "await" then
+        local r = {sys.waitUntil(rawget(t,"w"))}
+        table.remove(r,1)
+        return table.unpack(r)
+    else
+        rawget(t,i)
+    end
+end
+function sys.cwaitCreate(w)
+    local t = {w=w}
+    setmetatable(t,sys.cwait_mt)
+    return t
 end
 
 --调用方式
 sys.taskInit(function()
-    local data,result,header = sys.waitApi(http.taskGet,"http://xxxxxxxxx")
+    local data,result,header = http.asyncGet("http://xxxxxxxxx").await
     log.info("http get",data,result,header)
 end)
 sys.taskInit(function()
-    local data,result,header = sys.waitApi(http.taskGet,"http://yyyyyyyyy")
+    local data,result,header = http.asyncGet("http://zzzzzzzzz").await
     log.info("http get",data,result,header)
 end)
 ```
 
 ### 对应的c函数需要实现的功能
 
+一个例子，没有实际功能
+
+```c
+static int l_xxxx_block(lua_State *L) {
+    lua_getglobal(L, "sys");
+    lua_pushstring(L,"cwaitCreate");
+    lua_gettable(L, -2);
+    lua_pushstring(L, "test_123123");--一会儿需要回调的topic
+    lua_call(L,1,1);
+
+    //什么回调函数配置的巴拉巴拉
+    .....
+    .....
+
+    return 1;--把生成的元表返回出去以供lua调用
+}
+
+void cb(char* topic,int data) {
+    lua_getglobal(L, "sys_pub");
+    lua_pushstring(L, topic);
+    lua_pushinteger(L,data);
+    lua_call(L, 2, 0);
+}
+```
+
 - 调用后应尽快返回结果，不能阻塞
-- 第一个传入值是publish的id
-- 回调需要对传入的id进行publish操作，并附带结果
-- publish的topic前缀统一为`SYS_WAIT_`，后直接接u32的4字节
-- 需要对此类接口的命名进行规范
+- topic不能重复，每次调用都要生成新的topic
+- 回调需要对对应的topic进行publish操作，并附带结果
+- publish的topic前缀尽量统一，具体待讨论
+- 需要对此类接口的命名进行规范，如以`async`开头
 
 ## 相关知识点
 
-- [消息总线](/markdown/core/luat_msgbus)
+- 消息总线
