@@ -8,8 +8,8 @@ CORE ESP32核心板是基于乐鑫ESP32-C3进行设计的一款核心板，尺�
 
 - 尺寸长宽 21mm*51mm
 - 1路SPI FLASH，板载4MB，支持最高 16MB 
-- 2路UART接口，UART0~UART1
-- 2 路 12 比特 ADC，最高采样率 100KSPS
+- 2路UART接口，UART0~UART1,其中下载口为UART0
+- 6 路 12 比特 ADC，最高采样率 100KSPS
 - 1路低速SPI接口，支持主模式
 - 1路IIC控制器
 - 4路PWM接口
@@ -31,16 +31,16 @@ CORE ESP32核心板是基于乐鑫ESP32-C3进行设计的一款核心板，尺�
 | 2            | 5V       | 5V电源接口，与USB的VBUS相连             |                 |            |                |
 | 3            | BOOT     | GPIO09,输入                             | BOOTMODE        | VDD3P3_CPU | UP/DOWN        |
 | 4            | IO08     | GPIO08,输入，输出，高阻                 | PWM04           | VDD3P3_CPU | UP/DOWN        |
-| 5            | IO04     | GPIO04,输入，输出，高阻                 | I2C_SDA/ADC_1   | VDD3P3_RTC | UP/DOWN        |
-| 6            | IO05     | GPIO05,输入，输出，高阻                 | I2C_SCL/ADC_0   | VDD3P3_RTC | UP/DOWN        |
+| 5            | IO04     | GPIO04,输入，输出，高阻                 | I2C_SDA/ADC_4   | VDD3P3_RTC | UP/DOWN        |
+| 6            | IO05     | GPIO05,输入，输出，高阻                 | I2C_SCL/ADC_5   | VDD3P3_RTC | UP/DOWN        |
 | 7            | 3.3V     | 芯片电源，3.3V                          |                 |            |                |
 | 8            | GND      | 接地                                    |                 |            |                |
 | 9            | PB_11    | GPIO11,输入，输出，高阻                 | VDD_SPI         | VDD3P3_CPU | UP/DOWN        |
 | 10           | IO07     | GPIO07,输入，输出，高阻                 | SPI0_CS         | VDD3P3_CPU | UP/DOWN        |
 | 11           | IO06     | GPIO06,输入，输出，高阻                 | PWM01           | VDD3P3_CPU | UP/DOWN        |
 | 12           | IO10     | GPIO10,输入，输出，高阻                 | PWM03/SPI0_MISO | VDD3P3_CPU | UP/DOWN        |
-| 13           | IO03     | GPIO03,输入，输出，高阻                 | SPI0_MOSI       | VDD3P3_RTC | UP/DOWN        |
-| 14           | IO02     | GPIO02,输入，输出，高阻                 | PWM02/SPI0_CK   | VDD3P3_CPU | UP/DOWN        |
+| 13           | IO03     | GPIO03,输入，输出，高阻                 | SPI0_MOSI/ADC_3       | VDD3P3_RTC | UP/DOWN        |
+| 14           | IO02     | GPIO02,输入，输出，高阻                 | PWM02/SPI0_CK/ADC_2   | VDD3P3_CPU | UP/DOWN        |
 | 15           | 3.3V     | 芯片电源，3.3V                          |                 |            |                |
 | 16           | GND      | 接地                                    |                 |            |                |
 | 17           | 5V       | 5V电源接口，与USB的VBUS相连             |                 |            |                |
@@ -56,8 +56,8 @@ CORE ESP32核心板是基于乐鑫ESP32-C3进行设计的一款核心板，尺�
 | 27           | IO19     | GPIO19,输入，输出，高阻                 | USB_D+          | VDD3P3_CPU | UP/DOWN        |
 | 28           | IO18     | GPIO18,输入，输出，高阻                 | USB_D-          | VDD3P3_CPU | UP/DOWN        |
 | 29           | IO12     | GPIO12,输入，输出，高阻                 | SPIHD           | VDD3P3_CPU | UP/DOWN        |
-| 30           | IO01     | GPIO1,输入，输出，高阻                  | UART1_RX        | VDD3P3_CPU | UP/DOWN        |
-| 31           | IO0      | GPIO0,输入，输出，高阻                  | UART1_TX        | VDD3P3_CPU | UP/DOWN        |
+| 30           | IO01     | GPIO1,输入，输出，高阻                  | UART1_RX/ADC_1  | VDD3P3_CPU | UP/DOWN        |
+| 31           | IO00      | GPIO0,输入，输出，高阻                  | UART1_TX/ADC_0  | VDD3P3_CPU | UP/DOWN        |
 | 32           | GND      | 接地                                    |                 |            |                |
 
 
