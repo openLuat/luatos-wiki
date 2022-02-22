@@ -108,6 +108,31 @@ camera.stop(0)
 
 ---
 
+## camera.close(id)
+
+关闭指定的camera，释放相应的IO资源
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|camera id,例如0|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+camera.close(0)
+
+```
+
+---
+
 ## camera.capture(id, y_diff, save_path, quality)
 
 camera拍照
