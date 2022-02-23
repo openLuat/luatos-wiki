@@ -5,6 +5,6 @@ Air105配套GC032A摄像头
 
 .. toctree::
 
-    hardward
+    hardware
     demos
 

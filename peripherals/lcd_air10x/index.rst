@@ -7,6 +7,6 @@ Air10x系列屏幕扩展板, 对应Core系列Air核心板, 实现Pin2Pin对接, 
 
 .. toctree::
 
-    hardward
+    hardware
     demos
 

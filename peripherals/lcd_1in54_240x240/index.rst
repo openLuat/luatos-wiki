@@ -7,6 +7,6 @@
 
 .. toctree::
 
-    hardward
+    hardware
     demos
 
