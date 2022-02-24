@@ -726,7 +726,7 @@ local style = lvgl.style_create()
 **例子**
 
 ```lua
-local style = lvgl.style_create()
+local style_list = lvgl.style_list_create()
 
 ```
 
@@ -781,7 +781,7 @@ local style = lvgl.style_create()
 
 ---
 
-## lvgl.style_delete(style)
+## lvgl.style_list_delete(style)
 
 删除style_list,慎用,通常不会执行删除操作
 
