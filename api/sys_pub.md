@@ -7,6 +7,12 @@
 
 ## touchkey
 
+
+
+[touchkey接口文档页](https://wiki.luatos.com/api/touchkey.html)
+
+
+
 ### TOUCHKEY_INC
 
 触摸按键消息
@@ -32,6 +38,12 @@ end)
 ---
 
 ## keyboard
+
+
+
+[keyboard接口文档页](https://wiki.luatos.com/api/keyboard.html)
+
+
 
 ### KB_INC
 
@@ -61,6 +73,12 @@ end)
 
 ## socket
 
+
+
+[socket接口文档页](https://wiki.luatos.com/api/socket.html)
+
+
+
 ### NETC_END_xx
 
 连接断开
@@ -82,6 +100,12 @@ end)
 ---
 
 ## ctiot
+
+
+
+[ctiot接口文档页](https://wiki.luatos.com/api/ctiot.html)
+
+
 
 ### CTIOT_RX
 
@@ -244,6 +268,12 @@ end)
 
 ## sys
 
+
+
+[sys接口文档页](https://wiki.luatos.com/api/sys.html)
+
+
+
 ### 以0x01为第一个字节开头
 
 用于luatos内部的系统消息传递
@@ -265,6 +295,12 @@ end)
 
 ## ntp
 
+
+
+[ntp接口文档页](https://wiki.luatos.com/api/ntp.html)
+
+
+
 ### NTP_UPDATE
 
 NTP更新
@@ -285,6 +321,12 @@ end)
 ---
 
 ## wlan
+
+
+
+[wlan接口文档页](https://wiki.luatos.com/api/wlan.html)
+
+
 
 ### WLAN_READY
 
