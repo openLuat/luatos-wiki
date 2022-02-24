@@ -15,13 +15,22 @@
 提供给用户的调用方法，参考如下的演示代码（只是演示功能，实际目前还没这个接口）
 
 ```lua
+--任务内等待结果
 sys.taskInit(function()
     local data,result,header = http.taskGet("http://xxxxxxxxx").wait()
     log.info("http get",data,result,header)
 end)
+
+--等待回调函数
+http.taskGet("http://xxxxxxxxx").cb(function(data,result,header)
+    log.info("http get",data,result,header)
+end)
 ```
 
-接口按命名规范，以`task`开头，调用后的返回值的`wait`下标为一个闭包，可实现多任务内非阻塞的等待功能。
+接口按命名规范，以`task`开头。
+
+- 调用后的返回值的`wait`下标为一个闭包，可实现多任务内非阻塞的等待功能。
+- 调用后的返回值的`cb`下标为一个闭包，可实现异步回调功能。
 
 ## C接口适配
 
