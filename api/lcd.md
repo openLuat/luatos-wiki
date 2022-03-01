@@ -140,6 +140,50 @@ lcd.wakeup()
 
 ---
 
+## lcd.invon()
+
+lcd反显
+
+**参数**
+
+无
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- lcd反显
+lcd.invon()
+
+```
+
+---
+
+## lcd.invoff()
+
+lcd反显关闭
+
+**参数**
+
+无
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- lcd反显关闭
+lcd.invoff()
+
+```
+
+---
+
 ## lcd.setColor(back,fore)
 
 lcd颜色设置
