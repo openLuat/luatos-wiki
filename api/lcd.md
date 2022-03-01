@@ -184,6 +184,54 @@ lcd.invoff()
 
 ---
 
+## lcd.cmd(cmd)
+
+lcd命令
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|cmd|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- lcd命令
+lcd.cmd(0x21)
+
+```
+
+---
+
+## lcd.data(data)
+
+lcd数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|data|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- lcd数据
+lcd.data(0x21)
+
+```
+
+---
+
 ## lcd.setColor(back,fore)
 
 lcd颜色设置
