@@ -7,3 +7,4 @@ Air105
     board
     hardware
     Air105_PCB <https://wiki.luatos.com/_static/bom/Air105.html>
+    power_dissipation
