@@ -5,6 +5,100 @@
 
 
 
+## touchkey
+
+
+
+[touchkey接口文档页](https://wiki.luatos.com/api/touchkey.html)
+
+
+
+### TOUCHKEY_INC
+
+触摸按键消息
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|number|port, 传感器id|
+|number|state, 计数器,触摸次数统计|
+
+**例子**
+
+```lua
+sys.subscribe("TOUCHKEY_INC", function(id, count)
+    -- 传感器id
+    -- 计数器,触摸次数统计
+    log.info("touchkey", id, count)
+end)
+
+```
+
+---
+
+## keyboard
+
+
+
+[keyboard接口文档页](https://wiki.luatos.com/api/keyboard.html)
+
+
+
+### KB_INC
+
+键盘矩阵消息
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|number|port, keyboard id 当前固定为0, 可以无视|
+|number|data, keyboard 按键 需要配合init的map进行解析|
+|number|state, 按键状态 1 为按下, 0 为 释放|
+
+**例子**
+
+```lua
+sys.subscribe("KB_INC", function(port, data, state)
+    -- port 当前固定为0, 可以无视
+    -- data, 需要配合init的map进行解析
+    -- state, 1 为按下, 0 为 释放
+    log.info("keyboard", port, data, state)
+end)
+
+```
+
+---
+
+## socket
+
+
+
+[socket接口文档页](https://wiki.luatos.com/api/socket.html)
+
+
+
+### NETC_END_xx
+
+连接断开
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.taskInit(function()
+    sys.waitUntil("NETC_END_".. id, 30000)
+    log.info("GET NETC_END or timeout")
+end)
+
+```
+
+---
+
 ## ctiot
 
 
@@ -194,100 +288,6 @@ end)
 
 ```lua
 --此为系统内部使用的消息，请勿在外部使用
-
-```
-
----
-
-## touchkey
-
-
-
-[touchkey接口文档页](https://wiki.luatos.com/api/touchkey.html)
-
-
-
-### TOUCHKEY_INC
-
-触摸按键消息
-
-**额外返回参数**
-
-|返回参数类型|解释|
-|-|-|
-|number|port, 传感器id|
-|number|state, 计数器,触摸次数统计|
-
-**例子**
-
-```lua
-sys.subscribe("TOUCHKEY_INC", function(id, count)
-    -- 传感器id
-    -- 计数器,触摸次数统计
-    log.info("touchkey", id, count)
-end)
-
-```
-
----
-
-## keyboard
-
-
-
-[keyboard接口文档页](https://wiki.luatos.com/api/keyboard.html)
-
-
-
-### KB_INC
-
-键盘矩阵消息
-
-**额外返回参数**
-
-|返回参数类型|解释|
-|-|-|
-|number|port, keyboard id 当前固定为0, 可以无视|
-|number|data, keyboard 按键 需要配合init的map进行解析|
-|number|state, 按键状态 1 为按下, 0 为 释放|
-
-**例子**
-
-```lua
-sys.subscribe("KB_INC", function(port, data, state)
-    -- port 当前固定为0, 可以无视
-    -- data, 需要配合init的map进行解析
-    -- state, 1 为按下, 0 为 释放
-    log.info("keyboard", port, data, state)
-end)
-
-```
-
----
-
-## socket
-
-
-
-[socket接口文档页](https://wiki.luatos.com/api/socket.html)
-
-
-
-### NETC_END_xx
-
-连接断开
-
-**额外返回参数**
-
-无
-
-**例子**
-
-```lua
-sys.taskInit(function()
-    sys.waitUntil("NETC_END_".. id, 30000)
-    log.info("GET NETC_END or timeout")
-end)
 
 ```
 
