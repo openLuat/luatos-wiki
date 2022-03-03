@@ -30,7 +30,7 @@ end)
 接口按命名规范，以`task`开头。
 
 - 调用后的返回值的`wait`下标为一个闭包，可实现多任务内非阻塞的等待功能。
-- 调用后的返回值的`cb`下标为一个闭包，可实现异步回调功能。
+- 调用后的返回值的`cb`下标为一个回调器，传入`function`可实现异步回调功能。
 
 ## C接口适配
 
@@ -42,12 +42,38 @@ end)
 
 ```c
 static int l_xxxx_block(lua_State *L) {
-    uint64_t id = luat_pushcwait(L);--获取等待对象放到栈顶，并获取其id
+    uint64_t id = luat_pushcwait(L);//获取等待对象放到栈顶，并获取其id
     //什么回调函数配置的巴拉巴拉
     //.....
     //.....
-    return 1;--把生成的等待对象返回出去以供lua调用
+    return 1;//把生成的等待对象返回出去以供lua调用
 }
+```
+
+如果只想返回一个失败结果（如初始化失败的情况），则可以直接返回一个只会返回错误结果的可等待对象
+
+该对象会在等待时即时返回给定的错误返回值，并且不会返回等待id，无需再发布消息
+
+```c
+static int l_xxxx_block(lua_State *L) {
+    int initial = xxxxx(xxx);
+    if(!initial)//如果初始化失败
+    {
+        lua_pushnil(L);//第一个返回值
+        lua_pushstring(L,"失败原因巴拉巴拉");//可以多加几个返回值
+        luat_pushcwait_error(L,2);//两个返回值，所以传入2
+        return 1;//把生成的等待对象返回出去以供lua调用
+    }
+    //正常情况的处理巴拉巴拉
+    //.....
+    //.....
+}
+```
+
+```lua
+print(xxx.xxxxxBlock().wait())
+--如果走到上面代码的失败处理部分，就会直接返回：
+--nil  失败原因巴拉巴拉
 ```
 
 ### 发布等待结束的消息
