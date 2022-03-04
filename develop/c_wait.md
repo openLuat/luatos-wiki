@@ -90,27 +90,28 @@ static int l_xxxx_cb(uint64_t id) {
 }
 ```
 
-#### 如果函数有返回值
-
-此时就需要手动发送停止等待消息，消息的`topic`使用如下方式拼接而来：
-
-- 第一个字节为0x01
-- 后面直接拼上8字节的唯一id
+或者调用`luat_cbcwait`函数也可以（在函数内有lua栈时）
 
 ```c
-static int l_xxxx_cb(lua_State *L, void* ptr) {
-    rtos_msg_t* msg = (rtos_msg_t*)lua_topointer(L, -1);
-    if(lua_getglobal(L, "sys_pub") != LUA_TFUNCTION)            //获取消息发布函数
-        return 0;
-    char* topic = (char*)luat_heap_malloc(1 + sizeof(uint64_t));//放topic的缓冲区
-    topic[0] = 0x01;                                            //第一个字节为0x01
-    memcpy(topic + 1,msg->ptr,sizeof(uint64_t));                //后面直接拼上8字节的唯一id
-    lua_pushlstring(L,topic,1 + sizeof(uint64_t));              //将topic塞入栈内
-    luat_heap_free(topic);
-    luat_heap_free(msg->ptr);
+static int timer_handler(lua_State *L, void* ptr) {
+    luat_timer_t *timer = (luat_timer_t *)ptr;
+    uint64_t* idp = (uint64_t*)timer->id;
+    luat_cbcwait(L, *idp, 0); //表示这个回调有0个返回值
+    return 0;
+}
+```
 
+#### 如果函数有返回值
+
+先将需要返回的参数推入lua栈，然后调用`luat_cbcwait`函数，传入id即可
+
+```c
+static int timer_handler(lua_State *L, void* ptr) {
+    luat_timer_t *timer = (luat_timer_t *)ptr;
+    uint64_t* idp = (uint64_t*)timer->id;
     lua_pushstring(L,"这是演示的返回值");
-    lua_call(L, 2, 0); //两个传入值（一个topic、一个字符串，按需编写）
+    lua_pushstring(L,"这是演示的第二个返回值");
+    luat_cbcwait(L, *idp, 2); //表示这个回调有2个返回值
     return 0;
 }
 ```
