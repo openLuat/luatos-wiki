@@ -8,7 +8,7 @@
 
 ## 刷机烧录教程
 
-[串口烧录教程](../../boardGuide/flash.html)
+[串口烧录教程](https://wiki.luatos.com/boardGuide/flash.html)
 
 **注意：烧录前请设置波特率为921600**
 

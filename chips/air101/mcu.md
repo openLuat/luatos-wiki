@@ -8,7 +8,7 @@ LuatOS大QQ群: 1061642968
 
 ## 刷机烧录教程
 
-[串口烧录教程](../../boardGuide/flash.html)
+[串口烧录教程](https://wiki.luatos.com/boardGuide/flash.html)
 
 最新固件下载: https://gitee.com/openLuat/LuatOS/releases
 
