@@ -1,14 +1,48 @@
-# soc_download使用指南
+# 命令行刷机指南
 
+## 一、刷机介绍:
 
+luatos可使用命令行进行刷机，如不使用luatools刷机也可自己使用命令行或单独封装刷机软件。air101/air103使用air101_flash.exe，air105/esp32-c3使用soc_download.exe来进行刷机。
 
-## 1、命令行模式，注意大小写
+介绍之前我们先来了解一下soc文件构成：
 
+.soc文件为合宙luatos-soc系统使用的固件格式，我们可以用7z等解压缩软件对其进行解压，可发现固件构成如下：
 
+.bin文件(固件二进制文件)
 
-### Air105需要目前一共需要输入14个参数：
+.exe文件(刷机程序,air101/air103为air101_flash.exe,air105/esp32-c3为soc_download.exe)
 
-1、类型，字符串，目前支持air105_download
+info.json(刷机参数信息)
+
+## 二、命令行刷机参数介绍：
+
+### 1、air101/103命令行刷机：
+
+Air101/Air103需要目前一共需要输入14个参数：
+
+1、-ds 下载时设置串口速度，默认值为115200  可使用15200 | 460800 | 921600 | 1000000 | 2000000|1M | 2M
+
+2、-c 串口号 例如：COM0
+
+3、-ws 工作串口速度，默认值为115200  可使用1200 - 2000000|1M | 2M
+
+4、-rs 复位动作，设置设备复位方法，默认为手动控制 可选none | at | rts
+
+5、-dl 下载固件文件，默认下载压缩映像
+
+**更多参数使用运行 `air101_flash.exe -h` 查看**
+
+举个例子
+
+`air101_flash.exe -ds 2M -c COM0 -ws 115200 -rs rts -dl air10x.fls    `  
+
+**各参数可在info.json中查看**
+
+### 2、air105命令行刷机：
+
+Air105需要目前一共需要输入14个参数：
+
+1、类型，字符串，air105须填写`air105_download` 
 
 2、串口号，10进制，1~255
 
@@ -40,11 +74,11 @@
 
 `soc_download.exe air105_download 83 3000000 "E:\air105\core\hex\air105\debug" bootloader.bin 01001000 app.bin 01010000 script.bin 01300000 0 0 01380000 0`
 
- 
+**各参数可在info.json中查看**
 
-### ESP32C3需要目前一共需要输入16个参数：
+### 3、esp32-c3命令行刷机：
 
-1、类型，字符串，目前支持air105_download
+1、类型，字符串，esp32-c3须填写`esp32_download`
 
 2、串口号，10进制，1~255
 
@@ -84,9 +118,9 @@
 
 `soc_download.exe esp32_download 66 1152000 "_temp\soc\download\esp32" "bootloader.bin" ffffffff "luatos_esp32.bin" 00000000 "script.bin" 01300000 "partition-table.bin" ffffffff 00ff0200 0 00380000 0000`
 
+**各参数可在info.json中查看**
 
-
-## 2、printf出来的信息中，需要关注以下字段
+## 三、控制台中打印的信息需要关注以下字段
 
 **download error:xxx 下载出错及原因**
 
