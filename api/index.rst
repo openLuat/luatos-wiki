@@ -42,6 +42,7 @@ LuatOS-SOC接口文档
    sfd
    sfud
    socket
+   softkeyboard
    spi
    statem
    string

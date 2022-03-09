@@ -415,3 +415,30 @@ local _, ir = pack.unpack(r, "I")
 
 ---
 
+## crypto.totp(secret,time)
+
+计算TOTP动态密码的结果
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|网站提供的密钥（就是BASE32编码后的结果）|
+|int|可选，时间戳，默认当前时间|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|计算得出的六位数结果 计算失败返回nil|
+
+**例子**
+
+```lua
+--使用当前系统时间计算
+local otp = crypto.totp("asdfassdfasdfass")
+
+```
+
+---
+

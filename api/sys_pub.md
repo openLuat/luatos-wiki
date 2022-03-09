@@ -99,6 +99,40 @@ end)
 
 ---
 
+## softkeyboard
+
+
+
+[softkeyboard接口文档页](https://wiki.luatos.com/api/softkeyboard.html)
+
+
+
+### SOFT_KB_INC
+
+键盘矩阵消息
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|number|port, keyboard id 当前固定为0, 可以无视|
+|number|data, keyboard 按键 需要配合init的map进行解析|
+|number|state, 按键状态 1 为按下, 0 为 释放|
+
+**例子**
+
+```lua
+sys.subscribe("SOFT_KB_INC", function(port, data, state)
+    -- port 当前固定为0, 可以无视
+    -- data, 需要配合init的map进行解析
+    -- state, 1 为按下, 0 为 释放
+    log.info("keyboard", port, data, state)
+end)
+
+```
+
+---
+
 ## ctiot
 
 
