@@ -17,6 +17,7 @@ LuatOS-SOC接口文档
    gpio
    http
    i2c
+   io
    ir
    json
    keyboard
