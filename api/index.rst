@@ -30,7 +30,6 @@ LuatOS-SOC接口文档
    lvgl
    mcu
    mlx90640
-   nbiot
    otp
    pack
    pin
