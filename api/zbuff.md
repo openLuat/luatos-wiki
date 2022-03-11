@@ -114,7 +114,7 @@ local str = buff:read(3)
 
 ## buff:clear(num)
 
-zbuff清空数据
+zbuff清空数据，类似于memset
 
 **参数**
 
@@ -501,6 +501,136 @@ rerult = buff:drawCircle(15,5,3,0xC,true)
 ```lua
 buff[0] = 0xc8
 local data = buff[0]
+
+```
+
+---
+
+## buff:resize(n)
+
+调整zbuff的大小
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|新空间大小|
+|return|无|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+buff:resize(20)
+
+```
+
+---
+
+## buff:copy(cursor, para,...)
+
+zbuff动态写数据，类似于memcpy效果，当原有空间不足时动态扩大空间
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|写入buff的起始位置，如果不为数字，则为buff的cursor，如果小于0，则从cursor往前数，-1 = cursor - 1|
+|any|写入buff的数据，string或zbuff者时为一个参数，number时可为多个参数|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|number|数据成功写入的长度|
+
+**例子**
+
+```lua
+local len = buff:copy(nil, "123") -- 从buff当前指针位置开始写入数据, 指针相应地往后移动，返回写入的数据长度
+local len = buff:copy(0, "123") -- 从位置0写入数据, 返回写入的数据长度
+local len = buff:copy(2, 0x1a,0x30,0x31,0x32,0x00,0x01)  -- 从位置2开始，按数值写入多个字节数据
+local len = buff:copy(9, buff2)  -- 从位置9开始，合并入buff2里内容
+
+```
+
+---
+
+## buff:size()
+
+获取zbuff的实际数据量大小
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|return|zbuff的实际数据量大小|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+buff:size()
+
+```
+
+---
+
+## buff:del(offset,length)
+
+删除zbuff 0~cursor范围内的一段数据，
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|起始位置, 默认0，如果<0则从cursor往前数，-1 = cursor - 1|
+|int|长度，默认为cursor|
+|return|无|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+buff:del(1,4)	--从位置1开始删除4个字节数据
+
+```
+
+---
+
+## buff:query(offset,length,isbigend,issigned,isfloat)
+
+按起始位置和长度0~cursor范围内取出数据，如果是1,2,4,8字节，根据后续参数转换成浮点或者整形
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|数据的起始位置（起始位置为0）|
+|int|数据的长度|
+|boolean|是否是大端格式，如果为nil，则不会转换，直接字节流输出|
+|boolean|是否是有符号的，默认为false|
+|boolean|是否是浮点型，默认为false|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|读出来的数据|
+
+**例子**
+
+```lua
+local s = buff:query(0,5)--读取开头的五个字节数据
 
 ```
 
