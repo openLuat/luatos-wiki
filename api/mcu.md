@@ -107,3 +107,27 @@ print("ticks", tick)
 
 ---
 
+## mcu.hz()
+
+获取每秒的tick数量
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|每秒的tick数量|
+
+**例子**
+
+```lua
+local tick = mcu.hz()
+print("mcu.hz", hz)
+
+```
+
+---
+
