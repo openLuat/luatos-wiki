@@ -6,6 +6,7 @@
 * LuatOS 20群: 649926645  , 面向LuatIDE, 2G/4G 产品线
 * LuatOS 17群: 1027923658 , 面向iRTU, 透传固件
 * LuatOS 04群: 877164555  , 主要面向 2G/4G 产品线, 例如Air724/Air722/Air202/Air800/Air600
+* LuatOS GNSS卫星定位:  182970020 , 面向定位产品线, Air5xx系列
 
 ## 微信支持
 
