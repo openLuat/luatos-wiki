@@ -131,3 +131,28 @@ print("mcu.hz", hz)
 
 ---
 
+## mcu.tick64()
+
+获取启动后的高精度tick
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|当前tick值，8个字节的uint64|
+|int|tick的频率，0表示未知|
+
+**例子**
+
+```lua
+local tick_str, tick_per = mcu.tick64()
+print("ticks", tick)
+
+```
+
+---
+
