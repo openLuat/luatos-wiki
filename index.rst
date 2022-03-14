@@ -30,11 +30,11 @@
 
 **目前已经适配的模组和芯片：**
 
-- Air101（MCU）尺寸小,仅4*4mm
-- Air103（MCU）io多,支持psram
-- Air105（MCU）内存大,有摄像头,有USB
-- ESP32系列 (wifi/bt芯片） https://gitee.com/dreamcmi/LuatOS-ESP32
-- RT-Thread 全部bsp(内存需满足最低要求) https://github.com/openLuat/luatos-soc-rtt
+- `Air101 <chips/air101>`_ （MCU）尺寸小,仅4*4mm
+- `Air103 <chips/air103>`_ （MCU）io多,支持psram
+- `Air105 <chips/air105>`_ （MCU）内存大,有摄像头,有USB
+- `ESP32 <chips/esp32c3>`系列 (wifi/bt芯片） https://gitee.com/dreamcmi/LuatOS-ESP32
+- RT-Thread 全部bsp(内存需满足最低要求) https://github.com/openLuat/luatos-soc-rtt , 已并入rtt主线
 - Air302（EC616/nbiot模组） 仅支持老客户,敬请谅解.
 - Air640w（W600/wifi模组）  仅支持老客户,敬请谅解.
 
