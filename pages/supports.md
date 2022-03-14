@@ -16,3 +16,12 @@
 2. 添加 "LuatOS 04群", 群号, 入群后发送 "微信支持", 按提示操作即可
 3. 其他QQ群通常也支持发送"微信支持", 若有疑问可咨询群主
 
+## 购买途径
+
+* 拼多多   http://mobile.yangkeduo.com/mall_page.html?mall_id=500792601
+
+![](pdd.jpg)
+
+* 抖音     [aweme://goods/store?sec_shop_id=fwqlTVqO](aweme://goods/store?sec_shop_id=fwqlTVqO)
+![](douyin.png)
+
