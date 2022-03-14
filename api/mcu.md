@@ -144,12 +144,39 @@ print("mcu.hz", hz)
 |返回值类型|解释|
 |-|-|
 |string|当前tick值，8个字节的uint64|
-|int|tick的频率，0表示未知|
+|int|1us有几个tick，0表示未知|
 
 **例子**
 
 ```lua
 local tick_str, tick_per = mcu.tick64()
+print("ticks", tick)
+
+```
+
+---
+
+## mcu.dtick(tick1, tick2)
+
+计算2个64bit tick的差值
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|tick1|
+|string|tick2|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|差值tick1 - tick2|
+
+**例子**
+
+```lua
+local diff_tick = mcu.dtick64(tick1, tick2)
 print("ticks", tick)
 
 ```
