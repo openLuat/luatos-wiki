@@ -530,7 +530,7 @@ buff:resize(20)
 
 ---
 
-## buff:copy(cursor, para,...)
+## buff:copy(start, para,...)
 
 zbuff动态写数据，类似于memcpy效果，当原有空间不足时动态扩大空间
 
@@ -538,7 +538,7 @@ zbuff动态写数据，类似于memcpy效果，当原有空间不足时动态扩
 
 |传入值类型|解释|
 |-|-|
-|int|写入buff的起始位置，如果不为数字，则为buff的cursor，如果小于0，则从cursor往前数，-1 = cursor - 1|
+|int|写入buff的起始位置，如果不为数字，则为buff的used，如果小于0，则从used往前数，-1 = used - 1|
 |any|写入buff的数据，string或zbuff者时为一个参数，number时可为多个参数|
 
 **返回值**
@@ -559,7 +559,7 @@ local len = buff:copy(9, buff2)  -- 从位置9开始，合并入buff2里内容
 
 ---
 
-## buff:size()
+## buff:used()
 
 获取zbuff的实际数据量大小
 
@@ -576,7 +576,7 @@ local len = buff:copy(9, buff2)  -- 从位置9开始，合并入buff2里内容
 **例子**
 
 ```lua
-buff:size()
+buff:used()
 
 ```
 
@@ -584,13 +584,13 @@ buff:size()
 
 ## buff:del(offset,length)
 
-删除zbuff 0~cursor范围内的一段数据，
+删除zbuff 0~used范围内的一段数据，
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|int|起始位置, 默认0，如果<0则从cursor往前数，-1 = cursor - 1|
+|int|起始位置, 默认0，如果<0则从used往前数，-1 = used - 1|
 |int|长度，默认为cursor|
 |return|无|
 
@@ -609,7 +609,7 @@ buff:del(1,4)	--从位置1开始删除4个字节数据
 
 ## buff:query(offset,length,isbigend,issigned,isfloat)
 
-按起始位置和长度0~cursor范围内取出数据，如果是1,2,4,8字节，根据后续参数转换成浮点或者整形
+按起始位置和长度0~used范围内取出数据，如果是1,2,4,8字节，根据后续参数转换成浮点或者整形
 
 **参数**
 
