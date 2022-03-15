@@ -329,6 +329,30 @@ lvgl.font_free(font)
 
 ---
 
+## lvgl.event_send(obj, ent)
+
+发送事件给组件
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|组件指针|
+|int|事件id, 例如 lvgl.EVENT_PRESSED|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true, 对象已被删除的话返回false或者nil|
+|int|底层返回值,如果obj为nil就返回nil|
+
+**例子**
+
+无
+
+---
+
 ## lvgl.scr_act()
 
 获取当前活跃的screen对象
