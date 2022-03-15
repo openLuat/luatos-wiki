@@ -40,7 +40,7 @@ audio.start(0, audio.PCM, 1, 16000, 16)
 
 |传入值类型|解释|
 |-|-|
-|string|音频数据|
+|string|or zbuff 音频数据|
 
 **返回值**
 
@@ -91,14 +91,21 @@ audio.stop(0)
 |传入值类型|解释|
 |-|-|
 |int|audio id,例如0|
+|boolean|onoff true 暂停，false 恢复|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
 
 **例子**
 
-无
+```lua
+audio.pause(0, true) --暂停通道0
+audio.pause(0, false) --恢复通道0
+
+```
 
 ---
 
@@ -130,15 +137,16 @@ end)
 
 ---
 
-## decode.create(decode.MP3)
+## codec.create(codec.MP3)
 
-创建解码用的decoder
+创建编解码用的codec
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|int|解码类型，目前支持decode.MP3|
+|int|多媒体类型，目前支持decode.MP3|
+|boolean|是否是编码器，默认true，是解码器|
 
 **返回值**
 
@@ -150,13 +158,13 @@ end)
 
 ```lua
 -- 创建decoder
-local decoder = decode.create(decode.MP3)--创建一个mp3的decoder
+local decoder = codec.create(codec.MP3)--创建一个mp3的decoder
 
 ```
 
 ---
 
-## decode.get_audio_info(decoder, data)
+## codec.get_audio_info(decoder, data)
 
 decoder从文件数据中解析出音频信息
 
@@ -164,7 +172,7 @@ decoder从文件数据中解析出音频信息
 
 |传入值类型|解释|
 |-|-|
-|decoder|解码用的decoder|
+|coder|解码用的decoder|
 |string|文件数据，必须是开头的数据|
 
 **返回值**
@@ -177,7 +185,7 @@ decoder从文件数据中解析出音频信息
 
 ---
 
-## decode.get_audio_data(decoder, in_buff, out_buff)
+## codec.get_audio_data(decoder, in_buff, out_buff)
 
 decoder从文件数据中解析出音频数据
 
@@ -185,7 +193,7 @@ decoder从文件数据中解析出音频数据
 
 |传入值类型|解释|
 |-|-|
-|decoder|解码用的decoder|
+|coder|解码用的decoder|
 |zbuff|存放输入数据的zbuff|
 |zbuff|存放输出数据的zbuff，空间必须不少于16KB|
 
@@ -199,9 +207,9 @@ decoder从文件数据中解析出音频数据
 
 ---
 
-## decode.release(decoder)
+## codec.release(coder)
 
-释放解码用的decoder
+释放编解码用的coder
 
 **参数**
 
