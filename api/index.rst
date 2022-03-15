@@ -18,7 +18,7 @@ LuatOS-SOC接口文档
    http
    i2c
    io
-   io_queue
+   ioqueue
    ir
    json
    keyboard
