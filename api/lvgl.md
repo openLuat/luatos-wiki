@@ -839,7 +839,7 @@ local style_list = lvgl.style_list_create()
 
 |传入值类型|解释|
 |-|-|
-|string|设备类型，当前支持"pointer",指针类/触摸类均可|
+|string|设备类型，当前支持"pointer",指针类/触摸类均可，"keyboard",键盘类型|
 |string|设备型号，当前支持"emulator",模拟器类型|
 
 **返回值**
@@ -886,6 +886,28 @@ sys.taskInit(function(x, y, timeout)
 end, 240, 120, 50)
 
 ```
+
+---
+
+## lvgl.indev_kb_update(key)
+
+更新键盘输入设备的按键值
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|按键值，默认为0，按键抬起|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+无
 
 ---
 
