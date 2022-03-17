@@ -81,8 +81,13 @@ PWM捕获
 
 ```lua
 -- PWM0捕获
-log.info("pwm.get(0)",pwm.capture(0,1000))
-log.info("PWM_CAPTURE",sys.waitUntil("PWM_CAPTURE", 2000))
+while 1 do
+    pwm.capture(0,1000)
+    local ret,channel,pulse,pwmH,pwmL  = sys.waitUntil("PWM_CAPTURE", 2000)
+    if ret then
+        log.info("PWM_CAPTURE","channel"..channel,"pulse"..pulse,"pwmH"..pwmH,"pwmL"..pwmL)
+    end
+end
 
 ```
 
