@@ -2,7 +2,7 @@
 
 ## 资料文件
 
-* 硬件设计手册: [Air101_MCU设计手册V1.0.pdf](http://cdndownload.openluat.com/wiki/chips/air101/Air101_MCU设计手册V1.0.pdf)
+* 硬件设计手册: [Air101_MCU设计手册V1.0.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/air101_%E8%8A%AF%E7%89%87%E8%A7%84%E6%A0%BC%E4%B9%A6_v1.1.pdf)
 * 开发板BOM: [Air101_CORE_BOM_B_Air101_CORE_A10_V1.4_20210909().xlsx](http://cdndownload.openluat.com/wiki/chips/air101/20211013165102234_Air101_CORE_BOM_B_Air101_CORE_A10_V1.4_20210909.xlsx)
 * 开发板晶振datasheet: [2.3.3.400001004-MDH201808109-D3102512A40000A.pdf](http://cdndownload.openluat.com/wiki/chips/air101/2.3.3.400001004-MDH201808109-D3102512A40000A.pdf)
 * 寄存器手册(不推荐): [寄存器手册与W800通用](https://www.winnermicro.com/upload/1/editor/1607327764402.pdf)
