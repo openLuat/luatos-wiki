@@ -99,6 +99,33 @@ end)
 
 ---
 
+## sys
+
+
+
+[sys接口文档页](https://wiki.luatos.com/api/sys.html)
+
+
+
+### 以0x01为第一个字节开头
+
+用于luatos内部的系统消息传递
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|args|返回的数据|
+
+**例子**
+
+```lua
+--此为系统内部使用的消息，请勿在外部使用
+
+```
+
+---
+
 ## ctiot
 
 
@@ -261,33 +288,6 @@ CTIOT FOTA回调消息
 sys.subscribe("CTIOT_FOTA", function (error, error_code, param)
     log.info("CTIOT_FOTA", error, error_code, param)
 end)
-
-```
-
----
-
-## sys
-
-
-
-[sys接口文档页](https://wiki.luatos.com/api/sys.html)
-
-
-
-### 以0x01为第一个字节开头
-
-用于luatos内部的系统消息传递
-
-**额外返回参数**
-
-|返回参数类型|解释|
-|-|-|
-|args|返回的数据|
-
-**例子**
-
-```lua
---此为系统内部使用的消息，请勿在外部使用
 
 ```
 
