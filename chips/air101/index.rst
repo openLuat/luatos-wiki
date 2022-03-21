@@ -8,6 +8,7 @@ Air101
     mcu
     board
     hardware
+    Air101-Hard-design
     Air101
     Air101_PCB <https://wiki.luatos.com/_static/bom/Air101.html>
     power_dissipation
