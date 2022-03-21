@@ -4,7 +4,7 @@ LuatOS工具大全
 
 `开发神器LuatIDE <https://marketplace.visualstudio.com/items?itemName=luater.luatide>`_
 
-`LuaTools下载 <http://luatos.com/luatools/download/last>`_
+`LuaTools下载(右键另存为) <http://luatos.com/luatools/download/last>`_
 
 `FOTA远程升级工具 <https://doc.openluat.com/wiki/21?wiki_page_id=2314>`_
 
