@@ -36,6 +36,42 @@ spi.setup(0,20,0,0,8,2000000,spi.MSB,1,1)
 
 ---
 
+## spi.createSoft(cs, mosi, miso, clk, CPHA, CPOL, dataw, bitdict, ms, mode)
+
+设置并启用软件SPI
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|cs引脚编号，传入nil意为Lua控制cs脚|
+|int|mosi引脚编号|
+|int|miso引脚编号|
+|int|clk引脚编号|
+|int|默认0，可选0/1|
+|int|默认0，可选0/1|
+|int|数据宽度，默认8bit|
+|int|大小端，默认spi.MSB, 可选spi.LSB|
+|int|主从设置，默认主1, 可选从机0. 通常只支持主机模式|
+|int|工作模式，全双工1，半双工0，默认全双工|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|软件SPI对象|可当作SPI的id使用|
+
+**例子**
+
+```lua
+-- 初始化软件spi
+local softSpiDevice = spi.createSoft(0, 1, 2, 3, 0, 0, 8, spi.MSB, 1, 1)
+local result = spi.send(softSpiDevice, string.char(0x9f))
+
+```
+
+---
+
 ## spi.close(id)
 
 关闭指定的SPI
@@ -70,7 +106,7 @@ spi.close(0)
 
 |传入值类型|解释|
 |-|-|
-|int|SPI号,例如0|
+|int|SPI号(例如0)或软件SPI对象|
 |string/zbuff|待发送的数据，如果为zbuff数据，则会从对象所处的指针处开始读|
 |int|可选。待发送数据的长度，默认为data长度|
 |int|可选。读取数据的长度，默认为1|
