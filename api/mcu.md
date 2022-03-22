@@ -133,7 +133,7 @@ print("mcu.hz", hz)
 
 ## mcu.tick64()
 
-获取启动后的高精度tick
+获取启动后的高精度tick，目前只有105能用
 
 **参数**
 
@@ -150,40 +150,35 @@ print("mcu.hz", hz)
 
 ```lua
 local tick_str, tick_per = mcu.tick64()
-print("ticks", tick)
+print("ticks", tick_str, tick_per)
 
 ```
 
 ---
 
-## mcu.dtick(tick1, tick2)
+## mcu.dtick(tick1, tick2, check_value)
 
-计算2个64bit tick的差值
+计算2个64bit tick的差值，目前只有105能用
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|string|tick1|
-|string|tick2|
+|string|tick1, 64bit的string|
+|string|tick2, 64bit的string|
+|int|参考值，可选项，如果为0，则返回结果中第一个项目为true|
 
 **返回值**
 
-|返回值类型|解释|
-|-|-|
-|int|差值tick1 - tick2|
+无
 
 **例子**
 
-```lua
-local diff_tick = mcu.dtick64(tick1, tick2)
-print("ticks", tick)
-
-```
+无
 
 ---
 
-## mcu.setXTAL(source_main, source_32k)
+## mcu.setXTAL(source_main, source_32k)，目前只有105能用
 
 选择时钟源
 
