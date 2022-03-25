@@ -1,8 +1,8 @@
 Sphinx==4.4.0
+pygments==2.11.2
 furo==2022.3.4
 myst-parser
 sphinx-markdown-tables
 jieba
 sphinx-sitemap
 sphinx_copybutton
-pygments
