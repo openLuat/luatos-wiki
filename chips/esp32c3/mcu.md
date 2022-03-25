@@ -4,7 +4,7 @@
 
 [串口烧录教程](https://wiki.luatos.com/boardGuide/flash.html)
 
-**注意：烧录前请设置波特率为115200**
+**注意：烧录前请设置波特率为921600**
 
 ## 固件下载
 
