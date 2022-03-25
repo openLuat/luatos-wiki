@@ -1,5 +1,5 @@
-Sphinx=4.4.0
-furo=2022.3.4
+Sphinx==4.4.0
+furo==2022.3.4
 myst-parser
 sphinx-markdown-tables
 jieba
