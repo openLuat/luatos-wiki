@@ -5,3 +5,4 @@ sphinx-markdown-tables
 jieba
 sphinx-sitemap
 sphinx_copybutton
+pygments
