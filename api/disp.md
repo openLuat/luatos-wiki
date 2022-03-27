@@ -104,7 +104,7 @@ disp.drawStr("wifi is ready", 10, 20)
 
 ---
 
-## disp.setFont(fontId) 
+## disp.setFont(font) 
 
 设置字体
 
@@ -112,7 +112,7 @@ disp.drawStr("wifi is ready", 10, 20)
 
 |传入值类型|解释|
 |-|-|
-|int|字体id, 默认0,纯英文8x8字节. 如果支持中文支持, 那么1代表12x12的中文字体.|
+|userdata|字体.|
 
 **返回值**
 
@@ -122,7 +122,7 @@ disp.drawStr("wifi is ready", 10, 20)
 
 ```lua
 -- 设置为中文字体,对之后的drawStr有效
-disp.setFont(1)
+disp.setFont(disp.font_opposansm12)
 
 ```
 

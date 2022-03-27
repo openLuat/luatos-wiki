@@ -118,7 +118,31 @@
 
 ---
 
-## eink.print(x, y, str, colored, font)
+## eink.setFont(font) 
+
+设置字体
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|字体.|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 设置为中文字体,对之后的drawStr有效
+eink.setFont(eink.font_opposansm12)
+
+```
+
+---
+
+## eink.print(x, y, str, colored)
 
 绘制字符串
 
@@ -130,7 +154,6 @@
 |int|y坐标|
 |string|字符串|
 |int|默认是0|
-|font|字体大小,默认12|
 
 **返回值**
 
