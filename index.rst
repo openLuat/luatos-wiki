@@ -35,9 +35,9 @@
 - `Air105 <chips/air105/index.html>`_ （MCU）内存大,有摄像头,有USB
 - `ESP32 <chips/esp32c3/index.html>`_ 系列 (wifi/bt芯片） https://gitee.com/dreamcmi/LuatOS-ESP32
 - `RT-Thread <https://github.com/openLuat/luatos-soc-rtt>`_ 全部bsp(内存需满足最低要求) 已并入rtt主线
-- `Air302 <chips/air302/index.html>`_（EC616/nbiot模组） 仅支持老客户,敬请谅解
-- `Air640w <chips/air640w/index.html>`_（W600/wifi模组）  仅支持老客户,敬请谅解
-- `win32 <chips/win32.html>` win32版LuatOS
+- `Air302 <chips/air302/index.html>`_ （EC616/nbiot模组） 仅支持老客户,敬请谅解
+- `Air640w <chips/air640w/index.html>`_ （W600/wifi模组）  仅支持老客户,敬请谅解
+- `win32 <chips/win32.html>`_ win32版LuatOS
 
 我们正适配更多的单片机和无线芯片模组, 欢迎您的加入^_^
 
