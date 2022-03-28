@@ -245,7 +245,7 @@ log.info("str", str:startsWith("b"))
 
 ---
 
-## string.startsWith(str, suffix)
+## string.endsWith(str, suffix)
 
 判断字符串后缀
 
