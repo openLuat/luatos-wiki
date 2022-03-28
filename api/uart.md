@@ -59,7 +59,10 @@ uart.setup(1, 115200, 8, 1, uart.NONE)
 **例子**
 
 ```lua
+-- 写入可见字符串
 uart.write(1, "rdy\r\n")
+-- 写入十六进制的数据串
+uart.write(1, string.char(0x55,0xAA,0x4B,0x03,0x86))
 
 ```
 
