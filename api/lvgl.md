@@ -831,6 +831,150 @@ local style_list = lvgl.style_list_create()
 
 ---
 
+## lvgl.demo_benchmark()
+
+lvgl benchmark demo
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+lvgl.init()
+lvgl.demo_benchmark()
+
+```
+
+---
+
+## lvgl.demo_keypad_encoder()
+
+lvgl keypad_encoder demo
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+lvgl.init()
+lvgl.demo_keypad_encoder()
+
+```
+
+---
+
+## lvgl.demo_music()
+
+lvgl music demo
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+lvgl.init()
+lvgl.demo_music()
+
+```
+
+---
+
+## lvgl.demo_printer()
+
+lvgl printer demo
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+lvgl.init()
+lvgl.demo_printer()
+
+```
+
+---
+
+## lvgl.demo_stress()
+
+lvgl stress demo
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+lvgl.init()
+lvgl.demo_stress()
+
+```
+
+---
+
+## lvgl.demo_widgets()
+
+lvgl widgets demo
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+lvgl.init()
+lvgl.demo_widgets()
+
+```
+
+---
+
 ## lvgl.indev_drv_register(tp, dtp)
 
 注册输入设备驱动
