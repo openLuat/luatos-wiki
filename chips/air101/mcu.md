@@ -21,4 +21,4 @@ LuatOS大QQ群: 1061642968
 
 ## 芯片PinOut
 
-![](https://gitee.com/openLuat/LuatOS/raw/master/bsp/air101/images/air101_chip_pinout.png)
+![](https://cdn.openluat-luatcommunity.openluat.com/images/20220329175538778_air101_chip_pinout[1].png)

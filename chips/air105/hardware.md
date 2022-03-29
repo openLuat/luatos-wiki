@@ -11,4 +11,4 @@
 
 ## 芯片PinOut
 
-![air105_chip_pinout.png](https://gitee.com/openLuat/LuatOS/raw/master/bsp/air105/images/air105_chip_pinout.png)
+![air105_chip_pinout.png](https://cdn.openluat-luatcommunity.openluat.com/images/20220329175643778_air105_chip_pinout[1].png)

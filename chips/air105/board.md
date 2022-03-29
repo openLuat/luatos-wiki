@@ -16,6 +16,6 @@
 
 ## 开发板PinOut
 
-![air105_evb_pinout.png](https://gitee.com/openLuat/LuatOS/raw/master/bsp/air105/images/air105_evb_pinout.png)
+![air105_evb_pinout.png](https://cdn.openluat-luatcommunity.openluat.com/images/20220329175627267_air105_evb_pinout[1].png)
 
 **注意：HSPI编程时为SPI5**

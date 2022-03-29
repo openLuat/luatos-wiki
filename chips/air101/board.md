@@ -6,7 +6,7 @@
 
 ## 开发板PinOut
 
-![](https://gitee.com/openLuat/LuatOS/raw/master/bsp/air101/images/air101_evb_pinout.png)
+![](https://cdn.openluat-luatcommunity.openluat.com/images/20220329175245675_air101_evb_pinout[1].png)
 
 ## 开发板尺寸图
 

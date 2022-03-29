@@ -4,4 +4,4 @@ todo
 
 ## 开发板PinOut
 
-![](https://gitee.com/openLuat/LuatOS/raw/master/bsp/air103/images/air103_evb_pinout.png)
+![](https://cdn.openluat-luatcommunity.openluat.com/images/20220329175509546_air103_evb_pinout[1].png)

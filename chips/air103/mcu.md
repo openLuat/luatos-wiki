@@ -4,7 +4,7 @@
 
 ## 芯片PinOut
 
-![](https://gitee.com/openLuat/LuatOS/raw/master/bsp/air103/images/air103_chip_pinout.png)
+![](https://cdn.openluat-luatcommunity.openluat.com/images/20220329175558817_air103_chip_pinout[1].png)
 
 ## 刷机烧录教程
 
