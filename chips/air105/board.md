@@ -16,6 +16,8 @@
 
 ## 开发板PinOut
 
+3个LED分别为 PD14/PD15/PC3
+
 ![air105_evb_pinout.png](https://cdn.openluat-luatcommunity.openluat.com/images/20220329175627267_air105_evb_pinout[1].png)
 
 **注意：HSPI编程时为SPI5**
