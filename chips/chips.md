@@ -8,7 +8,7 @@
 | 总Flash                                               | 2M      | 1M     | 4M    | 4M     | 1M/2M   | 256k+外接Flash|外接Flash|
 | 总Ram                                                 | 288k    | 288k   | 640k  | 256k   | 288k    | 64k+8M|400k|
 | 内核                                                  | xt804   | xt804  | m4f   | m3     | m3      | m4f    |risc-v|
-| [uart](https://wiki.luatos.com/api/uart.html)         | 5(4)    | 6(5)   | 3(2)  | 3(1)   | 3(2)    | ?      |2|
+| [uart](https://wiki.luatos.com/api/uart.html)         | 5(4)    | 6(5)   | 4(3)  | 3(1)   | 3(2)    | ?      |2|
 | [gpio](https://wiki.luatos.com/api/gpio.html)         | 18      | 44     | 56    | 20     | 16      | ?      |15|
 | [i2c](https://wiki.luatos.com/api/i2c.html)           | 1       | 1      | 1     | 1      | 1       | ?      |1|
 | [spi](https://wiki.luatos.com/api/spi.html)           | 1       | 1      | 4     | 1      | 1       | ?      |1|
@@ -36,7 +36,7 @@
 * gpio数量 全部可复用为GPIO的数量, 其中包含bootmode和uart0等启动后可用的但不推荐复用的GPIO.
 * 如有出入, 以硬件设计手册为准
 * 联盛德w800/w801/w805/806与air101/air103类似,属于封装与flash大小的排列组合
-* air105有1个高速SPI,最高96M, 3个低速SPI, 最高20M
+* air105有1个高速SPI,最高96M, 3个低速SPI, 最高24M
 * air101/air103的BLE属于赠送, 功耗高, 不适合低功耗场景
 
 ## 图示含义 Table Legend
