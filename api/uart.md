@@ -123,7 +123,7 @@ uart.read(1, 16)
 
 ---
 
-## uart.read(id, buff)
+## uart.rx(id, buff)
 
 buff形式读串口，一次读出全部数据存入buff中，如果buff空间不够会自动扩展，目前只有air105支持这个操作
 
@@ -142,7 +142,7 @@ buff形式读串口，一次读出全部数据存入buff中，如果buff空间�
 **例子**
 
 ```lua
-uart.read(1, buff)
+uart.rx(1, buff)
 
 ```
 
