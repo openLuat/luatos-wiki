@@ -371,6 +371,9 @@ local crc = crypto.crc32(data)
 |传入值类型|解释|
 |-|-|
 |string|数据|
+|int|crc多项式，可选，如果不写，将忽略除了数据外所有参数|
+|int|crc初始值，可选，默认0|
+|boolean|是否需要逆序处理，默认否|
 
 **返回值**
 
@@ -383,6 +386,7 @@ local crc = crypto.crc32(data)
 ```lua
 -- 计算CRC8
 local crc = crypto.crc8(data)
+local crc = crypto.crc8(data, 0x31, 0xff, 0)
 
 ```
 
