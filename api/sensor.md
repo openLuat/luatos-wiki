@@ -57,7 +57,7 @@ end
 
 ---
 
-## sensor.w1_reset(pin)
+## sensor.w1_connect(pin)
 
 单总线协议,连接设备
 
