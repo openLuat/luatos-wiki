@@ -715,3 +715,73 @@ lcd.showImage(0,0,"/luadb/logo.jpg")
 
 ---
 
+## lcd.flush()
+
+主动刷新数据到界面, 仅设置buff且禁用自动属性后使用
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true, 否则返回nil/false|
+
+**例子**
+
+无
+
+---
+
+## lcd.setupBuff()
+
+设置显示缓冲区, 所需内存大小为 2*宽*高 字节. 请衡量内存需求与业务所需的刷新频次.
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|是否成功|
+
+**例子**
+
+```lua
+-- 初始化lcd的buff缓冲区, 可理解为FrameBuffer区域.
+lcd.setupBuff()
+
+```
+
+---
+
+## lcd.autoFlush(enable)
+
+设置自动刷新, 需配合lcd.setupBuff使用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|bool|是否自动刷新,默认为true|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 设置buff 并禁用自动更新
+lcd.setupBuff()
+lcd.autoFlush(false)
+-- 禁止自动更新后, 需要使用 lcd.flush() 主动刷新数据到屏幕
+
+```
+
+---
+
