@@ -690,3 +690,28 @@ lcd.drawXbm(0, 0, 16,16, string.char(
 
 ---
 
+## lcd.showImage(x, y, file)
+
+显示图片,当前只支持jpg,jpeg
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|X坐标|
+|int|y坐标|
+|string|文件路径|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+lcd.showImage(0,0,"/luadb/logo.jpg")
+
+```
+
+---
+
