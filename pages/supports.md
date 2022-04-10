@@ -2,11 +2,19 @@
 
 ## QQ群支持
 
-* LuatOS 18群: 1061642968 , 面向soc/mcu产品线, LuaTools, 合宙Web服务反馈
+## SoC产品线, MCU/WIFI/NBIOT
+* LuatOS 18群: 1061642968 (已满), 面向soc/mcu产品线, LuaTools, 合宙Web服务反馈
+* LuatOS 21群: 827963649 , 面向soc/mcu产品线, LuaTools, 合宙Web服务反馈
+
+## Air产品线, 4G Cat1/Cat4
 * LuatOS 20群: 649926645  , 面向LuatIDE, 2G/4G 产品线
 * LuatOS 17群: 1027923658 , 面向iRTU, 透传固件
 * LuatOS 04群: 877164555  , 主要面向 2G/4G 产品线, 例如Air724/Air722/Air202/Air800/Air600
+
+## GNSS产品线, 定位产品
 * LuatOS GNSS卫星定位:  182970020 , 面向定位产品线, Air5xx系列
+
+请按需加群, 管理员都一样, 都会积极解答问题, 不必重复加
 
 ## 微信支持
 
