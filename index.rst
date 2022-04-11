@@ -66,6 +66,7 @@
    api/index
    api/sys_pub
    原生API手册 <https://wiki.luatos.com/_static/lua53doc/index.html>
+   api/libs/index
 
 .. toctree::
    :hidden:
