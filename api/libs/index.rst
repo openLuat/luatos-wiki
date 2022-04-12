@@ -10,6 +10,7 @@
    aht10
    bh1750
    ds3231
+   lm75
    mpu6xxx
    tcs3472
    tm1637
