@@ -1,11 +1,11 @@
-# mpu6xxx - mpu6xxx icm20xx驱动
+# mpu6xxx - mpu6xxx 六轴/九轴传感器 支持 mpu6500,mpu6050,mpu9250,icm2068g,icm20608d
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../script/libs/mpu6xxx/mpu6xxx.lua)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
 **示例**
 
 ```lua
---支持mpu6500，mpu6050，mpu9250，icm2068g，icm20608d，自动判断器件id，只需要配置i2c id就可以
+--支持mpu6500,mpu6050,mpu9250,icm2068g,icm20608d,自动判断器件id,只需要配置i2c id就可以
 --注意:因使用了sys.wait()所有api需要在协程中使用
 -- 用法实例
 local mpu6xxx = require "mpu6xxx"

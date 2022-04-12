@@ -9,6 +9,7 @@
    adxl34x
    aht10
    bh1750
+   bmx
    ds3231
    lm75
    mpu6xxx
