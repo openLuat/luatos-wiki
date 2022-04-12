@@ -13,6 +13,7 @@
    ds3231
    lm75
    mpu6xxx
+   qmc5883l
    tcs3472
    tm1637
    tsl2561
