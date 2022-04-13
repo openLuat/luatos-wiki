@@ -11,6 +11,7 @@
    bh1750
    bmx
    ds3231
+   l3g4200d
    lm75
    mpu6xxx
    qmc5883l
