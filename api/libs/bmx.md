@@ -1,4 +1,4 @@
-# bmx - bmx 气压传感器 目前支持bmp180 bmp280 bme280 会自动判断器件
+# bmx - bmx 气压传感器 目前支持bmp180 bmp280 bme280 bme680 会自动判断器件
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../script/libs/bmx/bmx.lua)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
@@ -25,7 +25,7 @@ sys.taskInit(function()
             log.info("bmx_data_data.high:"..(bmx_data.high).."m")
         end
         if bmx_data.hum then
-            log.info("bmx_data_data.temp:"..(bmx_data.hum).."%")
+            log.info("bmx_data_data.hum:"..(bmx_data.hum).."%")
         end
         sys.wait(1000)
     end
@@ -61,7 +61,7 @@ if bmx_data.high then
     log.info("bmx_data_data.high:"..(bmx_data.high).."m")
 end
 if bmx_data.hum then
-    log.info("bmx_data_data.temp:"..(bmx_data.hum).."%")
+    log.info("bmx_data_data.hum:"..(bmx_data.hum).."%")
 end
 
 ```
