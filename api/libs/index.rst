@@ -12,6 +12,7 @@
    bmx
    ds3231
    l3g4200d
+   lis2dh12
    lm75
    mpu6xxx
    qmc5883l
