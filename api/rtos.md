@@ -173,7 +173,7 @@ local luatos_version = rtos.version()
 
 ## rtos.standy(timeout)
 
-进入待机模式(部分设备可用,例如w60x)
+进入待机模式, 仅部分设备可用, 本API已废弃, 推荐使用pm库
 
 **参数**
 
