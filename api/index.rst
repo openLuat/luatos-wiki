@@ -33,7 +33,6 @@ LuatOS-SOC接口文档
    mlx90640
    multimedia
    nbiot
-   network_adapter
    otp
    pack
    pin
