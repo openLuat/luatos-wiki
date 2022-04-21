@@ -46,7 +46,7 @@ Task协程等待指定时长或者特定的topic
 
 |返回值类型|解释|
 |-|-|
-|boolean|如果是超时,返回true,否则返回false|
+|boolean|如果是超时,返回false,否则返回true|
 |any|对应topic的内容|
 
 **例子**
