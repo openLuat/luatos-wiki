@@ -179,3 +179,28 @@ log.info("nmea", "vtg", json.encode(libgnss.getVtg()))
 
 ---
 
+## libgnss.getZda()
+
+获取原始ZDA时间和日期信息
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|table|原始zda数据|
+
+**例子**
+
+```lua
+-- 解析nmea
+libgnss.parse(indata)
+log.info("nmea", "zda", json.encode(libgnss.getZda()))
+
+```
+
+---
+
