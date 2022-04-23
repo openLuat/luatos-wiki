@@ -54,6 +54,7 @@ LuatOS-SOC接口文档
    touchkey
    u8g2
    uart
+   usbapp
    w5500
    wdt
    wlan
