@@ -443,7 +443,7 @@ lcd.drawCircle(120,120,20,0x001F)
 
 ---
 
-## lcd.drawQrcode(x, y, str, version)
+## lcd.drawQrcode(x, y, str, size)
 
 缓冲区绘制QRCode
 
@@ -454,7 +454,7 @@ lcd.drawCircle(120,120,20,0x001F)
 |int|x坐标|
 |int|y坐标|
 |string|二维码的内容|
-|int|二维码版本号 可选1_40 对应21*21到177*177|
+|int|可选,显示大小,不可小于21,默认21|
 
 **返回值**
 
