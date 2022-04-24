@@ -386,7 +386,7 @@ local crc = crypto.crc32(data)
 ```lua
 -- 计算CRC8
 local crc = crypto.crc8(data)
-local crc = crypto.crc8(data, 0x31, 0xff, 0)
+local crc = crypto.crc8(data, 0x31, 0xff, false)
 
 ```
 
