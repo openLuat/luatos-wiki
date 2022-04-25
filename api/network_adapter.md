@@ -97,7 +97,7 @@
 
 ---
 
-## network.close(ctrl)
+## network.discon(ctrl)
 
 作为客户端断开连接
 
@@ -106,6 +106,27 @@
 |传入值类型|解释|
 |-|-|
 |user_data|network.create得到的ctrl|
+
+**返回值**
+
+无
+
+**例子**
+
+无
+
+---
+
+## network.close(ctrl)
+
+强制关闭socket
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|user_data|network.create得到的ctrl|
+|return|无|
 
 **返回值**
 
@@ -141,7 +162,7 @@
 
 ---
 
-## network.rx(ctrl, buff, start, flag)
+## network.rx(ctrl, buff, flag)
 
 接收对端发出的数据，注意数据已经缓存在底层，使用本函数只是提取出来，UDP模式下一次只会取出一个数据包
 
