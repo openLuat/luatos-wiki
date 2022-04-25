@@ -129,7 +129,7 @@ sfud.chipErase(flash)
 
 ---
 
-## sfud.chip_erase(flash)
+## sfud.erase(flash)
 
 擦除 Flash 全部数据
 
@@ -148,7 +148,7 @@ sfud.chipErase(flash)
 **例子**
 
 ```lua
-sfud.chip_erase(flash)
+sfud.erase(flash)
 
 ```
 
