@@ -280,7 +280,7 @@ eink.circle(0, 0, 10, 1, 1) -- Filled
 
 ---
 
-## eink.qrcode(x, y, str, version)
+## eink.qrcode(x, y, str, size)
 
 缓冲区绘制QRCode
 
@@ -291,7 +291,7 @@ eink.circle(0, 0, 10, 1, 1) -- Filled
 |int|x坐标|
 |int|y坐标|
 |string|二维码的内容|
-|int|二维码版本号 可选1_40 对应21*21到177*177|
+|int|可选,显示大小,不可小于21,默认21|
 
 **返回值**
 
