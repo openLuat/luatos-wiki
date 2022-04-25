@@ -2,7 +2,7 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_log.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
-## log.setLevel(level)
+## log.setLevel(level, show_taglevel, show_fileline)
 
 设置日志级别
 
@@ -11,6 +11,8 @@
 |传入值类型|解释|
 |-|-|
 |string|level 日志级别,可用字符串或数值, 字符串为(SILENT,DEBUG,INFO,WARN,ERROR,FATAL), 数值为(0,1,2,3,4,5)|
+|bool|是否显示日志级别和tag, 默认为true|
+|bool|是否显示所在行号及行号,需调试信息,默认为false|
 
 **返回值**
 
@@ -23,6 +25,10 @@
 ```lua
 -- 设置日志级别为INFO
 log.setLevel("INFO")
+-- 额外显示行号及文件名, 仅20220425之后的固件可配置
+log.setLevel("DEBUG", true, true)
+-- 只显示行号及文件名, 不限速日志级别和tag, 仅20220425之后的固件可配置
+log.setLevel("DEBUG", false, true)
 
 ```
 
