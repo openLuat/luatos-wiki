@@ -25,7 +25,7 @@
 
 ## network.debug(ctrl, onoff)
 
-作为客户端断开连接
+配置是否打开debug信息
 
 **参数**
 
@@ -43,6 +43,41 @@
 **例子**
 
 无
+
+---
+
+## network.config(ctrl, local_port, is_udp, is_tls, keep_idle, keep_interval, keep_cnt, server_cert, client_cert, client_key, client_password)
+
+配置network一些信息，
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|user_data|network.create得到的ctrl|
+|int|本地端口号，小端格式，如果不写，则自动分配一个，如果用户填了端口号则需要小于60000, 默认不写|
+|boolean|是否是UDP，默认false|
+|boolean|是否是加密传输，默认false|
+|int|tcp keep live模式下的idle时间，如果留空则表示不启用，如果是不支持标准posix接口的网卡（比如W5500），则为心跳间隔|
+|int|tcp keep live模式下的探测间隔时间|
+|int|tcp keep live模式下的探测次数|
+|string|TCP模式下的服务器ca证书数据，UDP模式下的PSK，不需要加密传输写nil，后续参数也全部nil|
+|string|TCP模式下的客户端ca证书数据，UDP模式下的PSK-ID，TCP模式下如果不需要验证客户端证书时，忽略，一般不需要验证客户端证书|
+|string|TCP模式下的客户端私钥加密数据|
+|string|TCP模式下的客户端私钥口令数据|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不用验证的那种
+
+```
 
 ---
 
@@ -66,7 +101,7 @@
 
 ---
 
-## network.connect(ctrl, ip, remote_port, is_udp, local_port, keep_idle, keep_interval, keep_cnt, server_cert, client_cert, client_key, client_password)
+## network.connect(ctrl, ip, remote_port)
 
 作为客户端连接服务器
 
@@ -77,15 +112,6 @@
 |user_data|network.create得到的ctrl|
 |string|or int ip或者域名，如果是IPV4，可以是大端格式的int值|
 |int|服务器端口号，小端格式|
-|int|本地端口号，小端格式，如果不写，则自动分配一个，如果用户填了端口号则需要小于60000, 默认不写|
-|boolean|是否是UDP，默认false|
-|int|tcp keep live模式下的idle时间，如果留空则表示不启用，如果是不支持标准posix接口的网卡（比如W5500），则为心跳间隔|
-|int|tcp keep live模式下的探测间隔时间|
-|int|tcp keep live模式下的探测次数|
-|string|TCP模式下的服务器ca证书数据，UDP模式下的PSK，不需要加密传输写nil，后续参数也全部nil|
-|string|TCP模式下的客户端ca证书数据，UDP模式下的PSK-ID，TCP模式下如果不需要验证客户端证书时，忽略，一般不需要验证客户端证书|
-|string|TCP模式下的客户端私钥加密数据|
-|string|TCP模式下的客户端私钥口令数据|
 
 **返回值**
 
