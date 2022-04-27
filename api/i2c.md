@@ -93,7 +93,7 @@ i2c.send(softI2C, 0x5C, string.char(0x0F, 0x2F))
 
 ---
 
-## i2c.send(id, addr, data)
+## i2c.send(id, addr, data,stop)
 
 i2c发送数据
 
@@ -104,6 +104,7 @@ i2c发送数据
 |int|设备id, 例如i2c1的id为1, i2c2的id为2|
 |int|I2C子设备的地址, 7位地址|
 |integer/string/table|待发送的数据,自适应参数类型|
+|integer|可选参数 是否发送停止位 1发送 0不发送 默认发送|
 
 **返回值**
 
@@ -152,7 +153,7 @@ local data = i2c.recv(1, 0x5C, 2)
 
 ---
 
-## i2c.writeReg(id, addr, reg, data)
+## i2c.writeReg(id, addr, reg, data,stop)
 
 i2c写寄存器数据
 
@@ -164,6 +165,7 @@ i2c写寄存器数据
 |int|I2C子设备的地址, 7位地址|
 |int|寄存器地址|
 |string|待发送的数据|
+|integer|可选参数 是否发送停止位 1发送 0不发送 默认发送|
 
 **返回值**
 
@@ -193,6 +195,7 @@ i2c读寄存器数据
 |int|I2C子设备的地址, 7位地址|
 |int|寄存器地址|
 |int|待接收的数据长度|
+|integer|可选参数 是否发送停止位 1发送 0不发送 默认发送|
 
 **返回值**
 
