@@ -2,7 +2,7 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_log.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
-## log.setLevel(level, show_taglevel, show_fileline)
+## log.setLevel(level, style)
 
 设置日志级别
 
@@ -11,8 +11,6 @@
 |传入值类型|解释|
 |-|-|
 |string|level 日志级别,可用字符串或数值, 字符串为(SILENT,DEBUG,INFO,WARN,ERROR,FATAL), 数值为(0,1,2,3,4,5)|
-|bool|是否显示tag, 默认为true|
-|bool|是否显示所在行号及行号,需调试信息,默认为false|
 
 **返回值**
 
@@ -25,10 +23,41 @@
 ```lua
 -- 设置日志级别为INFO
 log.setLevel("INFO")
--- 额外显示行号及文件名, 仅20220425之后的固件可配置
-log.setLevel("DEBUG", true, true)
--- 只显示行号及文件名, 不显示tag, 仅20220425之后的固件可配置
-log.setLevel("DEBUG", false, true)
+
+```
+
+---
+
+## log.style(val)
+
+设置日志风格
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|日志风格,默认为0, 不传就是获取当前值|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|当前的日志风格|
+
+**例子**
+
+```lua
+-- 以 log.info("ABC", "DEF", 123) 为例, 假设该代码位于main.lua的12行
+-- 默认日志0
+-- I/user.ABC DEF 123
+-- 调试风格1, 添加额外的调试信息
+-- I/main.lua:12 ABC DEF 123
+-- 调试风格2, 添加额外的调试信息, 位置有所区别
+-- I/user.ABC main.lua:12 DEF 123
+
+log.setLevel("DEBUG", 0) -- 默认风格0
+log.setLevel("DEBUG", 1) -- 调试风格1
+log.setLevel("DEBUG", 2) -- 调试风格2
 
 ```
 
