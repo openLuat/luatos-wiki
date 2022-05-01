@@ -1,5 +1,7 @@
 # 烧录教程
 
+> 视频教程参见此处：[【LuatOS】①烧录教程](https://www.bilibili.com/video/BV1Mq4y1e7Eb)
+
 ## 串口烧录
 
 准备工作：

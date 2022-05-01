@@ -1,5 +1,7 @@
 # 开发环境搭建
 
+> 视频教程参见此处：[【LuatOS】②开发环境搭建+hello world工程](https://www.bilibili.com/video/BV1ru411v7nC)
+
 既然是使用LuatOS进行开发，那一定有一个好用的编辑器环境吧？
 
 是的，有。这里推荐使用微软推出的Visual Studio Code（简称vscode）代码编辑器来编写代码

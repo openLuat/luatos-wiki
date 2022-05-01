@@ -7,6 +7,8 @@ LuatOS可以自行编译和修改，请按具体平台，参考左侧的编译�
 
 LuatOS源码仓库：https://gitee.com/openLuat/LuatOS
 
+视频教程：`【LuatOS】全系列固件编译教程【持续更新】 <https://www.bilibili.com/video/BV1D3411p7MK>`_
+
 
 .. toctree::
    :hidden:

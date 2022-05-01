@@ -10,6 +10,7 @@
     </script>
 </div>
 
+> 学完入门教程后，可以继续学习[进阶教程](https://www.bilibili.com/video/BV1WR4y1E7ud)
 
 ## 文字版教程
 

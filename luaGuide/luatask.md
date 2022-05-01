@@ -1,5 +1,7 @@
 # LuaTask框架
 
+> 视频教程参见此处：[【LuatOS】③LuaTask多任务框架](https://www.bilibili.com/video/BV1194y1o7q2)
+
 ## 框架简述
 
 LuaTask框架，利用协程，在Lua中实现了多任务功能。开发者可以用最简单的方式，新建多个任务，而不是像传统的开发方式一样，只能用定时器进行延时。
