@@ -42,6 +42,10 @@
 
 我们正适配更多的单片机和无线芯片模组, 欢迎您的加入^_^
 
+.. raw:: html
+   <script type='text/javascript' src='https://ykf-webchat.7moor.com/javascripts/7moorInit.js?accessId=4a733990-aec0-11e9-a1f3-4fbe5cb02a0b&autoShow=true&language=ZHCN' async='async'></script>
+
+
 .. toctree::
    :hidden:
    :caption: LuatOS 介绍
