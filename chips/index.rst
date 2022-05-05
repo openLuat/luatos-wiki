@@ -18,3 +18,4 @@
     win32
     supported
     question
+    AirWatch
