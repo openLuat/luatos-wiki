@@ -164,16 +164,16 @@ local decoder = codec.create(codec.MP3)--创建一个mp3的decoder
 
 ---
 
-## codec.get_audio_info(decoder, data)
+## codec.info(decoder, file_path)
 
-decoder从文件数据中解析出音频信息
+decoder从文件中解析出音频信息
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
 |coder|解码用的decoder|
-|string|文件数据，必须是开头的数据|
+|string|文件路径|
 
 **返回值**
 
@@ -185,7 +185,7 @@ decoder从文件数据中解析出音频信息
 
 ---
 
-## codec.get_audio_data(decoder, in_buff, out_buff)
+## codec.data(decoder, out_buff)
 
 decoder从文件数据中解析出音频数据
 
@@ -194,7 +194,6 @@ decoder从文件数据中解析出音频数据
 |传入值类型|解释|
 |-|-|
 |coder|解码用的decoder|
-|zbuff|存放输入数据的zbuff|
 |zbuff|存放输出数据的zbuff，空间必须不少于16KB|
 
 **返回值**
