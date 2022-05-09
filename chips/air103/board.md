@@ -1,6 +1,7 @@
 # 开发板
 
-todo
+
+[固件下载](https://gitee.com/openLuat/LuatOS/releases)
 
 ## 开发板PinOut
 

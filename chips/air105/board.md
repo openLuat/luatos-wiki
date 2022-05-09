@@ -12,6 +12,8 @@
 
 [串口烧录教程](https://wiki.luatos.com/boardGuide/flash.html)
 
+[固件下载](https://gitee.com/openLuat/LuatOS/releases)
+
 **注意：烧录前请设置波特率为1500000** , 并勾选 "通用串口打印" , 否则刷机后日志会乱码.
 
 ## 开发板PinOut
