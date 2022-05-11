@@ -158,7 +158,7 @@ local font = lvgl.font_get("simsun_48")
 
 ---
 
-## lvgl.font_load(path)
+## lvgl.font_load(path/spi_device)
 
 从文件系统加载字体
 
@@ -166,7 +166,13 @@ local font = lvgl.font_get("simsun_48")
 
 |传入值类型|解释|
 |-|-|
-|string|字体路径|
+|string/userdata|字体路径/spi_device (spi_device为使用外置高通矢量字库芯片)|
+|number|size 可选(使用高通矢量字库)|
+|number|bpp 可选(使用高通矢量字库)|
+|number|thickness 可选(使用高通矢量字库)|
+|number|cache_size 可选(使用高通矢量字库)|
+|number|sty_zh 可选(使用高通矢量字库)|
+|number|sty_en 可选(使用高通矢量字库)|
 
 **返回值**
 
@@ -178,6 +184,7 @@ local font = lvgl.font_get("simsun_48")
 
 ```lua
 local font = lvgl.font_load("/font_simsun_32.bin")
+--local font = lvgl.font_load(spi_device,16)(高通矢量字库)
 
 ```
 
