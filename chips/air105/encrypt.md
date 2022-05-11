@@ -6,6 +6,8 @@
 
 **注意：要是用2.1.53以及之后的Luatools和20220511之后的Air105固件**
 
+**预览此篇之前请确保会使用Luatools进行刷机，如不会请参考[烧录教程](https://wiki.luatos.com/boardGuide/flash.html)**
+
 打开我们的程序下载界面，也就是Luatools-项目管理测试：
 
 ![1](encrypt1.png)
