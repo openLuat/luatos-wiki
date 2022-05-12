@@ -114,7 +114,7 @@ local str = buff:read(3)
 
 ## buff:clear(num)
 
-zbuff清空数据，类似于memset
+zbuff清空数据
 
 **参数**
 
@@ -631,6 +631,35 @@ buff:del(1,4)	--从位置1开始删除4个字节数据
 
 ```lua
 local s = buff:query(0,5)--读取开头的五个字节数据
+
+```
+
+---
+
+## buff:set(num, start, len)
+
+zbuff的类似于memset操作
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|可选，开始位置，默认为0,|
+|int|可选，默认为0。要设置为的值|
+|int|可选，长度，默认为全部空间，如果超出范围了，会自动截断|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 全部初始化为0
+buff:set() --等同于 memset(buff, 0, sizeof(buff))
+buff:set(8) --等同于 memset(buff, 0, sizeof(buff) - 8)
+buff:set(0, 0x55) --等同于 memset(buff, 0x55, sizeof(buff))
+buff:set(4, 0xaa, 12) --等用于 memset(&buff[4], 0xaa, 12)
 
 ```
 
