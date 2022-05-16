@@ -265,7 +265,7 @@ mcu.setXTAL(true, true, 1248)	--高速时钟使用外部时钟，低速32K使用
 |传入值类型|解释|
 |-|-|
 |int|or string fota数据存储的起始位置，如果是int，则是由芯片平台具体判断，如果是string，则存储在文件系统中，如果为nil，则由底层决定存储位置|
-|userdata|param1，如果数据存储在spiflash时,spi device|
+|userdata|param1，如果数据存储在spiflash时,为spi_device|
 
 **返回值**
 
@@ -277,7 +277,7 @@ mcu.setXTAL(true, true, 1248)	--高速时钟使用外部时钟，低速32K使用
 
 ```lua
 -- 初始化fota流程
-local result = mcu.fotaInit(0,spi.SPI_1,pin.PA7)	--由于105的flash从0x01000000开始，所以0就是外部spiflash
+local result = mcu.fotaInit(0,spi_device)	--由于105的flash从0x01000000开始，所以0就是外部spiflash
 
 ```
 
@@ -295,17 +295,11 @@ local result = mcu.fotaInit(0,spi.SPI_1,pin.PA7)	--由于105的flash从0x0100000
 
 **返回值**
 
-|返回值类型|解释|
-|-|-|
-|成功返回true,|失败返回false|
+无
 
 **例子**
 
-```lua
--- 初始化fota流程
-local result = mcu.fotaRun(buf)
-
-```
+无
 
 ---
 
@@ -321,16 +315,11 @@ local result = mcu.fotaRun(buf)
 
 **返回值**
 
-|返回值类型|解释|
-|-|-|
-|成功返回true,|失败返回false|
+无
 
 **例子**
 
-```lua
-local result = mcu.fotaWait()
-
-```
+无
 
 ---
 
