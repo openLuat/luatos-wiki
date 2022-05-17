@@ -140,3 +140,33 @@ gpio.setDefaultPull(1)
 
 ---
 
+## gpio.toggle(pin)
+
+变换GPIO脚输出电平,仅输出模式可用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|管脚的GPIO0AB4276E.png|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+-- 本API于 2022.05.17 添加
+-- 假设GPIO16上有LED, 每500ms切换一次开关
+gpio.setup(16, 0)
+sys.timerLoopStart(function()
+    gpio.toggle(16)
+end, 500)
+
+```
+
+---
+
