@@ -167,7 +167,7 @@ sys.taskInit(
 
 ## sensor.ws2812b(pin,data,T0H,T0L,T1H,T1L)
 
-设置ws2812b输出
+设置ws2812b输出(gpio驱动方式)
 
 **参数**
 
@@ -190,6 +190,58 @@ sys.taskInit(
 local buff = zbuff.create({8,8,24})
 buff:drawLine(1,2,5,6,0x00ffff)
 sensor.ws2812b(7,buff,300,700,700,700)
+
+```
+
+---
+
+## sensor.ws2812b_pwm(pin,data)
+
+设置ws2812b输出(pwm驱动方式)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|pwm端口号|
+|string/zbuff|待发送的数据（如果为zbuff数据，则会无视指针位置始终从0偏移开始）|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+local buff = zbuff.create({8,8,24})
+buff:setFrameBuffer(8,8,24,0x0000ff)
+sensor.ws2812b_pwm(7,buff)
+
+```
+
+---
+
+## sensor.ws2812b_spi(pin,data)
+
+设置ws2812b输出(spi驱动方式)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|spi端口号|
+|string/zbuff|待发送的数据（如果为zbuff数据，则会无视指针位置始终从0偏移开始）|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+local buff = zbuff.create({8,8,24})
+buff:setFrameBuffer(8,8,24,0x0000ff)
+sensor.ws2812b_spi(7,buff)
 
 ```
 
