@@ -265,6 +265,7 @@ mcu.setXTAL(true, true, 1248)	--高速时钟使用外部时钟，低速32K使用
 |传入值类型|解释|
 |-|-|
 |int|or string fota数据存储的起始位置，如果是int，则是由芯片平台具体判断，如果是string，则存储在文件系统中，如果为nil，则由底层决定存储位置|
+|int|数据存储的最大空间|
 |userdata|param1，如果数据存储在spiflash时,为spi_device|
 
 **返回值**
@@ -277,9 +278,29 @@ mcu.setXTAL(true, true, 1248)	--高速时钟使用外部时钟，低速32K使用
 
 ```lua
 -- 初始化fota流程
-local result = mcu.fotaInit(0,spi_device)	--由于105的flash从0x01000000开始，所以0就是外部spiflash
+local result = mcu.fotaInit(0, 0x00300000, spi_device)	--由于105的flash从0x01000000开始，所以0就是外部spiflash
 
 ```
+
+---
+
+## mcu.fotaWait()
+
+等待底层fota流程准备好，目前只有105能使用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|boolean|是否完整走完流程，true 表示正确走完流程了|
+
+**返回值**
+
+无
+
+**例子**
+
+无
 
 ---
 
@@ -303,7 +324,7 @@ local result = mcu.fotaInit(0,spi_device)	--由于105的flash从0x01000000开始
 
 ---
 
-## mcu.fotaWait()
+## mcu.fotaDone()
 
 等待底层fota流程完成，目前只有105能使用
 
@@ -323,7 +344,7 @@ local result = mcu.fotaInit(0,spi_device)	--由于105的flash从0x01000000开始
 
 ---
 
-## mcu.fotaDone(is_ok)
+## mcu.fotaEnd(is_ok)
 
 结束fota流程，目前只有105能使用
 
@@ -343,7 +364,7 @@ local result = mcu.fotaInit(0,spi_device)	--由于105的flash从0x01000000开始
 
 ```lua
 -- 结束fota流程
-local result = mcu.fotaDone(true)
+local result = mcu.fotaEnd(true)
 
 ```
 
