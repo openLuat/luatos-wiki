@@ -5,4 +5,5 @@
 
 .. toctree::
 
-    ws2812/ws2812
+    peripheral/index
+    lvgl/lvgl
