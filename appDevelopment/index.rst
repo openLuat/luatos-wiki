@@ -6,4 +6,4 @@
 .. toctree::
 
     peripheral/index
-    lvgl/lvgl
+    lvgl/index
