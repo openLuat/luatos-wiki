@@ -85,6 +85,8 @@
    :hidden:
    :caption: 应用开发
 
+   appDevelopment/index
+
 .. toctree::
    :hidden:
    :caption: 其他资料
