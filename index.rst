@@ -83,6 +83,10 @@
 
 .. toctree::
    :hidden:
+   :caption: 应用开发
+
+.. toctree::
+   :hidden:
    :caption: 其他资料
 
    archives
