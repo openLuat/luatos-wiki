@@ -32,7 +32,6 @@ LuatOS-SOC接口文档
    mcu
    mlx90640
    multimedia
-   nbiot
    network_adapter
    otp
    pack
