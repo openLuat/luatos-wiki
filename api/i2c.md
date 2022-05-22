@@ -305,3 +305,27 @@ end
 
 ---
 
+## i2c.transfer(id, addr, txBuff, rxBuff, rxLen)
+
+i2c通用传输，包括发送N字节，发送N字节+接收N字节，接收N字节三种功能，在发送转接收过程中发送reStart信号,解决类似mlx90614必须带restart信号，但是又不能用i2c.send来控制的，比如air105
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|设备id, 例如i2c1的id为1, i2c2的id为2|
+|int|I2C子设备的地址, 7位地址|
+|integer/string/zbuff|待发送的数据,自适应参数类型，如果为nil，则不发送数据|
+|zbuff|待接收数据的zbuff 如果不用zbuff，则接收数据将在return返回|
+|int|需要接收的数据长度，如果为0或nil，则不接收数据|
+
+**返回值**
+
+无
+
+**例子**
+
+无
+
+---
+
