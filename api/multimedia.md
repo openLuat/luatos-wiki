@@ -137,6 +137,32 @@ end)
 
 ---
 
+## audio.isEnd(id, path)
+
+检查当前文件是否已经播放结束
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|音频通道|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+audio.isEnd(0)
+
+
+```
+
+---
+
 ## codec.create(codec.MP3)
 
 创建编解码用的codec
