@@ -204,3 +204,70 @@ log.info("nmea", "zda", json.encode(libgnss.getZda()))
 
 ---
 
+## libgnss.air530z_setup(air530z_uart_id)
+
+设置gps串口id(For Air530Z)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|number|air530z_uart_id 串口id|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+libgnss.air530z_setup(2)
+
+```
+
+---
+
+## libgnss.air530z_saveconf()
+
+保存配置信息(For Air530Z)
+
+**参数**
+
+无
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+libgnss.air530z_saveconf()
+
+```
+
+---
+
+## libgnss.air530z_setbandrate(bandrate)
+
+设置通讯波特率(For Air530Z)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|number|table 波特率|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+libgnss.air530z_setbandrate(115200)
+
+```
+
+---
+
