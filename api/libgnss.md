@@ -212,7 +212,7 @@ log.info("nmea", "zda", json.encode(libgnss.getZda()))
 
 |传入值类型|解释|
 |-|-|
-|number|air530z_uart_id 串口id|
+|number|air530z_uart_id 串口id 默认串口2|
 
 **返回值**
 
