@@ -2,13 +2,13 @@
 
 还在困扰如何搭建编译环境？芯片越来越多，环境也越来越多？电脑好卡呀~ 好，云编译来为你排忧解难~
 
-这里我们以Air101为展示，后续支持的芯片会越来越多~
+这里我们以Air101为展示，已支持Air101/Air103/Air105/Esp32c3,后续支持的芯片会越来越多~
 
 登录[https://luatos.com](https://luatos.com)
 
 ![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20211011092251619_image.png)
 
-点击登录，使用合宙erp账号登录即可
+点击登录，使用合宙[erp账号](http://erp.openluat.com)登录即可. 若没有账号, 可免费注册. 本服务免费使用.
 
 ![QQ截图20211011092353.png](https://cdn.openluat-luatcommunity.openluat.com/images/20211011092608787_QQ截图20211011092353.png)
 
