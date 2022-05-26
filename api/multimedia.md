@@ -129,7 +129,7 @@ audio.pause(0, false) --恢复通道0
 **例子**
 
 ```lua
-camera.on(0, function(id, str)
+audio.on(0, function(id, str)
     print(id, str)
 end)
 
