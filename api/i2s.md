@@ -67,7 +67,7 @@ end
 
 ## i2s.close(id, data, len)
 
-关闭i2s功能
+关闭i2s
 
 **参数**
 
