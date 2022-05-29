@@ -141,6 +141,8 @@ end)
 
 可以看到代码很简单，首先初始化lcd 之后初始化并挂载sd，然后就是读视频向lcd进行draw
 
+[demo连接](https://gitee.com/openLuat/LuatOS/tree/master/demo/video_play/Air105)
+
 ## 效果展示
 
 [视频效果展示](https://www.bilibili.com/video/BV1Yg411R7Tc/)
