@@ -22,50 +22,8 @@
 
 首先我们了解一下基础的ffmpeg参数
 
-## **ffmpeg参数**
+## 视频文件制作
 
-**通用选项**
-
--L license
--h 帮助
--fromats 显示可用的格式，编解码的，协议的...
--f fmt 强迫采用格式fmt
--I filename 输入文件
--y 覆盖输出文件
--t duration 设置纪录时间 hh:mm:ss[.xxx]格式的记录时间也支持
--ss position 搜索到指定的时间 [-]hh:mm:ss[.xxx]的格式也支持
--title string 设置标题
--author string 设置作者
--copyright string 设置版权
--comment string 设置评论
--target type 设置目标文件类型(vcd,svcd,dvd) 所有的格式选项（比特率，编解码以及缓冲区大小）自动设置，只需要输入如下的就可以了：ffmpeg -i myfile.avi -target vcd /tmp/vcd.mpg
--hq 激活高质量设置
--itsoffset offset 设置以秒为基准的时间偏移，该选项影响所有后面的输入文件。该偏移被加到输入文件的时戳，定义一个正偏移意味着相应的流被延迟了 offset秒。 [-]hh:mm:ss[.xxx]的格式也支持
-
-**视频选项**
-
--b bitrate 设置比特率，缺省200kb/s
--r fps 设置帧频 缺省25
--s size 设置帧大小 格式为WXH 缺省160X128.下面的简写也可以直接使用：
-Sqcif 128X96 qcif 176X144 cif 252X288 4cif 704X576
--aspect aspect 设置横纵比 4:3 16:9 或 1.3333 1.7777
--croptop size 设置顶部切除带大小 像素单位
--cropbottom size –cropleft size –cropright size
--padtop size 设置顶部补齐的大小 像素单位
--padbottom size –padleft size –padright size –padcolor color 设置补齐条颜色(hex,6个16进制的数，红:绿:兰排列，比如 000000代表黑色)
--vn 不做视频记录
--bt tolerance 设置视频码率容忍度kbit/s
--maxrate bitrate设置最大视频码率容忍度
--minrate bitreate 设置最小视频码率容忍度
--bufsize size 设置码率控制缓冲区大小
--vcodec codec 强制使用codec编解码方式。如果用copy表示原始编解码数据必须被拷贝。
--sameq 使用同样视频质量作为源（VBR）
--pass n 选择处理遍数（1或者2）。两遍编码非常有用。第一遍生成统计信息，第二遍生成精确的请求的码率
--passlogfile file 选择两遍的纪录文件名为file
-
-
-
-了解完ffmpeg参数我们可以开始制作了
 
 首先准备好一段要播放的视频，由于避免版权原因这里不放视频地址了，将之前的ffmpeg.exe也准备好
 
