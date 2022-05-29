@@ -7,3 +7,4 @@
 
     peripheral/index
     lvgl/index
+    video_play/index
