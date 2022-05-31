@@ -170,3 +170,31 @@ end, 500)
 
 ---
 
+## gpio.pulse(pin,level,len,delay)
+
+在同一个GPIO输出一组脉冲, 注意, len的单位是bit, 高位在前.
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|pin|
+|int/string|level |
+|int|len 长度 单位是bit, 高位在前.|
+|int|delay 延迟，单位ns|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+gpio.pulse(pin.PB06,1,0xA9,8)
+
+```
+
+---
+
