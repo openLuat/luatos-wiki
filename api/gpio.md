@@ -178,10 +178,10 @@ end, 500)
 
 |传入值类型|解释|
 |-|-|
-|int|pin|
-|int/string|level |
+|int|gpio号|
+|int/string|数值或者字符串. |
 |int|len 长度 单位是bit, 高位在前.|
-|int|delay 延迟，单位ns|
+|int|delay 延迟,当前无固定时间单位|
 
 **返回值**
 
@@ -192,7 +192,8 @@ end, 500)
 **例子**
 
 ```lua
-gpio.pulse(pin.PB06,1,0xA9,8)
+-- 通过PB06脚输出输出8个电平变化.
+gpio.pulse(pin.PB06,0xA9, 8, 0)
 
 ```
 
