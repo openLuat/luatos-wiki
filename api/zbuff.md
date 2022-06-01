@@ -636,7 +636,7 @@ local s = buff:query(0,5)--读取开头的五个字节数据
 
 ---
 
-## buff:set(num, start, len)
+## buff:set(start, num, len)
 
 zbuff的类似于memset操作
 
