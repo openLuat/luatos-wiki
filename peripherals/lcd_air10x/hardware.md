@@ -13,6 +13,6 @@
 
 
 ## demo链接 
-1. https://gitee.com/openLuat/LuatOS/blob/master/demo/lvgl/Air101/main.lua
-2. https://gitee.com/openLuat/LuatOS/blob/master/demo/lcd/Air101/main.lua
+
+点击`Next`前往下一页查看
 
