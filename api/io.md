@@ -117,11 +117,13 @@ io.writeFile("/bootime", "1")
 |userdata|zbuff实体|
 |int|写入的位置,默认是0|
 |int|写入的长度,默认是zbuff的len减去offset|
-|return|成功返回true,否则返回false|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+|int|返回实际读取到的长度，如果小于0也说明是读取失败了|
 
 **例子**
 

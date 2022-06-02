@@ -1542,11 +1542,11 @@ result = 0
 c = 1
 while true do
     result = result + c
-    c = c + 1
     if result > 100 then
-        result = result - i
+        result = result - c  
         break
     end
+    c = c + 1
 end
 
 print(result)

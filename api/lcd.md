@@ -788,3 +788,50 @@ lcd.autoFlush(false)
 
 ---
 
+## lcd.rgb565(r, g, b, swap)
+
+RGB565颜色生成
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|红色, 0x00 ~ 0xFF|
+|int|绿色, 0x00 ~ 0xFF|
+|int|蓝色, 0x00 ~ 0xFF|
+|bool|是否翻转, true 翻转, false 不翻转. 默认翻转|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|颜色值|
+
+**例子**
+
+```lua
+-- 本API支持多种模式, 参数数量分别是 1, 2, 3, 4
+-- 1. 单参数形式, 24bit RGB值, swap = true, 推荐
+local red =   lcd.rgb(0xFF0000)
+local green = lcd.rgb(0x00FF00)
+local blue =  lcd.rgb(0x0000FF)
+
+-- 2. 两参数形式, 24bit RGB值, 增加swap的设置
+local red =   lcd.rgb(0xFF0000, true)
+local green = lcd.rgb(0x00FF00, true)
+local blue =  lcd.rgb(0x0000FF, true)
+
+-- 3. 三参数形式, 红/绿/蓝, 各8bit 
+local red = lcd.rgb(0xFF, 0x00, 0x00)
+local green = lcd.rgb(0x00, 0xFF, 0x00)
+local blue = lcd.rgb(0x00, 0x00, 0xFF)
+
+-- 4. 四参数形式, 红/绿/蓝, 各8bit, 增加swap的设置
+local red = lcd.rgb(0xFF, 0x00, 0x00, true)
+local green = lcd.rgb(0x00, 0xFF, 0x00, true)
+local blue = lcd.rgb(0x00, 0x00, 0xFF, true)
+
+```
+
+---
+

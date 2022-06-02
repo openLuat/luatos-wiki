@@ -129,9 +129,62 @@ audio.pause(0, false) --恢复通道0
 **例子**
 
 ```lua
-camera.on(0, function(id, str)
+audio.on(0, function(id, str)
     print(id, str)
 end)
+
+```
+
+---
+
+## audio.play(id, path)
+
+播放或者停止播放一个文件，播放完成后，会回调一个audio.DONE消息，可以用pause来暂停或者恢复，其他API不可用。考虑到读SD卡速度比较慢而拖累luavm进程的速度，所以尽量使用本API
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|音频通道|
+|string|文件名，如果为空，则表示停止播放|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+audio.play(0, "xxxxxx")		--开始播放某个文件
+audio.play(0)				--停止播放某个文件
+
+```
+
+---
+
+## audio.isEnd(id, path)
+
+检查当前文件是否已经播放结束
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|音频通道|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+audio.isEnd(0)
+
 
 ```
 
