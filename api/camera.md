@@ -161,3 +161,31 @@ camera.capture(0)
 
 ---
 
+## camera.video(id, w, h, out_path)
+
+camera输出视频流
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|camera id,例如0|
+|int|宽度|
+|int|高度|
+|int|输出路径，目前只能用虚拟串口0|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+camera.video(0, 320, 240, uart.VUART_0)
+
+```
+
+---
+
