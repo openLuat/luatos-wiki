@@ -158,7 +158,6 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 |传入值类型|解释|
 |-|-|
 |user_data|network.create得到的ctrl|
-|return|无|
 
 **返回值**
 
