@@ -14,6 +14,7 @@
     air640w/index
     air901/index
     esp32c3/index
+    air32f103/index
     W806
     win32
     supported
