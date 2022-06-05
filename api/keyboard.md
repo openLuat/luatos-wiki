@@ -2,18 +2,6 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_keyboard.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
-**示例**
-
-```lua
-sys.subscribe("KB_INC", function(port, data, state)
-    -- port 当前固定为0, 可以无视
-    -- data, 需要配合init的map进行解析
-    -- state, 1 为按下, 0 为 释放
-    log.info("keyboard", port, data, state)
-end)
-
-```
-
 ## keyboard.init(port, conf, map, debounce)
 
 初始化键盘矩阵
