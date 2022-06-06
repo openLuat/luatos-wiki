@@ -554,6 +554,7 @@ local len = buff:copy(nil, "123") -- 从buff当前指针位置开始写入数据
 local len = buff:copy(0, "123") -- 从位置0写入数据, 返回写入的数据长度
 local len = buff:copy(2, 0x1a,0x30,0x31,0x32,0x00,0x01)  -- 从位置2开始，按数值写入多个字节数据
 local len = buff:copy(9, buff2)  -- 从位置9开始，合并入buff2里内容
+local len = buff:copy(5, buff2, 10, 1024)  -- 类似于memcpy(&buff[5], &buff2[10], 1024)
 
 ```
 
