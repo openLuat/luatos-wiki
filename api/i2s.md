@@ -2,6 +2,7 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_i2s.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+
 ## i2s.setup(id, mode, sample, bitw, channel, format, mclk)
 
 初始化i2s

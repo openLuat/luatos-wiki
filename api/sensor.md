@@ -2,6 +2,7 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_sensor.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+
 ## sensor.ds18b20(pin)
 
 获取DS18B20的温度数据

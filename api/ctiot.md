@@ -2,6 +2,17 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_ctiot.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+> 本库有专属demo，[点此链接查看ctiot的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/ctiot)
+
+**示例**
+
+```lua
+sys.subscribe("CTIOT_RX", function(data)
+    log.info("CTIOT_RX", data:toHex())
+end)
+
+```
+
 ## ctiot.init()
 
 初始化ctiot，在复位开机后使用一次

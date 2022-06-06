@@ -2,6 +2,8 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_i2c.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+> 本库有专属demo，[点此链接查看i2c的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/i2c)
+
 ## i2c.exist(id)
 
 i2c编号是否存在
