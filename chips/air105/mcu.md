@@ -4,7 +4,7 @@
 
 ### 1.1产品概述
 
-合宙Air105是一款QFN88 封装，10mm x 10mm 大小的MCU, 不仅提供UART/GPIO/I2C/ADC/SPI等基础外设，更提供DAC/USB/DCMI/HSPI/LCDI/KCU等高级外设接口，内置充电功能，支持5V/3.3V供电，同时自带5v转3.3V的LDO，4M字节Flash，640K字节RAM。
+合宙Air105是一款QFN88 封装，10mm x 10mm 大小的MCU, 不仅提供UART/GPIO/I2C/ADC/SPI等基础外设，更提供DAC/USB/DCMI/HSPI/LCDI/KCU等高级外设接口，内置充电功能，支持5V/3.3V供电，同时自带5v转3.3V的LDO，4M字节Flash，640K字节RAM。内部flash起始地址0x01001000
 
 ### 1.2 电气性能
 
