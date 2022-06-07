@@ -202,7 +202,7 @@ camera.video(0, 320, 240, uart.VUART_0)
 |int|camera id,例如0|
 |int|宽度|
 |int|高度|
-|zbuff|用于存放数据的缓存区，大小必须不小于w*h*2 byte|
+|zbuff|用于存放数据的缓存区，大小必须不小于w X h X 2 byte|
 
 **返回值**
 
