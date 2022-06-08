@@ -192,6 +192,32 @@ audio.isEnd(0)
 
 ---
 
+## audio.config(id, paPin, onLevel)
+
+配置一个音频通道的特性，比如实现自动控制PA开关。注意这个不是必须的，一般在调用play的时候才需要自动控制，其他情况比如你手动控制播放时，就可以自己控制PA开关
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|音频通道|
+|int|PA控制IO|
+|int|PA打开时的电平|
+|return|无|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+audio.config(0, pin.PC0, 1)	--PA控制脚是PC0，高电平打开
+
+```
+
+---
+
 ## codec.create(codec.MP3)
 
 创建编解码用的codec
