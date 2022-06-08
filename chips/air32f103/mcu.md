@@ -6,7 +6,7 @@ Air32F103为系列芯片，首发型号为Air32F103CBT6，其外设和硬件设�
 
 ## 环境搭建教程
 
-
+[Air32F103使用手册](https://wiki.luatos.com/chips/air32f103/Air32f103.html)
 
 ## 替换其他芯片说明
 
