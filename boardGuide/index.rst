@@ -5,6 +5,7 @@
 
 .. toctree::
 
+    roadmap
     vscode
     flash
     common/index

@@ -20,7 +20,7 @@
 
 **本站汇聚LuatOS-SoC的所有资料**
 
-- `快速入门 <boardGuide/index.html>`_
+- `快速入门 <boardGuide/roadmap.html>`_
 - `芯片资料 <chips/index.html>`_
 - `选型表   <chips/chips.html>`_
 - `LuatOS特有库的API手册  <api/index.html>`_
