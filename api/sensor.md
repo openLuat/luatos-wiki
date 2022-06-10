@@ -250,7 +250,7 @@ sensor.ws2812b_spi(7,buff)
 
 ## sensor.dht1x(pin)
 
-获取DHT1x的温湿度数据
+获取DHT11/DHT12的温湿度数据
 
 **参数**
 
