@@ -248,3 +248,35 @@ sensor.ws2812b_spi(7,buff)
 
 ---
 
+## sensor.dht1x(pin)
+
+获取DHT1x的温湿度数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|gpio端口号|
+|boolean|是否校验crc值,默认为true. 不校验crc值能提高读取成功的概率,但可能会读取到错误的值|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|湿度数据,单位0.01%，读取失败时返回错误值|
+|int|温度数据,单位0.01摄氏度，读取失败时返回错误值|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+while 1 do
+    sys.wait(1000)
+    local h,t,r = sensor.dht1x(17, true) -- GPIO17且校验CRC值
+    log.info("dht11", h/100,t/100,r)--90.1 23.22
+end
+
+```
+
+---
+
