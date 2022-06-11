@@ -139,3 +139,114 @@ end
 
 ---
 
+## io.mkdir(path)
+
+创建文件夹
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|需要建立的目录路径|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功与否|
+|int|底层返回值|
+
+**例子**
+
+```lua
+local ret, errio = io.mkdir("/data/")
+log.info("fs", "mkdir", ret, errio)
+
+```
+
+---
+
+## io.rmdir(path)
+
+删除文件夹
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|需要移除的目录路径|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功与否|
+|int|底层返回值|
+
+**例子**
+
+```lua
+local ret, errio = io.rmdir("/data/")
+log.info("fs", "rmdir", ret, errio)
+
+```
+
+---
+
+## io.lsdir(path, len, offset)
+
+列出目录下的文件
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|需要枚举的目录路径|
+|int|最大长度, 默认10, 最高50|
+|int|偏移量, 默认0, 当目录文件很多时分页查询用|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功与否|
+|int|底层返回值|
+
+**例子**
+
+```lua
+local ret, data = io.lsdir("/data/", 10, 0)
+if ret then
+  log.info("fs", "lsdir", json.encode(data))
+else
+  log.info("fs", "lsdir", "fail", ret, data)
+end
+
+```
+
+---
+
+## io.lsmount()
+
+列出所有挂载点
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|table|挂载点列表|
+
+**例子**
+
+```lua
+local data = io.lsmount()
+log.info("fs", "lsmount", json.encode(data))
+
+```
+
+---
+
