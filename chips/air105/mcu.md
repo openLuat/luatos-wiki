@@ -53,7 +53,7 @@
 
 ### 1.3管脚定义
 
-![](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/105.png)
+![](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220612160407604_QQ截图20220612160340.png)
 
 下图为Air105管脚定义，支持最多54个GPIO，每个IO都与外设复用管脚。每个GPIO均可配置为输入、输出、 中断模式，当作为输出时，每个IO输出值都可单独配置。IO支持强推挽输出/开漏输出模式。
 

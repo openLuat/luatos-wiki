@@ -30,7 +30,6 @@
 - [②开发环境搭建+hello world工程](https://www.bilibili.com/video/BV1ru411v7nC)
 - [③LuaTask多任务框架](https://www.bilibili.com/video/BV1194y1o7q2)
 - [④ GPIO库的使用教程](https://www.bilibili.com/video/BV1hr4y1p7dt)
-- [④ GPIO库的使用教程](https://www.bilibili.com/video/BV1794y1Z7SM)
 - [(4.5) GPIO的输入模式与输入中断](https://www.bilibili.com/video/BV1794y1Z7SM)
 - [⑤ 串口uart库的使用](https://www.bilibili.com/video/BV1er4y1p75y)
 - [⑥ 二进制数据/c结构体的打包与解析](https://www.bilibili.com/video/BV1Sr4y1n7bP)
