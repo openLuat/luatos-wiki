@@ -5,6 +5,8 @@
 
 .. toctree::
 
+    log
+    sys
     adc
     crypto
     disp

@@ -1,6 +1,6 @@
-# ADC
+# adc
 
-本章介绍LuatOS的ADC功能，实现使用Air105开发板读取外部电压并在日志中打印
+本章介绍LuatOS的adc功能，实现使用Air105开发板读取外部电压并在日志中打印
 
 ## 简介
 
@@ -22,10 +22,9 @@ Air105                         可调电源
         GND      ----------- -
 ```
 
+> 注意：先打开可调电源，调到1.8V以下，再连接电源与开发板，防止直接连接开机电压过高烧毁芯片
+
 ![](./img/ADC/ADC2.jpg)
-
-> 注意：先打开可调电源，调到1.8V以下，防止直接连接开机电压过高烧毁芯片
-
 
 ## 软件部分
 
@@ -64,6 +63,7 @@ end)
 sys.run()
 
 ```
+
 >注意：`adc.read`有两个返回值，第一个值为原始值，第二个值为转换值，单位为mV
 
 成功下载后，观察日志输出如下，根据`adc.read`返回的第二个值可知测量电压为1712mV左右
@@ -77,16 +77,16 @@ I/main ROM Build: Jun 10 2022 09:17:38
 
 D/main loadlibs luavm 204792 14728 14984
 D/main loadlibs sys   362984 22600 23264
-I/user.MOD_TYPE	AIR105
-I/user.ADC	START
-I/user.ADC.read	3882	1712
-I/user.ADC	DONE
-I/user.ADC	START
-I/user.ADC.read	3889	1709
-I/user.ADC	DONE
-I/user.ADC	START
-I/user.ADC.read	3898	1713
-I/user.ADC	DONE
+I/user.MOD_TYPE AIR105
+I/user.ADC START
+I/user.ADC.read 3882 1712
+I/user.ADC DONE
+I/user.ADC START
+I/user.ADC.read 3889 1709
+I/user.ADC DONE
+I/user.ADC START
+I/user.ADC.read 3898 1713
+I/user.ADC DONE
 ...
 ...
 
@@ -97,48 +97,49 @@ I/user.ADC	DONE
 ![](./img/ADC/ADC3.jpg)
 
 ```
-I/user.ADC.read	2667	1172
-I/user.ADC	DONE
-I/user.ADC	START
-I/user.ADC.read	2672	1174
-I/user.ADC	DONE
-I/user.ADC	START
-I/user.ADC.read	2678	1177
-I/user.ADC	DONE
-I/user.ADC	START
-I/user.ADC.read	2661	1169
-I/user.ADC	DONE
-I/user.ADC	START
-I/user.ADC.read	2670	1173
-I/user.ADC	DONE
-I/user.ADC	START
-I/user.ADC.read	2675	1175
-I/user.ADC	DONE
-I/user.ADC	START
-I/user.ADC.read	2673	1174
-I/user.ADC	DONE
+I/user.ADC.read 2667 1172
+I/user.ADC DONE
+I/user.ADC START
+I/user.ADC.read 2672 1174
+I/user.ADC DONE
+I/user.ADC START
+I/user.ADC.read 2678 1177
+I/user.ADC DONE
+I/user.ADC START
+I/user.ADC.read 2661 1169
+I/user.ADC DONE
+I/user.ADC START
+I/user.ADC.read 2670 1173
+I/user.ADC DONE
+I/user.ADC START
+I/user.ADC.read 2675 1175
+I/user.ADC DONE
+I/user.ADC START
+I/user.ADC.read 2673 1174
+I/user.ADC DONE
 
 ```
+
 ![](./img/ADC/ADC4.jpg)
 
 ```
-I/user.ADC	START
-I/user.ADC.read	1361	598
-I/user.ADC	DONE
-I/user.ADC	START
-I/user.ADC.read	1345	591
-I/user.ADC	DONE
-I/user.ADC	START
-I/user.ADC.read	1362	598
-I/user.ADC	DONE
-I/user.ADC	START
-I/user.ADC.read	1354	595
-I/user.ADC	DONE
-I/user.ADC	START
-I/user.ADC.read	1350	593
-I/user.ADC	DONE
-I/user.ADC	START
-I/user.ADC.read	1348	592
-I/user.ADC	DONE
+I/user.ADC START
+I/user.ADC.read 1361 598
+I/user.ADC DONE
+I/user.ADC START
+I/user.ADC.read 1345 591
+I/user.ADC DONE
+I/user.ADC START
+I/user.ADC.read 1362 598
+I/user.ADC DONE
+I/user.ADC START
+I/user.ADC.read 1354 595
+I/user.ADC DONE
+I/user.ADC START
+I/user.ADC.read 1350 593
+I/user.ADC DONE
+I/user.ADC START
+I/user.ADC.read 1348 592
+I/user.ADC DONE
 
 ```
