@@ -9,6 +9,7 @@
     sys
     adc
     crypto
+    fdb
     disp
     i2c
     lcd
