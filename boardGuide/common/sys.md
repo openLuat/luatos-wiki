@@ -14,7 +14,7 @@ sys库是LuatOS进行系统调度的内置库，通过sys库可以创建LuatOS�
 
 接口文档可参考：[SYS库](https://wiki.luatos.com/api/sys.html)
 
-初始化一个LuatOS任务并启动
+### 初始化一个LuatOS任务并启动
 
 代码如下
 
@@ -43,7 +43,7 @@ sys.run()
 I/user.SYS test running...
 ```
 
-在任务中创建循环并使用延时函数
+### 在任务中创建循环并使用延时函数
 
 代码如下
 
@@ -81,7 +81,7 @@ I/user.SYS test running...
 ...
 ```
 
-启动一个单次定时器或循环定时器
+### 启动一个单次定时器或循环定时器
 
 代码如下
 
@@ -127,7 +127,7 @@ I/user.TEST2-ARG TEST2
 ...
 ```
 
-停止一个定时器
+### 停止一个定时器
 
 代码如下
 
@@ -174,7 +174,7 @@ I/user.SYS 停止循环定时器
 
 ```
 
-发送和订阅用户消息
+### 发送和订阅用户消息
 
 代码如下
 
@@ -211,7 +211,7 @@ I/user.SYS receive data : DATA5
 ...
 ```
 
-在任务中等待一个消息
+### 在任务中等待一个消息
 
 ```lua
 PROJECT = "SYS"

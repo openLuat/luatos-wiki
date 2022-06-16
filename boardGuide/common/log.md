@@ -14,6 +14,8 @@ log库是LuatOS进行日志输出的内置库，通过log库可以输出不同�
 
 接口文档可参考：[log库](https://wiki.luatos.com/api/log.html)
 
+### 日志输出
+
 日志等级排序从低到高为 debug < info < warn < error
 
 LuatOS默认日志等级是debug，可以输出debug及以上等级的日志
@@ -47,7 +49,7 @@ W/user.LOG warn message
 E/user.LOG error message
 ```
 
-可以修改日志输出等级
+### 修改日志输出等级
 
 + SILENT  静默所有日志
 + DEBUG   输出debug级别以上的日志
@@ -88,7 +90,7 @@ W/user.LOG warn message
 E/user.LOG error message
 ```
 
-修改日志风格
+### 修改日志风格
 
 + 0 默认风格，包含日志标志和日志内容
 + 1 调试风格1，包含日志打印处行号
