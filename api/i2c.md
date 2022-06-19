@@ -341,3 +341,35 @@ local result, rxdata = i2c.transfer(0, 0x11, 0x00, nil, 1) --发送0x00，然后
 
 ---
 
+## i2c.xfer(id, addr, txBuff, rxBuff, rxLen, transfer_done_topic, timeout)
+
+i2c非阻塞通用传输，类似transfer，但是不会等到I2C传输完成才返回，调用本函数会立刻返回，I2C传输完成后，通过消息回调
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|设备id, 例如i2c1的id为1, i2c2的id为2|
+|int|I2C子设备的地址, 7位地址|
+|zbuff|待发送的数据，由于用的非阻塞模型，为保证动态数据的有效性，只能使用zbuff，发送的数据从zbuff.addr开始，长度为zbuff.used|
+|zbuff|待接收数据的zbuff，如果为nil，则忽略后面参数， 不接收数据。接收的数据会放在zbuff.addr开始的位置，会覆盖掉之前的数据，注意zhuff的预留空间要足够|
+|int|需要接收的数据长度，如果为0或nil，则不接收数据|
+|string|传输完成后回调的消息|
+|int|超时时间，如果填nil，则为100ms|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|true/false 本次传输是否正确启动，true，启动，false，有错误无法启动。传输完成会发布消息transfer_done_topic和boolean型结果|
+
+**例子**
+
+```lua
+local result = i2c.xfer(0, 0x11, txbuff, rxbuff, 1, "I2CDONE") if result then result, i2c_id, succ, error_code = sys.waitUntil("I2CDONE") end if not result or not succ then log.info("i2c fail, error code", error_code) else log.info("i2c ok") end
+
+
+```
+
+---
+
