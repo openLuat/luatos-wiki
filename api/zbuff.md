@@ -667,3 +667,32 @@ buff:set(4, 0xaa, 12) --等用于 memset(&buff[4], 0xaa, 12)
 
 ---
 
+## buff:isEqual(start, buff2, start2, len)
+
+zbuff的类似于memcmp操作，类似于memcmp(&buff[start], &buff2[start2], len)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|可选，开始位置，默认为0,|
+|zbuff|比较的对象|
+|int|可选，比较的对象的开始位置，默认为0|
+|int|比较长度|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|true相等，false不相等|
+|int|相等返回0，不相等返回第一个不相等位置的序号|
+
+**例子**
+
+```lua
+local result, offset = buff:isEqual(1, buff2, 2, 10) --等同于memcmp(&buff[1], &buff2[2], 10)
+
+```
+
+---
+
