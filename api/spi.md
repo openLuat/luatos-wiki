@@ -101,7 +101,7 @@ spi.close(0)
 
 ---
 
-## spi.transfer(id, send_data[, len])
+## spi.transfer(id, send_data, send_len, recv_len)
 
 传输SPI数据
 
