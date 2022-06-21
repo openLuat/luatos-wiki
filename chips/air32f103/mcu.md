@@ -12,6 +12,10 @@ Air32F103为系列芯片，首发型号为Air32F103CBT6，其外设和硬件设�
 
 使用Air32F103替换其他F103芯片说明[从SXX32F103移植到AIR32F103.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220605170303059_从SXX32F103移植到AIR32F103.pdf)
 
+## 注意事项
+
+由于开发板默认的daplink封堵了调试接口，所以第一次使用swd下载时，请先按住被调试板子的复位按键，然后点击keil中的下载按钮，点完以后再释放复位按键即可。下载完成后复位芯片再次下载就不用这样操作了。或者直接用ISP工具擦除芯片。
+
 ## 模块购买
 
 * [手机访问mall.m.openluat.com](https://mall.m.openluat.com)
