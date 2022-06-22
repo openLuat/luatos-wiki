@@ -16,6 +16,20 @@ Air32F103为系列芯片，首发型号为Air32F103CBT6，其外设和硬件设�
 
 由于开发板默认的daplink封堵了调试接口，所以第一次使用swd下载时，请先按住被调试板子的复位按键，然后点击keil中的下载按钮，点完以后再释放复位按键即可。下载完成后复位芯片再次下载就不用这样操作了。或者直接用ISP工具擦除芯片。
 
+下载遇到如下报错
+
+![image-20220622112120827](D:\LuatOS-soc\luatos-wiki\chips\air32f103\img\image-20220622112120827.png)
+
+在debug选项卡也看不到设备
+
+![image-20220622112219562](D:\LuatOS-soc\luatos-wiki\chips\air32f103\img\image-20220622112219562.png)
+
+按住被调试板子的复位按键，然后再打开debug选项卡就可以正常看到设备了
+
+![image-20220622112332027](D:\LuatOS-soc\luatos-wiki\chips\air32f103\img\image-20220622112332027.png)
+
+这时候一样只要按住被调试板子的复位按键，然后点击keil中的下载按钮，点完以后再释放复位按键即可。
+
 ## 模块购买
 
 * [手机访问mall.m.openluat.com](https://mall.m.openluat.com)
