@@ -19,9 +19,9 @@
 
 ## AIR32F103外设使用差别
 
-### 系统功能
+## 系统功能
 
-#### BOOT1管脚使用差异
+### BOOT1管脚使用差异
 
 当BOOT1悬空时
 
@@ -29,7 +29,7 @@ SXX32F103：识别为高，但是抗干扰能力较弱，容易被外界环境�
 
 AIR32F103：为浮空状态，建议外部固定为高/低
 
-#### DEBUG状态下，使能SW，关断JTAG差异
+### DEBUG状态下，使能SW，关断JTAG差异
 
 DEBUG状态下，将SW使能，JTAG关断，如下图使用
 
@@ -70,7 +70,7 @@ void HAL_MspInit (void)
 /* USER CODE BEGIN 1 */
 ```
 
-#### 不支持某些SXX32F103专用烧录器下载
+### 不支持某些SXX32F103专用烧录器下载
 
 AIR32F103和SXX32F103 ARM M3 Core版本、SW、JTAG IDCODE不同
 
@@ -86,7 +86,7 @@ AIR32F103和SXX32F103 ARM M3 Core版本、SW、JTAG IDCODE不同
 
 使用不判断Core ID和SW IDCODE、JTAG IDCODE的烧录器
 
-#### 第三方某些烧录器下载失败问题
+### 第三方某些烧录器下载失败问题
 
 对于某些烧录器在RESET拉低的情况下进行SW/JTAG交互，是不支持的。因为AIR32F103当RESET拉低时，SW和JTAG是无法使用的（如：WizPro200ST8编程器）
 
@@ -95,7 +95,7 @@ AIR32F103和SXX32F103 ARM M3 Core版本、SW、JTAG IDCODE不同
 1. 配置烧录器，在烧录时将RESET拉高
 2. 悬空芯片NRST管脚，不和烧录器相连
 
-#### 非32bit对齐访问APB总线时，现象差异
+### 非32bit对齐访问APB总线时，现象差异
 
 访问APB总线时，必须32bit对齐，否则无法访问，如：
 
@@ -109,7 +109,7 @@ AIR32F103：无法获取正确值，获取的值均为0
 
 访问APB总线的寄存器时，按照32bit对齐，均可正常访问
 
-#### 中断控制器差异
+### 中断控制器差异
 
 SXX32F103：
 
@@ -131,9 +131,9 @@ cubemx或者其他freertos工程的`configPRIO_BITS`设置是4，需要改成3�
 /* USER CODE END 1 */
 ```
 
-### ADC
+## ADC
 
-#### ADC配置连续触发后，关闭ADON或者进行ADC软复位，ADC转化差异
+### ADC配置连续触发后，关闭ADON或者进行ADC软复位，ADC转化差异
 
 SXX32F103：关闭ADON或者进行ADC软复位，ADC转换停止
 
@@ -147,7 +147,7 @@ AIR32F103：
 1. 软件关ADON之前，将连续转换配置为单次转换，等待上一次采样周期个ADC_CLK
 2. 连续转化过程中，进行ADC软复位后，再次启动需要等待上一次采样周期个ADC_CLK
 
-#### ADC连续两次外部事件的软件触发时，现象差异 
+### ADC连续两次外部事件的软件触发时，现象差异 
 
 情况1：当使能ADC，并且在EOC置位前，进行外部事件的软件触发，如：
 
@@ -189,9 +189,9 @@ while(ADC_GETFlagStatus(ADC1, ADC_FLAG_EOC) == RESET);
 ADCGetConversionValue(ADC1);
 ```
 
-### TIM
+## TIM
 
-#### 通用定时器TIM2-TIM5的Channel3差异
+### 通用定时器TIM2-TIM5的Channel3差异
 
 SXX32F103：通用定时器TIM2-TIM5的Channel3支持输入、输出功能
 
@@ -201,7 +201,7 @@ AIR32F103：通用定时器TIM2-TIM5的Channel3只支持输入功能
 
 选择TIM2-TIM5的其他通道,或者选择其他TIM的通道进行输出使用
 
-#### TIM2重映射差异
+### TIM2重映射差异
 
 当TIM2_REMAP[1:0] = 01
 
@@ -219,7 +219,7 @@ AIR32F103: TIM2_CH1_ETH – PA15;TIM2_CH2 – PB3
 
 使用TIM2重映射，注意IO配置的修改
 
-#### TIM 使用外部信号刹车，连续两次刹车的时间间隔小于一个TIM 时钟周期时，现象差异
+### TIM 使用外部信号刹车，连续两次刹车的时间间隔小于一个TIM 时钟周期时，现象差异
 
 SXX32F103：刹车标志正常置位，正常清除
 
@@ -230,7 +230,7 @@ AIR32F103：刹车标志正常置位，BIF清除不掉、刹车中断清除不�
 1. 软件配置刹车信号为普通输入IO中断，不使用 BIF和刹车中断
 2. 在BIF置位或者刹车中断中，进行软复位
 
-#### CEN 被清除后，再次使能，现象差异
+### CEN 被清除后，再次使能，现象差异
 
 当CEN 被清除(单脉冲模式下，发生更新事件/ 软件写0)，再次使能后
 
@@ -270,9 +270,9 @@ AIR32F103：在更新中断重新使能CEN后，计数器会不从新配置的Ne
 
 在配置CNT时，需要确保CEN是处于使能状态，否则配置CNT无效
 
-### CAN
+## CAN
 
-#### CAN发送时间戳时，时间戳填充报文的位置差异
+### CAN发送时间戳时，时间戳填充报文的位置差异
 
 CAN配置时间触发通讯模式，在最后2个数据字节发送时间戳时
 
@@ -284,9 +284,9 @@ AIR32F103：时间戳[7:0]在数据包的7Byte，时间戳[15:8]在数据包的8
 
 其他CAN节点使用接受到的时间戳时，软件进行翻转
 
-### FLASH
+## FLASH
 
-#### FLASH写保护第一块后，第一次擦除其他Page，现象差异
+### FLASH写保护第一块后，第一次擦除其他Page，现象差异
 
 SXX32F103：写保护第一块后，擦除其他Page，可正常擦除
 
@@ -298,9 +298,9 @@ AIR32F103：写保护第一块后，第一次擦除其他Page，擦除失败，�
 
 ![flash代码](img/flash.png)
 
-### USART
+## USART
 
-#### USART 智能卡模式时钟输出差异
+### USART 智能卡模式时钟输出差异
 
 SXX32F103：USART 智能卡模式时钟输出，无需配置USART TE(发送使能)/RE(接收使能)
 
@@ -310,9 +310,9 @@ AIR32F103：USART 智能卡模式时钟输出，需要配置USART TE(发送使�
 
 在初始化USART时，将USART TE(发送使能)/RE(接收使能) 使能
 
-### SPI/IIS
+## SPI/IIS
 
-#### IIS 在主接收模式、并且处于PCM标准模式下时，关闭I2SE现象差异
+### IIS 在主接收模式、并且处于PCM标准模式下时，关闭I2SE现象差异
 
 SXX32F103：可通过配置I2SE，停止主机输出时钟
 
@@ -323,7 +323,7 @@ AIR32F103：不可通过配置I2SE，停止主机输出时钟
 1. 通过配置I2SMOD，停止主机输出时钟
 2. 通过软复位模块方式，停止主机输出时钟
 
-#### SPI使用DMA传输数据
+### SPI使用DMA传输数据
 
 SPI使用DMA传输数据时建议外设DAM使能和DMA通道使能同时ENABLE/DISABLE
 
@@ -341,7 +341,7 @@ DMA_Cmd(FLASH_SPI_TX_DMA_CHANNEL, DISABLE);
 DMA_Cmd(FLASH_SPI_RX_DMA_CHANNEL, DISABLE);
 ```
 
-#### SPI RXE置位，读取DR后，DR中的数据保留
+### SPI RXE置位，读取DR后，DR中的数据保留
 
 SXX32F103：当RXE置位，读操作将返回接收缓冲区里的数据，并且会将DR清0
 
