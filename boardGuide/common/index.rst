@@ -11,7 +11,7 @@
     crypto
     fdb
     disp
-    i2c
+    i2c/index
     lcd
     mcu
     pm
