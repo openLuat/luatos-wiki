@@ -7,7 +7,7 @@
 
     log
     sys
-    adc
+    adc/index
     crypto
     fdb
     disp
