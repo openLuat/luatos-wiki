@@ -2,6 +2,8 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/statem/luat_lib_statem.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+> 本库有专属demo，[点此链接查看statem的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/statem)
+
 ## statem.create(count, repeat)
 
 创建一个新的状态机.
@@ -12,11 +14,12 @@
 |-|-|
 |int|指令条数,默认32条|
 |int|重复执行的次数, 0 代表不重复, 正整数代表具体重复执行的次数. 暂不支持永续执行|
-|return|若成功,返回状态机指针,否则返回nil|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|some|若成功,返回状态机指针,否则返回nil|
 
 **例子**
 

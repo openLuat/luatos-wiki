@@ -101,6 +101,11 @@ revert: xxx  回滚某个操作
 @summary 模块的简短描述信息，如：数模转换
 @version 版本号，可选
 @data    日期，可选
+@demo    可选，指LuatOS/demo中的文件夹名称
+@video   可选，该库的视频教程网址
+@usage
+--这个库的简易使用例子，可选
+--可以写多行
 */
 ```
 
@@ -149,6 +154,8 @@ static int l_module_function(lua_State *L) {
 @version 版本号，可选
 @data    日期，可选
 @author  作者名，可选
+@demo    可选，指LuatOS/demo文件夹中的demo名称
+@video   可选，该库的视频教程网址
 @usage
 --这个库的使用例子
 --可以写多行

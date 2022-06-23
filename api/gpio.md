@@ -2,6 +2,9 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_gpio.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+> 本库有专属demo，[点此链接查看gpio的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/gpio)
+> 本库还有视频教程，[点此链接查看](https://www.bilibili.com/video/BV1hr4y1p7dt)
+
 ## gpio.setup(pin, mode, pull, irq)
 
 设置管脚功能
@@ -11,9 +14,9 @@
 |传入值类型|解释|
 |-|-|
 |int|pin 针脚编号,必须是数值|
-|any|mode 输入输出模式. 数字0/1代表输出模式,nil代表输入模式,function代表中断模式|
+|any|mode 输入输出模式：<br>数字0/1代表输出模式<br>nil代表输入模式<br>function代表中断模式|
 |int|pull 上拉下列模式, 可以是gpio.PULLUP 或 gpio.PULLDOWN, 需要根据实际硬件选用|
-|int|irq 默认gpio.BOTH。中断触发模式, 上升沿gpio.RISING, 下降沿gpio.FALLING, 上升和下降都要gpio.BOTH|
+|int|irq 默认gpio.BOTH。中断触发模式<br>上升沿gpio.RISING<br>下降沿gpio.FALLING<br>上升和下降都要gpio.BOTH|
 
 **返回值**
 
@@ -194,6 +197,36 @@ end, 500)
 ```lua
 -- 通过PB06脚输出输出8个电平变化.
 gpio.pulse(pin.PB06,0xA9, 8, 0)
+
+```
+
+---
+
+## gpio.debounce(pin, ms)
+
+防抖设置, 根据硬件ticks进行防抖
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|gpio号, 0~127, 与硬件相关|
+|int|防抖时长,单位毫秒, 最大 65555 ms, 设置为0则关闭|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+-- 本API与2022.06.22可用
+-- 开启防抖
+gpio.debounce(7, 100) -- 若芯片执行pin库, 可用pin.PA7代替数字7
+-- 关闭防抖
+gpio.debounce(7, 0)
 
 ```
 

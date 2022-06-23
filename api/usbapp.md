@@ -2,6 +2,8 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/usbapp/luat_lib_usbapp.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+> 本库有专属demo，[点此链接查看usbapp的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/usb_hid)
+
 ## usbapp.set_id(id, vid, pid)
 
 USB 设置VID和PID
@@ -13,7 +15,6 @@ USB 设置VID和PID
 |int|设备id,默认为0|
 |int|vid 小端格式|
 |int|pid 小端格式|
-|return|无|
 
 **返回值**
 
@@ -172,11 +173,12 @@ buff形式读接收到的数据，一次读出全部数据存入buff中，如果
 |-|-|
 |int|设备id,默认为0|
 |zbuff|zbuff对象|
-|return|返回读到的长度，并把zbuff指针后移|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|int|返回读到的长度，并把zbuff指针后移|
 
 **例子**
 

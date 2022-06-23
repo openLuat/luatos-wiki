@@ -2,17 +2,6 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/soft_keyboard/luat_lib_softkeyboard.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
-**示例**
-
-```lua
-sys.subscribe("SOFT_KB_INC", function(port, data, state)
-    -- port 当前固定为0, 可以无视
-    -- data, 需要配合init的map进行解析
-    -- state, 1 为按下, 0 为 释放
-    log.info("keyboard", port, data, state)
-end)
-
-```
 
 ## softkb.init(port, key_in, key_out)
 

@@ -2,6 +2,7 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_mcu.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+
 ## mcu.setClk(mhz)
 
 设置主频,单位MHZ. 请注意,主频与外设主频有关联性, 例如主频2M时SPI的最高只能1M
@@ -241,7 +242,6 @@ print("ticks", tick_str, tick_per)
 |boolean|高速时钟是否使用外部时钟源，如果为空则不改变|
 |boolean|低速32K是否使用外部时钟源，如果为空则不改变|
 |int|PLL稳定时间，在切换高速时钟的时候，根据硬件环境，需要delay一段时间等待PLL稳定，默认是1200，建议不小于1024|
-|return|无|
 
 **返回值**
 

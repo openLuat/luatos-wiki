@@ -2,6 +2,8 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_zbuff.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+> 本库还有视频教程，[点此链接查看](https://www.bilibili.com/video/BV1gr4y1V7HN)
+
 ## zbuff.create(length,data)
 
 创建zbuff
@@ -61,7 +63,7 @@ local buff = zbuff.create({128,160,16},0xf800)--创建一个128*160的framebuff�
 
 ## buff:write(para,...)
 
-zbuff写数据
+zbuff写数据（从当前指针位置开始；执行后指针会向后移动）
 
 **参数**
 
@@ -88,7 +90,7 @@ local len = buff:write(0x1a,0x30,0x31,0x32,0x00,0x01)  -- 按数值写入多个�
 
 ## buff:read(length)
 
-zbuff读数据
+zbuff读数据（从当前指针位置开始；执行后指针会向后移动）
 
 **参数**
 
@@ -114,7 +116,7 @@ local str = buff:read(3)
 
 ## buff:clear(num)
 
-zbuff清空数据
+zbuff清空数据（与当前指针位置无关；执行后指针位置不变）
 
 **参数**
 
@@ -138,7 +140,7 @@ buff:clear(0)
 
 ## buff:seek(base,offset)
 
-zbuff设置光标位置
+zbuff设置光标位置（可能与当前指针位置有关；执行后指针会被设置到指定位置）
 
 **参数**
 
@@ -166,7 +168,7 @@ buff:seek(-3,zbuff.SEEK_END)
 
 ## buff:pack(format,val1, val2,...)
 
-将一系列数据按照格式字符转化，并写入
+将一系列数据按照格式字符转化，并写入（从当前指针位置开始；执行后指针会向后移动）
 
 **参数**
 
@@ -207,7 +209,7 @@ buff:pack(">IIHA", 0x1234, 0x4567, 0x12,"abcdefg") -- 按格式写入几个数�
 
 ## buff:unpack(format)
 
-将一系列数据按照格式字符读取出来
+将一系列数据按照格式字符读取出来（从当前指针位置开始；执行后指针会向后移动）
 
 **参数**
 
@@ -234,7 +236,7 @@ local cnt,a,b,c,s = buff:unpack(">IIHA10") -- 按格式读取几个数据
 
 ## buff:read类型()
 
-读取一个指定类型的数据
+读取一个指定类型的数据（从当前指针位置开始；执行后指针会向后移动）
 
 **参数**
 
@@ -260,7 +262,7 @@ local data = buff:readU32()
 
 ## buff:write类型()
 
-写入一个指定类型的数据
+写入一个指定类型的数据（从当前指针位置开始；执行后指针会向后移动）
 
 **参数**
 
@@ -287,7 +289,7 @@ local len = buff:writeU32(1024)
 
 ## buff:toStr(offset,length)
 
-按起始位置和长度取出数据
+按起始位置和长度取出数据（与当前指针位置无关；执行后指针位置不变）
 
 **参数**
 
@@ -313,7 +315,7 @@ local s = buff:toStr(0,5)--读取开头的五个字节数据
 
 ## buff:len()
 
-获取zbuff对象的长度
+获取zbuff对象的长度（与当前指针位置无关；执行后指针位置不变）
 
 **参数**
 
@@ -337,7 +339,7 @@ len = #buff
 
 ## buff:setFrameBuffer(width,height,bit,color)
 
-设置buff对象的FrameBuffer属性
+设置buff对象的FrameBuffer属性（与当前指针位置无关；执行后指针位置不变）
 
 **参数**
 
@@ -365,7 +367,7 @@ result = buff:setFrameBuffer(320,240,16,0xffff)
 
 ## buff:pixel(x,y,color)
 
-设置或获取FrameBuffer某个像素点的颜色
+设置或获取FrameBuffer某个像素点的颜色（与当前指针位置无关；执行后指针位置不变）
 
 **参数**
 
@@ -393,7 +395,7 @@ color = buff:pixel(0,3)
 
 ## buff:drawLine(x1,y1,x2,y2,color)
 
-画一条线
+画一条线（与当前指针位置无关；执行后指针位置不变）
 
 **参数**
 
@@ -422,7 +424,7 @@ rerult = buff:drawLine(0,0,2,3,0xffff)
 
 ## buff:drawRect(x1,y1,x2,y2,color,fill)
 
-画一个矩形
+画一个矩形（与当前指针位置无关；执行后指针位置不变）
 
 **参数**
 
@@ -452,7 +454,7 @@ rerult = buff:drawRect(0,0,2,3,0xffff)
 
 ## buff:drawCircle(x,y,r,color,fill)
 
-画一个圆形
+画一个圆形（与当前指针位置无关；执行后指针位置不变）
 
 **参数**
 
@@ -482,7 +484,7 @@ rerult = buff:drawCircle(15,5,3,0xC,true)
 
 ## buff[n]
 
-以下标形式进行数据读写
+以下标形式进行数据读写（与当前指针位置无关；执行后指针位置不变）
 
 **参数**
 
@@ -508,14 +510,13 @@ local data = buff[0]
 
 ## buff:resize(n)
 
-调整zbuff的大小
+调整zbuff实际分配空间的大小，类似于realloc的效果，new = realloc(old, n)，可以扩大或者缩小（如果缩小后len小于了used，那么used=新len）
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
 |int|新空间大小|
-|return|无|
 
 **返回值**
 
@@ -550,10 +551,11 @@ zbuff动态写数据，类似于memcpy效果，当原有空间不足时动态扩
 **例子**
 
 ```lua
-local len = buff:copy(nil, "123") -- 从buff当前指针位置开始写入数据, 指针相应地往后移动，返回写入的数据长度
-local len = buff:copy(0, "123") -- 从位置0写入数据, 返回写入的数据长度
-local len = buff:copy(2, 0x1a,0x30,0x31,0x32,0x00,0x01)  -- 从位置2开始，按数值写入多个字节数据
-local len = buff:copy(9, buff2)  -- 从位置9开始，合并入buff2里内容
+local len = buff:copy(nil, "123") -- 类似于memcpy(&buff[used], "123", 3) used+= 3 从buff开始写入数据,指针相应地往后移动
+local len = buff:copy(0, "123") -- 类似于memcpy(&buff[0], "123", 3) if (used < 3) used = 3 从位置0写入数据,指针有可能会移动
+local len = buff:copy(2, 0x1a,0x30,0x31,0x32,0x00,0x01)  -- 类似于memcpy(&buff[2], [0x1a,0x30,0x31,0x32,0x00,0x01], 6) if (used < (2+6)) used = (2+6)从位置2开始，按数值写入多个字节数据
+local len = buff:copy(9, buff2)  -- 类似于memcpy(&buff[9], &buff2[0], buff2的used) if (used < (9+buff2的used)) used = (9+buff2的used) 从位置9开始，合并入buff2里0~used的内容
+local len = buff:copy(5, buff2, 10, 1024)  -- 类似于memcpy(&buff[5], &buff2[10], 1024) if (used < (5+1024)) used = (5+1024)
 
 ```
 
@@ -561,17 +563,17 @@ local len = buff:copy(9, buff2)  -- 从位置9开始，合并入buff2里内容
 
 ## buff:used()
 
-获取zbuff的实际数据量大小
+获取zbuff的实际数据量大小，注意这个不同于分配的空间大小
 
 **参数**
 
-|传入值类型|解释|
-|-|-|
-|return|zbuff的实际数据量大小|
+无
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|int|zbuff的实际数据量大小|
 
 **例子**
 
@@ -584,15 +586,14 @@ buff:used()
 
 ## buff:del(offset,length)
 
-删除zbuff 0~used范围内的一段数据，
+删除zbuff 0~used范围内的一段数据，注意只是改变了used的值，并不是真的在ram里去清除掉数据
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|int|起始位置, 默认0，如果<0则从used往前数，-1 = used - 1|
-|int|长度，默认为cursor|
-|return|无|
+|int|起始位置start, 默认0，如果<0则从used往前数，比如 -1 那么start= used - 1|
+|int|长度del_len，默认为used，如果start + del_len数值大于used，会强制调整del_len = used - start|
 
 **返回值**
 
@@ -602,6 +603,7 @@ buff:used()
 
 ```lua
 buff:del(1,4)	--从位置1开始删除4个字节数据
+buff:del(-1,4)	--从位置used-1开始删除4个字节数据，但是这肯定会超过used，所以del_len会调整为1，实际上就是删掉了最后一个字节
 
 ```
 
@@ -638,7 +640,7 @@ local s = buff:query(0,5)--读取开头的五个字节数据
 
 ## buff:set(start, num, len)
 
-zbuff的类似于memset操作
+zbuff的类似于memset操作，类似于memset(&buff[start], num, len)，当然有ram越界保护，会对len有一定的限制
 
 **参数**
 
@@ -657,9 +659,38 @@ zbuff的类似于memset操作
 ```lua
 -- 全部初始化为0
 buff:set() --等同于 memset(buff, 0, sizeof(buff))
-buff:set(8) --等同于 memset(buff, 0, sizeof(buff) - 8)
+buff:set(8) --等同于 memset(&buff[8], 0, sizeof(buff) - 8)
 buff:set(0, 0x55) --等同于 memset(buff, 0x55, sizeof(buff))
 buff:set(4, 0xaa, 12) --等用于 memset(&buff[4], 0xaa, 12)
+
+```
+
+---
+
+## buff:isEqual(start, buff2, start2, len)
+
+zbuff的类似于memcmp操作，类似于memcmp(&buff[start], &buff2[start2], len)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|可选，开始位置，默认为0,|
+|zbuff|比较的对象|
+|int|可选，比较的对象的开始位置，默认为0|
+|int|比较长度|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|true相等，false不相等|
+|int|相等返回0，不相等返回第一个不相等位置的序号|
+
+**例子**
+
+```lua
+local result, offset = buff:isEqual(1, buff2, 2, 10) --等同于memcmp(&buff[1], &buff2[2], 10)
 
 ```
 

@@ -5,10 +5,13 @@
 
 .. toctree::
 
-    adc
+    log
+    sys
+    adc/index
     crypto
+    fdb
     disp
-    i2c
+    i2c/index
     lcd
     mcu
     pm

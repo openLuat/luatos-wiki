@@ -22,4 +22,4 @@
 
 ![air105_evb_pinout.png](pinout.png)
 
-**注意：HSPI编程时为SPI5**
+**注意：HSPI编程时为SPI5，ADC部分，LuatOS中未使能内部分压，通道1~6采集电压范围0~1.8V**

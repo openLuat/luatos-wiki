@@ -2,6 +2,9 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_spi.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+> 本库有专属demo，[点此链接查看spi的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/spi)
+> 本库还有视频教程，[点此链接查看](https://www.bilibili.com/video/BV1VY411M7YH)
+
 ## spi.setup(id, cs, CPHA, CPOL, dataw, bandrate, bitdict, ms, mode)
 
 设置并启用SPI
@@ -338,6 +341,36 @@ local result = spi_device:send(buff)--把zbuff数据从指针开始，全发出�
 -- 初始化spi
 local spi_device = spi.device_setup(0,17,0,0,8,2000000,spi.MSB,1,1)
 local recv = spi_device:recv(4)--接收4字节数据
+
+```
+
+---
+
+## spi.xfer(id, txbuff, rxbuff, rx_len, transfer_done_topic)
+
+非阻塞方式硬件SPI传输SPI数据，目的为了提高核心利用率。API直接返回是否启动传输，传输完成后通过topic回调，本API适合硬件SPI传输大量数据传输，外设功能（LCD SPI，W5500 SPI之类的）占据的SPI和软件SPI不能用，少量数据传输建议使用传统阻塞型API
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|or int spi_device或者spi_id，注意，如果是spi_device，需要手动在传输完成后拉高cs!!!!!!|
+|zbuff|待发送的数据，如果为nil，则只接收数据，由于用的非阻塞模型，为保证动态数据的有效性，只能使用zbuff，发送的数据从zbuff.addr|
+|zbuff|接收数据，如果为nil，则只发送数据，由于用的非阻塞模型，为保证动态数据的有效性，只能使用zbuff，接收的数据从zbuff.addr开始存储|
+|int|传输数据长度，特别说明 如果为半双工，先发后收，比如spi flash操作这种，则长度=发送字节+接收字节，注意上面发送和接收buff都要留足够的数据，后续接收数据处理需要跳过发送数据长度字节|
+|string|传输完成后回调的topic|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|true/false 本次传输是否正确启动，true，启动，false，有错误无法启动。传输完成会发布消息transfer_done_topic和boolean型结果|
+
+**例子**
+
+```lua
+local result = spi.xfer(spi.SPI_0, txbuff, rxbuff, 1024, "SPIDONE") if result then result, spi_id, succ, error_code = sys.waitUntil("SPIDONE") end if not result or not succ then log.info("spi fail, error code", error_code) else log.info("spi ok") end
+
 
 ```
 

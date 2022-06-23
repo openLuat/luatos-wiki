@@ -2,6 +2,8 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/network/adapter/luat_lib_network.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+> 本库有专属demo，[点此链接查看network的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/network)
+
 ## network.create(adapter, cb)
 
 在某个适配的网卡上申请一个network_ctrl
@@ -158,7 +160,6 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 |传入值类型|解释|
 |-|-|
 |user_data|network.create得到的ctrl|
-|return|无|
 
 **返回值**
 

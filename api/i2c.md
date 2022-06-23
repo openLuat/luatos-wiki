@@ -2,6 +2,8 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_i2c.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+> 本库有专属demo，[点此链接查看i2c的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/i2c)
+
 ## i2c.exist(id)
 
 i2c编号是否存在
@@ -321,11 +323,53 @@ i2c通用传输，包括发送N字节，发送N字节+接收N字节，接收N字
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|boolean|true/false 发送是否成功|
+|string|or nil 如果参数5是interger，则返回接收到的数据|
 
 **例子**
 
-无
+```lua
+local result, _ = i2c.transfer(0, 0x11, txbuff, rxbuff, 1)
+local result, _ = i2c.transfer(0, 0x11, txbuff, nil, 0)	--只发送txbuff里的数据，不接收数据，典型应用就是写寄存器了，这里寄存器地址和值都放在了txbuff里
+local result, _ = i2c.transfer(0, 0x11, "\x01\x02\x03", nil, 1) --发送0x01， 0x02，0x03，不接收数据，如果是eeprom，就是往0x01的地址写02和03，或者往0x0102的地址写03，看具体芯片了
+local result, rxdata = i2c.transfer(0, 0x11, "\x01\x02", nil, 1) --发送0x01， 0x02，然后接收1个字节，典型应用就是eeprom
+local result, rxdata = i2c.transfer(0, 0x11, 0x00, nil, 1) --发送0x00，然后接收1个字节，典型应用各种传感器
+
+```
+
+---
+
+## i2c.xfer(id, addr, txBuff, rxBuff, rxLen, transfer_done_topic, timeout)
+
+i2c非阻塞通用传输，类似transfer，但是不会等到I2C传输完成才返回，调用本函数会立刻返回，I2C传输完成后，通过消息回调
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|设备id, 例如i2c1的id为1, i2c2的id为2|
+|int|I2C子设备的地址, 7位地址|
+|zbuff|待发送的数据，由于用的非阻塞模型，为保证动态数据的有效性，只能使用zbuff，发送的数据从zbuff.addr开始，长度为zbuff.used|
+|zbuff|待接收数据的zbuff，如果为nil，则忽略后面参数， 不接收数据。接收的数据会放在zbuff.addr开始的位置，会覆盖掉之前的数据，注意zhuff的预留空间要足够|
+|int|需要接收的数据长度，如果为0或nil，则不接收数据|
+|string|传输完成后回调的消息|
+|int|超时时间，如果填nil，则为100ms|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|true/false 本次传输是否正确启动，true，启动，false，有错误无法启动。传输完成会发布消息transfer_done_topic和boolean型结果|
+
+**例子**
+
+```lua
+local result = i2c.xfer(0, 0x11, txbuff, rxbuff, 1, "I2CDONE") if result then result, i2c_id, succ, error_code = sys.waitUntil("I2CDONE") end if not result or not succ then log.info("i2c fail, error code", error_code) else log.info("i2c ok") end
+
+
+```
 
 ---
 

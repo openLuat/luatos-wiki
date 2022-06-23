@@ -2,6 +2,8 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/packages/lua-cjson/lua_cjson.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+> 本库有专属demo，[点此链接查看json的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/json)
+
 ## json.encode(obj,t)
 
 将对象序列化为json字符串

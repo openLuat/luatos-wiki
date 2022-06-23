@@ -17,6 +17,8 @@
    lm75
    mpu6xxx
    qmc5883l
+   rc522
+   si24r1
    tcs3472
    tm1637
    tsl2561

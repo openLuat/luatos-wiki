@@ -2,6 +2,8 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/flashdb/src/luat_lib_fdb.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+> 本库有专属demo，[点此链接查看fdb的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/fdb)
+
 ## fdb.kvdb_init(name, partition)
 
 初始化kv数据库
@@ -46,6 +48,7 @@ end
 |返回值类型|解释|
 |-|-|
 |boolean|成功返回true,否则返回false|
+|number|第二个为返回为flashdb的fdb_kv_set_blob返回详细状态,0：无错误 1:擦除错误 2:读错误 3:些错误 4:未找到 5:kv名字错误 6:kv名字存在 7:已保存 8:初始化错误|
 
 **例子**
 

@@ -2,6 +2,7 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_lcdseg.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+
 ## lcdseg.setup(bias, duty, vlcd, com_number, fresh_rate, com_mark, seg_mark)
 
 初始化lcdseg库

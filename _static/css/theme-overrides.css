@@ -276,6 +276,5 @@ table.docutils td {
     transition: ease-in-out 200ms;
 }
 .main img:hover {
-    opacity: 0.85;
     box-shadow: 0 0 8px 8px #d9d9d9;
 }

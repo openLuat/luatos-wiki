@@ -2,6 +2,7 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_i2s.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+
 ## i2s.setup(id, mode, sample, bitw, channel, format, mclk)
 
 初始化i2s
@@ -22,10 +23,18 @@
 |返回值类型|解释|
 |-|-|
 |boolean|成功与否|
+|int|底层返回值|
 
 **例子**
 
-无
+```lua
+-- 这个库处于开发阶段, 尚不可用
+-- 以默认参数初始化i2s
+i2s.setup(0)
+-- 以详细参数初始化i2s, 示例为默认值
+i2s.setup(0, 0, 44100, 16, 0, 0, 8000000)
+
+```
 
 ---
 

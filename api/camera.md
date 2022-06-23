@@ -2,6 +2,8 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/camera/luat_lib_camera.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+> 本库有专属demo，[点此链接查看camera的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/camera)
+
 ## camera.init(InitReg)
 
 初始化摄像头
@@ -156,6 +158,87 @@ camera拍照
 
 ```lua
 camera.capture(0)
+
+```
+
+---
+
+## camera.video(id, w, h, out_path)
+
+camera输出视频流到USB
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|camera id,例如0|
+|int|宽度|
+|int|高度|
+|int|输出路径，目前只能用虚拟串口0|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+camera.video(0, 320, 240, uart.VUART_0)
+
+```
+
+---
+
+## camera.startRaw(id, w, h, buff)
+
+启动camera输出原始数据到用户的zbuff缓存区，输出1fps后会停止，并通过camera.on设置的回调函数回调接收到的长度，如果需要再次输出，请调用camera.getRaw
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|camera id,例如0|
+|int|宽度|
+|int|高度|
+|zbuff|用于存放数据的缓存区，大小必须不小于w X h X 2 byte|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+camera.startRaw(0, 320, 240, buff)
+
+```
+
+---
+
+## camera.getRaw(id)
+
+再次启动camera输出原始数据到用户的zbuff缓存区，输出1fps后会停止，并通过camera.on设置的回调函数回调接收到的长度，如果需要再次输出，请继续调用本API
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|camera id,例如0|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+camera.getRaw(0)
 
 ```
 

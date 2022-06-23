@@ -1,5 +1,6 @@
 # lvgl - LVGL图像库
 
+
 ## lvgl.draw_mask_radius_param_t()
 
 创建一个lv_draw_mask_radius_param_t
@@ -366,13 +367,13 @@ lvgl.font_free(font)
 
 **参数**
 
-|传入值类型|解释|
-|-|-|
-|return|screen指针|
+无
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|指针|screen指针|
 
 **例子**
 
@@ -390,13 +391,13 @@ local scr = lvgl.scr_act()
 
 **参数**
 
-|传入值类型|解释|
-|-|-|
-|return|layer指针|
+无
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|指针|layer指针|
 
 **例子**
 
@@ -410,13 +411,13 @@ local scr = lvgl.scr_act()
 
 **参数**
 
-|传入值类型|解释|
-|-|-|
-|return|layer指针|
+无
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|指针|layer指针|
 
 **例子**
 
@@ -1409,13 +1410,13 @@ lvgl.font_free(font)
 
 **参数**
 
-|传入值类型|解释|
-|-|-|
-|return|screen指针|
+无
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|指针|screen指针|
 
 **例子**
 
@@ -1433,13 +1434,13 @@ local scr = lvgl.scr_act()
 
 **参数**
 
-|传入值类型|解释|
-|-|-|
-|return|layout指针|
+无
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|指针|layout指针|
 
 **例子**
 
@@ -1453,13 +1454,13 @@ local scr = lvgl.scr_act()
 
 **参数**
 
-|传入值类型|解释|
-|-|-|
-|return|layout指针|
+无
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|指针|layout指针|
 
 **例子**
 

@@ -2,6 +2,9 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_uart.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+> 本库有专属demo，[点此链接查看uart的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/uart)
+> 本库还有视频教程，[点此链接查看](https://www.bilibili.com/video/BV1er4y1p75y)
+
 ## uart.setup(id, baud_rate, data_bits, stop_bits, partiy, bit_order, buff_size)
 
 配置串口参数
@@ -133,11 +136,12 @@ buff形式读串口，一次读出全部数据存入buff中，如果buff空间�
 |-|-|
 |int|串口id, uart0写0, uart1写1|
 |zbuff|zbuff对象|
-|return|返回读到的长度，并把zbuff指针后移|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|int|返回读到的长度，并把zbuff指针后移|
 
 **例子**
 
@@ -157,11 +161,12 @@ uart.rx(1, buff)
 |传入值类型|解释|
 |-|-|
 |int|串口id, uart0写0, uart1写1|
-|return|返回读到的长度|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|int|返回读到的长度|
 
 **例子**
 
@@ -242,6 +247,50 @@ end)
 |返回值类型|解释|
 |-|-|
 |int|等待了多少次循环才等到tx完成，用于粗劣的观察delay时间是否足够，返回不为0说明还需要放大delay|
+
+**例子**
+
+无
+
+---
+
+## uart.exist(id)
+
+检查串口号是否存在
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|串口id, uart0写0, uart1写1, 如此类推|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|存在返回true|
+
+**例子**
+
+无
+
+---
+
+## uart.list(max)
+
+获取可用串口号列表，当前仅限win32
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|可选，默认256，最多获取多少个串口|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|table|获取到的可用串口号列表|
 
 **例子**
 
