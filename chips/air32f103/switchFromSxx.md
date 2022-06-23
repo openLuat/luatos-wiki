@@ -131,6 +131,10 @@ cubemx或者其他freertos工程的`configPRIO_BITS`设置是4，需要改成3�
 /* USER CODE END 1 */
 ```
 
+可以查看ARM的手册，3位中断优先级和4位兼容，不会有任何问题，cubemx中的configASSERT配置实际很影响运行效率，freertos的手册中建议关闭。所以按这个方案修改不会有任何bug，无需担心。
+
+![image-20220623095717980](img/image-20220623095717980.png)
+
 ## ADC
 
 ### ADC配置连续触发后，关闭ADON或者进行ADC软复位，ADC转化差异
