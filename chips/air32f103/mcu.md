@@ -10,7 +10,7 @@ Air32F103为系列芯片，首发型号为Air32F103CBT6，其外设和硬件设�
 
 ## 替换其他芯片说明
 
-使用Air32F103替换其他F103芯片说明[从SXX32F103移植到AIR32F103.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220605170303059_从SXX32F103移植到AIR32F103.pdf)
+使用Air32F103替换其他F103芯片说明[从SXX32F103移植到AIR32F103](https://wiki.luatos.com/chips/air32f103/switchFromSxx.html)
 
 ## 注意事项
 
