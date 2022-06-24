@@ -327,6 +327,110 @@ end)
 
 ---
 
+## lora
+
+
+
+[lora接口文档页](https://wiki.luatos.com/api/lora.html)
+
+
+
+### LORA_TX_DONE
+
+LORA 发送完成
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.subscribe("LORA_TX_DONE", function()
+    lora.recive(1000)
+end)
+
+```
+
+---
+
+### LORA_RX_DONE
+
+LORA 接收完成
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.subscribe("LORA_RX_DONE", function(data, size)
+    log.info("LORA_RX_DONE: ", data, size)
+    lora.send("PING")
+end)
+
+```
+
+---
+
+### LORA_TX_TIMEOUT
+
+LORA 发送超时
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.subscribe("LORA_TX_TIMEOUT", function()
+    lora.recive(1000)
+end)
+
+```
+
+---
+
+### LORA_RX_TIMEOUT
+
+LORA 接收超时
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.subscribe("LORA_RX_TIMEOUT", function()
+    lora.recive(1000)
+end)
+
+```
+
+---
+
+### LORA_RX_ERROR
+
+LORA 接收错误
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.subscribe("LORA_RX_ERROR", function()
+    lora.recive(1000)
+end)
+
+```
+
+---
+
 ## ntp
 
 
