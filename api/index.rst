@@ -29,6 +29,7 @@ LuatOS-SOC接口文档
    libcoap
    libgnss
    log
+   lora
    lpmem
    lvgl
    mcu
