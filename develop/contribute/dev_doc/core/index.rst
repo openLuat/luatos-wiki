@@ -13,3 +13,4 @@
    luat_timer
    luat_zbuff
    sys_wait_pub
+   luat_zstruct
