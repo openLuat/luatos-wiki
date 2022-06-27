@@ -481,6 +481,30 @@ lvgl.theme_set_act("empty")
 
 ---
 
+## lvgl.sleep(enable)
+
+LVGL休眠控制，暂停/恢复刷新定时器，目前只有105可以用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|boolean|true暂停 false恢复|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+lvgl.sleep(true)		--暂停刷新，系统可以休眠
+lvgl.sleep(false)		--恢复刷新，系统不休眠
+
+```
+
+---
+
 ## lvgl.init(w, h, lcd, buff_size, buff_mode)
 
 初始化LVGL
