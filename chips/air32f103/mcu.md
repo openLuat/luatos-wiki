@@ -8,13 +8,15 @@ Air32F103为系列芯片，首发型号为Air32F103CBT6，其外设和硬件设�
 
 [Air32F103使用手册](https://wiki.luatos.com/chips/air32f103/Air32f103.html)
 
+[AIR32F103的SDK与demo](https://gitee.com/openLuat/luatos-soc-air32f103)
+
 ## 替换其他芯片说明
 
 使用Air32F103替换其他F103芯片说明[从SXX32F103移植到AIR32F103](https://wiki.luatos.com/chips/air32f103/switchFromSxx.html)
 
 ## 注意事项
 
-由于开发板默认的daplink固件封堵了SWD调试接口，所以第一次使用swd下载时，请先按住被调试板子的BOOT按键，再按一下复位按键，最后松开BOOT按键，然后点击keil中的下载按钮。第一次下载完成后，下次下载就不用这样操作了（或在下载前先按住被调试板子的复位按键，在点击keil的下载按钮后马上松开按键/或者直接用ISP工具擦除芯片）
+由于开发板默认的daplink固件封堵了SWD调试接口，所以**第一次**使用swd下载时，请先按住被调试板子的BOOT按键，再按一下复位按键，最后松开BOOT按键，然后点击keil中的下载按钮。第一次下载完成后，下次下载就不用这样操作了（或在下载前先按住被调试板子的复位按键，在点击keil的下载按钮后马上松开按键/或者直接用ISP工具擦除芯片）
 
 下载遇到如下报错
 
