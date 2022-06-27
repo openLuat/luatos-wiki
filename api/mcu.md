@@ -209,7 +209,7 @@ print("ticks", tick_str, tick_per)
 
 ---
 
-## mcu.dtick(tick1, tick2, check_value)
+## mcu.dtick64(tick1, tick2, check_value)
 
 计算2个64bit tick的差值，目前只有105能用
 
@@ -223,11 +223,18 @@ print("ticks", tick_str, tick_per)
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|boolean|与参考值比较，如果大于等于为true，反之为false|
+|int|差值tick1 - tick2，如果超过了0x7fffffff，结果可能是错的|
 
 **例子**
 
-无
+```lua
+local result, diff_tick = mcu.dtick64(tick1, tick2)
+print("ticks", result, diff_tick)
+
+```
 
 ---
 
