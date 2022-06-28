@@ -4,6 +4,16 @@ window.onload = function () {
     if(oldonload != undefined)
         oldonload();
 
+    //左侧标题滚到能看见的位置
+    if($(".sidebar-scroll").scrollTop() == 0 ){
+        var searchp = $(".sidebar-search-container").offset().top;
+        var titlep = $(".current.reference.internal").offset().top;
+        var titleh = $(".toctree-l1").height();
+        var resulrp = titlep - searchp - titleh*3;
+        if(resulrp > 0)
+            $(".sidebar-scroll").scrollTop(resulrp);
+    }
+
     //新窗口打开链接
     $("article").find("a").each(function () {
         if ($(this).attr("href") != undefined &&
