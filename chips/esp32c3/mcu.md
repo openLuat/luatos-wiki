@@ -6,7 +6,7 @@
 
 **注意：烧录前请设置波特率为921600**
 
-> 注意，由于**win7**系统不自带`winusb`驱动，且该系统早在2020年微软就已停止支持，所以如需使用`简约版开发板`，请升级至**win8以上系统**，或自行研究处理方法
+> 注意，由于**win7**系统不自带`winusb`驱动，且该系统早在2020年微软就已停止支持，所以如需使用`简约版开发板`，请升级至**win8以上系统**，或前往[乐鑫原厂手册](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32c3/api-guides/jtag-debugging/configure-builtin-jtag.html)安装驱动
 
 ## 固件下载
 
