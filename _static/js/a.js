@@ -5,7 +5,7 @@ window.onload = function () {
         oldonload();
 
     //左侧标题滚到能看见的位置
-    if($(".sidebar-scroll").scrollTop() == 0 ){
+    if($(".sidebar-scroll").scrollTop() == 0 && $(".current.reference.internal")[0] != undefined){
         var searchp = $(".sidebar-search-container").offset().top;
         var titlep = $(".current.reference.internal").offset().top;
         var titleh = $(".toctree-l1").height();
