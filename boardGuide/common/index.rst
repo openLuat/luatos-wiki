@@ -13,7 +13,7 @@
     disp
     i2c/index
     lcd
-    mcu
+    mcu/index
     pm
     pwm
     rtc
