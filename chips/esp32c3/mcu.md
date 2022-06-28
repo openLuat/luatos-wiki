@@ -6,13 +6,11 @@
 
 **注意：烧录前请设置波特率为921600**
 
-> 注意，由于win7系统不自带`winusb`驱动，所以在连接`简约版开发板`前，需要手动安装驱动：[Zadig驱动安装器](https://zadig.akeo.ie/)
+> 注意，由于**win7**系统不自带`winusb`驱动，且该系统早在2020年微软就已停止支持，所以如需使用`简约版开发板`，请升级至**win8以上系统**，或自行研究处理方法
 
 ## 固件下载
 
 https://gitee.com/dreamcmi/LuatOS-ESP32/releases
-
-
 
 [开源仓库链接](https://gitee.com/dreamcmi/LuatOS-ESP32)
 
