@@ -151,7 +151,7 @@ gpio.setDefaultPull(1)
 
 |传入值类型|解释|
 |-|-|
-|int|管脚的GPIO0AB4276E.png|
+|int|管脚的GPIO号|
 
 **返回值**
 
