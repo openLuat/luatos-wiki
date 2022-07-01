@@ -20,4 +20,4 @@
     sfd
     spi
     timer
-    uart
+    uart/index
