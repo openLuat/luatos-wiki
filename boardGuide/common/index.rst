@@ -15,7 +15,7 @@
     lcd
     mcu/index
     pm
-    pwm
+    pwm/index
     rtc
     sfd
     spi
