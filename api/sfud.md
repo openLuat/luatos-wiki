@@ -131,15 +131,17 @@ sfud.chipErase(flash)
 
 ---
 
-## sfud.erase(flash)
+## sfud.erase(flash,add,size)
 
-擦除 Flash 全部数据
+擦除 Flash 指定地址指定大小
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
 |userdata|flash Flash 设备对象 sfud.get_device_table()返回的数据结构|
+|number|add 擦除地址|
+|number|size 擦除大小|
 
 **返回值**
 
@@ -150,7 +152,7 @@ sfud.chipErase(flash)
 **例子**
 
 ```lua
-sfud.erase(flash)
+sfud.erase(flash,add,size)
 
 ```
 
