@@ -28,7 +28,7 @@
 --spi
 log.info("sfud.init",sfud.init(0,20,20 * 1000 * 1000))
 --spi_device
-local spi_device = spi.deviceSetup(0,17,0,0,8,2000000,spi.MSB,1,1)
+local spi_device = spi.deviceSetup(0,17,0,0,8,2000000,spi.MSB,1,0)
 log.info("sfud.init",sfud.init(spi_device))
 
 ```
