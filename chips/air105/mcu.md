@@ -68,67 +68,67 @@
 | 3        | VCC         | P        |                              |                                                              | 可输入最小电压为3.6V，最大电压为5.5V                         |
 | 4        | VDD33_OUT   | P        |                              | 芯片 3.3V 输出                                               | 芯片的输出能力约为400mA，外围负载使用芯片的3.3V时，要注意最大电流情况 |
 | 5        | NC          |          |                              | NC                                                           |                                                              |
-| 6        | PA7         | I/O      | GPIO7/SPI1_CSN               | UP/DOWN                                                      |                                                              |
-| 7        | PA6         | I/O      | GPIO6/SPI1_SCK               | UP/DOWN                                                      |                                                              |
-| 8        | PB2         | I/O      | GPIO18/SPI2_SCK              | UP/DOWN                                                      |                                                              |
-| 9        | PB3         | I/O      | GPIO19/SPI2_CSN              | UP/DOWN                                                      |                                                              |
-| 10       | PB4         | I/O      | GPIO20/SPI2_MOSI/UART2_CTS   | UP/DOWN                                                      |                                                              |
-| 11       | PB5         | I/O      | GPIO21/SPI2_MISO/UART2_RTS   | UP/DOWN                                                      |                                                              |
-| 12       | PE6         | I/O      | GPIO70//UART3_CTS/I2C0_SCL   | UP/DOWN                                                      |                                                              |
-| 13       | PE7         | I/O      | GPIO71/UART3_RTS/I2C0_SDA    | UP/DOWN                                                      |                                                              |
-| 14       | PE8         | I/O      | GPIO72/UART3_RX              | UP/DOWN                                                      |                                                              |
-| 15       | PE9         | I/O      | GPIO73/UART3_TX              | UP/DOWN                                                      |                                                              |
-| 16       | PE10        | I/O      | GPIO74/UART3_CTS             | UP/DOWN                                                      |                                                              |
-| 17       | PE11        | I/O      | GPIO75/UART3_RTS             | UP/DOWN                                                      |                                                              |
+| 6        | PA7         | I/O      | GPIO7/SPI1_CSN               | UP                                                           |                                                              |
+| 7        | PA6         | I/O      | GPIO6/SPI1_SCK               | UP                                                           |                                                              |
+| 8        | PB2         | I/O      | GPIO18/SPI2_SCK              | UP                                                           |                                                              |
+| 9        | PB3         | I/O      | GPIO19/SPI2_CSN              | UP                                                           |                                                              |
+| 10       | PB4         | I/O      | GPIO20/SPI2_MOSI/UART2_CTS   | UP                                                           |                                                              |
+| 11       | PB5         | I/O      | GPIO21/SPI2_MISO/UART2_RTS   | UP                                                           |                                                              |
+| 12       | PE6         | I/O      | GPIO70//UART3_CTS/I2C0_SCL   | UP                                                           |                                                              |
+| 13       | PE7         | I/O      | GPIO71/UART3_RTS/I2C0_SDA    | UP                                                           |                                                              |
+| 14       | PE8         | I/O      | GPIO72/UART3_RX              | UP                                                           |                                                              |
+| 15       | PE9         | I/O      | GPIO73/UART3_TX              | UP                                                           |                                                              |
+| 16       | PE10        | I/O      | GPIO74/UART3_CTS             | UP                                                           |                                                              |
+| 17       | PE11        | I/O      | GPIO75/UART3_RTS             | UP                                                           |                                                              |
 | 18       | PA0         | I/O      | UART0_RX                     | 串口下载                                                     | 固定                                                         |
 | 19       | PA1         | I/O      | UART0_TX                     | 固定                                                         |                                                              |
-| 20       | PA2         | I/O      | GPIO2/UART0_CTS/PWM2         | UP/DOWN                                                      |                                                              |
-| 21       | PA3         | I/O      | GPIO3UART0_RTS/PWM3          | UP/DOWN                                                      |                                                              |
-| 22       | PB0         | I/O      | GPIO16/PWM0/XTAL32K          | UP/DOWN                                                      |                                                              |
-| 23       | PB1         | I/O      | GPIO17/PWM1/CLK_24M          | UP/DOWN/可配置输出24M                                        |                                                              |
+| 20       | PA2         | I/O      | GPIO2/UART0_CTS/PWM2         | UP                                                           |                                                              |
+| 21       | PA3         | I/O      | GPIO3UART0_RTS/PWM3          | UP                                                           |                                                              |
+| 22       | PB0         | I/O      | GPIO16/PWM0/XTAL32K          | UP                                                           |                                                              |
+| 23       | PB1         | I/O      | GPIO17/PWM1/CLK_24M          | UP/可配置输出24M                                             |                                                              |
 | 24       | CHARGE_VBAT | P        |                              | CHARGE电源输出，接电池                                       | 可以给3.7V锂电池充电，最大充电电流200mA                      |
 | 25       | CHARGE_VCC  | P        |                              | CHARGE电源输入                                               | 可输入最小电压为4.7V，最大电压为5.4V                         |
-| 26       | PD1         | I/O      | GPIO49/DCMIS_DATA0           | UP/DOWN                                                      |                                                              |
-| 27       | PD2         | I/O      | GPIO50/DCMIS_DATA1           | UP/DOWN                                                      |                                                              |
-| 28       | PD3         | I/O      | GPIO51/DCMIS_DATA2           | UP/DOWN                                                      |                                                              |
-| 29       | PD8         | I/O      | GPIO56/DCMIS_DATA3           | UP/DOWN                                                      |                                                              |
-| 30       | PD9         | I/O      | GPIO57/DCMIS_DATA4           | UP/DOWN                                                      |                                                              |
-| 31       | PD10        | I/O      | GPIO58/KeyBoard7/DCMIS_DATA5 | UP/DOWN                                                      |                                                              |
-| 32       | PD11        | I/O      | GPIO59/KeyBoard8/DCMIS_DATA6 | UP/DOWN                                                      |                                                              |
-| 33       | PE0         | I/O      | GPIO64/KeyBoard4/DCMIS_DATA7 | UP/DOWN                                                      |                                                              |
-| 34       | PD6         | I/O      | GPIO54/UART1_CTS/DCMIS_DATA8 | UP/DOWN                                                      |                                                              |
-| 35       | PD7         | I/O      | GPIO55/UART1_RTS/DCMIS_DATA9 | UP/DOWN                                                      |                                                              |
-| 36       | PC6         | I/O      | GPIO38/PWM4/DCMIS_DATA10     | UP/DOWN                                                      |                                                              |
-| 37       | PC7         | I/O      | GPIO39/PWM5/DCMIS_DATA11     | UP/DOWN                                                      |                                                              |
-| 38       | PC8         | I/O      | GPIO40/PWM6/DCMIS_DATA12     | UP/DOWN                                                      |                                                              |
-| 39       | PC9         | I/O      | GPIO41/PWM7/DCMIS_DATA13     | UP/DOWN                                                      |                                                              |
-| 40       | PE1         | I/O      | GPIO65/KeyBoard5/DCMIS_VSYNC | UP/DOWN                                                      |                                                              |
-| 41       | PE2         | I/O      | GPIO66/KeyBoard6/DCMIS_HSYNC | UP/DOWN                                                      |                                                              |
-| 42       | PE3         | I/O      | GPIO67/DCMIS_PIX_CLK         | UP/DOWN                                                      |                                                              |
-| 43       | PB12        | I/O      | GPIO28/SPI0_CLK              | UP/DOWN                                                      |                                                              |
+| 26       | PD1         | I/O      | GPIO49/DCMIS_DATA0           | UP                                                           |                                                              |
+| 27       | PD2         | I/O      | GPIO50/DCMIS_DATA1           | UP                                                           |                                                              |
+| 28       | PD3         | I/O      | GPIO51/DCMIS_DATA2           | UP                                                           |                                                              |
+| 29       | PD8         | I/O      | GPIO56/DCMIS_DATA3           | UP                                                           |                                                              |
+| 30       | PD9         | I/O      | GPIO57/DCMIS_DATA4           | UP                                                           |                                                              |
+| 31       | PD10        | I/O      | GPIO58/KeyBoard7/DCMIS_DATA5 | UP                                                           |                                                              |
+| 32       | PD11        | I/O      | GPIO59/KeyBoard8/DCMIS_DATA6 | UP                                                           |                                                              |
+| 33       | PE0         | I/O      | GPIO64/KeyBoard4/DCMIS_DATA7 | UP                                                           |                                                              |
+| 34       | PD6         | I/O      | GPIO54/UART1_CTS/DCMIS_DATA8 | UP                                                           |                                                              |
+| 35       | PD7         | I/O      | GPIO55/UART1_RTS/DCMIS_DATA9 | UP                                                           |                                                              |
+| 36       | PC6         | I/O      | GPIO38/PWM4/DCMIS_DATA10     | UP                                                           |                                                              |
+| 37       | PC7         | I/O      | GPIO39/PWM5/DCMIS_DATA11     | UP                                                           |                                                              |
+| 38       | PC8         | I/O      | GPIO40/PWM6/DCMIS_DATA12     | UP                                                           |                                                              |
+| 39       | PC9         | I/O      | GPIO41/PWM7/DCMIS_DATA13     | UP                                                           |                                                              |
+| 40       | PE1         | I/O      | GPIO65/KeyBoard5/DCMIS_VSYNC | UP                                                           |                                                              |
+| 41       | PE2         | I/O      | GPIO66/KeyBoard6/DCMIS_HSYNC | UP                                                           |                                                              |
+| 42       | PE3         | I/O      | GPIO67/DCMIS_PIX_CLK         | UP                                                           |                                                              |
+| 43       | PB12        | I/O      | GPIO28/SPI0_CLK              | UP                                                           |                                                              |
 | 44       | VSS         | GND      |                              | 芯片地                                                       |                                                              |
-| 45       | PB13        | I/O      | GPIO29/SPI0_CSN              | UP/DOWN                                                      |                                                              |
-| 46       | PB14        | I/O      | GPIO30/SPI0_MOSI/UART1_CTS   | UP/DOWN                                                      |                                                              |
-| 47       | PB15        | I/O      | GPIO31/SPI0_MISO/UART1_RTS   | UP/DOWN                                                      |                                                              |
-| 48       | PC12        | I/O      | GPIO44/SPI5_MISO             | UP/DOWN                                                      |                                                              |
-| 49       | PC13        | I/O      | GPIO45/SPI5_MOSI             | UP/DOWN                                                      |                                                              |
-| 50       | PC14        | I/O      | GPIO36/SPI5_CSN              | UP/DOWN                                                      |                                                              |
-| 51       | PC15        | I/O      | GPIO37/SPI5_CLK              | UP/DOWN                                                      |                                                              |
+| 45       | PB13        | I/O      | GPIO29/SPI0_CSN              | UP                                                           |                                                              |
+| 46       | PB14        | I/O      | GPIO30/SPI0_MOSI/UART1_CTS   | UP                                                           |                                                              |
+| 47       | PB15        | I/O      | GPIO31/SPI0_MISO/UART1_RTS   | UP                                                           |                                                              |
+| 48       | PC12        | I/O      | GPIO44/SPI5_MISO             | UP                                                           |                                                              |
+| 49       | PC13        | I/O      | GPIO45/SPI5_MOSI             | UP                                                           |                                                              |
+| 50       | PC14        | I/O      | GPIO36/SPI5_CSN              | UP                                                           |                                                              |
+| 51       | PC15        | I/O      | GPIO37/SPI5_CLK              | UP                                                           |                                                              |
 | 52       | VDD33       | P        |                              |                                                              |                                                              |
-| 53       | PD13        | I/O      | GPIO61/UART2_TX/KeyBoard1    | UP/DOWN                                                      |                                                              |
-| 54       | PD12        | I/O      | GPIO60/UART2_RX/KeyBoard0    | UP/DOWN                                                      |                                                              |
-| 55       | PD15        | I/O      | GPIO63/UART2_RTS/KeyBoard3   | UP/DOWN                                                      |                                                              |
-| 56       | PD14        | I/O      | GPIO62/UART2_CTS/KeyBoard2   | UP/DOWN                                                      |                                                              |
+| 53       | PD13        | I/O      | GPIO61/UART2_TX/KeyBoard1    | UP                                                           |                                                              |
+| 54       | PD12        | I/O      | GPIO60/UART2_RX/KeyBoard0    | UP                                                           |                                                              |
+| 55       | PD15        | I/O      | GPIO63/UART2_RTS/KeyBoard3   | UP                                                           |                                                              |
+| 56       | PD14        | I/O      | GPIO62/UART2_CTS/KeyBoard2   | UP                                                           |                                                              |
 | 57       | NC          |          |                              | NC                                                           |                                                              |
 | 58       | NC          |          |                              | NC                                                           |                                                              |
 | 59       | NC          |          |                              | NC                                                           |                                                              |
 | 60       | NC          |          |                              | NC                                                           |                                                              |
 | 61       | REFP        | O        |                              | 接1uF电容到地                                                |                                                              |
 | 62       | PC5         | I/O      | GPIO37/ADC_IN6/CLK_27P12     | 可配置输出27.12M                                             |                                                              |
-| 63       | PC4         | I/O      | GPIO36/ADC_IN5/XTAL32K       | UP/DOWN                                                      |                                                              |
-| 64       | PC3         | I/O      | GPIO35/ADC_IN4/UART1_RTS     | UP/DOWN                                                      |                                                              |
+| 63       | PC4         | I/O      | GPIO36/ADC_IN5/XTAL32K       | UP                                                           |                                                              |
+| 64       | PC3         | I/O      | GPIO35/ADC_IN4/UART1_RTS     | UP                                                           |                                                              |
 | 65       | PC1         | I/O      | GPIO33/ADC_IN2/DAC/UART1_TX  | 数字音频转换为模拟音频接口                                   |                                                              |
-| 66       | PC0         | I/O      | GPIO32/ADC_IN1/UART1_RX      | UP/DOWN                                                      |                                                              |
+| 66       | PC0         | I/O      | GPIO32/ADC_IN1/UART1_RX      | UP                                                           |                                                              |
 | 67       | VDD25       | O        |                              | 接1uF对地电容                                                |                                                              |
 | 68       | DN          | I        |                              | 注意保持差分走线，阻抗做好90 Ohm控制                         |                                                              |
 | 69       | DP          | O        |                              |                                                              |                                                              |
