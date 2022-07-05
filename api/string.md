@@ -3,7 +3,7 @@
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../lua/src/lstrlib_exts.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
 
-## string.toHex(str)
+## string.toHex(str, separator)
 
 将字符串转成HEX
 
@@ -12,6 +12,7 @@
 |传入值类型|解释|
 |-|-|
 |string|需要转换的字符串|
+|string|分隔符, 默认为""|
 
 **返回值**
 
@@ -25,6 +26,7 @@
 ```lua
 string.toHex("\1\2\3") --> "010203" 6
 string.toHex("123abc") --> "313233616263" 12
+string.toHex("123abc", " ") --> "31 32 33 61 62 63 " 12
 
 ```
 
