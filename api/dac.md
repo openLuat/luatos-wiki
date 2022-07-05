@@ -25,7 +25,13 @@
 
 **例子**
 
-无
+```lua
+if dac.open(0, 44000) then
+    log.info("dac", "dac ch0 is opened")
+end
+
+
+```
 
 ---
 
@@ -49,7 +55,14 @@
 
 **例子**
 
-无
+```lua
+if dac.open(0, 44000) then
+    log.info("dac", "dac ch0 is opened")
+    dac.write(0, string.fromHex("ABCDABCD"))
+end
+dac.close(0)
+
+```
 
 ---
 
@@ -72,7 +85,14 @@
 
 **例子**
 
-无
+```lua
+if dac.open(0, 44000) then
+    log.info("dac", "dac ch0 is opened")
+    dac.write(0, string.fromHex("ABCDABCD"))
+end
+dac.close(0)
+
+```
 
 ---
 
