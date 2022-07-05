@@ -18,6 +18,7 @@
     pwm/index
     rtc
     sfd
+    sfud/index
     spi
     timer
     uart/index
