@@ -48,16 +48,16 @@
 
 .. toctree::
    :hidden:
-   :caption: LuatOS 介绍
+   :caption: 💁 LuatOS 介绍
 
-   首页 <https://wiki.luatos.com>
+   🏠️ 首页 <https://wiki.luatos.com>
    pages/emulator
    pages/tools
    pages/supports
 
 .. toctree::
    :hidden:
-   :caption: 快速上手
+   :caption: ⚡ 快速上手
 
    luaGuide/index
    chips/index
@@ -66,16 +66,16 @@
 
 .. toctree::
    :hidden:
-   :caption: 参考手册
+   :caption: 📖 参考手册
 
    api/index
    api/sys_pub
-   原生API手册 <https://wiki.luatos.com/_static/lua53doc/index.html>
+   🌕 原生API手册 <https://wiki.luatos.com/_static/lua53doc/index.html>
    api/libs/index
 
 .. toctree::
    :hidden:
-   :caption: 内核开发
+   :caption: 🖥️ 内核开发
 
    develop/compile
    develop/docs
@@ -83,12 +83,12 @@
 
 .. toctree::
    :hidden:
-   :caption: 应用开发
+   :caption: 💼 应用开发
 
    appDevelopment/index
 
 .. toctree::
    :hidden:
-   :caption: 其他资料
+   :caption: 🗄️ 其他资料
 
    archives
