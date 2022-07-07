@@ -107,7 +107,7 @@ end
 sys.timerStart(test1, 2000, "TEST1")
 
 -- 创建一个循环定时器
-sys.timerStart(test2, 2000, "TEST2")
+sys.timerLoopStart(test2, 2000, "TEST2")
 
 sys.run()
 ```
@@ -192,7 +192,7 @@ sys.subscribe("USER_MSG", function(arg)
 end)
 
 sys.timerLoopStart(function()
-    sys.pubhlish("USER_MSG", "DATA" .. count)
+    sys.publish("USER_MSG", "DATA" .. count)
     count = count + 1
 end, 3000)
 
@@ -231,7 +231,7 @@ sys.taskInit(function()
 end)
 
 sys.timerLoopStart(function()
-    sys.pubhlish("USER_MSG", "DATA" .. count)
+    sys.publish("USER_MSG", "DATA" .. count)
     count = count + 1
 end, 3000)
 
@@ -249,3 +249,14 @@ I/user.SYS true DATA5
 ...
 ...
 ```
+
+
+<script>
+window.onload = function(){
+    //在代码块附近加上快速测试代码链接
+    $("pre").each(function () {
+        if($(this).text().indexOf("log.info") >= 0)
+            $(this).before('<a class="run-code-btn" href="https://wiki.luatos.com/_static/luatos-emulator/lua.html?'+escape($(this).text())+'" target="_blank">点我快速测试下面的代码</a>');
+    });
+}
+</script>
