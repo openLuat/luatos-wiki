@@ -57,7 +57,7 @@
 
 .. toctree::
    :hidden:
-   :caption: ⚡ 快速上手
+   :caption: 🌠 快速上手
 
    luaGuide/index
    chips/index
