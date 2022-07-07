@@ -2,7 +2,7 @@
 
 ![](lcd_air101_image.png)
 
-## **原理图**
+## 原理图
 
 ![image-20220223143108801](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/image-20220223143108801.png)
 
