@@ -12,6 +12,8 @@ API教程
     fdb
     disp
     i2c/index
+    spi/index
+    uart/index
     lcd
     mcu/index
     pm
@@ -19,6 +21,4 @@ API教程
     rtc
     sfd
     sfud/index
-    spi
     timer
-    uart/index
