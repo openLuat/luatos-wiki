@@ -34,3 +34,4 @@
 * 抖音     [aweme://goods/store?sec_shop_id=fwqlTVqO](aweme://goods/store?sec_shop_id=fwqlTVqO)
 ![](douyin.png)
 
+* 合宙商城 ![](luatos_shop.jpg)
