@@ -17,3 +17,5 @@
 ![calendar](img/calendar.png)
 
 项目地址：[墨水屏接口说明](https://api.luatos.org/#eink)
+
+外壳模型：[3d文件](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220710142131642_外壳.7z)
