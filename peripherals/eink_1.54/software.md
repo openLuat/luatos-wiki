@@ -4,6 +4,8 @@
 
 参考LuatOS主仓库的[Eink demo](https://gitee.com/openLuat/LuatOS/tree/master/demo/eink/Air101)，注意该屏幕的驱动应使用`eink.MODEL_1in54`。
 
+> 注意：由于墨水屏的`BUSY`引脚对应`ESP32C3-CORE`开发板的`GPIO11`，所以如果使用的是`ESP32C3-CORE`开发板，**需要[进行解锁操作](https://gitee.com/dreamcmi/LuatOS-ESP32/blob/master/doc/VDD_SPI_AS_GPIO.md)才可正常使用该屏幕**。
+
 ## 项目例子
 
 ### 电纸书
