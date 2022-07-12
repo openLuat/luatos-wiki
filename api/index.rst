@@ -13,6 +13,7 @@
    disp
    eink
    fdb
+   fonts
    fota
    fs
    gpio
