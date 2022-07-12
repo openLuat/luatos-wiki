@@ -92,3 +92,26 @@ lora.recive(1000)
 
 ---
 
+## lora.mode(mode)
+
+设置进入模式(休眠，正常等)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|number|模式 正常模式:lora.STANDBY 休眠模式:lora.SLEEP 默认为正常模式|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+lora.mode(lora.STANDBY)
+
+```
+
+---
+
