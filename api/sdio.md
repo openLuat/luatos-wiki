@@ -114,7 +114,7 @@ end
 
 ---
 
-## sdio.sd_unmount(id, path)
+## sdio.sd_umount(id, path)
 
 卸载SD卡(视硬件情况, 不一定支持)
 
