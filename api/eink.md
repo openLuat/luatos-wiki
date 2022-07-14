@@ -126,7 +126,7 @@
 
 |传入值类型|解释|
 |-|-|
-|userdata|字体.|
+|userdata|字体|
 
 **返回值**
 
@@ -135,8 +135,8 @@
 **例子**
 
 ```lua
--- 设置为中文字体,对之后的drawStr有效
-eink.setFont(eink.font_opposansm12)
+-- 设置为字体,对之后的print有效
+eink.setFont(eink.font_opposansm12_chinese)
 
 ```
 
