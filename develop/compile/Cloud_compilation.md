@@ -58,7 +58,7 @@
 lcd.font_opposansm12_chinese
 
 -- 自定义字库的引用方式
-fonts.u8g2_get("oppo_bold_12")
+fonts.get("oppo_bold_12")
 ```
 
 使用方式
@@ -70,7 +70,7 @@ eink.setFont(eink.font_opposansm12_chinese)
 u8g2.setFont(u8g2.font_opposansm12_chinese)
 
 -- 自定义字库的引用方式, 统一使用
-lcd.setFont(fonts.u8g2_get("oppo_bold_12"))
-eink.setFont(fonts.u8g2_get("oppo_bold_12"))
-u8g2.setFont(fonts.u8g2_get("oppo_bold_12"))
+lcd.setFont(fonts.get("oppo_bold_12"))
+eink.setFont(fonts.get("oppo_bold_12"))
+u8g2.setFont(fonts.get("oppo_bold_12"))
 ```
