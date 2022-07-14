@@ -43,3 +43,34 @@
 1. 为未点击保存修改就点击准备就绪。
 
 2. 组件选择过多，或字体的选择导致flash大小不够。
+
+## 自定义字库怎么用
+
+自定义字库从 2022-07-24 开始对外发布.
+
+自定义字库的名称, 与云编译页面上字库的 "命名" 值相同. 即 字体英文名_字体类型_字号
+
+1. 自定义字库与原有字库不冲突,
+2. 自定义字库与原有字库的引用方式差异
+
+```lua
+-- 原有字库的引用方式
+lcd.font_opposansm12_chinese
+
+-- 自定义字库的引用方式
+fonts.u8g2_get("oppo_bold_12")
+```
+
+使用方式
+
+```lua
+-- 原有字库的引用方式, 各自引用
+lcd.setFont(lcd.font_opposansm12_chinese)
+eink.setFont(eink.font_opposansm12_chinese)
+u8g2.setFont(u8g2.font_opposansm12_chinese)
+
+-- 自定义字库的引用方式, 统一使用
+lcd.setFont(fonts.u8g2_get("oppo_bold_12"))
+eink.setFont(fonts.u8g2_get("oppo_bold_12"))
+u8g2.setFont(fonts.u8g2_get("oppo_bold_12"))
+```
