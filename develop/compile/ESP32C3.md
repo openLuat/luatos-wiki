@@ -60,7 +60,7 @@ D:\gitee\LuatOS-ESP32\components\luat\include\luat_conf_bsp.h
 
 ## 定制固件里的库
 
-打开`app/port/luat_conf_bsp.h`，按需注释或取消注释。注意，如果固件放不下，会编译失败。
+打开`D:\gitee\LuatOS-ESP32\components\luat\include\luat_conf_bsp.h`，按需注释或取消注释。注意，如果功能太大导致固件放不下，会编译失败。
 
 ## 打开idf命令行工具
 
