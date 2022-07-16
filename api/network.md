@@ -173,7 +173,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ## network.tx(ctrl, data, ip, port, flag)
 
-发送数据给对端
+发送数据给对端，单次调用发送不可以超过60000B，建议不要超过16KB，但是可以连续多次调用，不能超过128次
 
 **参数**
 
