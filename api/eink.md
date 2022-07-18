@@ -118,7 +118,7 @@
 
 ---
 
-## eink.setFont(font) 
+## eink.setFont(font)
 
 设置字体
 
