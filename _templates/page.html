@@ -127,31 +127,23 @@
             </a>
           {%- endif %}
           <div class="giscus"></div>
-          <script src="https://giscus.app/client.js" data-repo="chenxuuu/luatos-wiki" data-repo-id="R_kgDOHD_oAA" data-category="zzzzz" data-category-id="DIC_kwDOHD_oAM4COQys" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous" async></script>  
+          <script src="https://giscus.app/client.js" data-repo="chenxuuu/luatos-wiki" data-repo-id="R_kgDOHD_oAA" data-category="zzzzz" data-category-id="DIC_kwDOHD_oAM4COQys" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" crossorigin="anonymous" async></script>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
             {%- if show_copyright %}
             <div class="copyright">
-              {%- if hasdoc('copyright') %}
-                {% trans path=pathto('copyright'), copyright=copyright|e -%}
-                  <a href="{{ path }}">Copyright</a> &#169; {{ copyright }}
-                {%- endtrans %}
-              {%- else %}
-                {% trans copyright=copyright|e -%}
-                  Copyright &#169; {{ copyright }}
-                {%- endtrans %}
-              {%- endif %}
+              Copyright © <a href="https://luatos.com/">LuatOS团队</a> | <a href="https://nightly.link/openLuat/luatos-wiki/workflows/sphinx/master">下载离线版文档</a>
             </div>
             {%- endif %}
-            {% trans %}Made with {% endtrans -%}
             {%- if show_sphinx -%}
+            {% trans %}Made with {% endtrans -%}
             {% trans %}<a href="https://www.sphinx-doc.org/">Sphinx</a> and {% endtrans -%}
             <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-            {% endif -%}
             {% trans %}
             <a href="https://github.com/pradyunsg/furo">Furo</a>
             {% endtrans %}
+            {% endif -%}
             {%- if last_updated -%}
             <div class="last-updated">
               {% trans last_updated=last_updated|e -%}

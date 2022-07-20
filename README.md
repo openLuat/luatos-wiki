@@ -1,5 +1,7 @@
 # luatos文档
 
+[![sphinx](https://github.com/openLuat/luatos-wiki/actions/workflows/sphinx.yml/badge.svg)](https://nightly.link/openLuat/luatos-wiki/workflows/sphinx/master)
+
 欢迎大家对文档进行完善，如有错误请指出，或直接帮忙修改
 
 ## 目录分类

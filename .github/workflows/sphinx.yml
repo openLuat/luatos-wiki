@@ -21,5 +21,11 @@ jobs:
           sudo chmod 755 ossutil64
           echo -e "${OSS_CONFIG}" > ~/.ossutilconfig
           ./ossutil64 cp -u -r output/ oss://${OSS_NAME}/
-
-
+          cp html luatos-wiki/
+          cd luatos-wiki/html/
+          echo "此文档为离线版，请访问wiki.luatos.com获取最新版本，文档更新时间：$(TZ=UTC-8 date +%Y-%m-%d,%H:%m:%S)" > "请先读我.txt"
+      - name: Upload artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: wiki_offline
+          path: wiki_offline
