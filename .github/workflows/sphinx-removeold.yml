@@ -28,6 +28,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v1
         with:
-          name: wiki_offline
-          path: wiki_offline
+          name: output
+          path: output
 
