@@ -80,6 +80,8 @@ html_css_files = [
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_search_options = {'dict': 'luatos-wiki/keyworks.txt'}
+
 
 html_show_sphinx = False
 html_search_language = 'zh'
