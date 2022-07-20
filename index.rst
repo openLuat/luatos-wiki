@@ -86,7 +86,7 @@
    :caption: 💼 应用开发
 
    appDevelopment/index
-   软件库 <https://wiki.luatos.com/_static/repo1/index.html>
+   软件库 <https://wiki.luatos.com/_static/repo1.html>
 
 .. toctree::
    :hidden:
