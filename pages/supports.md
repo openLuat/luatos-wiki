@@ -5,7 +5,7 @@
 ## SoC产品线, MCU/WIFI/NBIOT
 * LuatOS 18群: 1061642968 (已满), 面向soc/mcu产品线, LuaTools, 合宙Web服务反馈
 * LuatOS 21群: 827963649（加群密码`仅支持luatos，air32勿加`） , 面向soc/mcu产品线, LuaTools, 合宙Web服务反馈
-* Air32交流群：767427989（加群密码`仅提供air32支持`），面向Air32产品线
+* Air32交流群：767427989（加群密码`air32群，lua用户勿加`），面向Air32产品线
 
 ## Air产品线, 4G Cat1/Cat4
 * LuatOS 20群: 649926645  , 面向LuatIDE, 2G/4G 产品线
