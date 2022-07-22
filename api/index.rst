@@ -7,6 +7,7 @@
 
    adc
    camera
+   coremark
    crypto
    ctiot
    dac
@@ -17,6 +18,7 @@
    fota
    fs
    gpio
+   gtfont
    http
    i2c
    i2s

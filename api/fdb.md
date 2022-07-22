@@ -1,4 +1,4 @@
-# fdb - kv数据库(基于FlashDB)
+# fdb - kv数据库,掉电不丢数据
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/flashdb/src/luat_lib_fdb.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
@@ -24,6 +24,7 @@
 **例子**
 
 ```lua
+-- fdb库基于 flashdb , 再次表示感谢.
 if fdb.kvdb_init("env", "onchip_fdb") then
     log.info("fdb", "kv数据库初始化成功")
 end
