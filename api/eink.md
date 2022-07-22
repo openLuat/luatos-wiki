@@ -4,7 +4,7 @@
 
 > 本库有专属demo，[点此链接查看eink的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/eink)
 
-## eink.setup(full, spiid)
+## eink.setup(full, spiid, pin_busy, pin_reset, pin_dc, pin_cs)
 
 初始化eink
 
