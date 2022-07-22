@@ -2,11 +2,13 @@
 Air101
 Air32
 Air32F103
+Air32F103CBT6
 Air103
 Air105
 Air106
 Air901
 ESP32C3
+ESP32
 Air302
 Air780
 云编译
@@ -25,3 +27,8 @@ LCD屏
 文件系统
 协程
 云编译
+软件库
+SoC
+红外测温
+温湿度传感器
+RS232
