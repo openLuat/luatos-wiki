@@ -10,3 +10,4 @@ LuatOS欢迎有能力的开发者共享自己的功能。
    add_module
    luadb
    dev_doc/index
+   soc_format
