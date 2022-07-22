@@ -32,3 +32,16 @@ SoC
 红外测温
 温湿度传感器
 RS232
+软件仓库
+百度云
+华为云
+透传
+腾讯云
+阿里云
+物联网
+MQTT
+TCP
+UDP
+HTTP
+WebSocket
+HTTP3
