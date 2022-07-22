@@ -15,6 +15,7 @@
     air901/index
     esp32c3/index
     air32f103/index
+    swm181/index
     W806
     win32
     supported
