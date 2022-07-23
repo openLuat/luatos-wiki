@@ -208,3 +208,30 @@ end
 
 ---
 
+## fdb.kv_stat()
+
+获取kv数据库状态
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|已使用的空间,单位字节|
+|int|总可用空间, 单位字节|
+|int|总kv键值对数量, 单位个|
+
+**例子**
+
+```lua
+-- 本API于2022.07.23 添加
+local used,maxs,kv_count = fdb.kv_stat()
+log.info("fdb", "kv", used,maxs,kv_count)
+
+```
+
+---
+
