@@ -181,6 +181,17 @@ static int l_module_function(lua_State *L) {
 ]]
 ```
 
+静态变量，可在变量附近添加以下格式的注释：
+
+```lua
+--//@const 变量名 类型 解释
+--比如
+--//@const NONE number 无校验
+
+--只需写变量名
+--会自动在文档中生成 库名.变量名 的结果
+```
+
 ## sys_pub发布的topic描述规范
 
 在`lua_call`或`lua_pushstring`附近，加上对此消息的相关解释
