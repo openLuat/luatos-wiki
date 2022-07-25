@@ -4,15 +4,6 @@
 
 > 本库有专属demo，[点此链接查看ctiot的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/ctiot)
 
-**示例**
-
-```lua
-sys.subscribe("CTIOT_RX", function(data)
-    log.info("CTIOT_RX", data:toHex())
-end)
-
-```
-
 ## ctiot.init()
 
 初始化ctiot，在复位开机后使用一次

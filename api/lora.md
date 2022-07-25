@@ -4,15 +4,6 @@
 
 > 本库有专属demo，[点此链接查看lora的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/lora)
 
-**示例**
-
-```lua
-sys.subscribe("LORA_TX_DONE", function()
-    lora.recive(1000)
-end)
-
-```
-
 ## lora.init(ic, loraconfig,spiconfig)
 
 lora初始化
