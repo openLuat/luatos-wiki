@@ -5,6 +5,18 @@
 > 本库有专属demo，[点此链接查看uart的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/uart)
 > 本库还有视频教程，[点此链接查看](https://www.bilibili.com/video/BV1er4y1p75y)
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|uart.ODD|number|奇校验|
+|uart.EVEN|number|偶校验|
+|uart.NONE|number|无校验|
+|uart.LSB|number|小端模式|
+|uart.MSB|number|大端模式|
+|uart.VUART_0|number|虚拟串口0|
+
+
 ## uart.setup(id, baud_rate, data_bits, stop_bits, partiy, bit_order, buff_size)
 
 配置串口参数
