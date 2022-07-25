@@ -5,6 +5,22 @@
 > 本库有专属demo，[点此链接查看gpio的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/gpio)
 > 本库还有视频教程，[点此链接查看](https://www.bilibili.com/video/BV1hr4y1p7dt)
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|gpio.LOW|number|低电平|
+|gpio.HIGH|number|高电平|
+|gpio.OUTPUT|number|输出模式|
+|gpio.INPUT|number|输入模式|
+|gpio.IRQ|number|中断模式|
+|gpio.PULLUP|number|上拉|
+|gpio.PULLDOWN|number|下拉|
+|gpio.RISING|number|上升沿触发|
+|gpio.FALLING|number|下降沿触发|
+|gpio.BOTH|number|双向触发|
+
+
 ## gpio.setup(pin, mode, pull, irq)
 
 设置管脚功能
@@ -182,7 +198,7 @@ end, 500)
 |传入值类型|解释|
 |-|-|
 |int|gpio号|
-|int/string|数值或者字符串. |
+|int/string|数值或者字符串.|
 |int|len 长度 单位是bit, 高位在前.|
 |int|delay 延迟,当前无固定时间单位|
 

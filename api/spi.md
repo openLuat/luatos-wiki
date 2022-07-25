@@ -5,6 +5,18 @@
 > 本库有专属demo，[点此链接查看spi的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/spi)
 > 本库还有视频教程，[点此链接查看](https://www.bilibili.com/video/BV1VY411M7YH)
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|spi.MSB|number|大端模式|
+|spi.LSB|number|小端模式|
+|spi.master|number|主机模式|
+|spi.slave|number|从机模式|
+|spi.full|number|全双工|
+|spi.half|number|半双工|
+
+
 ## spi.setup(id, cs, CPHA, CPOL, dataw, bandrate, bitdict, ms, mode)
 
 设置并启用SPI

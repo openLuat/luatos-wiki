@@ -4,6 +4,14 @@
 
 > 本库有专属demo，[点此链接查看i2c的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/i2c)
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|i2c.FAST|number|高速|
+|i2c.SLOW|number|低速|
+
+
 ## i2c.exist(id)
 
 i2c编号是否存在

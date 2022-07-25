@@ -4,6 +4,16 @@
 
 > 本库有专属demo，[点此链接查看ctiot的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/ctiot)
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|ctiot.CON|number|CON|
+|ctiot.NON|number|NON|
+|ctiot.NON_REL|number|NON_REL|
+|ctiot.CON_REL|number|CON_REL|
+
+
 ## ctiot.init()
 
 初始化ctiot，在复位开机后使用一次

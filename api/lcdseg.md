@@ -3,6 +3,24 @@
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_lcdseg.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|lcdseg.BIAS_STATIC|number|没偏置电压(bias)|
+|lcdseg.BIAS_ONEHALF|number|1/2偏置电压(bias)|
+|lcdseg.BIAS_ONETHIRD|number|1/3偏置电压(bias)|
+|lcdseg.BIAS_ONEFOURTH|number|1/4偏置电压(bias)|
+|lcdseg.DUTY_STATIC|number|100%占空比(duty)|
+|lcdseg.DUTY_ONEHALF|number|1/2占空比(duty)|
+|lcdseg.DUTY_ONETHIRD|number|1/3占空比(duty)|
+|lcdseg.DUTY_ONEFOURTH|number|1/4占空比(duty)|
+|lcdseg.DUTY_ONEFIFTH|number|1/5占空比(duty)|
+|lcdseg.DUTY_ONESIXTH|number|1/6占空比(duty)|
+|lcdseg.DUTY_ONESEVENTH|number|1/7占空比(duty)|
+|lcdseg.DUTY_ONEEIGHTH|number|1/8占空比(duty)|
+
+
 ## lcdseg.setup(bias, duty, vlcd, com_number, fresh_rate, com_mark, seg_mark)
 
 初始化lcdseg库
@@ -31,7 +49,7 @@
 -- 初始化lcdseg
 if lcdseg.setup(lcdseg.BIAS_ONETHIRD, lcdseg.DUTY_ONEFOURTH, 33, 4, 60) then
     lcdseg.enable(1)
-    
+
     lcdseg.seg_set(0, 1, 1)
     lcdseg.seg_set(2, 0, 1)
     lcdseg.seg_set(3, 31, 1)

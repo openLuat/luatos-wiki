@@ -3,6 +3,17 @@
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_log.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|log.LOG_SILENT|number|无日志模式|
+|log.LOG_DEBUG|number|debug日志模式|
+|log.LOG_INFO|number|info日志模式|
+|log.LOG_WARN|number|warning日志模式|
+|log.LOG_ERROR|number|error日志模式|
+
+
 ## log.setLevel(level)
 
 设置日志级别

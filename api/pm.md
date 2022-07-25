@@ -4,6 +4,16 @@
 
 > 本库有专属demo，[点此链接查看pm的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/pm)
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|pm.IDLE|number|IDLE模式|
+|pm.LIGHT|number|LIGHT模式|
+|pm.DEEP|number|DEEP模式|
+|pm.HIB|number|HIB模式|
+
+
 ## pm.request(mode)
 
 请求进入指定的休眠模式

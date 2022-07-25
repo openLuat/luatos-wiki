@@ -4,6 +4,15 @@
 
 > 本库还有视频教程，[点此链接查看](https://www.bilibili.com/video/BV1gr4y1V7HN)
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|zbuff.SEEK_SET|number|以头为基点|
+|zbuff.SEEK_CUR|number|以当前位置为基点|
+|zbuff.SEEK_END|number|以末尾为基点|
+
+
 ## zbuff.create(length,data)
 
 创建zbuff
