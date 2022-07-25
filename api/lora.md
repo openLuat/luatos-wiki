@@ -33,6 +33,83 @@ lora.init("llcc68",
 
 ---
 
+## lora.set_channel(freq)
+
+设置频道频率
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|number|频率|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+lora.set_channel(433000000)
+
+```
+
+---
+
+## lora.set_txconfig(ic, txconfig)
+
+lora配置发送参数
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|lora 型号，当前支持：<br>llcc68<br>sx1268|
+|table|lora发送配置参数,与具体设备有关|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+lora.set_txconfig("llcc68",
+{mode=1,power=22,fdev=0,bandwidth=0,datarate=9,coderate=4,preambleLen=8,
+    fixLen=false,crcOn=true,freqHopOn=0,hopPeriod=0,iqInverted=false,timeout=3000}
+)
+
+```
+
+---
+
+## lora.init(ic, set_rxconfig)
+
+lora配置接收参数
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|lora 型号，当前支持：<br>llcc68<br>sx1268|
+|table|lora接收配置参数,与具体设备有关|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+lora.set_rxconfig("llcc68",
+{mode=1,bandwidth=0,datarate=9,coderate=4,bandwidthAfc=0,preambleLen=8,symbTimeout=0,fixLen=false,
+    payloadLen=0,crcOn=true,freqHopOn=0,hopPeriod=0,iqInverted=false,rxContinuous=false}
+)
+
+```
+
+---
+
 ## lora.send(data)
 
 发数据
