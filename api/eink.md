@@ -4,6 +4,50 @@
 
 > 本库有专属demo，[点此链接查看eink的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/eink)
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|eink.MODEL_1in02d|number|1.02寸d|
+|eink.MODEL_1in54|number|1.54寸|
+|eink.MODEL_1in54_V2|number|1.54寸_V2|
+|eink.MODEL_1in54b|number|1.54寸b|
+|eink.MODEL_1in54b_V2|number|1.54寸b_V2|
+|eink.MODEL_1in54_V3|number|1.54寸_V3|
+|eink.MODEL_1in54c|number|1.54寸c|
+|eink.MODEL_1in54f|number|1.54寸f|
+|eink.MODEL_2in54b_V3|number|2.13寸b_V3|
+|eink.MODEL_2in7|number|2.7寸|
+|eink.MODEL_2in7b|number|2.7寸b|
+|eink.MODEL_2in9|number|2.9寸|
+|eink.MODEL_2in9_V2|number|2.9寸_V2|
+|eink.MODEL_2in9bc|number|2.9寸bc|
+|eink.MODEL_2in9b_V3|number|2.9寸b_V3|
+|eink.MODEL_2in9d|number|2.9寸d|
+|eink.MODEL_2in9f|number|2.9寸f|
+|eink.MODEL_3in7|number|3.7寸|
+|eink.font_opposansm8|font|8号字体|
+|eink.font_unifont_t_symbols|font|符号字体|
+|eink.font_open_iconic_weather_6x_t|font|天气字体|
+|eink.font_opposansm10|font|10号字体|
+|eink.font_opposansm12|font|12号字体|
+|eink.font_opposansm16|font|16号字体|
+|eink.font_opposansm18|font|18号字体|
+|eink.font_opposansm20|font|20号字体|
+|eink.font_opposansm22|font|22号字体|
+|eink.font_opposansm24|font|24号字体|
+|eink.font_opposansm32|font|32号字体|
+|eink.font_opposansm8_chinese|font|8号中文字体|
+|eink.font_opposansm8_chinese|font|10号中文字体|
+|eink.font_opposansm12_chinese|font|12号中文字体|
+|eink.font_opposansm16_chinese|font|16号中文字体|
+|eink.font_opposansm18_chinese|font|18号中文字体|
+|eink.font_opposansm20_chinese|font|20号中文字体|
+|eink.font_opposansm22_chinese|font|22号中文字体|
+|eink.font_opposansm24_chinese|font|24号中文字体|
+|eink.font_opposansm32_chinese|font|32号中文字体|
+
+
 ## eink.setup(full, spiid, pin_busy, pin_reset, pin_dc, pin_cs)
 
 初始化eink

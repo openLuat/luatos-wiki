@@ -4,6 +4,14 @@
 
 > 本库有专属demo，[点此链接查看lora的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/lora)
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|lora.SLEEP|number|SLEEP模式|
+|lora.STANDBY|number|STANDBY模式|
+
+
 ## lora.init(ic, loraconfig,spiconfig)
 
 lora初始化

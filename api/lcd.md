@@ -4,6 +4,32 @@
 
 > 本库有专属demo，[点此链接查看lcd的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/lcd)
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|lcd.font_opposansm8|font|8号字体|
+|lcd.font_unifont_t_symbols|font|符号字体|
+|lcd.font_open_iconic_weather_6x_t|font|天气字体|
+|lcd.font_opposansm10|font|10号字体|
+|lcd.font_opposansm12|font|12号字体|
+|lcd.font_opposansm16|font|16号字体|
+|lcd.font_opposansm18|font|18号字体|
+|lcd.font_opposansm20|font|20号字体|
+|lcd.font_opposansm22|font|22号字体|
+|lcd.font_opposansm24|font|24号字体|
+|lcd.font_opposansm32|font|32号字体|
+|lcd.font_opposansm8_chinese|font|8号中文字体|
+|lcd.font_opposansm8_chinese|font|10号中文字体|
+|lcd.font_opposansm12_chinese|font|12号中文字体|
+|lcd.font_opposansm16_chinese|font|16号中文字体|
+|lcd.font_opposansm18_chinese|font|18号中文字体|
+|lcd.font_opposansm20_chinese|font|20号中文字体|
+|lcd.font_opposansm22_chinese|font|22号中文字体|
+|lcd.font_opposansm24_chinese|font|24号中文字体|
+|lcd.font_opposansm32_chinese|font|32号中文字体|
+
+
 ## lcd.init(tp, args)
 
 lcd显示屏初始化
@@ -478,7 +504,7 @@ lcd.drawCircle(120,120,20,0x001F)
 
 |传入值类型|解释|
 |-|-|
-|int|font lcd.font_opposansm8 lcd.font_opposansm10 lcd.font_opposansm16  lcd.font_opposansm18  lcd.font_opposansm20  lcd.font_opposansm22  lcd.font_opposansm24 lcd.font_opposansm32 lcd.font_opposansm12_chinese lcd.font_opposansm16_chinese lcd.font_opposansm24_chinese lcd.font_opposansm32_chinese |
+|int|font lcd.font_opposansm8 lcd.font_opposansm10 lcd.font_opposansm16  lcd.font_opposansm18  lcd.font_opposansm20  lcd.font_opposansm22  lcd.font_opposansm24 lcd.font_opposansm32 lcd.font_opposansm12_chinese lcd.font_opposansm16_chinese lcd.font_opposansm24_chinese lcd.font_opposansm32_chinese|
 
 **返回值**
 
@@ -823,7 +849,7 @@ local red =   lcd.rgb565(0xFF0000, true)
 local green = lcd.rgb565(0x00FF00, true)
 local blue =  lcd.rgb565(0x0000FF, true)
 
--- 3. 三参数形式, 红/绿/蓝, 各8bit 
+-- 3. 三参数形式, 红/绿/蓝, 各8bit
 local red = lcd.rgb565(0xFF, 0x00, 0x00)
 local green = lcd.rgb565(0x00, 0xFF, 0x00)
 local blue = lcd.rgb565(0x00, 0x00, 0xFF)

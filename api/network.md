@@ -4,6 +4,18 @@
 
 > 本库有专属demo，[点此链接查看network的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/network)
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|network.ETH0|number|ETH0|
+|network.LINK|number|LINK事件|
+|network.ON_LINE|number|ON_LINE事件|
+|network.EVENT|number|EVENT事件|
+|network.TX_OK|number|TX_OK事件|
+|network.CLOSED|number|CLOSED事件|
+
+
 ## network.create(adapter, cb)
 
 在某个适配的网卡上申请一个network_ctrl

@@ -4,6 +4,14 @@
 
 > 本库有专属demo，[点此链接查看multimedia的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/multimedia)
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|multimedia.MP3|number|MP3格式|
+|multimedia.WAV|number|WAV格式|
+
+
 ## audio.start(id, audio_format, num_channels, sample_rate, bits_per_sample, is_signed)
 
 启动一个多媒体通道准备播放音频

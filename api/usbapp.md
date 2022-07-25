@@ -4,6 +4,16 @@
 
 > 本库有专属demo，[点此链接查看usbapp的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/usb_hid)
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|usbapp.NO_READY|number|NO_READY事件|
+|usbapp.READY|number|READY事件|
+|usbapp.SEND_OK|number|SEND_OK事件|
+|usbapp.NEW_DATA|number|NEW_DATA事件|
+
+
 ## usbapp.set_id(id, vid, pid)
 
 USB 设置VID和PID
