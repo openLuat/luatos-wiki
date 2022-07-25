@@ -24,9 +24,7 @@ lora初始化
 
 ```lua
 lora.init("llcc68",
-{mode=1,bandwidth=0,datarate=9,coderate=4,preambleLen=8,fixLen=false,crcOn=true,freqHopOn=0,hopPeriod=0,iqInverted=false,
-    frequency = 433000000, power=22,fdev=0,timeout=3000,  bandwidthAfc=0,symbTimeout=0,payloadLen=0,rxContinuous=false},
-{id = 0,cs = pin.PB04,res = pin.PB00,busy = pin.PB01,dio1 = pin.PB06}
+{id = 0,cs = pin.PB04,res = pin.PB00,busy = pin.PB01,dio1 = pin.PB06,lora_init = true}
 )
 
 ```
@@ -155,6 +153,30 @@ sys.subscribe("LORA_RX_DONE", function(data, size)
     lora.send("PING")
 end)
 lora.recive(1000)
+
+```
+
+---
+
+## lora.get_payload()
+
+主动读取接收缓存
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|缓存数据|
+|number|数据长度|
+
+**例子**
+
+```lua
+payload,len = lora.get_payload()
 
 ```
 
