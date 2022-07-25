@@ -158,30 +158,6 @@ lora.recive(1000)
 
 ---
 
-## lora.get_payload()
-
-主动读取接收缓存
-
-**参数**
-
-无
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|string|缓存数据|
-|number|数据长度|
-
-**例子**
-
-```lua
-payload,len = lora.get_payload()
-
-```
-
----
-
 ## lora.mode(mode)
 
 设置进入模式(休眠，正常等)
