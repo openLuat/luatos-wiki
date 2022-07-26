@@ -448,3 +448,63 @@ local otp = crypto.totp("asdfassdfasdfass")
 
 ---
 
+## crypto.base64_encode(data)
+
+将数据进行base64编码
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|待编码的数据|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|编码后的数据|
+
+**例子**
+
+```lua
+-- 本函数与 string.toBase64 是同一个
+local data = "123"
+local bdata = crypto.base64_encode(data)
+log.info("base64", "encode", data, bdata)
+data = crypto.base64_decode(data)
+log.info("base64", "decode", data, bdata)
+
+```
+
+---
+
+## crypto.base64_decode(data)
+
+将数据进行base64解码
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|待解码的数据|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|解码后的数据|
+
+**例子**
+
+```lua
+-- 本函数与 string.fromBase64 是同一个
+local data = "123"
+local bdata = crypto.base64_encode(data)
+log.info("base64", "encode", data, bdata)
+data = crypto.base64_decode(data)
+log.info("base64", "decode", data, bdata)
+
+```
+
+---
+
