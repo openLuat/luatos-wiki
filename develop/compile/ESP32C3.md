@@ -50,7 +50,7 @@ git clone https://gitee.com/dreamcmi/LuatOS-ESP32.git
 LuatOS 主库代码 D:\gitee\LuatOS
 ESP32C3 适配代码 D:\gitee\LuatOS-ESP32
 
-检查点, 路径正确的情况下, 以下文件路径必存在, 找不到就肯定是命名问题, 手动添加是徒劳的 
+检查点, 路径正确的情况下, 以下文件路径必存在, 找不到就肯定是命名问题, 手动添加是徒劳的
 
 D:\gitee\LuatOS\lua\src\lgc.c
 D:\gitee\LuatOS-ESP32\components\luat\include\luat_conf_bsp.h
@@ -78,7 +78,7 @@ D:\gitee\LuatOS-ESP32\components\luat\include\luat_conf_bsp.h
 
 进入`Component config` -> `ESP System Settings` -> `Channel for console output`
 
-勾上`USB Serial/JTAG Controller`，按S保存，再按Q退出
+勾上`USB Serial/JTAG Controller`，按S保存，回车，再按Q退出
 
 ![idf usb](img/idf_usb.png)
 
