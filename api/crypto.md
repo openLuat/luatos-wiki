@@ -508,3 +508,30 @@ log.info("base64", "decode", data, bdata)
 
 ---
 
+## crypto.cipher_list()
+
+获取当前固件支持的cipher列表
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|table|本固件支持的cipher列表,字符串数组|
+
+**例子**
+
+```lua
+-- 本API于2022.07.27添加
+local ciphers = crypto.cipher_list()
+if ciphers then
+    log.info("crypto", "ciphers list", json.encode(ciphers))
+end
+
+```
+
+---
+
