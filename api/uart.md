@@ -9,6 +9,9 @@
 
 |常量|类型|解释|
 |-|-|-|
+|uart.Odd|number|奇校验,大小写兼容性|
+|uart.Even|number|偶校验,大小写兼容性|
+|uart.None|number|无校验,大小写兼容性|
 |uart.ODD|number|奇校验|
 |uart.EVEN|number|偶校验|
 |uart.NONE|number|无校验|

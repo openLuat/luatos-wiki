@@ -15,6 +15,12 @@
 |spi.slave|number|从机模式|
 |spi.full|number|全双工|
 |spi.half|number|半双工|
+|spi.SPI_0|number|SPI0|
+|spi.SPI_1|number|SPI1|
+|spi.SPI_2|number|SPI2|
+|spi.SPI_3|number|SPI3|
+|spi.SPI_4|number|SPI4|
+|spi.HSPI_0|number|高速SPI0，目前105专用|
 
 
 ## spi.setup(id, cs, CPHA, CPOL, dataw, bandrate, bitdict, ms, mode)
