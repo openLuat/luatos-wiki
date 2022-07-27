@@ -151,7 +151,7 @@ log.info("sha256", crypto.sha256("abc"))
 
 |返回值类型|解释|
 |-|-|
-|string|计算得出的hmac_sha1值的hex字符串|
+|string|计算得出的hmac_sha256值的hex字符串|
 
 **例子**
 
@@ -204,7 +204,7 @@ log.info("sha512", crypto.sha512("abc"))
 
 |返回值类型|解释|
 |-|-|
-|string|计算得出的hmac_sha1值的hex字符串|
+|string|计算得出的hmac_sha512值的hex字符串|
 
 **例子**
 
