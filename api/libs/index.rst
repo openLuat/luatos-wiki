@@ -17,6 +17,7 @@
    lm75
    mcp2515
    mpu6xxx
+   pcf8574
    qmc5883l
    rc522
    si24r1
