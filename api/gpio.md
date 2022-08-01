@@ -18,7 +18,9 @@
 |gpio.PULLDOWN|number|下拉|
 |gpio.RISING|number|上升沿触发|
 |gpio.FALLING|number|下降沿触发|
-|gpio.BOTH|number|双向触发|
+|gpio.BOTH|number|双向触发,部分设备支持|
+|gpio.HIGH_IRQ|number|高电平触发,部分设备支持|
+|gpio.LOW_IRQ|number|低电平触发,部分设备支持|
 
 
 ## gpio.setup(pin, mode, pull, irq)
