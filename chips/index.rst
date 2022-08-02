@@ -21,7 +21,7 @@
     supported
     question
     AirWatch
-    Air724 <https://doc.openluat.com/wiki/21?wiki_page_id=2593>
+    Air724 <https://doc.openluat.com/wiki/21?wiki_page_id=4020>
     Air820 <https://doc.openluat.com/wiki/21?wiki_page_id=2595>
     Air600 <https://doc.openluat.com/wiki/21?wiki_page_id=2780>
     Air780 <https://doc.openluat.com/wiki/21?wiki_page_id=2995>
