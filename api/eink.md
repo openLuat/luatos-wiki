@@ -232,7 +232,31 @@ eink.print(10, 20, "LuatOS")
 |-|-|
 |int|x 输出的x坐标,默认0|
 |int|y 输出的y坐标,默认0|
-|bool|noClear 可选，默认false。如果为true则不进行清屏，直接刷上新内容|
+|bool|可选，默认false。如果为true则不进行清屏，直接刷上新内容|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+无
+
+---
+
+## eink.draw(buff, buff2, noclear)
+
+直接输出数据到屏幕,支持双色数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|zbuff指针|
+|userdata|zbuff指针|
+|bool|可选，默认false。如果为true则不进行清屏，直接刷上新内容|
 
 **返回值**
 
