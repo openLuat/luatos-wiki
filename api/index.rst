@@ -61,6 +61,7 @@
    touchkey
    u8g2
    uart
+   ufont
    usbapp
    w5500
    wdt
