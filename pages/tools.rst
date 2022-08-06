@@ -35,5 +35,4 @@
 
 `Air724/Air722/Air820调试驱动 <https://doc.openluat.com/wiki/21?wiki_page_id=2070>`_ 适合合宙 4G Cat.1 U系列, 即Air72xUx系列
 
-`开发神器LuatIDE <https://marketplace.visualstudio.com/items?itemName=luater.luatide>`_
 
