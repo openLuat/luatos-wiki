@@ -24,6 +24,7 @@
    i2s
    io
    ioqueue
+   iotauth
    ir
    json
    keyboard
