@@ -54,6 +54,8 @@ CAN*1，支持协议 2.0A(11bit 标识符)和 2.0B（29bit 标识符）
 
 SDK压缩包[SWM181_Lib-211013.rar](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220721163704765_SWM181_Lib-211013.rar)
 
+[SWM81使用手册](https://wiki.luatos.com/chips/swm181/swm181.html)
+
 ## 模块购买
 
 * [手机访问mall.m.openluat.com](https://mall.m.openluat.com)
@@ -61,4 +63,4 @@ SDK压缩包[SWM181_Lib-211013.rar](https://cdn.openluat-luatcommunity.openluat.
 
 ## 芯片PinOut
 
-![image-20220721164050533](/img/image-20220721164050533.png)
+![image-20220721164050533](img/image-20220721164050533.png)
