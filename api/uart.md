@@ -20,7 +20,7 @@
 |uart.VUART_0|number|虚拟串口0|
 
 
-## uart.setup(id, baud_rate, data_bits, stop_bits, partiy, bit_order, buff_size)
+## uart.setup(id, baud_rate, data_bits, stop_bits, partiy, bit_order, buff_size, rs485_gpio, rs485_level, rs485_delay)
 
 配置串口参数
 
@@ -51,6 +51,9 @@
 -- 最常用115200 8N1
 uart.setup(1, 115200, 8, 1, uart.NONE)
 -- 可以简写为 uart.setup(1)
+
+-- 485自动切换, 选取GPIO10作为收发转换脚
+uart.setup(1, 115200, 8, 1, uart.NONE, uart.LSB, 1024, 10, 0, 100)
 
 ```
 
