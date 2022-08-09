@@ -89,34 +89,6 @@ uart.write(1, string.char(0x55,0xAA,0x4B,0x03,0x86))
 
 ---
 
-## uart.tx(id, buff, start, len)
-
-buff形式写串口,等同于c语言uart_tx(uart_id, &buff[start], len);
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|串口id, uart0写0, uart1写1|
-|zbuff|待写入的数据，如果是zbuff会从指针起始位置开始读|
-|int|可选，要发送的数据起始位置，默认为0|
-|int|可选，要发送的数据长度，默认为zbuff内有效数据，最大值不超过zbuff的最大空间|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|int|成功的数据长度|
-
-**例子**
-
-```lua
-uart.tx(1, buf)
-
-```
-
----
-
 ## uart.read(id, len)
 
 读串口
@@ -139,57 +111,6 @@ uart.tx(1, buf)
 
 ```lua
 uart.read(1, 16)
-
-```
-
----
-
-## uart.rx(id, buff)
-
-buff形式读串口，一次读出全部数据存入buff中，如果buff空间不够会自动扩展，目前只有air105支持这个操作
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|串口id, uart0写0, uart1写1|
-|zbuff|zbuff对象|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|int|返回读到的长度，并把zbuff指针后移|
-
-**例子**
-
-```lua
-uart.rx(1, buff)
-
-```
-
----
-
-## uart.rx_size(id)
-
-读串口Rx缓存中剩余数据量，目前只有air105支持这个操作
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|串口id, uart0写0, uart1写1|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|int|返回读到的长度|
-
-**例子**
-
-```lua
-local size = uart.rx_size(1)
 
 ```
 
@@ -291,6 +212,85 @@ end)
 **例子**
 
 无
+
+---
+
+## uart.rx(id, buff)
+
+buff形式读串口，一次读出全部数据存入buff中，如果buff空间不够会自动扩展，目前只有air105支持这个操作
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|串口id, uart0写0, uart1写1|
+|zbuff|zbuff对象|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|返回读到的长度，并把zbuff指针后移|
+
+**例子**
+
+```lua
+uart.rx(1, buff)
+
+```
+
+---
+
+## uart.rx_size(id)
+
+读串口Rx缓存中剩余数据量，目前只有air105支持这个操作
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|串口id, uart0写0, uart1写1|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|返回读到的长度|
+
+**例子**
+
+```lua
+local size = uart.rx_size(1)
+
+```
+
+---
+
+## uart.tx(id, buff, start, len)
+
+buff形式写串口,等同于c语言uart_tx(uart_id, &buff[start], len);
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|串口id, uart0写0, uart1写1|
+|zbuff|待写入的数据，如果是zbuff会从指针起始位置开始读|
+|int|可选，要发送的数据起始位置，默认为0|
+|int|可选，要发送的数据长度，默认为zbuff内有效数据，最大值不超过zbuff的最大空间|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|成功的数据长度|
+
+**例子**
+
+```lua
+uart.tx(1, buf)
+
+```
 
 ---
 

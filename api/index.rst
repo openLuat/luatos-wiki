@@ -38,6 +38,7 @@
    lvgl
    mcu
    mlx90640
+   mobile
    multimedia
    nbiot
    network
