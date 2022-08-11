@@ -37,6 +37,7 @@
    lpmem
    lvgl
    mcu
+   miniz
    mlx90640
    mobile
    multimedia
