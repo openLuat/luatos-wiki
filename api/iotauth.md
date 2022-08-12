@@ -4,6 +4,38 @@
 
 > 本库有专属demo，[点此链接查看iotauth的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/iotauth)
 
+## iotauth.aliyun(product_key, device_name,device_secret,method,cur_timestamp)
+
+阿里云物联网平台三元组生成
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|product_key |
+|string|device_name |
+|string|device_secret |
+|string|method 加密方式,"hmacmd5" "hmacsha1" "hmacsha256" 可选,默认"hmacsha256"|
+|number|cur_timestamp 可选|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|mqtt三元组 client_id|
+|string|mqtt三元组 user_name|
+|string|mqtt三元组 password|
+
+**例子**
+
+```lua
+local client_id,user_name,password = iotauth.aliyun("123456789","abcdefg","Y877Bgo8X5owd3lcB5wWDjryNPoB")
+print(client_id,user_name,password)
+
+```
+
+---
+
 ## iotauth.onenet(produt_id, device_name,key,method,cur_timestamp,version)
 
 中国移动物联网平台三元组生成
