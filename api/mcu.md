@@ -5,7 +5,7 @@
 
 ## mcu.setClk(mhz)
 
-设置主频,单位MHZ. 请注意,主频与外设主频有关联性, 例如主频2M时SPI的最高只能1M
+设置主频,单位MHZ
 
 **参数**
 
@@ -22,6 +22,7 @@
 **例子**
 
 ```lua
+--  请注意,主频与外设主频有关联性, 例如主频2M时SPI的最高只能1M
 -- 设置到80MHZ
 mcu.setClk(80)
 sys.wait(1000)
@@ -38,7 +39,7 @@ sys.wait(1000)
 
 ## mcu.getClk()
 
-获取主频,单位MHZ.
+获取主频,单位MHZ
 
 **参数**
 
@@ -132,17 +133,17 @@ print("mcu.hz", hz)
 
 ---
 
-## mcu.reg(address, value, mask)
+## mcu.reg32(address, value, mask)
 
-读写mcu的32bit寄存器或者ram，谨慎使用写功能，请熟悉mcu的寄存器使用方法后再使用
+读写mcu的32bit寄存器或者ram,谨慎使用写功能,请熟悉mcu的寄存器使用方法后再使用
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
 |int|寄存器或者ram地址|
-|int|写入的值，如果没有，则直接返回当前值|
-|int|位掩码，可以对特定几个位置的bit做修改， 默认0xffffffff，修改全部32bit|
+|int|写入的值,如果没有,则直接返回当前值|
+|int|位掩码,可以对特定几个位置的bit做修改, 默认0xffffffff,修改全部32bit|
 
 **返回值**
 
@@ -153,7 +154,7 @@ print("mcu.hz", hz)
 **例子**
 
 ```lua
-local value = mcu.reg(0x2009FFFC, 0x01, 0x01) --对0x2009FFFC地址上的值，修改bit0为1
+local value = mcu.reg32(0x2009FFFC, 0x01, 0x01) --对0x2009FFFC地址上的值,修改bit0为1
 
 ```
 
@@ -186,7 +187,7 @@ local value = mcu.x32(0x2009FFFC) --输出"0x2009fffc"
 
 ## mcu.tick64()
 
-获取启动后的高精度tick，目前只有105能用
+获取启动后的高精度tick,目前只有101/103/105能用
 
 **参数**
 
@@ -196,8 +197,8 @@ local value = mcu.x32(0x2009FFFC) --输出"0x2009fffc"
 
 |返回值类型|解释|
 |-|-|
-|string|当前tick值，8个字节的uint64|
-|int|1us有几个tick，0表示未知|
+|string|当前tick值,8个字节的uint64|
+|int|1us有几个tick,0表示未知|
 
 **例子**
 
@@ -211,22 +212,22 @@ print("ticks", tick_str, tick_per)
 
 ## mcu.dtick64(tick1, tick2, check_value)
 
-计算2个64bit tick的差值，目前只有105能用
+计算2个64bit tick的差值,目前只有105能用
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|string|tick1, 64bit的string|
-|string|tick2, 64bit的string|
-|int|参考值，可选项，如果为0，则返回结果中第一个项目为true|
+|string|64bit的string|
+|string|64bit的string|
+|int|参考值,可选项,如果为0,则返回结果中第一个项目为true|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|boolean|与参考值比较，如果大于等于为true，反之为false|
-|int|差值tick1 - tick2，如果超过了0x7fffffff，结果可能是错的|
+|boolean|与参考值比较,如果大于等于为true,反之为false|
+|int|差值tick1 - tick2,如果超过了0x7fffffff,结果可能是错的|
 
 **例子**
 
@@ -238,17 +239,17 @@ print("ticks", result, diff_tick)
 
 ---
 
-## mcu.setXTAL(source_main, source_32k)，目前只有105能用
+## mcu.setXTAL(source_main, source_32k, delay)
 
-选择时钟源
+选择时钟源,当前仅air105支持
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|boolean|高速时钟是否使用外部时钟源，如果为空则不改变|
-|boolean|低速32K是否使用外部时钟源，如果为空则不改变|
-|int|PLL稳定时间，在切换高速时钟的时候，根据硬件环境，需要delay一段时间等待PLL稳定，默认是1200，建议不小于1024|
+|boolean|高速时钟是否使用外部时钟源,如果为空则不改变|
+|boolean|低速32K是否使用外部时钟源,如果为空则不改变|
+|int|PLL稳定时间,在切换高速时钟的时候,根据硬件环境,需要delay一段时间等待PLL稳定,默认是1200,建议不小于1024|
 
 **返回值**
 
@@ -257,7 +258,7 @@ print("ticks", result, diff_tick)
 **例子**
 
 ```lua
-mcu.setXTAL(true, true, 1248)	--高速时钟使用外部时钟，低速32K使用外部晶振, delay1248
+mcu.setXTAL(true, true, 1248)	--高速时钟使用外部时钟,低速32K使用外部晶振, delay1248
 
 ```
 
