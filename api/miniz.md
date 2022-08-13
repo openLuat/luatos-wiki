@@ -27,8 +27,18 @@ end
 
 |常量|类型|解释|
 |-|-|-|
-|miniz.WRITE_ZLIB_HEADER|压缩参数,是否快速greedy处理,|默认使用较慢的处理模式|
-|miniz.RLE_MATCHES|压缩参数,|仅扫描RLE|
+|miniz.WRITE_ZLIB_HEADER|int|压缩参数,是否写入zlib头部数据,compress函数的默认值|
+|miniz.COMPUTE_ADLER32|int|压缩参数,是否计算adler-32|
+|miniz.WRITE_ZLIB_HEADER|int|压缩参数,是否快速greedy处理, 默认使用较慢的处理模式|
+|miniz.NONDETERMINISTIC_PARSING_FLAG|int|压缩参数,是否快速初始化压缩器|
+|miniz.RLE_MATCHES|int|压缩参数, 仅扫描RLE|
+|miniz.FILTER_MATCHES|int|压缩参数,过滤少于5次的字符|
+|miniz.FORCE_ALL_STATIC_BLOCKS|int|压缩参数,是否禁用优化过的Huffman表|
+|miniz.FORCE_ALL_RAW_BLOCKS|int|压缩参数,是否只是要raw块|
+|miniz.PARSE_ZLIB_HEADER|int|解压参数,是否处理zlib头部,uncompress函数的默认值|
+|miniz.HAS_MORE_INPUT|int|解压参数,是否还有更多数据,仅流式解压可用,暂不支持|
+|miniz.USING_NON_WRAPPING_OUTPUT_BUF|int|解压参数,解压区间是否够全部数据,,仅流式解压可用,暂不支持|
+|miniz.COMPUTE_ADLER32|int|解压参数,是否强制校验adler-32|
 
 
 ## miniz.compress(data, flags)
