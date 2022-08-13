@@ -58,7 +58,7 @@ luatos-soc请勾选通用串口打印
 
 选好芯片使用的固件，选好脚本即可下载
 
-demo类的脚本，可以前往[LuatOS官方仓库](https://gitee.com/openLuat/LuatOS)，在`bsp/对应型号/demo`文件夹可以找到
+demo类的脚本，可以前往[LuatOS官方仓库](https://gitee.com/openLuat/LuatOS)，在`demo`文件夹可以找到
 
 Luatools工具也自动下载了正式版本的一些实例脚本可以在`resource\某种型号\某个版本\demo`文件夹看到，可以直接选择脚本进行烧录测试
 
