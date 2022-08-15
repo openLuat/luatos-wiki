@@ -6,5 +6,6 @@
 .. toctree::
 
    filesystems
+   hex_string
    contribute/luadb
    contribute/soc_format
