@@ -41,7 +41,6 @@
    mlx90640
    mobile
    multimedia
-   nbiot
    network
    otp
    pack
