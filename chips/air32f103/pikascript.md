@@ -1,4 +1,4 @@
-# Python 编程
+# PikaScript
 
 Air32f103cb 基于 PikaScript 提供了 Python 编程的支持。
 
