@@ -40,6 +40,7 @@
    miniz
    mlx90640
    mobile
+   mqtt
    multimedia
    nbiot
    network
