@@ -46,17 +46,17 @@ led_loop_num = 10
 for i in range(0, led_loop_num):
     print('led loop: [%d/%d]' % (i + 1, led_loop_num))
     led1.high()
-	led2.low()
-	led3.low()
-	time.sleep_ms(200)
-	led1.low()
-	led2.high()
-	led3.low()
-	time.sleep_ms(200)
-	led1.low()
-	led2.low()
-	led3.high()
-	time.sleep_ms(200)
+    led2.low()
+    led3.low()
+    time.sleep_ms(200)
+    led1.low()
+    led2.high()
+    led3.low()
+    time.sleep_ms(200)
+    led1.low()
+    led2.low()
+    led3.high()
+    time.sleep_ms(200)
 
 
 mem = PikaStdLib.MemChecker()
@@ -67,7 +67,7 @@ mem.now()
 
 ```
 
-连接串口 1 进入交互式运行模块，强烈推荐使用 putty 作为串口终端。
+连接串口 1 进入交互式运行模式，强烈推荐使用 putty 作为串口终端。
 
 ![](img/pikascript-4.png)
 
