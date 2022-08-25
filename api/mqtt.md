@@ -12,8 +12,8 @@
 
 |传入值类型|解释|
 |-|-|
-|string/table|topic 主题|
-|int|qos topic为string时生效 0/1/2 默认0|
+|string/table|主题|
+|int|topic为string时生效 0/1/2 默认0|
 
 **返回值**
 
@@ -37,7 +37,7 @@ mqttc:subscribe({["/luatos/1234567"]=1,["/luatos/12345678"]=2})
 
 |传入值类型|解释|
 |-|-|
-|string/table|topic 主题|
+|string/table|主题|
 
 **返回值**
 
@@ -62,10 +62,10 @@ mqtt客户端创建
 |传入值类型|解释|
 |-|-|
 |int|适配器序号， 只能是network.ETH0，network.STA，network.AP，如果不填，会选择最后一个注册的适配器|
-|string|host 服务器地址|
-|int|	port 端口号|
-|bool|	isssl 是否为ssl加密连接,默认不加密|
-|string|ca_file 证书|
+|string|服务器地址|
+|int|	端口号|
+|bool|	是否为ssl加密连接,默认不加密|
+|string|证书|
 
 **返回值**
 
@@ -89,8 +89,8 @@ mqtt三元组配置
 |传入值类型|解释|
 |-|-|
 |string|client_id|
-|string|username 可选|
-|string|password 可选|
+|string|账号 可选|
+|string|密码 可选|
 
 **返回值**
 
@@ -113,7 +113,7 @@ mqtt心跳设置
 
 |传入值类型|解释|
 |-|-|
-|int|time 可选 单位s 默认240s|
+|int|可选 单位s 默认240s|
 
 **返回值**
 
@@ -183,7 +183,7 @@ mqttc:connect()
 
 |传入值类型|解释|
 |-|-|
-|bool|reconnect 是否自动重连|
+|bool|是否自动重连|
 |int|自动重连周期 单位ms 默认3s|
 
 **返回值**
@@ -213,7 +213,9 @@ mqttc:autoreconn(true)
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|int|message_id|
 
 **例子**
 
@@ -226,7 +228,7 @@ mqttc:publish("/luatos/123456", "123")
 
 ## mqttc:close()
 
-mqtt客户端关闭
+mqtt客户端关闭(关闭后资源释放无法再使用)
 
 **参数**
 
