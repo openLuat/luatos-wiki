@@ -122,7 +122,7 @@ mqtt心跳设置
 **例子**
 
 ```lua
-    mqttc:keepalive(30)
+mqttc:keepalive(30)
 
 ```
 
@@ -145,10 +145,10 @@ mqtt回调注册
 **例子**
 
 ```lua
-    mqttc:on(function(mqtt_client, event, data, payload)
-        -- 用户自定义代码
-        log.info("mqtt", "event", event, mqtt_client, data, payload)
-    end)
+mqttc:on(function(mqtt_client, event, data, payload)
+	-- 用户自定义代码
+	log.info("mqtt", "event", event, mqtt_client, data, payload)
+end)
 
 ```
 
@@ -160,9 +160,7 @@ mqtt回调注册
 
 **参数**
 
-|传入值类型|解释|
-|-|-|
-|usage|mqttc:connect()|
+无
 
 **返回值**
 
@@ -170,7 +168,10 @@ mqtt回调注册
 
 **例子**
 
-无
+```lua
+mqttc:connect()
+
+```
 
 ---
 
@@ -184,7 +185,6 @@ mqtt回调注册
 |-|-|
 |bool|reconnect 是否自动重连|
 |int|自动重连周期 单位ms 默认3s|
-|usage|mqttc:autoreconn(true)|
 
 **返回值**
 
@@ -192,7 +192,10 @@ mqtt回调注册
 
 **例子**
 
-无
+```lua
+mqttc:autoreconn(true)
+
+```
 
 ---
 
@@ -207,7 +210,6 @@ mqtt回调注册
 |string|topic 主题|
 |string|data  消息|
 |int|qos 0/1/2 默认0|
-|usage|mqttc:publish("/luatos/123456", "123")|
 
 **返回值**
 
@@ -215,7 +217,10 @@ mqtt回调注册
 
 **例子**
 
-无
+```lua
+mqttc:publish("/luatos/123456", "123")
+
+```
 
 ---
 
@@ -225,9 +230,7 @@ mqtt客户端关闭
 
 **参数**
 
-|传入值类型|解释|
-|-|-|
-|usage|mqttc:close()|
+无
 
 **返回值**
 
@@ -235,7 +238,10 @@ mqtt客户端关闭
 
 **例子**
 
-无
+```lua
+mqttc:close()
+
+```
 
 ---
 
@@ -255,7 +261,10 @@ mqtt客户端是否就绪
 
 **例子**
 
-无
+```lua
+local error = mqttc:ready()
+
+```
 
 ---
 
