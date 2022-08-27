@@ -42,7 +42,6 @@
    mobile
    mqtt
    multimedia
-   nbiot
    network
    otp
    pack
