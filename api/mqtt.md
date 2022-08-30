@@ -61,7 +61,7 @@ mqtt客户端创建
 
 |传入值类型|解释|
 |-|-|
-|int|适配器序号， 只能是network.ETH0，network.STA，network.AP，如果不填，会选择最后一个注册的适配器|
+|int|适配器序号, 只能是network.ETH0,network.STA,network.AP,如果不填,会选择最后一个注册的适配器|
 |string|服务器地址|
 |int|	端口号|
 |bool|	是否为ssl加密连接,默认不加密|
