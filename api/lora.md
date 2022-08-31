@@ -89,7 +89,7 @@ lora.set_txconfig("llcc68",
 
 ---
 
-## lora.init(ic, set_rxconfig)
+## lora.set_rxconfig(ic, set_rxconfig)
 
 lora配置接收参数
 
