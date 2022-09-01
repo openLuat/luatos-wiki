@@ -112,8 +112,8 @@
 | 47       | PB15        | I/O      | GPIO31/SPI0_MISO/UART1_RTS   | UP                                                           |                                                              |
 | 48       | PC12        | I/O      | GPIO44/SPI5_MISO             | UP                                                           |                                                              |
 | 49       | PC13        | I/O      | GPIO45/SPI5_MOSI             | UP                                                           |                                                              |
-| 50       | PC14        | I/O      | GPIO36/SPI5_CSN              | UP                                                           |                                                              |
-| 51       | PC15        | I/O      | GPIO37/SPI5_CLK              | UP                                                           |                                                              |
+| 50       | PC14        | I/O      | GPIO46/SPI5_CSN              | UP                                                           |                                                              |
+| 51       | PC15        | I/O      | GPIO47/SPI5_CLK              | UP                                                           |                                                              |
 | 52       | VDD33       | P        |                              |                                                              |                                                              |
 | 53       | PD13        | I/O      | GPIO61/UART2_TX/KeyBoard1    | UP                                                           |                                                              |
 | 54       | PD12        | I/O      | GPIO60/UART2_RX/KeyBoard0    | UP                                                           |                                                              |
@@ -153,6 +153,8 @@
 | 88       | PA10        | I/O      | GPIO10                       | 同上                                                         |                                                              |
 
 **注意：I、代表输入；O、代表输出；P、代表电源**
+
+**注意: LuatOS固件下, PWM6/7 不可用**
 
 ## 二、外围电路设计
 
