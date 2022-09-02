@@ -31,7 +31,7 @@
 
 `CH343驱动下载 <https://www.wch.cn/products/ch343.html>`_ 适合ESP32C3经典款开发板,带串口芯片
 
-`ESP32C3 USB直驱 <https://docs.espressif.com/projects/esp-idf/zh_CN/v4.3-beta2/esp32c3/api-guides/jtag-debugging/configure-ft2232h-jtag.html>`_ 适合不带串口芯片的简洁版ESP32C3开发板
+`ESP32C3 USB直驱 <https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32c3/api-guides/jtag-debugging/configure-builtin-jtag.html>`_ 适合不带串口芯片的简洁版ESP32C3开发板
 
 `Air724/Air722/Air820调试驱动 <https://doc.openluat.com/wiki/21?wiki_page_id=2070>`_ 适合合宙 4G Cat.1 U系列, 即Air72xUx系列
 
