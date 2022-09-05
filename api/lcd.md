@@ -49,7 +49,7 @@ lcd显示屏初始化
 **例子**
 
 ```lua
--- 初始化spi0的st7789 注意:lcd初始化之前需要先初始化spi
+-- 初始化spi0的st7735s 注意:lcd初始化之前需要先初始化spi
 spi_lcd = spi.deviceSetup(0,20,0,0,8,2000000,spi.MSB,1,1)
 log.info("lcd.init",
 lcd.init("st7735s",{port = "device",pin_dc = 17, pin_pwr = 7,pin_rst = 19,direction = 2,w = 160,h = 80,xoffset = 1,yoffset = 26},spi_lcd))
@@ -504,7 +504,7 @@ lcd.drawCircle(120,120,20,0x001F)
 
 |传入值类型|解释|
 |-|-|
-|int|font lcd.font_opposansm8 lcd.font_opposansm10 lcd.font_opposansm16  lcd.font_opposansm18  lcd.font_opposansm20  lcd.font_opposansm22  lcd.font_opposansm24 lcd.font_opposansm32 lcd.font_opposansm12_chinese lcd.font_opposansm16_chinese lcd.font_opposansm24_chinese lcd.font_opposansm32_chinese|
+|int|font lcd.font_XXX 请查阅常量表|
 
 **返回值**
 
