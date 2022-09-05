@@ -20,6 +20,7 @@
    gpio
    gtfont
    http
+   http2
    i2c
    i2s
    io
