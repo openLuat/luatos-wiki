@@ -514,11 +514,15 @@ lcd.drawCircle(120,120,20,0x001F)
 
 ```lua
 -- 设置为字体,对之后的drawStr有效,调用lcd.drawStr前一定要先设置
--- 使用中文字体需在luat_conf_bsp.h中开启相对应的宏
+
+-- 若提示 "only font pointer is allow" , 则代表当前固件不含对应字体, 可使用云编译服务免费定制
+-- 云编译文档: https://wiki.luatos.com/develop/compile/Cloud_compilation.html
+
+-- lcd库的默认字体均以 lcd.font_ 开头
 lcd.setFont(lcd.font_opposansm12)
 lcd.drawStr(40,10,"drawStr")
 sys.wait(2000)
-lcd.setFont(lcd.font_opposansm12_chinese)
+lcd.setFont(lcd.font_opposansm12_chinese) -- 具体取值可参考api文档的常量表
 lcd.drawStr(40,40,"drawStr测试")
 
 ```
