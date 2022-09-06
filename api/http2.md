@@ -20,7 +20,11 @@ http2客户端
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|int|code|
+|string|headers |
+|string|body|
 
 **例子**
 
