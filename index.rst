@@ -26,7 +26,7 @@
 - `LuatOS特有库的API手册  <api/index.html>`_
 - `Lua原生API手册  <_static/lua53doc/index.html>`_
 - `模拟器   <pages/emulator.html>`_
-- `开发板购买 <https://openluat.taobao.com>`_
+- `开发板购买 <https://luat.taobao.com>`_
 - `B站视频教程 <https://space.bilibili.com/532832>`_
 
 **目前已经适配的模组和芯片：**

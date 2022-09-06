@@ -18,7 +18,6 @@
 
 * [手机访问mall.m.openluat.com](https://mall.m.openluat.com)
 * [淘宝店1](https://luat.taobao.com)
-* [淘宝店2](https://openluat.taobao.com)
 
 ## 技术支持
 

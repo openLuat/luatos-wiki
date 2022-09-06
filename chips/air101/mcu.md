@@ -17,7 +17,7 @@ LuatOS大QQ群: 1061642968
 ## 模块购买
 
 * [手机访问mall.m.openluat.com](https://mall.m.openluat.com)
-* [淘宝店](https://openluat.taobao.com)
+* [淘宝店](https://luat.taobao.com)
 
 ## 芯片PinOut
 
