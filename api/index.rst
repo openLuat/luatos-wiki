@@ -49,6 +49,7 @@
    pack
    pin
    pm
+   protobuf
    pwm
    rtc
    rtos
