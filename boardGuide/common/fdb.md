@@ -34,6 +34,7 @@ fdb.kvdb_init("env", "onchip_fdb")
 | data2| 1|
 |data3|true|
 |data4|{name="Jeremy",age = 18}|
+
 代码如下
 
 ```lua
