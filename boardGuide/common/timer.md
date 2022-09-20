@@ -1,32 +1,51 @@
-# TIMER
+# timer
 
-本章将会向大家介绍LuatOS的TIMER功能。将会实现使用Air101开发板展示并在日志中打印效果。
+本章介绍LuatOS的timer库使用方式
 
 ## 简介
 
-TIMER模块使用的是mcu的硬件定时器
+timer库使用的是mcu的硬件定时器，通过timer库可以创建硬件定时器
 
 ## 硬件准备
 
-Air101开发板一块
+任意LuatOS-SOC开发板一块
 
-## 软件使用
+## 软件部分
 
 接口文档可参考：[timer库](https://wiki.luatos.com/api/timer.html)
 
-代码展示
+### 硬阻塞
+
+硬阻塞指定时长,阻塞期间没有任何luat代码会执行,包括底层消息处理机制
+
+代码如下
 
 ```lua
-log.info("ticks", mcu.ticks())--打印ticks
+PROJECT = "TIMER"
+VERSION = "1.0.0"
+
+-- 初始化看门狗，超时时长为10S
+wdt.init(10000)
+
+-- 打印阻塞开始前的ticks
+log.info("ticks", mcu.ticks())
 -- 阻塞延迟5000ms, 绝大部分项目不会也不应该使用该方法
 -- 本demo只是为了演示API方法的可用性
 -- mdelay会阻塞整个lua vm的运行, 在阻塞的时长内,任何中断都不会响应,包括uart
--- 对应的用法是 sys.waitXXX
--- 如需在中断回调内使用sys.waitXXX, 可以使用sys.taskInit启动新的task
 timer.mdelay(5000)
-log.info("ticks", mcu.ticks())--打印ticks
+-- 打印阻塞结束后的ticks
+log.info("ticks", mcu.ticks())
+
+-- 循环喂狗
+while true do
+    wdt.feed()
+end
+
 ```
 
-上述代码打印日志
+日志如下
 
-![TIMER](img/TIMER.png)
+```log
+I/user.ticks 22
+I/user.ticks 5023
+```
