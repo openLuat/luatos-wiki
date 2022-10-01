@@ -4,9 +4,11 @@
 
 经典款（带TTL串口转USB的版本）一定要安装CH343的驱动才能正常下载固件，默认的CDC驱动只能打印日志，但是速率太慢会导致下载失败。[驱动传送门](http://www.wch.cn/downloads/CH343SER_EXE.html)
 
-新款（USB直连）可以直接烧录，无需安装驱动。可以正常使用Luatools烧录，但是无法使用LuatIDE。除烧录时需要选择带`USB`字样的固件，其他没有任何区别。
+新款（USB直连）可以直接烧录，Win8及以上系统无需安装驱动。可以正常使用Luatools烧录，但是无法使用LuatIDE。除烧录时需要选择带`USB`字样的固件，*GPIO18/19会被占用为USB脚*, 应避免使用, 其他功能没有任何区别。
 
 > 注意，由于**win7**系统不自带`winusb`驱动，且该系统早在2020年微软就已停止支持，所以如需使用`简约版开发板`，请升级至**win8以上系统**，或前往[乐鑫原厂手册](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32c3/api-guides/jtag-debugging/configure-builtin-jtag.html)安装驱动
+
+> 新款若需要使用GPIO18/19, 可外接USB-TTL到UART0进行刷机和查看日志,不使用板载TypeC进行刷机和日志查看.
 
 ## 刷机烧录教程
 
