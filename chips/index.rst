@@ -9,10 +9,8 @@
     air101/index
     air103/index
     air105/index
-    air106/index
     air302/index
     air640w/index
-    air901/index
     esp32c3/index
     air32f103/index
     swm181/index
