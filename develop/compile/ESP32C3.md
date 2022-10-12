@@ -41,7 +41,7 @@ git clone https://gitee.com/openLuat/LuatOS.git
 再将ESP32C3项目clone到与LuatOS主仓库的同级目录
 
 ```sh
-git clone https://gitee.com/dreamcmi/LuatOS-ESP32.git
+git clone https://gitee.com/openLuat/luatos-soc-idf5.git
 ```
 
 必须按以下目录结构进行摆放, 以 `D:\gitee` 为例

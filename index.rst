@@ -34,7 +34,7 @@
 - `Air101 <chips/air101/index.html>`_ （MCU）尺寸小,仅4*4mm
 - `Air103 <chips/air103/index.html>`_ （MCU）io多,支持psram
 - `Air105 <chips/air105/index.html>`_ （MCU）内存大,有摄像头,有USB
-- `ESP32 <chips/esp32c3/index.html>`_ 系列 (wifi/bt芯片） https://gitee.com/dreamcmi/LuatOS-ESP32
+- `ESP32 <chips/esp32c3/index.html>`_ 系列 (wifi/bt芯片） https://gitee.com/openLuat/luatos-soc-idf5
 - `RT-Thread <https://github.com/openLuat/luatos-soc-rtt>`_ 全部bsp(内存需满足最低要求) 已并入rtt主线
 - `Air302 <chips/air302/index.html>`_ （EC616/nbiot模组） EOL
 - `Air640w <chips/air640w/index.html>`_ （W600/wifi模组）  EOL
