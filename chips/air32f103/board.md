@@ -22,6 +22,12 @@
 |PA2|虚拟串口的TX|
 |PA3|虚拟串口的RX|
 
+PB13连接被调试设备的SWDCLK，PB14连接被调试设备的SWDIO，PB0连接复位：
+
+整体连接图如下图所示：
+
+![接线图](img/connect_dap.png)
+
 中间绿色的灯指示与被连接设备的通信情况。插入电脑后会显示一个名为daplink的U盘，一个COM口，以及一个便携设备daplink。在keil或其他开发软件中选择调试器为CMSIS DAP即可。目前支持的开发环境如下：
 
 - KEIL MDK
