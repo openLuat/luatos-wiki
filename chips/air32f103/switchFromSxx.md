@@ -193,6 +193,14 @@ while(ADC_GETFlagStatus(ADC1, ADC_FLAG_EOC) == RESET);
 ADCGetConversionValue(ADC1);
 ```
 
+### ADC配置连续触发后，关闭ADON或者进行ADC软复位，ADC转化差异
+
+SXX32F103：ADC自动注入转换直接使用
+
+AIR32F103：ADC自动注入转换获取到值为0
+
+解决方法：AIR32F103使用自动注入转换ADC_ScanConvMode需要配置为开启
+
 ## TIM
 
 ### 通用定时器TIM2-TIM5的Channel3差异
