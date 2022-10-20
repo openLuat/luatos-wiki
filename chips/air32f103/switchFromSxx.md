@@ -193,7 +193,7 @@ while(ADC_GETFlagStatus(ADC1, ADC_FLAG_EOC) == RESET);
 ADCGetConversionValue(ADC1);
 ```
 
-### ADC配置连续触发后，关闭ADON或者进行ADC软复位，ADC转化差异
+### ADC使用ADC自动注入转换差异
 
 SXX32F103：ADC自动注入转换直接使用
 
