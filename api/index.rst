@@ -21,6 +21,7 @@
    gtfont
    http
    http2
+   httpsrv
    i2c
    i2s
    io
@@ -45,6 +46,7 @@
    multimedia
    nbiot
    network
+   nimble
    otp
    pack
    pin
