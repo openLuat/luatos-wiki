@@ -1,105 +1,90 @@
-# 📡 ESP32C3
+# 📡 ESP32系列编译文档
 
-通常你不需要这份文档，这是用于自行扩展固件的高级文档。
+本文档适合以下芯片:
+1. esp32c3
+2. esp32c2
+3. esp32
+4. esp32s3
 
-我们提供的固件包就包含编译好的固件（soc后缀）
+使用本文档前,请确认以下信息:
 
-如果你只是想将已有的库添加到固件中，可以使用我们提供的[在线云编译](https://wiki.luatos.com/develop/compile/Cloud_compilation.html)生成自定义固件。
-
-如果你是在找刷机/编译lua脚本之类的应用型文档，那么这份文档不是你需要查看的内容。
+1. 你`大概率不需要`这份文档，这是用于自行扩展固件的高级文档。
+2. 我们提供的固件包就包含[编译好的固件](https://gitee.com/openLuat/LuatOS/releases)
+3. 如果你只是想将已有的库添加到固件中，可以使用我们提供的[在线云编译](https://wiki.luatos.com/develop/compile/Cloud_compilation.html)生成自定义固件。
+4. 如果你是在找刷机/编译lua脚本之类的应用型文档，那么这份文档`不是你需要`查看的内容。
 
 视频教程链接: [B站每日喝粥](https://www.bilibili.com/video/BV1D3411p7MK?p=1)
 
 ## 准备环境
 
-安装好乐鑫官方的idf环境，目前为`ESP-IDFV4.4.1`，具体请见项目readme
-
-### Windows平台用户
-
-**装好[7-zip](https://www.7-zip.org/)，建议保持默认文件夹！！！**
-
-安装IDF。对于国内用户，推荐直接安装离线包：[esp-idf-tools-setup-offline-4.4.1.exe](https://dl.espressif.com/dl/idf-installer/esp-idf-tools-setup-offline-4.4.1.exe)
-
-详细信息请见乐鑫官方文档：[Windows 平台工具链的标准设置](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started/windows-setup.html)
-
-### Linux平台用户
-
-**装好7-zip**，各个平台装法不一样（apt/yum/pacman），自己搜吧
-
-接着请直接参考乐鑫官方文档的步骤进行安装：[Linux 和 macOS 平台工具链的标准设置](https://docs.espressif.com/projects/esp-idf/zh_CN/latest/esp32/get-started/linux-macos-setup.html)
+1. `windows 10 x64`, 其他版本自行解决idf安装问题, 需要idf5, 最新idf5!! 低版本编译不了!!
+2. 所有步骤均使用 `CMD`, 非 `PowerShell`, 若不知道这些是什么, 请先百度学习一下
+3. 起码2G的磁盘空间, 用于存放代码和中间文件
 
 ## 准备项目
 
-将LuatOS主仓库clone到适当位置,推荐用git, 如果下载zip一定一定要解压后改文件夹名称!!!
+### 建一个文件夹,用于存放编译所需要的全部文件
 
-如果不熟悉git, 强烈建立[入门](https://www.jianshu.com/p/db3396474b96)一下
+推荐使用  `D:\github` , 最低要求是 不能有空格,中文,特殊字符串, 且尽量短
 
-```sh
-git clone https://gitee.com/openLuat/LuatOS.git
-```
+### 获取源码
 
-再将ESP32C3项目clone到与LuatOS主仓库的同级目录
+源码要2份, [LuatOS主库](https://gitee.com/openLuat/LuatOS)及 [luatos-soc-idf5]((https://gitee.com/openLuat/luatos-soc-idf5) , 这是两个不同的仓库, 两个都需要!!
 
-```sh
-git clone https://gitee.com/openLuat/luatos-soc-idf5.git
-```
+获取方式: 推荐git, 注册后下载zip也可以
 
 必须按以下目录结构进行摆放, 以 `D:\gitee` 为例
 
 ```
-LuatOS 主库代码 D:\gitee\LuatOS
-ESP32C3 适配代码 D:\gitee\LuatOS-ESP32
+D:\
+    github\
+        LuatOS\
+            lua\
+            luat\
+            components\
+            其他目录
+        luatos-soc-idf5\
+            idf5\
+            luatos\
+```
 
 检查点, 路径正确的情况下, 以下文件路径必存在, 找不到就肯定是命名问题, 手动添加是徒劳的
 
-D:\gitee\LuatOS\lua\src\lgc.c
-D:\gitee\LuatOS-ESP32\components\luat\include\luat_conf_bsp.h
+* `D:\github\LuatOS\lua\src\lgc.c`
+* `D:\github\luatos-soc-idf5\luatos\include\luat_conf_bsp.h`
+
+
+`LuatOS` `luatos-soc-idf5` 都是固定目录名称, 都不可以改, 例如 `LuatOS-master` 就是错误的命名, 必须要改回 `LuatOS`
+
+## 编译前的最后准备
+
+第一次使用编译,需要对idf5进行初始化, 进去CMD命令行
+
+```
+D:
+cd D:\github\luatos-soc-idf5\idf5
+install.bat esp32c3
 ```
 
-任何附加字符都不可用, 例如 `LuatOS-master` 就是错误的命名
-
-## 定制固件里的库
-
-打开`D:\gitee\LuatOS-ESP32\components\luat\include\luat_conf_bsp.h`，按需注释或取消注释。注意，如果功能太大导致固件放不下，会编译失败。
-
-## 打开idf命令行工具
-
-> 该步骤仅限`windows`用户需要做
-
-## 配置项目目标芯片
-
-在`IDF`命令行，进入`LuatOS-ESP32`仓库目录，执行命令`idf.py set-target esp32c3`
-
-## 如果需要开启USB打印日志（新版开发板）
-
-> 经典版开发板用户无需按此步骤操作，默认就是串口输出日志
-
-在`IDF`命令行执行`idf.py menuconfig`命令
-
-进入`Component config` -> `ESP System Settings` -> `Channel for console output`
-
-勾上`USB Serial/JTAG Controller`，按S保存，回车，再按Q退出
-
-![idf usb](img/idf_usb.png)
+过程需要5~20分钟不等,会下载一堆依赖. 若中途报错就需要多执行几次
 
 ## 编译
 
-在`IDF`命令行，进入`LuatOS-ESP32`仓库目录，执行`idf.py build` ,开始编译
+进去CMD命令行
 
-<div id="xmake-record"></div>
-<link rel="stylesheet" type="text/css" href="../../_static/css/asciinema-player.css"/>
-<script src="../../_static/js/asciinema-player.min.js"></script>
-<script>AsciinemaPlayer.create('../../_static/terminal/build_esp32c3.cast', document.getElementById('xmake-record'),{autoPlay:true,speed:4});</script>
-
-当出现`Project build complete.`字样则表示编译成功
-
-## 生成SOC烧录文件
-
-进入`LuatOS-ESP32/tools`目录，执行下面的命令
-
-```bash
-pip install -r requirements.txt
-python esp32v3.py -t esp32c3 -p
+```
+D:
+cd D:\github\luatos-soc-idf5\idf5
+export.bat
+cd D:\github\luatos-soc-idf5\luatos
+idf.py fullclean
+idf.py set-target esp32c3
+idf.py build
 ```
 
-即可在`LuatOS-ESP32/tools`目录找到生成完毕的SOC文件
+当出现`Project build complete.`字样则表示编译成功, 会生成 `.soc` 后的文件, 使用LuaTools刷机即可
+
+## 定制固件里的库
+
+打开`D:\github\luaotos-soc-idf5\luatos\include\luat_conf_bsp.h`，按需注释或取消注释。注意，如果功能太大导致固件放不下，会编译失败。
+
