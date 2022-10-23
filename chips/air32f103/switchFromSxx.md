@@ -29,6 +29,8 @@ SXX32F103：识别为高，但是抗干扰能力较弱，容易被外界环境�
 
 AIR32F103：为浮空状态，建议外部固定为高/低
 
+若需要使用isp下载功能，则需要在硬件设计时，对BOOT1外部手动进行拉高/低操作（官方开发板也未进行此操作，如需使用isp下载功能，请自行飞线）
+
 ### DEBUG状态下，使能SW，关断JTAG差异
 
 DEBUG状态下，将SW使能，JTAG关断，如下图使用
@@ -39,7 +41,7 @@ GPIO_PinRemapConfig(GPIO_Remap_SWJJTAGDISABLE, ENABLE);
 
 SXX32F103：JTAG关断，正常使用SW 进行DEBUG
 
-AIR32F103：程序复位
+AIR32F103：程序复位。Air32仅支持**完全关闭SWD与JTAG功能**与**同时开启SWD与JTAG功能**两种设置
 
 会导致的一些问题，例如在cubemx配置为SW调试，下载一次固件以后就连接不上设备了，解决方法是在`sxx32f1xx_hal_msp.c`文件的`HAL_MspInit`函数加入`__HAL_AFIO_REMAP_SWJ_ENABLE();`
 
@@ -192,6 +194,14 @@ ADC_SoftwareStartConvCmd(ADC1, ENABLE);
 while(ADC_GETFlagStatus(ADC1, ADC_FLAG_EOC) == RESET);
 ADCGetConversionValue(ADC1);
 ```
+
+### ADC使用ADC自动注入转换差异
+
+SXX32F103：ADC自动注入转换直接使用
+
+AIR32F103：ADC自动注入转换获取到值为0
+
+解决方法：AIR32F103使用自动注入转换ADC_ScanConvMode需要配置为开启
 
 ## TIM
 

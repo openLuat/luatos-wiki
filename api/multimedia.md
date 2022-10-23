@@ -211,6 +211,8 @@ audio.isEnd(0)
 |int|音频通道|
 |int|PA控制IO|
 |int|PA打开时的电平|
+|int|在DAC启动后插入的冗余时间，单位100ms|
+|int|在DAC启动后，延迟多长时间打开PA，单位1ms|
 |return|无|
 
 **返回值**

@@ -31,11 +31,12 @@
 **例子**
 
 ```lua
--- 打开adc通道2,并读取
-if adc.open(2) then
-    log.info("adc", adc.read(2))
+-- 打开adc通道4,并读取
+if adc.open(4) then
+    log.info("adc", adc.read(4)) -- 返回值有2个, 原始值和计算值,通常只需要后者
+    log.info("adc", adc.get(4))  -- 返回值有1个, 仅计算值
 end
-adc.close(2)
+adc.close(4) -- 若需要持续读取, 则不需要close, 功耗会高一点.
 
 ```
 
@@ -93,6 +94,36 @@ if adc.open(2) then
     log.info("adc", adc.read(2))
 end
 adc.close(2)
+
+```
+
+---
+
+## adc.get(id)
+
+获取adc计算值
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|通道id,与具体设备有关,通常从0开始|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|单位通常是mV, 部分通道会返回温度值,单位千分之一摄氏度. 若读取失败,会返回-1|
+
+**例子**
+
+```lua
+-- 本API 在 2022.10.01后编译的固件可用
+-- 打开adc通道2,并读取
+if adc.open(2) then
+    log.info("adc", adc.get(2))
+end
+adc.close(2) -- 按需关闭
 
 ```
 
