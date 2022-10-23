@@ -3,7 +3,7 @@
 
 ## 基础外设支持
 
-| Libs                                                  | Air101 | Air103 | Air105 | Air302 | Air640W | ESP32 |
+| Libs                                                  | Air101 | Air103 | Air105 | Air302 | Air640W | ESP32C3 |
 |------------------------------------------------------ |--------|--------|--------|--------|---------|--------|
 | [gpio](https://wiki.luatos.com/api/gpio.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [i2c](https://wiki.luatos.com/api/i2c.html)           | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
@@ -28,7 +28,7 @@
 
 ## 功能库支持
 
-| Libs                                                  | Air101 | Air103 | Air105 | Air302 | Air640W | ESP32 |
+| Libs                                                  | Air101 | Air103 | Air105 | Air302 | Air640W | ESP32C3 |
 |-------------------------------------------------------|--------|--------|--------|--------|---------|--------|
 | [json](https://wiki.luatos.com/api/json.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [zbuff](https://wiki.luatos.com/api/zbuff.html)       | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
@@ -39,19 +39,19 @@
 | [eink](https://wiki.luatos.com/api/eink.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [u8g2](https://wiki.luatos.com/api/u8g2.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [disp](https://wiki.luatos.com/api/disp.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
-| [dbg](https://wiki.luatos.com/api/dbg.html)           | ✔      | ✔     | ⚠      | ⚠     | ⚠      | ⚠      |
+| [dbg](https://wiki.luatos.com/api/dbg.html)           | ✔      | ✔     | ✔      | ✖     | ⚠      | ✔      |
 | [lpmem](https://wiki.luatos.com/api/lpmem.html)       | ✖      | ✖     | ✖      | ✔     | ✖      | ✖      |
-| [gtfont](https://wiki.luatos.com/api/gtfont.html)     | ✔      | ✔     | ⚠      | ⚠     | ⚠      | ⚠      |
-| [coremark](https://wiki.luatos.com/api/coremark.html) | ✔      | ✔     | ✔      | ⚠     | ⚠      | ⚠      |
-| [fdb](https://wiki.luatos.com/api/fdb.html)           | ✔      | ✔     | ⚠      | ⚠     | ⚠      | ⚠      |
-| [lvgl](https://wiki.luatos.com/api/lvgl.html)         | ✔      | ✔     | ✔      | ⚠     | ⚠      | ⚠      |
-| [sfd](https://wiki.luatos.com/api/sfd.html)           | ✔      | ✔     | ⚠      | ⚠     | ⚠      | ⚠      |
-| [sfud](https://wiki.luatos.com/api/sfud.html)         | ✔      | ✔     | ✔      | ⚠     | ⚠      | ⚠      |
-| [statem](https://wiki.luatos.com/api/statem.html)     | ✔      | ✔     | ⚠      | ⚠     | ⚠      | ⚠      |
+| [gtfont](https://wiki.luatos.com/api/gtfont.html)     | ✔      | ✔     | ✔      | ⚠     | ⚠      | ✔      |
+| [coremark](https://wiki.luatos.com/api/coremark.html) | ✔      | ✔     | ✔      | ⚠     | ⚠      | ✔      |
+| [fdb](https://wiki.luatos.com/api/fdb.html)           | ✔      | ✔     | ✔      | ⚠     | ⚠      | ✔      |
+| [lvgl](https://wiki.luatos.com/api/lvgl.html)         | ✔      | ✔     | ✔      | ⚠     | ⚠      | ✔      |
+| [sfd](https://wiki.luatos.com/api/sfd.html)           | ✔      | ✔     | ✔      | ⚠     | ⚠      | ✔      |
+| [sfud](https://wiki.luatos.com/api/sfud.html)         | ✔      | ✔     | ✔      | ⚠     | ⚠      | ✔      |
+| [statem](https://wiki.luatos.com/api/statem.html)     | ✔      | ✔     | ✔      | ⚠     | ⚠      | ✔      |
 
 ## 联网/射频支持
 
-| Libs                                                  | Air101 | Air103 | Air105 | Air302 | Air640W | ESP32 |
+| Libs                                                  | Air101 | Air103 | Air105 | Air302 | Air640W | ESP32C3 |
 |-------------------------------------------------------|--------|--------|--------|--------|---------|--------|
 | [socket](https://wiki.luatos.com/api/socket.html)     | ✖      | ✖     | ✖      | ✔     | ✔      | ⚠      |
 | [ctiot](https://wiki.luatos.com/api/ctiot.html)       | ✖      | ✖     | ✖      | ✔     | ✖      | ✖      |
