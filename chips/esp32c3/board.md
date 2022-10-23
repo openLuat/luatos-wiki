@@ -12,7 +12,7 @@
 
 ## 刷机烧录教程
 
-[串口烧录教程](https://wiki.luatos.com/boardGuide/flash.html)，**波特率为921600**
+[串口烧录教程](https://wiki.luatos.com/boardGuide/flash.html)，**日志波特率为921600**
 
 ## 一、产品描述
 
@@ -23,10 +23,10 @@ CORE ESP32核心板是基于乐鑫ESP32-C3进行设计的一款核心板，尺�
 - 尺寸长宽 21mm*51mm
 - 1路SPI FLASH，板载4MB，支持最高 16MB
 - 2路UART接口，UART0~UART1,其中下载口为UART0
-- 6 路 12 比特 ADC，最高采样率 100KSPS
+- 5 路 12 比特 ADC，最高采样率 100KSPS
 - 1路低速SPI接口，支持主模式
 - 1路IIC控制器
-- 4路PWM接口
+- 4路PWM接口,可使用任意GPIO
 - GPIO外部管脚15路，可复用
 - 2路贴片LED指示灯
 - 1路复位按键+1路BOOT按键
@@ -35,30 +35,30 @@ CORE ESP32核心板是基于乐鑫ESP32-C3进行设计的一款核心板，尺�
 
 ## 三、管脚定义
 
-![footprint](img/20220215114919363.png)
+![footprint](img/20221023.png)
 
 **详细管脚描述**
 
 | **编号** | **名称** | **复位后默认功能**                      | **复用功能**    | **电源域** | **上下拉能力** |
-| ------------ | -------- | --------------------------------------- | --------------- | ---------- | -------------- |
-| 32           | GND      | 接地                                    |                 |            |                |
-| 31           | 5V       | 5V电源接口，与USB的VBUS相连             |                 |            |                |
-| 30           | BOOT     | GPIO09,输入                             | BOOTMODE        | VDD3P3_CPU | UP/DOWN        |
-| 29           | IO08     | GPIO08,输入，输出，高阻                 | PWM04           | VDD3P3_CPU | UP/DOWN        |
-| 28           | IO04     | GPIO04,输入，输出，高阻                 | I2C_SDA/ADC_4   | VDD3P3_RTC | UP/DOWN        |
-| 27           | IO05     | GPIO05,输入，输出，高阻                 | I2C_SCL/ADC_5   | VDD3P3_RTC | UP/DOWN        |
-| 26           | 3.3V     | 芯片电源，3.3V                          |                 |            |                |
-| 25           | GND      | 接地                                    |                 |            |                |
-| 24           | PB_11    | GPIO11,输入，输出，高阻                 | VDD_SPI         | VDD3P3_CPU | UP/DOWN        |
-| 23           | IO07     | GPIO07,输入，输出，高阻                 | SPI0_CS         | VDD3P3_CPU | UP/DOWN        |
-| 22           | IO06     | GPIO06,输入，输出，高阻                 | PWM01           | VDD3P3_CPU | UP/DOWN        |
-| 21           | IO10     | GPIO10,输入，输出，高阻                 | PWM03/SPI0_MISO | VDD3P3_CPU | UP/DOWN        |
-| 20           | IO03     | GPIO03,输入，输出，高阻                 | SPI0_MOSI/ADC_3       | VDD3P3_RTC | UP/DOWN        |
-| 19           | IO02     | GPIO02,输入，输出，高阻                 | PWM02/SPI0_CK/ADC_2   | VDD3P3_CPU | UP/DOWN        |
+| ------------ | -------- | --------------------------------------- | -----------| ---------- | -------------- |
+| 32           | GND      | 接地                                    |            |            |                |
+| 31           | 5V       | 5V电源接口，与USB的VBUS相连             |             |            |                |
+| 30           | BOOT     | GPIO09,输入                             | BOOTMODE   | VDD3P3_CPU | UP/DOWN        |
+| 29           | IO08     | GPIO08,输入，输出，高阻                 |             | VDD3P3_CPU | UP/DOWN        |
+| 28           | IO04     | GPIO04,输入，输出，高阻                 | I2C_SDA/ADC_4| VDD3P3_RTC | UP/DOWN        |
+| 27           | IO05     | GPIO05,输入，输出，高阻                 | I2C_SCL/ADC_5| VDD3P3_RTC | UP/DOWN        |
+| 26           | 3.3V     | 芯片电源，3.3V                          |              |            |                |
+| 25           | GND      | 接地                                    |              |            |                |
+| 24           | PB_11    | GPIO11,输入，输出，高阻                 | VDD_SPI       | VDD3P3_CPU | UP/DOWN        |
+| 23           | IO07     | GPIO07,输入，输出，高阻                 | SPI2_CS       | VDD3P3_CPU | UP/DOWN        |
+| 22           | IO06     | GPIO06,输入，输出，高阻                 |               | VDD3P3_CPU | UP/DOWN        |
+| 21           | IO10     | GPIO10,输入，输出，高阻                 | SPI2_MISO     | VDD3P3_CPU | UP/DOWN        |
+| 20           | IO03     | GPIO03,输入，输出，高阻                 | SPI2_MOSI/ADC_3 | VDD3P3_RTC | UP/DOWN        |
+| 19           | IO02     | GPIO02,输入，输出，高阻                 | SPI2_CK/ADC_2   | VDD3P3_CPU | UP/DOWN        |
 | 18           | 3.3V     | 芯片电源，3.3V                          |                 |            |                |
 | 17           | GND      | 接地                                    |                 |            |                |
 | 16           | 5V       | 5V电源接口，与USB的VBUS相连             |                 |            |                |
-| 15           | PWB      | 芯片3.3V供电控制,高电平有效，不用可悬空 |                 |            |                |
+| 15           | PWB      | 芯片3.3V供电控制,高电平有效，不用可悬空  |                 |            |                |
 | 14           | GND      | 接地                                    |                 |            |                |
 | 13           | 3.3V     | 芯片电源，3.3V                          |                 |            |                |
 | 12           | RESET    | 芯片复位                                |                 | VDD3P3_RTC |                |
@@ -74,7 +74,7 @@ CORE ESP32核心板是基于乐鑫ESP32-C3进行设计的一款核心板，尺�
 | 02           | IO00     | GPIO0,输入，输出，高阻                  | UART1_TX/ADC_0  | VDD3P3_CPU | UP/DOWN        |
 | 01           | GND      | 接地                                    |                 |            |                |
 
-
+* 任意GPIO均可作为PWM脚, 编号与GPIO一致, 但`同时只能开启4路PWM`,务必注意
 
 ## 四、功能介绍
 
@@ -137,7 +137,7 @@ CORE-ESP32-C3核心板支持以下3种方式供电：
 | SPID              | -            | GPIO16配置，FLASH_D0，数据脚0 | UP/DOWN        |
 | SPICLK            | -            | GPIO15配置，FLASH_CK，时钟    | UP/DOWN        |
 
- 注：CORE ESP32核心板搭载ESP32-C3不带内置FLASH版本，默认贴装外置SPI FLASH，如遇到不贴装外置SPI FLASH的核心，需要注意主芯片的具体型号。 
+ 注：CORE ESP32核心板搭载ESP32-C3是不带内置FLASH版本，默认贴装外置SPI FLASH，如遇到不贴装外置SPI FLASH的核心，需要注意主芯片的具体型号。 
 
 附表4-4
 
@@ -161,5 +161,5 @@ CORE-ESP32-C3核心板支持以下3种方式供电：
 
 [开源仓库链接](https://gitee.com/openLuat/luatos-soc-idf5)
 
-[demo链接](https://gitee.com/openLuat/luatos-soc-idf5/tree/master/demo)
+[demo链接](https://gitee.com/openLuat/openLuat/tree/master/demo)
 
