@@ -1,0 +1,22 @@
+SYSCLK: 200.0Mhz, 
+HCLK: 200.0Mhz, 
+PCLK1: 100.0Mhz, 
+PCLK2: 200.0Mhz, 
+ADCCLK: 100.0Mhz
+
+2K performance run parameters for coremark.
+CoreMark Size    : 666
+Total ticks      : 17635
+Total time (secs): 17.635000
+Iterations/Sec   : 567.054154
+Iterations       : 10000
+Compiler version : GCCClang 15.0.0
+Compiler flags   : -O3
+Memory location  : STACK
+seedcrc          : 0xe9f5
+[0]crclist       : 0xe714
+[0]crcmatrix     : 0x1fd7
+[0]crcstate      : 0x8e3a
+[0]crcfinal      : 0x988c
+Correct operation validated. See readme.txt for run and reporting rules.
+CoreMark 1.0 : 567.054154 / GCCClang 15.0.0 -O3 / STACK
