@@ -1,0 +1,17 @@
+[2022-10-24 23:14:59.641] D/coremark 2K performance run parameters for coremark.
+[2022-10-24 23:14:59.641] D/coremark CoreMark Size    : 666
+[2022-10-24 23:14:59.641] D/coremark Total ticks      : 16490
+[2022-10-24 23:14:59.641] D/coremark Total time (secs): 16.490000
+[2022-10-24 23:14:59.641] D/coremark Iterations/Sec   : 606.428138
+[2022-10-24 23:14:59.641] D/coremark Iterations       : 10000
+[2022-10-24 23:14:59.641] D/coremark Compiler version : GCC6.3.0
+[2022-10-24 23:14:59.641] D/coremark Compiler flags   : -Os
+[2022-10-24 23:14:59.641] D/coremark Memory location  : STACK
+[2022-10-24 23:14:59.641] D/coremark seedcrc          : 0xe9f5
+[2022-10-24 23:14:59.641] D/coremark [0]crclist       : 0xe714
+[2022-10-24 23:14:59.641] D/coremark [0]crcmatrix     : 0x1fd7
+[2022-10-24 23:14:59.641] D/coremark [0]crcstate      : 0x8e3a
+[2022-10-24 23:14:59.641] D/coremark [0]crcfinal      : 0x988c
+[2022-10-24 23:14:59.641] D/coremark Correct operation validated. See README.md for run and reporting rules.
+[2022-10-24 23:14:59.688] D/coremark CoreMark 1.0 : 606.428138 / GCC6.3.0 -Os
+[2022-10-24 23:14:59.688] D/coremark  / STACK
