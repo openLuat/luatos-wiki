@@ -24,7 +24,7 @@ http2客户端
 |返回值类型|解释|
 |-|-|
 |int|code|
-|tabal|headers |
+|tabal|headers|
 |string|body|
 
 **例子**
