@@ -56,6 +56,12 @@ D:\
 
 `LuatOS` `luatos-soc-idf5` 都是固定目录名称, 都不可以改, 例如 `LuatOS-master` 就是错误的命名, 必须要改回 `LuatOS`
 
+如果实在不方便把主库存放在 `D:\github\LuatOS`, 修改`luatos-soc-idf5\luatos\CMakeLists.txt`里面的`LUATOS_ROOT`值. 例如, 存放在 `E:/abc/LuatOS`, 则修改为
+
+```
+set(LUATOS_ROOT "E://abc/LuatOS/")
+```
+
 ## 编译前的最后准备
 
 第一次使用编译,需要对idf5进行初始化, 进去CMD命令行
