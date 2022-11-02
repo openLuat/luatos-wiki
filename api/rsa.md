@@ -55,7 +55,7 @@ log.info("rsa", "encrypt", res and #res or 0, res and res:toHex() or "")
 
 ---
 
-## rsa.encrypt(key, data, pwd)
+## rsa.decrypt(key, data, pwd)
 
 RSA解密
 
@@ -65,6 +65,7 @@ RSA解密
 |-|-|
 |string|私钥数据,仅支持PEM格式|
 |string|待解密数据|
+|string|私钥的密码,可选|
 
 **返回值**
 
