@@ -282,6 +282,38 @@ wlan.createAP("uiot", "12345678")
 
 ---
 
+## wlan.getInfo()
+
+获取信息,如AP的bssid,信号强度
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|table|详情,键值对形式|
+
+**例子**
+
+```lua
+
+log.info("wlan", "info", json.encode(wlan.getInfo()))
+--[[
+典型输出
+{
+    "bssid" : "xxxxxx",
+    "rssi"  : -89,
+    "gw" : "192.168.1.1"
+}
+]]
+
+```
+
+---
+
 ## wlan.getMode(dev)
 
 获取wifi模式
