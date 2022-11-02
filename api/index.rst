@@ -53,6 +53,7 @@
    pm
    protobuf
    pwm
+   rsa
    rtc
    rtos
    sdio
