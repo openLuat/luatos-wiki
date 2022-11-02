@@ -71,34 +71,6 @@ end)
 
 ---
 
-## socket
-
-
-
-[socket接口文档页](https://wiki.luatos.com/api/socket.html)
-
-
-
-### NETC_END_xx
-
-连接断开
-
-**额外返回参数**
-
-无
-
-**例子**
-
-```lua
-sys.taskInit(function()
-    sys.waitUntil("NETC_END_".. id, 30000)
-    log.info("GET NETC_END or timeout")
-end)
-
-```
-
----
-
 ## sys
 
 
@@ -425,6 +397,34 @@ LORA 接收错误
 ```lua
 sys.subscribe("LORA_RX_ERROR", function()
     lora.recive(1000)
+end)
+
+```
+
+---
+
+## socket
+
+
+
+[socket接口文档页](https://wiki.luatos.com/api/socket.html)
+
+
+
+### NETC_END_xx
+
+连接断开
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.taskInit(function()
+    sys.waitUntil("NETC_END_".. id, 30000)
+    log.info("GET NETC_END or timeout")
 end)
 
 ```
