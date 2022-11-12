@@ -350,6 +350,27 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
+## network.sslLog(log_level)
+
+设置SSL的log
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int	mbedtls|log等级，<=2基本不打印，不要超过9|
+|usage|network.sslLog(3)|
+
+**返回值**
+
+无
+
+**例子**
+
+无
+
+---
+
 ## network.create(adapter, cb)
 
 在某个适配的网卡上申请一个network_ctrl
