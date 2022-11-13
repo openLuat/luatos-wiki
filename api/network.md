@@ -1,6 +1,6 @@
 # network - 网络接口适配
 
-> 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/network/adapter/luat_lib_network.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+> 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/network/adapter/luat_lib_socket.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
 > 本库有专属demo，[点此链接查看network的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/network)
 
@@ -16,15 +16,15 @@
 |network.CLOSED|number|CLOSED事件|
 
 
-## network.create(adapter, cb)
+## socket.create(adapter, cb)
 
-在某个适配的网卡上申请一个network_ctrl
+在某个适配的网卡上申请一个socket_ctrl
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|int|适配器序号， 只能是network.ETH0（外置以太网），network.LWIP_ETH（内置以太网），network.LWIP_STA（内置WIFI的STA），network.LWIP_AP（内置WIFI的AP），network.LWIP_GP（内置蜂窝网络的GPRS），network.USB（外置USB网卡），如果不填，优先选择soc平台自带能上外网的适配器，若仍然没有，选择最后一个注册的适配器|
+|int|适配器序号， 只能是socket.ETH0（外置以太网），socket.LWIP_ETH（内置以太网），socket.LWIP_STA（内置WIFI的STA），socket.LWIP_AP（内置WIFI的AP），socket.LWIP_GP（内置蜂窝网络的GPRS），socket.USB（外置USB网卡），如果不填，优先选择soc平台自带能上外网的适配器，若仍然没有，选择最后一个注册的适配器|
 |string|or function string为消息通知的taskName，function则为回调函数，如果固件没有内置sys_wait，则必须是function|
 
 **返回值**
@@ -37,7 +37,7 @@
 
 ---
 
-## network.debug(ctrl, onoff)
+## socket.debug(ctrl, onoff)
 
 配置是否打开debug信息
 
@@ -45,7 +45,7 @@
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 |boolean|true 打开debug开关|
 
 **返回值**
@@ -60,7 +60,7 @@
 
 ---
 
-## network.config(ctrl, local_port, is_udp, is_tls, keep_idle, keep_interval, keep_cnt, server_cert, client_cert, client_key, client_password)
+## socket.config(ctrl, local_port, is_udp, is_tls, keep_idle, keep_interval, keep_cnt, server_cert, client_cert, client_key, client_password)
 
 配置network一些信息，
 
@@ -68,7 +68,7 @@
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 |int|本地端口号，小端格式，如果不写，则自动分配一个，如果用户填了端口号则需要小于60000, 默认不写|
 |boolean|是否是UDP，默认false|
 |boolean|是否是加密传输，默认false|
@@ -89,13 +89,13 @@
 **例子**
 
 ```lua
-network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不用验证的那种
+socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不用验证的那种
 
 ```
 
 ---
 
-## network.linkup(ctrl)
+## socket.linkup(ctrl)
 
 等待网卡linkup
 
@@ -103,14 +103,14 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
 |boolean|true有异常发生，false没有异常，如果有error则不需要看下一个返回值了|
-|boolean|true已经linkup，false没有linkup，之后需要接收network.LINK消息|
+|boolean|true已经linkup，false没有linkup，之后需要接收socket.LINK消息|
 
 **例子**
 
@@ -118,7 +118,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.connect(ctrl, ip, remote_port)
+## socket.connect(ctrl, ip, remote_port)
 
 作为客户端连接服务器
 
@@ -126,7 +126,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 |string|or int ip或者域名，如果是IPV4，可以是大端格式的int值|
 |int|服务器端口号，小端格式|
 
@@ -135,7 +135,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 |返回值类型|解释|
 |-|-|
 |boolean|true有异常发生，false没有异常，如果有error则不需要看下一个返回值了，如果有异常，后续要close|
-|boolean|true已经connect，false没有connect，之后需要接收network.ON_LINE消息|
+|boolean|true已经connect，false没有connect，之后需要接收socket.ON_LINE消息|
 
 **例子**
 
@@ -143,7 +143,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.discon(ctrl)
+## socket.discon(ctrl)
 
 作为客户端断开连接
 
@@ -151,7 +151,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 
 **返回值**
 
@@ -163,7 +163,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.close(ctrl)
+## socket.close(ctrl)
 
 强制关闭socket
 
@@ -171,7 +171,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 
 **返回值**
 
@@ -183,7 +183,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.tx(ctrl, data, ip, port, flag)
+## socket.tx(ctrl, data, ip, port, flag)
 
 发送数据给对端，UDP单次发送不要超过1460字节，否则很容易失败
 
@@ -191,7 +191,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 |string|or user_data zbuff  要发送的数据|
 |string|or int 对端IP，如果是TCP应用则忽略，如果是UDP，如果留空则用connect时候的参数，如果是IPV4，可以是大端格式的int值|
 |int|对端端口号，小端格式，如果是TCP应用则忽略，如果是UDP，如果留空则用connect时候的参数|
@@ -202,8 +202,8 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 |返回值类型|解释|
 |-|-|
 |boolean|true有异常发生，false没有异常，如果有error则不需要看下一个返回值了，如果有异常，后续要close|
-|boolean|true缓冲区满了，false没有异常，如果true，则需要等待一段时间或者等到network.TX_OK消息后再尝试发送，同时忽略下一个返回值|
-|boolean|true已经收到应答，false没有收到应答，之后需要接收network.TX_OK消息， 也可以忽略继续发送，直到full==true|
+|boolean|true缓冲区满了，false没有异常，如果true，则需要等待一段时间或者等到socket.TX_OK消息后再尝试发送，同时忽略下一个返回值|
+|boolean|true已经收到应答，false没有收到应答，之后需要接收socket.TX_OK消息， 也可以忽略继续发送，直到full==true|
 
 **例子**
 
@@ -211,7 +211,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.rx(ctrl, buff, flag)
+## socket.rx(ctrl, buff, flag)
 
 接收对端发出的数据，注意数据已经缓存在底层，使用本函数只是提取出来，UDP模式下一次只会取出一个数据包
 
@@ -219,7 +219,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 |user_data|zbuff 存放接收的数据，如果缓冲区不够大会自动扩容|
 |int|接收参数，目前预留，不起作用|
 
@@ -238,7 +238,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.wait(ctrl)
+## socket.wait(ctrl)
 
 等待新的socket消息，在连接成功和发送数据成功后，使用一次将network状态转换到接收新数据
 
@@ -246,14 +246,14 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
 |boolean|true有异常发生，false没有异常，如果有异常，后续要close|
-|boolean|true有新的数据需要接收，false没有数据，之后需要接收network.EVENT消息|
+|boolean|true有新的数据需要接收，false没有数据，之后需要接收socket.EVENT消息|
 
 **例子**
 
@@ -261,7 +261,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.listen(ctrl)
+## socket.listen(ctrl)
 
 作为服务端开始监听
 
@@ -269,14 +269,14 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
 |boolean|true有异常发生，false没有异常，如果有error则不需要看下一个返回值了，如果有异常，后续要close|
-|boolean|true已经connect，false没有connect，之后需要接收network.ON_LINE消息|
+|boolean|true已经connect，false没有connect，之后需要接收socket.ON_LINE消息|
 
 **例子**
 
@@ -284,7 +284,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.accept(ctrl)
+## socket.accept(ctrl)
 
 作为服务端接收到一个新的客户端，注意，如果是类似W5500的硬件协议栈不支持1对多，则不需要第二个参数
 
@@ -292,8 +292,8 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl，这里是服务器端|
-|string|or function or nil string为消息通知的taskName，function则为回调函数，和network.create参数一致|
+|user_data|socket.create得到的ctrl，这里是服务器端|
+|string|or function or nil string为消息通知的taskName，function则为回调函数，和socket.create参数一致|
 
 **返回值**
 
@@ -308,7 +308,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.release(ctrl)
+## socket.release(ctrl)
 
 主动释放掉network_ctrl
 
@@ -326,7 +326,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.setDNS(adapter_index, dns_index, ip)
+## socket.setDNS(adapter_index, dns_index, ip)
 
 设置DNS服务器
 
@@ -334,7 +334,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|int|适配器序号， 只能是network.ETH0，network.STA，network.AP，如果不填，会选择最后一个注册的适配器|
+|int|适配器序号， 只能是socket.ETH0，socket.STA，socket.AP，如果不填，会选择最后一个注册的适配器|
 |int|dns服务器序号，从1开始|
 |string|or int dns，如果是IPV4，可以是大端格式的int值|
 
@@ -350,7 +350,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.sslLog(log_level)
+## socket.sslLog(log_level)
 
 设置SSL的log
 
@@ -359,7 +359,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 |传入值类型|解释|
 |-|-|
 |int	mbedtls|log等级，<=2基本不打印，不要超过9|
-|usage|network.sslLog(3)|
+|usage|socket.sslLog(3)|
 
 **返回值**
 
@@ -371,7 +371,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.create(adapter, cb)
+## socket.create(adapter, cb)
 
 在某个适配的网卡上申请一个network_ctrl
 
@@ -379,7 +379,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|int|适配器序号， 只能是network.ETH0，network.STA，network.AP，如果不填，会选择最后一个注册的适配器|
+|int|适配器序号， 只能是socket.ETH0，socket.STA，socket.AP，如果不填，会选择最后一个注册的适配器|
 |string|or function string为消息通知的taskName，function则为回调函数，如果固件没有内置sys_wait，则必须是function|
 
 **返回值**
@@ -392,7 +392,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.debug(ctrl, onoff)
+## socket.debug(ctrl, onoff)
 
 配置是否打开debug信息
 
@@ -400,7 +400,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 |boolean|true 打开debug开关|
 
 **返回值**
@@ -415,7 +415,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.config(ctrl, local_port, is_udp, is_tls, keep_idle, keep_interval, keep_cnt, server_cert, client_cert, client_key, client_password)
+## socket.config(ctrl, local_port, is_udp, is_tls, keep_idle, keep_interval, keep_cnt, server_cert, client_cert, client_key, client_password)
 
 配置network一些信息，
 
@@ -423,7 +423,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 |int|本地端口号，小端格式，如果不写，则自动分配一个，如果用户填了端口号则需要小于60000, 默认不写|
 |boolean|是否是UDP，默认false|
 |boolean|是否是加密传输，默认false|
@@ -444,13 +444,13 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 **例子**
 
 ```lua
-network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不用验证的那种
+socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不用验证的那种
 
 ```
 
 ---
 
-## network.linkup(ctrl)
+## socket.linkup(ctrl)
 
 等待网卡linkup
 
@@ -458,14 +458,14 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
 |boolean|true有异常发生，false没有异常，如果有error则不需要看下一个返回值了|
-|boolean|true已经linkup，false没有linkup，之后需要接收network.LINK消息|
+|boolean|true已经linkup，false没有linkup，之后需要接收socket.LINK消息|
 
 **例子**
 
@@ -473,7 +473,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.connect(ctrl, ip, remote_port)
+## socket.connect(ctrl, ip, remote_port)
 
 作为客户端连接服务器
 
@@ -481,7 +481,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 |string|or int ip或者域名，如果是IPV4，可以是大端格式的int值|
 |int|服务器端口号，小端格式|
 
@@ -490,7 +490,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 |返回值类型|解释|
 |-|-|
 |boolean|true有异常发生，false没有异常，如果有error则不需要看下一个返回值了，如果有异常，后续要close|
-|boolean|true已经connect，false没有connect，之后需要接收network.ON_LINE消息|
+|boolean|true已经connect，false没有connect，之后需要接收socket.ON_LINE消息|
 
 **例子**
 
@@ -498,7 +498,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.discon(ctrl)
+## socket.discon(ctrl)
 
 作为客户端断开连接
 
@@ -506,7 +506,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 
 **返回值**
 
@@ -518,7 +518,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.close(ctrl)
+## socket.close(ctrl)
 
 强制关闭socket
 
@@ -526,7 +526,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 
 **返回值**
 
@@ -538,7 +538,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.tx(ctrl, data, ip, port, flag)
+## socket.tx(ctrl, data, ip, port, flag)
 
 发送数据给对端
 
@@ -546,7 +546,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 |string|or user_data zbuff  要发送的数据|
 |string|or int 对端IP，如果是TCP应用则忽略，如果是UDP，如果留空则用connect时候的参数，如果是IPV4，可以是大端格式的int值|
 |int|对端端口号，小端格式，如果是TCP应用则忽略，如果是UDP，如果留空则用connect时候的参数|
@@ -557,8 +557,8 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 |返回值类型|解释|
 |-|-|
 |boolean|true有异常发生，false没有异常，如果有error则不需要看下一个返回值了，如果有异常，后续要close|
-|boolean|true缓冲区满了，false没有异常，如果true，则需要等待一段时间或者等到network.TX_OK消息后再尝试发送，同时忽略下一个返回值|
-|boolean|true已经收到应答，false没有收到应答，之后需要接收network.TX_OK消息， 也可以忽略继续发送，直到full==true|
+|boolean|true缓冲区满了，false没有异常，如果true，则需要等待一段时间或者等到socket.TX_OK消息后再尝试发送，同时忽略下一个返回值|
+|boolean|true已经收到应答，false没有收到应答，之后需要接收socket.TX_OK消息， 也可以忽略继续发送，直到full==true|
 
 **例子**
 
@@ -566,7 +566,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.rx(ctrl, buff, flag)
+## socket.rx(ctrl, buff, flag)
 
 接收对端发出的数据，注意数据已经缓存在底层，使用本函数只是提取出来，UDP模式下一次只会取出一个数据包
 
@@ -574,7 +574,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 |user_data|zbuff 存放接收的数据，如果缓冲区不够大会自动扩容|
 |int|接收参数，目前预留，不起作用|
 
@@ -593,7 +593,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.wait(ctrl)
+## socket.wait(ctrl)
 
 等待新的socket消息，在连接成功和发送数据成功后，使用一次将network状态转换到接收新数据
 
@@ -601,14 +601,14 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
 |boolean|true有异常发生，false没有异常，如果有异常，后续要close|
-|boolean|true有新的数据需要接收，false没有数据，之后需要接收network.EVENT消息|
+|boolean|true有新的数据需要接收，false没有数据，之后需要接收socket.EVENT消息|
 
 **例子**
 
@@ -616,7 +616,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.listen(ctrl)
+## socket.listen(ctrl)
 
 作为服务端开始监听
 
@@ -624,14 +624,14 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl|
+|user_data|socket.create得到的ctrl|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
 |boolean|true有异常发生，false没有异常，如果有error则不需要看下一个返回值了，如果有异常，后续要close|
-|boolean|true已经connect，false没有connect，之后需要接收network.ON_LINE消息|
+|boolean|true已经connect，false没有connect，之后需要接收socket.ON_LINE消息|
 
 **例子**
 
@@ -639,7 +639,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.accept(ctrl)
+## socket.accept(ctrl)
 
 作为服务端接收到一个新的客户端，注意，如果是类似W5500的硬件协议栈不支持1对多，则不需要第二个参数
 
@@ -647,8 +647,8 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|user_data|network.create得到的ctrl，这里是服务器端|
-|string|or function or nil string为消息通知的taskName，function则为回调函数，和network.create参数一致|
+|user_data|socket.create得到的ctrl，这里是服务器端|
+|string|or function or nil string为消息通知的taskName，function则为回调函数，和socket.create参数一致|
 
 **返回值**
 
@@ -663,7 +663,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.release(ctrl)
+## socket.release(ctrl)
 
 主动释放掉network_ctrl
 
@@ -681,7 +681,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.setDNS(adapter_index, dns_index, ip)
+## socket.setDNS(adapter_index, dns_index, ip)
 
 设置DNS服务器
 
@@ -689,7 +689,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 |传入值类型|解释|
 |-|-|
-|int|适配器序号， 只能是network.ETH0，network.STA，network.AP，如果不填，会选择最后一个注册的适配器|
+|int|适配器序号， 只能是socket.ETH0，socket.STA，socket.AP，如果不填，会选择最后一个注册的适配器|
 |int|dns服务器序号，从1开始|
 |string|or int dns，如果是IPV4，可以是大端格式的int值|
 
@@ -705,7 +705,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 
 ---
 
-## network.sslLog(log_level)
+## socket.sslLog(log_level)
 
 设置SSL的log
 
@@ -714,7 +714,7 @@ network.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都�
 |传入值类型|解释|
 |-|-|
 |int	mbedtls|log等级，<=2基本不打印，不要超过9|
-|usage|network.sslLog(3)|
+|usage|socket.sslLog(3)|
 
 **返回值**
 
