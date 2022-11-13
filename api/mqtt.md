@@ -53,7 +53,29 @@ mqttc:unsubscribe({"/luatos/1234567","/luatos/12345678"})
 
 ---
 
-## mqttc:create(adapter,host,port,isssl,ca_file)
+## mqttc:debug(onoff)
+
+配置是否打开debug信息
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|boolean|true 打开debug开关|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+无
+
+---
+
+## mqtt.create(adapter,host,port,isssl,ca_file)
 
 mqtt客户端创建
 

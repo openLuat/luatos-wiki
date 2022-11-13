@@ -16,7 +16,7 @@ http2客户端
 |string|url地址|
 |tabal|请求头 可选 例如{["Content-Type"] = "application/x-www-form-urlencoded"}|
 |string|body 可选|
-|tabal|额外配置 可选 包含dst:下载路径,可选 adapter:选择使用网卡,可选|
+|tabal|额外配置 可选 包含dst:下载路径,可选 adapter:选择使用网卡,可选 debug:是否打开debug信息,可选|
 |string|证书 可选|
 
 **返回值**
