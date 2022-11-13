@@ -45,7 +45,6 @@
    mqtt
    multimedia
    nbiot
-   network
    nimble
    otp
    pack
