@@ -2,6 +2,29 @@
 
 > 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/mobile/luat_lib_mobile.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 
+> 本库有专属demo，[点此链接查看mobile的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/mobile)
+
+**示例**
+
+```lua
+-- 简单演示
+
+log.info("imei", mobile.imei())
+log.info("imsi", mobile.imsi())
+local sn = mobile.sn()
+if sn then
+    log.info("sn",   sn:toHex())
+end
+log.info("muid", mobile.muid())
+log.info("iccid", mobile.iccid())
+log.info("csq", mobile.csq())
+log.info("rssi", mobile.rssi())
+log.info("rsrq", mobile.rsrq())
+log.info("rsrp", mobile.rsrp())
+log.info("snr", mobile.snr())
+log.info("simid", mobile.simid())
+
+```
 
 ## mobile.imei(index)
 
@@ -59,7 +82,7 @@
 
 |返回值类型|解释|
 |-|-|
-|string|当前的SN值,若失败返回nil|
+|string|当前的SN值,若失败返回nil. 注意, SN可能包含不可见字符|
 
 **例子**
 
