@@ -17,6 +17,7 @@
     air640w/index
     W806
     win32
+    coremark/README
     supported
     question
     Air724 <https://doc.openluat.com/wiki/21?wiki_page_id=4020>

@@ -80,7 +80,6 @@
    develop/compile
    develop/docs
    develop/contribute/index
-   develop/coremark/README
 
 .. toctree::
    :hidden:
