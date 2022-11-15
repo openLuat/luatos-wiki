@@ -83,13 +83,13 @@
 
 .. toctree::
    :hidden:
-   :caption: 💼 应用开发
+   :caption: 💼 实战参考
 
    appDevelopment/index
-   软件仓库 <https://wiki.luatos.com/-/>
 
 .. toctree::
    :hidden:
    :caption: 🗄️ 其他资料
 
+   iotpower/index
    archives
