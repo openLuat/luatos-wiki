@@ -535,3 +535,30 @@ end
 
 ---
 
+## crypto.cipher_suites()
+
+获取当前固件支持的cipher suites列表
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|table|本固件支持的cipher suites列表,字符串数组|
+
+**例子**
+
+```lua
+-- 本API于2022.11.16添加
+local suites = crypto.cipher_suites()
+if suites then
+    log.info("crypto", "ciphers suites", json.encode(suites))
+end
+
+```
+
+---
+
