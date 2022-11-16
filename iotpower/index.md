@@ -14,12 +14,10 @@ IOT Power系列产品是功能齐全，稳定可靠的小型手持式功耗测�
 
 请查看左侧选择对应页面
 
-```{eval-rst}
-.. toctree::
-   :hidden:
-
-    power/index
-    cc/index
-    devices
-    pc
+```{toctree}
+:hidden:
+power/index
+cc/index
+devices
+pc
 ```
