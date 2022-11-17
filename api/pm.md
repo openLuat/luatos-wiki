@@ -8,6 +8,7 @@
 
 |常量|类型|解释|
 |-|-|-|
+|pm.NONE|number|不休眠模式|
 |pm.IDLE|number|IDLE模式|
 |pm.LIGHT|number|LIGHT模式|
 |pm.DEEP|number|DEEP模式|
@@ -136,8 +137,8 @@ pm.dtimerCheck(0) -- 检查id=0的底层定时器
 
 |返回值类型|解释|
 |-|-|
-|int|0-上电/复位开机, 1-RTC开机, 2-WakeupIn/Pad开机, 4-Wakeup/RTC开机|
-|int|0-普通开机(上电/复位),1-Wakeup/RTC开机,3-深睡眠开机,4-休眠开机|
+|int|0-上电/复位开机, 1-RTC开机, 2-WakeupIn/Pad/IO开机, 3-Wakeup/RTC开机|
+|int|0-普通开机(上电/复位),3-深睡眠开机,4-休眠开机，3和4说明程序已经复位了|
 
 **例子**
 
@@ -151,13 +152,13 @@ log.info("pm", "last power reson", pm.lastReson())
 
 ## pm.force(mode)
 
-强制进入指定的休眠模式
+强制进入指定的休眠模式，忽略某些外设的影响，比如USB
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|int|休眠模式,仅pm.DEEP/HIB|
+|int|休眠模式|
 
 **返回值**
 

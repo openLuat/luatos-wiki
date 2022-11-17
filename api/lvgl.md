@@ -483,7 +483,7 @@ lvgl.theme_set_act("empty")
 
 ## lvgl.sleep(enable)
 
-LVGL休眠控制，暂停/恢复刷新定时器，目前只有105可以用
+LVGL休眠控制，暂停/恢复刷新定时器，目前只有105和EC618可以用
 
 **参数**
 
