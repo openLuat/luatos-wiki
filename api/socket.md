@@ -9,11 +9,11 @@
 |常量|类型|解释|
 |-|-|-|
 |socket.ETH0|number|带硬件协议栈的ETH0|
-|socket.ETH0|number|使用LWIP协议栈的以太网卡|
-|socket.ETH0|number|使用LWIP协议栈的WIFI STA|
-|socket.ETH0|number|使用LWIP协议栈的WIFI AP|
-|socket.ETH0|number|使用LWIP协议栈的移动蜂窝模块|
-|socket.ETH0|number|使用LWIP协议栈的USB网卡|
+|socket.LWIP_ETH|number|使用LWIP协议栈的以太网卡|
+|socket.LWIP_STA|number|使用LWIP协议栈的WIFI STA|
+|socket.LWIP_AP|number|使用LWIP协议栈的WIFI AP|
+|socket.LWIP_GP|number|使用LWIP协议栈的移动蜂窝模块|
+|socket.USB|number|使用LWIP协议栈的USB网卡|
 |socket.LINK|number|LINK事件|
 |socket.ON_LINE|number|ON_LINE事件|
 |socket.EVENT|number|EVENT事件|
