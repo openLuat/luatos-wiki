@@ -301,3 +301,73 @@ log.info("simid", mobile.simid())
 
 ---
 
+## mobile.getCellInfo()
+
+获取机制信息
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|table|包含基站数据的数组|
+
+**例子**
+
+```lua
+--示例输出
+--[[
+[
+    {"rsrq":-10,"rssi":-55,"cid":124045360,"mnc":17,"pci":115,"earfcn":1850,"snr":15,"rsrp":-85,"mcc":1120,"tdd":0},
+    {"pci":388,"rsrq":-11,"mnc":17,"earfcn":2452,"snr":5,"rsrp":-67,"mcc":1120,"cid":124045331},
+    {"pci":100,"rsrq":-9,"mnc":17,"earfcn":75,"snr":17,"rsrp":-109,"mcc":1120,"cid":227096712}
+]
+]]
+
+-- 订阅式
+sys.subscribe("CELL_INFO_UPDATE", function()
+    log.info("cell", json.encode(mobile.getCellInfo()))
+end)
+
+-- 定期轮训式
+sys.taskInit(function()
+    sys.wait(3000)
+    while 1 do
+        mobile.reqCellInfo(15)
+        sys.waitUntil("CELL_INFO_UPDATE", 15000)
+        log.info("cell", json.encode(mobile.getCellInfo()))
+    end
+end)
+
+```
+
+---
+
+## mobile.reqCellInfo(timeout)
+
+发起基站信息查询,含临近小区
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|超时时长,单位秒,默认15. 最少5, 最高60|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+-- 参考 mobile.getCellInfo 函数
+
+```
+
+---
+
