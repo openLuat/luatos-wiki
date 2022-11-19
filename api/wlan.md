@@ -13,7 +13,7 @@
 |wlan.ESPTOUCH_V2|esptouch配网,|V2, 未测试|
 
 
-## wifi.init()
+## wlan.init()
 
 初始化
 
@@ -33,7 +33,7 @@
 
 ---
 
-## wifi.setMode(mode)
+## wlan.setMode(mode)
 
 设置wifi模式
 
@@ -53,19 +53,19 @@
 
 ```lua
 -- 设置为AP模式, 广播ssid, 接收wifi客户端的链接
-wifi.setMode(wifi.AP)
+wlan.setMode(wlan.AP)
 
 -- 设置为STATION模式, 也是初始化后的默认模式
-wifi.setMode(wifi.STATION)
+wlan.setMode(wlan.STATION)
 
 -- 混合模式, 做AP又做STATION
-wifi.setMode(wifi.APSTA)
+wlan.setMode(wlan.APSTA)
 
 ```
 
 ---
 
-## wifi.ready()
+## wlan.ready()
 
 作为STATION时,是否已经连接上AP,且获取IP成功
 
@@ -85,7 +85,7 @@ wifi.setMode(wifi.APSTA)
 
 ---
 
-## wifi.connect(ssid, password)
+## wlan.connect(ssid, password)
 
 作为STATION时,连接到指定AP
 
@@ -118,7 +118,7 @@ wlan.connect()
 
 ---
 
-## wifi.disconnect()
+## wlan.disconnect()
 
 作为STATION时,断开AP
 
@@ -136,7 +136,7 @@ wlan.connect()
 
 ---
 
-## wifi.scan()
+## wlan.scan()
 
 扫描wifi频段
 
@@ -151,7 +151,7 @@ wlan.connect()
 **例子**
 
 ```lua
--- 注意, wifi.scan()是异步API,启动扫描后会马上返回
+-- 注意, wlan.scan()是异步API,启动扫描后会马上返回
 
 -- wifi扫描成功后, 会有WLAN_SCAN_DONE消息, 读取即可
 sys.subscribe("WLAN_SCAN_DONE", function ()
@@ -176,7 +176,7 @@ end)
 
 ---
 
-## wifi.scanResult()
+## wlan.scanResult()
 
 获取wifi扫描结果
 
