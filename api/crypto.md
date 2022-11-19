@@ -562,3 +562,39 @@ end
 
 ---
 
+## crypto.md_file(tp, path, hmac)
+
+计算文件的hash值(md5/sha1/sha256及hmac形式)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|hash类型, 大小字母, 例如 "MD5" "SHA1" "SHA256"|
+|string|文件路径, 例如 /luadb/logo.jpg|
+|string|hmac值,可选|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|HEX过的hash值,若失败会无返回值|
+
+**例子**
+
+```lua
+
+-- 无hmac的hash值
+log.info("md5", crypto.md_file("MD5", "/luadb/logo.jpg"))
+log.info("sha1", crypto.md_file("SHA1", "/luadb/logo.jpg"))
+log.info("sha256", crypto.md_file("SHA256", "/luadb/logo.jpg"))
+
+-- 带hmac的hash值
+log.info("hmac_md5", crypto.md_file("MD5", "/luadb/logo.jpg", "123456"))
+log.info("hmac_sha1", crypto.md_file("SHA1", "/luadb/logo.jpg", "123456"))
+log.info("hmac_sha256", crypto.md_file("SHA256", "/luadb/logo.jpg", "123456"))
+
+```
+
+---
+
