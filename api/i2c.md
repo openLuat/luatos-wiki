@@ -26,7 +26,7 @@ i2c编号是否存在
 
 |返回值类型|解释|
 |-|-|
-|int|存在就返回1,否则返回0|
+|bool|存在就返回true,否则返回false|
 
 **例子**
 
@@ -50,7 +50,6 @@ i2c初始化
 |-|-|
 |int|设备id, 例如i2c1的id为1, i2c2的id为2|
 |int|I2C速度, 例如i2c.FAST|
-|int|从设备地址（7位）, 例如0x38|
 
 **返回值**
 
@@ -62,11 +61,8 @@ i2c初始化
 
 ```lua
 -- 初始化i2c1
-if i2c.setup(1, i2c.FAST, 0x38) == 1 then
-    log.info("存在 i2c1")
-else
-    i2c.close(1) -- 关掉
-end
+i2c.setup(1, i2c.FAST) -- 端口正确就一定成功
+-- 如需判断i2c id是否合法, 请使用 i2c.exist 函数
 
 ```
 

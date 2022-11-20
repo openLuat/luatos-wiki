@@ -17,12 +17,18 @@
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|int|消息id,当qos为1时有效, 若底层返回失败,会返回nil|
 
 **例子**
 
 ```lua
-mqttc:subscribe("/luatos/123456")
+-- 订阅单个topic, 且qos=0
+mqttc:subscribe("/luatos/123456", 0)
+-- 订阅单个topic, 且qos=1
+mqttc:subscribe("/luatos/12345678", 1)
+-- 订阅多个topic, 且使用不同的qos
 mqttc:subscribe({["/luatos/1234567"]=1,["/luatos/12345678"]=2})
 
 ```
@@ -61,7 +67,7 @@ mqttc:unsubscribe({"/luatos/1234567","/luatos/12345678"})
 
 |传入值类型|解释|
 |-|-|
-|boolean|true 打开debug开关|
+|boolean|是否打开debug开关|
 
 **返回值**
 
@@ -84,19 +90,28 @@ mqtt客户端创建
 |传入值类型|解释|
 |-|-|
 |int|适配器序号, 只能是network.ETH0,network.STA,network.AP,如果不填,会选择最后一个注册的适配器|
-|string|服务器地址|
+|string|服务器地址,可以是域名, 也可以是ip|
 |int|	端口号|
 |bool|	是否为ssl加密连接,默认不加密|
-|string|证书|
+|string|证书数据,可选|
+|string|证书密钥,可选|
+|string|证书密码,可选|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|userdata|若成功会返回mqtt客户端实例,否则返回nil|
 
 **例子**
 
 ```lua
+-- 普通TCP链接
 mqttc = mqtt.create(nil,"120.55.137.106", 1884)
+-- 加密TCP链接
+mqttc = mqtt.create(nil,"120.55.137.106", 8883, true)
+-- 带证书的TCP链接
+mqttc = mqtt.create(nil,"120.55.137.106", 8883, true, io.readFile("/luadb/ca.crt"), "123", "456")
 
 ```
 
@@ -110,13 +125,15 @@ mqtt三元组配置
 
 |传入值类型|解释|
 |-|-|
-|string|client_id|
+|string|设备识别id,对于同一个mqtt服务器来说, 通常要求唯一,相同client_id会互相踢下线|
 |string|账号 可选|
 |string|密码 可选|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -135,11 +152,13 @@ mqtt心跳设置
 
 |传入值类型|解释|
 |-|-|
-|int|可选 单位s 默认240s|
+|int|可选 单位s 默认240s. 最先15,最高600|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -152,7 +171,7 @@ mqttc:keepalive(30)
 
 ## mqttc:on(cb)
 
-mqtt回调注册
+注册mqtt回调
 
 **参数**
 
@@ -162,7 +181,9 @@ mqtt回调注册
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -186,12 +207,16 @@ end)
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|boolean|发起成功返回true, 否则返回false|
 
 **例子**
 
 ```lua
+-- 开始建立连接
 mqttc:connect()
+-- 本函数仅代表发起成功, 后续仍需根据ready函数判断mqtt是否连接正常
 
 ```
 
@@ -206,7 +231,7 @@ mqttc:connect()
 |传入值类型|解释|
 |-|-|
 |bool|是否自动重连|
-|int|自动重连周期 单位ms 默认3s|
+|int|自动重连周期 单位ms 默认3000ms|
 
 **返回值**
 
@@ -221,7 +246,7 @@ mqttc:autoreconn(true)
 
 ---
 
-## mqttc:publish(topic, data, qos)
+## mqttc:publish(topic, data, qos, retain)
 
 发布消息
 
@@ -229,15 +254,16 @@ mqttc:autoreconn(true)
 
 |传入值类型|解释|
 |-|-|
-|string|topic 主题|
-|string|data  消息|
-|int|qos 0/1/2 默认0|
+|string|主题,必填|
+|string|消息,必填,但长度可以是0|
+|int|消息级别 0/1 默认0|
+|int|是否存档, 0/1,默认0|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|int|message_id|
+|int|消息id, 当qos为1或2时会有效值. 若底层返回是否, 会返回nil|
 
 **例子**
 
