@@ -18,7 +18,7 @@ Air780E 是合宙通信推出的 LTE Cat.1 bis通信模块，采用移芯EC618�
 
 正式版可以在发行版页面下载：
 
-[https://gitee.com/openLuat/luatos-soc-ec618/releases](https://gitee.com/openLuat/luatos-soc-ec618/releases)
+[https://gitee.com/openLuat/LuatOS/releases](https://gitee.com/openLuat/LuatOS/releases)
 
 ## 刷机烧录教程
 
