@@ -161,5 +161,5 @@ CORE-ESP32-C3核心板支持以下3种方式供电：
 
 [开源仓库链接](https://gitee.com/openLuat/luatos-soc-idf5)
 
-[demo链接](https://gitee.com/openLuat/openLuat/tree/master/demo)
+[demo链接](https://gitee.com/openLuat/LuatOS/tree/master/demo)
 
