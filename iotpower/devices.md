@@ -16,7 +16,7 @@ Iot Power系列有多款产品，可以满足各种测试需求
 | **Iot Power 经典版**| ✅    | ❌    | 0-5V   | 0-2A   | ✅     | ✅    | ✅       | ✅      | 普通TypeC    |❌      |
 | **Iot Power Pro**   | ✅    | ❌    | 0-5V*  | 0-2.5A*| ✅     | ✅    | ✅       | 💭      | 普通TypeC    |❌      |
 | **Iot Power Plus**  | ✅    | ❌    | 0-20V* | 0-3A*  | ✅     | ✅    | ✅       | 💭      | TypeC PD     |PD*      |
-| **Iot Power CC**    | ❌    | ✅    | 0-25V  | 0-3A*  | ❌     | ❌    | ✅       | 🔧      | 普通TypeC    | 仅PD    |
+| **Iot Power CC**    | ❌    | ✅    | 0-25V  | 0-3A*  | ❌     | ❌    | ✅       | 🔧      | 外接TypeC    | PD    |
 
 |  图示 | 含义  |
 |-------|-------|

@@ -4,6 +4,8 @@ window.onload = function () {
     if(oldonload != undefined)
         oldonload();
 
+    //左侧标题下面加几行
+    $(".sidebar-tree").after("<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>");
     //左侧标题滚到能看见的位置
     if($(".sidebar-scroll").scrollTop() == 0 && $(".current.reference.internal")[0] != undefined){
         var searchp = $(".sidebar-search-container").offset().top;
