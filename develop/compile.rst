@@ -20,3 +20,5 @@ LuatOS源码仓库：https://gitee.com/openLuat/LuatOS
    compile/Cloud_compilation
    compile/Air640w
    compile/Air302
+   compile/Air780E
+
