@@ -242,7 +242,7 @@ sensor.ws2812b_pwm(7,buff)
 ```lua
 local buff = zbuff.create({8,8,24})
 buff:setFrameBuffer(8,8,24,0x0000ff)
-sensor.ws2812b_spi(7,buff)
+sensor.ws2812b_spi(2,buff)
 
 ```
 
