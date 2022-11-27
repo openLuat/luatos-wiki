@@ -265,6 +265,75 @@ end)
 
 ---
 
+## mobile
+
+
+
+[mobile接口文档页](https://wiki.luatos.com/api/mobile.html)
+
+
+
+### CELL_INFO_UPDATE
+
+基站数据已更新
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+-- 订阅式, 模块本身会周期性查询基站信息,但通常不包含临近小区
+sys.subscribe("CELL_INFO_UPDATE", function()
+    log.info("cell", json.encode(mobile.getCellInfo()))
+end)
+
+```
+
+---
+
+### IP_READY
+
+已联网
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+-- 联网后会发一次这个消息
+-- 与wlan库不同, 本消息不带ip地址
+sys.subscribe("IP_READY", function()
+    log.info("mobile", "IP_READY")
+end)
+
+```
+
+---
+
+### NTP_UPDATE
+
+时间已经同步
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+-- 对于电信/移动的卡, 联网后,基站会下发时间,但联通卡不会,务必留意
+sys.subscribe("NTP_UPDATE", function()
+    log.info("mobile", "time", os.date())
+end)
+
+```
+
+---
+
 ## softkeyboard
 
 
