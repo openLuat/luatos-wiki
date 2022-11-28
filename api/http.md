@@ -10,9 +10,9 @@
 本库有专属demo，[点此链接查看http的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/socket)
 ```
 
-## http2.request(method,url,headers,body,opts,ca_file)
+## http.request(method,url,headers,body,opts,ca_file)
 
-http2客户端
+http客户端
 
 **参数**
 
@@ -37,15 +37,15 @@ http2客户端
 
 ```lua
 -- GET请求
-local code, headers, body = http2.request("GET","http://site0.cn/api/httptest/simple/time").wait()
-log.info("http2.get", code, headers, body)
+local code, headers, body = http.request("GET","http://site0.cn/api/httptest/simple/time").wait()
+log.info("http.get", code, headers, body)
 -- POST请求
-local code, headers, body = http2.request("POST","http://httpbin.com/post", {}, "abc=123").wait()
-log.info("http2.post", code, headers, body)
+local code, headers, body = http.request("POST","http://httpbin.com/post", {}, "abc=123").wait()
+log.info("http.post", code, headers, body)
 
 -- GET请求,但下载到文件
-local code, headers, body = http2.request("GET","http://httpbin.com/", {}, "", {dst="/data.bin"}).wait()
-log.info("http2.get", code, headers, body)
+local code, headers, body = http.request("GET","http://httpbin.com/", {}, "", {dst="/data.bin"}).wait()
+log.info("http.get", code, headers, body)
 
 ```
 
