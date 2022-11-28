@@ -72,6 +72,7 @@
    usbapp
    w5500
    wdt
+   websocket
    wlan
    zbuff
    zlib

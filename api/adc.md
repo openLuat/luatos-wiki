@@ -16,6 +16,8 @@
 |-|-|-|
 |adc.ADC_RANGE_3_6|number|air105的ADC分压电阻开启，范围0~3.76V|
 |adc.ADC_RANGE_1_8|number|air105的ADC分压电阻关闭，范围0~1.88V|
+|adc.CH_CPU|number|CPU内部温度的通道id|
+|adc.CH_VBAT|number|VBAT供电电压的通道id|
 
 
 ## adc.open(id)
