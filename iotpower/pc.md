@@ -3,12 +3,16 @@
 ## 下载
 
 - 独立版exe：[IOT Power.exe](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221021103631246_IOT%20Power.exe)（[如果浏览器拦截，请按此方法解决](https://cn.bing.com/search?q=edge%E6%B5%8F%E8%A7%88%E5%99%A8%E9%98%BB%E6%AD%A2%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD)）
-- 微软商店版：[点击直接安装](ms-windows-store://pdp/?ProductId=9N8S8M8226SH&mode=mini&pos=0,0,2560,1395&referrer=storeforweb) （交了保护费不会报毒或拦截，但更新慢一拍。[商店页面](https://www.microsoft.com/store/apps/9N8S8M8226SH)）
+- 微软商店版：[微软商店页面](https://www.microsoft.com/store/apps/9N8S8M8226SH) （交了保护费不会报毒或拦截，但更新慢一拍。）
 - **全平台**命令行数据记录器、win/linux动态库请前往[gitee仓库](https://gitee.com/openLuat/iot-power)查看
 
-> win7用户可能需要：
+```{note}
+win7用户可能需要
+
 cp2102驱动：[CP210x_Windows_Drivers](https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip)
+
 .net framework 4.6.2：[安装包](https://dotnet.microsoft.com/zh-cn/download/dotnet-framework/thank-you/net462-offline-installer)
+```
 
 ## 客户端简介
 
