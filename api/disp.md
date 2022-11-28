@@ -1,5 +1,7 @@
 # disp - disp库已合并到u8g2库,API等价
 
+{bdg-primary}`Air105`
+
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/u8g2/luat_lib_disp.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```

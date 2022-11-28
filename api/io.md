@@ -1,5 +1,7 @@
 # io - io操作(扩展)
 
+
+
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../lua/src/liolib.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```
@@ -24,7 +26,7 @@
 **例子**
 
 ```lua
-log.info("io", "file exists", io.exists("/boottime")) 
+log.info("io", "file exists", io.exists("/boottime"))
 
 ```
 

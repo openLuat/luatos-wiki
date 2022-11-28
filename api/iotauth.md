@@ -1,5 +1,7 @@
 # iotauth - IoT鉴权库, 用于生成各种云平台的参数
 
+{bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
+
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/iotauth/luat_lib_iotauth.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```
@@ -16,9 +18,9 @@
 
 |传入值类型|解释|
 |-|-|
-|string|product_key |
-|string|device_name |
-|string|device_secret |
+|string|product_key|
+|string|device_name|
+|string|device_secret|
 |string|method 加密方式,"hmacmd5" "hmacsha1" "hmacsha256" 可选,默认"hmacsha256"|
 |number|cur_timestamp 可选|
 
@@ -48,9 +50,9 @@ print(client_id,user_name,password)
 
 |传入值类型|解释|
 |-|-|
-|string|produt_id |
-|string|device_name |
-|string|key |
+|string|produt_id|
+|string|device_name|
+|string|key|
 |string|method 加密方式,"md5" "sha1" "sha256" 可选,默认"md5"|
 |number|cur_timestamp 可选|
 |string|version 可选 默认"2018-10-31"|
@@ -81,8 +83,8 @@ print(client_id,user_name,password)
 
 |传入值类型|解释|
 |-|-|
-|string|device_id |
-|string|device_secret |
+|string|device_id|
+|string|device_secret|
 |number|ins_timestamp 是否校验时间戳 1:校验 0:不校验|
 |number|cur_timestamp 可选|
 
@@ -112,9 +114,9 @@ print(client_id,user_name,password)
 
 |传入值类型|解释|
 |-|-|
-|string|product_id |
-|string|device_name |
-|string|device_secret |
+|string|product_id|
+|string|device_name|
+|string|device_secret|
 |string|method 加密方式,"sha1" "sha256" 可选,默认"sha256"|
 |number|cur_timestamp 可选|
 |string|sdk_appid 可选 默认为"12010126"|
@@ -146,7 +148,7 @@ print(client_id,user_name,password)
 |传入值类型|解释|
 |-|-|
 |string|device_id|
-|string|device_secret |
+|string|device_secret|
 |number|cur_timestamp 可选|
 
 **返回值**
@@ -175,9 +177,9 @@ print(client_id,user_name,password)
 
 |传入值类型|解释|
 |-|-|
-|string|iot_core_id |
-|string|device_key |
-|string|device_secret |
+|string|iot_core_id|
+|string|device_key|
+|string|device_secret|
 |string|method 加密方式,"MD5" "SHA256" 可选,默认"MD5"|
 |number|cur_timestamp 可选|
 
