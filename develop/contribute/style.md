@@ -103,6 +103,7 @@ revert: xxx  回滚某个操作
 @data    日期，可选
 @demo    可选，指LuatOS/demo中的文件夹名称
 @video   可选，该库的视频教程网址
+@tag     可选，该库启用的宏定义标记，如：LUAT_USE_ADC
 @usage
 --这个库的简易使用例子，可选
 --可以写多行
