@@ -1,8 +1,12 @@
 # fdb - kv数据库,掉电不丢数据
 
-> 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/flashdb/src/luat_lib_fdb.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```{note}
+本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/flashdb/src/luat_lib_fdb.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```
 
-> 本库有专属demo，[点此链接查看fdb的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/fdb)
+```{tip}
+本库有专属demo，[点此链接查看fdb的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/fdb)
+```
 
 ## fdb.kvdb_init(name, partition)
 

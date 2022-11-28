@@ -1,8 +1,12 @@
 # lora - lora驱动模块
 
-> 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/lora/luat_lib_lora.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```{note}
+本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/lora/luat_lib_lora.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```
 
-> 本库有专属demo，[点此链接查看lora的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/lora)
+```{tip}
+本库有专属demo，[点此链接查看lora的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/lora)
+```
 
 ## 常量
 

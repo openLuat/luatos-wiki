@@ -1,6 +1,8 @@
 # softkeyboard - 软件键盘矩阵(当前仅air105支持)
 
-> 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/soft_keyboard/luat_lib_softkeyboard.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```{note}
+本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/soft_keyboard/luat_lib_softkeyboard.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```
 
 
 ## softkb.init(port, key_in, key_out)

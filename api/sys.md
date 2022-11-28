@@ -1,8 +1,12 @@
 # sys - sys库
 
-> 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_sys_doc.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```{note}
+本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_sys_doc.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```
 
-> 本库还有视频教程，[点此链接查看](https://www.bilibili.com/video/BV1194y1o7q2)
+```{tip}
+本库还有视频教程，[点此链接查看](https://www.bilibili.com/video/BV1194y1o7q2)
+```
 
 ## sys.wait(timeout)
 

@@ -1,6 +1,8 @@
 # aht10 - aht10 温湿度传感器
 
-> 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../script/libs/aht10/aht10.lua)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```{note}
+本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../script/libs/aht10/aht10.lua)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```
 
 
 **示例**

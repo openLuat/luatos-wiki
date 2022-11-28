@@ -1,8 +1,12 @@
 # iotauth - IoT鉴权库, 用于生成各种云平台的参数
 
-> 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/iotauth/luat_lib_iotauth.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```{note}
+本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/iotauth/luat_lib_iotauth.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```
 
-> 本库有专属demo，[点此链接查看iotauth的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/iotauth)
+```{tip}
+本库有专属demo，[点此链接查看iotauth的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/iotauth)
+```
 
 ## iotauth.aliyun(product_key, device_name,device_secret,method,cur_timestamp)
 

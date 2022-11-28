@@ -1,6 +1,8 @@
 # adxl34x - adxl34x 3轴加速度计 目前支持 adxl345 adxl346
 
-> 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../script/libs/adxl34x/adxl34x.lua)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```{note}
+本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../script/libs/adxl34x/adxl34x.lua)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```
 
 
 **示例**

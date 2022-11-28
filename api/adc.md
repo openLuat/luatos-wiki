@@ -1,8 +1,12 @@
 # adc - 数模转换
 
-> 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_adc.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```{note}
+本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_adc.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+```
 
-> 本库有专属demo，[点此链接查看adc的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/adc)
+```{tip}
+本库有专属demo，[点此链接查看adc的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/adc)
+```
 
 ## 常量
 
