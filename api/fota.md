@@ -4,9 +4,9 @@
 
 > 本库有专属demo，[点此链接查看fota的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/ota)
 
-## fota.fotaInit(storge_location, param1)
+## fota.fotaInit(storge_location, len, param1)
 
-初始化fota流程，目前只有105能使用
+初始化fota流程
 
 **参数**
 
@@ -27,6 +27,7 @@
 ```lua
 -- 初始化fota流程
 local result = mcu.fotaInit(0, 0x00300000, spi_device)	--由于105的flash从0x01000000开始，所以0就是外部spiflash
+local result = mcu.fotaInit()	--ec618使用固定内部地址，所以不需要参数了
 
 ```
 
