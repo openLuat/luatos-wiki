@@ -16,39 +16,153 @@
 
 建议新建一个Luatools文件夹，将exe文件放入其中后，再打开exe文件
 
-luatos-soc请勾选通用串口打印
+::::{tab-set}
+
+:::{tab-item} Air101/Air103
+:sync: air101
+
+请勾选`通用串口打印`
+
+![](img/20221128132233.png)
+
+修改通用串口波特率，设置波特率为921600
+
+将设备通过usb线连接到电脑，可以看到出现一个新的COM口，在工具中选中这个COM口并打开
+
+:::
+
+:::{tab-item} Air105
+:sync: air105
+
+请勾选`通用串口打印`
 
 ![](img/90162500_1631695006.png)
 
-修改通用串口波特率，设置波特率为芯片专属的烧录波特率（如：Air101/103 使用的是921600 Air105是1500000）
+修改通用串口波特率，设置波特率为1500000
 
-如果是第一批Air101开发板第一次使用官方开发板，有可能会提示未激活，建议点击`账户`--`登录`按提示操作即可，用户名为购买人手机号，密码默认八个8，后面的开发板出厂已经激活，不再需要激活了
+将设备通过usb线连接到电脑，可以看到出现一个新的COM口，在工具中选中这个COM口并打开
 
-[详细激活教程](https://doc.openluat.com/article/3608)
+:::
+
+:::{tab-item} ESP32C3简约版
+:sync: c3usb
+
+请勾选`通用串口打印`
+
+![](img/20221128132233.png)
+
+无需修改串口波特率，保持当前值即可
+
+将设备通过usb线连接到电脑，可以看到出现一个新的COM口，在工具中选中这个COM口并打开
+
+:::
+
+:::{tab-item} ESP32C3经典版
+:sync: c3uart
+
+请勾选`通用串口打印`
+
+![](img/20221128132233.png)
+
+修改通用串口波特率，设置波特率为921600
+
+将设备通过usb线连接到电脑，可以看到出现一个新的COM口，在工具中选中这个COM口并打开
+
+:::
+
+:::{tab-item} Air780
+:sync: air780
+
+请勾选`4G模块USB打印`
+
+![](img/20221128132132.png)
+
+无需修改串口波特率，保持当前值即可
+
+将设备通过usb线连接到电脑，可以看到出现3个新的COM口，工具会自动打开端口
+
+:::
+
+::::
 
 ### 烧录固件
 
-将设备通过usb线连接到电脑，可以看到出现一个新的COM口，勾选`通用串口打印`，并在工具中选中这个COM口
+烧录前需要获取固件
 
-前往LuatOS官方仓库下载最新固件
+::::::{tab-set}
+
+:::::{tab-item} 工具自动下载的固件
+
+::::{tab-set}
+
+:::{tab-item} Air101/Air103
+:sync: air101
+
+找到Luatools所在的文件夹，文件夹的`Luatools/resource/101_lua_lod`或`Luatools/resource/103_lua_lod`中的就是自动下载的正式版本固件
+
+:::
+
+:::{tab-item} Air105
+:sync: air105
+
+找到Luatools所在的文件夹，文件夹的`Luatools/resource/105_lua_lod`中的就是自动下载的正式版本固件
+
+:::
+
+:::{tab-item} ESP32C3简约版
+:sync: c3usb
+
+找到Luatools所在的文件夹，文件夹的`Luatools/resource/esp32c3_lua_lod/版本号`中带有`USB`字样的，就是自动下载的正式版本固件
+
+:::
+
+:::{tab-item} ESP32C3经典版
+:sync: c3uart
+
+找到Luatools所在的文件夹，文件夹的`Luatools/resource/esp32c3_lua_lod/版本号`中**不带有**`USB`字样的，就是自动下载的正式版本固件
+
+一定要安装CH343的驱动才能正常下载固件，默认的CDC驱动打印日志没问题，但是速率太慢会导致下载失败。[驱动传送门](http://www.wch.cn/downloads/CH343SER_EXE.html)
+
+:::
+
+:::{tab-item} Air780
+:sync: air780
+
+找到Luatools所在的文件夹，文件夹的`Luatools/resource/`中就是自动下载的正式版本固件
+
+:::
+
+::::
+
+:::::
+
+:::::{tab-item} 前往官方仓库下载固件
+
+也可以前往LuatOS官方仓库下载最新固件
 
 正式版可以在发行版页面下载：
 
 [https://gitee.com/openLuat/LuatOS/releases](https://gitee.com/openLuat/LuatOS/releases)
 
+:::::
+
+:::::{tab-item} 使用云编译
+
 也可以使用官方的**云编译**功能，自定义固件中包含的模块
 
 [云编译教程点我查看](https://wiki.luatos.com/develop/compile/Cloud_compilation.html)
 
-固件下载后解压，可以得到相应的固件，拓展名为soc的文件，这里用Air101的固件进行举例：
+固件下载后解压，可以得到相应的固件
+
+:::::
+
+::::::
+
+固件是拓展名为`soc`的文件，这里用Air101的固件进行举例，长这样：
 
 ![](img/24035700_1631695521.png)
 
-（或者找到Luatools所在的文件夹，文件夹的`resource\对应文件夹`也会自动下载正式版本的固件）
-
 接着返回Luatools，点击`下载固件`按钮，选中刚刚下载的soc文件，直接下载即可：
-
-如果是ESP32开发板一定要安装CH343的驱动才能正常下载固件，默认的CDC驱动打印日志没问题，但是速率太慢会导致下载失败。[驱动传送门](http://www.wch.cn/downloads/CH343SER_EXE.html)
 
 ![](img/80909300_1631695603.png)
 
