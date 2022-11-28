@@ -1,4 +1,4 @@
-# keyboard - 键盘矩阵(当前仅air105支持)
+# keyboard - 键盘矩阵
 
 {bdg-primary}`Air105`
 

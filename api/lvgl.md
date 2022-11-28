@@ -1,5 +1,10 @@
 # lvgl - LVGL图像库
 
+{bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
+
+```{tip}
+本库有专属demo，[点此链接查看lvgl的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/lvgl)
+```
 
 ## lvgl.draw_mask_radius_param_t()
 
