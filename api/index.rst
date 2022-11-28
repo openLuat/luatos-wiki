@@ -19,7 +19,7 @@
    fs
    gpio
    gtfont
-   http2
+   http
    httpsrv
    i2c
    i2s

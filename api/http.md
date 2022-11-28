@@ -1,4 +1,4 @@
-# http2 - http2客户端
+# http - http 客户端
 
 
 
@@ -7,7 +7,7 @@
 ```
 
 ```{tip}
-本库有专属demo，[点此链接查看http2的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/socket)
+本库有专属demo，[点此链接查看http的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/socket)
 ```
 
 ## http2.request(method,url,headers,body,opts,ca_file)
