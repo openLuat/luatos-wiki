@@ -7,3 +7,4 @@ jieba
 sphinx-sitemap
 sphinx_copybutton
 sphinx-favicon
+sphinx-design==0.3.0
