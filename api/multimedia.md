@@ -5,7 +5,7 @@
 ```
 
 ```{tip}
-本库有专属demo，[点此链接查看multimedia的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/multimedia)
+本库有专属demo，[点此链接查看multimedia的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/LUAT_USE_MEDIA)
 ```
 
 ## 常量

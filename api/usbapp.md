@@ -5,7 +5,7 @@
 ```
 
 ```{tip}
-本库有专属demo，[点此链接查看usbapp的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/usb_hid)
+本库有专属demo，[点此链接查看usbapp的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/LUAT_USE_USB)
 ```
 
 ## 常量
