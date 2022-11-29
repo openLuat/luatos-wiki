@@ -11,8 +11,6 @@
 | [adc](https://wiki.luatos.com/api/adc.html)           | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [dac](https://wiki.luatos.com/api/dac.html)           | ✖      | ✖     | ✔      | ✖     | ✖      | ✖      |
 | [usb](https://wiki.luatos.com/api/usb.html)           | ✖      | ✖     | ✔      | ✔     | ✖      | ✖      |
-| [keyboard](https://wiki.luatos.com/api/keyboard.html) | ✖      | ✖     | ✔      | ✖     | ✖      | ✖      |
-| [lcdseg](https://wiki.luatos.com/api/lcdseg.html)     | ✔      | ✔     | ✖      | ✖     | ✖      | ✖      |
 | [otp](https://wiki.luatos.com/api/otp.html)           | ✔      | ✔     | ✔      | ✔     | ✖      | ✖      |
 | [pin](https://wiki.luatos.com/api/pin.html)           | ✔      | ✔     | ✔      | ✖     | ✖      | ✖      |
 | [rtc](https://wiki.luatos.com/api/rtc.html)           | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
@@ -20,6 +18,8 @@
 | [sdio](https://wiki.luatos.com/api/sdio.html)         | ✔      | ✔     | ✖      | ✖     | ✖      | ✖      |
 | [wdt](https://wiki.luatos.com/api/wdt.html)           | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [crypto](https://wiki.luatos.com/api/crypto.html)     | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
+| [keyboard](https://wiki.luatos.com/api/keyboard.html) | ✖      | ✖     | ✔      | ✖     | ✖      | ✖      |
+| [lcdseg](https://wiki.luatos.com/api/lcdseg.html)     | ✖      | ✔     | ✖      | ✖     | ✖      | ✖      |
 
 补充说明:
 * air101与air103固件的区别在于flash大小, 兼容xt804内核的芯片, 例如联盛德的W800/W801/W805/W806
@@ -37,12 +37,10 @@
 | [lcd](https://wiki.luatos.com/api/lcd.html)           | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [eink](https://wiki.luatos.com/api/eink.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [u8g2](https://wiki.luatos.com/api/u8g2.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
-| [disp](https://wiki.luatos.com/api/disp.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [gtfont](https://wiki.luatos.com/api/gtfont.html)     | ✔      | ✔     | ✔      | ✖     | ✖      | ✖      |
 | [coremark](https://wiki.luatos.com/api/coremark.html) | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [fdb](https://wiki.luatos.com/api/fdb.html)           | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [lvgl](https://wiki.luatos.com/api/lvgl.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
-| [sfd](https://wiki.luatos.com/api/sfd.html)           | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [sfud](https://wiki.luatos.com/api/sfud.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [statem](https://wiki.luatos.com/api/statem.html)     | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 
