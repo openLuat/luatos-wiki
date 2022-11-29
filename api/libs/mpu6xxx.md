@@ -1,5 +1,7 @@
 # mpu6xxx - mpu6xxx 六轴/九轴传感器 支持 mpu6500,mpu6050,mpu9250,icm2068g,icm20608d
 
+{bdg-secondary}`适配状态未知`
+
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../script/libs/mpu6xxx/mpu6xxx.lua)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```
