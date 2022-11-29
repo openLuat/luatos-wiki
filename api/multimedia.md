@@ -153,7 +153,7 @@ end)
 
 ---
 
-## audio.play(id, path)
+## audio.play(id, path, errStop)
 
 播放或者停止播放一个文件，播放完成后，会回调一个audio.DONE消息，可以用pause来暂停或者恢复，其他API不可用。考虑到读SD卡速度比较慢而拖累luavm进程的速度，所以尽量使用本API
 
@@ -162,7 +162,8 @@ end)
 |传入值类型|解释|
 |-|-|
 |int|音频通道|
-|string|文件名，如果为空，则表示停止播放|
+|string/table|文件名，如果为空，则表示停止播放，如果是table，则表示连续播放多个文件，并且会用到errStop参数|
+|boolean|是否在文件解码失败后停止解码，只有在连续播放多个文件时才有用，默认true，遇到解码错误自动停止|
 
 **返回值**
 
@@ -175,6 +176,31 @@ end)
 ```lua
 audio.play(0, "xxxxxx")		--开始播放某个文件
 audio.play(0)				--停止播放某个文件
+
+```
+
+---
+
+## audio.playStop(id)
+
+停止播放文件
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|audio id,例如0|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+audio.playStop(0)
 
 ```
 
@@ -206,7 +232,7 @@ audio.isEnd(0)
 
 ---
 
-## audio.config(id, paPin, onLevel)
+## audio.config(id, paPin, onLevel, dacDelay, paDelay, dacPin, dacLevel)
 
 配置一个音频通道的特性，比如实现自动控制PA开关。注意这个不是必须的，一般在调用play的时候才需要自动控制，其他情况比如你手动控制播放时，就可以自己控制PA开关
 
@@ -217,8 +243,10 @@ audio.isEnd(0)
 |int|音频通道|
 |int|PA控制IO|
 |int|PA打开时的电平|
-|int|在DAC启动后插入的冗余时间，单位100ms|
+|int|在DAC启动前插入的冗余时间，单位100ms，一般用于外部DAC|
 |int|在DAC启动后，延迟多长时间打开PA，单位1ms|
+|int|外部dac电源控制IO，如果不填，则表示使用平台默认IO，比如Air780E使用DACEN脚，air105则不启用|
+|int|外部dac打开时，电源控制IO的电平，默认拉高|
 |return|无|
 
 **返回值**
@@ -228,7 +256,8 @@ audio.isEnd(0)
 **例子**
 
 ```lua
-audio.config(0, pin.PC0, 1)	--PA控制脚是PC0，高电平打开
+audio.config(0, pin.PC0, 1)	--PA控制脚是PC0，高电平打开，air105用这个配置就可以用了
+audio.config(0, 25, 1, 6, 200)	--PA控制脚是GPIO25，高电平打开，Air780E云喇叭板用这个配置就可以用了
 
 ```
 

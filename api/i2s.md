@@ -7,6 +7,15 @@
 ```
 
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|i2s.MODE_I2S|number|I2S标准，比如ES7149|
+|i2s.MODE_LSB|number|LSB格式|
+|i2s.MODE_MSB|number|MSB格式，比如TM8211|
+
+
 ## i2s.setup(id, mode, sample, bitw, channel, format, mclk)
 
 初始化i2s
@@ -19,7 +28,7 @@
 |int|模式, 当前仅支持0, MASTER\|TX\|RX 模式, 暂不支持slave. 可选|
 |int|采样率,默认44100. 可选|
 |int|声道, 0 左声道, 1 右声道, 2 双声道. 可选|
-|int|格式, 当前仅支持i2s标准格式. 可选|
+|int|格式, 可选MODE_I2S, MODE_LSB, MODE_MSB|
 |int|mclk频率, 默认 8M. 可选|
 
 **返回值**
