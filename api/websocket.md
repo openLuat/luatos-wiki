@@ -15,12 +15,14 @@
 ```lua
 local wsc = nil
 if websocket then
-    wsc = websocket.create(nil, "ws://nutz.cn/websocket")
+	wsc = websocket.create(nil, "ws://echo.airtun.air32.cn/ws/echo")
     wsc:autoreconn(true, 3000) -- 自动重连机制
+    wsc:on(function(wsc, event, data, fin, optcode)
     wsc:on(function(wsc, event, data)
         log.info("wsc", event, data)
         if event == "conack" then
-            wsc:send((json.encode({action="login",device_id=device_id})))
+            wsc:send((json.encode({action="echo", device_id=device_id})))
+            sys.publish("wsc_conack")
         end
     end)
     wsc:connect()
