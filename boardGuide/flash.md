@@ -121,7 +121,9 @@
 
 找到Luatools所在的文件夹，文件夹的`Luatools/resource/esp32c3_lua_lod/版本号`中**不带有**`USB`字样的，就是自动下载的正式版本固件
 
+```{important}
 一定要安装CH343的驱动才能正常下载固件，默认的CDC驱动打印日志没问题，但是速率太慢会导致下载失败。[驱动传送门](http://www.wch.cn/downloads/CH343SER_EXE.html)
+```
 
 :::
 
@@ -129,6 +131,10 @@
 :sync: air780
 
 找到Luatools所在的文件夹，文件夹的`Luatools/resource/`中就是自动下载的正式版本固件
+
+```{important}
+烧录时的操作：先按住BOOT键，再按一下复位键，最后再松开BOOT键，即可进入BOOT模式等待烧录
+```
 
 :::
 
