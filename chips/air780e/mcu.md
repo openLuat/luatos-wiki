@@ -12,12 +12,12 @@ Air780E 是合宙通信推出的 LTE Cat.1 bis通信模块，采用移芯EC618�
 
 ## LuatOS为它提供哪些功能
 
-- 可用Lua内存: 200k - 非TTS/扫码版本, 128k - TTS/扫码版本
-- 脚本空间: 初定128k, 后续可能变更为256k
+- 可用Lua内存: 200k
+- 脚本空间: 448k
 - 基础外设: GPIO/SPI/I2C/PWM/ADC
-- 网络功能: Mobile/Socket/Http/Mqtt/WebSocket`*`/FTP`*`/NTP/SMS`*`
+- 网络功能: Mobile/Socket/Http/Mqtt/WebSocket/FTP`*`/NTP/SMS`*`
 - UI显示: LCD/Eink/U8G2/LVGL
-- 语音输出: TTS`*`
+- 语音输出: MP3/ARM`*`
 - 扫码: Scan`*`
 
 带`*`的功能尚待开发
