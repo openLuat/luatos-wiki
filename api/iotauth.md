@@ -21,7 +21,7 @@
 |string|product_key|
 |string|device_name|
 |string|device_secret|
-|string|method 加密方式,"hmacmd5" "hmacsha1" "hmacsha256" 可选,默认"hmacsha256"|
+|string|method 加密方式,"hmacmd5" "hmacsha1" "hmacsha256" 可选,默认"hmacmd5"|
 |number|cur_timestamp 可选|
 
 **返回值**
