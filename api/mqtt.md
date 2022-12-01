@@ -99,9 +99,10 @@ mqtt客户端创建
 |string|服务器地址,可以是域名, 也可以是ip|
 |int|	端口号|
 |bool|	是否为ssl加密连接,默认不加密|
-|string|证书数据,可选|
-|string|证书密钥,可选|
-|string|证书密码,可选|
+|string|服务器ca证书数据|
+|string|客户端ca证书数据|
+|string|客户端私钥加密数据|
+|string|客户端私钥口令数据|
 
 **返回值**
 
