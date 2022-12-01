@@ -23,7 +23,10 @@ http客户端
 |tabal|请求头 可选 例如{["Content-Type"] = "application/x-www-form-urlencoded"}|
 |string|body 可选|
 |tabal|额外配置 可选 包含dst:下载路径,可选 adapter:选择使用网卡,可选 debug:是否打开debug信息,可选|
-|string|证书 可选|
+|string|服务器ca证书数据|
+|string|客户端ca证书数据|
+|string|客户端私钥加密数据|
+|string|客户端私钥口令数据|
 
 **返回值**
 
