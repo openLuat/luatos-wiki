@@ -202,7 +202,7 @@ sensor.ws2812b(7,buff,300,700,700,700)
 
 ## sensor.ws2812b_pwm(pin,data)
 
-设置ws2812b输出(pwm驱动方式)
+设置ws2812b输出(pwm驱动方式,需要pwm能输出800k频率，否则无法使用此方法)
 
 **参数**
 
@@ -228,7 +228,7 @@ sensor.ws2812b_pwm(7,buff)
 
 ## sensor.ws2812b_spi(pin,data)
 
-设置ws2812b输出(spi驱动方式)
+设置ws2812b输出(spi驱动方式,需要spi能输出5M频率，否则无法使用此方法)
 
 **参数**
 
