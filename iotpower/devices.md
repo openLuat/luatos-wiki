@@ -4,10 +4,10 @@ Iot Power系列有多款产品，可以满足各种测试需求
 
 ## 总览
 
-- Iot Power 经典版：USB供电，作为电源使用，输出最大5V/2A，采样率10K/s
-- Iot Power Pro：USB供电，作为电源使用，输出最大5V/2.5A，采样率10K/s
-- Iot Power Plus：USB供电，作为电源使用，输出最大20V/3A，采样率100K/s
-- Iot Power CC：USB供电，纯电流计，最大耐受25V/3A，采样率10K/s
+- Iot Power 经典版：性价比极高的电源+功耗测试一体设备。
+- Iot Power Pro：电源+功耗测试，经典版的升级版本。
+- Iot Power Plus：电源+功耗测试，支持更高电压与更快的采样率，支持PD快充诱骗。
+- Iot Power CC：纯功耗测试设备，支持PD快充诱骗。
 
 ## 详细对比
 
