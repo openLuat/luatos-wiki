@@ -233,7 +233,7 @@ log.info("sc", ret, ssid, passwd)
 
 ---
 
-## wlan.getMode()
+## wlan.getMac()
 
 获取mac
 
