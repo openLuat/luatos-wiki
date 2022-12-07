@@ -328,3 +328,32 @@ local error = mqttc:ready()
 
 ---
 
+## mqttc:will(topic, payload, qos, retain)
+
+设置遗嘱消息
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|遗嘱消息的topic|
+|string|遗嘱消息的payload|
+|string|遗嘱消息的qos, 默认0, 可以不填|
+|string|遗嘱消息的retain, 默认0, 可以不填|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+-- 要在connect之前调用 
+mqttc:will("/xxx/xxx", "xxxxxx")
+
+```
+
+---
+
