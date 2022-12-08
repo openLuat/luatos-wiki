@@ -27,6 +27,40 @@
 |socket.CLOSED|number|CLOSED事件|
 
 
+## socket.localIP(adapter)
+
+获取本地ip,当前仅支持IPV4的地址
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|适配器序号， 只能是socket.ETH0（外置以太网），socket.LWIP_ETH（内置以太网），socket.LWIP_STA（内置WIFI的STA），socket.LWIP_AP（内置WIFI的AP），socket.LWIP_GP（内置蜂窝网络的GPRS），socket.USB（外置USB网卡），如果不填，优先选择soc平台自带能上外网的适配器，若仍然没有，选择最后一个注册的适配器|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|通常是内网ip, 也可能是外网ip, 取决于运营商的分配|
+|string|网络掩码|
+|string|网关IP|
+
+**例子**
+
+```lua
+sys.taskInit(function()
+    while 1 do
+        sys.wait(3000)
+        log.info("socket", "ip", socket.localIP())
+		-- 输出示例
+		-- 62.39.244.10	255.255.255.255	0.0.0.0
+    end
+end)
+
+```
+
+---
+
 ## socket.create(adapter, cb)
 
 在某个适配的网卡上申请一个socket_ctrl
