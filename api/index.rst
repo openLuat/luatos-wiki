@@ -58,6 +58,7 @@
    sensor
    sfd
    sfud
+   sms
    socket
    softkeyboard
    spi
