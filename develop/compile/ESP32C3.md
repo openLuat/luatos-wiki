@@ -44,7 +44,6 @@ D:\
             components\
             其他目录
         luatos-soc-idf5\
-            idf5\
             luatos\
 ```
 
@@ -64,24 +63,19 @@ set(LUATOS_ROOT "E://abc/LuatOS/")
 
 ## 编译前的最后准备
 
-第一次使用编译,需要对idf5进行初始化, 进去CMD命令行
-
-```
-D:
-cd D:\github\luatos-soc-idf5\idf5
-install.bat esp32c3
-```
-
-过程需要5~20分钟不等,会下载一堆依赖. 若中途报错就需要多执行几次
+安装 idf5
+1. 访问地址 https://dl.espressif.cn/dl/esp-idf/
+2. 下载第一个绿色的通用安装器, 若下方还有idf5离线安装包的话,也可以. 但截止到2022.12.08尚没有.
+3. 下载后双击启动, 按提示安装, 版本选idf5, 不要选错了
+4. 安装过程建议不要翻墙, 有国内镜像, 下载还是很快的
+5. 安装完成后, 开始菜单会有idf5的快捷方式
 
 ## 编译
 
-进去CMD命令行
+使用开始菜单或快捷方式, 进入idf5的CMD
 
 ```
 D:
-cd D:\github\luatos-soc-idf5\idf5
-export.bat
 cd D:\github\luatos-soc-idf5\luatos
 idf.py fullclean
 idf.py set-target esp32c3
