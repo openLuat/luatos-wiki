@@ -69,7 +69,7 @@ websocket客户端创建
 
 |传入值类型|解释|
 |-|-|
-|int|适配器序号, 只能是network.ETH0,network.STA,network.AP,如果不填,会选择最后一个注册的适配器|
+|int|适配器序号, 只能是socket.ETH0, socket.STA, socket.AP,如果不填,会选择平台自带的方式,然后是最后一个注册的适配器|
 |string|连接字符串,参考usage|
 
 **返回值**
