@@ -141,7 +141,7 @@ CORE-ESP32-C3核心板支持以下3种方式供电：
 | SPID              | -            | GPIO16配置，FLASH_D0，数据脚0 | UP/DOWN        |
 | SPICLK            | -            | GPIO15配置，FLASH_CK，时钟    | UP/DOWN        |
 
- 注：CORE ESP32核心板搭载ESP32-C3是不带内置FLASH版本，默认贴装外置SPI FLASH，如遇到不贴装外置SPI FLASH的核心，需要注意主芯片的具体型号。 
+ 注：CORE ESP32核心板搭载ESP32-C3是不带内置FLASH版本，默认贴装外置SPI FLASH，如遇到不贴装外置SPI FLASH的核心，需要注意主芯片的具体型号。 使用内置Flash的, `GPIO11/12/13` 不可用.
 
 附表4-4
 
