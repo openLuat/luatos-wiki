@@ -41,3 +41,34 @@
 
 ---
 
+## sms.setNewSmsCb(func)
+
+设置新SMS的回调函数
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|function|回调函数, 3个参数, num, txt, datetime|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|传入是函数就能成功,无返回值|
+
+**例子**
+
+```lua
+
+sms.setNewSmsCb(function(num, txt, datetime)
+    -- num 手机号码
+    -- txt 文本内容
+    -- datetime 发送时间,当前为nil,暂不支持
+    log.info("sms", num, txt, datetime)
+end)
+
+```
+
+---
+
