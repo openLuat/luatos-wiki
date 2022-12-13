@@ -20,7 +20,5 @@
     coremark/README
     supported
     question
-    Air724 <https://doc.openluat.com/wiki/21?wiki_page_id=4020>
-    Air820 <https://doc.openluat.com/wiki/21?wiki_page_id=2595>
-    Air600 <https://doc.openluat.com/wiki/21?wiki_page_id=2780>
-    Air722 <https://doc.openluat.com/wiki/21?wiki_page_id=2596>
+    Air724UG <https://air724ug.cn>
+    Air820UG <https://air820ug.cn>
