@@ -21,7 +21,6 @@
 |eink.MODEL_1in54b_V2|number|1.54寸b_V2|
 |eink.MODEL_1in54_V3|number|1.54寸_V3|
 |eink.MODEL_1in54c|number|1.54寸c|
-|eink.MODEL_1in54f|number|1.54寸f|
 |eink.MODEL_2in13|number|2.13寸|
 |eink.MODEL_2in13bc|number|2.13寸bc|
 |eink.MODEL_2in13d|number|2.13寸d|
@@ -36,7 +35,6 @@
 |eink.MODEL_2in9bc|number|2.9寸bc|
 |eink.MODEL_2in9b_V3|number|2.9寸b_V3|
 |eink.MODEL_2in9d|number|2.9寸d|
-|eink.MODEL_2in9f|number|2.9寸f|
 |eink.MODEL_3in7|number|3.7寸|
 |eink.MODEL_4in2|number|4.2寸|
 |eink.MODEL_4in2bc|number|4.2寸b|
