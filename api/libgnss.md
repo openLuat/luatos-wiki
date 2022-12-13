@@ -212,3 +212,23 @@ log.info("nmea", "zda", json.encode(libgnss.getZda()))
 
 ---
 
+## libgnss.clear()
+
+清除历史定位数据
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+无
+
+---
+
