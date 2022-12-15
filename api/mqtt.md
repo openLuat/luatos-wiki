@@ -127,9 +127,9 @@ mqttc = mqtt.create(nil,"120.55.137.106", 8883, {
 
 ---
 
-## mqttc:auth(client_id,username,password)
+## mqttc:auth(client_id,username,password,cleanSession)
 
-mqtt三元组配置
+mqtt三元组配置及cleanSession
 
 **参数**
 
@@ -138,6 +138,7 @@ mqtt三元组配置
 |string|设备识别id,对于同一个mqtt服务器来说, 通常要求唯一,相同client_id会互相踢下线|
 |string|账号 可选|
 |string|密码 可选|
+|bool|清除session,默认true,可选|
 
 **返回值**
 
@@ -148,7 +149,14 @@ mqtt三元组配置
 **例子**
 
 ```lua
+-- 无账号密码登录,仅clientId
+mqttc:auth("123456789")
+-- 带账号密码登录
 mqttc:auth("123456789","username","password")
+-- 额外配置cleanSession,不清除
+mqttc:auth("123456789","username","password", false)
+-- 无clientId模式, 服务器随机生成id, cleanSession不可配置
+mqttc:auth()
 
 ```
 
