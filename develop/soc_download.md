@@ -112,7 +112,7 @@ Air105需要目前一共需要输入14个参数：
 
 举个例子
 
-`soc_download.exe esp32_download 66 1152000 "_temp\soc\download\esp32" "bootloader.bin" 00000000 "luatos_esp32.bin" 00010000 "script.bin" 01300000 "partition-table.bin" 00008000 00ff0200 0 00380000 0000`
+`soc_download.exe esp32_download 66 1152000 "_temp\soc\download\esp32" "bootloader.bin" 00000000 "luatos.bin" 00010000 "script.bin" 01300000 "partition-table.bin" 00008000 00ff0200 0 00380000 0000`
 
 如果3个bin合并成1个bin，可以如下
 
