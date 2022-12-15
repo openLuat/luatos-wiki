@@ -13,6 +13,7 @@
    dac
    disp
    eink
+   fatfs
    fdb
    fonts
    fota
