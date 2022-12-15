@@ -14,7 +14,6 @@
 
 ```lua
 -- 注意, Air780E/Air600E/Air780EG/Air780EG均不支持电信卡的短信!!
--- 本库尚在开发中, 暂不可用
 
 ```
 
@@ -49,7 +48,7 @@
 
 |传入值类型|解释|
 |-|-|
-|function|回调函数, 3个参数, num, txt, datetime|
+|function|回调函数, 3个参数, num, txt, metas|
 
 **返回值**
 
@@ -61,11 +60,12 @@
 
 ```lua
 
-sms.setNewSmsCb(function(num, txt, datetime)
+sms.setNewSmsCb(function(num, txt, metas)
     -- num 手机号码
     -- txt 文本内容
-    -- datetime 发送时间,当前为nil,暂不支持
-    log.info("sms", num, txt, datetime)
+    -- metas 短信的元数据,例如发送的时间,长短信编号
+    -- 注意, 长短信会自动合并成一条txt
+    log.info("sms", num, txt, metas and json.encode(metas) or "")
 end)
 
 ```
