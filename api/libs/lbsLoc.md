@@ -47,7 +47,7 @@ reqLbsLoc()
 
 ```
 
-## lbsloc.request(cbFnc,reqAddr,timeout,productKey,host,port,reqTime,reqWifi)
+## lbsLoc.request(cbFnc,reqAddr,timeout,productKey,host,port,reqTime,reqWifi)
 
 发送基站/WIFI定位请求（仅支持中国区域的位置查询）
 
@@ -55,7 +55,13 @@ reqLbsLoc()
 
 |传入值类型|解释|
 |-|-|
-|function|cbFnc 用户回调函数，回调函数的调用形式为：|
+|function|cbFnc 用户回调函数，回调函数的调用形式为：cbFnc(result,lat,lng,addr,time,locType)|
+|bool|reqAddr 是否请求服务器返回具体的位置字符串信息，目前此功能不完善，参数可以传nil|
+|number|timeout 请求超时时间，单位毫秒，默认20000毫秒|
+|string|productKey IOT网站上的产品证书，如果在main.lua中定义了PRODUCT_KEY变量，则此参数可以传nil|
+|string|host 服务器域名，此参数可选，目前仅lib中agps.lua使用此参数。应用脚本可以直接传nil|
+|string|port 服务器端口，此参数可选，目前仅lib中agps.lua使用此参数。应用脚本可以直接传nil|
+|bool|reqTime 是否需要服务器返回时间信息，true返回，false或者nil不返回，此参数可选，目前仅lib中agps.lua使用此参数。应用脚本可以直接传nil|
 
 **返回值**
 
