@@ -58,6 +58,7 @@ reqLbsLoc()
 |string|host 服务器域名，此参数可选，目前仅lib中agps.lua使用此参数。应用脚本可以直接传nil|
 |string|port 服务器端口，此参数可选，目前仅lib中agps.lua使用此参数。应用脚本可以直接传nil|
 |bool|reqTime 是否需要服务器返回时间信息，true返回，false或者nil不返回，此参数可选，目前仅lib中agps.lua使用此参数。应用脚本可以直接传nil|
+|table|reqWifi 搜索到的WIFI热点信息(MAC地址和信号强度)，如果传入了此参数，后台会查询WIFI热点对应的经纬度，此参数格式如下：|
 
 **返回值**
 
