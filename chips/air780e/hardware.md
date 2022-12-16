@@ -1,21 +1,20 @@
 # 硬件资料
 
-模块硬件资料请前往：[air780e.cn](http://air780e.cn)
+[ Air780E_模块产品规格书_V1.0.1.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221202101715964_Air780E_模块产品规格书_V1.0.1.pdf)
 
-## 开发板pinout
+[Air780E_硬件设计手册_V1.1.3.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221212104314739_Air780E_硬件设计手册_V1.1.3.pdf)
 
-该图是LuatOS的视角, csdk是支持调整管脚复用关系的
+[Air780E_硬件参考设计_V1.0.4.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221205105616931_Air780E_硬件参考设计_V1.0.4.pdf)
 
-![pinout2air780e](pinout.png)
+[Air780E_PADS格式封装.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221028114239953_Air780E_PADS格式封装.zip)
 
-提醒:
-1. 标红色的是AON_GPIO, 在休眠模式下也可以使用. 非休眠模式下就是普通GPIO
-2. UART2与SPI0复用 GPIO11/GPIO10,没有标错
-3. DBG即UART0, 是底层日志输出口, 强烈建议不要尝试复用它
-4. UART1是主串口, 也支持下载串口, 强烈建议不要复用成GPIO
-5. AON_GPIO的驱动能力均很弱!!
-6. GPIO均不支持"双向触发",只支持单向触发
-7. PWM的最高频率是13M
-8. 图中的LCD SPI只是约定排序, 其实就是普通SPI,非"专用"SPI
-9. 开发板的IO电平为3.3v, 模块本身可配置1.8v/3.3v
-10. SPK是扬声器输出, 需要外接功放, 否则声音很小
+[Air780E_AD格式封装.rar](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221012122122714_Air780E_AD格式封装.rar)
+
+[Air780E_orcad和allegro格式封装.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221122140047224_Air780E_orcad和allegro封装.zip)
+
+[Air780E&Air600E_GPIO_table_20221214.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221214151228249_Air780E&Air600E_GPIO_table_20221214.pdf)
+
+
+
+更多模块硬件资料请前往：[air780e.cn](http://air780e.cn)
+
