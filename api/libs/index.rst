@@ -13,6 +13,7 @@
    ds3231
    gt911
    l3g4200d
+   lbsLoc
    lis2dh12
    lm75
    mcp2515
