@@ -273,7 +273,7 @@ end)
 
 
 
-### CELL_INFO_UPDATE
+### SIM_IND
 
 sim卡状态变化
 
