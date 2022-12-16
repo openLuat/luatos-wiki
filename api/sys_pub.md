@@ -275,6 +275,25 @@ end)
 
 ### CELL_INFO_UPDATE
 
+sim卡状态变化
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.subscribe("SIM_IND", function(status)
+    log.info("sim status", status)
+end)
+
+```
+
+---
+
+### CELL_INFO_UPDATE
+
 基站数据已更新
 
 **额外返回参数**
