@@ -72,7 +72,7 @@ end
 
 ---
 
-## fdb.kv_get(key)
+## fdb.kv_get(key, skey)
 
 根据key获取对应的数据
 
@@ -81,6 +81,7 @@ end
 |传入值类型|解释|
 |-|-|
 |string|key的名称,必填,不能空字符串|
+|string|可选的次级key,仅当原始值为table时有效,相当于 fdb.kv_get(key)[skey]|
 
 **返回值**
 
