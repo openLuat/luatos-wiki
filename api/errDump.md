@@ -63,7 +63,7 @@ errDump.record("socket long time no connect") --记录下"socket long time no co
 
 ---
 
-## errDump.uploadConfig(enable, period, user_flag)
+## errDump.config(enable, period, user_flag)
 
 配置关键日志上传IOT平台，这里的日志包括引起luavm异常退出的日志和用户通过record写入的日志，类似于air的errDump
 
@@ -84,9 +84,9 @@ errDump.record("socket long time no connect") --记录下"socket long time no co
 **例子**
 
 ```lua
-errDump.uploadConfig(true, 3600, "12345678")	--一个小时尝试上次一次，上传时会在imei后附加上12345678
-errDump.uploadConfig(false)	--关闭记录功能，不再上传
-errDump.uploadConfig(true, 0)	--记录，但是不会主动上传，由用户实现上传功能
+errDump.config(true, 3600, "12345678")	--一个小时尝试上次一次，上传时会在imei后附加上12345678
+errDump.config(false)	--关闭记录功能，不再上传
+errDump.config(true, 0)	--记录，但是不会主动上传，由用户实现上传功能
 
 ```
 
