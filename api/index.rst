@@ -13,6 +13,7 @@
    dac
    disp
    eink
+   errDump
    fatfs
    fdb
    fonts
