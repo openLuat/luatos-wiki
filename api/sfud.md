@@ -245,7 +245,7 @@ log.info("sfud.eraseWrite",sfud.eraseWrite(sfud_device,1024,"sfud"))
 
 ---
 
-## sfud.mount(flash, mount_point)
+## sfud.mount(flash, mount_point, offset, maxsize)
 
 挂载sfud lfs文件系统
 
@@ -255,6 +255,8 @@ log.info("sfud.eraseWrite",sfud.eraseWrite(sfud_device,1024,"sfud"))
 |-|-|
 |userdata|flash Flash 设备对象 sfud.get_device_table()返回的数据结构|
 |string|mount_point 挂载目录名|
+|int|起始偏移量,默认0|
+|int|总大小, 默认是整个flash|
 
 **返回值**
 
