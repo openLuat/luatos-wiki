@@ -46,6 +46,7 @@
    mobile
    mqtt
    multimedia
+   nbiot
    nimble
    otp
    pack
