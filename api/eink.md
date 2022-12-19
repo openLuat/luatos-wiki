@@ -375,7 +375,7 @@ eink.line(0, 0, 10, 20, 0)
 
 ```lua
 eink.rect(0, 0, 10, 20)
-eink.rect(0, 0, 10, 20, 1) -- Filled
+eink.rect(0, 0, 10, 20,0, 1) -- Filled
 
 ```
 
