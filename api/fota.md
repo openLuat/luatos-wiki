@@ -26,7 +26,7 @@
 
 |返回值类型|解释|
 |-|-|
-|成功返回true,|失败返回false|
+|boolean|成功返回true, 失败返回false|
 
 **例子**
 
@@ -51,11 +51,16 @@ local result = mcu.fotaInit()	--ec618使用固定内部地址，所以不需要�
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|boolean|准备好返回true|
 
 **例子**
 
-无
+```lua
+local isDone = mcu.fotaWait()
+
+```
 
 ---
 
@@ -71,11 +76,18 @@ local result = mcu.fotaInit()	--ec618使用固定内部地址，所以不需要�
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|boolean|有异常返回true|
+|boolean|接收到最后一块返回true|
+|int|还未写入的数据量，超过64K必须做等待|
 
 **例子**
 
-无
+```lua
+local isError, isDone, cache = fota.fotaRun(buf) -- 写入fota流程
+
+```
 
 ---
 
@@ -91,11 +103,17 @@ local result = mcu.fotaInit()	--ec618使用固定内部地址，所以不需要�
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|boolean|有异常返回true|
+|boolean|写入到最后一块返回true|
 
 **例子**
 
-无
+```lua
+local isError, isDone = mcu.fotaDone()
+
+```
 
 ---
 
@@ -113,7 +131,7 @@ local result = mcu.fotaInit()	--ec618使用固定内部地址，所以不需要�
 
 |返回值类型|解释|
 |-|-|
-|成功返回true,|失败返回false|
+|boolean|成功返回true, 失败返回false|
 
 **例子**
 
