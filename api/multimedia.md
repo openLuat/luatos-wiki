@@ -181,6 +181,33 @@ audio.play(0)				--停止播放某个文件
 
 ---
 
+## audio.tts(id, data)
+
+TTS播放或者停止
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|音频通道|
+|string/zbuff|需要播放的内容|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+audio.tts(0, "测试一下")		--开始播放
+audio.tts(0)				--停止播放
+
+```
+
+---
+
 ## audio.playStop(id)
 
 停止播放文件，和audio.play(id)是一样的作用
