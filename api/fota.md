@@ -1,6 +1,6 @@
 # fota - 底层固件升级
 
-{bdg-success}`已适配` {bdg-primary}`Air105`
+{bdg-success}`已适配` {bdg-primary}`Air105` {bdg-primary}`Air780`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_fota.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -41,7 +41,7 @@ local result = mcu.fotaInit()	--ec618使用固定内部地址，所以不需要�
 
 ## fota.fotaWait()
 
-等待底层fota流程准备好，目前只有105能使用
+等待底层fota流程准备好
 
 **参数**
 
@@ -66,7 +66,7 @@ local isDone = mcu.fotaWait()
 
 ## fota.fotaRun(buff)
 
-写入fota数据，目前只有105能使用
+写入fota数据
 
 **参数**
 
@@ -93,7 +93,7 @@ local isError, isDone, cache = fota.fotaRun(buf) -- 写入fota流程
 
 ## fota.fotaDone()
 
-等待底层fota流程完成，目前只有105能使用
+等待底层fota流程完成
 
 **参数**
 
@@ -119,7 +119,7 @@ local isError, isDone = mcu.fotaDone()
 
 ## fota.fotaEnd(is_ok)
 
-结束fota流程，目前只有105能使用
+结束fota流程
 
 **参数**
 
