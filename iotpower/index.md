@@ -16,15 +16,15 @@ Iot Power 经典版：USB供电，作为电源使用，输出最大5V/2A，采�
 [了解更多 »](power/index)
 :::
 
-:::{grid-item-card} {octicon}`law;1.5em;sd-mr-1` 版本对比
-:link: devices
+:::{grid-item-card} {octicon}`law;1.5em;sd-mr-1` CC版本
+:link: cc/index
 :link-type: doc
-:img-top: img/comp.png
+:img-top: cc/img/font_small.png
 
-Iot Power系列有多款产品，可以满足各种测试需求
+Iot Power CC：纯测量设备，支持PD输入诱骗，适配更高电压与更大电流
 
 +++
-[了解更多 »](devices)
+[了解更多 »](cc/index)
 :::
 
 :::{grid-item-card} {octicon}`graph;1.5em;sd-mr-1` PC客户端
