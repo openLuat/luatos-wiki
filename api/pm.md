@@ -19,6 +19,9 @@
 |pm.LIGHT|number|LIGHT模式|
 |pm.DEEP|number|DEEP模式|
 |pm.HIB|number|HIB模式|
+|pm.USB|number|USB电源|
+|pm.GPS|number|GPS电源|
+|pm.GPS_ANT|number|GPS的天线电源，有源天线才需要|
 
 
 ## pm.request(mode)
@@ -254,6 +257,32 @@ pm.shutdown()
 **例子**
 
 无
+
+---
+
+## pm.power(id, onoff)
+
+开启内部的电源控制，注意不是所有的平台都支持，可能部分平台支持部分选项，看硬件
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|电源控制id,pm.USB pm.GPS pm.GPS_ANT之类|
+|boolean|开关true开，false关，默认关|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|处理结果true成功，false失败|
+
+**例子**
+
+```lua
+pm.power(pm.USB, false) --关闭USB电源
+
+```
 
 ---
 
