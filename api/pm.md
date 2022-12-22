@@ -1,6 +1,6 @@
 # pm - 电源管理
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_pm.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -209,6 +209,51 @@ else
 end
 
 ```
+
+---
+
+## pm.shutdown()
+
+关机
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+-- 当前仅EC618系列(Air780E/Air600E/Air700E/Air780EG支持)
+-- 需要2022-12-22之后编译的固件
+pm.shutdown()
+
+```
+
+---
+
+## pm.reboot()
+
+重启
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+无
 
 ---
 

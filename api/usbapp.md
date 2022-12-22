@@ -1,6 +1,6 @@
 # usbapp - USB功能操作
 
-{bdg-secondary}`适配状态未知`
+{bdg-success}`已适配` {bdg-primary}`Air105`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/usbapp/luat_lib_usbapp.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
