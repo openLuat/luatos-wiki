@@ -12,6 +12,8 @@
 
 ## wdt.init(timeout)
 
+
+
 初始化watchdog并马上启用.大部分设备的watchdog一旦启用就无法关闭.
 
 **参数**
@@ -37,6 +39,8 @@ sys.timerLoopStart(wdt.feed, 3000)
 ---
 
 ## wdt.setTimeout(timeout)
+
+
 
 部分设备支持重新设置watchdog超时时长
 
@@ -66,6 +70,8 @@ sys.setTimeout(5000)
 
 ## wdt.feed()
 
+
+
 喂狗,使得超时计时复位,重新计时
 
 **参数**
@@ -90,6 +96,8 @@ sys.timerLoopStart(wdt.feed, 3000)
 ---
 
 ## wdt.close()
+
+
 
 关闭watchdog,通常不被支持
 

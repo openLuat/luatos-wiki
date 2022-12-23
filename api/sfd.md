@@ -9,6 +9,8 @@
 
 ## sfd.init(type, spi_id, spi_cs)
 
+
+
 初始化spi flash
 
 **参数**
@@ -39,6 +41,8 @@ end
 
 ## sfd.status(drv)
 
+
+
 检查spi flash状态
 
 **参数**
@@ -66,6 +70,8 @@ end
 ---
 
 ## sfd.read(drv, offset, len)
+
+
 
 读取数据
 
@@ -97,6 +103,8 @@ end
 
 ## sfd.write(drv, offset, data)
 
+
+
 写入数据
 
 **参数**
@@ -127,6 +135,8 @@ end
 
 ## sfd.erase(drv, offset)
 
+
+
 擦除数据
 
 **参数**
@@ -155,6 +165,8 @@ end
 ---
 
 ## sfd.id(drv)
+
+
 
 芯片唯一id
 

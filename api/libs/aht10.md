@@ -29,6 +29,8 @@ end)
 
 ## aht10.init(i2c_id)
 
+
+
 aht10初始化
 
 **参数**
@@ -53,6 +55,8 @@ aht10.init(0)
 ---
 
 ## aht10.get_data()
+
+
 
 获取aht10数据
 

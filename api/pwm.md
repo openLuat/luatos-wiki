@@ -12,6 +12,8 @@
 
 ## pwm.open(channel, period, pulse, pnum, precision)
 
+
+
 开启指定的PWM通道
 
 **参数**
@@ -44,6 +46,8 @@ pwm.open(5, 10000, 31, 0, 256)
 
 ## pwm.close(channel)
 
+
+
 关闭指定的PWM通道
 
 **参数**
@@ -69,6 +73,8 @@ pwm.close(5)
 ---
 
 ## pwm.capture(channel)
+
+
 
 PWM捕获
 

@@ -38,6 +38,8 @@
 
 ## lcd.init(tp, args)
 
+
+
 lcd显示屏初始化
 
 **参数**
@@ -66,6 +68,8 @@ lcd.init("st7735s",{port = "device",pin_dc = 17, pin_pwr = 7,pin_rst = 19,direct
 
 ## lcd.close()
 
+
+
 关闭lcd显示屏
 
 **参数**
@@ -87,6 +91,8 @@ lcd.close()
 ---
 
 ## lcd.on()
+
+
 
 开启lcd显示屏背光
 
@@ -110,6 +116,8 @@ lcd.on()
 
 ## lcd.off()
 
+
+
 关闭lcd显示屏背光
 
 **参数**
@@ -131,6 +139,8 @@ lcd.off()
 ---
 
 ## lcd.sleep()
+
+
 
 lcd睡眠
 
@@ -154,6 +164,8 @@ lcd.sleep()
 
 ## lcd.wakeup()
 
+
+
 lcd唤醒
 
 **参数**
@@ -175,6 +187,8 @@ lcd.wakeup()
 ---
 
 ## lcd.invon()
+
+
 
 lcd反显
 
@@ -198,6 +212,8 @@ lcd.invon()
 
 ## lcd.invoff()
 
+
+
 lcd反显关闭
 
 **参数**
@@ -219,6 +235,8 @@ lcd.invoff()
 ---
 
 ## lcd.cmd(cmd)
+
+
 
 lcd命令
 
@@ -244,6 +262,8 @@ lcd.cmd(0x21)
 
 ## lcd.data(data)
 
+
+
 lcd数据
 
 **参数**
@@ -267,6 +287,8 @@ lcd.data(0x21)
 ---
 
 ## lcd.setColor(back,fore)
+
+
 
 lcd颜色设置
 
@@ -292,6 +314,8 @@ lcd.setColor(0xFFFF,0x0000)
 ---
 
 ## lcd.draw(x1, y1, x2, y2,color)
+
+
 
 lcd颜色填充
 
@@ -322,6 +346,8 @@ lcd.draw(20,30,220,30,buff)
 
 ## lcd.clear(color)
 
+
+
 lcd清屏
 
 **参数**
@@ -345,6 +371,8 @@ lcd.clear()
 ---
 
 ## lcd.fill(x1, y1, x2, y2,color)
+
+
 
 lcd颜色填充
 
@@ -374,6 +402,8 @@ lcd.fill(20,30,220,30,0x0000)
 
 ## lcd.drawPoint(x0,y0,color)
 
+
+
 画一个点.
 
 **参数**
@@ -398,6 +428,8 @@ lcd.drawPoint(20,30,0x001F)
 ---
 
 ## lcd.drawLine(x0,y0,x1,y1,color)
+
+
 
 在两点之间画一条线.
 
@@ -426,6 +458,8 @@ lcd.drawLine(20,30,220,30,0x001F)
 
 ## lcd.drawRectangle(x0,y0,x1,y1,color)
 
+
+
 从x / y位置（左上边缘）开始绘制一个框
 
 **参数**
@@ -453,6 +487,8 @@ lcd.drawRectangle(20,40,220,80,0x001F)
 
 ## lcd.drawCircle(x0,y0,r,color)
 
+
+
 从x / y位置（圆心）开始绘制一个圆
 
 **参数**
@@ -479,6 +515,8 @@ lcd.drawCircle(120,120,20,0x001F)
 
 ## lcd.drawQrcode(x, y, str, size)
 
+
+
 缓冲区绘制QRCode
 
 **参数**
@@ -503,6 +541,8 @@ lcd.drawCircle(120,120,20,0x001F)
 ---
 
 ## lcd.setFont(font)
+
+
 
 设置字体
 
@@ -537,6 +577,8 @@ lcd.drawStr(40,40,"drawStr测试")
 
 ## lcd.drawStr(x,y,str,fg_color)
 
+
+
 显示字符串
 
 **参数**
@@ -568,6 +610,8 @@ lcd.drawStr(40,40,"drawStr测试")
 
 ## lcd.drawGtfontGb2312(str,size,x,y)
 
+
+
 使用gtfont显示gb2312字符串
 
 **参数**
@@ -593,6 +637,8 @@ lcd.drawGtfontGb2312("啊啊啊",32,0,0)
 ---
 
 ## lcd.drawGtfontGb2312Gray(str,size,gray,x,y)
+
+
 
 使用gtfont灰度显示gb2312字符串
 
@@ -621,6 +667,8 @@ lcd.drawGtfontGb2312Gray("啊啊啊",32,4,0,40)
 
 ## lcd.drawGtfontUtf8(str,size,x,y)
 
+
+
 使用gtfont显示UTF8字符串
 
 **参数**
@@ -646,6 +694,8 @@ lcd.drawGtfontUtf8("啊啊啊",32,0,0)
 ---
 
 ## lcd.drawGtfontUtf8Gray(str,size,gray,x,y)
+
+
 
 使用gtfont灰度显示UTF8字符串
 
@@ -674,6 +724,8 @@ lcd.drawGtfontUtf8Gray("啊啊啊",32,4,0,40)
 
 ## lcd.getSize()
 
+
+
 获取屏幕尺寸
 
 **参数**
@@ -697,6 +749,8 @@ log.info("lcd", "size", lcd.getSize())
 ---
 
 ## lcd.drawXbm(x, y, w, h, data)
+
+
 
 绘制位图
 
@@ -730,6 +784,8 @@ lcd.drawXbm(0, 0, 16,16, string.char(
 
 ## lcd.showImage(x, y, file)
 
+
+
 显示图片,当前只支持jpg,jpeg
 
 **参数**
@@ -755,6 +811,8 @@ lcd.showImage(0,0,"/luadb/logo.jpg")
 
 ## lcd.flush()
 
+
+
 主动刷新数据到界面, 仅设置buff且禁用自动属性后使用
 
 **参数**
@@ -774,6 +832,8 @@ lcd.showImage(0,0,"/luadb/logo.jpg")
 ---
 
 ## lcd.setupBuff(conf, onheap)
+
+
 
 设置显示缓冲区, 所需内存大小为 2×宽×高 字节. 请衡量内存需求与业务所需的刷新频次.
 
@@ -802,6 +862,8 @@ lcd.setupBuff()
 
 ## lcd.autoFlush(enable)
 
+
+
 设置自动刷新, 需配合lcd.setupBuff使用
 
 **参数**
@@ -827,6 +889,8 @@ lcd.autoFlush(false)
 ---
 
 ## lcd.rgb565(r, g, b, swap)
+
+
 
 RGB565颜色生成
 

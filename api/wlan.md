@@ -21,6 +21,8 @@
 
 ## wlan.init()
 
+
+
 初始化
 
 **参数**
@@ -40,6 +42,8 @@
 ---
 
 ## wlan.setMode(mode)
+
+
 
 设置wifi模式
 
@@ -73,6 +77,8 @@ wlan.setMode(wlan.APSTA)
 
 ## wlan.ready()
 
+
+
 作为STATION时,是否已经连接上AP,且获取IP成功
 
 **参数**
@@ -92,6 +98,8 @@ wlan.setMode(wlan.APSTA)
 ---
 
 ## wlan.connect(ssid, password)
+
+
 
 作为STATION时,连接到指定AP
 
@@ -126,6 +134,8 @@ wlan.connect()
 
 ## wlan.disconnect()
 
+
+
 作为STATION时,断开AP
 
 **参数**
@@ -143,6 +153,8 @@ wlan.connect()
 ---
 
 ## wlan.scan()
+
+
 
 扫描wifi频段
 
@@ -184,6 +196,8 @@ end)
 
 ## wlan.scanResult()
 
+
+
 获取wifi扫描结果
 
 **参数**
@@ -206,6 +220,8 @@ end)
 ---
 
 ## wlan.smartconfig(mode)
+
+
 
 配网
 
@@ -235,6 +251,8 @@ log.info("sc", ret, ssid, passwd)
 
 ## wlan.getMac()
 
+
+
 获取mac
 
 **参数**
@@ -255,6 +273,8 @@ log.info("sc", ret, ssid, passwd)
 
 ## wlan.getIP()
 
+
+
 获取ip,仅STATION或APSTA模式下有意义
 
 **参数**
@@ -274,6 +294,8 @@ log.info("sc", ret, ssid, passwd)
 ---
 
 ## wlan.createAP(ssid, passwd)
+
+
 
 启动AP
 
@@ -301,6 +323,8 @@ wlan.createAP("uiot", "12345678")
 ---
 
 ## wlan.getInfo()
+
+
 
 获取信息,如AP的bssid,信号强度
 

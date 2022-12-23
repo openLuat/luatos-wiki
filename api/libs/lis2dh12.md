@@ -29,6 +29,8 @@ end)
 
 ## lis2dh12.get_data()
 
+
+
 获取lis2dh12数据
 
 **参数**

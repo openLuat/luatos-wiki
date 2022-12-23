@@ -29,6 +29,8 @@ end)
 
 ## adxl34x.init(i2c_id)
 
+
+
 adxl34x 初始化
 
 **参数**
@@ -53,6 +55,8 @@ adxl34x.init(0)
 ---
 
 ## adxl34x.get_data()
+
+
 
 获取 adxl34x 数据
 

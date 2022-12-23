@@ -45,6 +45,8 @@ reqLbsLoc()
 
 ## lbsLoc.request(cbFnc,reqAddr,timeout,productKey,host,port,reqTime,reqWifi)
 
+
+
 发送基站/WIFI定位请求（仅支持中国区域的位置查询）
 
 **参数**

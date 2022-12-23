@@ -19,6 +19,8 @@
 
 ## fatfs.mount(mount_point, spiid_or_spidevice, spi_cs, spi_speed)
 
+
+
 挂载fatfs
 
 **参数**
@@ -68,6 +70,8 @@
 ---
 
 ## fatfs.getfree(mount_point)
+
+
 
 获取可用空间信息
 

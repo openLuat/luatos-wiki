@@ -21,6 +21,8 @@
 
 ## zbuff.create(length,data)
 
+
+
 创建zbuff
 
 **参数**
@@ -50,6 +52,8 @@ local buff = zbuff.create(1024, "123321456654") -- 创建，并填充一个已�
 
 ## zbuff.create({width,height,bit},data)
 
+
+
 创建framebuff用的zbuff
 
 **参数**
@@ -78,6 +82,8 @@ local buff = zbuff.create({128,160,16},0xf800)--创建一个128*160的framebuff�
 
 ## buff:write(para,...)
 
+
+
 zbuff写数据（从当前指针位置开始；执行后指针会向后移动）
 
 **参数**
@@ -105,6 +111,8 @@ local len = buff:write(0x1a,0x30,0x31,0x32,0x00,0x01)  -- 按数值写入多个�
 
 ## buff:read(length)
 
+
+
 zbuff读数据（从当前指针位置开始；执行后指针会向后移动）
 
 **参数**
@@ -131,6 +139,8 @@ local str = buff:read(3)
 
 ## buff:clear(num)
 
+
+
 zbuff清空数据（与当前指针位置无关；执行后指针位置不变）
 
 **参数**
@@ -154,6 +164,8 @@ buff:clear(0)
 ---
 
 ## buff:seek(base,offset)
+
+
 
 zbuff设置光标位置（可能与当前指针位置有关；执行后指针会被设置到指定位置）
 
@@ -182,6 +194,8 @@ buff:seek(-3,zbuff.SEEK_END)
 ---
 
 ## buff:pack(format,val1, val2,...)
+
+
 
 将一系列数据按照格式字符转化，并写入（从当前指针位置开始；执行后指针会向后移动）
 
@@ -224,6 +238,8 @@ buff:pack(">IIHA", 0x1234, 0x4567, 0x12,"abcdefg") -- 按格式写入几个数�
 
 ## buff:unpack(format)
 
+
+
 将一系列数据按照格式字符读取出来（从当前指针位置开始；执行后指针会向后移动）
 
 **参数**
@@ -251,6 +267,8 @@ local cnt,a,b,c,s = buff:unpack(">IIHA10") -- 按格式读取几个数据
 
 ## buff:read类型()
 
+
+
 读取一个指定类型的数据（从当前指针位置开始；执行后指针会向后移动）
 
 **参数**
@@ -276,6 +294,8 @@ local data = buff:readU32()
 ---
 
 ## buff:write类型()
+
+
 
 写入一个指定类型的数据（从当前指针位置开始；执行后指针会向后移动）
 
@@ -304,6 +324,8 @@ local len = buff:writeU32(1024)
 
 ## buff:toStr(offset,length)
 
+
+
 按起始位置和长度取出数据（与当前指针位置无关；执行后指针位置不变）
 
 **参数**
@@ -330,6 +352,8 @@ local s = buff:toStr(0,5)--读取开头的五个字节数据
 
 ## buff:len()
 
+
+
 获取zbuff对象的长度（与当前指针位置无关；执行后指针位置不变）
 
 **参数**
@@ -353,6 +377,8 @@ len = #buff
 ---
 
 ## buff:setFrameBuffer(width,height,bit,color)
+
+
 
 设置buff对象的FrameBuffer属性（与当前指针位置无关；执行后指针位置不变）
 
@@ -382,6 +408,8 @@ result = buff:setFrameBuffer(320,240,16,0xffff)
 
 ## buff:pixel(x,y,color)
 
+
+
 设置或获取FrameBuffer某个像素点的颜色（与当前指针位置无关；执行后指针位置不变）
 
 **参数**
@@ -409,6 +437,8 @@ color = buff:pixel(0,3)
 ---
 
 ## buff:drawLine(x1,y1,x2,y2,color)
+
+
 
 画一条线（与当前指针位置无关；执行后指针位置不变）
 
@@ -438,6 +468,8 @@ rerult = buff:drawLine(0,0,2,3,0xffff)
 ---
 
 ## buff:drawRect(x1,y1,x2,y2,color,fill)
+
+
 
 画一个矩形（与当前指针位置无关；执行后指针位置不变）
 
@@ -469,6 +501,8 @@ rerult = buff:drawRect(0,0,2,3,0xffff)
 
 ## buff:drawCircle(x,y,r,color,fill)
 
+
+
 画一个圆形（与当前指针位置无关；执行后指针位置不变）
 
 **参数**
@@ -499,6 +533,8 @@ rerult = buff:drawCircle(15,5,3,0xC,true)
 
 ## buff[n]
 
+
+
 以下标形式进行数据读写（与当前指针位置无关；执行后指针位置不变）
 
 **参数**
@@ -525,6 +561,8 @@ local data = buff[0]
 
 ## buff:resize(n)
 
+
+
 调整zbuff实际分配空间的大小，类似于realloc的效果，new = realloc(old, n)，可以扩大或者缩小（如果缩小后len小于了used，那么used=新len）
 
 **参数**
@@ -547,6 +585,8 @@ buff:resize(20)
 ---
 
 ## buff:copy(start, para,...)
+
+
 
 zbuff动态写数据，类似于memcpy效果，当原有空间不足时动态扩大空间
 
@@ -578,6 +618,8 @@ local len = buff:copy(5, buff2, 10, 1024)  -- 类似于memcpy(&buff[5], &buff2[1
 
 ## buff:used()
 
+
+
 获取zbuff的实际数据量大小，注意这个不同于分配的空间大小
 
 **参数**
@@ -600,6 +642,8 @@ buff:used()
 ---
 
 ## buff:del(offset,length)
+
+
 
 删除zbuff 0~used范围内的一段数据，注意只是改变了used的值，并不是真的在ram里去清除掉数据
 
@@ -625,6 +669,8 @@ buff:del(-1,4)	--从位置used-1开始删除4个字节数据，但是这肯定�
 ---
 
 ## buff:query(offset,length,isbigend,issigned,isfloat)
+
+
 
 按起始位置和长度0~used范围内取出数据，如果是1,2,4,8字节，根据后续参数转换成浮点或者整形
 
@@ -655,6 +701,8 @@ local s = buff:query(0,5)--读取开头的五个字节数据
 
 ## buff:set(start, num, len)
 
+
+
 zbuff的类似于memset操作，类似于memset(&buff[start], num, len)，当然有ram越界保护，会对len有一定的限制
 
 **参数**
@@ -683,6 +731,8 @@ buff:set(4, 0xaa, 12) --等用于 memset(&buff[4], 0xaa, 12)
 ---
 
 ## buff:isEqual(start, buff2, start2, len)
+
+
 
 zbuff的类似于memcmp操作，类似于memcmp(&buff[start], &buff2[start2], len)
 

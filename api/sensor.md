@@ -9,6 +9,8 @@
 
 ## sensor.ds18b20(pin)
 
+
+
 获取DS18B20的温度数据
 
 **参数**
@@ -42,6 +44,8 @@ end
 
 ## sensor.w1_reset(pin)
 
+
+
 单总线协议,复位设备
 
 **参数**
@@ -64,6 +68,8 @@ end
 
 ## sensor.w1_connect(pin)
 
+
+
 单总线协议,连接设备
 
 **参数**
@@ -85,6 +91,8 @@ end
 ---
 
 ## sensor.w1_write(pin, data1,data2)
+
+
 
 单总线协议,往总线写入数据
 
@@ -110,6 +118,8 @@ end
 
 ## sensor.w1_read(pin, len)
 
+
+
 单总线协议,从总线读取数据
 
 **参数**
@@ -132,6 +142,8 @@ end
 ---
 
 ## sensor.hx711(pin_date,pin_clk)
+
+
 
 获取Hx711的温度数据
 
@@ -172,6 +184,8 @@ sys.taskInit(
 
 ## sensor.ws2812b(pin,data,T0H,T0L,T1H,T1L)
 
+
+
 设置ws2812b输出(gpio驱动方式)
 
 **参数**
@@ -202,6 +216,8 @@ sensor.ws2812b(7,buff,300,700,700,700)
 
 ## sensor.ws2812b_pwm(pin,data)
 
+
+
 设置ws2812b输出(pwm驱动方式,需要pwm能输出800k频率，否则无法使用此方法)
 
 **参数**
@@ -228,6 +244,8 @@ sensor.ws2812b_pwm(7,buff)
 
 ## sensor.ws2812b_spi(pin,data)
 
+
+
 设置ws2812b输出(spi驱动方式,需要spi能输出5M频率，否则无法使用此方法)
 
 **参数**
@@ -253,6 +271,8 @@ sensor.ws2812b_spi(2,buff)
 ---
 
 ## sensor.dht1x(pin)
+
+
 
 获取DHT11/DHT12的温湿度数据
 

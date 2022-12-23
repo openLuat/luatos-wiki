@@ -9,6 +9,8 @@
 
 ## mcu.setClk(mhz)
 
+
+
 设置主频,单位MHZ
 
 **参数**
@@ -43,6 +45,8 @@ sys.wait(1000)
 
 ## mcu.getClk()
 
+
+
 获取主频,单位MHZ
 
 **参数**
@@ -66,6 +70,8 @@ print("Boom", mhz)
 ---
 
 ## mcu.unique_id()
+
+
 
 获取设备唯一id. 注意,可能包含不可见字符,如需查看建议toHex()后打印
 
@@ -91,6 +97,8 @@ print("unique_id", unique_id)
 
 ## mcu.ticks()
 
+
+
 获取启动后的tick数,注意会出现溢出会出现负数
 
 **参数**
@@ -115,6 +123,8 @@ print("ticks", tick)
 
 ## mcu.hz()
 
+
+
 获取每秒的tick数量
 
 **参数**
@@ -138,6 +148,8 @@ print("mcu.hz", hz)
 ---
 
 ## mcu.reg32(address, value, mask)
+
+
 
 读写mcu的32bit寄存器或者ram,谨慎使用写功能,请熟悉mcu的寄存器使用方法后再使用
 
@@ -166,6 +178,8 @@ local value = mcu.reg32(0x2009FFFC, 0x01, 0x01) --对0x2009FFFC地址上的值,�
 
 ## mcu.x32(value)
 
+
+
 转换10进制数为16进制字符串输出
 
 **参数**
@@ -191,6 +205,8 @@ local value = mcu.x32(0x2009FFFC) --输出"0x2009fffc"
 
 ## mcu.tick64()
 
+
+
 获取启动后的高精度tick,目前只有101/103/105能用
 
 **参数**
@@ -215,6 +231,8 @@ print("ticks", tick_str, tick_per)
 ---
 
 ## mcu.dtick64(tick1, tick2, check_value)
+
+
 
 计算2个64bit tick的差值,目前只有105能用
 
@@ -244,6 +262,8 @@ print("ticks", result, diff_tick)
 ---
 
 ## mcu.setXTAL(source_main, source_32k, delay)
+
+
 
 选择时钟源,当前仅air105支持
 

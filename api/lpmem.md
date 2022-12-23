@@ -9,6 +9,8 @@
 
 ## lpmem.read(offset, size)
 
+
+
 读取内存块
 
 **参数**
@@ -36,6 +38,8 @@ local data = lpmem.read(0, 1024)
 
 ## lpmem.write(offset, str)
 
+
+
 写入内存块
 
 **参数**
@@ -62,6 +66,8 @@ lpmem.write(512, data)
 ---
 
 ## lpmem.size()
+
+
 
 获取内存块的总大小
 

@@ -12,6 +12,8 @@
 
 ## libcoap.new(code, uri, headers, payload)
 
+
+
 创建一个coap数据包
 
 **参数**
@@ -42,6 +44,8 @@ local data = coapdata:rawdata()
 
 ## libcoap.parse(str)
 
+
+
 解析coap数据包
 
 **参数**
@@ -69,6 +73,8 @@ log.info("coapdata", coapdata:hcode(), coapdata:data())
 
 ## coapdata:msgid()
 
+
+
 获取coap数据包的msgid
 
 **参数**
@@ -93,6 +99,8 @@ log.info("coapdata", coapdata:msgid())
 ---
 
 ## coapdata:token()
+
+
 
 获取coap数据包的token
 
@@ -119,6 +127,8 @@ log.info("coapdata", coapdata:token())
 
 ## coapdata:rawdata()
 
+
+
 获取coap数据包的二进制数据,用于发送到服务器
 
 **参数**
@@ -143,6 +153,8 @@ netc:send(coapdata:rawdata())
 ---
 
 ## coapdata:code()
+
+
 
 获取coap数据包的code
 
@@ -169,6 +181,8 @@ log.info("coapdata", coapdata:code())
 
 ## coapdata:hcode()
 
+
+
 获取coap数据包的http code, 比coap原始的code要友好
 
 **参数**
@@ -193,6 +207,8 @@ log.info("coapdata", coapdata:hcode())
 ---
 
 ## coapdata:type(t)
+
+
 
 获取coap数据包的type, 例如libcoap.CON/NON/ACK/RST
 
@@ -220,6 +236,8 @@ log.info("coapdata", coapdata:type())
 ---
 
 ## coapdata:data()
+
+
 
 获取coap数据包的data
 

@@ -12,6 +12,8 @@
 
 ## fs.fsstat(path)
 
+
+
 获取文件系统信息
 
 **参数**
@@ -41,6 +43,8 @@ log.info("fsstat", fs.fsstat("/"))
 ---
 
 ## fs.fsize(path)
+
+
 
 获取文件大小
 

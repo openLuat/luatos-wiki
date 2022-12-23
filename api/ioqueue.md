@@ -12,6 +12,8 @@
 
 ## ioqueue.init(hwtimer_id,cmd_cnt,repeat_cnt)
 
+
+
 初始化一个io操作队列
 
 **参数**
@@ -38,6 +40,8 @@ ioqueue.init(0,10,5) --以timer0为时钟源初始化一个io操作队列，有1
 
 ## ioqueue.setdelay(hwtimer_id,time_us,time_tick,continue)
 
+
+
 对io操作队列增加延时命令
 
 **参数**
@@ -60,6 +64,8 @@ ioqueue.init(0,10,5) --以timer0为时钟源初始化一个io操作队列，有1
 ---
 
 ## ioqueue.delay(hwtimer_id)
+
+
 
 对io操作队列增加一次重复延时，在前面必须有setdelay且是连续延时
 
@@ -85,6 +91,8 @@ ioqueue.delay(0)
 ---
 
 ## ioqueue.setgpio(hwtimer_id,pin,is_input,pull_mode,init_level)
+
+
 
 对io操作队列增加设置gpio命令
 
@@ -115,6 +123,8 @@ ioqueue.setgpio(0,pin.PB01,false,0,1)--PB01设置成上拉输出高电平
 
 ## ioqueue.input(hwtimer_id,pin)
 
+
+
 对io操作队列增加读取gpio命令
 
 **参数**
@@ -141,6 +151,8 @@ ioqueue.input(0,pin.PB01)
 
 ## ioqueue.output(hwtimer_id,pin,level)
 
+
+
 对io操作队列增加输出GPIO命令
 
 **参数**
@@ -166,6 +178,8 @@ ioqueue.output(0,pin.PB01,0)
 ---
 
 ## ioqueue.setcap(hwtimer_id,pin,pull_mode,irq_mode,max_tick)
+
+
 
 对io操作队列增加设置捕获某个IO命令
 
@@ -195,6 +209,8 @@ ioqueue.setcap(0,pin.PB01,gpio.PULLUP,gpio.FALLING,48000000)
 
 ## ioqueue.capture(hwtimer_id)
 
+
+
 对io操作队列增加捕获一次IO状态命令
 
 **参数**
@@ -218,6 +234,8 @@ ioqueue.capture(0)
 ---
 
 ## ioqueue.capend(hwtimer_id,pin)
+
+
 
 对io操作队列增加结束捕获某个IO命令
 
@@ -243,6 +261,8 @@ ioqueue.capend(0,pin.PB01)
 ---
 
 ## ioqueue.get(hwtimer_id, input_buff, capture_buff)
+
+
 
 * 获取io操作队列中输入和捕获的数据
 
@@ -272,6 +292,8 @@ local input_cnt, capture_cnt = ioqueue.get(0, input_buff, capture_buff)
 
 ## ioqueue.start(hwtimer_id)
 
+
+
 启动io操作队列
 
 **参数**
@@ -295,6 +317,8 @@ ioqueue.start(0)
 ---
 
 ## ioqueue.stop(hwtimer_id)
+
+
 
 停止io操作队列，可以通过start从头开始
 
@@ -322,6 +346,8 @@ ioqueue.stop(0)
 
 ## ioqueue.release(hwtimer_id)
 
+
+
 释放io操作队列的资源，下次使用必须重新init
 
 **参数**
@@ -345,6 +371,8 @@ ioqueue.clear(0)
 ---
 
 ## ioqueue.clear(hwtimer_id)
+
+
 
 清空io操作队列
 
@@ -370,6 +398,8 @@ ioqueue.clear(0)
 
 ## ioqueue.done(hwtimer_id)
 
+
+
 检测io操作队列是否已经执行完成
 
 **参数**
@@ -394,6 +424,8 @@ local result = ioqueue.done(0)
 ---
 
 ## ioqueue.exti(pin,pull_mode,irq_mode,onoff)
+
+
 
 启动/停止一个带系统tick返回的外部中断
 

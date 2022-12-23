@@ -20,6 +20,8 @@
 
 ## sysplus.waitMsg(taskName, target, timeout)
 
+
+
 等待接收一个目标消息
 
 **参数**
@@ -48,6 +50,8 @@ sysplus.waitMsg('a', 'b', 1000)
 ---
 
 ## sysplus.sendMsg(taskName, target, arg2, arg3, arg4)
+
+
 
 向目标任务发送一个消息
 

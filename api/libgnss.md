@@ -12,6 +12,8 @@
 
 ## libgnss.parse(str)
 
+
+
 处理nmea数据
 
 **参数**
@@ -37,6 +39,8 @@ log.info("nmea", json.encode(libgnss.getRmc()))
 
 ## libgnss.isFix()
 
+
+
 当前是否已经定位成功
 
 **参数**
@@ -61,6 +65,8 @@ log.info("nmea", "isFix", libgnss.isFix())
 ---
 
 ## libgnss.getIntLocation()
+
+
 
 获取位置信息
 
@@ -89,6 +95,8 @@ log.info("nmea", "loc", libgnss.getIntLocation())
 
 ## libgnss.getRmc()
 
+
+
 获取原始RMC位置信息
 
 **参数**
@@ -113,6 +121,8 @@ log.info("nmea", "rmc", json.encode(libgnss.getRmc()))
 ---
 
 ## libgnss.getGsv()
+
+
 
 获取原始GSV信息
 
@@ -139,6 +149,8 @@ log.info("nmea", "gsv", json.encode(libgnss.getGsv()))
 
 ## libgnss.getGsa()
 
+
+
 获取原始GSA信息
 
 **参数**
@@ -163,6 +175,8 @@ log.info("nmea", "gsa", json.encode(libgnss.getGsa()))
 ---
 
 ## libgnss.getVtg()
+
+
 
 获取原始VTA位置信息
 
@@ -189,6 +203,8 @@ log.info("nmea", "vtg", json.encode(libgnss.getVtg()))
 
 ## libgnss.getZda()
 
+
+
 获取原始ZDA时间和日期信息
 
 **参数**
@@ -213,6 +229,8 @@ log.info("nmea", "zda", json.encode(libgnss.getZda()))
 ---
 
 ## libgnss.clear()
+
+
 
 清除历史定位数据
 

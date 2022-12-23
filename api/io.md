@@ -56,6 +56,8 @@ end
 
 ## io.exists(path)
 
+
+
 判断文件是否存在
 
 **参数**
@@ -80,6 +82,8 @@ log.info("io", "file exists", io.exists("/boottime"))
 ---
 
 ## io.fileSize(path)
+
+
 
 获取文件大小
 
@@ -109,6 +113,8 @@ end
 
 ## io.readFile(path)
 
+
+
 读取整个文件,请注意内存消耗
 
 **参数**
@@ -133,6 +139,8 @@ local data = io.readFile("/bootime")
 ---
 
 ## io.writeFile(path, data)
+
+
 
 将数据写入文件
 
@@ -159,6 +167,8 @@ io.writeFile("/bootime", "1")
 ---
 
 ## io.fill(buff, offset, len)
+
+
 
 读取文件并填充到zbuff内
 
@@ -192,6 +202,8 @@ end
 
 ## io.mkdir(path)
 
+
+
 创建文件夹
 
 **参数**
@@ -219,6 +231,8 @@ log.info("fs", "mkdir", ret, errio)
 
 ## io.rmdir(path)
 
+
+
 删除文件夹
 
 **参数**
@@ -245,6 +259,8 @@ log.info("fs", "rmdir", ret, errio)
 ---
 
 ## io.lsdir(path, len, offset)
+
+
 
 列出目录下的文件
 
@@ -278,6 +294,8 @@ end
 ---
 
 ## io.lsmount()
+
+
 
 列出所有挂载点
 

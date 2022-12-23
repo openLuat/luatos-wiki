@@ -12,6 +12,8 @@
 
 ## dac.open(ch, freq, mode)
 
+
+
 打开DAC通道,并配置参数
 
 **参数**
@@ -43,6 +45,8 @@ end
 
 ## dac.write(ch, data)
 
+
+
 从指定DAC通道输出一段波形,或者单个值
 
 **参数**
@@ -73,6 +77,8 @@ dac.close(0)
 ---
 
 ## dac.close(ch)
+
+
 
 关闭DAC通道
 

@@ -12,6 +12,8 @@
 
 ## statem.create(count, repeat)
 
+
+
 创建一个新的状态机.
 
 **参数**

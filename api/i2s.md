@@ -18,6 +18,8 @@
 
 ## i2s.setup(id, mode, sample, bitw, channel, format, mclk)
 
+
+
 初始化i2s
 
 **参数**
@@ -52,6 +54,8 @@ i2s.setup(0, 0, 44100, 16, 0, 0, 8000000)
 ---
 
 ## i2s.send(id, data, len)
+
+
 
 发送i2s数据
 
@@ -88,6 +92,8 @@ end
 ---
 
 ## i2s.close(id, data, len)
+
+
 
 关闭i2s
 

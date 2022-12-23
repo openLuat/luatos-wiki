@@ -34,6 +34,8 @@ end
 
 ## protobuf.load(pbdata)
 
+
+
 加载pb二进制定义数据
 
 **参数**
@@ -61,6 +63,8 @@ protobuf.load(io.readFile("/luadb/person.pb"))
 
 ## protobuf.clear()
 
+
+
 清除已加载的二进制定义数据
 
 **参数**
@@ -84,6 +88,8 @@ protobuf.clear()
 ---
 
 ## protobuf.encode(tpname, data)
+
+
 
 编码protobuffs数据包
 
@@ -118,6 +124,8 @@ end
 ---
 
 ## protobuf.decode(tpname, data)
+
+
 
 解码protobuffs数据包
 

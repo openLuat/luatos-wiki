@@ -44,6 +44,8 @@ end)
 
 ## nimble.init(name)
 
+
+
 初始化BLE上下文,开始对外广播/扫描
 
 **参数**
@@ -69,6 +71,8 @@ end)
 
 ## nimble.deinit()
 
+
+
 关闭BLE上下文
 
 **参数**
@@ -91,6 +95,8 @@ end)
 ---
 
 ## nimble.send_msg(conn, handle, data)
+
+
 
 发送信息
 

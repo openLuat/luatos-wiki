@@ -34,6 +34,8 @@ end)
 
 ## mpu6xxx.init(i2c_id)
 
+
+
 mpu6xxx初始化
 
 **参数**
@@ -59,6 +61,8 @@ mpu6xxx.init(0)
 
 ## mpu6xxx.get_temp()
 
+
+
 获取温度数据
 
 **参数**
@@ -83,6 +87,8 @@ log.info("6050temp", temp)
 
 ## mpu6xxx.get_accel()
 
+
+
 获取加速度计的数据,单位: mg
 
 **参数**
@@ -106,6 +112,8 @@ log.info("6050accel", "accel.x",accel.x,"accel.y",accel.y,"accel.z",accel.z)
 ---
 
 ## mpu6xxx.get_gyro()
+
+
 
 获取陀螺仪的数据，单位: deg / 10s
 

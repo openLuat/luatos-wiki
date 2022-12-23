@@ -12,6 +12,8 @@
 
 ## fota.fotaInit(storge_location, len, param1)
 
+
+
 初始化fota流程
 
 **参数**
@@ -41,6 +43,8 @@ local result = mcu.fotaInit()	--ec618使用固定内部地址，所以不需要�
 
 ## fota.fotaWait()
 
+
+
 等待底层fota流程准备好
 
 **参数**
@@ -65,6 +69,8 @@ local isDone = mcu.fotaWait()
 ---
 
 ## fota.fotaRun(buff)
+
+
 
 写入fota数据
 
@@ -93,6 +99,8 @@ local isError, isDone, cache = fota.fotaRun(buf) -- 写入fota流程
 
 ## fota.fotaDone()
 
+
+
 等待底层fota流程完成
 
 **参数**
@@ -118,6 +126,8 @@ local isError, isDone = mcu.fotaDone()
 ---
 
 ## fota.fotaEnd(is_ok)
+
+
 
 结束fota流程
 

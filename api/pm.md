@@ -26,6 +26,8 @@
 
 ## pm.request(mode)
 
+
+
 请求进入指定的休眠模式
 
 **参数**
@@ -59,6 +61,8 @@ pm.request(pm.HIB)
 
 ## pm.dtimerStart(id, timeout)
 
+
+
 启动底层定时器,在休眠模式下依然生效. 只触发一次
 
 **参数**
@@ -86,6 +90,8 @@ pm.dtimerStart(0, 300 * 1000) -- 5分钟后唤醒
 
 ## pm.dtimerStop(id)
 
+
+
 关闭底层定时器
 
 **参数**
@@ -109,6 +115,8 @@ pm.dtimerStop(0) -- 关闭id=0的底层定时器
 ---
 
 ## pm.dtimerCheck(id)
+
+
 
 检查底层定时器是不是在运行
 
@@ -136,6 +144,8 @@ pm.dtimerCheck(0) -- 检查id=0的底层定时器
 
 ## pm.lastReson()
 
+
+
 开机原因,用于判断是从休眠模块开机,还是电源/复位开机
 
 **参数**
@@ -160,6 +170,8 @@ log.info("pm", "last power reson", pm.lastReson())
 ---
 
 ## pm.force(mode)
+
+
 
 强制进入指定的休眠模式，忽略某些外设的影响，比如USB
 
@@ -186,6 +198,8 @@ pm.force(pm.HIB)
 ---
 
 ## pm.check()
+
+
 
 检查休眠状态,仅air302适用.
 
@@ -217,6 +231,8 @@ end
 
 ## pm.shutdown()
 
+
+
 关机
 
 **参数**
@@ -242,6 +258,8 @@ pm.shutdown()
 
 ## pm.reboot()
 
+
+
 重启
 
 **参数**
@@ -261,6 +279,8 @@ pm.shutdown()
 ---
 
 ## pm.power(id, onoff)
+
+
 
 开启内部的电源控制，注意不是所有的平台都支持，可能部分平台支持部分选项，看硬件
 

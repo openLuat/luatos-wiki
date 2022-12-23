@@ -34,6 +34,8 @@ log.info("simid", mobile.simid())
 
 ## mobile.imei(index)
 
+
+
 获取IMEI
 
 **参数**
@@ -55,6 +57,8 @@ log.info("simid", mobile.simid())
 ---
 
 ## mobile.imsi(index)
+
+
 
 获取IMSI
 
@@ -78,6 +82,8 @@ log.info("simid", mobile.simid())
 
 ## mobile.sn()
 
+
+
 获取SN
 
 **参数**
@@ -98,6 +104,8 @@ log.info("simid", mobile.simid())
 
 ## mobile.muid()
 
+
+
 获取MUID
 
 **参数**
@@ -117,6 +125,8 @@ log.info("simid", mobile.simid())
 ---
 
 ## mobile.iccid(id)
+
+
 
 获取或设置ICCID
 
@@ -140,6 +150,8 @@ log.info("simid", mobile.simid())
 
 ## mobile.simid(id)
 
+
+
 获取当前SIM卡槽,或者切换卡槽
 
 **参数**
@@ -162,6 +174,8 @@ log.info("simid", mobile.simid())
 
 ## mobile.rtime(time)
 
+
+
 设置RRC自动释放时间间隔
 
 **参数**
@@ -183,6 +197,8 @@ log.info("simid", mobile.simid())
 ---
 
 ## mobile.setAuto(check_sim_period, get_cell_period, search_cell_time)
+
+
 
 设置一些辅助周期性功能，目前支持SIM卡暂时脱离后恢复和周期性获取小区信息
 
@@ -208,6 +224,8 @@ log.info("simid", mobile.simid())
 
 ## mobile.apn(index, newvalue)
 
+
+
 获取或设置APN
 
 **参数**
@@ -232,6 +250,8 @@ log.info("simid", mobile.simid())
 
 ## mobile.rssi()
 
+
+
 获取rssi
 
 **参数**
@@ -251,6 +271,8 @@ log.info("simid", mobile.simid())
 ---
 
 ## mobile.rsrp()
+
+
 
 获取rsrp
 
@@ -272,6 +294,8 @@ log.info("simid", mobile.simid())
 
 ## mobile.rsrq()
 
+
+
 获取rsrq
 
 **参数**
@@ -292,6 +316,8 @@ log.info("simid", mobile.simid())
 
 ## mobile.snr()
 
+
+
 获取snr
 
 **参数**
@@ -311,6 +337,8 @@ log.info("simid", mobile.simid())
 ---
 
 ## mobile.flymode(index, enable)
+
+
 
 进出飞行模式
 
@@ -335,6 +363,8 @@ log.info("simid", mobile.simid())
 
 ## mobile.status()
 
+
+
 获取网络状态
 
 **参数**
@@ -354,6 +384,8 @@ log.info("simid", mobile.simid())
 ---
 
 ## mobile.getCellInfo()
+
+
 
 获取机制信息
 
@@ -399,6 +431,8 @@ end)
 ---
 
 ## mobile.reqCellInfo(timeout)
+
+
 
 发起基站信息查询,含临近小区
 

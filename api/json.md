@@ -12,6 +12,8 @@
 
 ## json.encode(obj,t)
 
+
+
 将对象序列化为json字符串
 
 **参数**
@@ -39,6 +41,8 @@ json.encode(obj,"12f")-->浮点数用%.12f的方式转换为字符串
 ---
 
 ## json.decode(str)
+
+
 
 将字符串反序列化为对象
 

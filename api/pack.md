@@ -12,6 +12,8 @@
 
 ## pack.unpack( string, format, init)
 
+
+
 解包字符串
 
 **参数**
@@ -39,6 +41,8 @@ local _,a = pack.unpack(x,">h") --解包成short (2字节)
 ---
 
 ## pack.pack( format, val1, val2, val3, valn )
+
+
 
 打包字符串的值
 

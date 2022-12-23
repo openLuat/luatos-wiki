@@ -22,6 +22,8 @@
 
 ## adc.open(id)
 
+
+
 打开adc通道
 
 **参数**
@@ -52,6 +54,8 @@ adc.close(4) -- 若需要持续读取, 则不需要close, 功耗会高一点.
 
 ## adc.setRange(range)
 
+
+
 设置ADC的测量范围，注意这个和具体芯片有关，目前只支持air105
 
 **参数**
@@ -78,6 +82,8 @@ adc.setRange(adc.ADC_RANGE_3_6)
 ---
 
 ## adc.read(id)
+
+
 
 读取adc通道
 
@@ -109,6 +115,8 @@ adc.close(2)
 
 ## adc.get(id)
 
+
+
 获取adc计算值
 
 **参数**
@@ -138,6 +146,8 @@ adc.close(2) -- 按需关闭
 ---
 
 ## adc.close(id)
+
+
 
 关闭adc通道
 

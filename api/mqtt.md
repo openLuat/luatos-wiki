@@ -12,6 +12,8 @@
 
 ## mqttc:subscribe(topic, qos)
 
+
+
 订阅主题
 
 **参数**
@@ -43,6 +45,8 @@ mqttc:subscribe({["/luatos/1234567"]=1,["/luatos/12345678"]=2})
 
 ## mqttc:unsubscribe(topic)
 
+
+
 取消订阅主题
 
 **参数**
@@ -67,6 +71,8 @@ mqttc:unsubscribe({"/luatos/1234567","/luatos/12345678"})
 
 ## mqttc:debug(onoff)
 
+
+
 配置是否打开debug信息
 
 **参数**
@@ -88,6 +94,8 @@ mqttc:unsubscribe({"/luatos/1234567","/luatos/12345678"})
 ---
 
 ## mqtt.create(adapter,host,port,isssl,ca_file)
+
+
 
 mqtt客户端创建
 
@@ -129,6 +137,8 @@ mqttc = mqtt.create(nil,"120.55.137.106", 8883, {
 
 ## mqttc:auth(client_id,username,password,cleanSession)
 
+
+
 mqtt三元组配置及cleanSession
 
 **参数**
@@ -164,6 +174,8 @@ mqttc:auth()
 
 ## mqttc:keepalive(time)
 
+
+
 mqtt心跳设置
 
 **参数**
@@ -188,6 +200,8 @@ mqttc:keepalive(30)
 ---
 
 ## mqttc:on(cb)
+
+
 
 注册mqtt回调
 
@@ -217,6 +231,8 @@ end)
 
 ## mqttc:connect()
 
+
+
 连接服务器
 
 **参数**
@@ -242,6 +258,8 @@ mqttc:connect()
 
 ## mqttc:autoreconn(reconnect, reconnect_time)
 
+
+
 自动重连
 
 **参数**
@@ -265,6 +283,8 @@ mqttc:autoreconn(true)
 ---
 
 ## mqttc:publish(topic, data, qos, retain)
+
+
 
 发布消息
 
@@ -294,6 +314,8 @@ mqttc:publish("/luatos/123456", "123")
 
 ## mqttc:close()
 
+
+
 mqtt客户端关闭(关闭后资源释放无法再使用)
 
 **参数**
@@ -314,6 +336,8 @@ mqttc:close()
 ---
 
 ## mqttc:ready()
+
+
 
 mqtt客户端是否就绪
 
@@ -337,6 +361,8 @@ local error = mqttc:ready()
 ---
 
 ## mqttc:will(topic, payload, qos, retain)
+
+
 
 设置遗嘱消息
 

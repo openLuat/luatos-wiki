@@ -9,6 +9,8 @@
 
 ## otp.read(zone, offset, len)
 
+
+
 读取指定OTP区域读取数据
 
 **参数**
@@ -40,6 +42,8 @@ end
 
 ## otp.write(zone, data, offset)
 
+
+
 往指定OTP区域写入数据
 
 **参数**
@@ -64,6 +68,8 @@ end
 
 ## otp.erase(zone)
 
+
+
 擦除指定OTP区域
 
 **参数**
@@ -85,6 +91,8 @@ end
 ---
 
 ## otp.lock(zone)
+
+
 
 锁定OTP区域. 特别注意!!一旦加锁即无法解锁,OTP变成只读!!!
 

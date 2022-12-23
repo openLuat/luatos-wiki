@@ -9,6 +9,8 @@
 
 ## sdio.init(id)
 
+
+
 初始化sdio
 
 **参数**
@@ -30,6 +32,8 @@
 ---
 
 ## sdio.sd_read(id, offset, len)
+
+
 
 直接读写sd卡上的数据
 
@@ -63,6 +67,8 @@ end
 
 ## sdio.sd_write(id, data, offset)
 
+
+
 直接写sd卡
 
 **参数**
@@ -95,6 +101,8 @@ end
 
 ## sdio.sd_mount(id, path, auto_format)
 
+
+
 挂载SD卡, 使用FATFS文件系统
 
 **参数**
@@ -120,6 +128,8 @@ end
 
 ## sdio.sd_umount(id, path)
 
+
+
 卸载SD卡(视硬件情况, 不一定支持)
 
 **参数**
@@ -142,6 +152,8 @@ end
 ---
 
 ## sdio.sd_format(id)
+
+
 
 格式化SD卡
 

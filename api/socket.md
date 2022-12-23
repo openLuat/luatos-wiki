@@ -29,6 +29,8 @@
 
 ## socket.localIP(adapter)
 
+
+
 获取本地ip,当前仅支持IPV4的地址
 
 **参数**
@@ -63,6 +65,8 @@ end)
 
 ## socket.create(adapter, cb)
 
+
+
 在某个适配的网卡上申请一个socket_ctrl
 
 **参数**
@@ -83,6 +87,8 @@ end)
 ---
 
 ## socket.debug(ctrl, onoff)
+
+
 
 配置是否打开debug信息
 
@@ -106,6 +112,8 @@ end)
 ---
 
 ## socket.config(ctrl, local_port, is_udp, is_tls, keep_idle, keep_interval, keep_cnt, server_cert, client_cert, client_key, client_password)
+
+
 
 配置network一些信息，
 
@@ -142,6 +150,8 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 ## socket.linkup(ctrl)
 
+
+
 等待网卡linkup
 
 **参数**
@@ -164,6 +174,8 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 ---
 
 ## socket.connect(ctrl, ip, remote_port)
+
+
 
 作为客户端连接服务器
 
@@ -190,6 +202,8 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 ## socket.discon(ctrl)
 
+
+
 作为客户端断开连接
 
 **参数**
@@ -210,6 +224,8 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 ## socket.close(ctrl)
 
+
+
 强制关闭socket
 
 **参数**
@@ -229,6 +245,8 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 ---
 
 ## socket.tx(ctrl, data, ip, port, flag)
+
+
 
 发送数据给对端，UDP单次发送不要超过1460字节，否则很容易失败
 
@@ -258,6 +276,8 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 ## socket.rx(ctrl, buff, flag)
 
+
+
 接收对端发出的数据，注意数据已经缓存在底层，使用本函数只是提取出来，UDP模式下一次只会取出一个数据包
 
 **参数**
@@ -285,6 +305,8 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 ## socket.wait(ctrl)
 
+
+
 等待新的socket消息，在连接成功和发送数据成功后，使用一次将network状态转换到接收新数据
 
 **参数**
@@ -308,6 +330,8 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 ## socket.listen(ctrl)
 
+
+
 作为服务端开始监听
 
 **参数**
@@ -330,6 +354,8 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 ---
 
 ## socket.accept(ctrl)
+
+
 
 作为服务端接收到一个新的客户端，注意，如果是类似W5500的硬件协议栈不支持1对多，则不需要第二个参数
 
@@ -355,6 +381,8 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 ## socket.release(ctrl)
 
+
+
 主动释放掉network_ctrl
 
 **参数**
@@ -372,6 +400,8 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 ---
 
 ## socket.setDNS(adapter_index, dns_index, ip)
+
+
 
 设置DNS服务器
 
@@ -396,6 +426,8 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 ---
 
 ## socket.sslLog(log_level)
+
+
 
 设置SSL的log
 

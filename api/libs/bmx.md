@@ -40,6 +40,8 @@ end)
 
 ## bmx.get_data()
 
+
+
 获取bmx数据
 
 **参数**

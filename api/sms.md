@@ -19,6 +19,8 @@
 
 ## sms.send(phone, msg)
 
+
+
 发送短信
 
 **参数**
@@ -41,6 +43,8 @@
 ---
 
 ## sms.setNewSmsCb(func)
+
+
 
 设置新SMS的回调函数
 

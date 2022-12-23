@@ -20,6 +20,8 @@
 
 ## audio.start(id, audio_format, num_channels, sample_rate, bits_per_sample, is_signed)
 
+
+
 启动一个多媒体通道准备播放音频
 
 **参数**
@@ -50,6 +52,8 @@ audio.start(0, audio.PCM, 1, 16000, 16)
 
 ## audio.write(id, data)
 
+
+
 往一个多媒体通道写入音频数据
 
 **参数**
@@ -75,6 +79,8 @@ audio.write(0, "xxxxxx")
 
 ## audio.stop(id)
 
+
+
 停止指定的多媒体通道
 
 **参数**
@@ -99,6 +105,8 @@ audio.stop(0)
 ---
 
 ## audio.pause(id, pause)
+
+
 
 暂停/恢复指定的多媒体通道
 
@@ -126,6 +134,8 @@ audio.pause(0, false) --恢复通道0
 ---
 
 ## audio.on(id, event, func)
+
+
 
 注册audio播放事件回调
 
@@ -155,6 +165,8 @@ end)
 
 ## audio.play(id, path, errStop)
 
+
+
 播放或者停止播放一个文件，播放完成后，会回调一个audio.DONE消息，可以用pause来暂停或者恢复，其他API不可用。考虑到读SD卡速度比较慢而拖累luavm进程的速度，所以尽量使用本API
 
 **参数**
@@ -183,6 +195,8 @@ audio.play(0)				--停止播放某个文件
 
 ## audio.tts(id, data)
 
+
+
 TTS播放或者停止
 
 **参数**
@@ -210,6 +224,8 @@ audio.tts(0)				--停止播放
 
 ## audio.playStop(id)
 
+
+
 停止播放文件，和audio.play(id)是一样的作用
 
 **参数**
@@ -234,6 +250,8 @@ audio.playStop(0)
 ---
 
 ## audio.isEnd(id, path)
+
+
 
 检查当前文件是否已经播放结束
 
@@ -261,6 +279,8 @@ audio.isEnd(0)
 
 ## audio.getError(id)
 
+
+
 获取最近一次播放结果，不是所有平台都支持的，目前只有EC618支持
 
 **参数**
@@ -280,6 +300,8 @@ audio.isEnd(0)
 ---
 
 ## audio.config(id, paPin, onLevel, dacDelay, paDelay, dacPin, dacLevel)
+
+
 
 配置一个音频通道的特性，比如实现自动控制PA开关。注意这个不是必须的，一般在调用play的时候才需要自动控制，其他情况比如你手动控制播放时，就可以自己控制PA开关
 
@@ -312,6 +334,8 @@ audio.config(0, 25, 1, 6, 200)	--PA控制脚是GPIO25，高电平打开，Air780
 
 ## audio.vol(id, value)
 
+
+
 配置一个音频通道的音量调节，直接将原始数据放大或者缩小，不是所有平台都支持，建议尽量用硬件方法去缩放
 
 **参数**
@@ -337,6 +361,8 @@ local result = audio.vol(0, 90)	--通道0的音量调节到90%，result存放了
 ---
 
 ## codec.create(codec.MP3)
+
+
 
 创建编解码用的codec
 
@@ -365,6 +391,8 @@ local decoder = codec.create(codec.MP3)--创建一个mp3的decoder
 
 ## codec.info(decoder, file_path)
 
+
+
 decoder从文件中解析出音频信息
 
 **参数**
@@ -386,6 +414,8 @@ decoder从文件中解析出音频信息
 
 ## codec.data(decoder, out_buff)
 
+
+
 decoder从文件数据中解析出音频数据
 
 **参数**
@@ -406,6 +436,8 @@ decoder从文件数据中解析出音频数据
 ---
 
 ## codec.release(coder)
+
+
 
 释放编解码用的coder
 

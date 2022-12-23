@@ -22,6 +22,8 @@
 
 ## ctiot.init()
 
+
+
 初始化ctiot，在复位开机后使用一次
 
 **参数**
@@ -41,6 +43,8 @@
 ---
 
 ## ctiot.param(ip, port, lifetime)
+
+
 
 设置和读取ctiot相关参数，有参数输入则设置，无论是否有参数输入，均输出当前参数
 
@@ -68,6 +72,8 @@
 
 ## ctiot.ep(val)
 
+
+
 设置和读取自定义EP
 
 **参数**
@@ -90,6 +96,8 @@
 
 ## ctiot.connect()
 
+
+
 连接CTIOT，必须在设置完参数和模式后再使用
 
 **参数**
@@ -110,6 +118,8 @@
 
 ## ctiot.disconnect()
 
+
+
 断开ctiot
 
 **参数**
@@ -129,6 +139,8 @@
 ---
 
 ## ctiot.write(data, mode, seq)
+
+
 
 发送数据给ctiot
 
@@ -154,6 +166,8 @@
 ---
 
 ## ctiot.ready()
+
+
 
 是否已经就绪
 

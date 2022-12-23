@@ -30,6 +30,8 @@
 
 ## uart.setup(id, baud_rate, data_bits, stop_bits, partiy, bit_order, buff_size, rs485_gpio, rs485_level, rs485_delay)
 
+
+
 配置串口参数
 
 **参数**
@@ -69,6 +71,8 @@ uart.setup(1, 115200, 8, 1, uart.NONE, uart.LSB, 1024, 10, 0, 100)
 
 ## uart.write(id, data)
 
+
+
 写串口
 
 **参数**
@@ -99,6 +103,8 @@ uart.write(1, string.char(0x55,0xAA,0x4B,0x03,0x86))
 
 ## uart.read(id, len)
 
+
+
 读串口
 
 **参数**
@@ -126,6 +132,8 @@ uart.read(1, 16)
 
 ## uart.close(id)
 
+
+
 关闭串口
 
 **参数**
@@ -150,6 +158,8 @@ uart.close(1)
 ---
 
 ## uart.on(id, event, func)
+
+
 
 注册串口事件回调
 
@@ -181,6 +191,8 @@ end)
 
 ## uart.wait485(id)
 
+
+
 等待485模式下TX完成，mcu不支持串口发送移位寄存器空或者类似中断时才需要，在sent事件回调后使用
 
 **参数**
@@ -203,6 +215,8 @@ end)
 
 ## uart.exist(id)
 
+
+
 检查串口号是否存在
 
 **参数**
@@ -224,6 +238,8 @@ end)
 ---
 
 ## uart.rx(id, buff)
+
+
 
 buff形式读串口，一次读出全部数据存入buff中，如果buff空间不够会自动扩展，目前只有air105支持这个操作
 
@@ -251,6 +267,8 @@ uart.rx(1, buff)
 
 ## uart.rx_size(id)
 
+
+
 读串口Rx缓存中剩余数据量，目前只有air105支持这个操作
 
 **参数**
@@ -275,6 +293,8 @@ local size = uart.rx_size(1)
 ---
 
 ## uart.tx(id, buff, start, len)
+
+
 
 buff形式写串口,等同于c语言uart_tx(uart_id, &buff[start], len);
 
@@ -303,6 +323,8 @@ uart.tx(1, buf)
 ---
 
 ## uart.list(max)
+
+
 
 获取可用串口号列表，当前仅限win32
 
