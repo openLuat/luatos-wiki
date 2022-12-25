@@ -2,7 +2,7 @@
 
 ## 下载
 
-- 独立版exe：[IOT Power.exe](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221021103631246_IOT%20Power.exe)（[如果浏览器拦截，请按此方法解决](https://cn.bing.com/search?q=edge%E6%B5%8F%E8%A7%88%E5%99%A8%E9%98%BB%E6%AD%A2%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD)）
+- 独立版exe：[IOT Power.exe](https://qq.papapoi.com/iotpower/latest.html)（[如果浏览器拦截，请按此方法解决](https://cn.bing.com/search?q=edge%E6%B5%8F%E8%A7%88%E5%99%A8%E9%98%BB%E6%AD%A2%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD)）
 - 微软商店版：[微软商店页面](https://www.microsoft.com/store/apps/9N8S8M8226SH) （交了保护费不会报毒或拦截，但更新慢一拍。）
 - **全平台**命令行数据记录器、win/linux动态库请前往[gitee仓库](https://gitee.com/openLuat/iot-power)查看
 
