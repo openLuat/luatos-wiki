@@ -1,6 +1,6 @@
 # iotauth - IoT鉴权库, 用于生成各种云平台的参数
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`Air780`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/iotauth/luat_lib_iotauth.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
