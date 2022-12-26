@@ -1,6 +1,6 @@
 # rsa - RSA加密解密
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/rsa/binding/luat_lib_rsa.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
