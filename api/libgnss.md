@@ -1,6 +1,6 @@
 # libgnss - NMEA数据处理
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/minmea/luat_lib_libgnss.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -117,7 +117,7 @@ log.info("nmea", "loc", libgnss.getIntLocation())
 
 ---
 
-## libgnss.getRmc()
+## libgnss.getRmc(use_float)
 
 
 
@@ -125,7 +125,9 @@ log.info("nmea", "loc", libgnss.getIntLocation())
 
 **参数**
 
-无
+|传入值类型|解释|
+|-|-|
+|bool|输出浮点数据,默认true, 如需输出整型,请填false|
 
 **返回值**
 
@@ -171,7 +173,7 @@ log.info("nmea", "gsv", json.encode(libgnss.getGsv()))
 
 ---
 
-## libgnss.getGsa()
+## libgnss.getGsa(use_float)
 
 
 
@@ -179,7 +181,9 @@ log.info("nmea", "gsv", json.encode(libgnss.getGsv()))
 
 **参数**
 
-无
+|传入值类型|解释|
+|-|-|
+|bool|输出浮点数据,默认true, 如需输出整型,请填false|
 
 **返回值**
 
@@ -198,7 +202,7 @@ log.info("nmea", "gsa", json.encode(libgnss.getGsa()))
 
 ---
 
-## libgnss.getVtg()
+## libgnss.getVtg(use_float)
 
 
 
@@ -206,7 +210,9 @@ log.info("nmea", "gsa", json.encode(libgnss.getGsa()))
 
 **参数**
 
-无
+|传入值类型|解释|
+|-|-|
+|bool|输出浮点数据,默认true, 如需输出整型,请填false|
 
 **返回值**
 
@@ -280,7 +286,7 @@ libgnss.debug(false)
 
 ---
 
-## libgnss.getGga()
+## libgnss.getGga(use_float)
 
 
 
@@ -288,7 +294,9 @@ libgnss.debug(false)
 
 **参数**
 
-无
+|传入值类型|解释|
+|-|-|
+|bool|输出浮点数据,默认true, 如需输出整型,请填false|
 
 **返回值**
 
@@ -302,7 +310,7 @@ libgnss.debug(false)
 
 ---
 
-## libgnss.getGll()
+## libgnss.getGll(use_float)
 
 
 
@@ -310,7 +318,9 @@ libgnss.debug(false)
 
 **参数**
 
-无
+|传入值类型|解释|
+|-|-|
+|bool|输出浮点数据,默认true, 如需输出整型,请填false|
 
 **返回值**
 
