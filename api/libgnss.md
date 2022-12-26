@@ -10,6 +10,30 @@
 本库有专属demo，[点此链接查看libgnss的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/libgnss)
 ```
 
+**示例**
+
+```lua
+-- 方案1, 经lua层进行数据中转
+uart.setup(2, 115200)
+uart.on(2, "recv", function(id, len)
+    while 1 do
+        local data = uart.read(id, 1024)
+        if data and #data > 1 then
+            libgnss.parse(data)
+        else
+            break
+        end
+    end
+end)
+-- 方案2, 适合2022.12.26之后编译固件,效率更高一些
+uart.setup(2, 115200)
+libgnss.bind(2)
+
+-- 可选调试模式
+-- libgnss.debug(true)
+
+```
+
 ## libgnss.parse(str)
 
 
@@ -228,6 +252,78 @@ log.info("nmea", "zda", json.encode(libgnss.getZda()))
 
 ---
 
+## libgnss.debug(mode)
+
+
+
+设置调试模式
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|bool|true开启调试,false关闭调试,默认为false|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 开启调试
+libgnss.debug(true)
+-- 关闭调试
+libgnss.debug(false)
+
+```
+
+---
+
+## libgnss.getGga()
+
+
+
+获取GGA数据
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|table|GGA数据, 若如不存在会返回nil|
+
+**例子**
+
+无
+
+---
+
+## libgnss.getGll()
+
+
+
+获取GLL数据
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|table|GLL数据, 若如不存在会返回nil|
+
+**例子**
+
+无
+
+---
+
 ## libgnss.clear()
 
 
@@ -247,6 +343,37 @@ log.info("nmea", "zda", json.encode(libgnss.getZda()))
 **例子**
 
 无
+
+---
+
+## libgnss.bind(id)
+
+
+
+绑定uart端口进行GNSS数据读取
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|uart端口号|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 配置串口信息, 通常为 115200 8N1
+uart.setup(2, 115200)
+-- 绑定uart, 马上开始解析GNSS数据
+libgnss.bind(2)
+-- 无需再调用uart.on然后调用libgnss.parse
+-- 开发期可打开调试日志
+libgnss.debug(true)
+
+```
 
 ---
 
