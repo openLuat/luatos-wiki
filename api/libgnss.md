@@ -1,6 +1,6 @@
 # libgnss - NMEA数据处理
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`Air780`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/minmea/luat_lib_libgnss.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -53,7 +53,7 @@ libgnss.bind(2)
 **例子**
 
 ```lua
--- 解析nmea
+-- 解析nmea数据
 libgnss.parse(indata)
 log.info("nmea", json.encode(libgnss.getRmc()))
 
