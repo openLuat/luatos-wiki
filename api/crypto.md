@@ -684,3 +684,33 @@ log.info("hmac_sha256", crypto.md("SHA256", "1234567890", "123456"))
 
 ---
 
+## crypto.checksum(data)
+
+
+
+计算checksum校验和
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|待计算的数据,必选|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|checksum值,校验和|
+
+**例子**
+
+```lua
+-- 本函数在 2022.12.28 添加
+-- 单纯计算checksum值
+local ck = crypto.checksum("OK")
+log.info("checksum", "ok", string.format("%02X", ck))
+
+```
+
+---
+
