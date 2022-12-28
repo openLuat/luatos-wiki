@@ -110,8 +110,8 @@ log.info("nmea", "isFix", libgnss.isFix())
 
 |返回值类型|解释|
 |-|-|
-|int|lat数据, 格式为 ddmmmmmmm|
-|int|lng数据, 格式为 ddmmmmmmm|
+|int|lat数据, 格式为 ddddddddd|
+|int|lng数据, 格式为 ddddddddd|
 |int|speed数据|
 
 **例子**
@@ -125,7 +125,7 @@ log.info("nmea", "loc", libgnss.getIntLocation())
 
 ---
 
-## libgnss.getRmc(use_float)
+## libgnss.getRmc(data_mode)
 
 
 
@@ -135,7 +135,7 @@ log.info("nmea", "loc", libgnss.getIntLocation())
 
 |传入值类型|解释|
 |-|-|
-|bool|输出浮点数据,默认true, 如需输出整型,请填false|
+|int|坐标类数据的格式, 0-DDMM.MMM格式, 1-DDDDDDD格式, 2-DD.DDDDD格式|
 
 **返回值**
 
@@ -181,7 +181,7 @@ log.info("nmea", "gsv", json.encode(libgnss.getGsv()))
 
 ---
 
-## libgnss.getGsa(use_float)
+## libgnss.getGsa(data_mode)
 
 
 
@@ -191,7 +191,7 @@ log.info("nmea", "gsv", json.encode(libgnss.getGsv()))
 
 |传入值类型|解释|
 |-|-|
-|bool|输出浮点数据,默认true, 如需输出整型,请填false|
+|int|坐标类数据的格式, 0-DDMM.MMM格式, 1-DDDDDDD格式, 2-DD.DDDDD格式|
 
 **返回值**
 
@@ -210,7 +210,7 @@ log.info("nmea", "gsa", json.encode(libgnss.getGsa()))
 
 ---
 
-## libgnss.getVtg(use_float)
+## libgnss.getVtg(data_mode)
 
 
 
@@ -220,7 +220,7 @@ log.info("nmea", "gsa", json.encode(libgnss.getGsa()))
 
 |传入值类型|解释|
 |-|-|
-|bool|输出浮点数据,默认true, 如需输出整型,请填false|
+|int|坐标类数据的格式, 0-DDMM.MMM格式, 1-DDDDDDD格式, 2-DD.DDDDD格式|
 
 **返回值**
 
@@ -294,7 +294,7 @@ libgnss.debug(false)
 
 ---
 
-## libgnss.getGga(use_float)
+## libgnss.getGga(data_mode)
 
 
 
@@ -304,7 +304,7 @@ libgnss.debug(false)
 
 |传入值类型|解释|
 |-|-|
-|bool|输出浮点数据,默认true, 如需输出整型,请填false|
+|int|坐标类数据的格式, 0-DDMM.MMM格式, 1-DDDDDDD格式, 2-DD.DDDDD格式|
 
 **返回值**
 
@@ -318,7 +318,7 @@ libgnss.debug(false)
 
 ---
 
-## libgnss.getGll(use_float)
+## libgnss.getGll(data_mode)
 
 
 
@@ -328,7 +328,7 @@ libgnss.debug(false)
 
 |传入值类型|解释|
 |-|-|
-|bool|输出浮点数据,默认true, 如需输出整型,请填false|
+|int|坐标类数据的格式, 0-DDMM.MMM格式, 1-DDDDDDD格式, 2-DD.DDDDD格式|
 
 **返回值**
 
