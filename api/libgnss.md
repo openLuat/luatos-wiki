@@ -32,6 +32,14 @@ libgnss.bind(2)
 -- 可选调试模式
 -- libgnss.debug(true)
 
+sys.subscribe("GNSS_STATE", function(event, ticks)
+    -- event取值有 
+    -- FIXED 定位成功
+    -- LOSE  定位丢失
+    -- ticks是事件发生的时间,一般可以忽略
+    log.info("gnss", "state", event, ticks)
+end)
+
 ```
 
 ## libgnss.parse(str)

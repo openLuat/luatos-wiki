@@ -265,6 +265,37 @@ end)
 
 ---
 
+## libgnss
+
+
+
+[libgnss接口文档页](https://wiki.luatos.com/api/libgnss.html)
+
+
+
+### GNSS_STATE
+
+GNSS状态变化
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.subscribe("GNSS_STATE", function(event, ticks)
+    -- event取值有 
+    -- FIXED 定位成功
+    -- LOSE  定位丢失
+    -- ticks是事件发生的时间,一般可以忽略
+    log.info("gnss", "state", event, ticks)
+end)
+
+```
+
+---
+
 ## mobile
 
 
