@@ -19,6 +19,7 @@
    fonts
    fota
    fs
+   fskv
    gpio
    gtfont
    hmeta
