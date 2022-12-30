@@ -2,10 +2,6 @@
 
 {bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
 
-```{note}
-本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/network/adapter/luat_lib_socket.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
-```
-
 ```{tip}
 本库有专属demo，[点此链接查看socket的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/socket)
 ```
@@ -26,6 +22,35 @@
 |socket.TX_OK|number|TX_OK事件|
 |socket.CLOSED|number|CLOSED事件|
 
+
+## socket.sntp(sntp_server)
+
+
+
+sntp时间同步
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string/table|sntp服务器地址 选填|
+|tag|LUAT_USE_SNTP|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+socket.sntp()
+sys.subscribe("NTP_UPDATE", function()
+    log.info("sntp", "time", os.date())
+end)
+
+```
+
+---
 
 ## socket.localIP(adapter)
 

@@ -418,6 +418,52 @@ end)
 
 ---
 
+## socket
+
+
+
+[socket接口文档页](https://wiki.luatos.com/api/socket.html)
+
+
+
+### NTP_UPDATE
+
+时间已经同步
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.subscribe("NTP_UPDATE", function()
+    log.info("socket", "sntp", os.date())
+end)
+
+```
+
+---
+
+### NTP_ERROR
+
+时间同步失败
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.subscribe("NTP_ERROR", function()
+    log.info("socket", "sntp error")
+end)
+
+```
+
+---
+
 ## lora
 
 
