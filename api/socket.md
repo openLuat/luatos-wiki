@@ -25,7 +25,7 @@
 
 ## socket.sntp(sntp_server)
 
-
+{bdg-success}`本接口仅支持` {bdg-primary}`Air105` {bdg-primary}`Air780`
 
 sntp时间同步
 
@@ -34,7 +34,6 @@ sntp时间同步
 |传入值类型|解释|
 |-|-|
 |string/table|sntp服务器地址 选填|
-|tag|LUAT_USE_SNTP|
 
 **返回值**
 
@@ -44,6 +43,8 @@ sntp时间同步
 
 ```lua
 socket.sntp()
+--socket.sntp("ntp.aliyun.com") --自定义sntp服务器地址
+--socket.sntp({"ntp.aliyun.com","ntp1.aliyun.com","ntp2.aliyun.com"}) --sntp服务器地址
 sys.subscribe("NTP_UPDATE", function()
     log.info("sntp", "time", os.date())
 end)
