@@ -6,7 +6,9 @@
 .. toctree::
 
    adc
+   audio
    camera
+   codec
    coremark
    crypto
    ctiot
@@ -46,7 +48,6 @@
    mlx90640
    mobile
    mqtt
-   multimedia
    nbiot
    nimble
    otp
