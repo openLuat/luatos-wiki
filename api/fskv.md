@@ -30,7 +30,7 @@ fskv与fdb的实现机制导致的差异
 
 ```
 
-## fskv.kvdb_init(name, partition)
+## fskv.init()
 
 
 
@@ -52,8 +52,7 @@ fskv与fdb的实现机制导致的差异
 **例子**
 
 ```lua
--- fdb库基于 flashdb , 再次表示感谢.
-if fskv.kvdb_init("env", "onchip_fdb") then
+if fskv.init() then
     log.info("fdb", "kv数据库初始化成功")
 end
 
