@@ -16,7 +16,7 @@ IOT Power CC是广大用户随身携带的理想测试工具。
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
 
-:::{grid-item-card} {octicon}`meter;1.5em;sd-mr-1` 设备连接
+:::{grid-item-card} {octicon}`repo-forked;1.5em;sd-mr-1` 设备连接
 :link: parts
 :link-type: doc
 :img-top: img/font_small.png
@@ -27,7 +27,7 @@ IOT Power CC是广大用户随身携带的理想测试工具。
 [了解更多 »](parts)
 :::
 
-:::{grid-item-card} {octicon}`law;1.5em;sd-mr-1` 操作说明
+:::{grid-item-card} {octicon}`stopwatch;1.5em;sd-mr-1` 操作说明
 :link: usage
 :link-type: doc
 :img-top: img/usage_small.png
@@ -38,7 +38,7 @@ IOT Power CC是广大用户随身携带的理想测试工具。
 [了解更多 »](usage)
 :::
 
-:::{grid-item-card} {octicon}`graph;1.5em;sd-mr-1` 技术指标
+:::{grid-item-card} {octicon}`law;1.5em;sd-mr-1` 技术指标
 :link: tech
 :link-type: doc
 :img-top: img/comp.png

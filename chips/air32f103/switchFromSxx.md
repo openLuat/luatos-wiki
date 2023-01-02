@@ -979,6 +979,8 @@ AIR32F103 支持的仿真器包括 ST-LINKV2、JLINK、ARM Emulator 等
 
 更换项目芯片类型，从SXX32改为AIR32的PACK包即可
 
+或者将调试器更换为ST-LINKV2
+
 ### 下载器
 
 目前暂不支持的烧录器为：SmartPRO T9000-PLUS、XELTEK SUPERPRO 6100N

@@ -16,7 +16,7 @@ Iot Power 经典版：USB供电，作为电源使用，输出最大5V/2A，采�
 [了解更多 »](power/index)
 :::
 
-:::{grid-item-card} {octicon}`law;1.5em;sd-mr-1` CC版本
+:::{grid-item-card} {octicon}`iterations;1.5em;sd-mr-1` CC版本
 :link: cc/index
 :link-type: doc
 :img-top: cc/img/font_small.png
