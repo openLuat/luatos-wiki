@@ -364,7 +364,7 @@ libgnss.debug(false)
 
 ---
 
-## libgnss.bind(id)
+## libgnss.bind(id, next_id)
 
 
 
@@ -375,6 +375,7 @@ libgnss.debug(false)
 |传入值类型|解释|
 |-|-|
 |int|uart端口号|
+|int|转发到端口号, 例如虚拟UART. |
 
 **返回值**
 
@@ -390,6 +391,10 @@ libgnss.bind(2)
 -- 无需再调用uart.on然后调用libgnss.parse
 -- 开发期可打开调试日志
 libgnss.debug(true)
+
+-- 2023-01-02之后编译的固件有效
+-- 从uart2读取并解析, 同时转发到虚拟串口0
+libgnss.bind(2, uart.VUART_0)
 
 ```
 
