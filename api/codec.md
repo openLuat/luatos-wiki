@@ -1,4 +1,4 @@
-# codec - 多媒体
+# codec - 多媒体-编解码
 
 {bdg-success}`已适配` {bdg-primary}`Air105` {bdg-primary}`Air780`
 
