@@ -11,7 +11,6 @@
    codec
    coremark
    crypto
-   ctiot
    dac
    disp
    eink
