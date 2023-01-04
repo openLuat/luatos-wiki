@@ -150,6 +150,98 @@ local lvgl.draw_mask_fade_param_t_free(fade)
 
 ---
 
+## lvgl.font_get(name)
+
+
+
+获取内置字体
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|字体名称+字号, 例如 opposans_m_10 simsun_48|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|userdata|字体指针|
+
+**例子**
+
+```lua
+
+local font = lvgl.font_get("simsun_48")
+
+```
+
+---
+
+## lvgl.font_load(path/spi_device)
+
+
+
+从文件系统加载字体
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string/userdata|字体路径/spi_device (spi_device为使用外置高通矢量字库芯片)|
+|number|size 可选(使用高通矢量字库)|
+|number|bpp 可选(使用高通矢量字库)|
+|number|thickness 可选(使用高通矢量字库)|
+|number|cache_size 可选(使用高通矢量字库)|
+|number|sty_zh 可选(使用高通矢量字库)|
+|number|sty_en 可选(使用高通矢量字库)|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|userdata|字体指针|
+
+**例子**
+
+```lua
+local font = lvgl.font_load("/font_simsun_32.bin")
+--local font = lvgl.font_load(spi_device,16)(高通矢量字库)
+
+```
+
+---
+
+## lvgl.font_free(font)
+
+
+
+释放字体,慎用!!!仅通过font_load加载的字体允许卸载,通过font_get获取的字体不允许卸载
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|字体路径|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|userdata|字体指针|
+
+**例子**
+
+```lua
+local font = lvgl.font_load("/font_simsun_32.bin")
+-- N N N N 操作
+-- 确定字体不被使用,不被引用,且内存紧张需要释放
+lvgl.font_free(font)
+
+```
+
+---
+
 ## lvgl.obj_set_event_cb(obj, func)
 
 
@@ -297,6 +389,393 @@ local lvgl.draw_mask_fade_param_t_free(fade)
 |-|-|
 |bool|成功返回true, 对象已被删除的话返回false或者nil|
 |int|底层返回值,如果obj为nil就返回nil|
+
+**例子**
+
+无
+
+---
+
+## lvgl.scr_act()
+
+
+
+获取当前活跃的screen对象
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|指针|screen指针|
+
+**例子**
+
+```lua
+local scr = lvgl.scr_act()
+
+
+```
+
+---
+
+## lvgl.layer_top()
+
+
+
+获取layer_top
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|指针|layer指针|
+
+**例子**
+
+无
+
+---
+
+## lvgl.layer_sys()
+
+
+
+获取layer_sys
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|指针|layer指针|
+
+**例子**
+
+无
+
+---
+
+## lvgl.scr_load(scr)
+
+
+
+载入指定的screen
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|screen指针|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+    local scr = lvgl.obj_create(nil, nil)
+    local btn = lvgl.btn_create(scr)
+    lvgl.obj_align(btn, lvgl.scr_act(), lvgl.ALIGN_CENTER, 0, 0)
+    local label = lvgl.label_create(btn)
+    lvgl.label_set_text(label, "LuatOS!")
+    lvgl.scr_load(scr)
+
+```
+
+---
+
+## lvgl.theme_set_act(name)
+
+
+
+设置主题
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|主题名称,可选值有 default/mono/empty/material_light/material_dark/material_no_transition/material_no_focus|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true,否则返回nil|
+
+**例子**
+
+```lua
+-- 黑白主题
+lvgl.theme_set_act("mono")
+-- 空白主题
+lvgl.theme_set_act("empty")
+
+```
+
+---
+
+## lvgl.sleep(enable)
+
+
+
+LVGL休眠控制，暂停/恢复刷新定时器，目前只有105和EC618可以用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|boolean|true暂停 false恢复|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+lvgl.sleep(true)		--暂停刷新，系统可以休眠
+lvgl.sleep(false)		--恢复刷新，系统不休眠
+
+```
+
+---
+
+## lvgl.init(w, h, lcd, buff_size, buff_mode)
+
+
+
+初始化LVGL
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|屏幕宽,可选,默认从lcd取|
+|int|屏幕高,可选,默认从lcd取|
+|userdata|lcd指针,可选,lcd初始化后有默认值,预留的多屏入口|
+|int|缓冲区大小,默认宽*10, 不含色深.|
+|int|缓冲模式,默认0, 单buff模式, 可选1,双buff模式|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true,否则返回false|
+
+**例子**
+
+无
+
+---
+
+## lvgl.anim_create()
+
+
+
+创建并初始化一个anim
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|userdata|anim指针|
+
+**例子**
+
+```lua
+local anim = lvgl.anim_create()
+
+```
+
+---
+
+## lvgl.anim_free(anim)
+
+
+
+释放一个anim
+
+**参数**
+
+无
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+local lvgl.anim_free(anim)
+
+```
+
+---
+
+## lvgl.anim_path_t()
+
+
+
+创建一个lv_anim_path_t
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|userdata|lv_anim_path_t指针|
+
+**例子**
+
+```lua
+local anim_path_t = lvgl.anim_path_t()
+
+```
+
+---
+
+## lvgl.anim_path_t_free(anim_path_t)
+
+
+
+释放一个lv_anim_path_t
+
+**参数**
+
+无
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+local lvgl.anim_path_t_free(anim_path_t)
+
+```
+
+---
+
+## lvgl.anim_set_path_str(anim, tp)
+
+
+
+设置动画路径方式
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|动画指针|
+|string|类型, 支持 linear/ease_in/ease_out/ease_in_out/overshoot/bounce/step|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+无
+
+---
+
+## lvgl.qrcode_create(parent, size, dark_color, light_color)
+
+
+
+创建qrcode组件
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|父组件|
+|int|长度,因为qrcode是正方形|
+|int|二维码中数据点的颜色, RGB颜色, 默认 0x3333ff|
+|int|二维码中背景点的颜色, RGB颜色, 默认 0xeeeeff|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|userdata|qrcode组件|
+
+**例子**
+
+```lua
+-- 创建并显示qrcode
+local qrcode = lvgl.qrcode_create(scr, 100)
+lvgl.qrcode_update(qrcode, "https://luatos.com")
+lvgl.obj_align(qrcode, lvgl.scr_act(), lvgl.ALIGN_CENTER, -100, -100)
+
+```
+
+---
+
+## lvgl.qrcode_update(qrcode, cnt)
+
+
+
+设置qrcode组件的二维码内容,配合qrcode_create使用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|qrcode组件,由qrcode_create创建|
+|string|二维码的内容数据|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|更新成功返回true,否则返回false. 通常只有数据太长无法容纳才会返回false|
+
+**例子**
+
+无
+
+---
+
+## lvgl.qrcode_delete(qrcode)
+
+
+
+删除qrcode组件
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|qrcode组件,由qrcode_create创建|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -461,333 +940,6 @@ local style_list = lvgl.style_list_create()
 
 ---
 
-## lvgl.indev_drv_register(tp, dtp)
-
-
-
-注册输入设备驱动
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|string|设备类型，当前支持"pointer",指针类/触摸类均可，"keyboard",键盘类型|
-|string|设备型号，当前支持"emulator",模拟器类型|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|bool|成功返回true,否则返回false|
-
-**例子**
-
-```lua
-lvgl.indev_drv_register("pointer", "emulator")
-
-```
-
----
-
-## lvgl.indev_point_emulator_update(x, y, state)
-
-
-
-更新模拟输入设备的坐标数据
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|x坐标,以左上角为0,右下角为最大值|
-|int|y坐标,以左上角为0,右下角为最大值|
-|int|状态, 0 为 释放, 1 为按下|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|nil|无返回值|
-
-**例子**
-
-```lua
--- 模拟在屏幕上的点击,通过timeout模拟长按和短按
-sys.taskInit(function(x, y, timeout)
-    lvgl.indev_point_emulator_update(x, y, 1)
-    sys.wait(timeout)
-    lvgl.indev_point_emulator_update(x, y, 0)
-end, 240, 120, 50)
-
-```
-
----
-
-## lvgl.indev_kb_update(key)
-
-
-
-更新键盘输入设备的按键值
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|按键值，默认为0，按键抬起|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|nil|无返回值|
-
-**例子**
-
-无
-
----
-
-## lvgl.font_get(name)
-
-
-
-获取内置字体
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|string|字体名称+字号, 例如 opposans_m_10 simsun_48|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|userdata|字体指针|
-
-**例子**
-
-```lua
-
-local font = lvgl.font_get("simsun_48")
-
-```
-
----
-
-## lvgl.font_load(path/spi_device)
-
-
-
-从文件系统加载字体
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|string/userdata|字体路径/spi_device (spi_device为使用外置高通矢量字库芯片)|
-|number|size 可选(使用高通矢量字库)|
-|number|bpp 可选(使用高通矢量字库)|
-|number|thickness 可选(使用高通矢量字库)|
-|number|cache_size 可选(使用高通矢量字库)|
-|number|sty_zh 可选(使用高通矢量字库)|
-|number|sty_en 可选(使用高通矢量字库)|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|userdata|字体指针|
-
-**例子**
-
-```lua
-local font = lvgl.font_load("/font_simsun_32.bin")
---local font = lvgl.font_load(spi_device,16)(高通矢量字库)
-
-```
-
----
-
-## lvgl.font_free(font)
-
-
-
-释放字体,慎用!!!仅通过font_load加载的字体允许卸载,通过font_get获取的字体不允许卸载
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|string|字体路径|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|userdata|字体指针|
-
-**例子**
-
-```lua
-local font = lvgl.font_load("/font_simsun_32.bin")
--- N N N N 操作
--- 确定字体不被使用,不被引用,且内存紧张需要释放
-lvgl.font_free(font)
-
-```
-
----
-
-## lvgl.anim_create()
-
-
-
-创建并初始化一个anim
-
-**参数**
-
-无
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|userdata|anim指针|
-
-**例子**
-
-```lua
-local anim = lvgl.anim_create()
-
-```
-
----
-
-## lvgl.anim_free(anim)
-
-
-
-释放一个anim
-
-**参数**
-
-无
-
-**返回值**
-
-无
-
-**例子**
-
-```lua
-local lvgl.anim_free(anim)
-
-```
-
----
-
-## lvgl.anim_path_t()
-
-
-
-创建一个lv_anim_path_t
-
-**参数**
-
-无
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|userdata|lv_anim_path_t指针|
-
-**例子**
-
-```lua
-local anim_path_t = lvgl.anim_path_t()
-
-```
-
----
-
-## lvgl.anim_path_t_free(anim_path_t)
-
-
-
-释放一个lv_anim_path_t
-
-**参数**
-
-无
-
-**返回值**
-
-无
-
-**例子**
-
-```lua
-local lvgl.anim_path_t_free(anim_path_t)
-
-```
-
----
-
-## lvgl.anim_set_path_str(anim, tp)
-
-
-
-设置动画路径方式
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|userdata|动画指针|
-|string|类型, 支持 linear/ease_in/ease_out/ease_in_out/overshoot/bounce/step|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|nil|无返回值|
-
-**例子**
-
-无
-
----
-
-## lvgl.init(w, h, lcd, buff_size, buff_mode)
-
-
-
-初始化LVGL
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|屏幕宽,可选,默认从lcd取|
-|int|屏幕高,可选,默认从lcd取|
-|userdata|lcd指针,可选,lcd初始化后有默认值,预留的多屏入口|
-|int|缓冲区大小,默认宽*10, 不含色深.|
-|int|缓冲模式,默认0, 单buff模式, 可选1,双buff模式|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|bool|成功返回true,否则返回false|
-
-**例子**
-
-无
-
----
-
 ## lvgl.demo_benchmark()
 
 
@@ -944,75 +1096,79 @@ lvgl.demo_widgets()
 
 ---
 
-## lvgl.qrcode_create(parent, size, dark_color, light_color)
+## lvgl.indev_drv_register(tp, dtp)
 
 
 
-创建qrcode组件
+注册输入设备驱动
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|userdata|父组件|
-|int|长度,因为qrcode是正方形|
-|int|二维码中数据点的颜色, RGB颜色, 默认 0x3333ff|
-|int|二维码中背景点的颜色, RGB颜色, 默认 0xeeeeff|
+|string|设备类型，当前支持"pointer",指针类/触摸类均可，"keyboard",键盘类型|
+|string|设备型号，当前支持"emulator",模拟器类型|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|userdata|qrcode组件|
+|bool|成功返回true,否则返回false|
 
 **例子**
 
 ```lua
--- 创建并显示qrcode
-local qrcode = lvgl.qrcode_create(scr, 100)
-lvgl.qrcode_update(qrcode, "https://luatos.com")
-lvgl.obj_align(qrcode, lvgl.scr_act(), lvgl.ALIGN_CENTER, -100, -100)
+lvgl.indev_drv_register("pointer", "emulator")
 
 ```
 
 ---
 
-## lvgl.qrcode_update(qrcode, cnt)
+## lvgl.indev_point_emulator_update(x, y, state)
 
 
 
-设置qrcode组件的二维码内容,配合qrcode_create使用
+更新模拟输入设备的坐标数据
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|userdata|qrcode组件,由qrcode_create创建|
-|string|二维码的内容数据|
+|int|x坐标,以左上角为0,右下角为最大值|
+|int|y坐标,以左上角为0,右下角为最大值|
+|int|状态, 0 为 释放, 1 为按下|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|bool|更新成功返回true,否则返回false. 通常只有数据太长无法容纳才会返回false|
+|nil|无返回值|
 
 **例子**
 
-无
+```lua
+-- 模拟在屏幕上的点击,通过timeout模拟长按和短按
+sys.taskInit(function(x, y, timeout)
+    lvgl.indev_point_emulator_update(x, y, 1)
+    sys.wait(timeout)
+    lvgl.indev_point_emulator_update(x, y, 0)
+end, 240, 120, 50)
+
+```
 
 ---
 
-## lvgl.qrcode_delete(qrcode)
+## lvgl.indev_kb_update(key)
 
 
 
-删除qrcode组件
+更新键盘输入设备的按键值
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|userdata|qrcode组件,由qrcode_create创建|
+|int|按键值，默认为0，按键抬起|
 
 **返回值**
 
@@ -1084,162 +1240,6 @@ if gif then
     log.info("gif", "create ok")
 end
 
-
-```
-
----
-
-## lvgl.scr_act()
-
-
-
-获取当前活跃的screen对象
-
-**参数**
-
-无
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|指针|screen指针|
-
-**例子**
-
-```lua
-local scr = lvgl.scr_act()
-
-
-```
-
----
-
-## lvgl.layer_top()
-
-
-
-获取layer_top
-
-**参数**
-
-无
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|指针|layer指针|
-
-**例子**
-
-无
-
----
-
-## lvgl.layer_sys()
-
-
-
-获取layer_sys
-
-**参数**
-
-无
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|指针|layer指针|
-
-**例子**
-
-无
-
----
-
-## lvgl.scr_load(scr)
-
-
-
-载入指定的screen
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|userdata|screen指针|
-
-**返回值**
-
-无
-
-**例子**
-
-```lua
-    local scr = lvgl.obj_create(nil, nil)
-    local btn = lvgl.btn_create(scr)
-    lvgl.obj_align(btn, lvgl.scr_act(), lvgl.ALIGN_CENTER, 0, 0)
-    local label = lvgl.label_create(btn)
-    lvgl.label_set_text(label, "LuatOS!")
-    lvgl.scr_load(scr)
-
-```
-
----
-
-## lvgl.theme_set_act(name)
-
-
-
-设置主题
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|string|主题名称,可选值有 default/mono/empty/material_light/material_dark/material_no_transition/material_no_focus|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|bool|成功返回true,否则返回nil|
-
-**例子**
-
-```lua
--- 黑白主题
-lvgl.theme_set_act("mono")
--- 空白主题
-lvgl.theme_set_act("empty")
-
-```
-
----
-
-## lvgl.sleep(enable)
-
-
-
-LVGL休眠控制，暂停/恢复刷新定时器，目前只有105和EC618可以用
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|boolean|true暂停 false恢复|
-
-**返回值**
-
-无
-
-**例子**
-
-```lua
-lvgl.sleep(true)		--暂停刷新，系统可以休眠
-lvgl.sleep(false)		--恢复刷新，系统不休眠
 
 ```
 
