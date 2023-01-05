@@ -40,7 +40,6 @@
    libgnss
    log
    lora
-   lpmem
    lvgl
    mcu
    miniz
