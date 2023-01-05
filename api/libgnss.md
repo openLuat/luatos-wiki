@@ -117,8 +117,7 @@ log.info("nmea", "isFix", libgnss.isFix())
 **例子**
 
 ```lua
--- 解析nmea
-libgnss.parse(indata)
+-- 建议用libgnss.getRmc(1)
 log.info("nmea", "loc", libgnss.getIntLocation())
 
 ```
@@ -147,8 +146,24 @@ log.info("nmea", "loc", libgnss.getIntLocation())
 
 ```lua
 -- 解析nmea
-libgnss.parse(indata)
-log.info("nmea", "rmc", json.encode(libgnss.getRmc()))
+log.info("nmea", "rmc", json.encode(libgnss.getRmc(3)))
+-- 实例输出
+--[[
+{
+    "course":0,
+    "valid":true,   // true定位成功,false定位丢失
+    "lat":23.4067,  // 纬度, 正数为北纬, 负数为南纬
+    "lng":113.231,  // 经度, 正数为东经, 负数为西经
+    "variation":0,  // 地面航向，单位为度，从北向起顺时针计算
+    "speed":0       // 地面速度, 单位为"节"
+    "year":2023,    // 年份
+    "month":1,      // 月份, 1-12
+    "day":5,        // 月份天, 1-31
+    "hour":7,       // 小时,0-23
+    "min":23,       // 分钟,0-59
+    "sec":20,       // 秒,0-59
+}
+]]
 
 ```
 
@@ -174,8 +189,29 @@ log.info("nmea", "rmc", json.encode(libgnss.getRmc()))
 
 ```lua
 -- 解析nmea
-libgnss.parse(indata)
 log.info("nmea", "gsv", json.encode(libgnss.getGsv()))
+-- [[实例输出
+{
+    "total_sats":24,      // 总可见卫星数量
+    "sats":[
+        {
+            "snr":27,     // 信噪比
+            "azimuth":278, // 方向角
+            "elevation":59, // 仰角
+            "tp":0,        // 0 - GPS/SASS/QSZZ, 1 - BD
+            "nr":4         // 卫星编号
+        },
+        // 这里忽略了22个卫星的信息
+        {
+            "snr":0,
+            "azimuth":107,
+            "elevation":19,
+            "tp":1,
+            "nr":31
+        }
+    ]
+}
+]]
 
 ```
 
@@ -202,9 +238,33 @@ log.info("nmea", "gsv", json.encode(libgnss.getGsv()))
 **例子**
 
 ```lua
--- 解析nmea
-libgnss.parse(indata)
+-- 获取
 log.info("nmea", "gsa", json.encode(libgnss.getGsa()))
+-- 示例数据
+--[[
+{
+    "sats":[ // 正在使用的卫星编号
+        9,
+        6,
+        16,
+        16,
+        26,
+        21,
+        27,
+        27,
+        4,
+        36,
+        3,
+        7,
+        8,
+        194
+    ],
+    "vdop":0.03083333, // 垂直精度因子，0.00 - 99.99，不定位时值为 99.99
+    "pdop":0.0455,     // 水平精度因子，0.00 - 99.99，不定位时值为 99.99
+    "fix_type":3,      // 定位模式, 1-未定位, 2-2D定位, 3-3D定位
+    "hdop":0.0335      // 位置精度因子，0.00 - 99.99，不定位时值为 99.99
+}
+]]
 
 ```
 
@@ -214,7 +274,7 @@ log.info("nmea", "gsa", json.encode(libgnss.getGsa()))
 
 
 
-获取原始VTA位置信息
+获取VTA速度信息
 
 **参数**
 
@@ -232,8 +292,16 @@ log.info("nmea", "gsa", json.encode(libgnss.getGsa()))
 
 ```lua
 -- 解析nmea
-libgnss.parse(indata)
 log.info("nmea", "vtg", json.encode(libgnss.getVtg()))
+-- 示例
+--[[
+{
+    "speed_knots":0,        // 速度, 英里/小时
+    "true_track_degrees":0,  // 真北方向角
+    "magnetic_track_degrees":0, // 磁北方向角
+    "speed_kph":0           // 速度, 千米/小时
+}
+]]
 
 ```
 
@@ -258,9 +326,20 @@ log.info("nmea", "vtg", json.encode(libgnss.getVtg()))
 **例子**
 
 ```lua
--- 解析nmea
-libgnss.parse(indata)
 log.info("nmea", "zda", json.encode(libgnss.getZda()))
+-- 实例输出
+--[[
+{
+    "minute_offset":0,   // 本地时区的分钟, 一般固定输出0
+    "hour_offset":0,     // 本地时区的小时, 一般固定输出0
+    "year":2023         // UTC 年，四位数字
+    "month":1,          // UTC 月，两位，01 ~ 12
+    "day":5,            // UTC 日，两位数字，01 ~ 31
+    "hour":7,           // 小时
+    "min":50,           // 分
+    "sec":14,           // 秒
+}
+]]
 
 ```
 
@@ -285,7 +364,7 @@ log.info("nmea", "zda", json.encode(libgnss.getZda()))
 **例子**
 
 ```lua
--- 开启调试
+-- 开启调试, 会输出GNSS原始数据到日志中
 libgnss.debug(true)
 -- 关闭调试
 libgnss.debug(false)
@@ -360,7 +439,10 @@ libgnss.debug(false)
 
 **例子**
 
-无
+```lua
+-- 该操作会清除所有定位数据,包括调试配置
+
+```
 
 ---
 
@@ -375,7 +457,7 @@ libgnss.debug(false)
 |传入值类型|解释|
 |-|-|
 |int|uart端口号|
-|int|转发到端口号, 例如虚拟UART. |
+|int|转发到uart的id, 例如虚拟uart.VUART_0|
 
 **返回值**
 
@@ -395,6 +477,58 @@ libgnss.debug(true)
 -- 2023-01-02之后编译的固件有效
 -- 从uart2读取并解析, 同时转发到虚拟串口0
 libgnss.bind(2, uart.VUART_0)
+
+```
+
+---
+
+## libgnss.locStr(mode)
+
+
+
+获取位置字符串
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|字符串模式. 0- Air780EG所需的格式|
+|return|指定模式的字符串|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 仅推荐在定位成功后调用
+
+```
+
+---
+
+## libgnss.rtcAuto(enable)
+
+
+
+定位成功后自动设置RTC
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|bool|开启与否, 默认是false关闭|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 开启自动设置RTC
+libgnss.rtcAuto(true)
 
 ```
 
