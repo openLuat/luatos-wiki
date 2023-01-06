@@ -401,6 +401,43 @@ end)
 
 ---
 
+## sms
+
+
+
+[sms接口文档页](https://wiki.luatos.com/api/sms.html)
+
+
+
+### SMS_INC
+
+收到短信
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|string|手机号|
+|string|短信内容，UTF8编码|
+
+**例子**
+
+```lua
+--使用的例子，可多行
+-- 接收短信, 支持多种方式, 选一种就可以了
+-- 1. 设置回调函数
+--sms.setNewSmsCb( function(phone,sms)
+    log.info("sms",phone,sms)
+end)
+-- 2. 订阅系统消息
+--sys.subscribe("SMS_INC", function(phone,sms)
+    log.info("sms",phone,sms)
+end)
+
+```
+
+---
+
 ## ntp
 
 
