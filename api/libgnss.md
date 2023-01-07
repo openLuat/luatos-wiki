@@ -190,7 +190,7 @@ log.info("nmea", "rmc", json.encode(libgnss.getRmc(3)))
 ```lua
 -- 解析nmea
 log.info("nmea", "gsv", json.encode(libgnss.getGsv()))
--- [[实例输出
+--[[实例输出
 {
     "total_sats":24,      // 总可见卫星数量
     "sats":[
@@ -393,7 +393,26 @@ libgnss.debug(false)
 
 **例子**
 
-无
+```lua
+local gga = libgnss.getGga(2)
+if gga then
+    log.info("GGA", json.encode(gga))
+end
+--实例输出
+--[[
+{
+    "dgps_age":0,             // 差分校正时延，单位为秒
+    "fix_quality":1,          // 定位状态标识 0 - 无效,1 - 单点定位,2 - 差分定位
+    "satellites_tracked":14,  // 参与定位的卫星数量
+    "altitude":0.255,         // 海平面分离度
+    "hdop":0.0335,            // 水平精度因子，0.00 - 99.99，不定位时值为 99.99
+    "longitude":113.231,      // 经度, 正数为东经, 负数为西经
+    "latitude":23.4067,       // 纬度, 正数为北纬, 负数为南纬
+    "height":0                // 椭球高，固定输出 1 位小数
+}
+]]
+
+```
 
 ---
 
@@ -417,7 +436,26 @@ libgnss.debug(false)
 
 **例子**
 
-无
+```lua
+local gll = libgnss.getGll(2)
+if gll then
+    log.info("GLL", json.encode(gll))
+end
+-- 实例数据
+--[[
+{
+    "status":"A",        // 定位状态, A有效, B无效
+    "mode":"A",          // 定位模式, V无效, A单点解, D差分解
+    "sec":20,            // 秒, UTC时间为准
+    "min":23,            // 分钟, UTC时间为准
+    "hour":7,            // 小时, UTC时间为准
+    "longitude":113.231, // 经度, 正数为东经, 负数为西经
+    "latitude":23.4067,  // 纬度, 正数为北纬, 负数为南纬
+    "us":0               // 微妙数, 通常为0
+}
+]]
+
+```
 
 ---
 
