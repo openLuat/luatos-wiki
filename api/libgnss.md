@@ -88,8 +88,6 @@ log.info("nmea", json.encode(libgnss.getRmc()))
 **例子**
 
 ```lua
--- 解析nmea
-libgnss.parse(indata)
 log.info("nmea", "isFix", libgnss.isFix())
 
 ```
