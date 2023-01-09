@@ -37,7 +37,7 @@
 | [lcd](https://wiki.luatos.com/api/lcd.html)           | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [eink](https://wiki.luatos.com/api/eink.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [u8g2](https://wiki.luatos.com/api/u8g2.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
-| [gtfont](https://wiki.luatos.com/api/gtfont.html)     | ✔      | ✔     | ✔      | ✖     | ✖      | ✖      |
+| [gtfont](https://wiki.luatos.com/api/gtfont.html)     | ✔      | ✔     | ✔      | ✔    | ✖      | ✖      |
 | [coremark](https://wiki.luatos.com/api/coremark.html) | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [fdb](https://wiki.luatos.com/api/fdb.html)           | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [lvgl](https://wiki.luatos.com/api/lvgl.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
