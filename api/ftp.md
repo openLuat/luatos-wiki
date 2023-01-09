@@ -1,6 +1,6 @@
 # ftp - ftp 客户端
 
-{bdg-secondary}`适配状态未知`
+{bdg-success}`已适配` {bdg-primary}`Air105` {bdg-primary}`Air780`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/network/libftp/luat_ftp_client.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
