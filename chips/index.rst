@@ -11,6 +11,7 @@
     air105/index
     air780e/index
     esp32c3/index
+    esp32s3/index
     air32f103/index
     swm181/index
     air302/index
