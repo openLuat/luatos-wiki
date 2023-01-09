@@ -1,6 +1,6 @@
 # fskv - kv数据库,掉电不丢数据
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/fskv/luat_lib_fskv.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -26,6 +26,9 @@ fskv与fdb的实现机制导致的差异
                     fskv          fdb
 1. value长度        4096           255
 2. key长度          63             64
+3. 空间利用率(对比)  较低            较高
+4. 读取速度         恒定           脏数据影响速度,非恒定
+5. 写入数据         恒定           脏数据影响速度,非恒定
 ]]
 
 ```
@@ -75,7 +78,7 @@ end
 |传入值类型|解释|
 |-|-|
 |string|key的名称,必填,不能空字符串|
-|string|用户数据,必填,不能nil, 支持字符串/数值/table/布尔值, 数据长度最大255字节|
+|string|用户数据,必填,不能nil, 支持字符串/数值/table/布尔值, 数据长度最大4096字节|
 
 **返回值**
 
