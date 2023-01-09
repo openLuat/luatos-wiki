@@ -2,17 +2,32 @@
 
 还在困扰如何搭建编译环境？芯片越来越多，环境也越来越多？电脑好卡呀~ 好，云编译来为你排忧解难~
 
-这里我们以Air101为展示，已支持Air101/Air103/Air105/Esp32c3,后续支持的芯片会越来越多~
+已支持的平台:
+1. Air101 - air101的LuatOS固件
+2. Air103 - air103的LuatOS固件
+3. Air105 - air105的LuatOS固件
+4. ESP32C3 - idf5-esp32c3的LuatOS固件
+5. ESP32S3 - idf5-esp32s3的LuatOS固件
+6. Air780E/Air600E --> ec618系列的LuatOS
+7. Air780E/Air600E --> ec618系列的csdk固件
 
-登录[https://luatos.com](https://luatos.com)
+这里我们以Air101为展示
+
+## 访问构建网站
+
+[https://luatos.com](https://luatos.com)
 
 ![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20211011092251619_image.png)
 
-点击登录，使用合宙[erp账号](http://erp.openluat.com)登录即可. 若没有账号, 可免费注册. 本服务免费使用.
+## 点击登录
+
+使用合宙[erp账号](http://erp.openluat.com)登录即可. 若没有账号, 可免费注册. 本服务免费使用.
 
 ![QQ截图20211011092353.png](https://cdn.openluat-luatcommunity.openluat.com/images/20211011092608787_QQ截图20211011092353.png)
 
-点击右上角构建，点击右上角菜单新构建，自定义构建名称，可新建多个
+## 点击右上角构建
+
+点击右上角菜单新构建，自定义构建名称，可新建多个
 
 ![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20211011092859451_image.png)
 
@@ -20,11 +35,13 @@
 
 ![20211011093313018_image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20211011094139885_20211011093313018_image.png)
 
-勾选想要的组件
+## 勾选想要的组件
 
 ![20211011093354772_image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20211011094238218_20211011093354772_image.png)
 
-点击右上角保存修改，之后点击准备就绪（**注意：一定要点击保存修改**)
+## 点击右上角保存修改，之后点击准备就绪
+
+**注意：一定要点击保存修改**
 
 ![20211011093452493_image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20211011094345320_20211011093452493_image.png)
 
@@ -41,8 +58,8 @@
 编译失败的问题有很多，通常有这几种比较常见：
 
 1. 为未点击保存修改就点击准备就绪。
-
-2. 组件选择过多，或字体的选择导致flash大小不够。
+2. 组件选择过多，或字体的选择导致flash大小不够,导致编译失败
+3. 固件包都是压缩包, soc也是压缩包,并不直接代表固件大小
 
 ## 自定义字库怎么用
 

@@ -21,6 +21,7 @@
    fota
    fs
    fskv
+   ftp
    gpio
    gtfont
    hmeta
