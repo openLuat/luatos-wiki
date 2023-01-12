@@ -597,7 +597,7 @@ lcd.drawStr(40,40,"drawStr测试")
 **例子**
 
 ```lua
--- 显示之前先设置为中文字体,对之后的drawStr有效,使用中文字体需在luat_conf_bsp.h.h开启#define USE_U8G2_OPPOSANSMxx_CHINESE xx代表字号
+-- 显示之前先设置为中文字体,对之后的drawStr有效
 lcd.setFont(lcd.font_opposansm12)
 lcd.drawStr(40,10,"drawStr")
 sys.wait(2000)
