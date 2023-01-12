@@ -17,6 +17,7 @@
    lis2dh12
    lm75
    mcp2515
+   mlx90614
    mpu6xxx
    pcf8574
    qmc5883l
