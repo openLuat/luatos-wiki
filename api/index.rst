@@ -47,7 +47,6 @@
    mlx90640
    mobile
    mqtt
-   nbiot
    nimble
    otp
    pack
