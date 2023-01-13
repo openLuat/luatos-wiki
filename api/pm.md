@@ -22,6 +22,7 @@
 |pm.USB|number|USB电源|
 |pm.GPS|number|GPS电源|
 |pm.GPS_ANT|number|GPS的天线电源，有源天线才需要|
+|pm.DAC_EN|number|Air780E和Air600E的DAC_EN，注意audio的默认配置会自动使用这个脚来控制CODEC的使能|
 
 
 ## pm.request(mode)
