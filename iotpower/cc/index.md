@@ -1,4 +1,4 @@
-# ⚡ Iot Power - CC
+# ⚡ IoT Power - CC
 
 ```{note}
 内测中，尚未发售，敬请期待！

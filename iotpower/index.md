@@ -1,4 +1,4 @@
-# ⏳ Iot Power功耗测试神器
+# ⏳ IoT Power功耗测试神器
 
 IOT Power系列产品是功能齐全，稳定可靠的小型手持式功耗测试神器。它可以通过USB C供电，通过屏幕显示数据，并配套功能强大的客户端软件，是广大用户随身携带的理想测试工具。
 
@@ -53,8 +53,8 @@ Iot Power CC：纯测量设备，支持PD输入诱骗，适配更高电压与更
 ```{rubric} 更多资料
 ```
 
-- [IotPower经典款](power/index)
-- [IotPower CC](cc/index)
+- [IoTPower经典款](power/index)
+- [IoTPower CC](cc/index)
 
 请选择左侧的具体页面查看。
 
