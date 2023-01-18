@@ -24,7 +24,8 @@
 |string|device_name|
 |string|device_secret|
 |string|method 加密方式,"hmacmd5" "hmacsha1" "hmacsha256" 可选,默认"hmacmd5"|
-|number|cur_timestamp 可选|
+|number|cur_timestamp 可选 默认为 32472115200(2999-01-01 0:0:0)|
+|bool|istls 是否TLS直连 true:TLS直连  false:TCP直连模式 默认TCP直连模式|
 
 **返回值**
 
@@ -58,7 +59,7 @@ print(client_id,user_name,password)
 |string|device_name|
 |string|key|
 |string|method 加密方式,"md5" "sha1" "sha256" 可选,默认"md5"|
-|number|cur_timestamp 可选|
+|number|cur_timestamp 可选 默认为 32472115200(2999-01-01 0:0:0)|
 |string|version 可选 默认"2018-10-31"|
 
 **返回值**
@@ -79,7 +80,7 @@ print(client_id,user_name,password)
 
 ---
 
-## iotauth.iotda(device_id,device_secret,ins_timestamp,cur_timestamp)
+## iotauth.iotda(device_id,device_secret,cur_timestamp)
 
 
 
@@ -91,8 +92,7 @@ print(client_id,user_name,password)
 |-|-|
 |string|device_id|
 |string|device_secret|
-|number|ins_timestamp 是否校验时间戳 1:校验 0:不校验|
-|number|cur_timestamp 可选|
+|number|cur_timestamp 可选 如不填则不校验时间戳|
 
 **返回值**
 
@@ -105,7 +105,7 @@ print(client_id,user_name,password)
 **例子**
 
 ```lua
-local client_id,user_name,password = iotauth.iotda("6203cc94c7fb24029b110408_88888888","123456789",1,1659495778)
+local client_id,user_name,password = iotauth.iotda("6203cc94c7fb24029b110408_88888888","123456789",1659495778)
 print(client_id,user_name,password)
 
 ```
@@ -159,7 +159,7 @@ print(client_id,user_name,password)
 |-|-|
 |string|device_id|
 |string|device_secret|
-|number|cur_timestamp 可选|
+|number|cur_timestamp 可选 默认为 32472115200(2999-01-01 0:0:0)|
 
 **返回值**
 
@@ -193,7 +193,7 @@ print(client_id,user_name,password)
 |string|device_key|
 |string|device_secret|
 |string|method 加密方式,"MD5" "SHA256" 可选,默认"MD5"|
-|number|cur_timestamp 可选|
+|number|cur_timestamp 可选 如不填则不校验时间戳|
 
 **返回值**
 
