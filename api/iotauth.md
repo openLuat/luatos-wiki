@@ -126,7 +126,7 @@ print(client_id,user_name,password)
 |string|device_name|
 |string|device_secret|
 |string|method 加密方式,"sha1" "sha256" 可选,默认"sha256"|
-|number|cur_timestamp 可选|
+|number|cur_timestamp 可选 默认为 32472115200(2999-01-01 0:0:0)|
 |string|sdk_appid 可选 默认为"12010126"|
 
 **返回值**
