@@ -91,6 +91,36 @@ end
 
 ---
 
+## i2s.recv(id, buffer, len)
+
+
+
+接收i2s数据，注意在数据在回调时已经存放在zbuff里，目前只有air780e系列支持
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|通道id|
+|zbuff|数据缓存区|
+|int|单次返回的数据长度,单位字节,必须与传入的zbuff的大小一致|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功与否|
+
+**例子**
+
+```lua
+local buffer = zbuff.create(3200)
+local succ = i2s.recv(0, buffer, 3200);
+
+```
+
+---
+
 ## i2s.close(id, data, len)
 
 
@@ -113,6 +143,40 @@ end
 
 ```lua
 i2s.close(0)
+
+```
+
+---
+
+## i2s.on(id, func)
+
+
+
+注册I2S事件回调
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|i2s id, i2s0写0, i2s1写1|
+|function|回调方法|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+i2s.on(0, function(id, buff)
+	if buff then
+		log.info("i2s get data in zbuff")
+	else
+		log.info("i2s tx one block done")
+	end
+end)
 
 ```
 
