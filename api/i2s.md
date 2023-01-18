@@ -121,7 +121,7 @@ local succ = i2s.recv(0, buffer, 3200);
 
 ---
 
-## i2s.close(id, data, len)
+## i2s.close(id)
 
 
 
