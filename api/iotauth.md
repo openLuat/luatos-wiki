@@ -73,7 +73,7 @@ print(client_id,user_name,password)
 **例子**
 
 ```lua
-local client_id,user_name,password = iotauth.onenet("123456789","test","KuF3NT/jUBJ62LNBB/A8XZA9CqS3Cu79B/ABmfA1UCw=","md5",1658920369,"2018-10-31")
+local client_id,user_name,password = iotauth.onenet("123456789","test","KuF3NT/jUBJ62LNBB/A8XZA9CqS3Cu79B/ABmfA1UCw=")
 print(client_id,user_name,password)
 
 ```
@@ -105,7 +105,7 @@ print(client_id,user_name,password)
 **例子**
 
 ```lua
-local client_id,user_name,password = iotauth.iotda("6203cc94c7fb24029b110408_88888888","123456789",1659495778)
+local client_id,user_name,password = iotauth.iotda("6203cc94c7fb24029b110408_88888888","123456789")
 print(client_id,user_name,password)
 
 ```
@@ -172,7 +172,7 @@ print(client_id,user_name,password)
 **例子**
 
 ```lua
-local client_id,user_name,password = iotauth.tuya("6c95875d0f5ba69607nzfl","fb803786602df760",1607635284)
+local client_id,user_name,password = iotauth.tuya("6c95875d0f5ba69607nzfl","fb803786602df760")
 print(client_id,user_name,password)
 
 ```
@@ -206,7 +206,7 @@ print(client_id,user_name,password)
 **例子**
 
 ```lua
-local client_id,user_name,password = iotauth.baidu("abcd123","mydevice","ImSeCrEt0I1M2jkl","MD5")
+local client_id,user_name,password = iotauth.baidu("abcd123","mydevice","ImSeCrEt0I1M2jkl")
 print(client_id,user_name,password)
 
 ```
