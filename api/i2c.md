@@ -88,8 +88,8 @@ i2c.setup(1, i2c.FAST) -- 端口正确就一定成功
 
 |传入值类型|解释|
 |-|-|
-|int|i2c SCL引脚编号|
-|int|i2c SDA引脚编号|
+|int|i2c SCL引脚编号(GPIO编号)|
+|int|i2c SDA引脚编号(GPIO编号)|
 |int|从设备地址（7位）, 例如0x38|
 
 **返回值**
