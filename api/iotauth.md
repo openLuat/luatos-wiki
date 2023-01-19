@@ -122,9 +122,9 @@ print(client_id,user_name,password)
 
 |传入值类型|解释|
 |-|-|
-|string|product_id|
-|string|device_name|
-|string|device_secret|
+|string|产品id,创建项目后可以查看到,类似于LD8S5J1L07|
+|string|设备名称,例如设备的imei号|
+|string|设备密钥,创建设备后,查看设备详情可得到|
 |string|method 加密方式,"sha1" "sha256" 可选,默认"sha256"|
 |number|cur_timestamp 可选 默认为 32472115200(2999-01-01 0:0:0)|
 |string|sdk_appid 可选 默认为"12010126"|
@@ -140,7 +140,7 @@ print(client_id,user_name,password)
 **例子**
 
 ```lua
-local client_id,user_name,password = iotauth.qcloud("LD8S5J1L07","test","acyv3QDJrRa0fW5UE58KnQ==", "sha1",1660103393)
+local client_id,user_name,password = iotauth.qcloud("LD8S5J1L07","test","acyv3QDJrRa0fW5UE58KnQ==")
 print(client_id,user_name,password)
 
 ```

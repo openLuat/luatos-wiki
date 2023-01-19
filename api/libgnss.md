@@ -144,7 +144,7 @@ log.info("nmea", "loc", libgnss.getIntLocation())
 
 ```lua
 -- 解析nmea
-log.info("nmea", "rmc", json.encode(libgnss.getRmc(3)))
+log.info("nmea", "rmc", json.encode(libgnss.getRmc(2)))
 -- 实例输出
 --[[
 {

@@ -194,7 +194,8 @@ end, 1000, "A", "B", "N")
 
 ```lua
 local tcount = 0
-local tid = sys.timerLoopStart(function(a, b, c)
+local tid 
+tid = sys.timerLoopStart(function(a, b, c)
     log.info("task", a, b, c) -- 1000毫秒后才会执行, 打印 task A B C
     if tcount > 10 then
         sys.timerStop(tid)
