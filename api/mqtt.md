@@ -256,6 +256,32 @@ mqttc:connect()
 
 ---
 
+## mqttc:disconnect()
+
+
+
+断开服务器连接(不会释放资源)
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|发起成功返回true, 否则返回false|
+
+**例子**
+
+```lua
+-- 断开连接
+mqttc:disconnect()
+
+```
+
+---
+
 ## mqttc:autoreconn(reconnect, reconnect_time)
 
 
