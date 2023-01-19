@@ -42,6 +42,41 @@ ftp_login = ftp.login(nil,"xxx")
 
 ---
 
+## ftp.command(cmd)
+
+
+
+FTP命令
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|cmd 命令 目前支持:NOOP SYST TYPE PWD MKD CWD CDUP RMD DELE|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|成功返回true 失败返回string|
+
+**例子**
+
+```lua
+    print(ftp.command("NOOP").wait())
+    print(ftp.command("SYST").wait())
+    print(ftp.command("TYPE I").wait())
+    print(ftp.command("PWD").wait())
+    print(ftp.command("MKD QWER").wait())
+    print(ftp.command("CWD /QWER").wait())
+    print(ftp.command("CDUP").wait())
+    print(ftp.command("RMD QWER").wait())
+	rint(ftp.command("DELE /1/12222.txt").wait())
+
+```
+
+---
+
 ## ftp.pull(local_name,remote_name)
 
 
