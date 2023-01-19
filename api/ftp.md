@@ -52,7 +52,7 @@ FTP命令
 
 |传入值类型|解释|
 |-|-|
-|string|cmd 命令 目前支持:NOOP SYST TYPE PWD MKD CWD CDUP RMD DELE|
+|string|cmd 命令 目前支持:NOOP SYST TYPE PWD MKD CWD CDUP RMD DELE LIST|
 
 **返回值**
 
@@ -81,7 +81,7 @@ FTP命令
 
 
 
-FTP客户端
+FTP文件下载
 
 **参数**
 
@@ -109,7 +109,7 @@ ftp.pull("/1222.txt","/1222.txt").wait()
 
 
 
-FTP客户端
+FTP文件上传
 
 **参数**
 
@@ -137,7 +137,7 @@ ftp.push("/1222.txt","/1222.txt").wait()
 
 
 
-FTP客户端
+FTP客户端关闭
 
 **参数**
 
