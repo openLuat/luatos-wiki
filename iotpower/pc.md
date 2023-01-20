@@ -119,7 +119,7 @@ cp2102驱动：[CP210x_Windows_Drivers](https://www.silabs.com/documents/public/
 
 ![pc_wave_data](img/pc_wave_data.png)
 
-当选取一段区域后，`分析窗`将弹出显示分析的结果，包括
+当选取一段区域后，`分析窗`将弹出显示分析的结果
 
 ## 控制设备输出
 
