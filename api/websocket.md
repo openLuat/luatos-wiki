@@ -195,7 +195,7 @@ wsc:autoreconn(true)
 
 |返回值类型|解释|
 |-|-|
-|int|消息id, 当qos为1或2时会有效值. 若底层返回是否, 会返回nil|
+|bool|成功返回true,否则为false或者nil|
 
 **例子**
 
@@ -248,7 +248,39 @@ websocket客户端是否就绪
 **例子**
 
 ```lua
-local error = wsc:ready()
+local stat = wsc:ready()
+
+```
+
+---
+
+## wsc:headers(headers)
+
+
+
+设置额外的headers
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|table/string|可以是table,也可以是字符串|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|客户端是否就绪|
+
+**例子**
+
+```lua
+-- table形式
+wsc:headers({
+	Auth="Basic ABCDEFGG"
+})
+-- 字符串形式
+wsc:headers("Auth: Basic ABCDERG\r\n")
 
 ```
 
