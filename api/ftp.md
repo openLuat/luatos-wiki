@@ -7,7 +7,7 @@
 ```
 
 ```{tip}
-本库有专属demo，[点此链接查看ftp的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/socket)
+本库有专属demo，[点此链接查看ftp的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/ftp)
 ```
 
 ## ftp.login(adapter,ip_addr,port,username,password)
