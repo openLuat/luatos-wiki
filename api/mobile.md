@@ -222,7 +222,7 @@ log.info("simid", mobile.simid())
 
 ---
 
-## mobile.apn(index, newvalue)
+## mobile.apn(index, cid, newvalue)
 
 
 
@@ -240,7 +240,7 @@ log.info("simid", mobile.simid())
 
 |返回值类型|解释|
 |-|-|
-|string|当前的APN值,若失败返回nil|
+|string|获取到的默认APN值,失败返回nil|
 
 **例子**
 
