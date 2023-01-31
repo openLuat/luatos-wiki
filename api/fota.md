@@ -10,7 +10,7 @@
 本库有专属demo，[点此链接查看fota的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/ota)
 ```
 
-## fota.fotaInit(storge_location, len, param1)
+## fota.init(storge_location, len, param1)
 
 
 
@@ -34,14 +34,14 @@
 
 ```lua
 -- 初始化fota流程
-local result = mcu.fotaInit(0, 0x00300000, spi_device)	--由于105的flash从0x01000000开始，所以0就是外部spiflash
-local result = mcu.fotaInit()	--ec618使用固定内部地址，所以不需要参数了
+local result = fota.init(0, 0x00300000, spi_device)	--由于105的flash从0x01000000开始，所以0就是外部spiflash
+local result = fota.init()	--ec618使用固定内部地址，所以不需要参数了
 
 ```
 
 ---
 
-## fota.fotaWait()
+## fota.wait()
 
 
 
@@ -62,13 +62,13 @@ local result = mcu.fotaInit()	--ec618使用固定内部地址，所以不需要�
 **例子**
 
 ```lua
-local isDone = mcu.fotaWait()
+local isDone = fota.wait()
 
 ```
 
 ---
 
-## fota.fotaRun(buff)
+## fota.run(buff)
 
 
 
@@ -91,13 +91,13 @@ local isDone = mcu.fotaWait()
 **例子**
 
 ```lua
-local result, isDone, cache = fota.fotaRun(buf) -- 写入fota流程
+local result, isDone, cache = fota.run(buf) -- 写入fota流程
 
 ```
 
 ---
 
-## fota.fotaDone()
+## fota.isDone()
 
 
 
@@ -117,13 +117,13 @@ local result, isDone, cache = fota.fotaRun(buf) -- 写入fota流程
 **例子**
 
 ```lua
-local result, isDone = mcu.fotaDone()
+local result, isDone = fota.isDone()
 
 ```
 
 ---
 
-## fota.fotaEnd(is_ok)
+## fota.finish(is_ok)
 
 
 
@@ -145,7 +145,7 @@ local result, isDone = mcu.fotaDone()
 
 ```lua
 -- 结束fota流程
-local result = mcu.fotaEnd(true)
+local result = fota.finish(true)
 
 ```
 
