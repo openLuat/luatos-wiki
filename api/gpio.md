@@ -76,7 +76,7 @@ gpio.setup(27, function(val) print("IRQ_27",val) end, gpio.PULLUP)
 
 |传入值类型|解释|
 |-|-|
-|int|pin 针脚编号,必须是数值|
+|int|pin GPIO编号,必须是数值|
 |int|value 电平, 可以是 高电平gpio.HIGH, 低电平gpio.LOW, 或者直接写数值1或0|
 
 **返回值**
@@ -105,7 +105,7 @@ gpio.set(17, 0)
 
 |传入值类型|解释|
 |-|-|
-|int|pin 针脚编号,必须是数值|
+|int|pin GPIO编号,必须是数值|
 
 **返回值**
 
@@ -133,7 +133,7 @@ gpio.get(17)
 
 |传入值类型|解释|
 |-|-|
-|int|pin 针脚编号,必须是数值|
+|int|pin GPIO编号,必须是数值|
 
 **返回值**
 
