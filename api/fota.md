@@ -84,14 +84,14 @@ local isDone = mcu.fotaWait()
 
 |返回值类型|解释|
 |-|-|
-|boolean|有异常返回true|
+|boolean|有异常返回false，无异常返回true|
 |boolean|接收到最后一块返回true|
 |int|还未写入的数据量，超过64K必须做等待|
 
 **例子**
 
 ```lua
-local isError, isDone, cache = fota.fotaRun(buf) -- 写入fota流程
+local result, isDone, cache = fota.fotaRun(buf) -- 写入fota流程
 
 ```
 
@@ -105,21 +105,19 @@ local isError, isDone, cache = fota.fotaRun(buf) -- 写入fota流程
 
 **参数**
 
-|传入值类型|解释|
-|-|-|
-|boolean|是否完整走完流程，true 表示正确走完流程了|
+无
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|boolean|有异常返回true|
+|boolean|有异常返回false，无异常返回true|
 |boolean|写入到最后一块返回true|
 
 **例子**
 
 ```lua
-local isError, isDone = mcu.fotaDone()
+local result, isDone = mcu.fotaDone()
 
 ```
 
