@@ -170,7 +170,7 @@ io.writeFile("/bootime", "1")
 
 
 
-读取文件并填充到zbuff内
+读取文件并填充到zbuff内,但不移动指针位置
 
 **参数**
 
