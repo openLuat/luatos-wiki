@@ -194,7 +194,7 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 |返回值类型|解释|
 |-|-|
-|boolean|true有异常发生，false没有异常，如果有error则不需要看下一个返回值了|
+|boolean|true没有异常发生，false失败了，如果false则不需要看下一个返回值了|
 |boolean|true已经linkup，false没有linkup，之后需要接收socket.LINK消息|
 
 **例子**
@@ -221,7 +221,7 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 |返回值类型|解释|
 |-|-|
-|boolean|true有异常发生，false没有异常，如果有error则不需要看下一个返回值了，如果有异常，后续要close|
+|boolean|true没有异常发生，false失败了，如果false则不需要看下一个返回值了，如果有异常，后续要close|
 |boolean|true已经connect，false没有connect，之后需要接收socket.ON_LINE消息|
 
 **例子**
@@ -244,7 +244,10 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|boolean|true没有异常发生，false失败了，如果false则不需要看下一个返回值了|
+|boolean|true已经断开，false没有断开，之后需要接收socket.CLOSED消息|
 
 **例子**
 
@@ -294,8 +297,8 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 |返回值类型|解释|
 |-|-|
-|boolean|true有异常发生，false没有异常，如果有error则不需要看下一个返回值了，如果有异常，后续要close|
-|boolean|true缓冲区满了，false没有异常，如果true，则需要等待一段时间或者等到socket.TX_OK消息后再尝试发送，同时忽略下一个返回值|
+|boolean|true没有异常发生，false失败了，如果false则不需要看下一个返回值了，如果false，后续要close|
+|boolean|true缓冲区满了，false没有满，如果true，则需要等待一段时间或者等到socket.TX_OK消息后再尝试发送，同时忽略下一个返回值|
 |boolean|true已经收到应答，false没有收到应答，之后需要接收socket.TX_OK消息， 也可以忽略继续发送，直到full==true|
 
 **例子**
@@ -322,7 +325,7 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 |返回值类型|解释|
 |-|-|
-|boolean|true有异常发生，false没有异常，如果有异常，后续要close|
+|boolean|true没有异常发生，false失败了，如果false则不需要看下一个返回值了，如果false，后续要close|
 |int|本次接收到数据长度|
 |string|对端IP，只有UDP模式下才有意义，TCP模式返回nil，注意返回的格式，如果是IPV4，1byte 0x00 + 4byte地址 如果是IPV6，1byte 0x01 + 16byte地址|
 |int|对端port，只有UDP模式下才有意义，TCP模式返回0|
@@ -349,7 +352,7 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 |返回值类型|解释|
 |-|-|
-|boolean|true有异常发生，false没有异常，如果有异常，后续要close|
+|boolean|true没有异常发生，false失败了，如果false则不需要看下一个返回值了，如果false，后续要close|
 |boolean|true有新的数据需要接收，false没有数据，之后需要接收socket.EVENT消息|
 
 **例子**
@@ -374,7 +377,7 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 |返回值类型|解释|
 |-|-|
-|boolean|true有异常发生，false没有异常，如果有error则不需要看下一个返回值了，如果有异常，后续要close|
+|boolean|true没有异常发生，false失败了，如果false则不需要看下一个返回值了，如果false，后续要close|
 |boolean|true已经connect，false没有connect，之后需要接收socket.ON_LINE消息|
 
 **例子**
@@ -400,7 +403,7 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 |返回值类型|解释|
 |-|-|
-|boolean|true有异常发生，false没有异常，如果有error则不需要看下一个返回值了，如果有异常，后续要close|
+|boolean|true没有异常发生，false失败了，如果false则不需要看下一个返回值了，如果false，后续要close|
 |user_data|or nil 如果支持1对多，则会返回新的ctrl，自动create，如果不支持则返回nil|
 
 **例子**
