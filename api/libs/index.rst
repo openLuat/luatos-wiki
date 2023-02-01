@@ -14,6 +14,7 @@
    gt911
    l3g4200d
    lbsLoc
+   libfota
    lis2dh12
    lm75
    mcp2515
