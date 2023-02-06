@@ -22,7 +22,7 @@ local libfota = require("libfota")
 --   2表示url错误
 --   3表示服务器断开
 --   4表示接收报文错误
---   5表示使用iot平台VERSION需要使用 xxx.yyy形式
+--   5表示使用iot平台VERSION需要使用 xxx.yyy.zzz形式
 function libfota_cb(result)
     log.info("fota", "result", result)
     -- fota成功

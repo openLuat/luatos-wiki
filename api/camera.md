@@ -63,6 +63,8 @@ camera.start(camera_id)--开始指定的camera
 
 ```lua
 camera.on(0, "scanned", function(id, str)
+--id int camera id
+--str 多种类型 false 摄像头没有正常工作，true 拍照模式下拍照成功并保存完成， int 原始数据模式下本次返回的数据大小， string 扫码模式下扫码成功后的解码值
     print(id, str)
 end)
 

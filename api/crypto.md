@@ -646,7 +646,7 @@ log.info("hmac_sha256", crypto.md_file("SHA256", "/luadb/logo.jpg", "123456"))
 
 ---
 
-## crypto.md_file(tp, data, hmac)
+## crypto.md(tp, data, hmac)
 
 
 

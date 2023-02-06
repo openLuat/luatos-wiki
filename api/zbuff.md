@@ -7,6 +7,9 @@
 ```
 
 ```{tip}
+本库有专属demo，[点此链接查看zbuff的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/zbuff)
+```
+```{tip}
 本库还有视频教程，[点此链接查看](https://www.bilibili.com/video/BV1gr4y1V7HN)
 ```
 
