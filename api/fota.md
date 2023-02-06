@@ -7,7 +7,7 @@
 ```
 
 ```{tip}
-本库有专属demo，[点此链接查看fota的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/ota)
+本库有专属demo，[点此链接查看fota的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/fota)
 ```
 
 ## fota.init(storge_location, len, param1)
