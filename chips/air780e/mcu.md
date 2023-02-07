@@ -7,7 +7,7 @@ Air780E 是合宙通信推出的 LTE Cat.1 bis通信模块，采用移芯EC618�
 - 支持双卡单待
 - 支持SPI LCD
 - 支持USB 2.0, 仅CDC功能
-- 支持PSM数字语音接口
+- 支持I2S数字语音接口
 
 ## LuatOS为它提供哪些功能
 
@@ -17,8 +17,6 @@ Air780E 是合宙通信推出的 LTE Cat.1 bis通信模块，采用移芯EC618�
 - 网络功能: Mobile/Socket/Http/Mqtt/WebSocket/FTP/NTP/SMS
 - UI显示: LCD/Eink/U8G2/LVGL
 - 语音输出: MP3/ARM
-
-带`*`的功能尚待开发
 
 注意, 鉴于芯片平台的限制,以下功能无法实现或具有局限性:
 1. 不支持2G/3G/5G通信
