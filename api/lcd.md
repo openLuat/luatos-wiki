@@ -630,6 +630,7 @@ lcd.drawStr(40,40,"drawStr测试")
 **例子**
 
 ```lua
+-- 注意, gtfont是额外的字体芯片硬件, 需要外挂在SPI总线才能调用本函数的
 lcd.drawGtfontGb2312("啊啊啊",32,0,0)
 
 ```
@@ -659,6 +660,7 @@ lcd.drawGtfontGb2312("啊啊啊",32,0,0)
 **例子**
 
 ```lua
+-- 注意, gtfont是额外的字体芯片硬件, 需要外挂在SPI总线才能调用本函数的
 lcd.drawGtfontGb2312Gray("啊啊啊",32,4,0,40)
 
 ```
