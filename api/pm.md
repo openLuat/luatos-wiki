@@ -24,6 +24,7 @@
 |pm.GPS_ANT|number|GPS的天线电源，有源天线才需要|
 |pm.CAMERA|number|camera电源，CAM_VCC输出|
 |pm.DAC_EN|number|Air780E和Air600E的DAC_EN，注意audio的默认配置会自动使用这个脚来控制CODEC的使能|
+|pm.PWK_MODE|number|是否开启ec618的powerkey滤波模式，true开，注意滤波模式下reset变成直接关机|
 
 
 ## pm.request(mode)
