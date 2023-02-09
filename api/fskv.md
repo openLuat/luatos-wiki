@@ -180,6 +180,78 @@ fskv.clear()
 
 ---
 
+## fskv.iter()
+
+
+
+kv数据库迭代器
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|userdata|成功返回迭代器指针,否则返回nil|
+
+**例子**
+
+```lua
+-- 清空
+local iter = fskv.iter()
+if iter then
+    while 1 do
+        local k = fskv.next(iter)
+        if not k then
+            break
+        end
+        log.info("fdb", k, "value", fskv.kv_get(k))
+    end
+end
+
+```
+
+---
+
+## fskv.iter(iter)
+
+
+
+kv迭代器获取下一个key
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|fskv.iter()返回的指针|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|成功返回字符串key值, 否则返回nil|
+
+**例子**
+
+```lua
+-- 清空
+local iter = fskv.iter()
+if iter then
+    while 1 do
+        local k = fskv.next(iter)
+        if not k then
+            break
+        end
+        log.info("fskv", k, "value", fskv.get(k))
+    end
+end
+
+```
+
+---
+
 ## fskv.status()
 
 
