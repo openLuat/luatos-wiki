@@ -1,6 +1,6 @@
 # socket - 网络接口
 
-{bdg-success}`已适配` {bdg-primary}`Air105` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
 
 ```{tip}
 本库有专属demo，[点此链接查看socket的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/socket)
