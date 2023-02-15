@@ -44,11 +44,11 @@
 
 |软件通道id|实际硬件通道|对应的GPIO|备注|
 |----------|-----------|---------|----|
-|0        |    0       | GPIO23  | LCD_RST|
+|0        |    0       | GPIO23  | |
 |1        |    1       | GPIO24  | MAIN_RI |
 |2        |    2       | GPIO25  | |
 |4        |    4       | GPIO27  | NetLed |
-|10        |    0       | GPIO1  | |
+|10        |    0       | GPIO1  | LCD_RST|
 |11        |    1       | GPIO2  | MAIN_DCD |
 |12        |    2       | GPIO16 |MAIN_CTS |
 |14        |    4       | GPIO19 |UART1_TXD/MAIN_TXD |
