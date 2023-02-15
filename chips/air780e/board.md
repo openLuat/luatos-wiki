@@ -34,24 +34,5 @@
 
 [Air780E开发板喇叭扩展板使用手册.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221124161022658_Air780E开发板喇叭扩展板使用说明.pdf)
 
-## PWM通道的说明
 
-实际可用通道就4个, 但每个都有2种配置.
-
-例如 PWM1和PWM11都使用硬件通道1, 只能选其中一个使用.
-
-启用PWM1就不能启用PWM11, 调用pwm库的API时,填 "软件通道id"
-
-|软件通道id|实际硬件通道|对应的GPIO|备注|
-|----------|-----------|---------|----|
-|0        |    0       | GPIO23  | |
-|1        |    1       | GPIO24  | MAIN_RI |
-|2        |    2       | GPIO25  | |
-|4        |    4       | GPIO27  | NetLed |
-|10        |    0       | GPIO1  | LCD_RST|
-|11        |    1       | GPIO2  | MAIN_DCD |
-|12        |    2       | GPIO16 |MAIN_CTS |
-|14        |    4       | GPIO19 |UART1_TXD/MAIN_TXD |
-
-PS: 软件通道10/11/12/14需要V1002以上的固件, 20221219之后编译的版本
 
