@@ -1,13 +1,13 @@
 # mqtt - mqtt客户端
 
-{bdg-secondary}`适配状态未知`
+{bdg-success}`已适配` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/network/libemqtt/luat_lib_mqtt.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```
 
 ```{tip}
-本库有专属demo，[点此链接查看mqtt的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/socket)
+本库有专属demo，[点此链接查看mqtt的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/mqtt)
 ```
 
 ## mqttc:subscribe(topic, qos)
@@ -107,6 +107,7 @@ mqtt客户端创建
 |string|服务器地址,可以是域名, 也可以是ip|
 |int|	端口号|
 |bool/table|是否为ssl加密连接,默认不加密,true为无证书最简单的加密，table为有证书的加密 <br>server_cert 服务器ca证书数据 <br>client_cert 客户端ca证书数据 <br>client_key 客户端私钥加密数据 <br>client_password 客户端私钥口令数据|
+|bool|是否为ipv6 默认不是|
 
 **返回值**
 
@@ -122,14 +123,14 @@ mqttc = mqtt.create(nil,"120.55.137.106", 1884)
 -- 加密TCP链接,不验证服务器证书
 mqttc = mqtt.create(nil,"120.55.137.106", 8883, true)
 -- 加密TCPTCP链接,单服务器证书验证
-mqttc = mqtt.create(nil,"120.55.137.106", 8883, {server_cert=io.readFile("/luadb/ca.crt"))
+mqttc = mqtt.create(nil,"120.55.137.106", 8883, {server_cert=io.readFile("/luadb/ca.crt")})
 -- 加密TCPTCP链接,双向证书验证
 mqttc = mqtt.create(nil,"120.55.137.106", 8883, {
 					server_cert=io.readFile("/luadb/ca.crt"),
 					client_cert=io.readFile("/luadb/client.pem"),
 					client_key="123456",
 					client_password="123456",
-					)
+					})
 
 ```
 
@@ -251,6 +252,32 @@ end)
 -- 开始建立连接
 mqttc:connect()
 -- 本函数仅代表发起成功, 后续仍需根据ready函数判断mqtt是否连接正常
+
+```
+
+---
+
+## mqttc:disconnect()
+
+
+
+断开服务器连接(不会释放资源)
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|发起成功返回true, 否则返回false|
+
+**例子**
+
+```lua
+-- 断开连接
+mqttc:disconnect()
 
 ```
 

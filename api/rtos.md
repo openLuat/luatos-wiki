@@ -1,6 +1,6 @@
 # rtos - RTOS底层操作库
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_rtos.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -178,7 +178,7 @@ local bsp = rtos.bsp()
 
 |返回值类型|解释|
 |-|-|
-|string|固件版本号,例如"1.0.2"|
+|string|固件版本号,例如"V0001"|
 
 **例子**
 

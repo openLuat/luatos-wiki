@@ -1,6 +1,6 @@
 # sfd - SPI FLASH操作库
 
-{bdg-success}`已适配` {bdg-primary}`Air105` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air105` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/sfd/luat_lib_sfd.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -17,7 +17,7 @@
 
 |传入值类型|解释|
 |-|-|
-|string|类型, 可以是"spi", 也可以是"zbuff"|
+|string|类型, 可以是"spi", 也可以是"zbuff", 或者"onchip"|
 |int|SPI总线的id, 或者 zbuff实例|
 |int|SPI FLASH的片选脚对应的GPIO, 当类型是spi时才需要传|
 
@@ -34,6 +34,13 @@ local drv = sfd.init("spi", 0, 17)
 if drv then
     log.info("sfd", "chip id", sfd.id(drv):toHex())
 end
+-- 2023.01.15之后的固件支持onchip类型, 支持直接读写片上flash的一小块区域,一般是64k
+-- 这块区域通常是fdb/fskv库所在的区域, 所以不要混着用
+local onchip = sfd.init("onchip")
+local data = sfd.read(onchip, 0x100, 256)
+sfd.erase(onchip, 0x100)
+sfd.write(onchip, 0x100, data or "Hi")
+
 
 ```
 

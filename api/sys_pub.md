@@ -149,6 +149,11 @@ sim卡状态变化
 
 ```lua
 sys.subscribe("SIM_IND", function(status)
+    -- status的取值有:
+    -- RDY SIM卡就绪
+    -- NORDY 无SIM卡
+    -- SIM_PIN 需要输入PIN
+    -- GET_NUMBER 获取到电话号码(不一定有值)
     log.info("sim status", status)
 end)
 
@@ -191,6 +196,26 @@ end)
 -- 与wlan库不同, 本消息不带ip地址
 sys.subscribe("IP_READY", function()
     log.info("mobile", "IP_READY")
+end)
+
+```
+
+---
+
+### IP_LOSE
+
+已断网
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+-- 断网后会发一次这个消息
+sys.subscribe("IP_LOSE", function()
+    log.info("mobile", "IP_LOSE")
 end)
 
 ```

@@ -1,6 +1,6 @@
 # iotauth - IoT鉴权库, 用于生成各种云平台的参数
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/iotauth/luat_lib_iotauth.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -24,7 +24,8 @@
 |string|device_name|
 |string|device_secret|
 |string|method 加密方式,"hmacmd5" "hmacsha1" "hmacsha256" 可选,默认"hmacmd5"|
-|number|cur_timestamp 可选|
+|number|cur_timestamp 可选 默认为 32472115200(2999-01-01 0:0:0)|
+|bool|istls 是否TLS直连 true:TLS直连  false:TCP直连模式 默认TCP直连模式|
 
 **返回值**
 
@@ -58,7 +59,7 @@ print(client_id,user_name,password)
 |string|device_name|
 |string|key|
 |string|method 加密方式,"md5" "sha1" "sha256" 可选,默认"md5"|
-|number|cur_timestamp 可选|
+|number|cur_timestamp 可选 默认为 32472115200(2999-01-01 0:0:0)|
 |string|version 可选 默认"2018-10-31"|
 
 **返回值**
@@ -72,14 +73,14 @@ print(client_id,user_name,password)
 **例子**
 
 ```lua
-local client_id,user_name,password = iotauth.onenet("123456789","test","KuF3NT/jUBJ62LNBB/A8XZA9CqS3Cu79B/ABmfA1UCw=","md5",1658920369,"2018-10-31")
+local client_id,user_name,password = iotauth.onenet("123456789","test","KuF3NT/jUBJ62LNBB/A8XZA9CqS3Cu79B/ABmfA1UCw=")
 print(client_id,user_name,password)
 
 ```
 
 ---
 
-## iotauth.iotda(device_id,device_secret,ins_timestamp,cur_timestamp)
+## iotauth.iotda(device_id,device_secret,cur_timestamp)
 
 
 
@@ -91,8 +92,7 @@ print(client_id,user_name,password)
 |-|-|
 |string|device_id|
 |string|device_secret|
-|number|ins_timestamp 是否校验时间戳 1:校验 0:不校验|
-|number|cur_timestamp 可选|
+|number|cur_timestamp 可选 如不填则不校验时间戳|
 
 **返回值**
 
@@ -105,7 +105,7 @@ print(client_id,user_name,password)
 **例子**
 
 ```lua
-local client_id,user_name,password = iotauth.iotda("6203cc94c7fb24029b110408_88888888","123456789",1,1659495778)
+local client_id,user_name,password = iotauth.iotda("6203cc94c7fb24029b110408_88888888","123456789")
 print(client_id,user_name,password)
 
 ```
@@ -122,11 +122,11 @@ print(client_id,user_name,password)
 
 |传入值类型|解释|
 |-|-|
-|string|product_id|
-|string|device_name|
-|string|device_secret|
+|string|产品id,创建项目后可以查看到,类似于LD8S5J1L07|
+|string|设备名称,例如设备的imei号|
+|string|设备密钥,创建设备后,查看设备详情可得到|
 |string|method 加密方式,"sha1" "sha256" 可选,默认"sha256"|
-|number|cur_timestamp 可选|
+|number|cur_timestamp 可选 默认为 32472115200(2999-01-01 0:0:0)|
 |string|sdk_appid 可选 默认为"12010126"|
 
 **返回值**
@@ -140,7 +140,7 @@ print(client_id,user_name,password)
 **例子**
 
 ```lua
-local client_id,user_name,password = iotauth.qcloud("LD8S5J1L07","test","acyv3QDJrRa0fW5UE58KnQ==", "sha1",1660103393)
+local client_id,user_name,password = iotauth.qcloud("LD8S5J1L07","test","acyv3QDJrRa0fW5UE58KnQ==")
 print(client_id,user_name,password)
 
 ```
@@ -159,7 +159,7 @@ print(client_id,user_name,password)
 |-|-|
 |string|device_id|
 |string|device_secret|
-|number|cur_timestamp 可选|
+|number|cur_timestamp 可选 默认为 32472115200(2999-01-01 0:0:0)|
 
 **返回值**
 
@@ -172,7 +172,7 @@ print(client_id,user_name,password)
 **例子**
 
 ```lua
-local client_id,user_name,password = iotauth.tuya("6c95875d0f5ba69607nzfl","fb803786602df760",1607635284)
+local client_id,user_name,password = iotauth.tuya("6c95875d0f5ba69607nzfl","fb803786602df760")
 print(client_id,user_name,password)
 
 ```
@@ -193,7 +193,7 @@ print(client_id,user_name,password)
 |string|device_key|
 |string|device_secret|
 |string|method 加密方式,"MD5" "SHA256" 可选,默认"MD5"|
-|number|cur_timestamp 可选|
+|number|cur_timestamp 可选 如不填则不校验时间戳|
 
 **返回值**
 
@@ -206,7 +206,7 @@ print(client_id,user_name,password)
 **例子**
 
 ```lua
-local client_id,user_name,password = iotauth.baidu("abcd123","mydevice","ImSeCrEt0I1M2jkl","MD5")
+local client_id,user_name,password = iotauth.baidu("abcd123","mydevice","ImSeCrEt0I1M2jkl")
 print(client_id,user_name,password)
 
 ```

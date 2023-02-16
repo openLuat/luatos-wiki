@@ -1,4 +1,4 @@
-# ⚡ Iot Power - CC
+# ⚡ IoT Power - CC
 
 ```{note}
 内测中，尚未发售，敬请期待！
@@ -59,8 +59,8 @@ IOT Power CC是广大用户随身携带的理想测试工具。
 请选择左侧的具体页面查看各项资料。
 
 ```{toctree}
+tech
 parts
 usage
-tech
 question
 ```

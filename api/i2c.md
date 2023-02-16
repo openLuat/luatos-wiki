@@ -1,6 +1,6 @@
 # i2c - I2C操作
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_i2c.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -88,8 +88,8 @@ i2c.setup(1, i2c.FAST) -- 端口正确就一定成功
 
 |传入值类型|解释|
 |-|-|
-|int|i2c SCL引脚编号|
-|int|i2c SDA引脚编号|
+|int|i2c SCL引脚编号(GPIO编号)|
+|int|i2c SDA引脚编号(GPIO编号)|
 |int|从设备地址（7位）, 例如0x38|
 
 **返回值**

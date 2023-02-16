@@ -10,11 +10,23 @@
 本库有专属demo，[点此链接查看errDump的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/errDump)
 ```
 
+**示例**
+
+```lua
+-- 基本用法, 10分钟上报一次,如果有的话
+if errDump then
+    errDump.config(true, 600)
+end
+
+-- 附开源服务器端: https://gitee.com/openLuat/luatos-devlog
+
+```
+
 ## errDump.dump(zbuff, type, isDelete)
 
 
 
-读取异常日志，这里可以读取系统和用户的，主要用于用户发送给自己的服务器，如果配置了周期上传，请不要使用！！！
+手动读取异常日志，主要用于用户将日志发送给自己的服务器而不是IOT平台，如果在errDump.config配置了周期上传，则不能使用本函数
 
 **参数**
 

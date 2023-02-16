@@ -1,6 +1,6 @@
 # rtc - 实时时钟
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_rtc.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -125,7 +125,7 @@ rtc.timerStop(0)
 
 
 
-设置RTC基准年
+设置RTC基准年,不推荐
 
 **参数**
 
@@ -141,6 +141,40 @@ rtc.timerStop(0)
 
 ```lua
 rtc.setBaseYear(1900)
+
+```
+
+---
+
+## rtc.timezone(tz)
+
+
+
+读取或设置时区
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|时区值,注意单位是1/4时区.例如东八区是 32,而非8. 可以不传|
+|return|当前/设置后的时区值|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 设置为东8区
+rtc.timezone(32)
+-- 设置为东3区
+rtc.timezone(12)
+-- 设置为西4区
+rtc.timezone(-16)
+-- 注意: 无论设置时区是多少, rtc.get/set总是UTC时间
+-- 时区影响的是 os.date/os.time 函数
+-- 只有部分模块支持设置时区, 且默认值一般为32, 即东八区
 
 ```
 

@@ -1,6 +1,6 @@
 # adc - 数模转换
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_adc.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -18,6 +18,8 @@
 |adc.ADC_RANGE_1_8|number|air105的ADC分压电阻关闭，范围0~1.88V|
 |adc.CH_CPU|number|CPU内部温度的通道id|
 |adc.CH_VBAT|number|VBAT供电电压的通道id|
+|adc.T1|number|ADC1 (如存在多个adc可利用此常量使用多ADC 例如 adc.open(ADC1+2) 打开ADC1 channel 2)|
+|adc.T2|number|ADC2 (如存在多个adc可利用此常量使用多ADC 例如 adc.open(ADC2+3) 打开ADC2 channel 3)|
 
 
 ## adc.open(id)

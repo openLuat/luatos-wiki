@@ -1,11 +1,14 @@
 # zbuff - c内存数据操作库
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_zbuff.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```
 
+```{tip}
+本库有专属demo，[点此链接查看zbuff的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/zbuff)
+```
 ```{tip}
 本库还有视频教程，[点此链接查看](https://www.bilibili.com/video/BV1gr4y1V7HN)
 ```

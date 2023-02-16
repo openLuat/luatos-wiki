@@ -1,13 +1,13 @@
 # ftp - ftp 客户端
 
-{bdg-success}`已适配` {bdg-primary}`Air105` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air105` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/network/libftp/luat_ftp_client.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```
 
 ```{tip}
-本库有专属demo，[点此链接查看ftp的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/socket)
+本库有专属demo，[点此链接查看ftp的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/ftp)
 ```
 
 ## ftp.login(adapter,ip_addr,port,username,password)
@@ -42,11 +42,46 @@ ftp_login = ftp.login(nil,"xxx")
 
 ---
 
+## ftp.command(cmd)
+
+
+
+FTP命令
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|cmd 命令 目前支持:NOOP SYST TYPE PWD MKD CWD CDUP RMD DELE LIST|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|成功返回true 失败返回string|
+
+**例子**
+
+```lua
+    print(ftp.command("NOOP").wait())
+    print(ftp.command("SYST").wait())
+    print(ftp.command("TYPE I").wait())
+    print(ftp.command("PWD").wait())
+    print(ftp.command("MKD QWER").wait())
+    print(ftp.command("CWD /QWER").wait())
+    print(ftp.command("CDUP").wait())
+    print(ftp.command("RMD QWER").wait())
+	print(ftp.command("DELE /1/12222.txt").wait())
+
+```
+
+---
+
 ## ftp.pull(local_name,remote_name)
 
 
 
-FTP客户端
+FTP文件下载
 
 **参数**
 
@@ -74,7 +109,7 @@ ftp.pull("/1222.txt","/1222.txt").wait()
 
 
 
-FTP客户端
+FTP文件上传
 
 **参数**
 
@@ -102,7 +137,7 @@ ftp.push("/1222.txt","/1222.txt").wait()
 
 
 
-FTP客户端
+FTP客户端关闭
 
 **参数**
 

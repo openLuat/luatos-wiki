@@ -81,6 +81,8 @@ idf.py set-target esp32c3
 idf.py build
 ```
 
+（idf.py set-target 为设置要编译的芯片 后面输入自己要编译的型号，不要无脑输入esp32c3）
+
 当出现`Project build complete.`字样则表示编译成功, 会生成 `.soc` 后的文件, 使用LuaTools刷机即可
 
 ## 定制固件里的库

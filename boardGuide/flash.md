@@ -83,6 +83,19 @@
 
 :::
 
+:::{tab-item} ESP32S3
+:sync: s3uart
+
+请勾选`通用串口打印`
+
+![](img/20221128132233.png)
+
+修改通用串口波特率，设置波特率为921600
+
+将设备通过usb线连接到电脑，可以看到出现一个新的COM口，在工具中选中这个COM口并打开
+
+:::
+
 ::::
 
 ### 烧录固件
@@ -130,10 +143,21 @@
 :::{tab-item} Air780
 :sync: air780
 
-找到Luatools所在的文件夹，文件夹的`Luatools/resource/`中就是自动下载的正式版本固件
+找到Luatools所在的文件夹，文件夹的`Luatools/resource/618_lua_lod/版本号`中就是自动下载的正式版本固件
 
 ```{important}
 烧录时的操作：先按住BOOT键，再按一下复位键，最后再松开BOOT键，即可进入BOOT模式等待烧录
+```
+
+:::
+
+:::{tab-item} ESP32S3
+:sync: s3uart
+
+找到Luatools所在的文件夹，文件夹的`Luatools/resource/esp32s3_lua_lod/版本号`中的，就是自动下载的正式版本固件
+
+```{important}
+一定要安装CH343的驱动才能正常下载固件，默认的CDC驱动打印日志没问题，但是速率太慢会导致下载失败。[驱动传送门](http://www.wch.cn/downloads/CH343SER_EXE.html)
 ```
 
 :::

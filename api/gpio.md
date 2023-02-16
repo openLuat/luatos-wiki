@@ -1,6 +1,6 @@
 # gpio - GPIO操作
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_gpio.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -41,7 +41,7 @@
 
 |传入值类型|解释|
 |-|-|
-|int|pin 针脚编号,必须是数值|
+|int|pin gpio编号,必须是数值|
 |any|mode 输入输出模式：<br>数字0/1代表输出模式<br>nil代表输入模式<br>function代表中断模式|
 |int|pull 上拉下列模式, 可以是gpio.PULLUP 或 gpio.PULLDOWN, 需要根据实际硬件选用|
 |int|irq 默认gpio.BOTH。中断触发模式<br>上升沿gpio.RISING<br>下降沿gpio.FALLING<br>上升和下降都要gpio.BOTH|
@@ -76,7 +76,7 @@ gpio.setup(27, function(val) print("IRQ_27",val) end, gpio.PULLUP)
 
 |传入值类型|解释|
 |-|-|
-|int|pin 针脚编号,必须是数值|
+|int|pin GPIO编号,必须是数值|
 |int|value 电平, 可以是 高电平gpio.HIGH, 低电平gpio.LOW, 或者直接写数值1或0|
 
 **返回值**
@@ -105,7 +105,7 @@ gpio.set(17, 0)
 
 |传入值类型|解释|
 |-|-|
-|int|pin 针脚编号,必须是数值|
+|int|pin GPIO编号,必须是数值|
 
 **返回值**
 
@@ -133,7 +133,7 @@ gpio.get(17)
 
 |传入值类型|解释|
 |-|-|
-|int|pin 针脚编号,必须是数值|
+|int|pin GPIO编号,必须是数值|
 
 **返回值**
 

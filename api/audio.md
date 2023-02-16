@@ -1,6 +1,6 @@
 # audio - 多媒体-音频
 
-{bdg-success}`已适配` {bdg-primary}`Air105` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air105` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/multimedia/luat_lib_multimedia_audio.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -136,7 +136,7 @@ audio.pause(0, false) --恢复通道0
 |传入值类型|解释|
 |-|-|
 |int|audio id, audio 0写0, audio 1写1|
-|function|回调方法|
+|function|回调方法，回调时传入参数为1、int 通道ID 2、int 消息值，只有audio.MORE_DATA和audio.DONE|
 
 **返回值**
 
@@ -147,8 +147,8 @@ audio.pause(0, false) --恢复通道0
 **例子**
 
 ```lua
-audio.on(0, function(id, str)
-    print(id, str)
+audio.on(0, function(audio_id, msg)
+    log.info("msg", audio_id, msg)
 end)
 
 ```
@@ -237,7 +237,7 @@ audio.playStop(0)
 
 ---
 
-## audio.isEnd(id, path)
+## audio.isEnd(id)
 
 
 
@@ -279,11 +279,18 @@ audio.isEnd(0)
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|boolean|是否全部播放成功，true成功，false有文件播放失败|
+|boolean|如果播放失败，是否是用户停止，true是，false不是|
+|int|第几个文件失败了，从1开始|
 
 **例子**
 
-无
+```lua
+local result, user_stop, file_no = audio.getError(0)
+
+```
 
 ---
 
@@ -304,7 +311,6 @@ audio.isEnd(0)
 |int|在DAC启动后，延迟多长时间打开PA，单位1ms|
 |int|外部dac电源控制IO，如果不填，则表示使用平台默认IO，比如Air780E使用DACEN脚，air105则不启用|
 |int|外部dac打开时，电源控制IO的电平，默认拉高|
-|return|无|
 
 **返回值**
 

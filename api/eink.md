@@ -1,6 +1,6 @@
 # eink - 墨水屏操作库
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/eink/luat_lib_eink.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -450,7 +450,7 @@ eink.circle(0, 0, 10, 1, 1) -- Filled
 |int|x坐标|
 |int|y坐标|
 |string|二维码的内容|
-|int|可选,显示大小,不可小于21,默认21|
+|int|显示大小 (注意:二维码生成大小与要显示内容和纠错等级有关,生成版本为1-40(对应 21x21 - 177x177)的不定大小,如果和设置大小不同会自动在指定的区域中间显示二维码,如二维码未显示请查看日志提示)|
 
 **返回值**
 

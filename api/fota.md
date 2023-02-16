@@ -1,16 +1,16 @@
 # fota - 底层固件升级
 
-{bdg-success}`已适配` {bdg-primary}`Air105` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air105` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_fota.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```
 
 ```{tip}
-本库有专属demo，[点此链接查看fota的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/ota)
+本库有专属demo，[点此链接查看fota的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/fota)
 ```
 
-## fota.fotaInit(storge_location, len, param1)
+## fota.init(storge_location, len, param1)
 
 
 
@@ -34,14 +34,14 @@
 
 ```lua
 -- 初始化fota流程
-local result = mcu.fotaInit(0, 0x00300000, spi_device)	--由于105的flash从0x01000000开始，所以0就是外部spiflash
-local result = mcu.fotaInit()	--ec618使用固定内部地址，所以不需要参数了
+local result = fota.init(0, 0x00300000, spi_device)	--由于105的flash从0x01000000开始，所以0就是外部spiflash
+local result = fota.init()	--ec618使用固定内部地址，所以不需要参数了
 
 ```
 
 ---
 
-## fota.fotaWait()
+## fota.wait()
 
 
 
@@ -62,13 +62,13 @@ local result = mcu.fotaInit()	--ec618使用固定内部地址，所以不需要�
 **例子**
 
 ```lua
-local isDone = mcu.fotaWait()
+local isDone = fota.wait()
 
 ```
 
 ---
 
-## fota.fotaRun(buff)
+## fota.run(buff)
 
 
 
@@ -84,20 +84,20 @@ local isDone = mcu.fotaWait()
 
 |返回值类型|解释|
 |-|-|
-|boolean|有异常返回true|
+|boolean|有异常返回false，无异常返回true|
 |boolean|接收到最后一块返回true|
 |int|还未写入的数据量，超过64K必须做等待|
 
 **例子**
 
 ```lua
-local isError, isDone, cache = fota.fotaRun(buf) -- 写入fota流程
+local result, isDone, cache = fota.run(buf) -- 写入fota流程
 
 ```
 
 ---
 
-## fota.fotaDone()
+## fota.isDone()
 
 
 
@@ -105,27 +105,25 @@ local isError, isDone, cache = fota.fotaRun(buf) -- 写入fota流程
 
 **参数**
 
-|传入值类型|解释|
-|-|-|
-|boolean|是否完整走完流程，true 表示正确走完流程了|
+无
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|boolean|有异常返回true|
+|boolean|有异常返回false，无异常返回true|
 |boolean|写入到最后一块返回true|
 
 **例子**
 
 ```lua
-local isError, isDone = mcu.fotaDone()
+local result, isDone = fota.isDone()
 
 ```
 
 ---
 
-## fota.fotaEnd(is_ok)
+## fota.finish(is_ok)
 
 
 
@@ -147,7 +145,7 @@ local isError, isDone = mcu.fotaDone()
 
 ```lua
 -- 结束fota流程
-local result = mcu.fotaEnd(true)
+local result = fota.finish(true)
 
 ```
 

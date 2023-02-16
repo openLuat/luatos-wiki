@@ -1,6 +1,6 @@
 # pm - 电源管理
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_pm.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -22,6 +22,9 @@
 |pm.USB|number|USB电源|
 |pm.GPS|number|GPS电源|
 |pm.GPS_ANT|number|GPS的天线电源，有源天线才需要|
+|pm.CAMERA|number|camera电源，CAM_VCC输出|
+|pm.DAC_EN|number|Air780E和Air600E的DAC_EN，注意audio的默认配置会自动使用这个脚来控制CODEC的使能|
+|pm.PWK_MODE|number|是否开启ec618的powerkey滤波模式，true开，注意滤波模式下reset变成直接关机|
 
 
 ## pm.request(mode)
@@ -158,6 +161,7 @@ pm.dtimerCheck(0) -- 检查id=0的底层定时器
 |-|-|
 |int|0-上电/复位开机, 1-RTC开机, 2-WakeupIn/Pad/IO开机, 3-Wakeup/RTC开机|
 |int|0-普通开机(上电/复位),3-深睡眠开机,4-休眠开机，3和4说明程序已经复位了|
+|int|复位开机详细原因：0-powerkey或者上电开机 1-充电或者AT指令下载完成后开机 2-闹钟开机 3-软件重启 4-未知原因 5-RESET键 6-异常重启 7-工具控制重启 8-内部看门狗重启 9-外部重启 10-充电开机|
 
 **例子**
 

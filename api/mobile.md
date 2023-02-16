@@ -1,6 +1,6 @@
 # mobile - 蜂窝网络
 
-{bdg-success}`已适配` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/mobile/luat_lib_mobile.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -148,6 +148,30 @@ log.info("simid", mobile.simid())
 
 ---
 
+## mobile.number(id)
+
+
+
+获取手机卡号，注意，只有写入了手机号才能读出，因此有可能读出来是空的
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|SIM卡的编号, 例如0, 1, 默认0|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|number值,若失败返回nil|
+
+**例子**
+
+无
+
+---
+
 ## mobile.simid(id)
 
 
@@ -158,7 +182,8 @@ log.info("simid", mobile.simid())
 
 |传入值类型|解释|
 |-|-|
-|int|SIM卡的编号, 例如0, 1，如果支持双卡，比如EC618，可以填2来自适应，但是会占用掉4个IO。如果不填就直接读取当前卡槽|
+|int|SIM卡的编号, 例如0, 1, 如果支持双卡，比如EC618，可以填2来自适应，但是会占用掉4个IO。如果不填就直接读取当前卡槽|
+|boolean|是否优先用SIM0，只有SIM卡编号写2自适应才有用！！！。true优先用SIM0，false则优先用上一次探测到的，默认是false，必须在开机就配置，否则就无效了|
 
 **返回值**
 
@@ -222,7 +247,7 @@ log.info("simid", mobile.simid())
 
 ---
 
-## mobile.apn(index, newvalue)
+## mobile.apn(index, cid, newvalue)
 
 
 
@@ -240,7 +265,31 @@ log.info("simid", mobile.simid())
 
 |返回值类型|解释|
 |-|-|
-|string|当前的APN值,若失败返回nil|
+|string|获取到的默认APN值,失败返回nil|
+
+**例子**
+
+无
+
+---
+
+## mobile.ipv6(onff)
+
+
+
+是否默认开启IPV6功能，必须在LTE网络连接前就设置好
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|boolean|开关 true开启 false 关闭|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|true 当前是开启的，false 当前是关闭的|
 
 **例子**
 
@@ -452,6 +501,67 @@ end)
 
 ```lua
 -- 参考 mobile.getCellInfo 函数
+
+```
+
+---
+
+## mobile.reset()
+
+
+
+重启协议栈
+
+**参数**
+
+无
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 重启LTE协议栈
+mobile.reset()
+
+```
+
+---
+
+## mobile.dataTraffic(clearUplink, clearDownlink)
+
+
+
+数据量流量处理
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|boolean|清空上行流量累计值，true清空，其他忽略|
+|boolean|清空下行流量累计值，true清空，其他忽略|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|上行流量GB|
+|int|上行流量B|
+|int|下行流量GB|
+|int|下行流量B|
+
+**例子**
+
+```lua
+-- 获取上下行流量累计值
+-- 上行流量值Byte = uplinkGB * 1024 * 1024 * 1024 + uplinkB
+-- 下行流量值Byte = downlinkGB * 1024 * 1024 * 1024 + downlinkB
+local uplinkGB, uplinkB, downlinkGB, downlinkB = mobile.dataTraffic()
+
+-- 清空上下行流量累计值
+mobile.dataTraffic(true, true)
 
 ```
 

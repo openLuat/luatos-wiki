@@ -13,12 +13,12 @@ LuatOS源码仓库：https://gitee.com/openLuat/LuatOS
 .. toctree::
    :hidden:
 
+   compile/Cloud_compilation
+   compile/Air780E
    compile/Air101
    compile/Air105
    compile/ESP32C3
    compile/Win32
-   compile/Cloud_compilation
    compile/Air640w
    compile/Air302
-   compile/Air780E
 

@@ -63,6 +63,8 @@ camera.start(camera_id)--开始指定的camera
 
 ```lua
 camera.on(0, "scanned", function(id, str)
+--id int camera id
+--str 多种类型 false 摄像头没有正常工作，true 拍照模式下拍照成功并保存完成， int 原始数据模式下本次返回的数据大小， string 扫码模式下扫码成功后的解码值
     print(id, str)
 end)
 
@@ -151,7 +153,7 @@ camera.close(0)
 
 ---
 
-## camera.capture(id, y_diff, save_path, quality)
+## camera.capture(id, save_path, quality)
 
 
 
@@ -162,7 +164,6 @@ camera拍照
 |传入值类型|解释|
 |-|-|
 |int|camera id,例如0|
-|int|y_diff,Y分量校准量，0~255，越大越亮，根据实际情况修改，GC032A测试下来需要填0|
 |string|save_path,文件保存路径，空则写在上次路径里，默认是/capture.jpg|
 |int|quality, jpeg压缩质量，1最差，占用空间小，3最高，占用空间最大而且费时间，默认1|
 

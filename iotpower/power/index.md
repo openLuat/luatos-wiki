@@ -1,4 +1,4 @@
-# 🔋 Iot Power - 经典
+# 🔋 IoT Power - 经典
 
 ## 概述
 

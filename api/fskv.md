@@ -1,6 +1,6 @@
 # fskv - kv数据库,掉电不丢数据
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/fskv/luat_lib_fskv.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -41,10 +41,7 @@ fskv与fdb的实现机制导致的差异
 
 **参数**
 
-|传入值类型|解释|
-|-|-|
-|string|数据库名,当前仅支持env|
-|string|FAL分区名,当前仅支持onchip_fdb|
+无
 
 **返回值**
 
@@ -67,7 +64,7 @@ end
 
 ---
 
-## fskv.kv_set(key, value)
+## fskv.set(key, value)
 
 
 
@@ -78,27 +75,29 @@ end
 |传入值类型|解释|
 |-|-|
 |string|key的名称,必填,不能空字符串|
-|string|用户数据,必填,不能nil, 支持字符串/数值/table/布尔值, 数据长度最大4096字节|
+|string|用户数据,必填,不能nil, 支持字符串/数值/table/布尔值, 数据长度最大4095字节|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
 |boolean|成功返回true,否则返回false|
-|number|第二个为返回为flashdb的fdb_kv_set_blob返回详细状态,0：无错误 1:擦除错误 2:读错误 3:些错误 4:未找到 5:kv名字错误 6:kv名字存在 7:已保存 8:初始化错误|
 
 **例子**
 
 ```lua
-if fskv.kvdb_init("env", "onchip_fdb") then
-    log.info("fdb", fskv.kv_set("wendal", "goodgoodstudy"))
-end
+-- 设置数据, 字符串,数值,table,布尔值,均可
+-- 但不可以是nil, function, userdata, task
+log.info("fdb", fskv.set("wendal", "goodgoodstudy"))
+log.info("fdb", fskv.set("upgrade", true))
+log.info("fdb", fskv.set("timer", 1))
+log.info("fdb", fskv.set("bigd", {name="wendal",age=123}))
 
 ```
 
 ---
 
-## fskv.kv_get(key, skey)
+## fskv.get(key, skey)
 
 
 
@@ -109,7 +108,7 @@ end
 |传入值类型|解释|
 |-|-|
 |string|key的名称,必填,不能空字符串|
-|string|可选的次级key,仅当原始值为table时有效,相当于 fskv.kv_get(key)[skey]|
+|string|可选的次级key,仅当原始值为table时有效,相当于 fskv.get(key)[skey]|
 
 **返回值**
 
@@ -128,7 +127,7 @@ end
 
 ---
 
-## fskv.kv_del(key)
+## fskv.del(key)
 
 
 
@@ -149,15 +148,13 @@ end
 **例子**
 
 ```lua
-if fskv.kvdb_init("env", "onchip_fdb") then
-    log.info("fdb", fskv.kv_del("wendal"))
-end
+log.info("fdb", fskv.del("wendal"))
 
 ```
 
 ---
 
-## fskv.kv_clr()
+## fskv.clear()
 
 
 
@@ -177,13 +174,85 @@ end
 
 ```lua
 -- 清空
-fskv.kv_clr()
+fskv.clear()
 
 ```
 
 ---
 
-## fskv.stat()
+## fskv.iter()
+
+
+
+kv数据库迭代器
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|userdata|成功返回迭代器指针,否则返回nil|
+
+**例子**
+
+```lua
+-- 清空
+local iter = fskv.iter()
+if iter then
+    while 1 do
+        local k = fskv.next(iter)
+        if not k then
+            break
+        end
+        log.info("fdb", k, "value", fskv.kv_get(k))
+    end
+end
+
+```
+
+---
+
+## fskv.iter(iter)
+
+
+
+kv迭代器获取下一个key
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|fskv.iter()返回的指针|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|成功返回字符串key值, 否则返回nil|
+
+**例子**
+
+```lua
+-- 清空
+local iter = fskv.iter()
+if iter then
+    while 1 do
+        local k = fskv.next(iter)
+        if not k then
+            break
+        end
+        log.info("fskv", k, "value", fskv.get(k))
+    end
+end
+
+```
+
+---
+
+## fskv.status()
 
 
 
@@ -204,7 +273,7 @@ fskv.kv_clr()
 **例子**
 
 ```lua
-local used, total,kv_count = fskv.stat()
+local used, total,kv_count = fskv.status()
 log.info("fdb", "kv", used,total,kv_count)
 
 ```

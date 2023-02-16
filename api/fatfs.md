@@ -1,6 +1,6 @@
 # fatfs - 读写fatfs格式
 
-{bdg-success}`已适配` {bdg-primary}`Air105` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/fatfs/luat_lib_fatfs.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -17,7 +17,7 @@
 
 ```
 
-## fatfs.mount(mount_point, spiid_or_spidevice, spi_cs, spi_speed)
+## fatfs.mount(mode,mount_point, spiid_or_spidevice, spi_cs, spi_speed)
 
 
 
@@ -27,9 +27,10 @@
 
 |传入值类型|解释|
 |-|-|
+|int|fatfs模式,可选fatfs.SPI,fatfs.SDIO,fatfs.RAM,fatfs.USB|
 |string|fatfs挂载点, 通常填""或者"SD", 底层会映射到vfs的 /sd 路径|
-|int|传入spi device指针,或者spi的id|
-|int|片选脚的GPIO 号, 若前一个参数传的是spi device,这个参数就不需要传|
+|int|传入spi device指针,或者spi的id,或者sdio的id|
+|int|片选脚的GPIO 号, spi模式有效,若前一个参数传的是spi device,这个参数就不需要传|
 |int|SPI最高速度,默认10M, 若前2个参数传的是spi device,这个参数就不需要传|
 
 **返回值**
@@ -56,7 +57,7 @@
     gpio.setup(TF_CS, 1)
     --fatfs.debug(1) -- 若挂载失败,可以尝试打开调试信息,查找原因
 	-- 提醒, 若TF/SD模块带电平转换, 通常不支持10M以上的波特率!!
-    fatfs.mount("SD", spiId, TF_CS, 24000000)
+    fatfs.mount(fatfs.SPI,"SD", spiId, TF_CS, 24000000)
     local data, err = fatfs.getfree("SD")
     if data then
         log.info("fatfs", "getfree", json.encode(data))

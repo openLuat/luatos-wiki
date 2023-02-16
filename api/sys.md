@@ -1,6 +1,6 @@
 # sys - sys库
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`Air780`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_sys_doc.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -194,7 +194,8 @@ end, 1000, "A", "B", "N")
 
 ```lua
 local tcount = 0
-local tid = sys.timerLoopStart(function(a, b, c)
+local tid 
+tid = sys.timerLoopStart(function(a, b, c)
     log.info("task", a, b, c) -- 1000毫秒后才会执行, 打印 task A B C
     if tcount > 10 then
         sys.timerStop(tid)
