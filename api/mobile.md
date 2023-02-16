@@ -530,3 +530,40 @@ mobile.reset()
 
 ---
 
+## mobile.dataTraffic(clearUplink, clearDownlink)
+
+
+
+数据量流量处理
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|boolean|清空上行流量累计值，true清空，其他忽略|
+|boolean|清空下行流量累计值，true清空，其他忽略|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|上行流量GB|
+|int|上行流量B|
+|int|下行流量GB|
+|int|下行流量B|
+
+**例子**
+
+```lua
+-- 获取上下行流量累计值
+-- 上行流量值Byte = uplinkGB * 1024 * 1024 * 1024 + uplinkB
+-- 下行流量值Byte = downlinkGB * 1024 * 1024 * 1024 + downlinkB
+local uplinkGB, uplinkB, downlinkGB, downlinkB = mobile.dataTraffic()
+
+-- 清空上下行流量累计值
+mobile.dataTraffic(true, true)
+
+```
+
+---
+
