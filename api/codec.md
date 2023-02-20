@@ -97,11 +97,16 @@ decoder从文件中解析出原始音频数据，比如从MP3文件里解析出P
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|boolean|是否成功解析|
 
 **例子**
 
-无
+```lua
+local result = codec.get_audio_data(coder, zbuff)
+
+```
 
 ---
 
@@ -119,7 +124,7 @@ decoder从文件中解析出原始音频数据，比如从MP3文件里解析出P
 |zbuff|输入的数据,zbuff形式,从0到used|
 |zbuff|输出的数据,zbuff形式,自动添加到buff的尾部,如果空间大小不足,会自动扩展,但是会额外消耗时间,甚至会失败,所以尽量一开始就给足空间|
 |int|amr_nb的编码等级 0~7(即 MR475~MR122)值越大消耗的空间越多,音质越高,默认0|
-|result|boolean,成功返回true,失败返回false|
+|return|boolean,成功返回true,失败返回false|
 
 **返回值**
 
