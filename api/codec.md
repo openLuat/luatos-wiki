@@ -16,6 +16,8 @@
 |-|-|-|
 |codec.MP3|number|MP3格式|
 |codec.WAV|number|WAV格式|
+|codec.AMR|number|AMR-NB格式，一般意义上的AMR|
+|codec.AMR_WB|number|AMR-WB格式|
 
 
 ## codec.create(codec.MP3, isDecoder)
@@ -57,7 +59,7 @@ decoder从文件中解析出音频信息
 
 |传入值类型|解释|
 |-|-|
-|coder|解码用的decoder|
+|userdata|解码用的decoder|
 |string|文件路径|
 
 **返回值**
@@ -90,7 +92,7 @@ decoder从文件中解析出原始音频数据，比如从MP3文件里解析出P
 
 |传入值类型|解释|
 |-|-|
-|coder|解码用的decoder|
+|userdata|解码用的decoder|
 |zbuff|存放输出数据的zbuff，空间必须不少于16KB|
 
 **返回值**
@@ -100,6 +102,35 @@ decoder从文件中解析出原始音频数据，比如从MP3文件里解析出P
 **例子**
 
 无
+
+---
+
+## codec.encode(coder, in_buffer, out_buffer, mode)
+
+
+
+编码音频数据，由于flash和ram空间一般比较有限，目前只支持amr-nb编码
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|codec.create创建的编解码用的coder|
+|zbuff|输入的数据,zbuff形式,从0到used|
+|zbuff|输出的数据,zbuff形式,自动添加到buff的尾部,如果空间大小不足,会自动扩展,但是会额外消耗时间,甚至会失败,所以尽量一开始就给足空间|
+|int|amr_nb的编码等级 0~7(即 MR475~MR122)值越大消耗的空间越多,音质越高,默认0|
+|result|boolean,成功返回true,失败返回false|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+codec.encode(amr_coder, inbuf, outbuf, codec.AMR_)
+
+```
 
 ---
 
