@@ -247,19 +247,23 @@ log.info("simid", mobile.simid())
 
 ---
 
-## mobile.apn(index, cid, newvalue)
+## mobile.apn(index, cid, new_apn_name, user_name, password, ip_type, protocol)
 
 
 
-获取或设置APN
+获取或设置APN，设置APN必须在入网前就设置好，比如在SIM卡识别完成前就设置好
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
 |int|编号,默认0. 在支持双卡的模块上才会出现0或1的情况|
-|int|cid, 默认0|
-|string|新的APN. 不填就是获取APN, 填了就是设置APN, 是否支持设置取决于底层实现.|
+|int|cid, 默认0，如果要用非默认APN来激活，必须>1|
+|string|新的APN,不填就是获取APN, 填了就是设置APN, 是否支持设置取决于底层实现|
+|string|新的APN的username,可以为nil|
+|string|新的APN的password,可以为nil|
+|int|激活APN时的IP TYPE,1=IPV4 2=IPV6 3=IPV4V6,默认是1|
+|int|激活APN时,如果需要username和password,就要写鉴权协议类型,0~2或者按照实际情况写。|
 
 **返回值**
 
