@@ -103,12 +103,13 @@ void luat_custom_init(lua_State *L) { // 函数声明在luat_base.h里
 
 ## 拓展1-- 函数比较多, 我想做成一个库可以吗?
 
-必须可以呀
+必须可以呀, 直接用现成的lib_xx.c拷贝改一改也是很快的方式
 
 * 先给库起个酷炫的名字
 * 仿造已有的`luat_lib_xxx.c` 写一个库
 * 最初建议只写1个函数, 声明好`rotable_Reg`和`luaopen_xxx`方法
 * 在 `custom_init` 里调用 `luaopen_xxx` 方法即可
+* 如果不使用custom_init, luat_base_xxx.c 也声明
 
 ## 拓展2 -- 添加静态库进行链接
 
