@@ -207,7 +207,7 @@ local value = mcu.x32(0x2009FFFC) --输出"0x2009fffc"
 
 
 
-获取启动后的高精度tick,目前只有101/103/105能用
+获取启动后的高精度tick
 
 **参数**
 
@@ -234,7 +234,7 @@ print("ticks", tick_str, tick_per)
 
 
 
-计算2个64bit tick的差值,目前只有105能用
+计算2个64bit tick的差值
 
 **参数**
 
