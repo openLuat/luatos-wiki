@@ -9,12 +9,15 @@ GPS/GNSS 属于一堆事物的称呼, 下文如无特别说明,都是指"卫星�
 UART部分:
 1. Air780EG的GPS芯片接在  `UART2/AUX_UART`, 所以这个端口是被占用的
 2. 因为UART的特性, 虽然引出了UART2_RX, 但不可以外接数据线直接给GPS芯片发指令,需要走代码从780e内部发
+3. 默认波特率是 115200
+4. 使用的指令与Air510U是一样的, [Air510U资料网站](https://air510u.cn)
 
 供电部分:
 1. Air780EG的GPS的供电是 `GPIO13/PAD12`, 注意是 `PAD12/padaddr 12`, 非 `PAD28`
 2. 芯片供电和有源天线的供电,是一起控制的, 只用了一个GPIO,一个API控制
 3. 因为使用的是普通GPIO,`SLEEP1/LIGHT能保持供电`,但`SLEEP2/DEEP/HIB模式下会掉电`的
 4. 在lua代码中, 控制供电API是 `pm.power(pm.GPS, true)`, 虽然有pm.GPS_ANT,但对Air780EG无效
+5. 飞行模式是射频相关的控制,不影响GPIO供电,所以不影响GPS供电
 
 ## 定位特性
 
@@ -27,7 +30,7 @@ UART部分:
 
 ## 辅助定位相关
 
-因为GPS芯片是掉电全丢,所以辅助定位均依赖Air780EG中Cat.1芯片的能力
+内置的GPS芯片是掉电后数据全丢,所以辅助定位均依赖Air780EG中Cat.1芯片的能力
 
 1. 星历, 通过http从合宙服务器下载 `http://download.openluat.com/9501-xingli/HXXT_GPS_BDS_AGNSS_DATA.dat`
 2. 参考坐标, 三种方式, 基站定位库`lbsLoc`, 上次定位成功的坐标存文件系统, 使用中国国家地理中心坐标(3432.70,N,10885.25,E)
