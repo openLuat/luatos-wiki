@@ -23,6 +23,7 @@ Air780E 是合宙通信推出的 LTE Cat.1 bis通信模块，采用移芯EC618�
 3. 不支持 `wifi`通信, 仅支持特定场景下的wifi scan
 4. 不支持VoLTE, 不支持2G/3G的语音
 
+Air780EG的差异,请查阅文档 [Air780EG的额外说明](air780eg.md)
 
 ## 固件下载
 
