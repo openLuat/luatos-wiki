@@ -20,6 +20,7 @@
    mcp2515
    mlx90614
    mpu6xxx
+   netLed
    pcf8574
    qmc5883l
    rc522
