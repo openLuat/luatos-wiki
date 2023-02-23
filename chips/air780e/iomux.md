@@ -102,3 +102,8 @@ Air780E(EC618全系)支持多个虚拟的GPIO, 将非GPIO管脚通过软件模�
 |33| vbus   |仅支持输入和中断| USB的VBUS, 检测USB是否是插入状态|
 |34| wakeup2|仅支持输入和中断| wakeup2休眠唤醒脚, USIM_DET|
 |35| pwrkey |仅支持输入和中断| 即开机键, 开机之后当普通GPIO使用|
+
+vbus的说明: 
+1. 对EC618的vbus就是wakeup1
+2. 在CSDK/LuatOS固件中, 与USB功能是解耦的
+3. 与常规认识不同, 在不接vbus的情况下, USB DP/DM依然可用
