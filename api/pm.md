@@ -250,7 +250,7 @@ pm.force(pm.HIB)
 
 
 
-检查休眠状态,仅air302适用.
+检查休眠状态
 
 **参数**
 
@@ -337,7 +337,7 @@ pm.shutdown()
 
 |传入值类型|解释|
 |-|-|
-|int|电源控制id,pm.USB pm.GPS pm.GPS_ANT之类|
+|int|电源控制id,pm.USB pm.GPS之类|
 |boolean|开关true开，false关，默认关|
 
 **返回值**
@@ -349,7 +349,13 @@ pm.shutdown()
 **例子**
 
 ```lua
-pm.power(pm.USB, false) --关闭USB电源
+-- 关闭USB电源
+pm.power(pm.USB, false) 
+-- Air780EG,为内置的GPS芯片上电. 注意, Air780EG的GPS和GPS_ANT是一起控制的,所以合并了.
+pm.power(pm.GPS, true)
+-- Air780EG开启pwrkey开机防抖
+-- 注意: 开启后, 复位键就变成关机了!!! pwrkey要长按2秒才能开机
+-- pm.power(pm.PWK_MODE, true)
 
 ```
 

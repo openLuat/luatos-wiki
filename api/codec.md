@@ -20,7 +20,7 @@
 |codec.AMR_WB|number|AMR-WB格式|
 
 
-## codec.create(codec.MP3, isDecoder)
+## codec.create(type, isDecoder)
 
 
 
@@ -30,7 +30,7 @@
 
 |传入值类型|解释|
 |-|-|
-|int|多媒体类型，目前支持decode.MP3|
+|int|多媒体类型，目前支持codec.MP3 codec.AMR|
 |boolean|是否是解码器，true解码器，false编码器，默认true，是解码器|
 
 **返回值**
@@ -42,8 +42,10 @@
 **例子**
 
 ```lua
--- 创建decoder
+-- 创建解码器
 local decoder = codec.create(codec.MP3)--创建一个mp3的decoder
+-- 创建编码器
+local encoder = codec.create(codec.AMR, false)--创建一个amr的encoder
 
 ```
 
