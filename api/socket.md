@@ -10,12 +10,12 @@
 
 |常量|类型|解释|
 |-|-|-|
-|socket.ETH0|number|带硬件协议栈的ETH0|
-|socket.LWIP_ETH|number|使用LWIP协议栈的以太网卡|
-|socket.LWIP_STA|number|使用LWIP协议栈的WIFI STA|
-|socket.LWIP_AP|number|使用LWIP协议栈的WIFI AP|
-|socket.LWIP_GP|number|使用LWIP协议栈的移动蜂窝模块|
-|socket.USB|number|使用LWIP协议栈的USB网卡|
+|socket.ETH0|number|带硬件协议栈的ETH0，值为5|
+|socket.LWIP_ETH|number|使用LWIP协议栈的以太网卡，值为4|
+|socket.LWIP_STA|number|使用LWIP协议栈的WIFI STA，值为2|
+|socket.LWIP_AP|number|使用LWIP协议栈的WIFI AP，值为3|
+|socket.LWIP_GP|number|使用LWIP协议栈的移动蜂窝模块，值为1|
+|socket.USB|number|使用LWIP协议栈的USB网卡，值为6|
 |socket.LINK|number|LINK事件|
 |socket.ON_LINE|number|ON_LINE事件|
 |socket.EVENT|number|EVENT事件|
@@ -479,6 +479,40 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 **例子**
 
 无
+
+---
+
+## socket.adapter(index, default)
+
+
+
+查看网卡适配器的联网状态，设置默认网卡适配器
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|需要查看的适配器序号，可以留空会查看默认网卡，如果指定网卡，只能是socket.ETH0（外置以太网），socket.LWIP_ETH（内置以太网），socket.LWIP_STA（内置WIFI的STA），socket.LWIP_AP（内置WIFI的AP），socket.LWIP_GP（内置蜂窝网络的GPRS），socket.USB（外置USB网卡）|
+|int|需要设置的默认网卡适配器序号，一般情况下不需要设置，不需要填写|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|被查看的适配器是否IP READY,true表示已经准备好可以联网了,false暂时不可以联网|
+|int|默认使用的适配器序号，即socket.create时不指定网卡的情况下，默认使用的网卡|
+
+**例子**
+
+```lua
+--查看默认网卡是否IP READY
+local isReady,default = socket.adapter()
+--查看外置以太网（比如W5500）是否IP READY
+local isReady,default = socket.adapter(socket.ETH0)
+--设置外置以太网（比如W5500）为默认网卡
+local isReady,default = socket.adapter(nil, socket.ETH0)
+
+```
 
 ---
 
