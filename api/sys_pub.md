@@ -98,6 +98,54 @@ end)
 
 ---
 
+## w5500
+
+
+
+[w5500接口文档页](https://wiki.luatos.com/api/w5500.html)
+
+
+
+### IP_READY
+
+已联网
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+-- 联网后会发一次这个消息
+sys.subscribe("IP_READY", function(ip, adapter)
+    log.info("w5500", "IP_READY", ip, (adapter or -1) == socket.LWIP_GP)
+end)
+
+```
+
+---
+
+### IP_LOSE
+
+已断网
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+-- 断网后会发一次这个消息
+sys.subscribe("IP_LOSE", function(adapter)
+    log.info("w5500", "IP_LOSE", (adapter or -1) == socket.ETH0)
+end)
+
+```
+
+---
+
 ## libgnss
 
 
@@ -193,9 +241,8 @@ end)
 
 ```lua
 -- 联网后会发一次这个消息
--- 与wlan库不同, 本消息不带ip地址
-sys.subscribe("IP_READY", function()
-    log.info("mobile", "IP_READY")
+sys.subscribe("IP_READY", function(ip, adapter)
+    log.info("mobile", "IP_READY", ip, (adapter or -1) == socket.LWIP_GP)
 end)
 
 ```
@@ -214,8 +261,8 @@ end)
 
 ```lua
 -- 断网后会发一次这个消息
-sys.subscribe("IP_LOSE", function()
-    log.info("mobile", "IP_LOSE")
+sys.subscribe("IP_LOSE", function(adapter)
+    log.info("mobile", "IP_LOSE", (adapter or -1) == socket.LWIP_GP)
 end)
 
 ```
