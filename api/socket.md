@@ -482,35 +482,32 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 ---
 
-## socket.adapter(index, default)
+## socket.adapter(index)
 
 
 
-查看网卡适配器的联网状态，设置默认网卡适配器
+查看网卡适配器的联网状态
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|int|需要查看的适配器序号，可以留空会查看默认网卡，如果指定网卡，只能是socket.ETH0（外置以太网），socket.LWIP_ETH（内置以太网），socket.LWIP_STA（内置WIFI的STA），socket.LWIP_AP（内置WIFI的AP），socket.LWIP_GP（内置蜂窝网络的GPRS），socket.USB（外置USB网卡）|
-|int|需要设置的默认网卡适配器序号，一般情况下不需要设置，不需要填写|
+|int|需要查看的适配器序号，可以留空会查看全部网卡，直到遇到IP READY的，如果指定网卡，只能是socket.ETH0（外置以太网），socket.LWIP_ETH（内置以太网），socket.LWIP_STA（内置WIFI的STA），socket.LWIP_AP（内置WIFI的AP），socket.LWIP_GP（内置蜂窝网络的GPRS），socket.USB（外置USB网卡）|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
 |boolean|被查看的适配器是否IP READY,true表示已经准备好可以联网了,false暂时不可以联网|
-|int|默认使用的适配器序号，即socket.create时不指定网卡的情况下，默认使用的网卡|
+|int|最后一个被查看的适配器序号|
 
 **例子**
 
 ```lua
---查看默认网卡是否IP READY
-local isReady,default = socket.adapter()
+-- 查看全部网卡，直到找到一个是IP READY的
+local isReady,index = socket.adapter() --如果isReady为true,则index为IP READY的网卡适配器序号
 --查看外置以太网（比如W5500）是否IP READY
 local isReady,default = socket.adapter(socket.ETH0)
---设置外置以太网（比如W5500）为默认网卡
-local isReady,default = socket.adapter(nil, socket.ETH0)
 
 ```
 
