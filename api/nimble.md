@@ -123,3 +123,93 @@ end)
 
 ---
 
+## nimble.scan()
+
+
+
+扫描从机
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功与否|
+
+**例子**
+
+```lua
+-- 参考 demo/nimble
+
+```
+
+---
+
+## nimble.mode(tp)
+
+
+
+设置模式
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|模式, 默认server/peripheral, 可选 client/central模式 nimble.MODE_BLE_CLIENT|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功与否|
+
+**例子**
+
+```lua
+-- 参考 demo/nimble
+-- 必须在nimble.init()之前调用
+-- nimble.mode(nimble.MODE_BLE_CLIENT) -- 简称从机模式,未完善
+
+```
+
+---
+
+## nimble.setUUID(tp, addr)
+
+
+
+设置server/peripheral的UUID
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|配置字符串,后面的示例有说明|
+|string|地址字符串|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功与否|
+
+**例子**
+
+```lua
+-- 参考 demo/nimble, 2023-02-25之后编译的固件支持本API
+-- 必须在nimble.init()之前调用
+-- 设置SERVER/Peripheral模式下的UUID, 支持设置3个
+-- 地址支持 2/4/16字节, 需要二进制数据
+-- 2字节地址示例: AABB, 写 string.fromHex("AABB") ,或者 string.char(0xAA, 0xBB)
+-- 4字节地址示例: AABBCCDD , 写 string.fromHex("AABBCCDD") ,或者 string.char(0xAA, 0xBB, 0xCC, 0xDD)
+nimble.setUUID("srv", string.fromHex("380D"))      -- 服务主UUID         ,  默认值 180D
+nimble.setUUID("write", string.fromHex("FF31"))    -- 往本设备写数据的UUID,  默认值 FFF1
+nimble.setUUID("indicate", string.fromHex("FF32")) -- 订阅本设备的数据的UUID,默认值 FFF2
+
+```
+
+---
+

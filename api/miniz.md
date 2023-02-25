@@ -32,7 +32,7 @@ end
 |常量|类型|解释|
 |-|-|-|
 |miniz.WRITE_ZLIB_HEADER|int|压缩参数,是否写入zlib头部数据,compress函数的默认值|
-|miniz.COMPUTE_ADLER32|int|压缩参数,是否计算adler-32|
+|miniz.COMPUTE_ADLER32|int|压缩/解压参数,是否计算/校验adler-32|
 |miniz.GREEDY_PARSING_FLAG|int|压缩参数,是否快速greedy处理, 默认使用较慢的处理模式|
 |miniz.NONDETERMINISTIC_PARSING_FLAG|int|压缩参数,是否快速初始化压缩器|
 |miniz.RLE_MATCHES|int|压缩参数, 仅扫描RLE|
