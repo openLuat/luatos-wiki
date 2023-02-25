@@ -13,32 +13,8 @@
 **示例**
 
 ```lua
--- 本库当前支持Air101/Air103/ESP32/ESP32C3
--- 理论上支持ESP32C2/ESP32S2/ESP32S3,但尚未测试
-
--- 本库当前仅支持BLE Peripheral, 其他模式待添加
-sys.taskInit(function()
-    -- 初始化nimble, 因为当仅支持作为主机,也没有其他配置项
-    nimble.init("LuatOS-Wendal") -- 选取一个蓝牙设备名称
-    sys.wait(1000)
-
-    --local data = string.char(0x5A, 0xA5, 0x12, 0x34, 0x56)
-    local data = "1234567890"
-    while 1 do
-        sys.wait(5000)
-        -- Central端建立连接并订阅后, 可上报数据
-        nimble.send_msg(1, 0, data)
-    end
-end
-sys.subscribe("BLE_GATT_WRITE_CHR", function(info, data)
-    -- Central端建立连接后, 可往设备写入数据
-    log.info("ble", "Data Got", data:toHex())
-end)
-
--- 配合微信小程序 "LuatOS蓝牙调试"
--- 1. 若开发板无天线, 将手机尽量靠近芯片也能搜到
--- 2. 该小程序是开源的, 每次write会自动分包
--- https://gitee.com/openLuat/luatos-miniapps
+-- 本库当前支持Air101/Air103/ESP32/ESP32C3/ESP32S3
+-- 用法请查阅demo, API函数会归于指定的模式
 
 ```
 
@@ -64,6 +40,7 @@ end)
 
 ```lua
 -- 参考 demo/nimble
+-- 本函数对所有模式都适用
 
 ```
 
@@ -89,6 +66,7 @@ end)
 
 ```lua
 -- 仅部分设备支持,当前可能都不支持
+-- 本函数对所有模式都适用
 
 ```
 
@@ -118,6 +96,7 @@ end)
 
 ```lua
 -- 参考 demo/nimble
+-- 本函数对peripheral/从机模式适用
 
 ```
 
@@ -143,6 +122,7 @@ end)
 
 ```lua
 -- 参考 demo/nimble
+-- 本函数对central/主机模式适用
 
 ```
 
@@ -201,6 +181,8 @@ end)
 ```lua
 -- 参考 demo/nimble, 2023-02-25之后编译的固件支持本API
 -- 必须在nimble.init()之前调用
+-- 本函数对peripheral/从机模式适用
+
 -- 设置SERVER/Peripheral模式下的UUID, 支持设置3个
 -- 地址支持 2/4/16字节, 需要二进制数据
 -- 2字节地址示例: AABB, 写 string.fromHex("AABB") ,或者 string.char(0xAA, 0xBB)
@@ -208,6 +190,67 @@ end)
 nimble.setUUID("srv", string.fromHex("380D"))      -- 服务主UUID         ,  默认值 180D
 nimble.setUUID("write", string.fromHex("FF31"))    -- 往本设备写数据的UUID,  默认值 FFF1
 nimble.setUUID("indicate", string.fromHex("FF32")) -- 订阅本设备的数据的UUID,默认值 FFF2
+
+```
+
+---
+
+## nimble.mac()
+
+
+
+获取蓝牙MAC
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|蓝牙MAC地址,6字节|
+
+**例子**
+
+```lua
+-- 参考 demo/nimble, 2023-02-25之后编译的固件支持本API
+-- 本函数对所有模式都适用
+local mac = nimble.mac()
+log.info("ble", "mac", mac and mac:toHex() or "Unknwn")
+
+```
+
+---
+
+## nimble.ibeacon(data, major, minor, measured_power)
+
+
+
+配置iBeacon的参数,仅iBeacon模式可用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|数据, 必须是16字节|
+|int|主版本号,默认2, 可选|
+|int|次版本号,默认10,可选|
+|int|名义功率, 默认0, 范围 -126 到 20 |
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+-- 参考 demo/nimble, 2023-02-25之后编译的固件支持本API
+-- 本函数对ibeacon模式适用
+nimble.ibeacon(data, 2, 10, 0)
+nimble.init()
 
 ```
 
