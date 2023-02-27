@@ -338,7 +338,7 @@ pm.shutdown()
 |传入值类型|解释|
 |-|-|
 |int|电源控制id,pm.USB pm.GPS之类|
-|boolean|开关true开，false关，默认关|
+|boolean|开关true开，false关，默认关. 部分选项支持数值|
 
 **返回值**
 
@@ -349,13 +349,53 @@ pm.shutdown()
 **例子**
 
 ```lua
--- 关闭USB电源
+-- 关闭USB电源, 反之开启就是传true
 pm.power(pm.USB, false) 
+
 -- Air780EG,为内置的GPS芯片上电. 注意, Air780EG的GPS和GPS_ANT是一起控制的,所以合并了.
 pm.power(pm.GPS, true)
--- Air780EG开启pwrkey开机防抖
+
+-- EC618系列开启pwrkey开机防抖
 -- 注意: 开启后, 复位键就变成关机了!!! pwrkey要长按2秒才能开机
 -- pm.power(pm.PWK_MODE, true)
+
+-- EC618系列设置IO电平, 范围 1650 ~ 3400 , 单位毫伏, 步进50mv
+-- 注意, 这里的设置优先级会高于硬件IOSEL脚的配置
+-- pm.power(pm.IOVLOT_GPIO, 3300)
+-- pm.power(pm.IOVLOT_AONGPIO, 3300)
+
+```
+
+---
+
+## pm.ioVolt(id, val)
+
+
+
+IO电平控制,当前仅EC618系列可用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|电平id, 例如 pm.IOVLOT_GPIO, pm.IOVLOT_AONGPIO|
+|int|电平值,单位毫伏|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|处理结果true成功，false失败|
+
+**例子**
+
+```lua
+-- EC618系列设置IO电平, 范围 1650 ~ 3400 , 单位毫伏, 步进50mv
+-- 例如Air780E/Air600E/Air700E/Air780EG
+-- 注意, 这里的设置优先级会高于硬件IOSEL脚的配置
+-- 但开机时依然先使用硬件配置,直至调用本API进行配置, 所以io电平会变化
+-- pm.ioVolt(pm.IOVLOT_GPIO, 3300)    -- 对应VDD_EXT电压域
+-- pm.ioVolt(pm.IOVLOT_AONGPIO, 3300) -- 对应LDOAON电压域
 
 ```
 

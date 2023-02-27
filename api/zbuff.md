@@ -335,8 +335,8 @@ local len = buff:writeU32(1024)
 
 |传入值类型|解释|
 |-|-|
-|int|数据的起始位置（起始位置为0）|
-|int|数据的长度|
+|int|数据的起始位置（起始位置为0）,默认值也是0|
+|int|数据的长度,默认是全部数据|
 
 **返回值**
 
@@ -348,6 +348,8 @@ local len = buff:writeU32(1024)
 
 ```lua
 local s = buff:toStr(0,5)--读取开头的五个字节数据
+local s = buff:toStr() -- 取出整个zbuff的数据
+local s = buff:toStr(0, buff:used()) -- 取出已使用的部分, 与buff:query()一样
 
 ```
 
