@@ -11,6 +11,7 @@
    bh1750
    bmx
    ds3231
+   ec11
    gt911
    l3g4200d
    lbsLoc
