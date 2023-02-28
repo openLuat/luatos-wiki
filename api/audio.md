@@ -294,7 +294,7 @@ local result, user_stop, file_no = audio.getError(0)
 
 ---
 
-## audio.config(id, paPin, onLevel, dacDelay, paDelay, dacPin, dacLevel)
+## audio.config(id, paPin, onLevel, dacDelay, paDelay, dacPin, dacLevel, dacTimeDelay)
 
 
 
@@ -311,6 +311,7 @@ local result, user_stop, file_no = audio.getError(0)
 |int|在DAC启动后，延迟多长时间打开PA，单位1ms|
 |int|外部dac电源控制IO，如果不填，则表示使用平台默认IO，比如Air780E使用DACEN脚，air105则不启用|
 |int|外部dac打开时，电源控制IO的电平，默认拉高|
+|int|音频播放完毕时，PA与DAC关闭的时间间隔，单位1ms，默认20ms|
 
 **返回值**
 
