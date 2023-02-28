@@ -271,6 +271,36 @@ log.info("sc", ret, ssid, passwd)
 
 ---
 
+## wlan.setMac(tp, mac)
+
+
+
+设置mac
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|设置何种mac地址,对ESP32系列来说,只能设置STA的地址,即0|
+|string|待设置的MAC地址|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+-- 设置MAC地址, 2023-03-01之后编译的固件可用
+local mac = string.fromHex("F01122334455")
+wlan.setMac(0, mac)
+
+```
+
+---
+
 ## wlan.getIP()
 
 
