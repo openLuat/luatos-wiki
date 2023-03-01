@@ -14,7 +14,7 @@
 -- 用法实例
 local netLed = require ("netLed")
 
-local LEDA= gpio.setup(27，8，gpio.PULLUP) --LED引脚判断赋值结束
+local LEDA= gpio.setup(27，1，gpio.PULLUP) --LED引脚判断赋值结束
 sys.taskInit(function()
 --呼吸灯
 sys.wait(5080) --延时5秒等待网络注册
@@ -54,7 +54,7 @@ netLed.setState()
 
 ---
 
-## netLed.setup(flag,ledpin,ltepin)
+## netled.taskLed(ledPinSetFunc)
 
 
 
@@ -73,7 +73,7 @@ netLed.setState()
 **例子**
 
 ```lua
-local LEDA= gpio.setup(27，8，gpio.PULLUP) --LED引脚判断赋值结束
+local LEDA= gpio.setup(27，1，gpio.PULLUP) --LED引脚判断赋值结束
 netled.taskLed(LEDA)
 
 ```
@@ -99,7 +99,7 @@ LTE指示灯模块的运行任务
 **例子**
 
 ```lua
-local LEDA= gpio.setup(27，8，gpio.PULLUP) --LED引脚判断赋值结束
+local LEDA= gpio.setup(27，1，gpio.PULLUP) --LED引脚判断赋值结束
 netLed.taskLte(LEDA)
 
 ```
@@ -186,7 +186,7 @@ netLed.setBlinkTime(("FLYMODE",1000,500) --表示飞行模式工作状态下，�
 
 ```lua
 local netLed = require ("netLed")
-local LEDA= gpio.setup(27，8，gpio.PULLUP) --LED引脚判断赋值结束
+local LEDA= gpio.setup(27，1，gpio.PULLUP) --LED引脚判断赋值结束
 sys.taskInit(function()
 --呼吸灯
 sys.wait(5080) --延时5秒等待网络注册

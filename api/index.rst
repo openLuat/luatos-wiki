@@ -42,6 +42,7 @@
    log
    lora
    lvgl
+   max30102
    mcu
    miniz
    mlx90640
