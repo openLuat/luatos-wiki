@@ -265,7 +265,7 @@ uart.rx(1, buff)
 
 ---
 
-## uart.rx_size(id)
+## uart.rxSize(id)
 
 
 
@@ -286,7 +286,7 @@ uart.rx(1, buff)
 **例子**
 
 ```lua
-local size = uart.rx_size(1)
+local size = uart.rxSize(1)
 
 ```
 
