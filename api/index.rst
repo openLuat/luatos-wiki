@@ -63,6 +63,7 @@
    sensor
    sfd
    sfud
+   sm
    sms
    socket
    softkeyboard
