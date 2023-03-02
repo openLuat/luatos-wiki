@@ -205,7 +205,7 @@ local font = lvgl.font_get("opposans_m_12")
 **例子**
 
 ```lua
-local font = lvgl.font_load("/font_simsun_32.bin")
+local font = lvgl.font_load("/font_32.bin")
 --local font = lvgl.font_load(spi_device,16)(高通矢量字库)
 
 ```
@@ -233,7 +233,7 @@ local font = lvgl.font_load("/font_simsun_32.bin")
 **例子**
 
 ```lua
-local font = lvgl.font_load("/font_simsun_32.bin")
+local font = lvgl.font_load("/font_32.bin")
 -- N N N N 操作
 -- 确定字体不被使用,不被引用,且内存紧张需要释放
 lvgl.font_free(font)
