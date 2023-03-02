@@ -160,7 +160,7 @@ local lvgl.draw_mask_fade_param_t_free(fade)
 
 |传入值类型|解释|
 |-|-|
-|string|字体名称+字号, 例如 opposans_m_10 simsun_48|
+|string|字体名称+字号, 例如 opposans_m_10|
 
 **返回值**
 
@@ -172,7 +172,7 @@ local lvgl.draw_mask_fade_param_t_free(fade)
 
 ```lua
 
-local font = lvgl.font_get("simsun_48")
+local font = lvgl.font_get("opposans_m_12")
 
 ```
 
