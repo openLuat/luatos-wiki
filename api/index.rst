@@ -22,6 +22,7 @@
    fs
    fskv
    ftp
+   gmssl
    gpio
    gtfont
    hmeta
@@ -63,7 +64,6 @@
    sensor
    sfd
    sfud
-   sm
    sms
    socket
    softkeyboard
