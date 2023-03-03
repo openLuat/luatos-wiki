@@ -203,7 +203,7 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 ---
 
-## socket.connect(ctrl, ip, remote_port)
+## socket.connect(ctrl, ip, remote_port, need_ipv6_dns)
 
 
 
@@ -215,8 +215,8 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 |-|-|
 |user_data|socket.create得到的ctrl|
 |string|or int ip或者域名，如果是IPV4，可以是大端格式的int值|
-|boolean|域名解析是否要IPV6，true要，false不要，默认false不要，只有支持IPV6的协议栈才有效果|
 |int|服务器端口号，小端格式|
+|boolean|域名解析是否要IPV6，true要，false不要，默认false不要，只有支持IPV6的协议栈才有效果|
 
 **返回值**
 
