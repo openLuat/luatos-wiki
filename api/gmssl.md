@@ -10,7 +10,7 @@
 本库有专属demo，[点此链接查看gmssl的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/gmssl)
 ```
 
-## sm.sm2encrypt(pkx,pky,rand,data)
+## sm.sm2encrypt(pkx,pky,data)
 
 
 
@@ -22,7 +22,6 @@ sm2算法加密
 |-|-|
 |string|公钥x,必选|
 |string|公钥y,必选|
-|string|随机数,必选|
 |string|待计算的数据,必选|
 
 **返回值**
@@ -38,8 +37,7 @@ local originStr = "encryption standard"
 local pkx = "435B39CCA8F3B508C1488AFC67BE491A0F7BA07E581A0E4849A5CF70628A7E0A"
 local pky = "75DDBA78F15FEECB4C7895E2C1CDF5FE01DEBB2CDBADF45399CCF77BBA076A42"
 local private = "1649AB77A00637BD5E2EFE283FBF353534AA7F7CB89463F208DDBC2920BB0DA0"
-local rand = "4C62EEFD6ECFC2B95B92FD6C3D9575148AFA17425546D49018E5388D49DD7B4F"
-local encodeStr = gmssl.sm2encrypt(pkx,pky,rand,originStr)
+local encodeStr = gmssl.sm2encrypt(pkx,pky,originStr)
 print(originStr,"encrypt",string.toHex(encodeStr))
 log.info("testsm.sm2decrypt",gmssl.sm2decrypt(private,encodeStr))
 
