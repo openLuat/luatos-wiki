@@ -30,6 +30,7 @@
    httpsrv
    i2c
    i2s
+   iconv
    io
    ioqueue
    iotauth
