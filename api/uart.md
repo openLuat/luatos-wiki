@@ -322,6 +322,38 @@ uart.tx(1, buf)
 
 ---
 
+## uart.createSoft(tx_pin, tx_hwtimer_id, rx_pin, rx_hwtimer_id, adjust_period)
+
+
+
+设置软件uart的硬件配置，只有支持硬件定时器的SOC才能使用，目前只能设置一个，波特率不要超过115200，接收缓存不超过65535，不支持MSB，支持485自动控制。后续仍要setup操作
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|发送引脚编号|
+|int|发送用的硬件定时器ID|
+|int|接收引脚编号|
+|int|接收用的硬件定时器ID|
+|int|时序调整，单位是定时器时钟周期，默认是0，需要根据示波器或者逻辑分析仪进行微调|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|软件uart的id，如果失败则返回nil|
+
+**例子**
+
+```lua
+-- 初始化软件uart
+local uart_id = uart.createSoft(21, 0, 1, 2) --air780e建议用定时器0和2，tx_pin最好用AGPIO，防止休眠时误触发对端RX
+
+```
+
+---
+
 ## uart.list(max)
 
 
