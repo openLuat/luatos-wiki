@@ -33,7 +33,7 @@
 
 ```lua
 --unicode大端编码 转化为 utf8编码
-local cd = iconv.open("utf8", "ucs2be")
+local iconv = iconv.open("utf8", "ucs2be")
 
 ```
 
@@ -62,8 +62,8 @@ local cd = iconv.open("utf8", "ucs2be")
 ```lua
 --unicode大端编码 转化为 utf8编码
 function ucs2beToUtf8(ucs2s)
-    local cd = iconv.open("utf8", "ucs2be")
-    return cd:iconv(ucs2s)
+    local iconv = iconv.open("utf8", "ucs2be")
+    return iconv:iconv(ucs2s)
 end
 
 ```
@@ -92,8 +92,8 @@ end
 
 ```lua
 --关闭字符编码转换
-local cd = iconv.open("utf8", "ucs2be")
-iconv.close(cd)
+local iconv = iconv.open("utf8", "ucs2be")
+iconv.close(iconv)
 
 ```
 
