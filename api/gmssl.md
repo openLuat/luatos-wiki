@@ -3,7 +3,7 @@
 {bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`Air780E`
 
 ```{note}
-本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/gmssl/src/luat_lib_gmssl.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
+本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/gmssl/bind/luat_lib_gmssl.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```
 
 ```{tip}
@@ -22,7 +22,7 @@ sm2算法加密
 |-|-|
 |string|公钥x,必选|
 |string|公钥y,必选|
-|string|待计算的数据,必选|
+|string|待计算的数据,必选,最长255字节|
 
 **返回值**
 
@@ -80,11 +80,11 @@ log.info("testsm.sm2decrypt",gmssl.sm2decrypt(private,encodeStr))
 
 ---
 
-## sm.sm3update(data)
+## sm.sm3(data)
 
 
 
-流式sm3算法加密
+sm3算法,算HASH值
 
 **参数**
 
@@ -101,7 +101,36 @@ log.info("testsm.sm2decrypt",gmssl.sm2decrypt(private,encodeStr))
 **例子**
 
 ```lua
-local encodeStr = gmssl.sm3update("lqlq666lqlq946")
+local encodeStr = gmssl.sm3("lqlq666lqlq946")
+log.info("testsm.sm3update",string.toHex(encodeStr))
+
+```
+
+---
+
+## sm.sm3hmac(data, key)
+
+
+
+sm3算法,算HASH值,但带HMAC
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|待计算的数据,必选|
+|string|密钥|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|对应的hash值|
+
+**例子**
+
+```lua
+local encodeStr = gmssl.sm3hmac("lqlq666lqlq946", "123")
 log.info("testsm.sm3update",string.toHex(encodeStr))
 
 ```
@@ -118,8 +147,8 @@ SM4加密算法
 
 |传入值类型|解释|
 |-|-|
-|number|加密模式   |
-|number|填充方式 |
+|string|加密模式, CBC或ECB   |
+|string|填充方式, NONE/ZERO/PKCS5/PKCS7|
 |string|加密的字符串|
 |string|密钥|
 
@@ -164,8 +193,8 @@ SM4解密算法
 
 |传入值类型|解释|
 |-|-|
-|number|加密模式   |
-|number|填充方式 |
+|string|加密模式, CBC或ECB   |
+|string|填充方式, NONE/ZERO/PKCS5/PKCS7|
 |string|已加密的字符串|
 |string|密钥|
 
