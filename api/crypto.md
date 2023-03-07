@@ -248,8 +248,8 @@ log.info("hmac_sha512", crypto.hmac_sha512("abc", "1234567890"))
 
 |传入值类型|解释|
 |-|-|
-|string|算法名称, 例如 AES-128-ECB/AES-128-CBC, 可查阅mbedtls的cipher_wrap.c|
-|string|对齐方式, 当前仅支持PKCS7|
+|string|算法名称, 例如 AES-128-ECB/AES-128-CBC, 可查阅crypto.cipher_list()|
+|string|对齐方式, 支持PKCS7/ZERO/ONE_AND_ZEROS/ZEROS_AND_LEN/NONE|
 |string|需要加密的数据|
 |string|密钥,需要对应算法的密钥长度|
 |string|IV值, 非ECB算法需要|
@@ -281,8 +281,8 @@ local data2 = crypto.cipher_encrypt("AES-128-CBC", "PKCS7", "1234567890123456", 
 
 |传入值类型|解释|
 |-|-|
-|string|算法名称, 例如 AES-128-ECB/AES-128-CBC, 可查阅mbedtls的cipher_wrap.c|
-|string|对齐方式, 当前仅支持PKCS7|
+|string|算法名称, 例如 AES-128-ECB/AES-128-CBC, 可查阅crypto.cipher_list()|
+|string|对齐方式, 支持PKCS7/ZERO/ONE_AND_ZEROS/ZEROS_AND_LEN/NONE|
 |string|需要解密的数据|
 |string|密钥,需要对应算法的密钥长度|
 |string|IV值, 非ECB算法需要|
