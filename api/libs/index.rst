@@ -30,3 +30,5 @@
    tm1637
    tsl2561
    xmodem
+   ze08g_ch2o
+   zh07
