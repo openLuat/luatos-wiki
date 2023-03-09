@@ -368,3 +368,31 @@ pm.power(pm.GPS, true)
 
 ---
 
+## pm.wakeupPin(pin,level)
+
+
+
+配置唤醒引脚 (当前仅仅esp系列可用)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int/table|gpio引脚|
+|int|唤醒电压 可选,默认低电平唤醒|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|处理结果|
+
+**例子**
+
+```lua
+pm.wakeupPin(8,0)
+
+```
+
+---
+
