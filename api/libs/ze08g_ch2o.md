@@ -1,4 +1,4 @@
-# ze08g_ch2o - ZE08G-CH2O 激光粉尘传感器
+# ze08g_ch2o - ZE08G-CH2O 电化学甲醛模组
 
 {bdg-secondary}`适配状态未知`
 
