@@ -469,8 +469,8 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 |传入值类型|解释|
 |-|-|
-|int	mbedtls|log等级，<=2基本不打印，不要超过9|
-|usage|socket.sslLog(3)|
+|int	mbedtls|log等级，0不打印，1只打印错误和警告，2大部分info，3及3以上详细的debug信息，过多的信息可能会造成内存碎片化|
+|usage|socket.sslLog(2)|
 
 **返回值**
 
