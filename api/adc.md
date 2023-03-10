@@ -99,14 +99,15 @@ adc.setRange(adc.ADC_RANGE_3_6)
 
 |返回值类型|解释|
 |-|-|
-|int|原始值|
-|int|从原始值换算得出的电压值，通常单位是mV|
+|int|原始值,一般没用,可以直接抛弃|
+|int|从原始值换算得出的实际值，通常单位是mV|
 
 **例子**
 
 ```lua
 -- 打开adc通道2,并读取
 if adc.open(2) then
+    -- 这里使用的是adc.read会返回2个值, 推荐走adc.get函数,直接取实际值
     log.info("adc", adc.read(2))
 end
 adc.close(2)
