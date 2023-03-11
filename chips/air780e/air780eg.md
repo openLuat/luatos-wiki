@@ -54,3 +54,11 @@ UART部分:
 1. 外部封装, Air780E和Air780EG是一样的, 区别在于UART2不能接其他设备
 2. AT固件要V1112或以上, LuatOS固件要V1103或以上,才有Air780EG的完整支持,通刷
 
+## 开发板pinout
+
+请注意与Air780E开发板的差异点:
+1. UART2不再有GPIO10/11的复用
+2. UART2_RX 不要接外部输入
+
+
+![](pinout_780eg.png)
