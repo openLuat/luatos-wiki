@@ -7,6 +7,7 @@
 
    adc
    audio
+   bit64
    camera
    codec
    coremark
