@@ -25,7 +25,7 @@
 
 ## socket.sntp(sntp_server)
 
-{bdg-success}`本接口仅支持` {bdg-primary}`Air105` {bdg-primary}`Air780E`
+{bdg-success}`本接口仅支持` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E`
 
 sntp时间同步
 
