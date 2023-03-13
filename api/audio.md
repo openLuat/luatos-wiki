@@ -10,6 +10,18 @@
 本库有专属demo，[点此链接查看audio的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/multimedia)
 ```
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|audio.PCM|number|PCM格式，即原始ADC数据|
+|audio.MORE_DATA|number|audio.on回调函数传入参数的值，表示底层播放完一段数据，可以传入更多数据|
+|audio.DONE|number|audio.on回调函数传入参数的值，表示底层播放完全部数据了|
+|audio.BUS_DAC|number|硬件输出总线，DAC类型|
+|audio.BUS_I2S|number|硬件输出总线，I2S类型|
+|audio.BUS_SOFT_DAC|number|硬件输出总线，软件模式DAC类型|
+
+
 ## audio.start(id, audio_format, num_channels, sample_rate, bits_per_sample, is_signed)
 
 
@@ -352,6 +364,29 @@ audio.config(0, 25, 1, 6, 200)	--PA控制脚是GPIO25，高电平打开，Air780
 local result = audio.vol(0, 90)	--通道0的音量调节到90%，result存放了调节后的音量水平，有可能仍然是100
 
 ```
+
+---
+
+## audio.vol(id, bus_type)
+
+
+
+配置一个音频通道的硬件输出总线，只有对应soc软硬件平台支持才设置对应类型
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|音频通道|
+|int|总线类型|
+
+**返回值**
+
+无
+
+**例子**
+
+无
 
 ---
 
