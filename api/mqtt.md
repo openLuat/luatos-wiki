@@ -411,7 +411,7 @@ local error = mqttc:ready()
 **例子**
 
 ```lua
--- 要在connect之前调用 
+-- 要在connect之前调用
 mqttc:will("/xxx/xxx", "xxxxxx")
 
 ```
