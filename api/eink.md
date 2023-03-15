@@ -21,6 +21,7 @@
 |eink.MODEL_1in54b_V2|number|1.54寸b_V2|
 |eink.MODEL_1in54_V3|number|1.54寸_V3|
 |eink.MODEL_1in54c|number|1.54寸c|
+|eink.MODEL_1in54r|number|1.54寸三色屏152*152|
 |eink.MODEL_2in13|number|2.13寸|
 |eink.MODEL_2in13bc|number|2.13寸bc|
 |eink.MODEL_2in13d|number|2.13寸d|
