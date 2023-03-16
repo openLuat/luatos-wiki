@@ -17,6 +17,7 @@
    l3g4200d
    lbsLoc
    libfota
+   libnet
    lis2dh12
    lm75
    mcp2515
