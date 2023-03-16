@@ -61,7 +61,7 @@ end)
 
 
 
-获取本地ip,当前仅支持IPV4的地址
+获取本地ip
 
 **参数**
 
@@ -508,6 +508,36 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 local isReady,index = socket.adapter() --如果isReady为true,则index为IP READY的网卡适配器序号
 --查看外置以太网（比如W5500）是否IP READY
 local isReady,default = socket.adapter(socket.ETH0)
+
+```
+
+---
+
+## socket.remoteIP(ctrl)
+
+
+
+获取对端ip，必须在接收到socket.ON_LINE消息之后才可能获取到，最多返回4个IP。socket.connect里如果remote_port设置成0，则当DNS完成时就返回socket.ON_LINE消息
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|user_data|socket.create得到的ctrl|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|IP1，如果为nil，则表示没有获取到IP地址|
+|string|IP2，如果为nil，则表示没有IP2|
+|string|IP3，如果为nil，则表示没有IP3|
+|string|IP4，如果为nil，则表示没有IP4|
+
+**例子**
+
+```lua
+local ip1,ip2,ip3,ip4 = socket.remoteIP(ctrl)
 
 ```
 
