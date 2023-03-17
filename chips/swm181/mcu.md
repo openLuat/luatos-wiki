@@ -58,7 +58,7 @@ SDK压缩包[SWM181_Lib-211013.rar](https://cdn.openluat-luatcommunity.openluat.
 
 ## 模块购买
 
-* [手机访问mall.m.openluat.com](https://mall.m.openluat.com)
+* [合宙商城](https://appc6kjfor22343.h5.xiaoeknow.com)
 * [淘宝店](https://luat.taobao.com)
 
 ## 芯片PinOut

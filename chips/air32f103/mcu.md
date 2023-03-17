@@ -43,7 +43,7 @@ Air32F103为系列芯片，首发型号为Air32F103CBT6，其外设和硬件设�
 
 ## 模块购买
 
-* [手机访问mall.m.openluat.com](https://mall.m.openluat.com)
+* [合宙商城](https://appc6kjfor22343.h5.xiaoeknow.com)
 * [淘宝店](https://luat.taobao.com)
 
 ## 芯片PinOut
