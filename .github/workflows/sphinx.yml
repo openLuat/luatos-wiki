@@ -24,7 +24,7 @@ jobs:
           wget http://gosspublic.alicdn.com/ossutil/1.7.1/ossutil64
           sudo chmod 755 ossutil64
           echo -e "${OSS_CONFIG}" > ~/.ossutilconfig
-          ./ossutil64 cp -u -r output/ oss://${OSS_NAME}/
+          ./ossutil64 cp -u -r -j 20 output/ oss://${OSS_NAME}/
           cp -r output/ luatos-wiki/
           cd luatos-wiki/output/
           echo "此文档为离线版，请访问wiki.luatos.com获取最新版本，文档更新时间：$(TZ=UTC-8 date +%Y-%m-%d,%H:%m:%S)" > "请先读我.txt"
