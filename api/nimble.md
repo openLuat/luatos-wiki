@@ -256,3 +256,45 @@ nimble.init()
 
 ---
 
+## nimble.advData(data)
+
+
+
+配置广播数据,仅iBeacon模式可用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|广播数据, 当前最高128字节|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+-- 参考 demo/nimble/adv_free, 2023-03-18之后编译的固件支持本API
+-- 本函数对ibeacon模式适用
+-- 数据来源可以多种多样
+local data = string.fromHex("123487651234876512348765123487651234876512348765")
+-- local data = crypto.trng(25)
+-- local data = string.char(0x11, 0x13, 0xA3, 0x5A, 0x11, 0x13, 0xA3, 0x5A, 0x11, 0x13, 0xA3, 0x5A, 0x11, 0x13, 0xA3, 0x5A)
+nimble.advData(data)
+nimble.init()
+
+-- nimble支持在init之后的任意时刻再次调用, 以实现数据更新
+-- 例如 1分钟变一次
+while 1 do
+    sys.wait(60000)
+    local data = crypto.trng(25)
+    nimble.advData(data)
+end
+
+```
+
+---
+
