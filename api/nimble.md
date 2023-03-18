@@ -123,6 +123,7 @@
 ```lua
 -- 参考 demo/nimble
 -- 本函数对central/主机模式适用
+-- 本函数会直接返回, 然后通过异步回调返回结果
 
 ```
 
@@ -294,6 +295,43 @@ while 1 do
     local data = crypto.trng(25)
     nimble.advData(data)
 end
+
+```
+
+---
+
+## nimble.advParams(conn_mode, disc_mode, itvl_min, itvl_max, channel_map, filter_policy, high_duty_cycle)
+
+
+
+设置广播参数
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|广播模式, 0 - 不可连接, 1 - 定向连接, 2 - 未定向连接, 默认0|
+|int|发现模式, 0 - 不可发现, 1 - 限制发现, 3 - 通用发现, 默认0|
+|int|最小广播间隔, 0 - 使用默认值, 范围 1 - 65535, 单位0.625ms, 默认0|
+|int|最大广播间隔, 0 - 使用默认值, 范围 1 - 65535, 单位0.625ms, 默认0|
+|int|广播通道, 默认0, 一般不需要设置|
+|int|过滤规则, 默认0, 一般不需要设置|
+|int|当广播模式为"定向连接"时,是否使用高占空比模式, 默认0, 可选1|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+-- 当前仅ibeacon模式/peripheral/从机可使用
+-- 例如设置 不可连接 + 限制发现
+-- 需要在nimble.init之前设置好
+nimble.advParams(0, 1)
+-- 注意peripheral模式下自动配置 conn_mode 和 disc_mode
 
 ```
 
