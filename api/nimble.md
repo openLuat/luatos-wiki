@@ -256,7 +256,7 @@ nimble.init()
 
 ---
 
-## nimble.advData(data)
+## nimble.advData(data, flags)
 
 
 
@@ -267,6 +267,7 @@ nimble.init()
 |传入值类型|解释|
 |-|-|
 |string|广播数据, 当前最高128字节|
+|int|广播标识, 可选, 默认值是 0x06,即 不支持传统蓝牙(0x04) + 普通发现模式(0x02)|
 
 **返回值**
 
