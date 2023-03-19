@@ -27,7 +27,7 @@
 
 ## 点击右上角构建
 
-点击右上角菜单新构建，自定义构建名称，可新建多个
+点击右上角菜单新构建，自定义构建名称，可以是任意英文字符, 与具体构建类型无关.
 
 ![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20211011092859451_image.png)
 
