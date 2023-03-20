@@ -8,7 +8,6 @@
    ads1115
    adxl34x
    aht10
-   aliyun
    bh1750
    bmx
    ds3231
