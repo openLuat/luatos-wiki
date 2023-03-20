@@ -17,7 +17,7 @@
 
 ```
 
-## fatfs.mount(mode,mount_point, spiid_or_spidevice, spi_cs, spi_speed)
+## fatfs.mount(mode,mount_point, spiid_or_spidevice, spi_cs, spi_speed, power_pin, power_on_delay)
 
 
 
@@ -32,6 +32,8 @@
 |int|传入spi device指针,或者spi的id,或者sdio的id|
 |int|片选脚的GPIO 号, spi模式有效,若前一个参数传的是spi device,这个参数就不需要传|
 |int|SPI最高速度,默认10M, 若前2个参数传的是spi device,这个参数就不需要传|
+|int|TF卡电源控制脚,TF卡初始前先拉低复位再拉高,如果没有,或者是内置电源控制方式,这个参数就不需要传|
+|int|TF卡电源复位过程时间,单位ms,默认值是1|
 
 **返回值**
 
