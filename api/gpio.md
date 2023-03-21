@@ -19,9 +19,6 @@
 |-|-|-|
 |gpio.LOW|number|低电平|
 |gpio.HIGH|number|高电平|
-|gpio.OUTPUT|number|输出模式|
-|gpio.INPUT|number|输入模式|
-|gpio.IRQ|number|中断模式|
 |gpio.PULLUP|number|上拉|
 |gpio.PULLDOWN|number|下拉|
 |gpio.RISING|number|上升沿触发|
