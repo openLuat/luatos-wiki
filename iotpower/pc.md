@@ -7,9 +7,11 @@
 - **全平台**命令行数据记录器、dll/so动态运行库请前往[gitee仓库](https://gitee.com/openLuat/iot-power)查看
 
 ```{note}
-win7用户可能需要
+win7用户可能需要（win10以上免驱）
 
-cp2102驱动：[CP210x_Windows_Drivers](https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip)
+IoT Power 经典版CP2102驱动：[CP210x_Windows_Drivers](https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip)
+
+IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://llcom.papapoi.com/iotpower/IoTPower_CC_usb_driver.7z)
 
 .net framework 4.6.2：[安装包](https://dotnet.microsoft.com/zh-cn/download/dotnet-framework/thank-you/net462-offline-installer)
 ```
