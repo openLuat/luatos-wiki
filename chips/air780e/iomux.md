@@ -99,15 +99,14 @@ Air780E(EC618全系)支持多个虚拟的GPIO, 将非GPIO管脚通过软件模�
 |编号|名称|功能|备注|
 |----|----|----|---|
 |32| wakeup0|仅支持输入和中断| wakeup0休眠唤醒脚|
-|33| vbus   |仅支持输入和中断| USB的VBUS, 检测USB是否是插入状态|
+|33| vbus/wakeup1|仅支持输入和中断| USB的VBUS, 检测USB是否是插入状态|
 |34| wakeup2|仅支持输入和中断| wakeup2休眠唤醒脚, USIM_DET|
 |35| pwrkey |仅支持输入和中断| 即开机键, 开机之后当普通GPIO使用|
 
 vbus的说明: 
-1. EC618的vbus就是wakeup1
-2. 在CSDK/LuatOS固件中, 与USB功能是解耦的
-3. 与常规认识不同, 在不接vbus的情况下, USB DP/DM依然可用
-4. 在进入休眠前, 将上述`wakeup0/wakeup1/wakeup2`设置成中断状态, 即可实现管脚唤醒功能
+1. 在CSDK/LuatOS固件中, vbus与USB功能是解耦的
+2. 与常规认识不同, 在不接vbus的情况下, USB功能依然可用
+3. 在进入休眠前, 将上述`wakeup0/wakeup1/wakeup2`设置成中断状态, 即可实现管脚唤醒功能
 
 例如将`wakup0`设置为唤醒脚, 中断回调可以是空函数
 ```lua
