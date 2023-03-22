@@ -31,7 +31,7 @@
 **例子**
 
 ```lua
-wdt.init(10000)
+wdt.init(9000)
 sys.timerLoopStart(wdt.feed, 3000)
 
 ```
