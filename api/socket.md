@@ -167,7 +167,7 @@ end)
 
 |返回值类型|解释|
 |-|-|
-|boolean|成功返回true，失败返回nil|
+|boolean|成功返回true，失败返回false|
 
 **例子**
 
