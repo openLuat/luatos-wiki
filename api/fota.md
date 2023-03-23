@@ -97,6 +97,36 @@ local result, isDone, cache = fota.run(buf) -- 写入fota流程
 
 ---
 
+## fota.file(path)
+
+
+
+从指定文件读取fota数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|文件路径|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|有异常返回false，无异常返回true|
+|boolean|接收到最后一块返回true|
+|int|还未写入的数据量，超过64K必须做等待|
+
+**例子**
+
+```lua
+local result, isDone, cache = fota.file("/xxx.bin") -- 写入fota流程
+-- 本API于2023.03.23 添加
+
+```
+
+---
+
 ## fota.isDone()
 
 
