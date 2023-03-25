@@ -4,6 +4,8 @@
 
 开发板原理图[AIR32CBT6.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220605164915340_AIR32CBT6.pdf)
 
+BluePill开发板原理图[BluePill.pdf]([AIR32CBT6.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220605164915340_AIR32CBT6.pdf))
+
 开发板工程[传送门](https://gitee.com/openLuat/luatos-broads/tree/master/broads/Air32F103-Board)
 
 ## 开发板PinOut
