@@ -292,6 +292,31 @@ local size = uart.rxSize(1)
 
 ---
 
+## uart.rxClear(id)
+
+
+
+清除串口Rx缓存中剩余数据量，目前air105,air780e支持这个操作
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|串口id, uart0写0, uart1写1|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+uart.rxClear(1)
+
+```
+
+---
+
 ## uart.tx(id, buff, start, len)
 
 
