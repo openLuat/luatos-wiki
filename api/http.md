@@ -7,7 +7,7 @@
 ```
 
 ```{tip}
-本库有专属demo，[点此链接查看http的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/socket)
+本库有专属demo，[点此链接查看http的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/http)
 ```
 
 **示例**
@@ -26,7 +26,7 @@ end)
 
 ```
 
-## http.request(method,url,headers,body,opts,ca_file)
+## http.request(method,url,headers,body,opts,ca_file,client_ca, client_key, client_password)
 
 
 
@@ -36,23 +36,23 @@ http客户端
 
 |传入值类型|解释|
 |-|-|
-|string|请求方法, 支持 GET/POST|
-|string|url地址|
-|tabal|请求头 可选 例如{["Content-Type"] = "application/x-www-form-urlencoded"}|
-|string|body 可选|
+|string|请求方法, 支持 GET/POST 等合法的HTTP方法|
+|string|url地址, 支持 http和https, 支持域名, 支持自定义端口|
+|tabal|请求头 可选 例如 {["Content-Type"] = "application/x-www-form-urlencoded"}|
+|string|body 可选, 对POST/PUT等请求方式有效|
 |table|额外配置 可选 包含 timeout:超时时间单位ms 可选,默认10分钟,写0即永久等待 dst:下载路径,可选 adapter:选择使用网卡,可选 debug:是否打开debug信息,可选,ipv6:是否为ipv6 默认不是,可选|
-|string|服务器ca证书数据|
-|string|客户端ca证书数据|
-|string|客户端私钥加密数据|
-|string|客户端私钥口令数据|
+|string|服务器ca证书数据, 可选, 一般不需要|
+|string|客户端ca证书数据, 可选, 一般不需要, 双向https认证才需要|
+|string|客户端私钥加密数据, 可选, 一般不需要, 双向https认证才需要|
+|string|客户端私钥口令数据, 可选, 一般不需要, 双向https认证才需要|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|int|code|
-|tabal|headers|
-|string|body|
+|int|code , 服务器反馈的值>=100, 最常见的是200.如果是底层错误,例如连接失败, 返回值小于0|
+|tabal|headers 当code>100时, 代表服务器返回的头部数据 |
+|string/int|body 服务器响应的内容字符串,如果是下载模式, 则返回文件大小|
 
 **例子**
 
@@ -67,6 +67,9 @@ log.info("http.post", code, headers, body)
 -- GET请求,但下载到文件
 local code, headers, body = http.request("GET","http://httpbin.com/", {}, "", {dst="/data.bin"}).wait()
 log.info("http.get", code, headers, body)
+
+-- 自定义超时时间, 5000ms
+http.request("GET","http://httpbin.com/", nil, nil, {timeout=5000}).wait()
 
 ```
 
