@@ -93,7 +93,7 @@ mqttc:unsubscribe({"/luatos/1234567","/luatos/12345678"})
 
 ---
 
-## mqtt.create(adapter,host,port,isssl,ca_file)
+## mqtt.create(adapter,host,port,ssl,isipv6)
 
 
 
