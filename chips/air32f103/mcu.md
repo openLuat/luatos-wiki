@@ -2,7 +2,7 @@
 
 ## AIR32F103是什么?
 
-Air32F103为系列芯片，首发型号为Air32F103CBT6，其外设和硬件设计兼容市场上一些主流F103型号，主频最高可达256M，96K RAM+128K Flash，每个IO都可设置独立的内部上下拉电阻。详细信息见数据手册，[Air32F103芯片手册](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230326193134901_AIR32F103xxxx%E8%8A%AF%E7%89%87%E6%95%B0%E6%8D%AE%E6%89%8B%E5%86%8C.pdf)
+Air32F103为系列芯片，其外设和硬件设计兼容市场上一些主流F103型号，主频最高可达256M，96K RAM+256K Flash，每个IO都可设置独立的内部上下拉电阻。详细信息见数据手册，[Air32F103芯片手册](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230326193134901_AIR32F103xxxx%E8%8A%AF%E7%89%87%E6%95%B0%E6%8D%AE%E6%89%8B%E5%86%8C.pdf)
 
 寄存器手册[air32f103xx_寄存器手册.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230326193200002_air32f103xx_寄存器手册.pdf)
 
@@ -61,27 +61,6 @@ USB内部DP可选1.5K上拉电阻，可替代外部电路上拉电阻；并且�
 
 ```{note}
 由于**win7**系统不自带`winusb`驱动，且该系统早在2020年微软就已停止支持，所以如需使用DAPLINK功能，请升级至**win8以上系统**，或自行手动安装驱动：[Zadig驱动安装器](https://zadig.akeo.ie/)
-```
-
-```{note}
-由于最早一批开发板（22年上半年批次）默认的daplink固件封堵了SWD调试接口（后续出货无需关注此问题），所以**第一次**使用swd下载时，请先按住被调试板子的BOOT按键，再按一下复位按键，最后松开BOOT按键，然后点击keil中的下载按钮。第一次下载完成后，下次下载就不用这样操作了（或在下载前先按住被调试板子的复位按键，在点击keil的下载按钮后马上松开按键/或者直接用ISP工具擦除芯片）
-
-:::{dropdown} 具体操作方法
-下载遇到如下报错
-
-![image-20220622112120827](img/image-20220622112120827.png)
-
-在debug选项卡也看不到设备
-
-![image-20220622112219562](img/image-20220622112219562.png)
-
-按住被调试板子的复位按键，然后再打开debug选项卡就可以正常看到设备了
-
-![image-20220622112332027](img/image-20220622112332027.png)
-
-这时候一样只要按住被调试板子的复位按键，然后点击keil中的下载按钮，点完以后再释放复位按键即可。
-:::
-
 ```
 
 ## 模块购买
