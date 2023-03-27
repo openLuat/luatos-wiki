@@ -6,6 +6,7 @@
 .. toctree::
 
     chips
+    air001/index
     air101/index
     air103/index
     air105/index
@@ -13,7 +14,6 @@
     esp32c3/index
     esp32s3/index
     air32f103/index
-    air001/index
     swm181/index
     air302/index
     air640w/index
