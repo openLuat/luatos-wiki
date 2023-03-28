@@ -178,7 +178,7 @@ local font = lvgl.font_get("opposans_m_12")
 
 ---
 
-## lvgl.font_load(path/spi_device)
+## lvgl.font_load(path/spi_device,size,bpp,thickness,cache_size,sty_zh,sty_en)
 
 
 
@@ -189,12 +189,12 @@ local font = lvgl.font_get("opposans_m_12")
 |传入值类型|解释|
 |-|-|
 |string/userdata|字体路径/spi_device (spi_device为使用外置高通矢量字库芯片)|
-|number|size 可选(使用高通矢量字库)|
-|number|bpp 可选(使用高通矢量字库)|
-|number|thickness 可选(使用高通矢量字库)|
-|number|cache_size 可选(使用高通矢量字库)|
-|number|sty_zh 可选(使用高通矢量字库)|
-|number|sty_en 可选(使用高通矢量字库)|
+|number|size 可选,字号 16-192 默认16(使用高通矢量字库)|
+|number|bpp 可选 深度 默认4(使用高通矢量字库)|
+|number|thickness 可选 粗细值 默认size * bpp(使用高通矢量字库)|
+|number|cache_size 可选 默认0(使用高通矢量字库)|
+|number|sty_zh 可选 选择字体 默认1(使用高通矢量字库)|
+|number|sty_en 可选 选择字体 默认3(使用高通矢量字库)|
 
 **返回值**
 
