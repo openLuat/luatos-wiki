@@ -207,17 +207,19 @@ local value = mcu.x32(0x2009FFFC) --输出"0x2009fffc"
 
 
 
-获取启动后的高精度tick
+获取启动后的高精度tick，如果支持bit64库，可以直接输出转换好的bit64结构
 
 **参数**
 
-无
+|传入值类型|解释|
+|-|-|
+|boolean|是否输出bit64结构,true是,其他都是false,留空也是false,用于兼容旧的demo|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|string|当前tick值,8个字节的uint64|
+|string|当前tick值,8个字节的uint64,如果支持64bit库,同时要求输出64bit结构的话,会输出9字节的string|
 |int|1us有几个tick,0表示未知|
 
 **例子**
