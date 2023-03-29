@@ -19,6 +19,7 @@ LuatOS源码仓库：https://gitee.com/openLuat/LuatOS
    compile/Air105
    compile/ESP32C3
    compile/Win32
+   compile/Linux
    compile/Air640w
    compile/Air302
 
