@@ -13,6 +13,8 @@
 
 该图是LuatOS的视角, csdk是支持调整管脚复用关系的
 
+开发板上的按键分别是 BOOT(GPIO0), RESET(复位), PWR(开机键) LED灯(GPIO27)
+
 ![pinout2air780e](pinout.png)
 
 提醒:

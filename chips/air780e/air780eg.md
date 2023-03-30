@@ -60,5 +60,6 @@ UART部分:
 1. UART2不再有GPIO10/11的复用
 2. UART2_RX 不要接外部输入
 
+开发板上的按键分别是 BOOT(GPIO0), RESET(复位), PWR(开机键) LED灯(GPIO27)
 
 ![](pinout_780eg.png)
