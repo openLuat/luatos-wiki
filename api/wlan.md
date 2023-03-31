@@ -10,6 +10,13 @@
 本库有专属demo，[点此链接查看wlan的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/wlan)
 ```
 
+**示例**
+
+```lua
+--提醒, 对于仅支持wifiscan的模块, 仅 init/scan/scanResult 函数是可用的
+
+```
+
 ## 常量
 
 |常量|类型|解释|
@@ -381,6 +388,35 @@ log.info("wlan", "info", json.encode(wlan.getInfo()))
     "gw" : "192.168.1.1"
 }
 ]]
+
+```
+
+---
+
+## wlan.powerSave(mode)
+
+
+
+读取或设置省电模式
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|省电模式,可选, 设置就传支持, 例如wlan.PS_NONE|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|当前省电模式/设置后的省电模式|
+
+**例子**
+
+```lua
+-- 请查阅常量表  PS_NONE/PS_MIN_MODEM/PS_MAX_MODEM
+log.info("wlan", "PS", wlan.powerSave(wlan.PS_NONE))
+-- 本API于 2023.03.31 新增
 
 ```
 
