@@ -9,7 +9,7 @@
 :::{dropdown} win7用户可能需要
 （win10以上免驱，无需手动安装驱动）
 
-IoT Power 经典版CP2102驱动：[CP210x_Windows_Drivers](https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip)
+IoT Power V1 CP2102驱动：[CP210x_Windows_Drivers](https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip)
 
 IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://llcom.papapoi.com/iotpower/IoTPower_CC_usb_driver.7z)
 

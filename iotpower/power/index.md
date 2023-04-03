@@ -1,4 +1,4 @@
-# 🔋 IoT Power - 经典
+# 🔋 IoT Power - V1
 
 > [前往淘宝购买](https://item.taobao.com/item.htm?id=679899121798)
 
