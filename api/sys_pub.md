@@ -166,7 +166,7 @@ GNSS状态变化
 
 ```lua
 sys.subscribe("GNSS_STATE", function(event, ticks)
-    -- event取值有 
+    -- event取值有
     -- FIXED 定位成功
     -- LOSE  定位丢失
     -- ticks是事件发生的时间,一般可以忽略
