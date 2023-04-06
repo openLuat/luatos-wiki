@@ -13,6 +13,7 @@
    ds3231
    ec11
    gt911
+   ina226
    l3g4200d
    lbsLoc
    libfota
