@@ -596,3 +596,36 @@ mobile.dataTraffic(true, true)
 
 ---
 
+## mobile.config(item, value)
+
+
+
+网络特殊配置，针对不同平台有不同的配置，谨慎使用，目前只有EC618
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|配置项目，看CONF_XXX|
+|int|配置值|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|是否成功|
+
+**例子**
+
+```lua
+-- EC618配置小区重选信号差值门限，不能大于15dbm，必须在飞行模式下才能用
+mobile.flymode(0,true)
+mobile.config(mobile.CONF_RESELTOWEAKNCELL, 15)
+mobile.flymode(0,false)
+-- 清空上下行流量累计值
+mobile.dataTraffic(true, true)
+
+```
+
+---
+
