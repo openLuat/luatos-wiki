@@ -41,7 +41,7 @@
 |int|pin gpio编号,必须是数值|
 |any|mode 输入输出模式：<br>数字0/1代表输出模式<br>nil代表输入模式<br>function代表中断模式|
 |int|pull 上拉下列模式, 可以是gpio.PULLUP 或 gpio.PULLDOWN, 需要根据实际硬件选用|
-|int|irq 输出模式时为引脚初始电平,中断模式时为中断触发模式,默认gpio.BOTH。中断触发模式<br>上升沿gpio.RISING<br>下降沿gpio.FALLING<br>上升和下降都要gpio.BOTH |
+|int|irq 中断触发模式,默认gpio.BOTH。中断触发模式<br>上升沿gpio.RISING<br>下降沿gpio.FALLING<br>上升和下降都触发gpio.BOTH |
 
 **返回值**
 
@@ -54,8 +54,10 @@
 ```lua
 -- 设置gpio17为输入
 gpio.setup(17, nil)
--- 设置gpio17为输出
+-- 设置gpio17为输出,且初始化电平为低,使用硬件默认上下拉配置
 gpio.setup(17, 0)
+-- 设置gpio17为输出,且初始化电平为高,且启用内部上拉
+gpio.setup(17, 1, gpio.PULLUP)
 -- 设置gpio27为中断
 gpio.setup(27, function(val) print("IRQ_27",val) end, gpio.PULLUP)
 
