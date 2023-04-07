@@ -621,6 +621,7 @@ mobile.dataTraffic(true, true)
 -- EC618配置小区重选信号差值门限，不能大于15dbm，必须在飞行模式下才能用
 mobile.flymode(0,true)
 mobile.config(mobile.CONF_RESELTOWEAKNCELL, 15)
+mobile.config(mobile.CONF_STATICCONFIG, 1) --开启网络静态优化
 mobile.flymode(0,false)
 
 ```
