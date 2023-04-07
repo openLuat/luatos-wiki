@@ -42,7 +42,7 @@ mpu6xxx初始化
 
 |传入值类型|解释|
 |-|-|
-|number|i2c_id i2c_id|
+|number|所在的i2c总线id|
 
 **返回值**
 
