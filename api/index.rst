@@ -52,6 +52,7 @@
    mobile
    mqtt
    nbiot
+   nes
    nimble
    otp
    pack
