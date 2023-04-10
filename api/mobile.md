@@ -182,7 +182,7 @@ log.info("simid", mobile.simid())
 
 |传入值类型|解释|
 |-|-|
-|int|SIM卡的编号, 例如0, 1, 如果支持双卡，比如EC618，可以填2来自适应，但是会占用掉4个IO。如果不填就直接读取当前卡槽|
+|int|SIM卡的编号, 例如0, 1, 如果支持双卡，比如EC618，可以填2来自适应，但是会占用掉4个IO(gpio4/5/6/23)。如果不填就直接读取当前卡槽|
 |boolean|是否优先用SIM0，只有SIM卡编号写2自适应才有用！！！。true优先用SIM0，false则优先用上一次探测到的，默认是false，必须在开机就配置，否则就无效了|
 
 **返回值**
@@ -193,7 +193,15 @@ log.info("simid", mobile.simid())
 
 **例子**
 
-无
+```lua
+-- 注意, SIM1会占用GPIO4/5/6/23
+mobile.simid(0) -- 固定使用SIM0
+mobile.simid(1) -- 固件使用SIM1
+mobile.simid(2) -- 自动识别SIM0, SIM1, 且SIM0优先
+mobile.simid(2, true) -- -- 自动识别SIM0, SIM1, 且SIM1优先
+-- 提醒, 自动识别是会增加时间的
+
+```
 
 ---
 
