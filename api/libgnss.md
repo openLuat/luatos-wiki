@@ -282,7 +282,7 @@ log.info("nmea", "gsa", json.encode(libgnss.getGsa()))
 
 |传入值类型|解释|
 |-|-|
-|int|坐标类数据的格式, 0-DDMM.MMM格式, 1-DDDDDDD格式, 2-DD.DDDDD格式|
+|int|可选, 3-原始字符串, 不传或者传其他值, 则返回浮点值|
 
 **返回值**
 
