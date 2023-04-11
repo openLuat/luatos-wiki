@@ -28,3 +28,21 @@ LuatOS-SoC内置多种文件系统格式
 - romfs - 只读, 标准romfs格式
 
 LuatOS-SoC的VFS支持任何第三方文件系统, 无论是只读还是可读写, 实现相关操作函数即可对接.
+
+## 可读写的简单描述
+
+```
+/        可读写
+/luadb/  只读
+/ram/    部分模块支持, 可读写, 占用sys内存, 不消耗flash写入寿命, 但需要注意删除文件
+```
+
+```lua
+-- 读取刷机时选择的资源文件
+local f = io.open("/luadb/abc.txt", "r")
+
+-- 打开并准备写入一个文件, 且截断为0字节
+local f = io.open("/myfile.txt", "w+")
+```
+
+更多示例, 参考  https://gitee.com/openLuat/LuatOS/blob/master/demo/fs/main.lua
