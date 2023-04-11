@@ -6,6 +6,9 @@
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../lua/src/lstrlib_exts.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```
 
+```{tip}
+本库有专属demo，[点此链接查看string的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/string)
+```
 
 ## string.toHex(str, separator)
 
@@ -66,7 +69,7 @@ string.fromHex("313233616263") -->  "123abc"
 
 ---
 
-## string.split(str, delimiter)
+## string.split(str, delimiter, keepEmtry)
 
 
 
@@ -77,7 +80,8 @@ string.fromHex("313233616263") -->  "123abc"
 |传入值类型|解释|
 |-|-|
 |string|输入字符串|
-|string|分隔符|
+|string|分隔符,可选,默认 ","|
+|bool|是否保留空白片段,默认为false,不保留. 2023.4.11之后的固件可用|
 
 **返回值**
 
@@ -88,7 +92,15 @@ string.fromHex("313233616263") -->  "123abc"
 **例子**
 
 ```lua
-("123,456,789"):split(',') --> {'123','456','789'}
+local tmp = string.split("123,233333,122")
+log.info("tmp", json.encode(tmp))
+local tmp = ("123,456,789"):split(',') --> {'123','456','789'}
+log.info("tmp", json.encode(tmp))
+
+-- 保留空片段, 2023.4.11之后的固件可用
+local str = "/tmp//def/1234/"
+local tmp = str:split("/", true) 
+log.info("str.split", #tmp, json.encode(tmp))
 
 ```
 
