@@ -400,6 +400,50 @@ mobile.simid(2, true) -- -- 自动识别SIM0, SIM1, 且SIM1优先
 
 ---
 
+## mobile.eci()
+
+
+
+获取当前服务小区的ECI(E-UTRAN Cell Identifier)
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|当前eci值,若失败返回-1|
+
+**例子**
+
+无
+
+---
+
+## mobile.enbid()
+
+
+
+获取当前服务小区的eNBID(eNodeB Identifier)
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|当前enbid值,若失败返回-1|
+
+**例子**
+
+无
+
+---
+
 ## mobile.cellid()
 
 
