@@ -115,7 +115,7 @@ ioqueue.delay(0)
 
 ```lua
 ioqueue.setgpio(0,pin.PB01,true,gpio.PULLUP,0) --PB01设置成上拉输入
-ioqueue.setgpio(0,pin.PB01,false,0,1)--PB01设置成上拉输出高电平
+ioqueue.setgpio(0,pin.PB01,false,0,1)--PB01设置成默认上下拉输出高电平
 
 ```
 
