@@ -14,7 +14,7 @@
 -- 用法实例
 local netLed = require ("netLed")
 
-local LEDA= gpio.setup(27，1，gpio.PULLUP) --LED引脚判断赋值结束
+local LEDA = gpio.setup(27,1,gpio.PULLUP) --LED引脚判断赋值结束
 sys.taskInit(function()
 --呼吸灯
 sys.wait(5080) --延时5秒等待网络注册
@@ -29,7 +29,7 @@ end)
 
 ```
 
-## netled.setState
+## netLed.setState
 
 
 
@@ -54,7 +54,7 @@ netLed.setState()
 
 ---
 
-## netled.taskLed(ledPinSetFunc)
+## netLed.taskLed(ledPinSetFunc)
 
 
 
@@ -73,7 +73,7 @@ netLed.setState()
 **例子**
 
 ```lua
-local LEDA= gpio.setup(27，1，gpio.PULLUP) --LED引脚判断赋值结束
+local LEDA = gpio.setup(27,1,gpio.PULLUP) --LED引脚判断赋值结束
 netled.taskLed(LEDA)
 
 ```
@@ -99,7 +99,7 @@ LTE指示灯模块的运行任务
 **例子**
 
 ```lua
-local LEDA= gpio.setup(27，1，gpio.PULLUP) --LED引脚判断赋值结束
+local LEDA = gpio.setup(27,1,gpio.PULLUP) --LED引脚判断赋值结束
 netLed.taskLte(LEDA)
 
 ```
@@ -116,9 +116,9 @@ netLed.taskLte(LEDA)
 
 |传入值类型|解释|
 |-|-|
-|bool|flag 是否打开网络指示灯和LTE指示灯功能，true为打开，false为关闭|
-|number|ledPin 控制网络指示灯闪烁的GPIO引脚，例如pio.P0_1表示GPIO1|
-|number|ltePin 控制LTE指示灯闪烁的GPIO引脚，例如pio.P0_4表示GPIO4|
+|bool|flag 是否打开网络指示灯和LTE指示灯功能,true为打开,false为关闭|
+|number|ledPin 控制网络指示灯闪烁的GPIO引脚,例如pio.P0_1表示GPIO1|
+|number|ltePin 控制LTE指示灯闪烁的GPIO引脚,例如pio.P0_4表示GPIO4|
 
 **返回值**
 
@@ -129,7 +129,7 @@ netLed.taskLte(LEDA)
 **例子**
 
 ```lua
-netLed.setup(true，27，0)
+netLed.setup(true,27,0)
 
 ```
 
@@ -139,15 +139,15 @@ netLed.setup(true，27，0)
 
 
 
-配置某种工作状态下指示灯点亮和熄灭的时长（如果用户不配置，使用netLed.lua中ledBlinkTime配置的默认值）
+配置某种工作状态下指示灯点亮和熄灭的时长（如果用户不配置,使用netLed.lua中ledBlinkTime配置的默认值）
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|string|state 某种工作状态，仅支持"FLYMODE"、"SIMERR"、"IDLE"、"GSM"、"GPRS"、"SCK"|
-|number|on 指示灯点亮时长，单位毫秒，0xFFFF表示常亮，0表示常灭|
-|number|off 指示灯熄灭时长，单位毫秒，0xFFFF表示常灭，0表示常亮|
+|string|state 某种工作状态,仅支持"FLYMODE"、"SIMERR"、"IDLE"、"GSM"、"GPRS"、"SCK"|
+|number|on 指示灯点亮时长,单位毫秒,0xFFFF表示常亮,0表示常灭|
+|number|off 指示灯熄灭时长,单位毫秒,0xFFFF表示常灭,0表示常亮|
 
 **返回值**
 
@@ -158,7 +158,7 @@ netLed.setup(true，27，0)
 **例子**
 
 ```lua
-netLed.setBlinkTime(("FLYMODE",1000,500) --表示飞行模式工作状态下，指示灯闪烁规律为: 亮1秒，灭8.5秒
+netLed.setBlinkTime(("FLYMODE",1000,500) --表示飞行模式工作状态下,指示灯闪烁规律为: 亮1秒,灭8.5秒
 
 ```
 
@@ -186,7 +186,7 @@ netLed.setBlinkTime(("FLYMODE",1000,500) --表示飞行模式工作状态下，�
 
 ```lua
 local netLed = require ("netLed")
-local LEDA= gpio.setup(27，1，gpio.PULLUP) --LED引脚判断赋值结束
+local LEDA = gpio.setup(27,1,gpio.PULLUP) --LED引脚判断赋值结束
 sys.taskInit(function()
 --呼吸灯
 sys.wait(5080) --延时5秒等待网络注册
