@@ -17,14 +17,14 @@ local netLed = require ("netLed")
 local LEDA = gpio.setup(27,1,gpio.PULLUP) --LED引脚判断赋值结束
 sys.taskInit(function()
 --呼吸灯
-sys.wait(5080) --延时5秒等待网络注册
-    log.info("mobile.status()", mobile.status())
+sys.wait(5080)--延时5秒等待网络注册
+log.info("mobile.status()", mobile.status())
   while true do
- if mobile.status() == 1 --已注册
-    thensys.wait(688)
-  netLed.setupBreateLed(LEDA)
-  end
- end
+        if mobile.status() == 1--已注册
+        thensys.wait(688)
+        netLed.setupBreateLed(LEDA)
+     end
+   end
 end)
 
 ```
@@ -74,7 +74,7 @@ netLed.setState()
 
 ```lua
 local LEDA = gpio.setup(27,1,gpio.PULLUP) --LED引脚判断赋值结束
-netled.taskLed(LEDA)
+netLed.taskLed(LEDA)
 
 ```
 
@@ -189,14 +189,14 @@ local netLed = require ("netLed")
 local LEDA = gpio.setup(27,1,gpio.PULLUP) --LED引脚判断赋值结束
 sys.taskInit(function()
 --呼吸灯
-sys.wait(5080) --延时5秒等待网络注册
-    log.info("mobile.status()", mobile.status())
+sys.wait(5080)--延时5秒等待网络注册
+log.info("mobile.status()", mobile.status())
   while true do
- if mobile.status() == 1 --已注册
-    thensys.wait(688)
-  netLed.setupBreateLed(LEDA)
-  end
- end
+        if mobile.status() == 1--已注册
+        thensys.wait(688)
+        netLed.setupBreateLed(LEDA)
+     end
+   end
 end)
 
 ```
