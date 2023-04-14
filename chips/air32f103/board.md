@@ -14,7 +14,13 @@ BluePill开发板原理图[BluePill.pdf]([Air32F103CXT6-BluePill (openluat.com)]
 
 ## 使用说明
 
-开发板出厂默认为daplink固件（BluePill开发板默认无固件），固件支持**对外控制**调试下载功能，并且支持U盘模式烧录和虚拟串口，引脚对应关系如下：
+开发板出厂默认为daplink固件（BluePill开发板默认无固件），固件支持**对外控制**调试下载功能，并且支持U盘模式烧录和虚拟串口
+
+```{note}
+推荐升级至新版[DAPLink V2固件](https://gitee.com/openLuat/luatos-soc-air32f103/tree/master/AIR_Jlink_Keil)，烧录速度可提升一倍（[查看升级方法](https://gitee.com/openLuat/luatos-soc-air32f103/blob/master/AIR_Jlink_Keil/air32_daplink_readme.txt)）
+```
+
+引脚对应关系如下：
 
 |引脚|功能|
 |:-:|:-:|
