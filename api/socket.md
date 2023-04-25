@@ -455,7 +455,10 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 **例子**
 
-无
+```lua
+socket.setDNS(socket.ETH0, 1, "114.114.114.114")
+
+```
 
 ---
 
