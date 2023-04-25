@@ -26,7 +26,7 @@
 |lcd.font_opposansm24|font|24号字体|
 |lcd.font_opposansm32|font|32号字体|
 |lcd.font_opposansm8_chinese|font|8号中文字体|
-|lcd.font_opposansm8_chinese|font|10号中文字体|
+|lcd.font_opposansm10_chinese|font|10号中文字体|
 |lcd.font_opposansm12_chinese|font|12号中文字体|
 |lcd.font_opposansm16_chinese|font|16号中文字体|
 |lcd.font_opposansm18_chinese|font|18号中文字体|
