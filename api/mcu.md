@@ -7,6 +7,15 @@
 ```
 
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|mcu.UART|number|外设类型-串口|
+|mcu.UART|number|外设类型-I2C|
+|mcu.UART|number|外设类型-SPI|
+
+
 ## mcu.setClk(mhz)
 
 
@@ -312,6 +321,37 @@ mcu死机时处理模式，目前只有EC618平台适用
 mcu.hardfault(0)	--死机后停机，一般用于调试状态
 mcu.hardfault(1)	--死机后重启，一般用于正式产品
 mcu.hardfault(2)	--死机后尽量将错误信息提交给外部工具后重启，一般用于压力测试或者正式产品
+
+```
+
+---
+
+## mcu.iomux(type, channel, value)
+
+
+
+在外设打开前，将外设IO复用到非默认配置上，目前只支持Air780E的部分外设复用到其他配置，这是一个临时接口，如果后续有更合适的api，本接口将不再更新
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|外设类型，目前只有mcu.UART,mcu.I2C|
+|int|总线序号，0~N，|
+|int|新的配置，这个需要根据具体平台决定|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+mcu.iomux(mcu.UART, 2, 1)	-- Air780E的UART2复用到gpio12和gpio13(Air780EG默认是这个复用，不要动)
+mcu.iomux(mcu.UART, 2, 2)	-- Air780E的UART2复用到gpio6和gpio7
+mcu.iomux(mcu.I2C, 0, 1)	-- Air780E的I2C0复用到gpio12和gpio13
+mcu.iomux(mcu.I2C, 0, 2)	-- Air780E的I2C0复用到gpio16和gpio17
+mcu.iomux(mcu.I2C, 1, 1)	-- Air780E的I2C1复用到gpio4和gpio5
 
 ```
 
