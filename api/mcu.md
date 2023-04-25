@@ -12,8 +12,8 @@
 |常量|类型|解释|
 |-|-|-|
 |mcu.UART|number|外设类型-串口|
-|mcu.UART|number|外设类型-I2C|
-|mcu.UART|number|外设类型-SPI|
+|mcu.I2C|number|外设类型-I2C|
+|mcu.SPI|number|外设类型-SPI|
 
 
 ## mcu.setClk(mhz)
