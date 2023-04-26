@@ -477,6 +477,17 @@ void delay()
 
 如果应用中对软件延时时间要求比较严格，请对软件实现的延时参数做一定的调整
 
+### RTC时钟，预分频装载值超过0xffff时，算法的差异
+
+Air32的RTC内部的分频=(PRLH+1)*(PRLL+1)，与SXX32不同
+
+例如，16M晶振，配置RTC时钟HSE 128分频，时间单位为1秒：
+
+- SXX32F103 使用`RTC_SetPrescaler(124999);`
+- AIR32F103 使用`RTC_SetPrescaler(227857);`（或`RTC_SetPrescaler(128035);`）
+
+16000000 / 128 = 125000；一共20bit，高四位是3的话，低16位是125000 / （3 + 1） - 1 = 31249，合起来227857
+
 ### TRACESWO 作为 Printf 功能使用说明
 
 使用 TRACESWO 管脚(PB3)作为 Log 输出，发现并无 Log 正常输出
