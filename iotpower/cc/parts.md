@@ -64,6 +64,44 @@ IOT Power CC支持两种连接方式：四线模式与双线模式
 
 你也可以使用两根`USB C口转鳄鱼夹`的线缆，均使用红色正极夹子，按上图的电流方向进行测量。
 
+## 外壳拼装步骤
+
+### 到手零件一览
+
+![cc-shell-all](img/cc-shell-all.png)
+
+### 组装外壳
+
+首先装上键帽，注意，键帽的洞上下间距不对称，需要将孔偏下放置，如图
+
+![cc-shell1](img/cc-shell1.png)
+
+接着将板子放置在外壳底板上，卡住键帽不要掉下去，然后撕去屏幕上的贴膜
+
+![cc-shell2](img/cc-shell2.jpg)
+
+将上半部分外壳放上去，注意键帽要对齐
+
+![cc-shell3](img/cc-shell3.jpg)
+
+拧上四个螺丝，固定好，不需要拧太紧以免滑丝
+
+![cc-shell4](img/cc-shell4.jpg)
+
+### 安装面板
+
+撕去面板底部的保护膜与3M胶贴纸
+
+![cc-shell-face](img/cc-shell-face.jpg)
+
+将面板贴到外壳屏幕一侧，建议尽量**抵住下面那一边**贴，不然屏幕容易被遮住
+
+![cc-shell5](img/cc-shell5.jpg)
+
+### 外壳拼装完成
+
+![cc-shell-done](img/cc-shell-done.jpg)
+
 ---
 
 可以继续查看下一页的`操作说明`

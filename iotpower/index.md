@@ -19,7 +19,7 @@ Iot Power V1：USB供电，作为电源使用，输出最大5V/2A，采样率10K
 :::{grid-item-card} {octicon}`iterations;1.5em;sd-mr-1` CC版本
 :link: cc/index
 :link-type: doc
-:img-top: cc/img/font_small.png
+:img-top: cc/img/font_small.jpg
 
 Iot Power CC：纯测量设备，支持PD输入诱骗，适配更高电压与更大电流
 
