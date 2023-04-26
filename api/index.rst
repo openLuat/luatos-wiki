@@ -44,6 +44,7 @@
    libgnss
    log
    lora
+   lora2
    lvgl
    max30102
    mcu
