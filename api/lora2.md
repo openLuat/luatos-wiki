@@ -18,7 +18,7 @@
 |lora2.STANDBY|number|STANDBY模式|
 
 
-## lora.init(ic, loraconfig,spiconfig)
+## lora2.init(ic, loraconfig,spiconfig)
 
 
 
@@ -33,21 +33,15 @@ lora初始化
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|userdata|若成功会返回lora对象,否则返回nil|
 
 **例子**
 
 ```lua
-lora.init("llcc68",
-    {
-        id = 0,           -- SPI id
-        cs = pin.PB04,    -- SPI 片选的GPIO号,如果没有pin库,填GPIO数字编号就行
-        res = pin.PB00,   -- 复位脚连接的GPIO号,如果没有pin库,填GPIO数字编号就行
-        busy = pin.PB01,  -- 忙检测脚的GPIO号
-        dio1 = pin.PB06,  -- 数据输入中断脚
-        lora_init = true  -- 是否发送初始化命令. 如果是唤醒后直接读取, 就传false
-    }
-)
+spi_lora = spi.deviceSetup(spi_id,pin_cs,0,0,8,10*1000*1000,spi.MSB,1,0)
+lora_device = lora2.init("llcc68",{res = pin_reset,busy = pin_busy,dio1 = pin_dio1},spi_lora)
 
 ```
 
