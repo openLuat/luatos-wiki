@@ -1,6 +1,6 @@
 # lora2 - lora2驱动模块(支持多挂)
 
-{bdg-secondary}`适配状态未知`
+{bdg-success}`已适配` {bdg-primary}`Air780E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/lora2/luat_lib_lora.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -72,7 +72,7 @@ lora_device:set_channel(433000000)
 
 ---
 
-## lora.set_txconfig(txconfig)
+## lora_device:set_txconfig(txconfig)
 
 
 
@@ -91,7 +91,7 @@ lora配置发送参数
 **例子**
 
 ```lua
-lora.set_txconfig(
+lora_device:set_txconfig(
     {
         mode=1,
         power=22,
@@ -113,7 +113,7 @@ lora.set_txconfig(
 
 ---
 
-## lora.set_rxconfig(set_rxconfig)
+## lora_device:set_rxconfig(set_rxconfig)
 
 
 
@@ -132,7 +132,7 @@ lora配置接收参数
 **例子**
 
 ```lua
-lora.set_rxconfig(
+lora_device:set_rxconfig(
     {
         mode=1,
         bandwidth=0,
@@ -229,6 +229,54 @@ lora_device:recv(1000)
 
 ```lua
 lora_device:mode(lora.STANDBY)
+
+```
+
+---
+
+## lora_device:on(cb)
+
+
+
+注册lora回调
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|function|cb lora回调,参数包括lora_device, event, data, size|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+lora_device:on(function(lora_device, event, data, size)
+    log.info("lora", "event", event, lora_device, data, size)
+    if event == "tx_done" then
+        lora_device:recv(1000)
+    elseif event == "rx_done" then
+        lora_device:send("PING")
+    elseif event == "tx_timeout" then
+
+    elseif event == "rx_timeout" then
+        lora_device:recv(1000)
+    elseif event == "rx_error" then
+
+    end
+end)
+--[[
+event可能出现的值有
+    tx_done         -- 发送完成
+    rx_done         -- 接收完成
+    tx_timeout      -- 发送超时
+    rx_timeout      -- 接收超时
+    rx_error        -- 接收错误
+]]
 
 ```
 
