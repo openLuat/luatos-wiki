@@ -205,6 +205,37 @@ mobile.simid(2, true) -- -- 自动识别SIM0, SIM1, 且SIM1优先
 
 ---
 
+## mobile.simPin(id,operation,pin1,pin2)
+
+
+
+检测当前SIM卡是否准备好，对SIM卡的PIN码做相关操作
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|SIM卡的编号, 例如0, 1, 支持双卡双待的才需要选择|
+|int|PIN码操作类型，只能是mobile.PIN_XXXX，不操作就留空|
+|string|更换pin时操作的pin码，或者验证操作的pin码，或者解锁pin码时的PUK，4~8字节|
+|string|更换pin码操作时的新的pin码，解锁pin码时的新PIN，4~8字节|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|当无PIN操作时，返回SIM卡是否准备好，有PIN操作时，返回是否成功|
+
+**例子**
+
+```lua
+local cpin_is_ready = mobile.simPin() -- 当前sim卡是否准备好，一般返回false就是没卡
+local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
+
+```
+
+---
+
 ## mobile.rtime(time, auto_reset_stack)
 
 
