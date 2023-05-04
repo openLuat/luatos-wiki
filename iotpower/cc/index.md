@@ -16,7 +16,7 @@ IOT Power CC是广大用户随身携带的理想测试工具。
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
 
-:::{grid-item-card} {octicon}`repo-forked;1.5em;sd-mr-1` 设备结构
+:::{grid-item-card} {octicon}`repo-forked;1.5em;sd-mr-1` 连接与组装
 :link: parts
 :link-type: doc
 :img-top: img/font_small.jpg
