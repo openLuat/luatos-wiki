@@ -38,3 +38,16 @@ window.onload = function () {
 if (window.location.protocol != "https:" && window.location.protocol != "file:"){
     window.location.href = "https:" +  window.location.href.substring(window.location.protocol.length);
 }
+
+$(document).ready(function() {
+    $("p>img").each(function(){
+        var strA = "<a class='pic-box-click' href='" + this.src + "'></a>";
+        $(this).wrapAll(strA);
+    })
+    $('.pic-box-click').magnificPopup({
+        type:'image',
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        gallery: { enabled:true }
+    });
+});
