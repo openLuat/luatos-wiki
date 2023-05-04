@@ -368,6 +368,39 @@ pm.power(pm.GPS, true)
 
 ---
 
+## pm.ioVol(id, val)
+
+
+
+IO高电平电压控制,当前仅EC618系列可用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|电平id,目前只有pm.IOVOL_ALL_GPIO|
+|int|电平值,单位毫伏|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|处理结果true成功，false失败|
+
+**例子**
+
+```lua
+-- EC618系列设置IO电平, 范围 1650 ~ 2000，2650~3400 , 单位毫伏, 步进50mv
+-- 例如Air780E/Air600E/Air700E/Air780EG
+-- 注意, 这里的设置优先级会高于硬件IOSEL脚的配置
+-- 但开机时依然先使用硬件配置,直至调用本API进行配置, 所以io电平会变化
+-- pm.ioVol(pm.IOVOL_ALL_GPIO, 3300)    -- 所有GPIO高电平输出3.3V
+-- pm.ioVol(pm.IOVOL_ALL_GPIO, 1800)    -- 所有GPIO高电平输出1.8V
+
+```
+
+---
+
 ## pm.wakeupPin(pin,level)
 
 
