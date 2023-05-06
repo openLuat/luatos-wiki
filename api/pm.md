@@ -359,11 +359,6 @@ pm.power(pm.GPS, true)
 -- 注意: 开启后, 复位键就变成关机了!!! pwrkey要长按2秒才能开机
 -- pm.power(pm.PWK_MODE, true)
 
--- EC618系列设置IO电平, 范围 1650 ~ 3400 , 单位毫伏, 步进50mv
--- 注意, 这里的设置优先级会高于硬件IOSEL脚的配置
--- pm.power(pm.IOVLOT_GPIO, 3300)
--- pm.power(pm.IOVLOT_AONGPIO, 3300)
-
 ```
 
 ---
