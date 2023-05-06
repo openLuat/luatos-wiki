@@ -30,7 +30,7 @@ local lbsLoc = require("lbsLoc")
         -- locType：numble类型或者nil，定位类型，0表示基站定位成功，255表示WIFI定位成功
 function getLocCb(result, lat, lng, addr, time, locType)
     log.info("testLbsLoc.getLocCb", result, lat, lng)
-    -- 获取经纬度成功
+    -- 获取经纬度成功, 坐标系WSG84
     if result == 0 then
         log.info("服务器返回的时间", time:toHex())
         log.info("定位类型,基站定位成功返回0", locType)
