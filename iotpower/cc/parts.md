@@ -84,6 +84,10 @@ IOT Power CC支持两种连接方式：四线模式与双线模式
 
 ![cc-shell3](img/cc-shell3.jpg)
 
+```{warning}
+⚠重要提醒：一定要记得撕掉屏幕上的膜！
+```
+
 拧上四个螺丝，固定好，不需要拧太紧以免滑丝
 
 ![cc-shell4](img/cc-shell4.jpg)
