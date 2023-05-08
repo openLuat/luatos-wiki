@@ -206,6 +206,11 @@ int main(void)
 
 本示例工程的开源链接为<>
 
+### 常见问题
+#### 编译出现形如`Error: L6985E: Unable to automatically place AT section system_air001xx.o(.ARM.__at_0x20000000) with required base address 0x20000000. Please manually place in the scatter file using the --no_autoat option. `的错误
+![](img/2023-05-08-21-44-57.png)
+这种情况一般来说都是没有添加相应的中断函数/没有添加HAL所需的宏，可以手动检查一下是否有哪些地方出现了错误。
+
 ## 三、下载烧录
 1. 使用支持SWD的调试器分别连接Air001芯片的SWCLK(PA14)和SWDIO(PA13)，建议使用合宙的DAP-Link调试器连接。
 
