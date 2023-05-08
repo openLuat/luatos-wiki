@@ -90,7 +90,6 @@ i2c.setup(1, i2c.FAST) -- 端口正确就一定成功
 |-|-|
 |int|i2c SCL引脚编号(GPIO编号)|
 |int|i2c SDA引脚编号(GPIO编号)|
-|int|从设备地址（7位）, 例如0x38|
 
 **返回值**
 
@@ -104,7 +103,7 @@ i2c.setup(1, i2c.FAST) -- 端口正确就一定成功
 -- 注意！这个接口是软件模拟i2c，速度可能会比硬件的慢
 -- 不需要调用i2c.close接口
 -- 初始化软件i2c
-local softI2C = i2c.createSoft(1,2,0x38)
+local softI2C = i2c.createSoft(1,2)
 i2c.send(softI2C, 0x5C, string.char(0x0F, 0x2F))
 
 ```
