@@ -8,7 +8,7 @@
 
 - 目标群体：使用Keil MDK进行开发的用户
 
-## 二、HAL库环境搭建
+## 二、HAL库环境搭建（和后面的LL库环境搭建任选一个即可）
 
 ### 准备工作
 
@@ -210,6 +210,269 @@ int main(void)
 #### 编译出现形如`Error: L6985E: Unable to automatically place AT section system_air001xx.o(.ARM.__at_0x20000000) with required base address 0x20000000. Please manually place in the scatter file using the --no_autoat option. `的错误
 ![](img/2023-05-08-21-44-57.png)
 这种情况一般来说都是没有添加相应的中断函数/没有添加HAL所需的宏，可以手动检查一下是否有哪些地方出现了错误。
+
+## 二、LL库环境搭建（和前面的HAL库环境搭建任选一个即可）
+### 准备工作
+
+1. 安装MDK5，具体方法请百度，安装后需要激活才能编译大文件
+2. 下载安装Air001芯片的SDK：<>
+
+### 安装支持包
+
+找到AIR_Jlink_Keil文件夹中最新版本的pack文件，双击安装即可，安装后可在keil设备列表的AirM2M下看到Air001设备。
+
+![](img/2023-05-08-19-33-22.png)
+
+### 新建工程
+
+#### 0x00 新建工程
+
+![](img/2023-05-08-19-34-46.png)
+
+创建文件夹和工程名，路径根据自己实际选
+
+![](img/2023-05-08-19-35-28.png)
+
+#### 0x01 选择设备
+选择设备列表中的AirM2M下的AIR001 Series中的AIR001中的AIR001Dev
+
+![](img/2023-05-08-19-36-32.png)
+
+#### 0x02 添加CMSIS CORE和启动文件
+勾选CMSIS下的CORE和Device下的Startup，即可自动配置启动文件
+
+![](img/2023-05-08-19-37-00.png)
+
+#### 0x03 添加LL库
+在这里我们使用LL库来作为例子，需要将SDK文件夹中的AIR001xx_HAL_Driver文件夹复制在工程目录下，添加完成后的工程目录大概是这样的
+
+![](img/2023-05-08-21-51-57.png)
+
+#### 0x04 添加LL库外设源文件
+在Keil中添加用到的外设的源文件，一个最小的基于LL库的工程至少需要添加`air001xx_ll_utils.c`
+
+添加`main.c`文件
+
+![](img/2023-05-08-21-54-03.png)
+
+全部添加完成后类似这样
+
+#### 0x05 添加中断函数相关文件
+LL库依赖一些中断函数，我们需要重写。
+1. 添加`air001_assert.h`和`air001xx_it.h`以及`main.h`文件，每个文件的内容大概如下
+
+`air001_assert.h`
+```c
+#ifndef __AIR001_ASSERT_H
+#define __AIR001_ASSERT_H
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+#ifdef USE_FULL_ASSERT
+#include "stdint.h"
+#define assert_param(expr) ((expr) ? (void)0U : assert_failed((uint8_t *)__FILE__, __LINE__))
+  void assert_failed(uint8_t *file, uint32_t line);
+#else
+#define assert_param(expr) ((void)0U)
+#endif
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+
+```
+
+`air001xx_it.h`
+```c
+#ifndef __AIR001F0XX_IT_H
+#define __AIR001F0XX_IT_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+void NMI_Handler(void);
+void HardFault_Handler(void);
+void SVC_Handler(void);
+void PendSV_Handler(void);
+void SysTick_Handler(void);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+```
+
+`main.h`
+```c
+#ifndef __MAIN_H
+#define __MAIN_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include "air001xx_ll_rcc.h"
+#include "air001xx_ll_bus.h"
+#include "air001xx_ll_system.h"
+#include "air001xx_ll_cortex.h"
+#include "air001xx_ll_utils.h"
+#include "air001xx_ll_pwr.h"
+#include "air001xx_ll_dma.h"
+#include "air001xx_ll_gpio.h"
+
+#if defined(USE_FULL_ASSERT)
+#include "air001_assert.h"
+#endif
+void Error_Handler(void);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif
+```
+
+2. 添加`air001xx_it.c`文件
+
+```c
+#include "main.h"
+#include "air001xx_it.h"
+
+void NMI_Handler(void)
+{
+}
+
+
+void HardFault_Handler(void)
+{
+  while (1)
+  {
+  }
+}
+
+void SVC_Handler(void)
+{
+}
+
+void PendSV_Handler(void)
+{
+}
+
+void SysTick_Handler(void)
+{
+}
+```
+
+#### 0x06 添加对头文件的引用
+1. 点击工具栏的魔术棒按钮打开 Options for Target窗口
+
+![](img/2023-05-08-20-03-37.png)
+
+2. 进入C/C++页面，点击`Include path`后面的三个点
+
+![](img/2023-05-08-20-06-51.png)
+
+3. 这里我们添加两个目录，一个是`main.c`下的目录，另一个是LL库所需的头文件目录，如下图
+
+![](img/2023-05-08-22-23-15.png)
+
+#### 0x07 添加芯片宏定义
+1. 点击工具栏的魔术棒按钮打开 Options for Target窗口
+
+![](img/2023-05-08-20-03-37.png)
+
+2. 进入C/C++页面， 添加`AIR001_DEV`宏 ,如下图所示
+
+![](img/2023-05-08-22-23-56.png)
+
+#### 0x08 修改`mian.c`文件
+一个典型的例子如下
+```c
+#include "main.h"
+
+static void SystemClock_Config(void);
+
+int main(void)
+{
+  /* 开SYSCFG和PWR时钟 */
+  LL_APB1_GRP2_EnableClock(LL_APB1_GRP2_PERIPH_SYSCFG);
+  LL_APB1_GRP1_EnableClock(LL_APB1_GRP1_PERIPH_PWR);
+
+  // 配置时钟
+  SystemClock_Config();
+
+  LL_IOP_GRP1_EnableClock(LL_IOP_GRP1_PERIPH_GPIOB); // 使能GPIOB时钟
+  // 将PB0引脚配置为输出
+  LL_GPIO_SetPinMode(GPIOB, LL_GPIO_PIN_0, LL_GPIO_MODE_OUTPUT);
+
+  while (1)
+  {
+    LL_GPIO_TogglePin(GPIOB, LL_GPIO_PIN_0);
+    LL_mDelay(1000);
+  }
+}
+
+static void SystemClock_Config(void)
+{
+  // 使能HSI
+  LL_RCC_HSI_Enable();
+  while (LL_RCC_HSI_IsReady() != 1)
+  {
+  }
+
+  // 打开AHB时钟
+  LL_RCC_SetAHBPrescaler(LL_RCC_SYSCLK_DIV_1);
+
+  // 使用HSI作为系统时钟
+  LL_RCC_SetSysClkSource(LL_RCC_SYS_CLKSOURCE_HSISYS);
+  while (LL_RCC_GetSysClkSource() != LL_RCC_SYS_CLKSOURCE_STATUS_HSISYS)
+  {
+  }
+
+  // 设置APB1时钟
+  LL_RCC_SetAPB1Prescaler(LL_RCC_APB1_DIV_1);
+  LL_Init1msTick(8000000);
+
+  // 设置系统时钟
+  LL_SetSystemCoreClock(8000000);
+}
+
+void Error_Handler(void)
+{
+  while (1)
+  {
+  }
+}
+
+#ifdef USE_FULL_ASSERT
+
+void assert_failed(uint8_t *file, uint32_t line)
+{
+
+  while (1)
+  {
+  }
+}
+#endif
+
+```
+
+点击编译按钮测试是否能编译成功。
+
+![](img/2023-05-08-22-25-20.png)
+
+本示例工程的开源链接为<>
+
+```{note}
+需要注意的是，LL库是`Header-Only`的，这也就如果我们需要引入一个新的外设，只需要在`main.h`中添加相应的头文件，而不需要像是HAL库一样手动添加外设源文件
+```
 
 ## 三、下载烧录
 1. 使用支持SWD的调试器分别连接Air001芯片的SWCLK(PA14)和SWDIO(PA13)，建议使用合宙的DAP-Link调试器连接。
