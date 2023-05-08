@@ -8,3 +8,4 @@
     mcu
     board
     hardware
+    Air001-MDK
