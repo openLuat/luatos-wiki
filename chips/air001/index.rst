@@ -9,3 +9,4 @@
     board
     hardware
     Air001-MDK
+    Air001-Arduino
