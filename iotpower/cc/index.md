@@ -52,6 +52,12 @@ IOT Power CC是广大用户随身携带的理想测试工具。
 
 ---
 
+## 精度对比
+
+![vtest](img/vtest.png)
+
+![ctest](img/ctest.png)
+
 ```{rubric} 更多资料
 ```
 
