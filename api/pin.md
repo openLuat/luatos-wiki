@@ -1,11 +1,28 @@
 # pin - 管脚命名映射
 
-{bdg-secondary}`适配状态未知`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_pin.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```
 
+
+**示例**
+
+```lua
+-- 这个库是为了解决文本形式的PIN脚命名与GPIO编号的映射问题
+-- 功能实现上, pin.PA01 就对应数值 1, 代表GPIO 1, 丝印上对应 PA01
+
+-- PA12, GPIO12, 设置为输出, 而且低电平.
+gpio.setup(12, 0)
+gpio.setup(pin.PA12, 0) -- 推荐使用
+gpio.setup(pin.get("PA12"), 0) -- 不推荐, 太长^_^
+
+-- 只有部分BSP有这个库, ESP系列就没这个库
+-- 这个库在 Air101/Air103/Air105 上有意义, 但不是必须用这个库, 直接写GPIO号是一样的效果
+-- 在 ESP32系列, EC618系列(Air780E等), GPIO号都是直接给出的, 没有"Pxxx"形式, 所以这个库不存在
+
+```
 
 ## pin.get(name)
 
@@ -28,7 +45,7 @@
 **例子**
 
 ```lua
--- 以下三个语句等价, 若提示pin这个库不存在,则代表固件版本低,请升级底层固件.
+-- 以下三个语句完全等价, 若提示pin这个库不存在,要么固件版本低,请升级底层固件, 要么就是不需要这个库
 -- PA12, GPIO12, 设置为输出, 而且低电平.
 gpio.setup(12, 0)
 gpio.setup(pin.PA12, 0) -- 推荐使用
