@@ -95,7 +95,7 @@ PS:
 
 |对应的GPIO|对应的PAD|使用的API示例|备注|
 |---------|---------|---------|----|
-| GPIO12   |    11   |pm.power(pm.CAMERA, true 或者 false)|LDO_CTL,在Air600E标的是GPIO12|
+| GPIO12   |    11   |pm.power(pm.DAC_EN, true 或者 false)|LDO_CTL,在Air600E标的是GPIO12|
 | GPIO13   |    12   |pm.power(pm.GPS, true 或者 false)|没有引出,在Air780EG控制GPS的电源|
 | GPIO12   |    27   |gpio.setup(12, 0)|I2C0_SDA,也是复用的|
 | GPIO13   |    28   |gpio.setup(13, 0)|I2C0_SCL,也是复用的|
