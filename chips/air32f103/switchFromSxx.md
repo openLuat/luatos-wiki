@@ -505,6 +505,22 @@ RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);
 GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable,ENABLE);
 ```
 
+### 开启读保护后自动开启写保护区域大小说明
+
+开启读保护后，自动开启写保护区域大小说明如下：
+
+|     型号      | 写保护区域大小 |
+| :-----------: | :------------: |
+| AIR32F103CBT6 |       8K       |
+| AIR32F103CCT6 |       4K       |
+| AIR32F103RPT6 |       4K       |
+| AIR32F103VET6 |       4K       |
+| AIR32F103VGT6 |       4K       |
+| AIR32F103ZET6 |       4K       |
+| AIR32F103ZGT6 |       4K       |
+
+
+
 ## ADC
 
 ### 配置 ADC 连续采样且使能 ADC 后，只关闭 ADC 使能无法停止转化
@@ -969,6 +985,29 @@ AIR32F103 DMA Channel 的 CNT(数据传输数量)修改生效条件和 SXX32F103
 解决方案：
 
 软件避免 DMA Channel 正在搬运数据时，修改其他 Channel 的 CNT 值(数据传输数量)
+
+
+
+## I2C
+
+### 作为 Master 发送起始位&停止位注意事项
+
+问题描述：
+
+如下图所示 MH2103C 起始位 Hold 时间(𝑡ℎ(𝑆𝑇𝐴))&停止位 Hold 时间(𝑡𝑆𝑈(𝑆𝑇𝑂))和 SXX32F103
+不同。
+当对端为 IO 模拟 Slave 时，需要确认对端是否对𝑡ℎ(𝑆𝑇𝐴)和𝑡𝑆𝑈(𝑆𝑇𝑂)有要求。
+
+![i2c_master_difference](img/i2c_master_difference.png)
+
+对于 SXX32F103：
+𝑡ℎ(𝑆𝑇𝐴)和𝑡𝑆𝑈(𝑆𝑇𝑂)等于 SCL 的高电平时间。
+对于 MH2103C：
+标准模式下𝑡ℎ(𝑆𝑇𝐴)&𝑡𝑆𝑈(𝑆𝑇𝑂)等于(FREQ*4+8)*𝑇𝐴𝑃𝐵1。
+快速模式下𝑡ℎ(𝑆𝑇𝐴)&𝑡𝑆𝑈(𝑆𝑇𝑂)等于(FREQ+8)*𝑇𝐴𝑃𝐵1。
+
+根本原因：设计不同。
+解决方案：若对𝑡ℎ(𝑆𝑇𝐴)和𝑡𝑆𝑈(𝑆𝑇𝑂)时间有要求，可以通过修改 FREQ 或者修改 APB1 CLK 来调节时间。
 
 ## ISP、仿真器、脱机烧录器使用注意事项
 
