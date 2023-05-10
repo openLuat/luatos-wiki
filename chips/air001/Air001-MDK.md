@@ -17,10 +17,9 @@
 
 ### 安装支持包
 
-找到AIR_Jlink_Keil文件夹中最新版本的pack文件，双击安装即可，安装后可在keil设备列表的AirM2M下看到Air001设备。
+找到AIR_Jlink_Keil文件夹中最新版本的pack文件，双击安装即可，安装后可在keil设备列表的Generic下看到Air001设备。
 
 ![](img/2023-05-08-19-33-22.png)
-
 ### 新建工程
 
 #### 0x00 新建工程
@@ -219,7 +218,7 @@ int main(void)
 
 ### 安装支持包
 
-找到AIR_Jlink_Keil文件夹中最新版本的pack文件，双击安装即可，安装后可在keil设备列表的AirM2M下看到Air001设备。
+找到AIR_Jlink_Keil文件夹中最新版本的pack文件，双击安装即可，安装后可在keil设备列表的Generic下看到Air001设备。
 
 ![](img/2023-05-08-19-33-22.png)
 
