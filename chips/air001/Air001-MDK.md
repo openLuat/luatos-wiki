@@ -13,11 +13,11 @@
 ### 准备工作
 
 1. 安装MDK5，具体方法请百度，安装后需要激活才能编译大文件
-2. 下载安装Air001芯片的SDK：<>
+2. 下载安装Air001芯片的SDK：<https://gitee.com/openLuat/luatos-soc-air001>
 
 ### 安装支持包
 
-找到AIR_Jlink_Keil文件夹中最新版本的pack文件，双击安装即可，安装后可在keil设备列表的Generic下看到Air001设备。
+找到PACK文件夹中最新版本的pack文件，双击安装即可，安装后可在keil设备列表的Generic下看到Air001设备。
 
 ![](img/2023-05-08-19-33-22.png)
 ### 新建工程
@@ -42,7 +42,7 @@
 ![](img/2023-05-08-19-37-00.png)
 
 #### 0x03 添加HAL库
-在这里我们使用HAL库来作为例子，需要将SDK文件夹中的AIR001xx_HAL_Driver文件夹复制在工程目录下，添加完成后的工程目录大概是这样的
+在这里我们使用HAL库来作为例子，需要将SDK文件夹中的Libraries目录下的AIR001xx_HAL_Driver文件夹复制在工程目录下，添加完成后的工程目录大概是这样的
 
 ![](img/2023-05-08-19-39-56.png)
 
@@ -214,11 +214,11 @@ int main(void)
 ### 准备工作
 
 1. 安装MDK5，具体方法请百度，安装后需要激活才能编译大文件
-2. 下载安装Air001芯片的SDK：<>
+2. 下载安装Air001芯片的SDK：<https://gitee.com/openLuat/luatos-soc-air001>
 
 ### 安装支持包
 
-找到AIR_Jlink_Keil文件夹中最新版本的pack文件，双击安装即可，安装后可在keil设备列表的Generic下看到Air001设备。
+找到PACK文件夹中最新版本的pack文件，双击安装即可，安装后可在keil设备列表的Generic下看到Air001设备。
 
 ![](img/2023-05-08-19-33-22.png)
 
@@ -243,7 +243,7 @@ int main(void)
 ![](img/2023-05-08-19-37-00.png)
 
 #### 0x03 添加LL库
-在这里我们使用LL库来作为例子，需要将SDK文件夹中的AIR001xx_HAL_Driver文件夹复制在工程目录下，添加完成后的工程目录大概是这样的
+在这里我们使用LL库来作为例子，需要将SDK文件夹中的Libraries目录下的AIR001xx_HAL_Driver文件夹复制在工程目录下，添加完成后的工程目录大概是这样的
 
 ![](img/2023-05-08-21-51-57.png)
 
