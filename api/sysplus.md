@@ -82,3 +82,58 @@ sysplus.sendMsg('a', 'b')
 
 ---
 
+## sysplus.taskInitEx(fun, taskName, cbFun, ...)
+
+
+
+创建一个任务线程,在模块最末行调用该函数并注册模块中的任务函数,main.lua导入该模块即可
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|function|任务函数名,用于resume唤醒时调用|
+|string|任务名称,用于唤醒任务的id|
+|function|接收到非目标消息时的回调函数|
+|any|... 任务函数fun的可变参数|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|number|返回该任务的线程号|
+
+**例子**
+
+```lua
+sysplus.taskInitEx(task1,'a',callback)
+
+```
+
+---
+
+## sysplus.sendMsg(taskName, param1, param2, param3, param4)
+
+
+
+删除由taskInitEx创建的任务线程
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|任务名称,用于唤醒任务的id|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+sysplus.taskDel('a')
+
+```
+
+---
+
