@@ -57,7 +57,7 @@ if fskv.init() then
 end
 
 -- 关于清空fdb库
--- 下载工具是没有提供直接清除fdb数据的途径的, 但有有办法解决
+-- 下载工具是没有提供直接清除fdb数据的途径的, 但有办法解决
 -- 写一个main.lua, 执行 fskv.kvdb_init 后 执行 fskv.clear() 即可全清fdb数据.
 
 ```
@@ -122,6 +122,9 @@ log.info("fdb", fskv.set("bigd", {name="wendal",age=123}))
 if fskv.init() then
     log.info("fdb", fskv.get("wendal"))
 end
+
+-- 若需要"默认值", 对应非bool布尔值, 可以这样写
+local v = fskv.get("wendal") or "123"
 
 ```
 

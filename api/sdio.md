@@ -7,6 +7,13 @@
 ```
 
 
+**示例**
+
+```lua
+-- 本sdio库挂载tf卡到文件系统功能已经被fatfs的sdio模式取代
+
+```
+
 ## sdio.init(id)
 
 
