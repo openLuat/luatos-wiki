@@ -144,12 +144,12 @@ print("ticks", tick)
 
 |返回值类型|解释|
 |-|-|
-|int|每秒的tick数量|
+|int|每秒的tick数量,通常为1000|
 
 **例子**
 
 ```lua
-local tick = mcu.hz()
+local hz = mcu.hz()
 print("mcu.hz", hz)
 
 ```
