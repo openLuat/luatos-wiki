@@ -44,20 +44,19 @@ lbsLoc.request(getLocCb)
 
 
 
-发送基站/WIFI定位请求（仅支持中国区域的位置查询）
+发送基站定位请求
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
 |function|cbFnc 用户回调函数，回调函数的调用形式为：cbFnc(result,lat,lng,addr,time,locType)|
-|bool|reqAddr 是否请求服务器返回具体的位置字符串信息，目前此功能不完善，参数可以传nil|
+|bool|reqAddr 是否请求服务器返回具体的位置字符串信息，已经不支持,填false或者nil|
 |number|timeout 请求超时时间，单位毫秒，默认20000毫秒|
-|string|productKey IOT网站上的产品证书，如果在main.lua中定义了PRODUCT_KEY变量，则此参数可以传nil|
-|string|host 服务器域名，此参数可选，目前仅lib中agps.lua使用此参数。应用脚本可以直接传nil|
-|string|port 服务器端口，此参数可选，目前仅lib中agps.lua使用此参数。应用脚本可以直接传nil|
-|bool|reqTime 是否需要服务器返回时间信息，true返回，false或者nil不返回，此参数可选，目前仅lib中agps.lua使用此参数。应用脚本可以直接传nil|
-|table|reqWifi 搜索到的WIFI热点信息(MAC地址和信号强度)，如果传入了此参数，后台会查询WIFI热点对应的经纬度，此参数格式如下：|
+|string|productKey IOT网站上的产品KEY，如果在main.lua中定义了PRODUCT_KEY变量，则此参数可以传nil|
+|string|host 服务器域名, 默认 "bs.openluat.com" ,可选备用服务器(不保证可用) "bs.air32.cn"|
+|string|port 服务器端口，默认"12411",一般不需要设置|
+|return|nil|
 
 **返回值**
 
@@ -65,7 +64,10 @@ lbsLoc.request(getLocCb)
 
 **例子**
 
-无
+```lua
+-- 提醒: 返回的坐标值, 是WGS84坐标系
+
+```
 
 ---
 
