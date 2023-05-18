@@ -5,7 +5,7 @@
 1. 仅支持TDD, 不支持FDD, 所以只支持中移动的网络
 2. MAIN_RI与Air780E/Air780EG的GPIO是不同的, 为GPIO21
 3. 开发板是不带codec的, 也不支持软DAC音频输出
-4. 没有I2C0, 所以I2C0/SPI0/UART2是4个管脚, 3种功能
+4. 没有I2C0, 只有I2C1
 
 ## 关于封装和软件
 
