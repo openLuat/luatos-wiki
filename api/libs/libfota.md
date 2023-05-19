@@ -52,7 +52,7 @@ sys.timerLoopStart(libfota.request, 4*3600*1000, libfota_cb, "http://xxxxxx.com/
 
 ```
 
-## libfota.request(cbFnc,ota_url,storge_location, len, param1,ota_port,libfota_timeout,server_cert, client_cert, client_key, client_password)
+## libfota.request(cbFnc,ota_url,storge_location, len, param1,ota_port,timeout,tls,server_cert, client_cert, client_key, client_password)
 
 
 
@@ -68,7 +68,8 @@ fota升级
 |number|len 可选,数据存储的最大空间|
 |userdata|param1,可选,如果数据存储在spiflash时,为spi_device|
 |number|ota_port 可选,请求端口,默认80|
-|number|libfota_timeout 可选,请求超时时间,单位毫秒,默认30000毫秒|
+|number|timeout 可选,请求超时时间,单位毫秒,默认20000毫秒|
+|boolean|tls    可选,是否是加密传输，默认false|
 |string|server_cert 可选,服务器ca证书数据|
 |string|client_cert 可选,客户端ca证书数据|
 |string|client_key 可选,客户端私钥加密数据|
