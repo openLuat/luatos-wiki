@@ -343,6 +343,28 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 
 ---
 
+## mobile.csq()
+
+
+
+获取csq
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|当前CSQ值, 若失败返回0|
+
+**例子**
+
+无
+
+---
+
 ## mobile.rssi()
 
 
