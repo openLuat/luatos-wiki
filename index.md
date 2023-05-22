@@ -84,6 +84,26 @@ LuatOS提供了丰富的外设接口库，可以更便捷地实现创意，无�
 
 <script type='text/javascript' src='https://ykf-webchat.7moor.com/javascripts/7moorInit.js?accessId=4a733990-aec0-11e9-a1f3-4fbe5cb02a0b&autoShow=true&language=ZHCN' async='async'></script>
 
+<style type="text/css">
+    .chatlink {
+        position: fixed;
+        z-index: 2147483645;
+        width: auto;
+        font-size: 16px;
+        line-height: 24px;
+        top: 100px;
+        left: 1000px;
+        color: #fff;
+        text-align: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: #19caa6;
+    }
+</style>
+<div class="chatlink"><button onclick="window.open('https://chat.openluat.com')">文档没解决，论坛发个帖！</a></div>
+
 ```{toctree}
 :hidden:
 :caption: 💁 LuatOS 介绍
