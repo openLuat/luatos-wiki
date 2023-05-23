@@ -31,6 +31,7 @@
    tcs3472
    tm1637
    tsl2561
+   wtd9527
    xmodem
    ze08g_ch2o
    zh07
