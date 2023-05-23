@@ -57,7 +57,16 @@ Iot Power CC：纯测量设备，支持PD输入诱骗，适配更高电压与更
 - [IoTPower CC](cc/index)
 
 请选择左侧的具体页面查看。
-
+<script>
+  window.chatbaseConfig = {
+    chatbotId: "RIXmYPQ0zos-37Nz_zL0O",
+  }
+</script>
+<script
+  src="https://www.chatbase.co/embed.min.js"
+  id="RIXmYPQ0zos-37Nz_zL0O"
+  defer>
+</script>
 ```{toctree}
 :hidden:
 power/index
