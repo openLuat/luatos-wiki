@@ -684,7 +684,7 @@ log.info("hmac_sha256", crypto.md("SHA256", "1234567890", "123456"))
 
 ---
 
-## crypto.checksum(data)
+## crypto.checksum(data, mode)
 
 
 
@@ -695,6 +695,7 @@ log.info("hmac_sha256", crypto.md("SHA256", "1234567890", "123456"))
 |传入值类型|解释|
 |-|-|
 |string|待计算的数据,必选|
+|int|模式,累加模式, 0 - 异或, 1 - 累加, 默认为0|
 
 **返回值**
 
@@ -709,6 +710,7 @@ log.info("hmac_sha256", crypto.md("SHA256", "1234567890", "123456"))
 -- 单纯计算checksum值
 local ck = crypto.checksum("OK")
 log.info("checksum", "ok", string.format("%02X", ck))
+-- 第二个参数mode在2023.5.23日添加
 
 ```
 
