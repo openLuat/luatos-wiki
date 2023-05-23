@@ -92,8 +92,8 @@ LuatOS提供了丰富的外设接口库，可以更便捷地实现创意，无�
         font-size: 16px;
         line-height: 24px;
         top: 100px;
-        left: 1000px;
-        color: #fff;
+        right: 100px;
+        color: #19caa6;
         text-align: center;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
