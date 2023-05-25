@@ -16,6 +16,7 @@
    ina226
    l3g4200d
    lbsLoc
+   lbsLoc2
    libfota
    libnet
    lis2dh12
