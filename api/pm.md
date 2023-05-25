@@ -241,6 +241,9 @@ log.info("pm", "last power reson", pm.lastReson())
 ```lua
 -- 请求进入休眠模式
 pm.force(pm.HIB)
+-- 对应EC618系列(Air780E/Air700E等), 该操作会关闭USB通信
+-- 唤醒后如需开启USB, 请打开USB电压
+--pm.power(pm.USB, true)
 
 ```
 
@@ -271,7 +274,11 @@ pm.request(pm.HIB)
 if pm.check() then
     log.info("pm", "it is ok to hib")
 else
+    -- 对应EC618系列(Air780E/Air700E等), 该操作会关闭USB通信
     pm.force(pm.HIB) -- 强制休眠
+    -- 唤醒后如需开启USB, 请打开USB电压
+    --sys.wait(100)
+    --pm.power(pm.USB, true)
 end
 
 ```
