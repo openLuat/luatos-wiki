@@ -11,18 +11,55 @@
             margin: 0;
             padding: 0;
         }
+        body {
+            overflow:hidden;
+        }
 
         #chat {
             width: 100%;
             height: 100%;
             position: absolute;
+            top: 30px;
         }
     </style>
 </head>
 
 <body>
-    <iframe id="chat" src="https://www.chatbase.co/chatbot-iframe/kXE945ztlW6gUvKdR4qnn" width="100%" height="100%"
+    <p>
+        切换专家：
+        <button id="chatwiki" onclick='setChatUrl("chatwiki")'>LuatOS/MCU/Power相关</button>
+        <button id="chat780" onclick='setChatUrl("chat780")'>Air780E/Air700E相关</button>
+        <button id="chat724" onclick='setChatUrl("chat724")'>Air724E/LuatOS-Air相关</button>
+    </p>
+    <iframe id="chat" width="100%" height="100%"
         frameborder="0"></iframe>
+    <script>
+        var chat = document.getElementById("chat");
+        var chatwiki = document.getElementById("chatwiki");
+        var chat780 = document.getElementById("chat780");
+        var chat724 = document.getElementById("chat724");
+
+        function updateButtons(selected) {
+            chatwiki.style.backgroundColor = selected == "chatwiki" ? "rgb(0, 255, 16)" : "#fff";
+            chat780.style.backgroundColor = selected == "chat780" ? "rgb(0, 255, 16)" : "#fff";
+            chat724.style.backgroundColor = selected == "chat724" ? "rgb(0, 255, 16)" : "#fff";
+        }
+        function setChatUrl(selected) {
+            switch (selected) {
+                case "chatwiki":
+                    chat.src = "https://www.chatbase.co/chatbot-iframe/kXE945ztlW6gUvKdR4qnn";
+                    break;
+                case "chat780":
+                    chat.src = "https://www.chatbase.co/chatbot-iframe/xQ8t7N7WAO4zYZpGJDc3A";
+                    break;
+                case "chat724":
+                    chat.src = "https://www.chatbase.co/chatbot-iframe/Yr92kxZzSh9xwu5jxnMlx";
+                    break;
+            }
+            updateButtons(selected);
+        }
+        setChatUrl("chatwiki");
+    </script>
 </body>
 
 </html>
