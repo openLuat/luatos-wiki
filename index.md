@@ -99,7 +99,6 @@ LuatOS提供了丰富的外设接口库，可以更便捷地实现创意，无�
         border-top-right-radius: 5px;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
-        background-color: #19caa6;
     }
 </style>
 <div class="chatlink">
