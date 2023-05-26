@@ -15,24 +15,32 @@
             overflow:hidden;
         }
 
+        .menu{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+        }
         #chat {
             width: 100%;
             height: 100%;
-            position: absolute;
-            top: 30px;
+            position: fixed;
+            top: 20px;
         }
     </style>
 </head>
 
 <body>
-    <p>
-        切换专家：
-        <button id="chatwiki" onclick='setChatUrl("chatwiki")'>LuatOS/MCU/Power相关</button>
-        <button id="chat780" onclick='setChatUrl("chat780")'>Air780E/Air700E相关</button>
-        <button id="chat724" onclick='setChatUrl("chat724")'>Air724E/LuatOS-Air相关</button>
-    </p>
-    <iframe id="chat" width="100%" height="100%"
-        frameborder="0"></iframe>
+
+    <iframe id="chat" frameborder="0"></iframe>
+    <div class="menu">
+        <p>
+            <button id="chatwiki" onclick='setChatUrl("chatwiki")'>LuatOS/MCU/Power</button>
+            <button id="chat780" onclick='setChatUrl("chat780")'>Air780E/Air700E</button>
+            <button id="chat724" onclick='setChatUrl("chat724")'>Air724/LuatOS-Air</button>
+        </p>
+    </div>
     <script>
         var chat = document.getElementById("chat");
         var chatwiki = document.getElementById("chatwiki");
