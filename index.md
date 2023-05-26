@@ -104,7 +104,7 @@ LuatOS提供了丰富的外设接口库，可以更便捷地实现创意，无�
 </style>
 <div class="chatlink">
     <button onclick="window.open('https://chat.openluat.com')">文档没解决，论坛发个帖！</button><p/>
-    <h3>工作时间段5分钟内回复，如果不回复，打电话 18616233557 投诉</h3>
+    <span>工作时间段5分钟内回复，否则电话18616233557</span>
 </div>
 
 ```{toctree}
