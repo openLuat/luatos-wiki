@@ -10,6 +10,8 @@ LuatOS大QQ群: 1061642968
 ## 环境搭建教程
 [Air001基于Keil MDK的用户手册](https://wiki.luatos.com/chips/air001/Air001-MDK.html)
 
+[Air001基于Arduino的用户手册](https://wiki.luatos.com/chips/air001/Air001-Arduino.html)
+
 ## 刷机烧录教程
 
 todo

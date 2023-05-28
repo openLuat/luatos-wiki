@@ -34,7 +34,7 @@
 #### 0x01 选择设备
 选择设备列表中的AirM2M下的AIR001 Series中的AIR001中的AIR001Dev
 
-![](img/2023-05-08-19-36-32.png)
+![](img/2023-05-08-19-34-46.png)
 
 #### 0x02 添加CMSIS CORE和启动文件
 勾选CMSIS下的CORE和Device下的Startup，即可自动配置启动文件
@@ -203,7 +203,7 @@ int main(void)
 
 ![](img/2023-05-08-20-56-54.png)
 
-本示例工程的开源链接为<>
+本示例工程的开源链接为<https://gitee.com/openLuat/luatos-soc-air001/tree/master/ModuleDemo/Templates/Example_HAL>
 
 ### 常见问题
 #### 编译出现形如`Error: L6985E: Unable to automatically place AT section system_air001xx.o(.ARM.__at_0x20000000) with required base address 0x20000000. Please manually place in the scatter file using the --no_autoat option. `的错误
@@ -235,7 +235,7 @@ int main(void)
 #### 0x01 选择设备
 选择设备列表中的AirM2M下的AIR001 Series中的AIR001中的AIR001Dev
 
-![](img/2023-05-08-19-36-32.png)
+![](img/2023-05-08-19-34-46.png)
 
 #### 0x02 添加CMSIS CORE和启动文件
 勾选CMSIS下的CORE和Device下的Startup，即可自动配置启动文件
@@ -469,7 +469,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 ![](img/2023-05-08-22-25-20.png)
 
-本示例工程的开源链接为<>
+本示例工程的开源链接为<https://gitee.com/openLuat/luatos-soc-air001/tree/master/ModuleDemo/Templates/Example_LL>
 
 ```{note}
 需要注意的是，LL库是`Header-Only`的，这也就意味着如果我们需要引入一个新的外设，只需要在`main.h`中添加相应的头文件，而不需要像是HAL库一样手动添加外设源文件
