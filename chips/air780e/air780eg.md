@@ -15,7 +15,7 @@ UART部分:
 供电部分:
 1. Air780EG的GPS的供电是 `GPIO13/PAD12`, 注意是 `PAD12/padaddr 12`, 非 `PAD28`
 2. 芯片供电和有源天线的供电,是一起控制的, 只用了一个GPIO,一个API控制
-3. 因为使用的是普通GPIO,`SLEEP1/LIGHT能保持供电`,但`SLEEP2/DEEP/HIB模式下会掉电`的
+3. 因为使用的是普通GPIO,`SLEEP1/LIGHT/SLEEP2/DEEP/HIB模式下会掉电`的
 4. 在lua代码中, 控制供电API是 `pm.power(pm.GPS, true)`, 虽然有pm.GPS_ANT,但对Air780EG无效
 5. 飞行模式是射频相关的控制,不影响GPIO供电,所以不影响GPS供电
 

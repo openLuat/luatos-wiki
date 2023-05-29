@@ -39,7 +39,7 @@ PS:
 ## UART说明
 
 物理uart有3个(0/1/2)
-1. uart0是日志口(DBG_TX/DBG_RX),不推荐使用,启动时也有输出,LuatOS固件默认禁用uart0
+1. uart0是日志口(DBG_TX/DBG_RX),不推荐使用,启动时也有输出,LuatOS固件默认不允许用户使用uart0
 2. uart1是主串口(MAIN_TX/MAIN_RX), 推荐使用
 3. uart2是次串口(AUX_TX/AUX_RX), **带GNSS功能的模块会接GNSS芯片**,而且PAD不同,不可用作其他功能
 4. 注意, UART2在Air780E与Air780EG用的PAD是不一样的,但软件会自动适配,不需要关注.
