@@ -11,6 +11,7 @@ Air32F103为系列芯片，首发型号为Air32F103CBT6，其外设和硬件设�
     Air32f103
     switchFromSxx
     enhancement
+    daplink
     Air32F103_PCB <https://wiki.luatos.com/_static/bom/Air32F103.html>
     BluePill_PCB <https://wiki.luatos.com/_static/bom/BluePill.html>
 
