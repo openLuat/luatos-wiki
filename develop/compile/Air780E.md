@@ -5,11 +5,14 @@
 * Air780E
 * Air600E
 * Air780EG
+* Air700E
+* Air780EX
+
 
 ## 准备工作
 
-1. win10, 理论上win7也可以. linux编译暂不完善,后续会有.
-2. 起码1G以上的剩余空间, 会有大量的临时文件
+1. Windows 10(理论上win7也可以,但不推荐),  linux(仅ubuntu验证过)
+2. 起码5G以上的剩余空间, 会有大量的临时文件
 3. 若能联网最好, 不能也有解决方法,会补充说明
 
 ## 下载源码
@@ -17,7 +20,7 @@
 注意, 需要两个库
 
 * 主库 `https://gitee.com/openLuat/LuatOS`
-* bsp库 `https://gitee.com/openLuat/luatos-soc-2022`
+* bsp库 `https://gitee.com/openLuat/luatos-soc-2022` linux编译会有更多说明,请查阅README.md
 
 代码更新频繁, 推荐使用`git`进行clone下载, 不建议zip下载.
 
