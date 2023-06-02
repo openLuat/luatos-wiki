@@ -70,6 +70,8 @@ pm.request(pm.IDLE) -- 通过切换不同的值请求进入不同的休眠模式
 |pm.CAMERA|number|camera电源，CAM_VCC输出|
 |pm.DAC_EN|number|Air780E和Air600E的DAC_EN，注意audio的默认配置会自动使用这个脚来控制CODEC的使能|
 |pm.PWK_MODE|number|是否开启ec618的powerkey滤波模式，true开，注意滤波模式下reset变成直接关机|
+|pm.WORK_MODE|number|ec618的节能模式，0~3，0完全关闭，1性能优先，2平衡，3极致功耗|
+|pm.IOVL|number|所有GPIO高电平电压控制,当前仅ec618系列可用|
 
 
 ## pm.request(mode)
@@ -345,7 +347,7 @@ pm.shutdown()
 |传入值类型|解释|
 |-|-|
 |int|电源控制id,pm.USB pm.GPS之类|
-|boolean|开关true开，false关，默认关. 部分选项支持数值|
+|boolean|or int 开关true/1开，false/0关，默认关，部分选项支持数值|
 
 **返回值**
 

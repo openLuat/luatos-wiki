@@ -454,11 +454,11 @@ arc：指向弧对象的指针
 
 ### 事件
 
-除了 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) 外，按钮还发送以下特殊事件：
+除了 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) 外，按钮还发送以下特殊事件：
 
 - **lvgl.EVENT_VALUE_CHANGED**-切换按钮时发送。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多信息。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多信息。
 
 ### 按键
 
@@ -469,7 +469,7 @@ arc：指向弧对象的指针
 
 请注意， `lvgl.KEY_ENTER` 的状态已转换为 `lvgl.EVENT_PRESSED/PRESSING/RELEASED` 等。
 
-进一步了解 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 。
+进一步了解 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 。
 
 ### 范例
 
@@ -571,17 +571,17 @@ arc：指向弧对象的指针
 
 #### 注意事项
 
-Button矩阵对象的权重非常轻，因为按钮不是在虚拟飞行中绘制的。这样，一个按钮仅使用8个额外的字节，而不是普通 [Button对象](http://lvgl.100ask.net/documentation/04_widgets/04_btn.html) 的〜100-150字节大小（加上其容器的大小和每个按钮的标签）。
+Button矩阵对象的权重非常轻，因为按钮不是在虚拟飞行中绘制的。这样，一个按钮仅使用8个额外的字节，而不是普通 [Button对象](http://lvgl.100ask.net/7.11/documentation/04_widgets/04_btn.html) 的〜100-150字节大小（加上其容器的大小和每个按钮的标签）。
 
 此设置的缺点是，将各个按钮的样式设置为与其他按钮不同的功能受到限制（除了切换功能之外）。如果您需要该功能，则使用单个按钮很有可能是一种更好的方法。
 
 ### 事件
 
-除了 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) 之外，按钮矩阵还发送以下特殊事件：
+除了 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) 之外，按钮矩阵还发送以下特殊事件：
 
 - **lvgl.EVENT_VALUE_CHANGED** - 在按下/释放按钮时或在长按之后重复时发送。事件数据设置为按下/释放按钮的ID。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多信息。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多信息。
 
 ### 按钮
 
@@ -590,7 +590,7 @@ Button矩阵对象的权重非常轻，因为按钮不是在虚拟飞行中绘�
 - **lvgl.KEY_RIGHT/UP/LEFT/RIGHT** - 在按钮之间导航以选择一个
 - **lvgl.KEY_ENTER** - 按下/释放所选按钮
 
-进一步了解 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 。
+进一步了解 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 。
 
 ### 范例
 
@@ -682,7 +682,7 @@ Calendar对象是经典的日历，可以：
 
 ### 事件
 
-除了 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) 外，日历还会发送以下特殊事件：当当前月份更改时，还会发送 **lvgl.EVENT_VALUE_CHANGED** 。
+除了 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) 外，日历还会发送以下特殊事件：当当前月份更改时，还会发送 **lvgl.EVENT_VALUE_CHANGED** 。
 
 在与输入设备相关的事件中， `lvgl.calendar_get_pressed_date(calendar)` 指示当前正在按下的日期，如果没有按下任何日期，则返回 `nil` 。
 
@@ -763,13 +763,13 @@ end
 
 ### 概述
 
-复选框(Checkbox)对象是从 Button 背景构建的，[Button](http://lvgl.100ask.net/documentation/04_widgets/04_btn.html) 背景还包含Button项目符号和 [Label](http://lvgl.100ask.net/documentation/04_widgets/17_label.html) ，以实现经典的复选框。
+复选框(Checkbox)对象是从 Button 背景构建的，[Button](http://lvgl.100ask.net/7.11/documentation/04_widgets/04_btn.html) 背景还包含Button项目符号和 [Label](http://lvgl.100ask.net/7.11/documentation/04_widgets/17_label.html) ，以实现经典的复选框。
 
 ### 零件和样式
 
 该复选框的主要部分称为 `lvgl.CHECKBOX_PART_BG` 。它是“项目符号”及其旁边的文本的容器。背景使用所有典型的背景样式属性。
 
-项目符号是真正的 [基础对象(lvgl.obj)](http://lvgl.100ask.net/documentation/04_widgets/01_obj.html) ，可以用 `lvgl.CHECKBOX_PART_BULLET` 引用。项目符号会自动继承背景状态。因此，背景被按下时，项目符号也会进入按下状态。项目符号还使用所有典型的背景样式属性。
+项目符号是真正的 [基础对象(lvgl.obj)](http://lvgl.100ask.net/7.11/documentation/04_widgets/01_obj.html) ，可以用 `lvgl.CHECKBOX_PART_BULLET` 引用。项目符号会自动继承背景状态。因此，背景被按下时，项目符号也会进入按下状态。项目符号还使用所有典型的背景样式属性。
 
 标签没有专用部分。因为文本样式属性始终是继承的，所以可以在背景样式中设置其样式。
 
@@ -802,13 +802,13 @@ end
 
 ### 事件
 
-除了 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) ，复选框还支持以下 [特殊事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id7) ：
+除了 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) ，复选框还支持以下 [特殊事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id7) ：
 
 - **lvgl.EVENT_VALUE_CHANGED** - 切换复选框时发送。
 
 请注意，与通用输入设备相关的事件（如lvgl.EVENT_PRESSED）也以非活动状态发送。需要使用lvgl.cb_is_inactive（cb）检查状态，以忽略非活动复选框中的事件。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键
 
@@ -819,7 +819,7 @@ end
 
 请注意，与往常一样，lvgl.KEY_ENTER的状态会转换为lvgl.EVENT_PRESSED / PRESSING / RELEASED等。
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -970,13 +970,13 @@ y轴也存在相同的功能： `lvgl.chart_set_y_tick_text` 和 `lvgl.chart_set
 
 仅通用事件是按对象类型发送的。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多信息。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多信息。
 
 ### 按键
 
 对象类型不处理任何键。
 
-进一步了解 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 。
+进一步了解 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 。
 
 ### 范例
 
@@ -1068,15 +1068,15 @@ y轴也存在相同的功能： `lvgl.chart_set_y_tick_text` 和 `lvgl.chart_set
 
 ### 事件
 
-仅 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) 是按对象类型发送的。
+仅 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) 是按对象类型发送的。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多信息。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多信息。
 
 ### 按键
 
 对象类型不处理任何键。
 
-进一步了解 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 。
+进一步了解 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 。
 
 ### 范例
 
@@ -1149,9 +1149,9 @@ y轴也存在相同的功能： `lvgl.chart_set_y_tick_text` 和 `lvgl.chart_set
 
 ### 事件
 
-仅 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) 是按对象类型发送的。
+仅 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) 是按对象类型发送的。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多信息。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多信息。
 
 ### 按键
 
@@ -1159,7 +1159,7 @@ y轴也存在相同的功能： `lvgl.chart_set_y_tick_text` 和 `lvgl.chart_set
 - **lvgl.KEY_DOWN, lvgl.KEY_LEFT** 将当前参数减1
 - **lvgl.KEY_ENTER** 长按将显示下一个模式。通过双击将重置当前参数。
 
-进一步了解 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 。
+进一步了解 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 。
 
 ### 范例
 
@@ -1188,7 +1188,7 @@ y轴也存在相同的功能： `lvgl.chart_set_y_tick_text` 和 `lvgl.chart_set
 
 ### 小部件和样式
 
-调用下拉列表的主要部分， `lvgl.DROPDOWN_PART_MAIN` 它是一个简单的 [lvgl.obj](http://lvgl.100ask.net/documentation/04_widgets/01_obj.html) 对象。它使用所有典型的背景属性。按下，聚焦，编辑等阶梯也照常应用。
+调用下拉列表的主要部分， `lvgl.DROPDOWN_PART_MAIN` 它是一个简单的 [lvgl.obj](http://lvgl.100ask.net/7.11/documentation/04_widgets/01_obj.html) 对象。它使用所有典型的背景属性。按下，聚焦，编辑等阶梯也照常应用。
 
 单击主对象时创建的列表是Page。它的背景部分可以被引用， `lvgl.DROPDOWN_PART_LIST` 并为矩形本身使用所有典型的背景属性，并为选项使用文本属性。要调整选项之间的间距，请使用text_line_space样式属性。填充值可用于在边缘上留出一些空间。
 
@@ -1248,11 +1248,11 @@ y轴也存在相同的功能： `lvgl.chart_set_y_tick_text` 和 `lvgl.chart_set
 
 ### 事件
 
-除了 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) 外，下拉列表还发送以下 [特殊事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id7) ：
+除了 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) 外，下拉列表还发送以下 [特殊事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id7) ：
 
 - **lvgl.EVENT_VALUE_CHANGED** - 选择新选项时发送。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多信息。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多信息。
 
 ### 按键
 
@@ -1262,7 +1262,7 @@ y轴也存在相同的功能： `lvgl.chart_set_y_tick_text` 和 `lvgl.chart_set
 - **lvgl.KEY_LEFT/UP** - 选择上一个选项。
 - **LY_KEY_ENTER** - 应用选定的选项（发送lvgl.EVENT_VALUE_CHANGED事件并关闭下拉列表）。
 
-进一步了解 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 。
+进一步了解 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 。
 
 ### 范例
 
@@ -1370,15 +1370,15 @@ Gauge 的刻度可以有偏移。可以用 调整。`lvgl.gauge_set_angle_offset
 
 ### 事件
 
-仅 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) 是按对象类型发送的。
+仅 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) 是按对象类型发送的。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键
 
 对象类型不处理任何键。
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -1411,7 +1411,7 @@ Gauge 的刻度可以有偏移。可以用 调整。`lvgl.gauge_set_angle_offset
 
 图像是从外部作为文件显示的基本对象。图像也可以显示符号（ `lvgl.SYMBOL_...` ）。
 
-使用 [图像解码器](http://lvgl.100ask.net/documentation/03_overview/08_image.html#id9) 接口，也可以支持自定义图像格式。
+使用 [图像解码器](http://lvgl.100ask.net/7.11/documentation/03_overview/08_image.html#id9) 接口，也可以支持自定义图像格式。
 
 ### 零件和样式
 
@@ -1424,7 +1424,7 @@ Gauge 的刻度可以有偏移。可以用 调整。`lvgl.gauge_set_angle_offset
 为了提供最大的灵活性，图像的来源可以是：
 
 - 外部存储的文件（例如SD卡上的文件）。
-- [符号](http://lvgl.100ask.net/documentation/03_overview/07_font.html) 文字。
+- [符号](http://lvgl.100ask.net/7.11/documentation/03_overview/07_font.html) 文字。
 
 要使用 **外部文件** ，还需要使用在线转换器工具转换图像文件，但是现在应该选择二进制输出格式。还需要使用LVGL的文件系统模块，并为基本文件操作注册具有某些功能的驱动程序。进入文件系统以了解更多信息。要设置来自文件的图像，请使用 `lvgl.img_set_src(img, "S:folder1/my_img.bin")` 。
 
@@ -1460,7 +1460,7 @@ Gauge 的刻度可以有偏移。可以用 调整。`lvgl.gauge_set_angle_offset
 
 #### 镶嵌
 
-使用 `lvgl.img_set_offset_x(img, x_ofs) `` 和 ``lvgl.img_set_offset_y(img, y_ofs)` ，可以向显示的图像添加一些偏移。如果对象尺寸小于图像源尺寸，则很有用。使用offset参数，可以通过对x或y偏移量进行 [动画](http://lvgl.100ask.net/documentation/03_overview/10_animation.html) 处理来创建 [纹理图集](https://en.wikipedia.org/wiki/Texture_atlas) 或“运行中的图像”效果。
+使用 `lvgl.img_set_offset_x(img, x_ofs) `` 和 ``lvgl.img_set_offset_y(img, y_ofs)` ，可以向显示的图像添加一些偏移。如果对象尺寸小于图像源尺寸，则很有用。使用offset参数，可以通过对x或y偏移量进行 [动画](http://lvgl.100ask.net/7.11/documentation/03_overview/10_animation.html) 处理来创建 [纹理图集](https://en.wikipedia.org/wiki/Texture_atlas) 或“运行中的图像”效果。
 
 #### 转换
 
@@ -1472,7 +1472,7 @@ Gauge 的刻度可以有偏移。可以用 调整。`lvgl.gauge_set_angle_offset
 
 可以使用 `lvgl.img_set_antialias(img, true/false)` 调整转换的质量。启用抗锯齿功能后，转换的质量更高，但速度较慢。
 
-转换需要整个图像可用。因此，可以转换索引图像（ `lvgl.IMG_CF_INDEXED_...` ），仅alpha图像（ `lvgl.IMG_CF_ALPHA_...` ）或文件中的图像。换句话说，转换仅适用于存储为C数组的真彩色图像，或者自定义 [图像解码器](http://lvgl.100ask.net/documentation/03_overview/08_image.html#id9) 返回整个图像。
+转换需要整个图像可用。因此，可以转换索引图像（ `lvgl.IMG_CF_INDEXED_...` ），仅alpha图像（ `lvgl.IMG_CF_ALPHA_...` ）或文件中的图像。换句话说，转换仅适用于存储为C数组的真彩色图像，或者自定义 [图像解码器](http://lvgl.100ask.net/7.11/documentation/03_overview/08_image.html#id9) 返回整个图像。
 
 注意，图像对象的真实坐标在变换期间不会改变。即 `lvgl.obj_get_width/height/x/y()` 将返回原始的非缩放坐标。
 
@@ -1484,13 +1484,13 @@ Gauge 的刻度可以有偏移。可以用 调整。`lvgl.gauge_set_angle_offset
 
 默认情况下，禁用图像对象的单击，仅发送与非输入设备相关的常规事件。如果要捕获图像对象的所有一般事件，则应使用以下命令启用其单击： lvgl.obj_set_click(img, true)
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键
 
 对象类型不处理任何键。
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -1516,7 +1516,7 @@ Gauge 的刻度可以有偏移。可以用 调整。`lvgl.gauge_set_angle_offset
 
 ### 概述
 
-图像按钮与简单的“按钮”对象非常相似。唯一的区别是，它在每种状态下显示用户定义的图像，而不是绘制矩形。在阅读本节之前，请先阅读 [按钮](http://lvgl.100ask.net/documentation/04_widgets/04_btn.html) 一节以更好地理解本节内容。
+图像按钮与简单的“按钮”对象非常相似。唯一的区别是，它在每种状态下显示用户定义的图像，而不是绘制矩形。在阅读本节之前，请先阅读 [按钮](http://lvgl.100ask.net/7.11/documentation/04_widgets/04_btn.html) 一节以更好地理解本节内容。
 
 ### 零件和样式
 
@@ -1526,7 +1526,7 @@ Gauge 的刻度可以有偏移。可以用 调整。`lvgl.gauge_set_angle_offset
 
 #### 图片来源
 
-调用 `lvgl.imgbtn_set_src(imgbtn, lvgl.BTN_STATE_..., &img_src)` 将图像设置为一种状态。除了“图像”按钮不支持“符号”之外，图像源的工作原理与 [图像对象](http://lvgl.100ask.net/documentation/04_widgets/14_img.html) 中所述的相同。
+调用 `lvgl.imgbtn_set_src(imgbtn, lvgl.BTN_STATE_..., &img_src)` 将图像设置为一种状态。除了“图像”按钮不支持“符号”之外，图像源的工作原理与 [图像对象](http://lvgl.100ask.net/7.11/documentation/04_widgets/14_img.html) 中所述的相同。
 
 如果在 lvgl.conf.h 中启用了 `lvgl.IMGBTN_TILED` ，则 `lvgl.imgbtn_set_src_tiled(imgbtn, lvgl.BTN_STATE_..., &img_src_left, &img_src_mid, &img_src_right)` 可用。使用平铺功能，将重复中间图像以填充对象的宽度。因此，对于 `lvgl.IMGBTN_TILED` ，可以使用 `lvgl.obj_set_width()` 设置图像按钮的宽度。但是，如果没有此选项，则宽度将始终与图像源的宽度相同。
 
@@ -1536,13 +1536,13 @@ Gauge 的刻度可以有偏移。可以用 调整。`lvgl.gauge_set_angle_offset
 
 ### 事件
 
-除了 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) ，以下 [特殊事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id7) 也通过按钮发送：
+除了 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) ，以下 [特殊事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id7) 也通过按钮发送：
 
 - **lvgl.EVENT_VALUE_CHANGED** - 切换按钮时发送。
 
 请注意，与通用输入设备相关的事件（如lvgl.EVENT_PRESSED）也以非活动状态发送。您需要使用lvgl.btn_get_state（btn）检查状态，以忽略非活动按钮中的事件。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键
 
@@ -1553,7 +1553,7 @@ Gauge 的刻度可以有偏移。可以用 调整。`lvgl.gauge_set_angle_offset
 
 请注意，与往常一样，lvgl.KEY_ENTER的状态会转换为lvgl.EVENT_PRESSED / PRESSING / RELEASED等。
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -1591,7 +1591,7 @@ Gauge 的刻度可以有偏移。可以用 调整。`lvgl.gauge_set_angle_offset
 
 ### 概述
 
-Keyboard对象是特殊的 [按钮矩阵(lvgl.imgbtn)](http://lvgl.100ask.net/documentation/04_widgets/05_btnmatrix.html) ，具有预定义的按键映射和其他功能，以实现虚拟键盘来编写文本。
+Keyboard对象是特殊的 [按钮矩阵(lvgl.imgbtn)](http://lvgl.100ask.net/7.11/documentation/04_widgets/05_btnmatrix.html) ，具有预定义的按键映射和其他功能，以实现虚拟键盘来编写文本。
 
 ### 零件和样式
 
@@ -1623,7 +1623,7 @@ Keyboard对象是特殊的 [按钮矩阵(lvgl.imgbtn)](http://lvgl.100ask.net/do
 
 #### 新的键盘布局
 
-可以使用 `lvgl.keyboard_set_map(kb, map)` 和 `lvgl.keyboard_set_ctrl_map(kb, ctrl_map)` 为键盘指定新的地图（布局）。了解有关 [按钮矩阵(lvgl.imgbtn)](http://lvgl.100ask.net/documentation/04_widgets/05_btnmatrix.html) 的更多信息。记住，使用以下关键字将具有与原始地图相同的效果：
+可以使用 `lvgl.keyboard_set_map(kb, map)` 和 `lvgl.keyboard_set_ctrl_map(kb, ctrl_map)` 为键盘指定新的地图（布局）。了解有关 [按钮矩阵(lvgl.imgbtn)](http://lvgl.100ask.net/7.11/documentation/04_widgets/05_btnmatrix.html) 的更多信息。记住，使用以下关键字将具有与原始地图相同的效果：
 
 - **lvgl.SYMBOL_OK** - 应用.
 - [**](http://lvgl.100ask.net/7.11/documentation/04_widgets/16_keyboard.html#id7)lvgl.SYMBOL_CLOSE - 关闭.
@@ -1636,7 +1636,7 @@ Keyboard对象是特殊的 [按钮矩阵(lvgl.imgbtn)](http://lvgl.100ask.net/do
 
 ### 事件
 
-除了 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) ，键盘还支持以下 [特殊事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id7) ：
+除了 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) ，键盘还支持以下 [特殊事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id7) ：
 
 - **lvgl.EVENT_VALUE_CHANGED** - 按下/释放按钮时发送，或长按后重复发送。事件数据设置为按下/释放按钮的ID。
 - **lvgl.EVENT_APPLY** - OK按钮被点击
@@ -1644,7 +1644,7 @@ Keyboard对象是特殊的 [按钮矩阵(lvgl.imgbtn)](http://lvgl.100ask.net/do
 
 键盘具有一个默认的事件处理程序回调，称为lvgl.keyboard_def_event_cb。它处理按钮按下，地图更改，分配的文本区域等。可以将其完全替换为自定义事件处理程序，但是，可以在事件处理程序的开头调用lvgl.keyboard_def_event_cb来处理与以前相同的操作。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键
 
@@ -1653,7 +1653,7 @@ Keyboard对象是特殊的 [按钮矩阵(lvgl.imgbtn)](http://lvgl.100ask.net/do
 - **lvgl.KEY_RIGHT/UP/LEFT/RIGHT** - 要在按钮之间导航并选择一个。
 - **lvgl.KEY_ENTER** - 按下/释放所选按钮。
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -1774,19 +1774,19 @@ Lvgl通过保存一些额外的数据（~12个字节）来加快绘图速度，�
 
 #### 符号
 
-标签可以在字母旁边显示符号（或单独显示）。阅读 [字体(font)](http://lvgl.100ask.net/documentation/03_overview/07_font.html#id1) 部分以了解有关符号的更多信息。
+标签可以在字母旁边显示符号（或单独显示）。阅读 [字体(font)](http://lvgl.100ask.net/7.11/documentation/03_overview/07_font.html#id1) 部分以了解有关符号的更多信息。
 
 ### 事件
 
-仅 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) 是按对象类型发送的。
+仅 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) 是按对象类型发送的。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键
 
 对象类型不处理任何键。
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -1843,15 +1843,15 @@ LED只有一个主要部分，称为 `lvgl.LED_PART_MAIN` ，它使用所有典�
 
 ### 事件
 
-仅支持 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2)
+仅支持 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2)
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键处理
 
 对象类型不处理任何键。
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -1913,15 +1913,15 @@ Line对象能够在一组点之间绘制直线。
 
 ### 事件
 
-仅支持 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) 。
+仅支持 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) 。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键处理
 
 对象类型不处理任何键。
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -1963,18 +1963,18 @@ return line_demo
 
 ### 概述
 
-列表是从背景 [页面(Page)](http://lvgl.100ask.net/documentation/04_widgets/24_page.html) 和其上的 [按钮(Buttons)](http://lvgl.100ask.net/documentation/04_widgets/04_btn.html) 构建的。按钮包含可选的类似图标的 [`图像(Image)`_](http://lvgl.100ask.net/7.11/documentation/04_widgets/20_list.html#id24) （也可以是符号）和 [`](http://lvgl.100ask.net/7.11/documentation/04_widgets/20_list.html#id2)标签(Label) [`](http://lvgl.100ask.net/7.11/documentation/04_widgets/20_list.html#id4)_。当列表足够长时，可以滚动它。
+列表是从背景 [页面(Page)](http://lvgl.100ask.net/7.11/documentation/04_widgets/24_page.html) 和其上的 [按钮(Buttons)](http://lvgl.100ask.net/7.11/documentation/04_widgets/04_btn.html) 构建的。按钮包含可选的类似图标的 [`图像(Image)`_](http://lvgl.100ask.net/7.11/documentation/04_widgets/20_list.html#id24) （也可以是符号）和 [`](http://lvgl.100ask.net/7.11/documentation/04_widgets/20_list.html#id2)标签(Label) [`](http://lvgl.100ask.net/7.11/documentation/04_widgets/20_list.html#id4)_。当列表足够长时，可以滚动它。
 
 ### 零件和样式
 
-列表与 [页面(Page)](http://lvgl.100ask.net/documentation/04_widgets/24_page.html) 具有相同的部分
+列表与 [页面(Page)](http://lvgl.100ask.net/7.11/documentation/04_widgets/24_page.html) 具有相同的部分
 
 - `lvgl.LIST_PART_BG`
 - `lvgl.LIST_PART_SCRL`
 - `lvgl.LIST_PART_SCRLBAR`
 - `lvgl.LIST_PART_EDGE_FLASH`
 
-有关详细信息，请参见 [页面(Page)](http://lvgl.100ask.net/documentation/04_widgets/24_page.html) 部分。
+有关详细信息，请参见 [页面(Page)](http://lvgl.100ask.net/7.11/documentation/04_widgets/24_page.html) 部分。
 
 列表上的按钮被视为普通按钮，它们只有一个主要部分，称为 `lvgl.BTN_PART_MAIN` 。
 
@@ -2014,13 +2014,13 @@ return line_demo
 
 #### 滚动传播
 
-如果列表是在其他可滚动元素（例如 [页面(Page)](http://lvgl.100ask.net/documentation/04_widgets/24_page.html) ）上创建的，并且列表无法进一步滚动，则滚动可以传播到父级。这样，滚动将在父级上继续。可以通过lvgl.list_set_scroll_propagation（list，true）启用它
+如果列表是在其他可滚动元素（例如 [页面(Page)](http://lvgl.100ask.net/7.11/documentation/04_widgets/24_page.html) ）上创建的，并且列表无法进一步滚动，则滚动可以传播到父级。这样，滚动将在父级上继续。可以通过lvgl.list_set_scroll_propagation（list，true）启用它
 
 ### 事件
 
-仅支持 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) 。
+仅支持 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) 。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键处理
 
@@ -2035,7 +2035,7 @@ return line_demo
 
 要手动选择按钮，请使用 `lvgl.list_set_btn_selected(list, btn)` 。当列表散焦并再次聚焦时，它将恢复最后选择的按钮。
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -2123,15 +2123,15 @@ return list_demo
 
 ### 事件
 
-仅支持 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) 。
+仅支持 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) 。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键处理
 
 对象类型不处理任何键。
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -2165,7 +2165,7 @@ return lmeter_demo
 
 ### 概述
 
-消息框充当弹出窗口。它们由背景容器，标签和按钮的 [按钮矩阵(lvgl.imgbtn)](http://lvgl.100ask.net/documentation/04_widgets/05_btnmatrix.html) 构建而成。
+消息框充当弹出窗口。它们由背景容器，标签和按钮的 [按钮矩阵(lvgl.imgbtn)](http://lvgl.100ask.net/7.11/documentation/04_widgets/05_btnmatrix.html) 构建而成。
 
 文本将自动分成多行（具有 `lvgl.LABEL_LONG_MODE_BREAK` ），高度将自动设置为包含文本和按钮（ `lvgl.FIT_TIGHT` 垂直放置）-
 
@@ -2173,7 +2173,7 @@ return lmeter_demo
 
 消息框的主要部分称为 `lvgl.MSGBOX_PART_MAIN` ，它使用所有典型的背景样式属性。使用填充会增加侧面的空间。pad_inner将在文本和按钮之间添加空格。标签样式属性会影响文本样式。
 
-按钮部分与 [按钮矩阵(lvgl.imgbtn)](http://lvgl.100ask.net/documentation/04_widgets/05_btnmatrix.html) 的情况相同：
+按钮部分与 [按钮矩阵(lvgl.imgbtn)](http://lvgl.100ask.net/7.11/documentation/04_widgets/05_btnmatrix.html) 的情况相同：
 
 - `lvgl.MSGBOX_PART_BTN_BG` 按钮的背景
 - `lvgl.MSGBOX_PART_BTN` 按钮
@@ -2188,7 +2188,7 @@ return lmeter_demo
 
 要添加按钮，请使用 `lvgl.msgbox_add_btns(msgbox, btn_str)` 函数。需要指定按钮的文本，例如 `const char * btn_str[] = {"Apply", "Close", ""}` 。有关更多信息，请访问Button矩阵文档。
 
-仅当首次调用 `lvgl.msgbox_add_btns()` 时，才会创建 [按钮矩阵(lvgl.imgbtn)](http://lvgl.100ask.net/documentation/04_widgets/05_btnmatrix.html)。
+仅当首次调用 `lvgl.msgbox_add_btns()` 时，才会创建 [按钮矩阵(lvgl.imgbtn)](http://lvgl.100ask.net/7.11/documentation/04_widgets/05_btnmatrix.html)。
 
 #### 自动关闭
 
@@ -2198,13 +2198,13 @@ return lmeter_demo
 
 ### 事件
 
-除了 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) ，复选框还支持以下 [特殊事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id7) ：
+除了 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) ，复选框还支持以下 [特殊事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id7) ：
 
 - **lvgl.EVENT_VALUE_CHANGED** 单击按钮时发送。事件数据设置为单击按钮的ID。
 
 消息框具有一个默认的事件回调，当单击按钮时，该事件回调将自行关闭。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键处理
 
@@ -2214,7 +2214,7 @@ return lmeter_demo
 - **lvgl.KEY_LEFT/TOP** 选择上一个按钮
 - **lvgl.KEY_ENTER** 单击选定的按钮
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -2559,11 +2559,11 @@ return page_demo
 
 ### 事件
 
-除了 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) ，滚筒还支持以下 [特殊事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id7) ：
+除了 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) ，滚筒还支持以下 [特殊事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id7) ：
 
 - **lvgl.EVENT_VALUE_CHANGED** 选定新选项时发送
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键处理
 
@@ -2573,7 +2573,7 @@ return page_demo
 - **lvgl.KEY_LEFT/UP** 选择上一个选项
 - **LY_KEY_ENTER** 应用选定的选项（发送lvgl.EVENT_VALUE_CHANGED事件）
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -2661,11 +2661,11 @@ return roller_demo
 
 ### 事件
 
-除了 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) ，滑杆还支持以下 [特殊事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id7) ：
+除了 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) ，滑杆还支持以下 [特殊事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id7) ：
 
 - **lvgl.EVENT_VALUE_CHANGED** 在使用键拖动或更改滑块时发送。拖动滑块时（仅当释放时）连续发送事件。使用lvgl.slider_is_dragged确定滑块是被拖动还是刚刚释放。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键处理
 
@@ -2674,7 +2674,7 @@ return roller_demo
 - **lvgl.KEY_UP, lvgl.KEY_RIGHT** 将滑块的值增加1
 - **lvgl.KEY_DOWN, lvgl.KEY_LEFT** 将滑块的值减1
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -2710,7 +2710,7 @@ return slider_demo
 
 ### 概述
 
-数字调整框包含一个数字文本，可通过按键或API函数增加或减少数字。 数字调整框的下面是修改后的 [文本框(lvgl.textarea)](http://lvgl.100ask.net/documentation/04_widgets/32_textarea.html) 。
+数字调整框包含一个数字文本，可通过按键或API函数增加或减少数字。 数字调整框的下面是修改后的 [文本框(lvgl.textarea)](http://lvgl.100ask.net/7.11/documentation/04_widgets/32_textarea.html) 。
 
 ### 零件和样式
 
@@ -2738,12 +2738,12 @@ return slider_demo
 
 ### 事件
 
-除了 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) ，数字调整框还支持以下 [特殊事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id7) ：
+除了 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) ，数字调整框还支持以下 [特殊事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id7) ：
 
 - **lvgl.EVENT_VALUE_CHANGED** 值更改时发送。 （将该值设置为int32_t作为事件数据）
 - **lvgl.EVENT_INSERT** 由父“文本”区域发送，但不应使用。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键处理
 
@@ -2753,7 +2753,7 @@ return slider_demo
 - **LY_KEY_ENTER** 应用选定的选项（发送lvgl.EVENT_VALUE_CHANGED事件并关闭下拉列表）
 - **lvgl.KEY_ENTER** 随着编码器得到的净数字。跳到最后一个之后的第一个。
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -2821,7 +2821,7 @@ return spinbox_demo
 - `lvgl.SPINNER_PART_BG`: 主要部分
 - `lvgl.SPINNER_PART_INDIC`: 旋转弧（虚拟部分）
 
-零件和样式的作用与 [弧(lvgl.arc)](http://lvgl.100ask.net/documentation/04_widgets/02_arc.html) 情况相同。
+零件和样式的作用与 [弧(lvgl.arc)](http://lvgl.100ask.net/7.11/documentation/04_widgets/02_arc.html) 情况相同。
 
 ### 用法
 
@@ -2849,15 +2849,15 @@ return spinbox_demo
 
 ### 事件
 
-仅支持 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2)
+仅支持 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2)
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键处理
 
 对象类型不处理任何键。
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -2897,7 +2897,7 @@ return spinner_demo
 - `lvgl.SWITCH_PART_INDIC` : 指标（虚拟部分）
 - `lvgl.SWITCH_PART_KNOB` : 旋钮（虚拟部分）
 
-零件和样式与 [滑杆(lvgl.slider)](http://lvgl.100ask.net/documentation/04_widgets/26_slider.html) 情况相同。阅读其文档以获取详细说明。
+零件和样式与 [滑杆(lvgl.slider)](http://lvgl.100ask.net/7.11/documentation/04_widgets/26_slider.html) 情况相同。阅读其文档以获取详细说明。
 
 ### 用法
 
@@ -2915,11 +2915,11 @@ return spinner_demo
 
 ### 事件
 
-除了 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) ，开关还支持以下 [特殊事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id7) ：
+除了 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) ，开关还支持以下 [特殊事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id7) ：
 
 - **lvgl.EVENT_VALUE_CHANGED** 在开关更改状态时发送。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键处理
 
@@ -2928,7 +2928,7 @@ return spinner_demo
 - **lvgl.KEY_UP, lvgl.KEY_RIGHT** 打开滑块
 - **lvgl.KEY_DOWN, lvgl.KEY_LEFT** 关闭滑块
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -3041,19 +3041,19 @@ return switch_demo
 
 #### 滚动
 
-使表格可滚动放置在 [页面(lvgl.page)](http://lvgl.100ask.net/documentation/04_widgets/24_page.html) 上
+使表格可滚动放置在 [页面(lvgl.page)](http://lvgl.100ask.net/7.11/documentation/04_widgets/24_page.html) 上
 
 ### 事件
 
-仅支持 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2)
+仅支持 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2)
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键处理
 
 对象类型不处理任何键。
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -3117,8 +3117,8 @@ Tab视图对象包含几个部分。主要是 `lvgl.TABVIEW_PART_BG` 。它是�
 
 在背景上创建了2个重要的实际部分：
 
-- `lvgl.TABVIEW_PART_BG_SCRL` 这是 [页面(lvgl.page)](http://lvgl.100ask.net/documentation/04_widgets/24_page.html) 的可滚动部分。它使选项卡的内容彼此相邻。页面的背景始终是透明的，不能从外部访问。
-- `lvgl.TABVIEW_PART_TAB_BG` 选项卡按钮是一个 [按钮矩阵(lvgl.btnmatrix)](http://lvgl.100ask.net/documentation/04_widgets/05_btnmatrix.html) 。单击按钮将 `lvgl.TABVIEW_PART_BG_SCRL` 滚动到相关选项卡的内容。可以通过 `lvgl.TABVIEW_PART_TAB_BTN` 访问选项卡按钮。选择选项卡时，按钮处于选中状态，可以使用 `lvgl.STATE_CHECKED` 设置样式。选项卡的按钮矩阵的高度是根据字体高度加上背景和按钮样式的填充来计算的。
+- `lvgl.TABVIEW_PART_BG_SCRL` 这是 [页面(lvgl.page)](http://lvgl.100ask.net/7.11/documentation/04_widgets/24_page.html) 的可滚动部分。它使选项卡的内容彼此相邻。页面的背景始终是透明的，不能从外部访问。
+- `lvgl.TABVIEW_PART_TAB_BG` 选项卡按钮是一个 [按钮矩阵(lvgl.btnmatrix)](http://lvgl.100ask.net/7.11/documentation/04_widgets/05_btnmatrix.html) 。单击按钮将 `lvgl.TABVIEW_PART_BG_SCRL` 滚动到相关选项卡的内容。可以通过 `lvgl.TABVIEW_PART_TAB_BTN` 访问选项卡按钮。选择选项卡时，按钮处于选中状态，可以使用 `lvgl.STATE_CHECKED` 设置样式。选项卡的按钮矩阵的高度是根据字体高度加上背景和按钮样式的填充来计算的。
 
 列出的所有部分均支持典型的背景样式属性和填充。
 
@@ -3130,7 +3130,7 @@ Tab视图对象包含几个部分。主要是 `lvgl.TABVIEW_PART_BG` 。它是�
 
 #### 添加标签
 
-可以使用 `lvgl.tabview_add_tab(tabview, "Tab name")` 添加新标签。它将返回指向可以创建选项卡内容的 [页面(lvgl.page)](http://lvgl.100ask.net/documentation/04_widgets/24_page.html) 对象的指针。
+可以使用 `lvgl.tabview_add_tab(tabview, "Tab name")` 添加新标签。它将返回指向可以创建选项卡内容的 [页面(lvgl.page)](http://lvgl.100ask.net/7.11/documentation/04_widgets/24_page.html) 对象的指针。
 
 #### 选中标签
 
@@ -3166,11 +3166,11 @@ Tab视图对象包含几个部分。主要是 `lvgl.TABVIEW_PART_BG` 。它是�
 
 ### 事件
 
-除了 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) ，页签还支持以下 [特殊事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id7) ：
+除了 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) ，页签还支持以下 [特殊事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id7) ：
 
 - **lvgl.EVENT_VALUE_CHANGED** 通过滑动或单击选项卡按钮选择新选项卡时发送
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键处理
 
@@ -3179,7 +3179,7 @@ Tab视图对象包含几个部分。主要是 `lvgl.TABVIEW_PART_BG` 。它是�
 - **lvgl.KEY_RIGHT/LEFT** 选择一个标签
 - **lvgl.KEY_ENTER Change** 更改为所选标签
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -3232,11 +3232,11 @@ return tabview_demo
 
 ### 概述
 
-文本框是一个带有标签和光标的 [页面(lvgl.page)](http://lvgl.100ask.net/documentation/04_widgets/24_page.html) 。可以在其中添加文本或字符。长行被换行，并且当文本变得足够长时，可以滚动文本区域。
+文本框是一个带有标签和光标的 [页面(lvgl.page)](http://lvgl.100ask.net/7.11/documentation/04_widgets/24_page.html) 。可以在其中添加文本或字符。长行被换行，并且当文本变得足够长时，可以滚动文本区域。
 
 ### 零件和样式
 
-文本框与 [页面(lvgl.page)](http://lvgl.100ask.net/documentation/04_widgets/24_page.html) 具有相同的部分。期望 `lvgl.PAGE_PART_SCRL` ，因为它不能被引用并且始终是透明的。请参阅该页面的详细文档。
+文本框与 [页面(lvgl.page)](http://lvgl.100ask.net/7.11/documentation/04_widgets/24_page.html) 具有相同的部分。期望 `lvgl.PAGE_PART_SCRL` ，因为它不能被引用并且始终是透明的。请参阅该页面的详细文档。
 
 除了Page部分之外，还存在虚拟 ``lvgl.TEXTAREA_PART_CURSOR` 部分来绘制光标。光标的区域始终是当前字符的边界框。可以通过在 `lvgl.TEXTAREA_PART_CURSOR` 的样式中添加背景色和背景色来创建块光标。创建行光标使光标透明并设置border_side属性。
 
@@ -3330,7 +3330,7 @@ return tabview_demo
 
 可以使用 `lvgl.ta_set_scroll_propagation(ta, true)` 启用它。
 
-在 [页面(lvgl.page)](http://lvgl.100ask.net/documentation/04_widgets/24_page.html) 对象中了解更多信息。
+在 [页面(lvgl.page)](http://lvgl.100ask.net/7.11/documentation/04_widgets/24_page.html) 对象中了解更多信息。
 
 #### 边缘闪烁
 
@@ -3338,13 +3338,13 @@ return tabview_demo
 
 ### 事件
 
-除了 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) ，文本框还支持以下 [特殊事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id7) ：
+除了 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) ，文本框还支持以下 [特殊事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id7) ：
 
 - **lvgl.EVENT_INSERT** 在插入字符或文本之前发送。事件数据是计划插入的文本。lvgl.ta_set_insert_replace（ta，“新文本”）替换要插入的文本。新文本不能位于局部变量中，该局部变量会在事件回调存在时被销毁。 “”表示请勿插入任何内容。
 - **lvgl.EVENT_VALUE_CHANGED** 当文本区域的内容已更改时。
 - **lvgl.EVENT_APPLY** 当lvgl.KEY_ENTER发送到处于单行模式的文本区域时。
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键处理
 
@@ -3353,7 +3353,7 @@ return tabview_demo
 - **lvgl.KEY_UP/DOWN/LEFT/RIGHT** 移动光标
 - **Any character** 将字符添加到当前光标位置
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -3405,7 +3405,7 @@ return textarea
 
 ### 零件和样式
 
-Tileview与 [页面(lvgl.page)](http://lvgl.100ask.net/documentation/04_widgets/24_page.html) 具有相同的部分。期望 `lvgl.PAGE_PART_SCRL` ，因为它不能被引用并且始终是透明的。请参阅该页面的详细文档。
+Tileview与 [页面(lvgl.page)](http://lvgl.100ask.net/7.11/documentation/04_widgets/24_page.html) 具有相同的部分。期望 `lvgl.PAGE_PART_SCRL` ，因为它不能被引用并且始终是透明的。请参阅该页面的详细文档。
 
 ### 用法
 
@@ -3452,11 +3452,11 @@ Tileview与 [页面(lvgl.page)](http://lvgl.100ask.net/documentation/04_widgets/
 
 ### 事件
 
-除了 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2) ，平铺视图还支持以下 [特殊事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id7) ：
+除了 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2) ，平铺视图还支持以下 [特殊事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id7) ：
 
 - [**](http://lvgl.100ask.net/7.11/documentation/04_widgets/33_tileview.html#id11)lvgl.EVENT_VALUE_CHANGED ** 当加载了带有滚动或 `lvgl.tileview_set_act` 的新图块时发送。将事件数据设置为 `valid_pos_array` 中新图块的索引（其类型为 `uint32_t *` ）
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键处理
 
@@ -3465,7 +3465,7 @@ Tileview与 [页面(lvgl.page)](http://lvgl.100ask.net/documentation/04_widgets/
 - **lvgl.KEY_UP, lvgl.KEY_RIGHT** 将滑块的值增加1
 - **lvgl.KEY_DOWN, lvgl.KEY_LEFT** 将滑块的值减1
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
@@ -3536,7 +3536,7 @@ return tileview_demo
 
 ### 概述
 
-窗口是类似 [容器(lvgl.cont)](http://lvgl.100ask.net/documentation/04_widgets/10_cont.html) 的对象，由带有标题和按钮的标题以及内容区域构建而成。
+窗口是类似 [容器(lvgl.cont)](http://lvgl.100ask.net/7.11/documentation/04_widgets/10_cont.html) 的对象，由带有标题和按钮的标题以及内容区域构建而成。
 
 ### 零件和样式
 
@@ -3545,7 +3545,7 @@ return tileview_demo
 - `lvgl.WIN_PART_HEADER` 顶部的标题容器，带有标题和控制按钮
 - `lvgl.WIN_PART_CONTENT_SCRL` 页眉下方内容的页面可滚动部分。
 
-除此之外， `lvgl.WIN_PART_CONTENT_SCRL` 还有一个滚动条，称为 `lvgl.WIN_PART_CONTENT_SCRL` 。阅读 [页面(lvgl.page)](http://lvgl.100ask.net/documentation/04_widgets/24_page.html) 的文档以获取有关滚动条的更多详细信息。
+除此之外， `lvgl.WIN_PART_CONTENT_SCRL` 还有一个滚动条，称为 `lvgl.WIN_PART_CONTENT_SCRL` 。阅读 [页面(lvgl.page)](http://lvgl.100ask.net/7.11/documentation/04_widgets/24_page.html) 的文档以获取有关滚动条的更多详细信息。
 
 所有部分均支持典型的背景属性。标题使用标题部分的Text属性。
 
@@ -3567,7 +3567,7 @@ return tileview_demo
 
 #### 滚动条
 
-可以通过 `lvgl.win_set_scrlbar_mode(win, lvgl.SCRLBAR_MODE_...)` 设置滚动条行为。有关详细信息，请参见 [页面(lvgl.page)](http://lvgl.100ask.net/documentation/04_widgets/24_page.html) 。
+可以通过 `lvgl.win_set_scrlbar_mode(win, lvgl.SCRLBAR_MODE_...)` 设置滚动条行为。有关详细信息，请参见 [页面(lvgl.page)](http://lvgl.100ask.net/7.11/documentation/04_widgets/24_page.html) 。
 
 #### 手动滚动和聚焦
 
@@ -3579,13 +3579,13 @@ return tileview_demo
 
 #### 布局
 
-要设置内容的布局，请使用 `lvgl.win_set_layout(win, lvgl.LAYOUT_...)` 。有关详细信息，请参见 [容器(lvgl.cont)](http://lvgl.100ask.net/documentation/04_widgets/10_cont.html) 。
+要设置内容的布局，请使用 `lvgl.win_set_layout(win, lvgl.LAYOUT_...)` 。有关详细信息，请参见 [容器(lvgl.cont)](http://lvgl.100ask.net/7.11/documentation/04_widgets/10_cont.html) 。
 
 ### 事件
 
-仅支持 [通用事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html#id2)
+仅支持 [通用事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html#id2)
 
-了解有关 [事件](http://lvgl.100ask.net/documentation/03_overview/03_events.html) 的更多内容。
+了解有关 [事件](http://lvgl.100ask.net/7.11/documentation/03_overview/03_events.html) 的更多内容。
 
 ### 按键处理
 
@@ -3593,7 +3593,7 @@ return tileview_demo
 
 - **lvgl.KEY_RIGHT/LEFT/UP/DOWN** 滚动页面
 
-了解有关 [按键](http://lvgl.100ask.net/documentation/03_overview/05_indev.html) 的更多内容。
+了解有关 [按键](http://lvgl.100ask.net/7.11/documentation/03_overview/05_indev.html) 的更多内容。
 
 ### 范例
 
