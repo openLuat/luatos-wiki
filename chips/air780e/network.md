@@ -3,8 +3,8 @@
 ## 网络制式
 
 1. 2G 不支持, 也不支持其语音功能
-2. 3G 不支持, WCDMA/CDMA2000/TD-CDMA均不支持
-3. 4G 支持 cat.1 模式, 不支持VoLTE, 不支持中国电信的短信服务, 不支持
+2. 3G 不支持, WCDMA/CDMA2000/TD-SCDMA均不支持
+3. 4G 支持 Cat.1 模式, 不支持VoLTE, 不支持中国电信的短信服务
 4. 5G 完全不支持
 
 ## TLS协议及加密套件
@@ -82,7 +82,7 @@ TLS-RSA-WITH-AES-256-CCM-8
 TLS-RSA-WITH-AES-256-GCM-SHA384
 ```
 
-可通过一下语句查询
+可通过以下语句查询
 ```lua
 local sus = crypto.cipher_suites()
 table.sort(sus)
