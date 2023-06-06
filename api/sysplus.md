@@ -112,7 +112,7 @@ sysplus.taskInitEx(task1,'a',callback)
 
 ---
 
-## sysplus.sendMsg(taskName, param1, param2, param3, param4)
+## sysplus.taskDel(taskName)
 
 
 
