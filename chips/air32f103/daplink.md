@@ -4,17 +4,17 @@
 
 DAPLink是ARM官方开源的一个调试器方案，官方地址为[ARMmbed/DAPLink (github.com)](https://github.com/ARMmbed/DAPLink)，可以用来调试arm cortex内核的几乎所有单片机，最新出的M33，M85内核也支持调试。
 
-合宙基于ARM官方代码移植到了Air32F103CBT6，并适配了216M主频和96K大RAM的资源，支持更快的的下载速度（[固件开源](https://gitee.com/openLuat/daplink)），并设计了一个超小体积的DAPLink硬件
+合宙基于ARM官方代码移植到了Air32F103CBT6，并适配了**216M主频**和**96K大RAM**的资源，支持更快的的下载速度（[固件开源](https://gitee.com/openLuat/daplink)），并设计了一个超小体积的DAPLink硬件
 
 ![img](img/1685598778508-1.jpg)
 
 ## 主要功能
 
-- 全系列Arm-cortex内核芯片的调试和烧录，ARM官方维护，后续新内核依然会支持
-- 一个全功能USB转串口（CDC），带硬件DTR和RTS，可以实现自动下载功能
-- 带U盘拖拽烧录功能，可以直接将hex或者bin文件拖拽到U盘实现烧录（仅支持烧录CBT6）
-- 适配DAPLink V2 WINUSB版本，速度对比HID版本提升3到10倍，极大节约了下载时间
-- 支持WEBUSB功能，可以网页烧录固件，支持插入弹窗，无需担心不会用
+- **全系列**Arm-cortex内核芯片的调试和烧录，ARM官方维护，后续新内核依然会支持
+- 一个**全功能USB转串口**（CDC），带硬件DTR和RTS，可以实现自动下载功能
+- 带**U盘拖拽烧录**功能，可以直接将hex或者bin文件拖拽到U盘实现烧录（仅支持烧录CBT6）
+- 适配**DAPLink V2** WINUSB版本，速度对比HID版本提升3到10倍，极大节约了下载时间
+- 支持**WEBUSB**功能，可以网页烧录固件，支持插入弹窗，无需担心不会用
 - 支持Keil，IAR，PyOCD等多种调试环境
 
 ![img](img/1685598783342-4.png)
@@ -22,10 +22,10 @@ DAPLink是ARM官方开源的一个调试器方案，官方地址为[ARMmbed/DAPL
 ## 硬件
 
 - 尺寸仅有2.5*1.3cm大小，比USBA口都要小
-- 使用4层沉金PCB设计
-- 选用沉板TYPEC口更加结实稳定
-- USB口使用TI的ESD芯片保护
-- 大电流LDO在稳定为air32供电的同时还能为外界设备提供电源
+- 使用**4层沉金**PCB设计
+- 选用**沉板TYPEC口**更加结实稳定
+- USB口使用**TI的ESD芯片**保护
+- **大电流LDO**在稳定为air32供电的同时还能为外界设备提供电源
 
 ![img](img/1685598788015-7.jpg)
 
