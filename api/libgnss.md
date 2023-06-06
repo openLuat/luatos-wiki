@@ -574,3 +574,65 @@ libgnss.rtcAuto(true)
 
 ---
 
+## libgnss.on(tp, fn)
+
+
+
+底层事件回调
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|事件类型,当前支持"raw"|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 本函数一般用于调试, 用于获取底层实际收到的数据
+libgnss.on("raw", function(data)
+    log.info("GNSS", data)
+end)
+
+```
+
+---
+
+## libgnss.getTxt()
+
+
+
+获取非标的GPTXT数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|return|GPTXT所携带的字符串|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 本函数于2023.6.6 添加
+log.info("gnss", "txt", libgnss.getTxt())
+
+-- 测试语句
+libgnss.parse("$GPTXT,01,01,01,ANTENNA SHORT*63\r\n")
+log.info("GNSS", libgnss.getTxt())
+libgnss.parse("$GPTXT,01,01,01,ANTENNA OPEN*25\r\n")
+log.info("GNSS", libgnss.getTxt())
+libgnss.parse("$GPTXT,01,01,01,ANTENNA OK*35\r\n")
+log.info("GNSS", libgnss.getTxt())
+
+```
+
+---
+
