@@ -111,7 +111,7 @@ end
 
 ---
 
-## io.readFile(path)
+## io.readFile(path, mode, offset, len)
 
 
 
@@ -122,6 +122,9 @@ end
 |传入值类型|解释|
 |-|-|
 |string|文件路径|
+|string|读取模式, 默认 "rb"|
+|int|起始位置,默认0|
+|int|读取长度,默认整个文件|
 
 **返回值**
 
@@ -133,6 +136,9 @@ end
 
 ```lua
 local data = io.readFile("/bootime")
+-- 注意: offset和len参数是 2023.6.6添加的
+-- 读取abc.txt, 先跳过128字节, 然后读取512字节数据
+local data = io.readFile("/abc.txt", "rb", 128, 512)
 
 ```
 
