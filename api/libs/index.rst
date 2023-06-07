@@ -8,6 +8,7 @@
    ads1115
    adxl34x
    aht10
+   ak8963
    bh1750
    bmx
    ds3231
