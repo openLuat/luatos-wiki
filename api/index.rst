@@ -52,6 +52,7 @@
    mlx90640
    mobile
    mqtt
+   nbiot
    nes
    nimble
    otp
