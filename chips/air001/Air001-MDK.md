@@ -489,7 +489,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 ![](img/2023-05-08-21-22-38.png)
 
-4. 进入设置界面，Port设置为SW，Max Clock设置为10MHz，如果下载失败可以适当降低速率
+4. 进入设置界面，Port设置为SW，Max Clock默认10MHz大概率用不了，需要手动适当降低速率到500KHz或者更低
 
 ![](img/2023-05-08-21-24-44.png)
 
