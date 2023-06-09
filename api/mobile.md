@@ -741,3 +741,33 @@ mobile.flymode(0,false)
 
 ---
 
+## mobile.rfTest(onoff, uart_id, br)
+
+
+
+RF测试开关和配置，开启测试时自动进入飞行模式，关闭自动退出飞行模式
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|boolean|true开启测试模式，false关闭|
+|int|串口号|
+|int|波特率，如果是USB虚拟串口，随意填写|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+mobile.rfTest(true, uart.VUART_0, 0)	--打开测试模式，并且用虚拟串口收发命令
+mobile.rfTest(false) --关闭测试模式
+
+```
+
+---
+
