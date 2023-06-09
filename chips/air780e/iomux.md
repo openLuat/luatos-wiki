@@ -28,9 +28,8 @@
 |12        |    2       | GPIO16  |    31   | MAIN_CTS,实际为普通GPIO |
 |14        |    4       | GPIO19  |    34   | UART1_TXD/MAIN_TXD |
 |20        |    0       | 无      |    39   | I2S_MCLK|
-|21        |    1       | GPI29   |    35   | I2S_LRCK |
-|22        |    2       | GPI30   |    36   | I2S_LRCK |
-|24        |    4       | GPI31   |    37   | I2S_DIN |
+|21        |    1       | GPIO29   |    35   | I2S_LRCK |
+|22        |    2       | GPIO30   |    36   | I2S_LRCK |
 
 PS: 
 1. 软件通道10/11/12/14需要V1002以上的固件, 20221219之后编译的版本
