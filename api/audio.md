@@ -390,7 +390,7 @@ local result = audio.vol(0, 90)	--通道0的音量调节到90%，result存放了
 
 ---
 
-## audio.debug(id, on_off)
+## audio.debug(on_off)
 
 
 
@@ -401,7 +401,6 @@ local result = audio.vol(0, 90)	--通道0的音量调节到90%，result存放了
 |传入值类型|解释|
 |-|-|
 |boolean|true开 false关|
-|int|总线类型|
 
 **返回值**
 
