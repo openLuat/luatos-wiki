@@ -1,73 +1,12 @@
 <!doctype html>
 <html>
-
 <head>
-    <meta charset="utf-8">
-    <title>合宙小助手</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            overflow:hidden;
-        }
-
-        .menu{
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 30px;
-        }
-        #chat {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 30px;
-        }
-    </style>
+<meta charset="utf-8">
+<title>AI chat</title>
 </head>
-
 <body>
-
-    <iframe id="chat" frameborder="0"></iframe>
-    <div class="menu">
-        <p>
-            <button id="chatwiki" onclick='setChatUrl("chatwiki")'>LuatOS/MCU/Power</button>
-            <button id="chat780" onclick='setChatUrl("chat780")'>Air780E/Air700E</button>
-            <button id="chat724" onclick='setChatUrl("chat724")'>Air724/LuatOS-Air</button>
-        </p>
-    </div>
-    <script>
-        var chat = document.getElementById("chat");
-        var chatwiki = document.getElementById("chatwiki");
-        var chat780 = document.getElementById("chat780");
-        var chat724 = document.getElementById("chat724");
-
-        function updateButtons(selected) {
-            chatwiki.style.backgroundColor = selected == "chatwiki" ? "rgb(0, 255, 16)" : "#fff";
-            chat780.style.backgroundColor = selected == "chat780" ? "rgb(0, 255, 16)" : "#fff";
-            chat724.style.backgroundColor = selected == "chat724" ? "rgb(0, 255, 16)" : "#fff";
-        }
-        function setChatUrl(selected) {
-            switch (selected) {
-                case "chatwiki":
-                    chat.src = "https://www.chatbase.co/chatbot-iframe/kXE945ztlW6gUvKdR4qnn";
-                    break;
-                case "chat780":
-                    chat.src = "https://www.chatbase.co/chatbot-iframe/xQ8t7N7WAO4zYZpGJDc3A";
-                    break;
-                case "chat724":
-                    chat.src = "https://www.chatbase.co/chatbot-iframe/Yr92kxZzSh9xwu5jxnMlx";
-                    break;
-            }
-            updateButtons(selected);
-        }
-        setChatUrl("chatwiki");
-    </script>
+<script>
+window.location.replace("https://iot.openluat.com/iot/chat");
+</script>
 </body>
-
 </html>
