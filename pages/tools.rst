@@ -5,6 +5,8 @@
 
 `LuaTools下载(右键另存为) <https://luatos.com/luatools/download/last>`_
 
+`看看电池能用多久 </_static/tools/psmplus/index.html>`
+
 `FOTA远程升级工具 <https://doc.openluat.com/wiki/21?wiki_page_id=2314>`_
 
 `差分包生成工具 <https://doc.openluat.com/wiki/21?wiki_page_id=2314>`_
