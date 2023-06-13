@@ -5,7 +5,7 @@
 
 `LuaTools下载(右键另存为) <https://luatos.com/luatools/download/last>`_
 
-`看看电池能用多久 </_static/tools/psmplus/index.html>`
+`看看电池能用多久 </_static/tools/psmplus/index.html>`_ 合宙PSM+超低功耗
 
 `FOTA远程升级工具 <https://doc.openluat.com/wiki/21?wiki_page_id=2314>`_
 
