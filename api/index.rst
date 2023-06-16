@@ -61,7 +61,6 @@
    pm
    protobuf
    pwm
-   repl
    rsa
    rtc
    rtos
