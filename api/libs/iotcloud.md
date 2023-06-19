@@ -113,6 +113,28 @@ iotcloudc:disconnect()
 
 ---
 
+## cloudc:unsubscribe(topic)
+
+
+
+云平台取消订阅
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string/table|主题|
+
+**返回值**
+
+无
+
+**例子**
+
+无
+
+---
+
 ## cloudc:publish(topic,data,qos,retain)
 
 
