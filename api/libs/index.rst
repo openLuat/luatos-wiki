@@ -15,6 +15,7 @@
    ec11
    gt911
    ina226
+   iotcloud
    l3g4200d
    lbsLoc
    lbsLoc2
