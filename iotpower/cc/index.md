@@ -72,6 +72,8 @@ IOT Power CC是广大用户随身携带的理想测试工具。
 ```{rubric} 更多资料
 ```
 
+CC彩蛋模式开源控制端：[IoT-Power-Tools](https://github.com/chenxuuu/IoT-Power-Tools)
+
 请选择左侧的具体页面查看各项资料。
 
 ```{toctree}
