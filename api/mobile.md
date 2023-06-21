@@ -127,7 +127,12 @@ log.info("simid", mobile.simid())
 
 **例子**
 
-无
+```lua
+-- 注意, 出厂未必有写SN
+-- 一般用途的唯一id, 可以用mobile.imei()代替
+-- 如需要真正的唯一ID, 使用 mcu.unique_id()
+
+```
 
 ---
 
@@ -369,7 +374,10 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 
 **例子**
 
-无
+```lua
+-- 注意, 开启ipv6后, 开机联网会慢2~3秒
+
+```
 
 ---
 
@@ -387,11 +395,14 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 
 |返回值类型|解释|
 |-|-|
-|int|当前CSQ值, 若失败返回0|
+|int|当前CSQ值, 若失败返回0. 范围 0 - 31, 越大越好|
 
 **例子**
 
-无
+```lua
+-- 注意, 4G模块的CSQ值仅供参考, rsrp/rsrq才是真正的信号强度指标
+
+```
 
 ---
 
@@ -409,7 +420,7 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 
 |返回值类型|解释|
 |-|-|
-|int|当前rssi值,若失败返回0|
+|int|当前rssi值,若失败返回0. 范围 0 到 -114, 越小越好|
 
 **例子**
 
@@ -421,7 +432,7 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 
 
 
-获取rsrp
+获取rsrp,参考信号接收功率
 
 **参数**
 
@@ -431,7 +442,7 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 
 |返回值类型|解释|
 |-|-|
-|int|当前rsrp值,若失败返回0|
+|int|当前rsrp值,若失败返回0. 取值范围: -44 ~ -140 ，值越大越好|
 
 **例子**
 
@@ -443,7 +454,7 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 
 
 
-获取rsrq
+获取rsrq,参考信号发送功率
 
 **参数**
 
@@ -453,7 +464,7 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 
 |返回值类型|解释|
 |-|-|
-|int|当前rsrq值,若失败返回0|
+|int|当前rsrq值,若失败返回0.  取值范围: -3 ~ -19.5 ，值越大越好|
 
 **例子**
 
@@ -465,7 +476,7 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 
 
 
-获取snr
+获取snr,信噪比
 
 **参数**
 
@@ -475,7 +486,7 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 
 |返回值类型|解释|
 |-|-|
-|int|当前snq值,若失败返回0|
+|int|当前snq值,若失败返回0.范围 0 - 30, 越大越好|
 
 **例子**
 
@@ -593,6 +604,8 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 **例子**
 
 ```lua
+-- 注意: 从2023.06.20开始, 需要主动请求一次reqCellInfo才会有基站数据.
+
 --示例输出
 --[[
 [
@@ -602,6 +615,7 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 ]
 ]]
 
+mobile.reqCellInfo(60)
 -- 订阅式
 sys.subscribe("CELL_INFO_UPDATE", function()
     log.info("cell", json.encode(mobile.getCellInfo()))
