@@ -122,6 +122,7 @@ luaGuide/index
 chips/index
 peripherals/index
 boardGuide/index
+固件下载 <https://gitee.com/openLuat/LuatOS/releases>
 ```
 
 ```{toctree}
