@@ -6,6 +6,19 @@
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_i2s.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```
 
+```{tip}
+本库有专属demo，[点此链接查看i2s的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/multimedia)
+```
+
+**示例**
+
+```lua
+-- 这个库属于底层适配库, 具体用法请查阅示例
+-- demo/multimedia
+-- demo/tts
+-- demo/record
+
+```
 
 ## 常量
 
@@ -43,7 +56,6 @@
 **例子**
 
 ```lua
--- 这个库处于开发阶段, 尚不可用
 -- 以默认参数初始化i2s
 i2s.setup(0)
 -- 以详细参数初始化i2s, 示例为默认值
