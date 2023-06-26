@@ -1,5 +1,7 @@
 # DAPLink使用手册
 
+> [前往淘宝购买](https://item.taobao.com/item.htm?id=722898279573)
+
 ```{warning}
 ⚠特殊说明：2023年6月17日前发货的用户请注意：
 
