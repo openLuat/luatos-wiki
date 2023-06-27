@@ -755,7 +755,7 @@ mobile.flymode(0,false)
 
 ---
 
-## mobile.rfTest(onoff, uart_id)
+## mobile.nstOnOff(onoff, uart_id)
 
 
 
@@ -777,8 +777,36 @@ RF测试开关和配置
 **例子**
 
 ```lua
-mobile.rfTest(true, uart.VUART_0)	--打开测试模式，并且用虚拟串口发送结果
-mobile.rfTest(false) --关闭测试模式
+mobile.nstOnOff(true, uart.VUART_0)	--打开测试模式，并且用虚拟串口发送结果
+mobile.nstOnOff(false) --关闭测试模式
+
+```
+
+---
+
+## mobile.nstInput(data)
+
+
+
+RF测试数据输入
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|or zbuff 用户从串口获取的数据，注意，当获取完所有数据后，需要再传一个nil来作为传输结束|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+mobile.nstInput(uart_data)
+mobile.nstInput(nil)
 
 ```
 
