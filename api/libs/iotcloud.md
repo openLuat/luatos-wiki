@@ -1,4 +1,4 @@
-# iotcloud - iotcloud 云平台库 (已支持: 腾讯云 阿里云 其他也会支持,有用到的提issue会加速支持)  
+# iotcloud - iotcloud 云平台库 (已支持: 腾讯云 阿里云 onenet 其他也会支持,有用到的提issue会加速支持)  
 
 {bdg-secondary}`适配状态未知`
 
@@ -13,6 +13,20 @@
 --注意:因使用了sys.wait()所有api需要在协程中使用
 
 ```
+
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|iotcloud.iotcloud.TENCENT|string|腾讯云|
+|iotcloud.iotcloud.ALIYUN|string|阿里云|
+|iotcloud.iotcloud.ONENET|string|中国移动云|
+|iotcloud.iotcloud.CONNECT|string|连接上服务器|
+|iotcloud.iotcloud.SEND|string|发送消息|
+|iotcloud.iotcloud.RECEIVE|string|接收到消息|
+|iotcloud.iotcloud.DISCONNECT|string|服务器连接断开|
+|iotcloud.iotcloud.OTA|string|ota消息|
+
 
 ## iotcloud.new(cloud,iot_config,connect_config)
 
