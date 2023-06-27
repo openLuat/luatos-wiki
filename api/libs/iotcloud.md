@@ -18,14 +18,14 @@
 
 |常量|类型|解释|
 |-|-|-|
-|iotcloud.iotcloud.TENCENT|string|腾讯云|
-|iotcloud.iotcloud.ALIYUN|string|阿里云|
-|iotcloud.iotcloud.ONENET|string|中国移动云|
-|iotcloud.iotcloud.CONNECT|string|连接上服务器|
-|iotcloud.iotcloud.SEND|string|发送消息|
-|iotcloud.iotcloud.RECEIVE|string|接收到消息|
-|iotcloud.iotcloud.DISCONNECT|string|服务器连接断开|
-|iotcloud.iotcloud.OTA|string|ota消息|
+|iotcloud.TENCENT|string|腾讯云|
+|iotcloud.ALIYUN|string|阿里云|
+|iotcloud.ONENET|string|中国移动云|
+|iotcloud.CONNECT|string|连接上服务器|
+|iotcloud.SEND|string|发送消息|
+|iotcloud.RECEIVE|string|接收到消息|
+|iotcloud.DISCONNECT|string|服务器连接断开|
+|iotcloud.OTA|string|ota消息|
 
 
 ## iotcloud.new(cloud,iot_config,connect_config)
