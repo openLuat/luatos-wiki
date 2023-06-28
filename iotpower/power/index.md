@@ -149,6 +149,8 @@ IotPower 静态输出是高阻抗，不会主动对负载端的电量进行泄�
 
 通常该现象发生在设备被usb供电端大电流烧毁后，比如连接了快充充电头，充电头错误输出了快充电压，导致供电高于设备的5.8V耐压。该情况较难修理，有可能烧毁CP2102、DCDC调压与LDO部分，建议不要对修复抱有太大希望，换个新的吧反正也不贵。
 
-```{toctree}
-english
-```
+<script>
+if (navigator.language.indexOf("CN") < 0 && confirm ("Are you want to switch to English version of this page?")) {
+    window.location.href = "english.html";
+}
+</script>
