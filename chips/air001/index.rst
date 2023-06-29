@@ -10,3 +10,4 @@
     hardware
     Air001-MDK
     Air001-Arduino
+    Air001_PCB <https://wiki.luatos.com/_static/bom/Air001.html>

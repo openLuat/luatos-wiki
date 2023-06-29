@@ -2,7 +2,7 @@
 
 ## 原理图
 
-todo
+air001开发板原理图[Air001-Board.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230625163218523_Air001-Board.pdf)
 
 ## 开发板PinOut
 
@@ -10,4 +10,4 @@ todo
 
 ## 开发板尺寸图
 
-todo
+![image-20230625164218762](img/image-20230625164218762.png)
