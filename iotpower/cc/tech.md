@@ -20,3 +20,9 @@
 |  500μA   | 0.1uA-500μA | 0.15μA |    1%    |  <0.5%   | 自动档位 |
 |   50mA   | 500μA-50mA  |  15μA  |    1%    |  <0.5%   | 自动档位 |
 |    5A    |   50mA-5A   | 1.5mA  |    1%    |   <1%    | 自动档位 |
+
+<script>
+if (navigator.language.indexOf("CN") < 0 && confirm ("Are you want to switch to English version of this page?")) {
+    window.location.href = "tech-en.html";
+}
+</script>

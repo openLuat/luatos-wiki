@@ -9,7 +9,7 @@ The IOT Power CC is a fully functional, stable and reliable small handheld high 
 - Connect **PD fast charging** charger (support PPS) to induce the specified voltage and current output
 - Voltage up to 24V, current up to 5A
 - Current **multi-channel synchronous sampling**, no shift delay, the highest resolution of 0.15μA
-- High accuracy and small error, details are available in [technical specifications](https://wiki.luatos.com/iotpower/cc/tech.html), verification is welcome
+- High accuracy and small error, details are available in [technical specifications](https://wiki.luatos.com/iotpower/cc/tech-en.html), verification is welcome
 - Up to **10KHz sampling rate** to meet the power consumption testing needs of cellular modules, Bluetooth, WIFI, etc.
 - Can **connect PC client** to view and analyze the current waveform, can also use the command line version on any device (win/linux/mac) to capture the serial data (such as Raspberry Pi), using the PC client to import to view
 - **BOM cost open** (pull down below), conscience and sincerity of the work, sincere recruitment of suppliers with more favorable prices supply

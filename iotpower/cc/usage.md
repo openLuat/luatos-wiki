@@ -110,3 +110,9 @@
 可以先断开设备的电源连接，按住`⑿翻页键/强制进入升级模式`，再插入USB供电，这时可以看见**设备屏幕上显示DFU模式的信息**，也可以在电脑的`设备管理器`的`通用串行总线设备`中找到名为`IotPower DFU`的设备
 
 最后打开客户端--`设备与软件设置`--`强制升级固件`，进行升级操作即可
+
+<script>
+if (navigator.language.indexOf("CN") < 0 && confirm ("Are you want to switch to English version of this page?")) {
+    window.location.href = "usage-en.html";
+}
+</script>

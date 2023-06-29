@@ -111,3 +111,9 @@ IOT Power CC支持两种连接方式：四线模式与双线模式
 ---
 
 可以继续查看下一页的`操作说明`
+
+<script>
+if (navigator.language.indexOf("CN") < 0 && confirm ("Are you want to switch to English version of this page?")) {
+    window.location.href = "parts-en.html";
+}
+</script>
