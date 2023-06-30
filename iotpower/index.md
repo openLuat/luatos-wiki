@@ -65,3 +65,9 @@ cc/index
 devices
 pc
 ```
+
+<script>
+if (navigator.language.indexOf("CN") < 0 && confirm ("Are you want to switch to English version of this page?")) {
+    window.location.href = "index-en.html";
+}
+</script>

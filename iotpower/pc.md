@@ -176,3 +176,9 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://llcom.papapoi.com/iotp
 
 当然，为了存储某些用户变态级地海量数据（比如连续抓取十几个小时），软件也提供了使用硬盘缓存数据的功能  
 在该模式下，牺牲部分的流畅性，以换来大大降低的内存占用，并且不会触发自动保存，保证数据的连续性  
+
+<script>
+if (navigator.language.indexOf("CN") < 0 && confirm ("Are you want to switch to English version of this page?")) {
+    window.location.href = "pc-en.html";
+}
+</script>
