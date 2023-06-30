@@ -27,7 +27,7 @@
 |10        |    0       | GPIO1   |    16   | LCD_RST,实际为普通GPIO|
 |11        |    1       | GPIO2   |    17   | MAIN_DCD,实际为普通GPIO |
 |12        |    2       | GPIO16  |    31   | MAIN_CTS,实际为普通GPIO |
-|14        |    4       | GPIO19  |    34   | UART1_TXD/MAIN_TXD |
+|14        |    4       | GPIO18  |    33   | UART1_RXD/MAIN_RXD |
 |20        |    0       | 无      |    39   | I2S_MCLK|
 |21        |    1       | GPIO29  |    35   | I2S_BCLK |
 |22        |    2       | GPIO30  |    36   | I2S_LRCK |
