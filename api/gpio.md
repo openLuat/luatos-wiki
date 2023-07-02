@@ -63,6 +63,8 @@ gpio.setup(17, 1, gpio.PULLUP)
 gpio.setup(27, function(val) print("IRQ_27",val) end, gpio.PULLUP)
 -- 设置gpio27为中断
 gpio.setup(27, function(val) print("IRQ_27",val) end, gpio.PULLUP)
+
+-- alt_func 于2023.7.2新增
 -- 设置AIR780E的PIN33复用成gpio18，方向输出,且初始化电平为低,使用硬件默认上下拉配置
 gpio.setup(18, 0, nil, nil, 4)
 
