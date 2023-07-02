@@ -42,6 +42,7 @@
 |any|mode 输入输出模式：<br>数字0/1代表输出模式<br>nil代表输入模式<br>function代表中断模式|
 |int|pull 上拉下列模式, 可以是gpio.PULLUP 或 gpio.PULLDOWN, 需要根据实际硬件选用|
 |int|irq 中断触发模式,默认gpio.BOTH。中断触发模式<br>上升沿gpio.RISING<br>下降沿gpio.FALLING<br>上升和下降都触发gpio.BOTH |
+|int|alt 复用选项，目前只有EC618平台需要这个参数，有些GPIO可以复用到不同引脚上，可以选择复用选项（0或者4）从而复用到对应的引脚上|
 
 **返回值**
 
@@ -60,6 +61,10 @@ gpio.setup(17, 0)
 gpio.setup(17, 1, gpio.PULLUP)
 -- 设置gpio27为中断
 gpio.setup(27, function(val) print("IRQ_27",val) end, gpio.PULLUP)
+-- 设置gpio27为中断
+gpio.setup(27, function(val) print("IRQ_27",val) end, gpio.PULLUP)
+-- 设置AIR780E的PIN33复用成gpio18，方向输出,且初始化电平为低,使用硬件默认上下拉配置
+gpio.setup(18, 0, nil, nil, 4)
 
 ```
 

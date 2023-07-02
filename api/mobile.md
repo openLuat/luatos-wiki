@@ -755,6 +755,68 @@ mobile.flymode(0,false)
 
 ---
 
+## mobile.getBand(band, is_default)
+
+
+
+获取当前使用/支持的band
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|zbuff|输出band|
+|boolean|true默认支持，false当前支持的，默认是false，当前是预留功能，不要写true|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true，失败放回false|
+
+**例子**
+
+```lua
+local buff = zbuff.create(40)
+mobile.getBand(buff) --输出当前使用的band，band号放在buff内，buff[0]，buff[1]，buff[2] .. buff[buff:used() - 1]
+
+```
+
+---
+
+## mobile.setBand(band, num)
+
+
+
+设置使用的band
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|zbuff|输入使用的band|
+|int|band数量|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true，失败放回false|
+
+**例子**
+
+```lua
+local buff = zbuff.create(40)
+buff[0] = 3
+buff[1] = 5
+buff[2] = 8
+buff[3] = 40
+mobile.setBand(buff, 4) --设置使用的band一共4个，为3,5,8,40
+
+```
+
+---
+
 ## mobile.nstOnOff(onoff, uart_id)
 
 
