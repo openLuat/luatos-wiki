@@ -2,8 +2,10 @@
 
 ## 资料文件
 
-todo
+[AIR001芯片数据手册.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230703104209543_AIR001芯片数据手册.pdf)
 
-## 管脚映射表
+## 开发板资料
 
-todo
+![air001_hw](img/air001_hw.jpg)
+
+[PCB Layout](https://wiki.luatos.com/_static/bom/Air001.html)

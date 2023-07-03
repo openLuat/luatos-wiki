@@ -479,7 +479,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 1. 使用支持SWD的调试器分别连接Air001芯片的SWCLK(PA14)和SWDIO(PA13)，建议使用合宙的DAP-Link调试器连接。
 
 ```{note}
-如果是购买的小白板和合宙的AP-Link调试器，可以直接通过排针排母相连，方向如图所示
+如果是购买的小白板和合宙的DAPLink调试器，可以直接通过排针排母相连，方向如图所示
 ![](img/2023-05-08-21-19-23.jpg)
 ```
 

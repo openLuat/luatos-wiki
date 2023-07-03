@@ -2,12 +2,14 @@
 
 ## 使用Arduino IDE开发
 ### 准备工作
+
 安装[Arduino IDE](https://www.arduino.cc/en/software)，建议安装Arduino IDE 2.x
 
 ### 添加开发板地址
 点击Arduino IDE左上角的文件-首选项
 ![](img/2023-05-08-23-12-46.png)
-在`其它开发板管理器地址`中输入AirMCU的地址 `https://arduino.luatos.com/package_air_cn_index.json`
+在`其它开发板管理器地址`中输入AirMCU的地址 `https://arduino.luatos.com/package_air_cn_index.json`  
+（海外用户使用`https://github.com/Air-duino/Arduino-pack-json-ci/releases/download/Nightly/package_air_index.json`）
 ![](img/2023-05-08-23-13-35.png)
 ![](img/2023-05-08-23-16-50.png)
 
@@ -21,6 +23,12 @@
 ```
 
 ### 选择开发板
+
+```{note}
+如果是购买的小白板和合宙的DAPLink调试器，可以直接通过排针排母相连，方向如图所示
+![](img/2023-05-08-21-19-23.jpg)
+```
+
 开发板选择AirMCU-Air001 Board，端口选择连接的串口
 
 ### 添加代码
