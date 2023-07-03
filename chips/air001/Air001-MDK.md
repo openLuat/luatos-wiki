@@ -480,7 +480,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 ```{note}
 如果是购买的小白板和合宙的AP-Link调试器，可以直接通过排针排母相连，方向如图所示
-![](img/2023-05-08-21-19-23.png)
+![](img/2023-05-08-21-19-23.jpg)
 ```
 
 2. 点击工具栏的魔术棒按钮打开 Options for Target窗口
