@@ -21,6 +21,7 @@
 |iotcloud.TENCENT|string|腾讯云|
 |iotcloud.ALIYUN|string|阿里云|
 |iotcloud.ONENET|string|中国移动云|
+|iotcloud.HUAWEI|string|华为云|
 |iotcloud.CONNECT|string|连接上服务器|
 |iotcloud.SEND|string|发送消息|
 |iotcloud.RECEIVE|string|接收到消息|
