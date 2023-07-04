@@ -16,6 +16,8 @@
 |-|-|-|
 |adc.ADC_RANGE_3_6|number|air105的ADC分压电阻开启，范围0~3.76V|
 |adc.ADC_RANGE_1_8|number|air105的ADC分压电阻关闭，范围0~1.88V|
+|adc.ADC_RANGE_3_8|number|air780E开启ADC0,1分压电阻，范围0~3.8V|
+|adc.ADC_RANGE_1_2|number|air780E关闭ADC0,1分压电阻，范围0~1.2V|
 |adc.CH_CPU|number|CPU内部温度的通道id|
 |adc.CH_VBAT|number|VBAT供电电压的通道id|
 |adc.T1|number|ADC1 (如存在多个adc可利用此常量使用多ADC 例如 adc.open(ADC1+2) 打开ADC1 channel 2)|
