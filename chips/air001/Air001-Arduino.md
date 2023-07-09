@@ -57,6 +57,9 @@ void loop() {
 ```
 
 ### 编译下载
+
+请参考<https://wiki.luatos.com/chips/air001/mcu.html#id4>的教程进行接线。
+
 点击上传按钮，等待编译并上传测试代码
 ![](img/2023-05-08-23-29-24.png)
 

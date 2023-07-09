@@ -14,9 +14,28 @@ LuatOS大QQ群: 1061642968
 
 ## 刷机烧录教程
 
-[Air001基于Keil MDK的用户手册](https://wiki.luatos.com/chips/air001/Air001-MDK.html)
+### 使用串口下载
 
-[Air001基于Arduino的用户手册](https://wiki.luatos.com/chips/air001/Air001-Arduino.html)
+```{note}
+在Arduino中，我们推荐采用串口进行下载
+```
+
+串口下载的接线为串口模块的`RX`接Air001的`TXD`（`PA2`），串口模块的`TX`接Air001的`RXD`（`PA3`），如果您希望能够自动下载的话，应当把`DTR`和`RTS`连接到串口模块上的对应引脚，芯片或者开发板的`GND`与串口模块的`GND`相连。
+
+如果您没有自动下载，那么在每次下载前需要手动进入 bootloader：
+
+- 先按下 BOOT 按键不放（即拉高 `BOOT0` 引脚）
+- 按一下RST按键
+- 松开 BOOT 按键
+- 下载完成后，可能需要手动按一下 RST 按键以复位正常运行
+
+```{note}
+如果您使用Arduino出现无法自动下载的情况（目前多见于AMD处理器的电脑）。您可以手动进入bootloader以进行下载。
+```
+
+### 使用 SWD 调试/下载
+
+使用 SWD 调试/下载的接线为调试器的`SWDIO`接Air001的`SWDIO`（`PA13`），调试器的`SWCLK`接Air001的`SWCLK`（`PA14`），芯片或者开发板的`GND`与调试器的`GND`相连。
 
 ## 芯片购买
 
