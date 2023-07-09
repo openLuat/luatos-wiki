@@ -516,6 +516,31 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 
 ---
 
+## mobile.tac()
+
+
+
+获取当前服务小区的TAC或者LAC
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|当前eci值,若失败返回-1. 如果尚未注册到网络,会返回0|
+
+**例子**
+
+```lua
+-- 本API于 2023.7.9 新增
+
+```
+
+---
+
 ## mobile.enbid()
 
 
@@ -616,7 +641,7 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 ]]
 
 mobile.reqCellInfo(60)
--- 订阅式
+-- 订阅
 sys.subscribe("CELL_INFO_UPDATE", function()
     log.info("cell", json.encode(mobile.getCellInfo()))
 end)
