@@ -159,7 +159,7 @@ print(client_id,user_name,password)
 |-|-|
 |string|device_id|
 |string|device_secret|
-|number|cur_timestamp 可选 默认为 32472115200(2999-01-01 0:0:0)|
+|number|cur_timestamp 可选 默认7258089600(2200-01-01 0:0:0)|
 
 **返回值**
 
