@@ -367,7 +367,7 @@ local result = audio.vol(0, 90)	--通道0的音量调节到90%，result存放了
 
 ---
 
-## audio.vol(id, bus_type)
+## audio.setBus(id, bus_type)
 
 
 
@@ -377,16 +377,22 @@ local result = audio.vol(0, 90)	--通道0的音量调节到90%，result存放了
 
 |传入值类型|解释|
 |-|-|
-|int|音频通道|
-|int|总线类型|
+|int|音频通道,例如0|
+|int|总线类型, 例如 audio.BUS_SOFT_DAC|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
-无
+```lua
+audio.setBus(0, audio.BUS_SOFT_DAC)	--通道0的硬件输出通道设置为软件DAC
+audio.setBus(0, audio.BUS_I2S)	--通道0的硬件输出通道设置为I2S
+
+```
 
 ---
 
