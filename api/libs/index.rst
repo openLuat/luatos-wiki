@@ -14,6 +14,7 @@
    ds3231
    ec11
    gt911
+   httpdns
    ina226
    iotcloud
    l3g4200d
