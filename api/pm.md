@@ -368,6 +368,11 @@ pm.power(pm.GPS, true)
 -- 注意: 开启后, 复位键就变成关机了!!! pwrkey要长按2秒才能开机
 -- pm.power(pm.PWK_MODE, true)
 
+-- EC618系列PSM+低功耗设置
+-- ec618的节能模式，0~3，0完全关闭，1性能优先，2平衡，3极致功耗
+-- 详情访问: https://airpsm.cn
+-- pm.power(pm.WORK_MODE, 1)
+
 ```
 
 ---
