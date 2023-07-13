@@ -330,7 +330,7 @@ wlan.setMac(0, mac)
 
 ---
 
-## wlan.createAP(ssid, passwd)
+## wlan.createAP(ssid, passwd, gateway, netmask, channel)
 
 
 
@@ -342,6 +342,9 @@ wlan.setMac(0, mac)
 |-|-|
 |string|AP的SSID,必填|
 |string|AP的密码,可选|
+|string|AP的网关地址, 默认192.168.4.1|
+|string|AP的网关掩码, 默认255.255.255.0|
+|int|AP建立的通道, 默认6|
 
 **返回值**
 
@@ -354,6 +357,8 @@ wlan.setMac(0, mac)
 ```lua
 -- 注意, 调用本AP时,若wifi模式为STATION,会自动切换成 APSTA
 wlan.createAP("uiot", "12345678")
+-- 设置网关IP,掩码, 通道, 2023.7.13 新增, BSP未必支持
+-- wlan.createAP("uiot", "12345678", "192.168.4.1", "255.255.255.0", 6)
 
 ```
 
