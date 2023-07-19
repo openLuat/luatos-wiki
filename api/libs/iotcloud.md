@@ -1,4 +1,4 @@
-# iotcloud - iotcloud 云平台库 (已支持: 腾讯云 阿里云 onenet 华为云 其他也会支持,有用到的提issue会加速支持)  
+# iotcloud - iotcloud 云平台库 (已支持: 腾讯云 阿里云 onenet 华为云 涂鸦云 百度云 其他也会支持,有用到的提issue会加速支持)  
 
 {bdg-secondary}`适配状态未知`
 
@@ -23,6 +23,7 @@
 |iotcloud.ONENET|string|中国移动云|
 |iotcloud.HUAWEI|string|华为云|
 |iotcloud.TUYA|string|涂鸦云|
+|iotcloud.BAIDU|string|百度云|
 |iotcloud.CONNECT|string|连接上服务器|
 |iotcloud.SEND|string|发送消息|
 |iotcloud.RECEIVE|string|接收到消息|
