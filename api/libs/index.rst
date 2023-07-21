@@ -11,6 +11,7 @@
    ak8963
    bh1750
    bmx
+   cht8305c
    ds3231
    ec11
    gt911
