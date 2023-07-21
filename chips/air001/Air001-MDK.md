@@ -1,7 +1,7 @@
 # Air001基于Keil MDK的用户手册
 
 ```{note}
-可以[在此处获取《HAL_LL函数库说明手册》](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230718145721211_HAL_LL函数库说明手册 v1.0.0.pdf)
+可以[在此处获取《HAL_LL函数库说明手册》](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230721175456214_HAL_LL函数库说明手册%20v1.0.0.pdf)
 ```
 
 ## 一、背景
