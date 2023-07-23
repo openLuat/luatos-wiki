@@ -408,7 +408,7 @@ log.info("wlan", "info", json.encode(wlan.getInfo()))
 
 |传入值类型|解释|
 |-|-|
-|int|省电模式,可选, 设置就传支持, 例如wlan.PS_NONE|
+|int|省电模式,可选, 传入就是设置, 例如wlan.PS_NONE|
 
 **返回值**
 
@@ -422,6 +422,38 @@ log.info("wlan", "info", json.encode(wlan.getInfo()))
 -- 请查阅常量表  PS_NONE/PS_MIN_MODEM/PS_MAX_MODEM
 log.info("wlan", "PS", wlan.powerSave(wlan.PS_NONE))
 -- 本API于 2023.03.31 新增
+
+```
+
+---
+
+## wlan.hostname(new_name)
+
+
+
+读取或设置Hostname
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|新的hostname,可选, 传入就是设置|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|当前的hostname或者设置后的hostname|
+
+**例子**
+
+```lua
+-- 本API于 2023.07.23 新增
+-- 本函数应该在wlan.init之前设置好, 最晚应早于wlan.connect
+-- hostname的默认值是  "LUATOS_" + 设备的MAC值
+-- 例如: LUATOS_0022EECC2399
+
+wlan.hostname("我的wifi物联网设备")
 
 ```
 
