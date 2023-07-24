@@ -87,5 +87,6 @@
    wdt
    websocket
    wlan
+   ymodem
    zbuff
    zlib
