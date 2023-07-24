@@ -38,7 +38,8 @@ The values displayed on this page, from top to bottom, are
 - Device statistics time
 
 - Press the `O` key to rotate the screen
-- Press the `<` and `>` keys to toggle the display of `Wh`, `Ah` and `W`.
+- Press the `<` key to toggle the display of `Wh`, `Ah` and `W`.
+- Press the `>` key to toggle the display style.
 - Press the `X` key to clear the totalized data (time, power, etc.) and recalculate from the beginning
 
 ## Detailed data page
