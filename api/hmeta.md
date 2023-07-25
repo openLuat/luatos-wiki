@@ -58,3 +58,36 @@ end)
 
 ---
 
+## hmeta.hwver()
+
+
+
+获取模组的硬件版本号
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|若能识别到,返回模组类型, 否则会是nil|
+
+**例子**
+
+```lua
+sys.taskInit(function()
+    while 1 do
+        sys.wait(3000)
+        -- hmeta识别底层模组类型的
+        -- 不同的模组可以使用相同的bsp,但根据封装的不同,根据内部数据仍可识别出具体模块
+        log.info("hmeta", hmeta.model(), hmeta.hwver())
+        log.info("bsp",   rtos.bsp())
+    end
+end)
+
+```
+
+---
+
