@@ -1,6 +1,9 @@
 name: update-page
 
-on: [push]
+on: 
+  push:
+    branches:
+      - master
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
