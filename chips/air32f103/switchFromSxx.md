@@ -950,7 +950,7 @@ void CTR_LP(void)
     for(i=0;i<8;i++)
     {
       nstr = _GetENDPOINT(i);
-      if(nstr & (EP_CTE_RX|EP_CTR_TX))
+      if(nstr & (EP_CTR_RX|EP_CTR_TX))
       {
         EPindex = i;
         if(nstr & EP_CTR_RX)
