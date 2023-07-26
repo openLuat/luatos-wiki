@@ -99,6 +99,49 @@ log.info("fdb", fskv.set("bigd", {name="wendal",age=123}))
 
 ---
 
+## fskv.sett(key, skey, value)
+
+
+
+设置table内的键值对数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|key的名称,必填,不能空字符串|
+|string|table的key名称, 必填, 不能是空字符串|
+|string|用户数据,必填,不能nil, 支持字符串/数值/table/布尔值, 数据长度最大4095字节|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false/nil|
+
+**例子**
+
+```lua
+-- 本API在2023.7.26新增,注意与set函数区别
+-- 设置数据, 字符串,数值,table,布尔值,均可
+-- 但不可以是nil, function, userdata, task
+log.info("fdb", fskv.sett("mytable", "wendal", "goodgoodstudy"))
+log.info("fdb", fskv.sett("mytable", "upgrade", true))
+log.info("fdb", fskv.sett("mytable", "timer", 1))
+log.info("fdb", fskv.sett("mytable", "bigd", {name="wendal",age=123}))
+
+-- 下列语句将打印出4个元素的table
+log.info("fdb", fskv.get("mytable"), json.encode(fskv.get("mytable")))
+-- 注意: 如果key不存在, 或者原本的值不是table类型,将会完全覆盖
+-- 例如下列写法,最终获取到的是table,而非第一行的字符串
+log.info("fdb", fskv.set("mykv", "123")
+log.info("fdb", fskv.sett("mykv", "age", "123")) -- 保存的将是 {age:"123"}
+-- 
+
+```
+
+---
+
 ## fskv.get(key, skey)
 
 
