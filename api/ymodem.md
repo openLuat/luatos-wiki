@@ -63,7 +63,7 @@ ymodem接收文件数据并保存
 |传入值类型|解释|
 |-|-|
 |userdata|ymodem处理句柄|
-|zbuff|or string输入的数据|
+|zbuff/string|输入的数据|
 
 **返回值**
 
@@ -71,7 +71,7 @@ ymodem接收文件数据并保存
 |-|-|
 |boolean|成功true，失败false|
 |int|ack值，需要通过串口/网络等途径返回发送方|
-|int|flag值，需要通过串口/网络等途径返回发送方|
+|int|flag值，需要通过串口/网络等途径返回发送方，如果有ack值则不发送flag|
 |boolean,|一个文件接收完成true，传输中false|
 |boolean,|整个传输完成true 否则false|
 
@@ -79,6 +79,7 @@ ymodem接收文件数据并保存
 
 ```lua
 -- 注意, 数据来源不限, 通常是uart.read得到data
+no_error,ack,flag,file_done,all_done = ymodem.receive(handler, data)
 
 ```
 
