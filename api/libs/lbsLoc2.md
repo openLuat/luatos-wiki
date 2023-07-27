@@ -6,6 +6,9 @@
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../script/libs/lbsLoc2.lua)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```
 
+```{tip}
+本库有专属demo，[点此链接查看lbsLoc2的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/lbsLoc2)
+```
 
 **示例**
 

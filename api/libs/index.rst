@@ -36,6 +36,7 @@
    tcs3472
    tm1637
    tsl2561
+   udpsrv
    wtd9527
    xmodem
    ze08g_ch2o
