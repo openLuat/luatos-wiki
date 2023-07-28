@@ -16,6 +16,7 @@
    disp
    eink
    errDump
+   fastlz
    fatfs
    fdb
    fonts
