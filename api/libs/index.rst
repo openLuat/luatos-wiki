@@ -9,6 +9,7 @@
    adxl34x
    aht10
    ak8963
+   am2320
    bh1750
    bmx
    cht8305c
