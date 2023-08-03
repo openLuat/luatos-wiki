@@ -33,6 +33,7 @@
    pcf8574
    qmc5883l
    rc522
+   rtkv
    si24r1
    spl06
    tcs3472
