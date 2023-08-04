@@ -1,5 +1,9 @@
 # Air001基于Arduino的用户手册
 
+```{note}
+[Air001的Arduino资料站](Air001基于Arduino)已开放！将更新完整的上手教程与各种示例，欢迎收藏。
+```
+
 ## 使用Arduino IDE开发
 ### 准备工作
 
