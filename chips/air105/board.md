@@ -22,4 +22,8 @@
 
 ![air105_evb_pinout.png](pinout.png)
 
+开发板排针尺寸:
+1. 管脚之间的距离, 10mil, 2.54mm
+2. 两排管脚之间的距离, 700mil, 17.78mm
+
 **注意：HSPI编程时为SPI5，ADC部分，LuatOS中未使能内部分压，通道1~6采集电压范围0~1.8V**

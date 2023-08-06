@@ -15,6 +15,10 @@
 
 开发板上的按键分别是 BOOT(GPIO0), RESET(复位), PWR(开机键) LED灯(GPIO27)
 
+开发板排针尺寸:
+1. 管脚之间的距离, 10mil, 2.54mm
+2. 两排管脚之间的距离, 700mil, 17.78mm
+
 ![pinout2air780e](pinout.png)
 
 提醒:
