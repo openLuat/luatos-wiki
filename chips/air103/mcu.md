@@ -2,6 +2,10 @@
 
 合宙Air103是一款QFN56 封装，6mm x 6mm 大小的mcu. 本芯片与联盛德w806可互换.
 
+请注意, 这是**Air103**的资料页, 不是**Air32F103**, 这是两款完全不同的芯片.
+
+如需查找**Air32F103**系列芯片的资料, 请在左侧菜单栏选择**air32f103**
+
 ## 芯片PinOut
 
 ![](https://cdn.openluat-luatcommunity.openluat.com/images/20220329175558817_air103_chip_pinout[1].png)
