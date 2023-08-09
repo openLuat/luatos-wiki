@@ -10,6 +10,7 @@
 5. ESP32S3 - idf5-esp32s3的LuatOS固件
 6. Air780E/Air600E --> ec618系列的LuatOS固件
 7. Air780E/Air600E --> ec618系列的csdk
+8. Air601 - air601的LuatOS固件
 
 ## 提醒
 
