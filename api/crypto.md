@@ -684,6 +684,97 @@ log.info("hmac_sha256", crypto.md("SHA256", "1234567890", "123456"))
 
 ---
 
+## crypto.hash_stream_init()
+
+
+
+创建流式hash用的stream
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|hash类型, 大写字母, 例如 "MD5" "SHA1" "SHA256"|
+|string|hmac值，可选|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|userdata|成功返回一个数据结构,否则返回nil|
+
+**例子**
+
+```lua
+-- 无hmac的hash stream
+log.info("md5", crypto.hash_stream_init("MD5"))
+log.info("sha1", crypto.hash_stream_init("SHA1"))
+log.info("sha256", crypto.hash_stream_init("SHA256"))
+
+-- 带hmac的hash stream
+log.info("hmac_md5", crypto.hash_stream_init("MD5", "123456"))
+log.info("hmac_sha1", crypto.hash_stream_init("SHA1", "123456"))
+log.info("hmac_sha256", crypto.hash_stream_init("SHA256", "123456"))
+local stream = crypto.hash_stream_init()
+
+```
+
+---
+
+## crypto.hash_stream_update(stream, data)
+
+
+
+流式hash更新数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|crypto.hash_stream_init()创建的stream, 必选|
+|string|待计算的数据,必选|
+|return|无|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+crypto.hash_stream_update(stream, "OK")
+
+```
+
+---
+
+## crypto.l_crypt_hash_stream_finish(stream)
+
+
+
+获取流式hash校验值并释放创建的stream
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|crypto.hash_stream_init()创建的stream,必选|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|成功返回计算得出的流式hash值的hex字符串，失败无返回|
+
+**例子**
+
+```lua
+local hashResult = crypto.hash_stream_finish(stream)
+
+```
+
+---
+
 ## crypto.checksum(data, mode)
 
 
