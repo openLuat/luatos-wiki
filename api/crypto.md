@@ -684,7 +684,7 @@ log.info("hmac_sha256", crypto.md("SHA256", "1234567890", "123456"))
 
 ---
 
-## crypto.hash_stream_init()
+## crypto.hash_stream_init(tp)
 
 
 
@@ -721,7 +721,7 @@ local stream = crypto.hash_stream_init()
 
 ---
 
-## crypto.hash_stream_update(stream, data)
+## crypto.hash_stream_update(tp, stream, data)
 
 
 
@@ -731,6 +731,7 @@ local stream = crypto.hash_stream_init()
 
 |传入值类型|解释|
 |-|-|
+|string|hash类型, 大写字母, 例如 "MD5" "SHA1" "SHA256"|
 |userdata|crypto.hash_stream_init()创建的stream, 必选|
 |string|待计算的数据,必选|
 |return|无|
@@ -742,13 +743,13 @@ local stream = crypto.hash_stream_init()
 **例子**
 
 ```lua
-crypto.hash_stream_update(stream, "OK")
+crypto.hash_stream_update("MD5", stream, "OK")
 
 ```
 
 ---
 
-## crypto.l_crypt_hash_stream_finish(stream)
+## crypto.l_crypt_hash_stream_finish(tp, stream)
 
 
 
@@ -758,6 +759,7 @@ crypto.hash_stream_update(stream, "OK")
 
 |传入值类型|解释|
 |-|-|
+|string|hash类型, 大写字母, 例如 "MD5" "SHA1" "SHA256"|
 |userdata|crypto.hash_stream_init()创建的stream,必选|
 
 **返回值**
@@ -769,7 +771,7 @@ crypto.hash_stream_update(stream, "OK")
 **例子**
 
 ```lua
-local hashResult = crypto.hash_stream_finish(stream)
+local hashResult = crypto.hash_stream_finish("MD5", stream)
 
 ```
 
