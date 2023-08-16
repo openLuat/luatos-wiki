@@ -17,7 +17,7 @@
 
 ```
 
-## fatfs.mount(mode,mount_point, spiid_or_spidevice, spi_cs, spi_speed, power_pin, power_on_delay)
+## fatfs.mount(mode,mount_point, spiid_or_spidevice, spi_cs, spi_speed, power_pin, power_on_delay, auto_format)
 
 
 
@@ -28,12 +28,13 @@
 |传入值类型|解释|
 |-|-|
 |int|fatfs模式,可选fatfs.SPI,fatfs.SDIO,fatfs.RAM,fatfs.USB|
-|string|fatfs挂载点, 通常填""或者"SD", 底层会映射到vfs的 /sd 路径|
+|string|虚拟文件系统的挂载点, 默认是 /fatfs|
 |int|传入spi device指针,或者spi的id,或者sdio的id|
 |int|片选脚的GPIO 号, spi模式有效,若前一个参数传的是spi device,这个参数就不需要传|
 |int|SPI最高速度,默认10M, 若前2个参数传的是spi device,这个参数就不需要传|
 |int|TF卡电源控制脚,TF卡初始前先拉低复位再拉高,如果没有,或者是内置电源控制方式,这个参数就不需要传|
 |int|TF卡电源复位过程时间,单位ms,默认值是1|
+|bool|挂载失败是否尝试格式化,默认是true,即自动格式化. 本参数在2023.8.16添加|
 
 **返回值**
 
