@@ -206,6 +206,35 @@ end
 
 ---
 
+## io.mkfs(path)
+
+
+
+格式化文件系统,需指定挂载点
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|挂载点|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功与否|
+|int|底层返回值|
+
+**例子**
+
+```lua
+local ret, errio = io.mkfs("/sd")
+log.info("fs", "mkfs", ret, errio)
+
+```
+
+---
+
 ## io.mkdir(path)
 
 
