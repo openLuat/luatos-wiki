@@ -707,15 +707,14 @@ log.info("hmac_sha256", crypto.md("SHA256", "1234567890", "123456"))
 
 ```lua
 -- 无hmac的hash stream
-log.info("md5", crypto.hash_init("MD5"))
-log.info("sha1", crypto.hash_init("SHA1"))
-log.info("sha256", crypto.hash_init("SHA256"))
+local md5_stream = crypto.hash_init("MD5")
+local sha1_stream = crypto.hash_init("SHA1")
+local sha256_stream = crypto.hash_init("SHA256")
 
 -- 带hmac的hash stream
-log.info("hmac_md5", crypto.hash_init("MD5", "123456"))
-log.info("hmac_sha1", crypto.hash_init("SHA1", "123456"))
-log.info("hmac_sha256", crypto.hash_init("SHA256", "123456"))
-local stream = crypto.hash_init()
+local md5_stream = crypto.hash_init("MD5", "123456")
+local sha1_stream = crypto.hash_init("SHA1", "123456")
+local sha256_stream = crypto.hash_init("SHA256", "123456")
 
 ```
 
@@ -769,7 +768,7 @@ crypto.hash_update(stream, "OK")
 **例子**
 
 ```lua
-local hashResult = crypto.hash_finish("MD5", stream)
+local hashResult = crypto.hash_finish(stream)
 
 ```
 
