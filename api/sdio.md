@@ -11,6 +11,12 @@
 
 ```lua
 -- 本sdio库挂载tf卡到文件系统功能已经被fatfs的sdio模式取代
+-- 本sdio库仅保留直接读写TF卡的函数
+-- 例如 使用 sdio 0 挂载TF卡
+fatfs.mount(fatfs.DISK_SDIO, "/sd", 0)
+
+-- 挂载完成后, 使用 io 库的相关函数来操作就行
+local f = io.open("/sd/abc.txt")
 
 ```
 
@@ -103,82 +109,6 @@ if t then
 end
 
 ```
-
----
-
-## sdio.sd_mount(id, path, auto_format)
-
-
-
-挂载SD卡, 使用FATFS文件系统
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|sdio总线id|
-|string|挂载路径, 默认"/sd", 不允许以"/"结尾|
-|bool|是否自动格式化,默认是true|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|bool|挂载成功返回true,否则返回false|
-|int|底层返回的具体结果码,用于调试|
-
-**例子**
-
-无
-
----
-
-## sdio.sd_umount(id, path)
-
-
-
-卸载SD卡(视硬件情况, 不一定支持)
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|sdio总线id|
-|string|挂载路径, 默认"/sd", 不允许以"/"结尾|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|bool|挂载成功返回true,否则返回false|
-
-**例子**
-
-无
-
----
-
-## sdio.sd_format(id)
-
-
-
-格式化SD卡
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|sdio总线id|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|bool|挂载成功返回true,否则返回false|
-
-**例子**
-
-无
 
 ---
 
