@@ -2,6 +2,8 @@
 
 ```{note}
 可以[在此处获取《HAL_LL函数库说明手册》](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230721175456214_HAL_LL函数库说明手册%20v1.0.0.pdf)
+
+SWD烧录时的Max Clock需要手动到100KHz或更低。
 ```
 
 ## 一、背景
@@ -493,7 +495,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 ![](img/2023-05-08-21-22-38.png)
 
-4. 进入设置界面，Port设置为SW，Max Clock默认10MHz大概率用不了，需要手动适当降低速率到500KHz或者更低
+4. 进入设置界面，Port设置为SW，Max Clock默认10MHz大概率用不了，需要手动适当降低速率到100KHz或者更低
 
 ![](img/2023-05-08-21-24-44.png)
 

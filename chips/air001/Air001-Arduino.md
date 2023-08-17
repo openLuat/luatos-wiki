@@ -71,3 +71,9 @@ void loop() {
 如果代码编译上传正常，那么打开串口监视器，即可看到输出的相关日志
 ![](img/2023-05-08-23-30-57.png)
 并可观察到LED以1秒的间隔闪烁
+
+<script>
+if (navigator.language.indexOf("CN") < 0 && confirm ("arduino 资料请前往专用站点，是否跳转？")) {
+    window.location.href = "https://arduino.luatos.com/";
+}
+</script>

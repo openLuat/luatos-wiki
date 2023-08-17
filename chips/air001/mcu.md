@@ -38,6 +38,10 @@ LuatOS大QQ群: 1061642968
 
 使用 SWD 调试/下载的接线为调试器的`SWDIO`接Air001的`SWDIO`（`PA13`），调试器的`SWCLK`接Air001的`SWCLK`（`PA14`），芯片或者开发板的`GND`与调试器的`GND`相连。
 
+```{warn}
+SWD烧录时的Max Clock需要手动到100KHz或更低，否则无法识别芯片。
+```
+
 ## 芯片购买
 
 * [合宙商城](https://appc6kjfor22343.h5.xiaoeknow.com)
