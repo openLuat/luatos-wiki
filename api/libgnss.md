@@ -67,7 +67,7 @@ end)
 ```lua
 -- 解析nmea数据
 libgnss.parse(indata)
-log.info("nmea", json.encode(libgnss.getRmc()))
+log.info("nmea", json.encode(libgnss.getRmc(), "11g"))
 
 ```
 
@@ -241,7 +241,7 @@ log.info("nmea", "gsv", json.encode(libgnss.getGsv()))
 
 ```lua
 -- 获取
-log.info("nmea", "gsa", json.encode(libgnss.getGsa()))
+log.info("nmea", "gsa", json.encode(libgnss.getGsa(), "11g"))
 -- 示例数据
 --[[
 {
@@ -398,7 +398,7 @@ libgnss.debug(false)
 ```lua
 local gga = libgnss.getGga(2)
 if gga then
-    log.info("GGA", json.encode(gga))
+    log.info("GGA", json.encode(gga, "11g"))
 end
 --实例输出
 --[[
@@ -441,7 +441,7 @@ end
 ```lua
 local gll = libgnss.getGll(2)
 if gll then
-    log.info("GLL", json.encode(gll))
+    log.info("GLL", json.encode(gll, "11g"))
 end
 -- 实例数据
 --[[
