@@ -103,6 +103,10 @@ extern "C" {
 
 #define assert_param(expr) ((void)0U)
 
+#ifdef __cplusplus
+}
+#endif
+
 #endif
 ```
 
