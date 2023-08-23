@@ -14,6 +14,11 @@
 |mcu.UART|number|外设类型-串口|
 |mcu.I2C|number|外设类型-I2C|
 |mcu.SPI|number|外设类型-SPI|
+|mcu.PWM|number|外设类型-PWM|
+|mcu.GPIO|number|外设类型-GPIO|
+|mcu.I2S|number|外设类型-I2S|
+|mcu.LCD|number|外设类型-LCD|
+|mcu.CAM|number|外设类型-CAM|
 
 
 ## mcu.setClk(mhz)
@@ -352,6 +357,36 @@ mcu.iomux(mcu.UART, 2, 2)	-- Air780E的UART2复用到gpio6和gpio7
 mcu.iomux(mcu.I2C, 0, 1)	-- Air780E的I2C0复用到gpio12和gpio13
 mcu.iomux(mcu.I2C, 0, 2)	-- Air780E的I2C0复用到gpio16和gpio17
 mcu.iomux(mcu.I2C, 1, 1)	-- Air780E的I2C1复用到gpio4和gpio5
+
+```
+
+---
+
+## mcu.altfun(type, sn, pad_index, alt_fun, is_input)
+
+
+
+IO外设功能复用选择，注意普通MCU是以GPIO号为序号，但是专用SOC，比如CAT1的，是以PAD号为序号。本函数不是所有平台适用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|外设类型，目前有mcu.UART,mcu.I2C,mcu.SPI,mcu.PWM,mcu.GPIO,mcu.I2S,mcu.LCD,mcu.CAM，具体需要看平台|
+|int|总线序号，0~N，如果是mcu.GPIO，则是GPIO号。具体看平台的IOMUX复用表|
+|int|pad号，如果留空不写，则表示清除配置，使用平台的默认配置。具体看平台的IOMUX复用表|
+|int|复用功能序号，0~N。具体看平台的IOMUX复用表|
+|boolean|是否是输入功能，true是，留空是false|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+mcu.altfun(mcu.GPIO, 46, 32, 1, 0)
+mcu.altfun(mcu.GPIO, 46)
 
 ```
 
