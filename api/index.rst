@@ -56,6 +56,7 @@
    nbiot
    nes
    nimble
+   os
    otp
    pack
    pin
