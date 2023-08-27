@@ -131,23 +131,22 @@ DAPLink引脚功能分配如下
 - 被调试的芯片无法支持较高频率，可以调低频率后再使用
 - 被调试板子关闭了SWD功能
 
-
 ### keil下载时报RDDI-DAP Error的解决办法
+
 DAPLink和MDK之间的常见问题，解决办法可以尝试以下方法：
 ![Alt text](6f5cebec3b90c4af60bbfd8f2d5fe6ca.png)
 
 1. SWD调试线的问题：
    - 很多人会说我用别的DAPLINK没问题,那是因为DAPLINK V1版本速度很慢，对线没要求。
-   - 把SWD和SCK的线掰开分散，或者SWD VCC SCK GND 或VCC SWD GND SCK 这种方式并排连接，数据线尽可能短。
+   - **把SWD和SCK的杜邦线线掰开分散(一根一根的散开)，**或者SWD VCC SCK GND 或VCC SWD GND SCK 这种方式并排连接，数据线尽可能短。
 2. 把MCU的复位线接上
 3. MDK软件配置问题：
    - 按下图设置：
-    ![1693110272390](image/daplink/1693110272390.png)
+     ![1693110272390](image/daplink/1693110272390.png)
    - 调节Max Clock的速度，有些MCU 只支持100K
-1. MDK 版本问题
+4. MDK 版本问题
    - 更新MDK 到5.36或以后的版本
    - 打开keil中的pack installer； 选择对应的设备，把pack 包括cmsis等更新到最新。
-
 
 ### 无法识别虚拟U盘
 
