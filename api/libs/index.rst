@@ -38,6 +38,7 @@
    spl06
    tcs3472
    tm1637
+   tm1640
    tsl2561
    udpsrv
    wtd9527
