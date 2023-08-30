@@ -34,6 +34,7 @@
    qmc5883l
    rc522
    rtkv
+   shift595
    si24r1
    spl06
    tcs3472
