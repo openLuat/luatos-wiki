@@ -196,13 +196,14 @@ sim卡状态变化
 **例子**
 
 ```lua
-sys.subscribe("SIM_IND", function(status)
+sys.subscribe("SIM_IND", function(status, value)
     -- status的取值有:
-    -- RDY SIM卡就绪
-    -- NORDY 无SIM卡
-    -- SIM_PIN 需要输入PIN
-    -- GET_NUMBER 获取到电话号码(不一定有值)
-    log.info("sim status", status)
+    -- RDY SIM卡就绪, value为nil
+    -- NORDY 无SIM卡, value为nil
+    -- SIM_PIN 需要输入PIN, value为nil
+    -- GET_NUMBER 获取到电话号码(不一定有值), value为nil
+    -- SIM_WC SIM卡的写入次数统计,掉电归0, value为统计值
+    log.info("sim status", status, value)
 end)
 
 ```

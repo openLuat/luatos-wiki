@@ -54,6 +54,7 @@ log.info("simid", mobile.simid())
 |mobile.CONF_T3324MAXVALUE|number|PSM模式中的T3324时间,单位S|
 |mobile.CONF_PSM_MODE|number|PSM模式开关,0关,1开|
 |mobile.CONF_CE_MODE|number|attach模式，0为EPS ONLY 2为混合，遇到IMSI detach脱网问题，设置为0，注意设置为EPS ONLY时会取消短信功能|
+|mobile.CONF_SIM_WC_MODE|number|SIM写入次数的配置和读取|
 |mobile.PIN_VERIFY|number|验证PIN码操作|
 |mobile.PIN_CHANGE|number|更换PIN码操作|
 |mobile.PIN_ENABLE|number|使能PIN码验证|
@@ -778,6 +779,22 @@ mobile.flymode(0,true)
 mobile.config(mobile.CONF_RESELTOWEAKNCELL, 15)
 mobile.config(mobile.CONF_STATICCONFIG, 1) --开启网络静态优化
 mobile.flymode(0,false)
+
+-- EC618设置SIM写入次数的统计
+-- 关闭统计
+mobile.config(mobile.CONF_SIM_WC_MODE, 0)
+-- 开启统计, 默认也是开启的.
+mobile.config(mobile.CONF_SIM_WC_MODE, 1)
+-- 读取统计值,异步, 需要通过系统消息SIM_IND获取
+sys.subscribe("SIM_IND", function(stats, value)
+    log.info("SIM_IND", stats)
+    if stats == "SIM_WC" then
+        log.info("sim", "write counter", value)
+    end
+end)
+mobile.config(mobile.CONF_SIM_WC_MODE, 2)
+-- 清空统计值
+mobile.config(mobile.CONF_SIM_WC_MODE, 3)
 
 ```
 
