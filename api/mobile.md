@@ -49,7 +49,7 @@ log.info("simid", mobile.simid())
 |mobile.CSFB_NOT_PREFERRED_REGISTERED_ROAMING|number|已注册,非主要服务,漫游|
 |mobile.CONF_RESELTOWEAKNCELL|number|小区重选信号差值门限,需要飞行模式设置|
 |mobile.CONF_STATICCONFIG|number|网络静态模式优化,需要飞行模式设置|
-|mobile.CONF_QUALITYFIRST|number|网络切换以信号质量优先,需要飞行模式设置|
+|mobile.CONF_QUALITYFIRST|number|网络切换以信号质量优先,需要飞行模式设置,0不开,1开启,2开启并加速切换,功耗会增加|
 |mobile.CONF_USERDRXCYCLE|number|LTE跳paging,需要飞行模式设置,谨慎使用,0是不设置,1~7增大或减小DrxCycle周期倍数,1:1/8倍 2:1/4倍 3:1/2倍 4:2倍 5:4倍 6:8倍 7:16倍,8~12配置固定的DrxCycle周期,仅当该周期大于网络分配的DrxCycle周期时该配置才会生效,8:320ms 9:640ms 10:1280ms 11:2560ms 12:5120ms|
 |mobile.CONF_T3324MAXVALUE|number|PSM模式中的T3324时间,单位S|
 |mobile.CONF_PSM_MODE|number|PSM模式开关,0关,1开|
