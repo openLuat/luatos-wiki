@@ -43,7 +43,7 @@
    tm1640
    tsl2561
    udpsrv
-   wtd9527
+   wtd9520
    xmodem
    ze08g_ch2o
    zh07
