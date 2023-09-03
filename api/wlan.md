@@ -364,6 +364,31 @@ wlan.createAP("uiot", "12345678")
 
 ---
 
+## wlan.stopAP()
+
+
+
+关闭AP功能
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功创建返回true,否则返回false|
+
+**例子**
+
+```lua
+wlan.stopAP()
+
+```
+
+---
+
 ## wlan.getInfo()
 
 
