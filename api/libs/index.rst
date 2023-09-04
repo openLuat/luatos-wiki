@@ -8,6 +8,7 @@
    ads1115
    adxl34x
    aht10
+   air153C_wtd
    ak8963
    am2320
    bh1750
@@ -43,7 +44,6 @@
    tm1640
    tsl2561
    udpsrv
-   wtd9520
    xmodem
    ze08g_ch2o
    zh07
