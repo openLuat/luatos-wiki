@@ -52,13 +52,13 @@ This page shows the average current, peak and valley current with more detailed 
 
 ## Waveform preview page
 
-![cc3](img/cc3.png)
+![cc3](img/cc3new.png)
 
-This page provides an easy preview of the current current waveform data
+This page provides an easy preview of the current waveform data
 
 - Press the `O` key to restart or pause the current waveform refresh
-- Press the `<` and `>` keys to switch the duration of a screen of waveforms in sequence
-- Press the `X` key to switch to logarithmic coordinates, and the vertical coordinates are in tenfold steps
+- Press the `<` key to toggle the display of `Wh`, `Ah` and `W`
+- Press the `X` key to clear current waveform data
 
 ## PD voltage and current switching page
 
