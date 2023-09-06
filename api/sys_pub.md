@@ -408,8 +408,9 @@ LORA 接收完成
 **例子**
 
 ```lua
-sys.subscribe("LORA_RX_DONE", function(data, size)
-    log.info("LORA_RX_DONE: ", data, size)
+sys.subscribe("LORA_RX_DONE", function(data, size, rssi, snr)
+    -- rssi 和  snr 于 2023-09-06 新增
+    log.info("LORA_RX_DONE: ", data, size, rssi, snr)
     lora.send("PING")
 end)
 
