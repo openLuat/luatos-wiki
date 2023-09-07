@@ -2,7 +2,8 @@
 
 ## 为什么我插上usb不亮？
 
-请仔细阅读[供电方式](https://wiki.luatos.com/iotpower/cc/parts.html#id3)章节
+请仔细阅读[供电方式](https://wiki.luatos.com/iotpower/cc/parts.html#id3)章节  
+如果是首次上电，可以参考[这个视频](https://www.bilibili.com/video/BV15m4y1h7CG)里的步骤
 
 ## 为什么我无法升级固件
 
@@ -12,7 +13,7 @@
 
 ## 为什么我开启PD后一直在转圈圈？
 
-首先请看一下说明书，**不要**诱骗空气，[像这些**错误示范**](img/joke.jpg)
+首先请看一下说明书，**不要**诱骗空气，[像这些**错误示范**](wrong.md)
 
 如果操作正确，可以尝试：  
 在设置里打开`开机自启PD`、并且只从**输入**端供电（拨码改为输入供电方式），连接PD充电器，只会有几种现象：
