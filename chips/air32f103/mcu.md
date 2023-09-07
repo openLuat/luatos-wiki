@@ -4,7 +4,7 @@
 
 Air32F103为系列芯片，其外设和硬件设计兼容市场上一些主流F103型号，主频最高可达256M，96K RAM+256K Flash，每个IO都可设置独立的内部上下拉电阻。详细信息见数据手册，[Air32F103芯片手册](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230326193134901_AIR32F103xxxx%E8%8A%AF%E7%89%87%E6%95%B0%E6%8D%AE%E6%89%8B%E5%86%8C.pdf)
 
-寄存器手册[air32f103xx_寄存器手册.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230326193200002_air32f103xx_寄存器手册.pdf)
+寄存器手册[Air32F103xx_User_Manual.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230907152950811_Air32F103xx_User_Manual_CN-带目录书签.pdf)
 
 芯片对比
 
