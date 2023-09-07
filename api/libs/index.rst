@@ -42,6 +42,7 @@
    tcs3472
    tm1637
    tm1640
+   tm1650
    tsl2561
    udpsrv
    xmodem
