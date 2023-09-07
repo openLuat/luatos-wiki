@@ -747,7 +747,7 @@ crypto.hash_update(stream, "OK")
 
 ---
 
-## crypto.l_crypt_hash_finish(stream)
+## crypto.hash_finish(stream)
 
 
 
