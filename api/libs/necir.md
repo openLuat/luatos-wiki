@@ -39,6 +39,7 @@
 --                                 |
 --                                GND
 --用法实例：演示用同一个SPI接口驱动VS1838和W25QXX
+--用法实例：
 local necir = require("necir")
 
 --定义用户回调函数
@@ -48,12 +49,13 @@ end
 
 sys.taskInit(function()
     local CS = gpio.setup(pin.PA07,0)  --VS1838(NMOS控制其GND)与W25QXX共用的片选引脚
+    necir.init(spi.SPI_0,pin.PB03,my_ir_cb)
 
     while 1 do
         --===============================
         log.info('------necir start------')
         CS(1)     --使能VS1838
-        necir.init(spi.SPI_0,pin.PB03,my_ir_cb)
+        necir.start()  --开启necir数据接收过程
         sys.wait(10000)
         log.info('necir request to close')
         necir.close()   --请求关闭necir
@@ -91,7 +93,7 @@ end)
 
 
 
-necir初始化，开启数据接收任务
+necir初始化
 
 **参数**
 
@@ -113,6 +115,29 @@ local function my_ir_cb(frameTab)
 end
 
 necir.init(spi.SPI_0,pin.PB03,my_ir_cb)
+
+```
+
+---
+
+## necir.start()
+
+
+
+开启necir数据接收过程
+
+**参数**
+
+无
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+necir.start()
 
 ```
 
@@ -141,11 +166,11 @@ necir.close()
 
 ---
 
-## necir.close()
+## necir.isClosed()
 
 
 
-判断necir是否已经完全关闭，关闭后所使用的SPI接口将释放，可以复用为其他功能。如需再次开启，则需要再次调用necir.init(spi_id,irq_pin,recv_cb)
+判断necir是否已经完全关闭，关闭后所使用的SPI接口将释放，可以复用为其他功能。如需再次开启，则需要再次调用necir.start()
 
 **参数**
 
@@ -160,7 +185,7 @@ necir.close()
 **例子**
 
 ```lua
-necir.close()
+necir.isClosed()
 
 ```
 
