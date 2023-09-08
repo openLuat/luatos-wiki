@@ -295,7 +295,7 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 
 ---
 
-## mobile.setAuto(check_sim_period, get_cell_period, search_cell_time, auto_reset_stack)
+## mobile.setAuto(check_sim_period, get_cell_period, search_cell_time, auto_reset_stack, network_check_period)
 
 
 
