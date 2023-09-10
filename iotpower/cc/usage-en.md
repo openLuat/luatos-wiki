@@ -58,6 +58,7 @@ This page provides an easy preview of the current waveform data
 
 - Press the `O` key to restart or pause the current waveform refresh
 - Press the `<` key to toggle the display of `Wh`, `Ah` and `W`
+- Press the `<` key to toggle the y axis range of current, fixed or auto
 - Press the `X` key to clear current waveform data
 
 ## PD voltage and current switching page
