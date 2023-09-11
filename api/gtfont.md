@@ -1,4 +1,4 @@
-# gtfont - gtfont高通字库模块
+# gtfont - gtfont高通字库模块 (测试高通字库芯片型号:GT5SLCD1E-1A)
 
 {bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air601` {bdg-primary}`Air105` {bdg-primary}`Air780E/Air700E`
 
