@@ -137,3 +137,28 @@ sysplus.taskDel('a')
 
 ---
 
+## sysplus.cleanMsg(taskName)
+
+
+
+清除指定task的消息队列
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|任务名称|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+sysplus.cleanMsg('a')
+
+```
+
+---
+
