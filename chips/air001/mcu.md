@@ -18,7 +18,8 @@ LuatOS大QQ群: 1061642968
 ### 使用串口下载
 
 ```{note}
-在Arduino中，我们推荐采用串口进行下载
+在Arduino中，我们推荐使用AirISP通过串口进行下载  
+AirISP工具也可单独使用，使用文档：[AirISP工具文档](https://arduino.luatos.com/airisp/)
 ```
 
 串口下载的接线为串口模块的`RX`接Air001的`TXD`（`PA2`），串口模块的`TX`接Air001的`RXD`（`PA3`），如果您希望能够自动下载的话，应当把`DTR`和`RTS`连接到串口模块上的对应引脚，芯片或者开发板的`GND`与串口模块的`GND`相连。
