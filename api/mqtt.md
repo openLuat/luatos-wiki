@@ -10,6 +10,16 @@
 本库有专属demo，[点此链接查看mqtt的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/mqtt)
 ```
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|mqtt.STATE_DISCONNECT|number|mqtt 断开|
+|mqtt.STATE_SCONNECT|number|mqtt socket连接中|
+|mqtt.STATE_MQTT|number|mqtt socket已连接 mqtt连接中|
+|mqtt.STATE_READY|number|mqtt mqtt已连接|
+
+
 ## mqttc:subscribe(topic, qos)
 
 
@@ -395,6 +405,31 @@ mqtt客户端是否就绪
 
 ```lua
 local error = mqttc:ready()
+
+```
+
+---
+
+## mqttc:state()
+
+
+
+mqtt客户端状态
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|number|客户端状态|
+
+**例子**
+
+```lua
+local state = mqttc:state()
 
 ```
 
