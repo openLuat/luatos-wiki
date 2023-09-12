@@ -679,6 +679,34 @@ nimble.scan()
 
 ---
 
+## nimble.discDsc(svr_uuid, chr_uuid)
+
+
+
+扫描从机的指定服务的特征值的其他属性
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|指定服务的UUID值|
+|string|特征值的UUID值|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功启动扫描与否|
+
+**例子**
+
+```lua
+-- 本函数对central/主机模式适用
+
+```
+
+---
+
 ## nimble.writeChr(svr_uuid, chr_uuid, data)
 
 
