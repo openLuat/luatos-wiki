@@ -93,69 +93,6 @@
 
 ---
 
-## nimble.send_msg(conn, handle, data)
-
-
-
-发送信息
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|连接id, 当前固定填1|
-|int|处理id, 当前固定填0|
-|string|数据字符串,可包含不可见字符|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|bool|成功与否|
-
-**例子**
-
-```lua
--- 参考 demo/nimble
--- 本函数对peripheral/从机模式适用
-
-```
-
----
-
-## nimble.scan(timeout)
-
-
-
-扫描从机
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|超时时间,单位秒,默认28秒|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|bool|启动扫描成功与否|
-
-**例子**
-
-```lua
--- 参考 demo/nimble/scan
--- 本函数对central/主机模式适用
--- 本函数会直接返回, 然后通过异步回调返回结果
-
--- 调用本函数前, 需要先确保已经nimble.init()
-nimble.scan()
--- timeout参数于 2023.7.11 添加
-
-```
-
----
-
 ## nimble.mode(tp)
 
 
@@ -205,6 +142,39 @@ nimble.scan()
 
 ```lua
 log.info("ble", "connected?", nimble.connok())
+-- 从机peripheral模式, 设备是否已经被连接
+-- 主机central模式, 是否已经连接到设备
+-- ibeacon模式, 无意义
+
+```
+
+---
+
+## nimble.send_msg(conn, handle, data)
+
+
+
+发送信息
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|连接id, 当前固定填1|
+|int|处理id, 当前固定填0|
+|string|数据字符串,可包含不可见字符|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功与否|
+
+**例子**
+
+```lua
+-- 参考 demo/nimble
+-- 本函数对peripheral/从机模式适用
 
 ```
 
@@ -271,82 +241,6 @@ nimble.setUUID("indicate", string.fromHex("FF32")) -- 订阅本设备的数据�
 -- 本函数对所有模式都适用
 local mac = nimble.mac()
 log.info("ble", "mac", mac and mac:toHex() or "Unknwn")
-
-```
-
----
-
-## nimble.ibeacon(data, major, minor, measured_power)
-
-
-
-配置iBeacon的参数,仅iBeacon模式可用
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|string|数据, 必须是16字节|
-|int|主版本号,默认2, 可选, 范围 0 ~ 65536|
-|int|次版本号,默认10,可选, 范围 0 ~ 65536|
-|int|名义功率, 默认0, 范围 -126 到 20 |
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|bool|成功返回true,否则返回false|
-
-**例子**
-
-```lua
--- 参考 demo/nimble, 2023-02-25之后编译的固件支持本API
--- 本函数对ibeacon模式适用
-nimble.ibeacon(data, 2, 10, 0)
-nimble.init()
-
-```
-
----
-
-## nimble.advData(data, flags)
-
-
-
-配置广播数据,仅iBeacon模式可用
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|string|广播数据, 当前最高128字节|
-|int|广播标识, 可选, 默认值是 0x06,即 不支持传统蓝牙(0x04) + 普通发现模式(0x02)|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|bool|成功返回true,否则返回false|
-
-**例子**
-
-```lua
--- 参考 demo/nimble/adv_free, 2023-03-18之后编译的固件支持本API
--- 本函数对ibeacon模式适用
--- 数据来源可以多种多样
-local data = string.fromHex("123487651234876512348765123487651234876512348765")
--- local data = crypto.trng(25)
--- local data = string.char(0x11, 0x13, 0xA3, 0x5A, 0x11, 0x13, 0xA3, 0x5A, 0x11, 0x13, 0xA3, 0x5A, 0x11, 0x13, 0xA3, 0x5A)
-nimble.advData(data)
-nimble.init()
-
--- nimble支持在init之后的任意时刻再次调用, 以实现数据更新
--- 例如 1分钟变一次
-while 1 do
-    sys.wait(60000)
-    local data = crypto.trng(25)
-    nimble.advData(data)
-end
 
 ```
 
@@ -511,6 +405,391 @@ nimble.setChr(2, string.fromHex("FF03"), nimble.CHR_F_WRITE_NO_RSP)
 -- 例如设置地址转换的大小端, 默认是0, 兼容老的代码
 -- 设置成1, 服务UUID和chr的UUID更直观
 nimble.config(nimble.CFG_ADDR_ORDER, 1)
+
+```
+
+---
+
+## nimble.ibeacon(data, major, minor, measured_power)
+
+
+
+配置iBeacon的参数,仅iBeacon模式可用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|数据, 必须是16字节|
+|int|主版本号,默认2, 可选, 范围 0 ~ 65536|
+|int|次版本号,默认10,可选, 范围 0 ~ 65536|
+|int|名义功率, 默认0, 范围 -126 到 20 |
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+-- 参考 demo/nimble, 2023-02-25之后编译的固件支持本API
+-- 本函数对ibeacon模式适用
+nimble.ibeacon(data, 2, 10, 0)
+nimble.init()
+
+```
+
+---
+
+## nimble.advData(data, flags)
+
+
+
+配置广播数据,仅iBeacon模式可用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|广播数据, 当前最高128字节|
+|int|广播标识, 可选, 默认值是 0x06,即 不支持传统蓝牙(0x04) + 普通发现模式(0x02)|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+-- 参考 demo/nimble/adv_free, 2023-03-18之后编译的固件支持本API
+-- 本函数对ibeacon模式适用
+-- 数据来源可以多种多样
+local data = string.fromHex("123487651234876512348765123487651234876512348765")
+-- local data = crypto.trng(25)
+-- local data = string.char(0x11, 0x13, 0xA3, 0x5A, 0x11, 0x13, 0xA3, 0x5A, 0x11, 0x13, 0xA3, 0x5A, 0x11, 0x13, 0xA3, 0x5A)
+nimble.advData(data)
+nimble.init()
+
+-- nimble支持在init之后的任意时刻再次调用, 以实现数据更新
+-- 例如 1分钟变一次
+while 1 do
+    sys.wait(60000)
+    local data = crypto.trng(25)
+    nimble.advData(data)
+end
+
+```
+
+---
+
+## nimble.scan(timeout)
+
+
+
+扫描从机
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|超时时间,单位秒,默认28秒|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|启动扫描成功与否|
+
+**例子**
+
+```lua
+-- 参考 demo/nimble/scan
+-- 本函数对central/主机模式适用
+-- 本函数会直接返回, 然后通过异步回调返回结果
+
+-- 调用本函数前, 需要先确保已经nimble.init()
+nimble.scan()
+-- timeout参数于 2023.7.11 添加
+
+```
+
+---
+
+## nimble.connect(mac)
+
+
+
+连接到从机
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|设备的MAC地址|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|启动连接成功与否|
+
+**例子**
+
+```lua
+-- 本函数对central/主机模式适用
+-- 本函数会直接返回, 然后通过异步回调返回结果
+
+```
+
+---
+
+## nimble.disconnect()
+
+
+
+断开与从机的连接
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+-- 本函数对central/主机模式适用
+-- 本函数会直接返回
+
+```
+
+---
+
+## nimble.discSvr()
+
+
+
+扫描从机的服务列表
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+-- 本函数对central/主机模式适用
+-- 本函数会直接返回,然后异步返回结果
+-- 这个API通常不需要调用, 在连接从机完成后,会主动调用一次
+
+```
+
+---
+
+## nimble.listSvr()
+
+
+
+获取从机的服务列表
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|table|服务UUID的数组|
+
+**例子**
+
+```lua
+-- 本函数对central/主机模式适用
+
+```
+
+---
+
+## nimble.discChr(svr_uuid)
+
+
+
+扫描从机的指定服务的特征值
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|指定服务的UUID值|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功启动扫描与否|
+
+**例子**
+
+```lua
+-- 本函数对central/主机模式适用
+
+```
+
+---
+
+## nimble.listChr(svr_uuid)
+
+
+
+获取从机的指定服务的特征值列表
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|指定服务的UUID值|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|table|特征值列表,包含UUID和flags|
+
+**例子**
+
+```lua
+-- 本函数对central/主机模式适用
+
+```
+
+---
+
+## nimble.writeChr(svr_uuid, chr_uuid, data)
+
+
+
+往指定的服务的指定特征值写入数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|指定服务的UUID值|
+|string|指定特征值的UUID值|
+|string|待写入的数据|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功启动写入与否|
+
+**例子**
+
+```lua
+-- 本函数对central/主机模式适用
+
+```
+
+---
+
+## nimble.writeChr(svr_uuid, chr_uuid)
+
+
+
+从指定的服务的指定特征值读取数据(异步)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|指定服务的UUID值|
+|string|指定特征值的UUID值|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功启动写入与否|
+
+**例子**
+
+```lua
+-- 本函数对central/主机模式适用
+-- 详细用法请参数 demo/nimble/central
+
+```
+
+---
+
+## nimble.subChr(svr_uuid, chr_uuid)
+
+
+
+订阅指定的服务的指定特征值
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|指定服务的UUID值|
+|string|指定特征值的UUID值|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功启动订阅与否|
+
+**例子**
+
+```lua
+-- 本函数对central/主机模式适用
+-- 详细用法请参数 demo/nimble/central
+
+```
+
+---
+
+## nimble.unsubChr(svr_uuid, chr_uuid)
+
+
+
+取消订阅指定的服务的指定特征值
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|指定服务的UUID值|
+|string|指定特征值的UUID值|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功启动取消订阅与否|
+
+**例子**
+
+```lua
+-- 本函数对central/主机模式适用
+-- 详细用法请参数 demo/nimble/central
 
 ```
 
