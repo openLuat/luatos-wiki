@@ -256,7 +256,7 @@ log.info("sc", ret, ssid, passwd)
 
 ---
 
-## wlan.getMac()
+## wlan.getMac(tp, hexstr)
 
 
 
@@ -264,13 +264,16 @@ log.info("sc", ret, ssid, passwd)
 
 **参数**
 
-无
+|传入值类型|解释|
+|-|-|
+|int|设置何种mac地址,对ESP32系列来说,只能设置STA的地址,即0,默认值也是0|
+|bool|是否转HEX字符, 默认是true,即输出hex字符串|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|string|MAC地址,十六进制字符串形式 "AABBCCDDEEFF"|
+|string|MAC地址,十六进制字符串形式 "AABBCCDDEEFF" 或原始数据|
 
 **例子**
 
@@ -289,7 +292,7 @@ log.info("sc", ret, ssid, passwd)
 |传入值类型|解释|
 |-|-|
 |int|设置何种mac地址,对ESP32系列来说,只能设置STA的地址,即0|
-|string|待设置的MAC地址|
+|string|待设置的MAC地址,长度6字节|
 
 **返回值**
 
