@@ -334,3 +334,23 @@ rtos.nop()
 
 ---
 
+## rtos.autoCollectMem(period, warning_level, force_level)
+
+
+
+内存自动收集配置，是lua本身收集机制的一种补充，不是必要的，而且只在luavm空闲时触发
+
+**参数**
+
+无
+
+**返回值**
+
+无
+
+**例子**
+
+无
+
+---
+
