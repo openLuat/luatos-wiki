@@ -28,7 +28,7 @@
 |gpio.LOW_IRQ|number|低电平触发,部分设备支持|
 
 
-## gpio.setup(pin, mode, pull, irq)
+## gpio.setup(pin, mode, pull, irq, alt)
 
 
 
