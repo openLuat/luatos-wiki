@@ -138,7 +138,7 @@
 
 ---
 
-## bit64.mult(a,b,flag1,flag2)
+## bit64.multi(a,b,flag1,flag2)
 
 
 
