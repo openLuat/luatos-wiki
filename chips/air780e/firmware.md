@@ -2,14 +2,15 @@
 
 ## 固件的版本
 
-以V1105版本为例
+以V1108版本为例
 
 |名称                        |分类    |脚本区大小|
 |----------------------------|--------|---------|
-|LuatOS-SoC_V1105_EC618      |数传版  |448kb    |
-|LuatOS-SoC_V1105_EC618_TTS  |TTS版   |448kb    |
-|LuatOS-SoC_V1105_EC618_FULL |全功能版|128kb    |
-|LuatOS-SoC_V1105_EC618_CLOUD|云构建版|自定义    |
+|LuatOS-SoC_V1108_EC618      |数传版  |448kb    |
+|LuatOS-SoC_V1108_EC618_TTS  |TTS版,需要外接SPI FLASH   |448kb    |
+|LuatOS-SoC_V1108_EC618_TTS_ONCHIP |TTS内置资源|64kb    |
+|LuatOS-SoC_V1108_EC618_FULL |全功能版|128kb    |
+|LuatOS-SoC_V1108_EC618_CLOUD|云构建版|自定义    |
 
 固件文件均以`.soc`为后缀
 
@@ -17,12 +18,13 @@
 
 1. 数传版, 不含UI类(U8G2/LCD/EINK/DISP/LVGL)/TTS,仅包含少量外设驱动库
 2. TTS版, 在数传版上添加TTS支持, 但TTS资源需要外置在额外的SPI Flash
-3. 全功能版, 会开启大部分库, 但需要特别指出的是,不包含TTS库的内置TTS资源模式
-4. 云构建版, 通过[云编译](../../develop/compile/Cloud_compilation.md)功能定制的固件
+3. TTS_ONCHIP版, 在数传版上添加TTS支持, 且TTS资源内置, 但脚本空间小
+4. 全功能版, 会开启大部分库, 但需要特别指出的是,不包含TTS库的内置TTS资源模式
+5. 云构建版, 通过[云编译](../../develop/compile/Cloud_compilation.md)功能定制的固件
 
 若前3款不能满足需求,请使用[云编译](../../develop/compile/Cloud_compilation.md)功能定制你需要的固件
 
-V1105版本开始, EC618系列的云编译支持根据发行版本的源码进行定制,预计2023.03.17上线
+V1107版本开始, EC618系列的云编译支持根据发行版本的源码进行定制,已上线
 
 ## OTA相关的解释
 
