@@ -17,7 +17,7 @@
 
 ```
 
-## sms.send(phone, msg)
+## sms.send(phone, msg, auto_phone_fix)
 
 
 
@@ -29,6 +29,7 @@
 |-|-|
 |string|电话号码,必填|
 |string|短信内容,必填|
+|bool|是否自动处理电话号号码的格式,默认是按短信内容和号码格式进行自动判断, 设置为false可禁用|
 
 **返回值**
 
