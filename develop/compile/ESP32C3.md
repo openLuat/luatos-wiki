@@ -65,7 +65,7 @@ set(LUATOS_ROOT "E://abc/LuatOS/")
 
 安装 idf5
 1. 访问地址 https://dl.espressif.cn/dl/esp-idf/
-2. 下载idf5离线安装包 `ESP-IDF v5.0 - Offline Installer`
+2. 下载idf5离线安装包 `ESP-IDF v5.1 - Offline Installer`
 3. 下载后双击启动, 按提示安装
 4. 安装完成后, 开始菜单会有idf5的快捷方式
 
