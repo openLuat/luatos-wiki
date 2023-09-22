@@ -11,6 +11,8 @@
 
 IoT Power V1 CP2102驱动：[CP210x_Windows_Drivers](https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip)
 
+IoT Power Pro 驱动：[IoTPowerPro-Driver.7z](https://llcom.papapoi.com/iotpower/IoTPowerPro-Driver.7z)
+
 IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://llcom.papapoi.com/iotpower/IoTPower_CC_usb_driver.7z)
 
 .net framework 4.6.2：[安装包](https://dotnet.microsoft.com/zh-cn/download/dotnet-framework/thank-you/net462-offline-installer)
