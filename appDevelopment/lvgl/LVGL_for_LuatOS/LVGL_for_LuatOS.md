@@ -1232,7 +1232,7 @@ y轴也存在相同的功能： `lvgl.chart_set_y_tick_text` 和 `lvgl.chart_set
 
 #### 显示所选
 
-主要部分可以显示所选选项或静态文本。可以使用 `lvgl.dropdown_set_show_selected(sropdown, true/false)` 进行控制。
+主要部分可以显示所选选项或静态文本。可以使用 `lvgl.dropdown_set_show_selected(dropdown, true/false)` 进行控制。
 
 可以使用 `lvgl.dropdown_set_text(dropdown, "Text")` 设置静态文本。仅保存文本指针。
 
