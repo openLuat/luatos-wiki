@@ -22,7 +22,7 @@ IOT Power Pro是广大用户随身携带的理想测试工具。
 :::{grid-item-card} {octicon}`repo-forked;1.5em;sd-mr-1` 连接与外观
 :link: parts
 :link-type: doc
-:img-top: img/font_small.jpg
+:img-top: img/font-cn.jpg
 
 展示Pro与被测试设备的连接方式，各个部分的用处
 
@@ -33,7 +33,7 @@ IOT Power Pro是广大用户随身携带的理想测试工具。
 :::{grid-item-card} {octicon}`stopwatch;1.5em;sd-mr-1` 操作说明
 :link: usage
 :link-type: doc
-:img-top: img/usage_small.png
+:img-top: img/wave.png
 
 详细描述设备各个功能的用法
 
