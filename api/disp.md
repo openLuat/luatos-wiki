@@ -1,4 +1,4 @@
-# disp - disp库已合并到u8g2库,API等价
+# disp - disp库(已废弃)
 
 {bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air601` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E/Air700E`
 
@@ -8,6 +8,13 @@
 
 ```{tip}
 本库有专属demo，[点此链接查看disp的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/u8g2)
+```
+
+**示例**
+
+```lua
+-- disp库已合并到u8g2库,API等价
+
 ```
 
 ## disp.init(conf)

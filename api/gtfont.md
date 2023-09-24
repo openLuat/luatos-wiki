@@ -1,4 +1,4 @@
-# gtfont - gtfont高通字库模块 (测试高通字库芯片型号:GT5SLCD1E-1A)
+# gtfont - 高通字库芯片
 
 {bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air601` {bdg-primary}`Air105` {bdg-primary}`Air780E/Air700E`
 
@@ -6,6 +6,14 @@
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/gtfont/luat_lib_gtfont.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```
 
+
+**示例**
+
+```lua
+-- 已测试字体芯片型号 GT5SLCD1E-1A
+-- 如需要支持其他型号,请报issue
+
+```
 
 ## gtfont.init(spi_device)
 

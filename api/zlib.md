@@ -1,4 +1,4 @@
-# zlib - zlib压缩/解压缩
+# zlib - zlib压缩/解压缩(已废弃)
 
 {bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air601` {bdg-primary}`Air105`
 
@@ -6,6 +6,13 @@
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/zlib/luat_lib_zlib.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```
 
+
+**示例**
+
+```lua
+-- 这个库已经废弃了, 请使用miniz或者fastlz库
+
+```
 
 ## zlib.c(input_file,output_file)
 
