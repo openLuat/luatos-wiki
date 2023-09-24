@@ -6,3 +6,4 @@
     mcu
     board
     hardware
+    changelog
