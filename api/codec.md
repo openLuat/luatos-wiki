@@ -96,6 +96,7 @@ decoder从文件中解析出原始音频数据，比如从MP3文件里解析出P
 |-|-|
 |userdata|解码用的decoder|
 |zbuff|存放输出数据的zbuff，空间必须不少于16KB|
+|int|最少解码出多少字节的音频数据,默认16384|
 
 **返回值**
 
@@ -106,7 +107,12 @@ decoder从文件中解析出原始音频数据，比如从MP3文件里解析出P
 **例子**
 
 ```lua
-local result = codec.data(coder, zbuff)
+-- 大内存设备
+local buff = zbuff.create(16*1024)
+local result = codec.data(coder, buff)
+-- 小内存设备
+local buff = zbuff.create(8*1024)
+local result = codec.data(coder, buff, 4096)
 
 ```
 

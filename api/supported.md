@@ -28,7 +28,7 @@
 |[http](http.md)|`http 客户端`|Y|Y|Y|Y|Y|Y|
 |[httpsrv](httpsrv.md)|`http服务端`|Y|Y|X|Y|Y|Y|
 |[i2c](i2c.md)|`I2C操作`|Y|Y|Y|Y|Y|Y|
-|[i2s](i2s.md)|`数字音频`|X|X|X|X|X|Y|
+|[i2s](i2s.md)|`数字音频`|Y|Y|X|X|X|Y|
 |[iconv](iconv.md)|`iconv操作`|Y|Y|Y|Y|Y|Y|
 |[io](io.md)|`io操作(扩展)`|Y|Y|Y|Y|Y|Y|
 |[ioqueue](ioqueue.md)|`io序列操作`|X|X|Y|X|X|X|

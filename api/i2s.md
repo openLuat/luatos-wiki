@@ -1,6 +1,6 @@
 # i2s - 数字音频
 
-{bdg-success}`已适配` {bdg-primary}`Air780E/Air700E`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air601` {bdg-primary}`Air780E/Air700E`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_i2s.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -190,6 +190,35 @@ i2s.on(0, function(id, buff)
 		log.info("i2s tx one block done")
 	end
 end)
+
+```
+
+---
+
+## i2s.txStat(id)
+
+
+
+获取i2s的发送缓冲区状态
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|i2s id, i2s0写0, i2s1写1|
+|return|底层缓冲区的总大小|
+|return|底层缓冲区的剩余待发送数据|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 读取发送缓冲区的状态, 从而判断是否需要继续传入音频数据
+local max, remain = i2s.txStat(0)
+log.info("i2s发送缓冲区状态", max, remain)
 
 ```
 
