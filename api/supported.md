@@ -51,7 +51,7 @@
 |[mobile](mobile.md)|`蜂窝网络`|X|X|X|X|X|Y|
 |[mqtt](mqtt.md)|`mqtt客户端`|Y|Y|Y|Y|Y|Y|
 |[nbiot](nbiot.md)|`NB-IOT操作库`|?|?|?|?|?|?|
-|[nes](nes.md)|`nes模拟器`|?|?|?|?|?|?|
+|[nes](nes.md)|`nes模拟器`|Y|Y|Y|X|X|Y|
 |[nimble](nimble.md)|`蓝牙BLE库(nimble版)`|Y|Y|X|Y|Y|X|
 |[os](os.md)|`os操作`|?|?|?|?|?|?|
 |[otp](otp.md)|`OTP操作库`|Y|Y|Y|X|X|Y|
