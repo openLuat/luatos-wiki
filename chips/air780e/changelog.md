@@ -101,9 +101,8 @@
 2. 修复: 回滚V1103升级到V1104的fskv库读写整型/浮点型数据的差异
 
    **此版本同样包含[V1104](https://gitee.com/openLuat/LuatOS/releases/tag/v0007.ec618.v1104)修改所有更新**
-## LuatOS-SoC@EC618 V1104
 
-## V1104
+## LuatOS-SoC@EC618 V1104
 
 tag: v0007.ec618.v1104
 date: 2023-03-13
@@ -148,9 +147,7 @@ date: 2023-03-13
 38. 修复: miniz库常量重复导致pairs时死循环
 39. 修复: 深度休眠唤醒后无法识别模块类型
 
-# ChangeLog for LuatOS@EC618 V1103
-
-## V1103
+## ChangeLog for LuatOS@EC618 V1103
 
 tag: v0007.ec618.v1103
 date: 2023-02-06
