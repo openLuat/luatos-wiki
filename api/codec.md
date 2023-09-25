@@ -78,7 +78,7 @@ decoder从文件中解析出音频信息
 **例子**
 
 ```lua
-local result, audio_format, num_channels, sample_rate, bits_per_sample, is_signed= codec.get_audio_info(coder, "xxx")
+local result, audio_format, num_channels, sample_rate, bits_per_sample, is_signed= codec.info(coder, "xxx")
 
 ```
 
@@ -106,7 +106,7 @@ decoder从文件中解析出原始音频数据，比如从MP3文件里解析出P
 **例子**
 
 ```lua
-local result = codec.get_audio_data(coder, zbuff)
+local result = codec.data(coder, zbuff)
 
 ```
 
