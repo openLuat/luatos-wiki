@@ -115,7 +115,7 @@ log.info("nmea", "isFix", libgnss.isFix())
 |-|-|
 |int|lat数据, 格式为 ddddddddd|
 |int|lng数据, 格式为 ddddddddd|
-|int|speed数据|
+|int|speed数据, 单位米. 于2023.9.26修正|
 
 **例子**
 
