@@ -8,4 +8,3 @@
     peripheral/index
     lvgl/index
     video_play/index
-    iotcloud/index
