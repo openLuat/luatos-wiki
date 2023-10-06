@@ -487,3 +487,39 @@ wlan.hostname("我的wifi物联网设备")
 
 ---
 
+## wlan.staIp(dhcp_enable, ip, netmask, gateway)
+
+
+
+设置Station模式下的IP获取模式
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|bool|是否启用DHCP,默认是true|
+|string|本机IP地址,例如192.168.2.200, 禁用DHCP时必填|
+|string|本机IP掩码,例如255.255.255.0, 禁用DHCP时必填|
+|string|本机IP网关,例如192.168.2.1, 禁用DHCP时必填|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+-- 本API于 2023.10.06 新增
+-- 本函数需要在wlan.init之后才允许调用
+
+-- 启用DHCP, 默认也是启用DHCP,这里是演示API使用
+wlan.staIp(true)
+-- 禁用DHCP,自行设置IP/掩码/网关
+wlan.staIp(false, "192.168.2.200", "255.255.255.0", "192.168.2.1")
+
+```
+
+---
+
