@@ -396,7 +396,7 @@ local crc = crypto.crc32(data)
 
 ---
 
-## crypto.crc8(data)
+## crypto.crc8(data, poly, start, revert)
 
 
 
@@ -423,6 +423,37 @@ local crc = crypto.crc32(data)
 -- 计算CRC8
 local crc = crypto.crc8(data)
 local crc = crypto.crc8(data, 0x31, 0xff, false)
+
+```
+
+---
+
+## crypto.crc7(data, poly, start)
+
+
+
+计算crc7值
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|数据|
+|int|crc多项式，可选，默认0xE5|
+|int|crc初始值，可选，默认0x00|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|对应的CRC7值|
+
+**例子**
+
+```lua
+-- 计算CRC7, 本API于2023.10.07新增
+local crc = crypto.crc7(data)
+local crc = crypto.crc7(data, 0x31, 0xff)
 
 ```
 
