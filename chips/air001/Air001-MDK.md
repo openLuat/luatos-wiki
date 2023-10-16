@@ -403,7 +403,7 @@ void SysTick_Handler(void)
 
 ![](img/2023-05-08-22-23-56.png)
 
-#### 0x08 修改`mian.c`文件
+#### 0x08 修改`main.c`文件
 一个典型的例子如下
 ```c
 #include "main.h"
