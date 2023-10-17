@@ -10,7 +10,7 @@
 本库有专属demo，[点此链接查看gmssl的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/gmssl)
 ```
 
-## sm.sm2encrypt(pkx,pky,data)
+## sm.sm2encrypt(pkx,pky,data, mode)
 
 
 
@@ -20,19 +20,21 @@ sm2算法加密
 
 |传入值类型|解释|
 |-|-|
-|string|公钥x,必选|
-|string|公钥y,必选|
-|string|待计算的数据,必选,最长255字节|
+|string|公钥x,必选. HEX字符串|
+|string|公钥y,必选. HEX字符串|
+|string|待计算的数据,必选,最长32字节, 非HEX字符串|
+|boolean|输出模式,默认false. false-GMSSL默认格式, true-网站兼容模式|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|string|加密后的字符串, 原样输出,未经HEX转换|
+|string|加密后的字符串, 原样输出,未经HEX转换. 若加密失败会返回nil或空字符串|
 
 **例子**
 
 ```lua
+-- 提示 mode 参数是 2023.10.17 新增
 local originStr = "encryption standard"
 local pkx = "435B39CCA8F3B508C1488AFC67BE491A0F7BA07E581A0E4849A5CF70628A7E0A"
 local pky = "75DDBA78F15FEECB4C7895E2C1CDF5FE01DEBB2CDBADF45399CCF77BBA076A42"
@@ -45,7 +47,7 @@ log.info("testsm.sm2decrypt",gmssl.sm2decrypt(private,encodeStr))
 
 ---
 
-## sm.sm2decrypt(private,data)
+## sm.sm2decrypt(private,data,mode)
 
 
 
@@ -55,18 +57,20 @@ sm2算法解密
 
 |传入值类型|解释|
 |-|-|
-|string|私钥,必选|
-|string|待计算的数据,必选|
+|string|私钥,必选,HEX字符串|
+|string|待计算的数据,必选,原始数据,非HEX字符串|
+|boolean|输出模式,默认false. false-GMSSL默认格式, true-网站兼容模式|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|string|解密后的字符串,未经HEX转换|
+|string|解密后的字符串,未经HEX转换.若解密失败会返回nil或空字符串|
 
 **例子**
 
 ```lua
+-- 提示 mode 参数是 2023.10.17 新增
 local originStr = "encryption standard"
 local pkx = "435B39CCA8F3B508C1488AFC67BE491A0F7BA07E581A0E4849A5CF70628A7E0A"
 local pky = "75DDBA78F15FEECB4C7895E2C1CDF5FE01DEBB2CDBADF45399CCF77BBA076A42"
