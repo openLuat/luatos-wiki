@@ -10,7 +10,7 @@
 本库有专属demo，[点此链接查看gmssl的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/gmssl)
 ```
 
-## sm.sm2encrypt(pkx,pky,data, mode)
+## sm.sm2encrypt(pkx,pky,data, mode, mode2)
 
 
 
@@ -24,6 +24,7 @@ sm2算法加密
 |string|公钥y,必选. HEX字符串|
 |string|待计算的数据,必选,最长32字节, 非HEX字符串|
 |boolean|输出模式,默认false. false-GMSSL默认格式, true-网站兼容模式|
+|boolean|标准版本,默认false. false-C1C3C2新国际, true-C1C2C3老国际|
 
 **返回值**
 
@@ -34,7 +35,7 @@ sm2算法加密
 **例子**
 
 ```lua
--- 提示 mode 参数是 2023.10.17 新增
+-- 提示 mode/mode2 参数是 2023.10.17 新增
 local originStr = "encryption standard"
 local pkx = "435B39CCA8F3B508C1488AFC67BE491A0F7BA07E581A0E4849A5CF70628A7E0A"
 local pky = "75DDBA78F15FEECB4C7895E2C1CDF5FE01DEBB2CDBADF45399CCF77BBA076A42"
@@ -47,7 +48,7 @@ log.info("testsm.sm2decrypt",gmssl.sm2decrypt(private,encodeStr))
 
 ---
 
-## sm.sm2decrypt(private,data,mode)
+## sm.sm2decrypt(private,data,mode,mode2)
 
 
 
@@ -60,6 +61,7 @@ sm2算法解密
 |string|私钥,必选,HEX字符串|
 |string|待计算的数据,必选,原始数据,非HEX字符串|
 |boolean|输出模式,默认false. false-GMSSL默认格式, true-网站兼容模式|
+|boolean|标准版本,默认false. false-C1C3C2新国际, true-C1C2C3老国际|
 
 **返回值**
 
@@ -70,7 +72,7 @@ sm2算法解密
 **例子**
 
 ```lua
--- 提示 mode 参数是 2023.10.17 新增
+-- 提示 mode/mode2 参数是 2023.10.17 新增
 local originStr = "encryption standard"
 local pkx = "435B39CCA8F3B508C1488AFC67BE491A0F7BA07E581A0E4849A5CF70628A7E0A"
 local pky = "75DDBA78F15FEECB4C7895E2C1CDF5FE01DEBB2CDBADF45399CCF77BBA076A42"
