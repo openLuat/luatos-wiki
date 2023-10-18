@@ -496,7 +496,7 @@ local scr = lvgl.scr_act()
 
 ---
 
-## lvgl.scr_load(scr)
+## lvgl.scr_load_anim(scr)
 
 
 
