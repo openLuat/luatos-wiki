@@ -496,6 +496,45 @@ local scr = lvgl.scr_act()
 
 ---
 
+## lvgl.scr_load(scr)
+
+
+
+载入指定的screen并使用指定的转场动画
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|screen指针|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+    local scr = lvgl.obj_create(nil, nil)
+    local btn = lvgl.btn_create(scr)
+    lvgl.obj_align(btn, lvgl.scr_act(), lvgl.ALIGN_CENTER, 0, 0)
+    local label = lvgl.label_create(btn)
+    lvgl.label_set_text(label, "LuatOS!")
+
+    local scr2 = lvgl.obj_create(nil,nil)
+    local btn2 = lvgl.btn_create(scr2)
+    lvgl.obj_align(btn, scr2, lvgl.ALIGN_CENTER, 0, 20)
+    local label2 = lvgl.label_create(btn2)
+    lvgl.label_set_text(label2, "Btn2")
+    lvgl.scr_load(scr)
+    --sys.wait(1000);
+    lvgl.scr_load_anim(scr2,lvgl.SCR_LOAD_ANIM_OVER_LEFT,100,100,false)
+原函数：lv_scr_load_anim(lv_obj_t * new_scr, lv_scr_load_anim_t anim_type, uint32_t time, uint32_t delay, bool auto_del)
+
+```
+
+---
+
 ## lvgl.theme_set_act(name)
 
 
