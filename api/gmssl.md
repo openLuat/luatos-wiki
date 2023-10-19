@@ -77,8 +77,7 @@ local originStr = "encryption standard"
 local pkx = "435B39CCA8F3B508C1488AFC67BE491A0F7BA07E581A0E4849A5CF70628A7E0A"
 local pky = "75DDBA78F15FEECB4C7895E2C1CDF5FE01DEBB2CDBADF45399CCF77BBA076A42"
 local private = "1649AB77A00637BD5E2EFE283FBF353534AA7F7CB89463F208DDBC2920BB0DA0"
-local rand = "4C62EEFD6ECFC2B95B92FD6C3D9575148AFA17425546D49018E5388D49DD7B4F"
-local encodeStr = gmssl.sm2encrypt(pkx,pky,rand,originStr)
+local encodeStr = gmssl.sm2encrypt(pkx,pky,originStr)
 print(originStr,"encrypt",string.toHex(encodeStr))
 log.info("testsm.sm2decrypt",gmssl.sm2decrypt(private,encodeStr))
 
@@ -214,6 +213,68 @@ SM4解密算法
 
 ```lua
 -- 参考gmssl.sm4encrypt
+
+```
+
+---
+
+## sm.sm2sign(private,data,id)
+
+
+
+sm2算法签名
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|私钥,必选,HEX字符串|
+|string|待计算的数据,必选,原始数据,非HEX字符串|
+|string|id值,非HEX字符串,可选,不填就是nil|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|前面字符串,未经HEX转换.若签名失败会返回nil|
+
+**例子**
+
+```lua
+-- 本API于 2023.10.19 新增
+-- 具体用法请查阅demo
+
+```
+
+---
+
+## sm.sm2verify(pkx, pky, data, id, sig)
+
+
+
+sm2算法验签
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|公钥X,必选,HEX字符串|
+|string|公钥Y,必选,HEX字符串|
+|string|待计算的数据,必选,原始数据,非HEX字符串|
+|string|id值,非HEX字符串,可选,不填就是nil|
+|string|签名数据,通常是72字节,非HEX字符串|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|验证成功返回true,否则返回nil|
+
+**例子**
+
+```lua
+-- 本API于 2023.10.19 新增
+-- 具体用法请查阅demo
 
 ```
 
