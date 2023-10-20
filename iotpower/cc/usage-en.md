@@ -16,7 +16,7 @@ The basic appearance of the device is as follows
 |**②**|USB TYPE-C power input|**⑨**|Left shift key `<`|
 |**③**|USB TYPE-C Power Out|**⑩**|Right Shift Key `>`|
 |**④**|External Power Supply Positive+ (corresponds to ②)|**11**|Cancel key `X`|
-|**⑤**|external power supply negative- (corresponds to ②)|**(12)**|page-turn key/forcing into upgrade mode|
+|**⑤**|external power supply negative- (corresponds to ②)|**(12)**|page-turn key/forcing into upgrade mode/Zero Calibration|
 |**Small Dial**|Switch the power supply source of CC||
 |**⑥**|External Output Positive+ (corresponds to ③)||
 |**⑦**|External output Negative- (corresponds to ③)||
@@ -41,6 +41,7 @@ The values displayed on this page, from top to bottom, are
 - Press the `<` key to toggle the display of `Wh`, `Ah` and `W`.
 - Press the `>` key to toggle the display style.
 - Press the `X` key to clear the totalized data (time, power, etc.) and recalculate from the beginning
+- Long press **(12)** to zero calibration
 
 ## Detailed data page
 
@@ -49,6 +50,7 @@ The values displayed on this page, from top to bottom, are
 This page shows the average current, peak and valley current with more detailed power statistics (amp-hours and watt-hours)
 
 - Press the `X` key to clear all the data and recalculate from the beginning
+- Long press **(12)** to zero calibration
 
 ## Waveform preview page
 
