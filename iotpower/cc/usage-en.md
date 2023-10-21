@@ -41,7 +41,7 @@ The values displayed on this page, from top to bottom, are
 - Press the `<` key to toggle the display of `Wh`, `Ah` and `W`.
 - Press the `>` key to toggle the display style.
 - Press the `X` key to clear the totalized data (time, power, etc.) and recalculate from the beginning
-- Long press **(12)** to zero calibration
+- Long press **(12)** for 5 seconds to zero calibration
 
 ## Detailed data page
 
@@ -50,7 +50,7 @@ The values displayed on this page, from top to bottom, are
 This page shows the average current, peak and valley current with more detailed power statistics (amp-hours and watt-hours)
 
 - Press the `X` key to clear all the data and recalculate from the beginning
-- Long press **(12)** to zero calibration
+- Long press **(12)** for 5 seconds to zero calibration
 
 ## Waveform preview page
 
