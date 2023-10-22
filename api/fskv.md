@@ -263,7 +263,7 @@ end
 
 ---
 
-## fskv.iter(iter)
+## fskv.next(iter)
 
 
 
