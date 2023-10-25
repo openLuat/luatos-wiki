@@ -1,6 +1,7 @@
 # ⚡ IoT Power - CC
 
 > [前往淘宝购买](https://item.taobao.com/item.htm?id=718378448520)
+> [微信商城购买](https://appc6kjfor22343.h5.xiaoeknow.com/v1/goods/goods_detail/SPU_ENT_1678672270GckvYWaVoUuX4)
 
 IOT Power CC是一款功能齐全，稳定可靠的小型手持式高精度功率计，它可以：
 
