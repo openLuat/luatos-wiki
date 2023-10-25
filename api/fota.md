@@ -10,6 +10,51 @@
 本库有专属demo，[点此链接查看fota的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/fota)
 ```
 
+**示例**
+
+```lua
+-- 如果是从http获取升级包, 那么看demo/fota就可以了
+-- 以下是从其他途径获取更新包后, 调用本fota库的基本逻辑
+
+-- 逐段传入
+sys.taskInit(function()
+    fota.init()
+    while 1 do
+        local buf = xxx -- 这里是从其他途径获取的升级包片段
+        -- buf 可以是zbuff 也可以是string
+        -- 每次写入的数据长度最大不应超过4k
+        local result, isDone, cache = fota.run(buf) 
+        if not result then
+            log.info("fota", "出错了")
+            break
+        end
+        if isDone then
+            while true do
+                local succ,fotaDone  = fota.isDone()
+                if not succ then
+                    log.info("fota", "出错了")
+                    break
+                end
+                if fotaDone then
+                    log.info("fota", "已完成")
+                    break
+                end
+                sys.wait(100)
+            end
+            break
+        end
+        sys.wait(100)
+    end
+end)
+
+-- 使用文件一次性传入
+sys.taskInit(function()
+    fota.init()
+    fota.file("/xxx") -- 传入具体的路径
+end)
+
+```
+
 ## fota.init(storge_location, len, param1)
 
 
