@@ -183,4 +183,7 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 if (navigator.language.indexOf("CN") < 0 && confirm ("Are you want to switch to English version of this page?")) {
     window.location.href = "pc-en.html";
 }
+if(navigator.userAgent.indexOf("Windows NT 6")) {
+  alert("Win7用户须知，请阅读完再关！\nWin7必须手动安装驱动才能运行！\n要装两个驱动！运行和升级模式分别装。\n需要.net framework 4.6.2才能运行客户端！\n不支持x86架构32位的电脑！");
+}
 </script>
