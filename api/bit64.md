@@ -218,3 +218,35 @@
 
 ---
 
+## bit64.strtoll(data, base)
+
+
+
+将字符串转为LongLong数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|待转换的数据,必须存在|
+|int|转换进制, 默认10, 可选16或8|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|9字节数据|
+
+**例子**
+
+```lua
+-- 本API于 2023.10.27 添加
+-- 提醒, 如果转换失败, 是返回9个字节的0x00
+local data = bit64.strtoll("864040064024194", 10)
+log.info("data", data:toHex())
+log.info("data", bit64.show(data))
+
+```
+
+---
+
