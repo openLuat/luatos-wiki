@@ -3,7 +3,7 @@
 ## Download
 
 - Microsoft Store download: [Microsoft Store page](https://www.microsoft.com/store/apps/9N8S8M8226SH)
-- Standalone exe version: [IOT Power.exe](https://llcom.papapoi.com/iotpower/latest.html) (note Microsoft antivirus misrepresentation)
+- Standalone exe version: [IOT Power.exe](https://arduino.luatos.com/iotpower/latest.html) (note Microsoft antivirus misrepresentation)
 - **All Platform** command line data logger, dll/so dynamic runtime library please go to [gitee repository](https://gitee.com/openLuat/iot-power) to view
 
 :::{dropdown} win7 users may need
@@ -11,7 +11,7 @@
 
 IoT Power V1 CP2102 driver: [CP210x_Windows_Drivers](https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip)
 
-IoT Power CC driver: [IoTPower_CC_usb_driver.7z](https://llcom.papapoi.com/iotpower/IoTPower_CC_usb_driver.7z)
+IoT Power CC driver: [IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iotpower/IoTPower_CC_usb_driver.7z)
 
 net framework 4.6.2: [Installer](https://dotnet.microsoft.com/zh-cn/download/dotnet-framework/thank-you/net462-offline-installer)
 :::
