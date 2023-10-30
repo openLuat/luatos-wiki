@@ -139,7 +139,11 @@ end)
 
 **例子**
 
-无
+```lua
+-- 打开调试信息,默认是关闭状态
+socket.debug(ctrl, true)
+
+```
 
 ---
 
@@ -174,7 +178,10 @@ end)
 **例子**
 
 ```lua
-socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不用验证的那种
+--最普通的TCP传输
+socket.config(ctrl)
+--最普通的加密TCP传输，证书都不用验证的那种
+socket.config(ctrl, nil, nil ,true)
 
 ```
 
@@ -201,7 +208,11 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 **例子**
 
-无
+```lua
+-- 判断一下是否已经联网
+local succ, result = socket.linkup(ctrl)
+
+```
 
 ---
 
@@ -229,7 +240,21 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 **例子**
 
-无
+```lua
+
+local succ, result = socket.connect(ctrl, "netlab.luatos.com", 40123)
+
+--[[
+常见的连接失败的code值, 会在日志中显示
+-1 底层内存不足
+-3 超时
+-8 端口已经被占用
+-11 链接未建立
+-13 模块主动断开连接
+-14 服务器主动断开连接
+]]
+
+```
 
 ---
 
@@ -254,7 +279,10 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 **例子**
 
-无
+```lua
+local succ, result = socket.discon(ctrl)
+
+```
 
 ---
 
@@ -272,7 +300,9 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -306,7 +336,11 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 **例子**
 
-无
+```lua
+
+local succ, full, result = socket.tx(ctrl, "123456", "xxx.xxx.xxx.xxx", xxxx)
+
+```
 
 ---
 
@@ -335,7 +369,10 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 **例子**
 
-无
+```lua
+local succ, data_len, ip, port = socket.rx(ctrl, buff)
+
+```
 
 ---
 
@@ -360,7 +397,10 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 **例子**
 
-无
+```lua
+local succ, result = socket.wait(ctrl)
+
+```
 
 ---
 
@@ -385,7 +425,10 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 **例子**
 
-无
+```lua
+local succ, result = socket.listen(ctrl)
+
+```
 
 ---
 
@@ -411,7 +454,10 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 
 **例子**
 
-无
+```lua
+local succ, new_netc = socket.listen(ctrl, cb)
+
+```
 
 ---
 
@@ -458,6 +504,9 @@ socket.config(ctrl, nil, nil ,true)	--最普通的加密TCP传输，证书都不
 **例子**
 
 ```lua
+-- 设置默认网络适配器的DNS配置
+socket.setDNS(nil, 1, "114.114.114.114")
+-- 设置制定网络适配器的DNS配置
 socket.setDNS(socket.ETH0, 1, "114.114.114.114")
 
 ```
@@ -468,22 +517,36 @@ socket.setDNS(socket.ETH0, 1, "114.114.114.114")
 
 
 
-设置SSL的log
+设置SSL的log登记
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|int	mbedtls|log等级，0不打印，1只打印错误和警告，2大部分info，3及3以上详细的debug信息，过多的信息可能会造成内存碎片化|
-|usage|socket.sslLog(2)|
+|int	mbedtls|log等级|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
-无
+```lua
+--[[
+SSL/TLS log级别说明
+0不打印
+1只打印错误和警
+2大部分info
+3及3以上详细的debug
+
+过多的信息可能会造成内存碎片化
+]]
+-- 打印大部分info日志
+socket.sslLog(2)
+
+```
 
 ---
 
@@ -522,7 +585,7 @@ local isReady,default = socket.adapter(socket.ETH0)
 
 
 
-获取对端ip，必须在接收到socket.ON_LINE消息之后才可能获取到，最多返回4个IP。socket.connect里如果remote_port设置成0，则当DNS完成时就返回socket.ON_LINE消息
+获取对端ip
 
 **参数**
 
@@ -542,6 +605,8 @@ local isReady,default = socket.adapter(socket.ETH0)
 **例子**
 
 ```lua
+-- 注意: ，必须在接收到socket.ON_LINE消息之后才可能获取到，最多返回4个IP。
+-- socket.connect里如果remote_port设置成0，则当DNS完成时就返回socket.ON_LINE消息
 local ip1,ip2,ip3,ip4 = socket.remoteIP(ctrl)
 
 ```
