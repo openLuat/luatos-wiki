@@ -2,22 +2,99 @@
 
 ## V1108
 
-待发布
+本版本处于RC状态, 待发布
 
 兼容性变化:
 1. 修正CPU温度的单位
-   1.1 影响, 之前的版本返回的CPU温度是摄氏度, 其他BSP均为1/1000摄氏度
-   1.2 解决办法: 新数据/1000 即得到原有的数据值
+   * 影响, 之前的版本返回的CPU温度是摄氏度, 其他BSP均为1/1000摄氏度
+   * 解决办法: 新数据/1000 即得到原有的数据值
+
+缺陷修复:
+* fix: **socket close的时候没有清除掉新数据标志** 导致SSL有概率重连持续失败
+* fix: **mqtt库某些情况buffer_offset重连不置零** 导致MQTT有概率重连持续失败
+* fix: **mqtt心跳定时器计数错误** 导致mqtt心跳可能不会发出
+* fix: **CPU温度的单位应该是1/1000摄氏度, 实现错了**
+* fix: **重写sntp函数,并支持自动超时** 弱网情况下,sntp可能会耗尽socket连接数
+* fix: **合入原厂补丁，修复一个因搜索基站引起的死机问题**
+* fix: mqtt库发送包报错的时候应该关闭socket
+* fix: lvgl反复创建style会死机
+* fix: fatfs的lsdir扫不出文件夹
+* fix: 兼容RTC库的mon属性
+* fix: AES-128-ECB且PKCS7, 解密错误数据不能返回
+* fix: 修复iotcloud库onenet部分情况数据截断问题
+* fix: 修复ymodem路径字符串末尾没有0的问题
+* fix: 64bit的luatos固件,打印print(-1)会输出很大的值
+* fix: 780E w5500 sntp死机
+* fix: ftp启动后台线程应判断是否成功,创建失败要走失败流程
+* fix: errDump手动读文件的open参数不对
+* fix: libgnss.getIntLocation的speed值异常
+* fix: sim卡擦写次数统计不对
+* fix: 64bit固件下audio库播放音频没有结束播放的回调消息.
+* fix: 修复socket无法连接情况下无法重连问题
+* fix: vfs_fatfs里的容量计算错误
+* fix: i2c.createSoft的示例,在Air780E的V1107固件会报错,干脆填上delay值吧
+* fix: http库的关闭逻辑不完备,并清除编译警告
+* fix: 在进行DNS过程时，调用network_force_close_socket并且不再进行连接时，DNS完成仍然会回调
+* fix: crypto.totp函数有内存泄漏问题
+* fix: gmssl库的sm4加密模式错误
+* fix: libemqtt中全部大数组改成heap分配
+* fix: 修复iconv库转换长数据时会丢失后部分字符
+* fix: http库tls证书相关的属性没有强制初始化为0,有可能出现非法值
+* fix: fonts库没有正确枚举新的sarasa字体
+* fix: ssl发送大量数据时，需要分批发送
+* fix: adc获取标记未更新，导致获取adc值有可能是上一次的
+* fix: TTS固件未成功挂载SPI FLASH时会死机
+* fix: tts播放时无法选择i2s1
+* fix: 云编译的sarasa英文字体不生效
+* fix: adc选择关闭内部分压模式时没有完全关闭掉
+
+功能新增和更新:
+
+* add: iotcloud库支持涂鸦/百度云
+* add: ftp添加数据端口返回内网ip的兼容
+* add: 支持获取硬件版本号
+* add: fskv库添加sett函数
+* add: 添加fastlz压缩库
+* add: 补回json.null属性
+* add: crypto库添加流式hash接口
+* add: sntp添加适配器选项
+* add: 添加u8g2.DrawButtonUTF8
+* add: mobile添加SIM卡写入统计的API
+* add: lcd库支持屏幕外的坐标进行绘图,例如图片部分在画面外
+* add: mqtt添加错误返回参数
+* add: lcd 添加高通字体gbk接口
+* add: mqtt添加状态获取接口
+* add: sms.send新增auto_phone_fix,可禁用对应目标号码的自动出来,从而适应国外的复杂号码规则
+* add: es8311基础循环录音demo
+* add: 添加crypto.crc7函数
+* add: u8g2.CopyBuffer函数
+* add: gmssl.sm2加解密添加网站兼容模式
+* add: gmssl.sm2加解密支持老国标C1C2C3
+* add: gmssl库添加sm2签名和验签
+* add: http库支持URL中的鉴权信息
+* add: 新增bit64.strtoll函数
+* add: luatos云编译支持启用LVGL的PNG和BMP解码
+* update: 完善ymodem接收文件的结尾处理
+* update: gpio.debounce 模式1下，去除掉一看就是不合理的中断
+* update: FTP优化等待数据传输流程
+* update: 更新 ws2812 demo,EC618支持pin直驱
+* update: ymodem兼容ymodem-1k
+* update: 优化ftp接收文件的内存分配
+* update: 优化http回调下载长度值得精确度
+* update: 优化了辅助内存回收功能，并提供接口
+* update: 内存不足时不再简单的提示，而是把使用情况打印出来
+* update: sim卡可能欠费做个提示
+* update: 执行poweroff前自动关掉wdt,否则会20秒后死机重启
 
 ## V1107
 
 兼容性变化:
 1. 不再自动查询基站信息
-   1.1 影响: 如没有调用mobile.reqCellInfo函数, mobile.cellInfo()会返回空数组
-   1.1 解决办法: 按需调用或定时调用 `mobile.reqCellInfo(60)`
+   * 影响: 如没有调用mobile.reqCellInfo函数, mobile.cellInfo()会返回空数组
+   * 解决办法: 按需调用或定时调用 `mobile.reqCellInfo(60)`
 2. 软件DAC音频的音量配置生效
-   2.1 影响: 使用Air780E的软件DAC功能时, `audio.vol(0, 50)`可能会听不清楚
-   2.2 解决办法: 设置音量到100或以上
+   * 影响: 使用Air780E的软件DAC功能时, `audio.vol(0, 50)`可能会听不清楚
+   * 解决办法: 设置音量到100或以上
 
 功能新增:
 * uart.read支持读取指定长度
