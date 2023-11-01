@@ -13,7 +13,13 @@
 **示例**
 
 ```lua
---提醒, 对于仅支持wifiscan的模块, 仅 init/scan/scanResult 函数是可用的
+--[[
+提醒:
+对于仅支持wifiscan的模块, 仅 init/scan/scanResult 函数是可用的
+
+例如: Air780E/Air600E/Air780EG等仅支持wifiscan
+]]
+
 
 ```
 
@@ -305,6 +311,11 @@ log.info("sc", ret, ssid, passwd)
 ```lua
 -- 设置MAC地址, 2023-03-01之后编译的固件可用
 local mac = string.fromHex("F01122334455")
+wlan.setMac(0, mac)
+
+-- 部分模块支持恢复默认MAC, 例如esp32系列
+-- 在2023-11-01 之后编译的固件可用
+local mac = string.fromHex("000000000000")
 wlan.setMac(0, mac)
 
 ```
