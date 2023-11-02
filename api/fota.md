@@ -123,7 +123,7 @@ local isDone = fota.wait()
 
 |传入值类型|解释|
 |-|-|
-|zbuff/string|fota数据，尽量用zbuff，如果传入的是zbuff，写入成功后，自动清空zbuff内的数据|
+|zbuff/string|fota数据，尽量用zbuff|
 
 **返回值**
 
@@ -137,6 +137,8 @@ local isDone = fota.wait()
 
 ```lua
 local result, isDone, cache = fota.run(buf) -- 写入fota流程
+
+-- 提示: ，如果传入的是zbuff，写入成功后，请自行清空zbuff内的数据
 
 ```
 
