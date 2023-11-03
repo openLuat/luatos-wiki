@@ -351,8 +351,8 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
 **例子**
 
 ```lua
-local mobile.apn(0,1,"cmiot","","",nil,0) -- 移动公网卡设置APN为cmiot,一般不用设置
-local mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name，user，password联系卡商获取
+mobile.apn(0,1,"cmiot","","",nil,0) -- 移动公网卡设置APN为cmiot,一般不用设置
+mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name，user，password联系卡商获取
 
 ```
 
