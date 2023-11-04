@@ -56,11 +56,11 @@
         <script>
           //在主站，而且是非中文用户
           if (navigator.language.indexOf("CN") < 0 && location.href.indexOf("https://wiki.luatos.org") !== 0 ) {
-            $("#en-site-css").css("display","");
+            document.getElementById('en-site-css').style.cssText = "";
           }
           //在英文站
           if (location.href.indexOf("https://wiki.luatos.org") == 0 ) {
-            $("#discord-css").css("display","");
+            document.getElementById('discord-css').style.cssText = "";
           }
         </script>
         <!-- 英文站提示 end -->
