@@ -51,12 +51,13 @@
       {% block left_sidebar %}
       <div class="sidebar-sticky">
         <!-- 英文站提示 start -->
-        <div id="en-site-css" style="display: none;"><a href="https://wiki.luatos.org/">(NEW) Go to English site</a></div>
+        <div id="en-site-css" style="display: none;"><a id="en-site-link" style="font-size: 22px;font-weight: bold;" href="https://wiki.luatos.org/">(NEW) Go to English site</a></div>
         <div id="discord-css" style="display: none;"><a href="https://discord.gg/FFRsvk4D85"><img src="https://img.shields.io/discord/890114586647355402?color=7289da&label=Discord&logo=discord&logoColor=white" alt="Discord"></a></div>
         <script>
           //在主站，而且是非中文用户
           if (navigator.language.indexOf("CN") < 0 && location.href.indexOf("https://wiki.luatos.org") !== 0 ) {
             document.getElementById('en-site-css').style.cssText = "";
+            document.getElementById('en-site-link').href = location.href.replace("wiki.luatos.com","wiki.luatos.org");
           }
           //在英文站
           if (location.href.indexOf("https://wiki.luatos.org") == 0 ) {
