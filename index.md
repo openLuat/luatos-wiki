@@ -104,6 +104,11 @@ LuatOS提供了丰富的外设接口库，可以更便捷地实现创意，无�
 <div class="chatlink">
     <button onclick="window.open('https://chat.openluat.com')">文档没解决，论坛发个帖！</button><p/>
 </div>
+<script>
+if (location.href.indexOf("https://wiki.luatos.org") == 0 ) {
+  $(".chatlink").css("display","none");
+}
+</script>
 
 ```{toctree}
 :hidden:

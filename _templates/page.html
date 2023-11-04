@@ -50,22 +50,20 @@
     <div class="sidebar-container">
       {% block left_sidebar %}
       <div class="sidebar-sticky">
-        <!-- 谷歌翻译 start -->
-        <div id="google_translate_element"></div>
+        <!-- 英文站提示 start -->
+        <div id="en-site-css" style="display: none;"><a href="https://wiki.luatos.org/">(NEW) Go to English site</a></div>
+        <div id="discord-css" style="display: none;"><a href="https://discord.gg/FFRsvk4D85"><img src="https://img.shields.io/discord/890114586647355402?color=7289da&label=Discord&logo=discord&logoColor=white" alt="Discord"></a></div>
         <script>
-          function googleTranslateElementInit() {
-            if (navigator.language.indexOf("CN") < 0) {
-              new google.translate.TranslateElement({
-                pageLanguage: 'cn'
-              }, 'google_translate_element');
-              $("#google_translate_element").after('<a href="https://discord.gg/FFRsvk4D85"><img src="https://img.shields.io/discord/890114586647355402?color=7289da&label=Discord&logo=discord&logoColor=white" alt="Discord"></a>');
-            }
+          //在主站，而且是非中文用户
+          if (navigator.language.indexOf("CN") < 0 && location.href.indexOf("https://wiki.luatos.org") !== 0 ) {
+            $("#en-site-css").css("display","");
           }
-          if (navigator.language.indexOf("CN") < 0) {
-            var _hmt = _hmt || []; (function () { var hm = document.createElement('script'); hm.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm, s); })();
+          //在英文站
+          if (location.href.indexOf("https://wiki.luatos.org") == 0 ) {
+            $("#discord-css").css("display","");
           }
         </script>
-        <!-- 谷歌翻译 end -->
+        <!-- 英文站提示 end -->
         {%- for sidebar_section in sidebars %}
           {%- include sidebar_section %}
         {%- endfor %}
