@@ -6,9 +6,9 @@ if (location.href.indexOf("https://wiki.luatos.org") == 0 ) {
 
   //Google Analytics
   (function() {
-    var g_js = document.createElement("g_js");
+    var g_js = document.createElement("script");
     g_js.src = "https://www.googletagmanager.com/gtag/js?id=G-JLYVYP605V";
-    var s = document.getElementsByTagName("g_js")[0];
+    var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(g_js, s);
   })();
   window.dataLayer = window.dataLayer || [];
