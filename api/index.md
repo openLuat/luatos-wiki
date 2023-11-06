@@ -12,6 +12,7 @@ camera
 codec
 coremark
 crypto
+ctiot
 dac
 disp
 eink
@@ -46,6 +47,7 @@ libgnss
 log
 lora
 lora2
+lpmem
 lvgl
 max30102
 mcu

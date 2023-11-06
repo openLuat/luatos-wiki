@@ -9,6 +9,7 @@
 |[codec](codec.md)|`多媒体-编解码`|Y|Y|Y|X|X|Y|
 |[coremark](coremark.md)|`跑分`|Y|Y|Y|Y|Y|Y|
 |[crypto](crypto.md)|`加解密和hash函数`|Y|Y|Y|Y|Y|Y|
+|[ctiot](ctiot.md)|`中国电信CTIOT集成`|?|?|?|?|?|?|
 |[dac](dac.md)|`数模转换`|X|X|Y|X|X|X|
 |[disp](disp.md)|`disp库(已废弃)`|Y|Y|Y|Y|Y|Y|
 |[eink](eink.md)|`墨水屏操作库`|Y|Y|Y|Y|Y|Y|
@@ -43,6 +44,7 @@
 |[log](log.md)|`日志库`|Y|Y|Y|Y|Y|Y|
 |[lora](lora.md)|`lora驱动模块`|Y|Y|Y|Y|Y|Y|
 |[lora2](lora2.md)|`lora2驱动模块(支持多挂)`|X|X|X|Y|Y|Y|
+|[lpmem](lpmem.md)|`操作低功耗不掉电内存块`|?|?|?|?|?|?|
 |[lvgl](lvgl.md)|`LVGL图像库`|Y|Y|Y|Y|Y|Y|
 |[max30102](max30102.md)|`心率模块(MAX30102)`|Y|Y|Y|Y|Y|Y|
 |[mcu](mcu.md)|`封装mcu一些特殊操作`|Y|Y|Y|Y|Y|Y|
