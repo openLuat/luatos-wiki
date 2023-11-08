@@ -46,13 +46,17 @@ end
 
 |返回值类型|解释|
 |-|-|
-|string|若成功,返回定位坐标的纬度,是WGS84坐标系,否则会返还nil|
-|string|若成功,返回定位坐标的精度,是WGS84坐标系,否则会返还nil|
+|string|若成功,返回定位坐标的纬度,否则会返还nil|
+|string|若成功,返回定位坐标的精度,否则会返还nil|
 |table|服务器时间,东八区时间. 当reqTime为true且定位成功才会返回|
 
 **例子**
 
 ```lua
+-- 关于坐标系
+-- 大部分情况下会返回GCJ02坐标系, 少数情况返回的WGS84坐标
+-- 历史数据已经无法分辨具体坐标系
+-- 鉴于两种坐标系之间的误差并不大,小于基站定位本身的误差, 纠偏的意义不大
 sys.taskInit(function()
     if mobile.status() == 0 then
         sys.waitUntil("IP_READY", 3000)
