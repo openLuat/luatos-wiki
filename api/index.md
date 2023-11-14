@@ -92,6 +92,7 @@ w5500
 wdt
 websocket
 wlan
+ws2812
 ymodem
 zbuff
 zlib

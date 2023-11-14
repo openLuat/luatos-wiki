@@ -30,7 +30,7 @@
 |[httpsrv](httpsrv.md)|`http服务端`|Y|Y|X|Y|Y|Y|
 |[i2c](i2c.md)|`I2C操作`|Y|Y|Y|Y|Y|Y|
 |[i2s](i2s.md)|`数字音频`|Y|Y|X|X|X|Y|
-|[iconv](iconv.md)|`字符编码转换`|Y|Y|Y|Y|Y|Y|
+|[iconv](iconv.md)|`iconv操作`|Y|Y|Y|Y|Y|Y|
 |[io](io.md)|`io操作(扩展)`|Y|Y|Y|Y|Y|Y|
 |[ioqueue](ioqueue.md)|`io序列操作`|X|X|Y|X|X|X|
 |[iotauth](iotauth.md)|`IoT鉴权库, 用于生成各种云平台的参数`|Y|Y|Y|Y|Y|Y|
@@ -89,6 +89,7 @@
 |[wdt](wdt.md)|`watchdog操作库`|Y|Y|Y|Y|Y|Y|
 |[websocket](websocket.md)|`websocket客户端`|Y|Y|Y|Y|Y|Y|
 |[wlan](wlan.md)|`wifi操作`|Y|Y|X|Y|Y|Y|
+|[ws2812](ws2812.md)|`幻彩灯带RGB控制器(WS2812系列)`|X|X|X|X|X|X|
 |[ymodem](ymodem.md)|`ymodem协议`|Y|Y|Y|Y|Y|Y|
 |[zbuff](zbuff.md)|`c内存数据操作库`|Y|Y|Y|Y|Y|Y|
 |[zlib](zlib.md)|`zlib压缩/解压缩(已废弃)`|Y|Y|Y|X|X|X|
