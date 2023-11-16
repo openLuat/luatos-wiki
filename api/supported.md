@@ -55,6 +55,7 @@
 |[nbiot](nbiot.md)|`NB-IOT操作库`|?|?|?|?|?|?|
 |[nes](nes.md)|`nes模拟器`|Y|Y|Y|X|X|Y|
 |[nimble](nimble.md)|`蓝牙BLE库(nimble版)`|Y|Y|X|Y|Y|X|
+|[onewire](onewire.md)|`单总线协议驱动`|X|X|X|X|X|X|
 |[os](os.md)|`os操作`|?|?|?|?|?|?|
 |[otp](otp.md)|`OTP操作库`|Y|Y|Y|X|X|Y|
 |[pack](pack.md)|`打包和解包格式串`|Y|Y|Y|Y|Y|Y|

@@ -58,6 +58,7 @@ mqtt
 nbiot
 nes
 nimble
+onewire
 os
 otp
 pack
