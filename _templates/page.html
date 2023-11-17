@@ -52,7 +52,7 @@
       <div class="sidebar-sticky">
         <!-- 英文站提示 start -->
         <div id="en-site-css" style="display: none;"><a id="en-site-link" style="font-size: 22px;font-weight: bold;background: red;color: white;" href="https://wiki.luatos.org/">(NEW) Go to English site</a></div>
-        <div id="en-site-css" style="display: none;"><a id="zh-site-link" style="font-size: 22px;font-weight: bold;background: red;color: white;" href="https://wiki.luatos.org/">前往中文站点</a></div>
+        <div id="zh-site-css" style="display: none;"><a id="zh-site-link" style="font-size: 22px;font-weight: bold;background: red;color: white;" href="https://wiki.luatos.org/">前往中文站点</a></div>
         <div id="discord-css" style="display: none;"><a href="https://discord.gg/FFRsvk4D85"><img src="https://img.shields.io/discord/890114586647355402?color=7289da&label=Discord&logo=discord&logoColor=white" alt="Discord"></a></div>
         <script>
           document.getElementById('en-site-link').href = location.href.replace("wiki.luatos"+".com","wiki.luatos.org");
@@ -66,7 +66,7 @@
             if(navigator.language.indexOf("CN") < 0)//英文用户
               document.getElementById('discord-css').style.cssText = "";
             else//中文用户
-              document.getElementById('zh-site-link').style.cssText = "";
+              document.getElementById('zh-site-css').style.cssText = "";
           }
         </script>
         <!-- 英文站提示 end -->
