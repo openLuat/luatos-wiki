@@ -58,6 +58,7 @@ mqtt
 nbiot
 nes
 nimble
+onewire
 os
 otp
 pack
@@ -77,6 +78,7 @@ sms
 socket
 softkeyboard
 spi
+sqlite3
 statem
 string
 sys
@@ -91,6 +93,7 @@ w5500
 wdt
 websocket
 wlan
+ws2812
 ymodem
 zbuff
 zlib

@@ -6,6 +6,8 @@
 - 独立版exe版本：[IOT Power.exe](https://arduino.luatos.com/iotpower/latest.html)（注意微软/360杀软误报，火绒无问题）
 - **全平台**命令行数据记录器、dll/so动态运行库请前往[gitee仓库](https://gitee.com/openLuat/iot-power)查看
 
+<h1 id="win7-notice" style="display: none;">Win7 用户看下面这行！展开！！</h1>
+
 :::{dropdown} win7用户可能需要
 （win10以上免驱，无需手动安装驱动）
 
@@ -182,5 +184,6 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 <script>
 if(navigator.userAgent.indexOf("Windows NT 6") >= 0) {
   alert("Win7用户须知，请阅读完再关！\nWin7必须手动安装驱动才能运行！\n要装两个驱动！运行和升级模式分别装。\n需要.net framework 4.6.2才能运行客户端！\n不支持x86架构32位的电脑！");
+  document.getElementById('win7-notice').style.cssText = "font-weight: bold;color: red;";
 }
 </script>

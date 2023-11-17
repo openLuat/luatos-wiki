@@ -59,6 +59,52 @@ end)
 
 ---
 
+## socket.ntptm()
+
+
+
+网络对时后的时间戳(ms级别)
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|table|包含时间信息的数据|
+
+**例子**
+
+```lua
+-- 本API于 2023.11.15 新增
+-- 注意, 本函数在执行socket.sntp()且获取到NTP时间后才有效
+-- 而且是2次sntp之后才是比较准确的值
+-- 网络波动越小, 该时间戳越稳定
+local tm = socket.ntptm()
+
+-- 对应的table包含多个数据, 均为整数值
+
+-- 标准数据
+-- tsec 当前秒数,从1900.1.1 0:0:0 开始算, UTC时间
+-- tms  当前毫秒数
+-- vaild 是否有效, true 或者 nil
+
+-- 调试数据, 调试用,一般用户不用管
+-- ndelay 网络延时平均值,单位毫秒
+-- ssec 系统启动时刻与1900.1.1 0:0:0的秒数偏移量
+-- sms 系统启动时刻与1900.1.1 0:0:0的毫秒偏移量
+-- lsec 本地秒数计数器,基于mcu.tick64()
+-- lms 本地毫秒数计数器,基于mcu.tick64()
+
+log.info("tm数据", json.encode(tm))
+log.info("时间戳", string.format("%u.%03d", tm.tsec, tm.tms))
+
+```
+
+---
+
 ## socket.localIP(adapter)
 
 

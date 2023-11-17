@@ -144,6 +144,7 @@ SM4加密算法
 |string|填充方式, NONE/ZERO/PKCS5/PKCS7|
 |string|加密的字符串|
 |string|密钥|
+|string|偏移量|
 
 **返回值**
 
@@ -190,6 +191,7 @@ SM4解密算法
 |string|填充方式, NONE/ZERO/PKCS5/PKCS7|
 |string|已加密的字符串|
 |string|密钥|
+|string|偏移量|
 
 **返回值**
 

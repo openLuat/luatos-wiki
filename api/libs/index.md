@@ -16,6 +16,7 @@ cht8305c
 ds3231
 ec11
 gt911
+gy53l1
 httpdns
 ina226
 iotcloud
@@ -45,6 +46,7 @@ tm1640
 tm1650
 tsl2561
 udpsrv
+vl6180
 xmodem
 ze08g_ch2o
 zh07
