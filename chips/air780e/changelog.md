@@ -1,8 +1,18 @@
 # Ec618系列固件发行注记
 
+* 固件下载地址: https://gitee.com/openLuat/LuatOS/releases
+* 备用地址: https://pan.air32.cn/s/DJTr?path=%2F
+* 通过云编译,全自动编译最新固件: https://wiki.luatos.com/develop/compile/Cloud_compilation.html
+
 ## V1109
 
-待定
+预期 `2023.12.31` 前.
+
+缺陷修复:
+* fix: websocket心跳包未正常发出
+
+新增功能:
+* add: 基于ntp的毫秒级时间戳 socket.ntptm()
 
 ## V1108
 
