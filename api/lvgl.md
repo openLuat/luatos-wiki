@@ -1,6 +1,6 @@
 # lvgl - LVGL图像库
 
-{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air601` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E/Air700E`
+{bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air601` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3` {bdg-primary}`Air780E/Air700E` {bdg-primary}`Air780EP`
 
 ```{tip}
 本库有专属demo，[点此链接查看lvgl的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/lvgl)
