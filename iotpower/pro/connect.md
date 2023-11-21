@@ -35,9 +35,3 @@ IOT Power Pro支持通过TypeC口进行供电
 ## 输出方式
 
 设置好电压与电流后（方式参考下一页面），按下输出按键，即可开启输出。
-
-<script>
-if (navigator.language.indexOf("CN") < 0 && confirm ("Are you want to switch to English version of this page?")) {
-    window.location.href = "tech-en.html";
-}
-</script>

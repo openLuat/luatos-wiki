@@ -1,6 +1,10 @@
 # 🔋 IoT Power Pro
 
-> [前往淘宝购买](https://luat.taobao.com/)
+> ~~[前往淘宝购买](https://luat.taobao.com/)~~ 还未发售
+
+```{warning}
+本产品还未发售，部分描述可能会有变动，以实际到手设备为准
+```
 
 IOT Power是一款功能齐全，稳定可靠的小型手持式功率计。它可以：
 
@@ -78,9 +82,3 @@ connect
 usage
 question
 ```
-
-<script>
-if (navigator.language.indexOf("CN") < 0 && confirm ("Are you want to switch to English version of this page?")) {
-    window.location.href = "index-en.html";
-}
-</script>
