@@ -8,7 +8,7 @@ IOT Power系列产品是功能齐全，稳定可靠的小型手持式功耗测�
 :::{grid-item-card} {octicon}`meter;1.5em;sd-mr-1` 源表版本
 :link: pro/index
 :link-type: doc
-:img-top: pro/img/font-cn.png
+:img-top: pro/img/font-cn.jpg
 
 Iot Power Pro：USB供电，作为电源使用，输出最大5V/2A，采样率10K/s
 

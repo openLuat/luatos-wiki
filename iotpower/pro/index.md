@@ -1,4 +1,4 @@
-# 🔋 IoT Power Pro
+# 🔋 IoT Power - Pro
 
 > ~~[前往淘宝购买](https://luat.taobao.com/)~~ 还未发售
 
