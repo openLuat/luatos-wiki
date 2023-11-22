@@ -72,6 +72,36 @@ gpio.setup(18, 0, nil, nil, 4)
 
 ---
 
+## gpio.caplevel(pin, level,func)
+
+
+
+捕获管脚电平持续时长，单位us
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|pin GPIO编号,必须是数值|
+|int|level 需要捕获的电平, 可以是 高电平gpio.HIGH, 低电平gpio.LOW, 或者直接写数值1或0，即管脚上正常时间处于level的反，捕获设定的level持续时间|
+|function|func 完成捕获后的回调函数，仅一个参数，参数为捕获到的时间长度number型数值，单位us|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|any|返回获取电平的闭包|
+
+**例子**
+
+```lua
+-- 捕获pin.PA07为高电平的持续时间
+gpio.caplevel(pin.PA07,1,function(val) print(val) end)
+
+```
+
+---
+
 ## gpio.set(pin, value)
 
 
