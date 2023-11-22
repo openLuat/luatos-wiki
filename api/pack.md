@@ -10,6 +10,33 @@
 本库还有视频教程，[点此链接查看](https://www.bilibili.com/video/BV1Sr4y1n7bP)
 ```
 
+**示例**
+
+```lua
+--[[
+ '<' 设为小端编码 
+ '>' 设为大端编码 
+ '=' 大小端遵循本地设置 
+ 'z' 空字符串,0字节
+ 'a' size_t字符串,前4字节表达长度,然后接着是N字节的数据
+ 'A' 指定长度字符串, 例如A8, 代表8字节的数据
+ 'f' float, 4字节
+ 'd' double , 8字节
+ 'n' Lua number , 32bit固件4字节, 64bit固件8字节
+ 'c' char , 1字节
+ 'b' byte = unsigned char  , 1字节
+ 'h' short  , 2字节
+ 'H' unsigned short  , 2字节
+ 'i' int  , 4字节
+ 'I' unsigned int , 4字节
+ 'l' long , 8字节, 仅64bit固件能正确获取
+ 'L' unsigned long , 8字节, 仅64bit固件能正确获取
+]]
+
+-- 详细用法请查看demo
+
+```
+
 ## pack.unpack( string, format, init)
 
 
@@ -21,7 +48,7 @@
 |传入值类型|解释|
 |-|-|
 |string|需解包的字符串|
-|string|格式化符号 '<':设为小端编码 '>':设为大端编码 '=':大小端遵循本地设置 'z':空字符串 'p':byte字符串 'P':word字符串 'a':size_t字符串 'A':指定长度字符串 'f':float 'd':double 'n':Lua number 'c':char 'b':byte = unsigned char 'h':short 'H':unsigned short 'i':int 'I':unsigned int 'l':long 'L':unsigned long|
+|string|格式化符号|
 |int|默认值为1，标记解包开始的位置|
 
 **返回值**
@@ -50,7 +77,7 @@ local _,a = pack.unpack(x,">h") --解包成short (2字节)
 
 |传入值类型|解释|
 |-|-|
-|string|format 格式化符号 '<':设为小端编码 '>':设为大端编码 '=':大小端遵循本地设置 'z':空字符串 'p':byte字符串 'P':word字符串 'a':size_t字符串 'A':指定长度字符串 'f':float 'd':double 'n':Lua number 'c':char 'b':byte = unsigned char 'h':short 'H':unsigned short 'i':int 'I':unsigned int 'l':long 'L':unsigned long|
+|string|format 格式化符号|
 |any|第一个需打包的值|
 |any|第二个需打包的值|
 |any|第二个需打包的值|
