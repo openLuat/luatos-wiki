@@ -75,7 +75,7 @@
 |[socket](socket.md)|`网络接口`|Y|Y|Y|Y|Y|Y|Y|
 |[softkeyboard](softkeyboard.md)|`软件键盘矩阵(当前仅air105支持)`|?|?|?|?|?|?|?|
 |[spi](spi.md)|`spi操作库`|Y|Y|Y|Y|Y|Y|Y|
-|[sqlite3](sqlite3.md)|`sqlite3数据库操作`|Y|Y|X|X|X|X|X|
+|[sqlite3](sqlite3.md)|`sqlite3数据库操作`|Y|Y|X|X|X|Y|X|
 |[statem](statem.md)|`SM状态机`|Y|Y|Y|Y|Y|Y|Y|
 |[string](string.md)|`字符串操作函数`|Y|Y|Y|Y|Y|Y|Y|
 |[sys](sys.md)|`sys库`|Y|Y|Y|Y|Y|Y|Y|
