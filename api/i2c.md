@@ -409,7 +409,7 @@ local result = i2c.xfer(0, 0x11, txbuff, rxbuff, 1, "I2CDONE") if result then re
 
 ---
 
-## i2c.scan(id)
+## i2c.scan(id,speed)
 
 
 
@@ -420,6 +420,7 @@ local result = i2c.xfer(0, 0x11, txbuff, rxbuff, 1, "I2CDONE") if result then re
 |传入值类型|解释|
 |-|-|
 |int|设备id, 例如i2c1的id为1, i2c2的id为2|
+|int|速度, 可选i2c.SLOW i2c.FAST i2c.PLUS i2c.HSMODE 默认为i2c.SLOW,如探测不到则修改此项|
 
 **返回值**
 
