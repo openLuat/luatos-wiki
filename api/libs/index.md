@@ -18,6 +18,7 @@ ec11
 gt911
 gy53l1
 httpdns
+httpplus
 ina226
 iotcloud
 l3g4200d
