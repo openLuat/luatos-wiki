@@ -71,7 +71,7 @@ i2c初始化
 
 ```lua
 -- 初始化i2c1
-i2c.setup(1, i2c.FAST) -- 端口正确就一定成功
+i2c.setup(1, i2c.FAST) -- id正确就一定成功
 -- 如需判断i2c id是否合法, 请使用 i2c.exist 函数
 
 ```
