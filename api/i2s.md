@@ -29,7 +29,7 @@
 |i2s.MODE_MSB|number|MSB格式，比如TM8211|
 
 
-## i2s.setup(id, mode, sample, bitw, channel, format, mclk)
+## i2s.setup(id, mode, sample, bitw, channel, format, framebit, mclk)
 
 
 
