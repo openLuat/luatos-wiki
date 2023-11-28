@@ -71,7 +71,7 @@
 |[sensor](sensor.md)|`传感器操作库`|Y|Y|Y|Y|Y|Y|Y|
 |[sfd](sfd.md)|`SPI FLASH操作库`|X|X|Y|X|X|Y|Y|
 |[sfud](sfud.md)|`SPI FLASH sfud软件包`|Y|Y|Y|Y|Y|Y|Y|
-|[sms](sms.md)|`短信`|X|X|X|X|X|X|X|
+|[sms](sms.md)|`短信`|X|X|X|X|X|X|Y|
 |[socket](socket.md)|`网络接口`|Y|Y|Y|Y|Y|Y|Y|
 |[softkeyboard](softkeyboard.md)|`软件键盘矩阵(当前仅air105支持)`|?|?|?|?|?|?|?|
 |[spi](spi.md)|`spi操作库`|Y|Y|Y|Y|Y|Y|Y|
