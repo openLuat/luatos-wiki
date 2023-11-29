@@ -11,6 +11,31 @@
 2. 你需要先打开客户端，点击第一页的`连接`按钮连上设备
 3. 如果无法识别设备，请检查设备管理器是否有设备，如果没有，请换根线
 
+## 没有Windows电脑，初次使用，如何升级固件？
+
+:::{dropdown} 用手机或mac升级设备固件
+
+首先，你需要准备以下任一设备：
+
+- 支持OTG的安卓手机，并且安卓版本在13以上（更低版本没试过）
+- Mac电脑一台
+- Linux电脑一台
+
+其次你需要的软件，任选其一：
+
+- Google Chrome
+- Microsoft Edge
+
+1. 打开你的浏览器
+2. 按住设备的翻页键，再将USB插入PC口，连上你的手机/电脑/平板（不要松开翻页键）
+3. 此时，设备上会显示`IoT Power DFU`字样，表示进入DFU模式
+4. 如果你的手机/电脑/平板弹窗`IoTPower DFU detected`字样，请打开它，否则你需要手动打开这个网址：[https://wiki.luatos.com/_static/dfu-util/index.html](https://wiki.luatos.com/_static/dfu-util/index.html)
+5. 点击页面里的`connect`，选上你的IoT Power设备
+6. 请加技术支持群，索取最新的固件（或者在群文件里找找bin文件）
+7. 点击选择文件，选中固件文件
+8. 点击`download`刷入
+:::
+
 ## 为什么我开启PD后一直在转圈圈？
 
 首先请看一下说明书，**不要**诱骗空气，[像这些**错误示范**](wrong.md)
