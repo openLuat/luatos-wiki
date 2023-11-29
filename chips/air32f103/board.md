@@ -10,7 +10,7 @@ BluePill开发板原理图[BluePill.pdf]([Air32F103CXT6-BluePill (openluat.com)]
 
 ## 开发板PinOut
 
-![image-20220618160609551](img/image-20220618160609551.png)
+![image-20220618160609551](img/pinout.jpg)
 
 ## 使用说明
 
