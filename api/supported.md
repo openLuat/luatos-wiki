@@ -74,7 +74,7 @@
 |[socket](socket.md)|`网络接口`|Y|Y|Y|Y|Y|Y|Y|
 |[softkeyboard](softkeyboard.md)|`软件键盘矩阵(当前仅air105支持)`|?|?|?|?|?|?|?|
 |[spi](spi.md)|`spi操作库`|Y|Y|Y|Y|Y|Y|Y|
-|[sqlite3](sqlite3.md)|`sqlite3数据库操作`|Y|Y|X|X|X|Y|X|
+|[sqlite3](sqlite3.md)|`sqlite3数据库操作`|Y|Y|X|X|X|Y|Y|
 |[statem](statem.md)|`SM状态机`|Y|Y|Y|Y|Y|Y|Y|
 |[string](string.md)|`字符串操作函数`|Y|Y|Y|Y|Y|Y|Y|
 |[sys](sys.md)|`sys库`|Y|Y|Y|Y|Y|Y|Y|
@@ -89,7 +89,7 @@
 |[wdt](wdt.md)|`watchdog操作库`|Y|Y|Y|Y|Y|Y|Y|
 |[websocket](websocket.md)|`websocket客户端`|Y|Y|Y|Y|Y|Y|Y|
 |[wlan](wlan.md)|`wifi操作`|Y|Y|X|Y|Y|Y|Y|
-|[ws2812](ws2812.md)|`幻彩灯带RGB控制器(WS2812系列)`|Y|Y|X|X|X|Y|X|
+|[ws2812](ws2812.md)|`幻彩灯带RGB控制器(WS2812系列)`|Y|Y|X|X|X|Y|Y|
 |[ymodem](ymodem.md)|`ymodem协议`|Y|Y|Y|Y|Y|Y|Y|
 |[zbuff](zbuff.md)|`c内存数据操作库`|Y|Y|Y|Y|Y|Y|Y|
 |[zlib](zlib.md)|`zlib压缩/解压缩(已废弃)`|Y|Y|Y|X|X|X|X|
