@@ -1,11 +1,15 @@
 # ⏳ IoT Power功耗测试神器
 
-IOT Power系列产品是功能齐全，稳定可靠的小型手持式功耗测试神器。它可以通过USB C供电，通过屏幕显示数据，并配套功能强大的客户端软件，是广大用户随身携带的理想测试工具。
+IoT Power系列产品是功能齐全，稳定可靠的小型手持式功耗测试神器。它可以通过USB C供电，通过屏幕显示数据，并配套功能强大的客户端软件，是广大用户随身携带的理想测试工具。
+
+```{note}
+[IoT Power系列产品参数对比](https://wiki.luatos.com/iotpower/devices.html)
+```
 
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
 
-:::{grid-item-card} {octicon}`meter;1.5em;sd-mr-1` 源表版本
+:::{grid-item-card} {octicon}`meter;1.5em;sd-mr-1` Pro电源
 :link: pro/index
 :link-type: doc
 :img-top: pro/img/font-cn.jpg

@@ -3,7 +3,7 @@
 ## 下载
 
 - 微软商店下载：[微软商店页面](https://www.microsoft.com/store/apps/9N8S8M8226SH)
-- 独立版exe版本：[IOT Power.exe](https://arduino.luatos.com/iotpower/latest.html)（注意微软/360杀软误报，火绒无问题）
+- 独立版exe版本：[IoT Power.exe](https://arduino.luatos.com/iotpower/latest.html)（注意微软/360杀软误报，火绒无问题）
 - **全平台**命令行数据记录器，带UI：[IoTPower CLI Tool](https://gitee.com/openLuat/iot-power/releases/tag/1.0.0)
 - dll/so动态运行库：[Gitee iot-power dll/so](https://gitee.com/openLuat/iot-power/releases/tag/0.1.0)
 

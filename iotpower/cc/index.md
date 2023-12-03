@@ -3,7 +3,7 @@
 > [前往淘宝购买](https://item.taobao.com/item.htm?id=718378448520)
 > [微信商城购买](https://appc6kjfor22343.h5.xiaoeknow.com/v1/goods/goods_detail/SPU_ENT_1678672270GckvYWaVoUuX4)
 
-IOT Power CC是一款功能齐全，稳定可靠的小型手持式高精度功率计，它可以：
+IoT Power CC是一款功能齐全，稳定可靠的小型手持式高精度功率计，它可以：
 
 - 通过USB C供电，测量低功耗设备的电压与电流
 - 与其他USB表不同，测量输出端电压电流，更反映设备实际功耗
@@ -16,7 +16,7 @@ IOT Power CC是一款功能齐全，稳定可靠的小型手持式高精度功�
 - **BOM成本公开**（往下面拉就有），良心诚意之作，诚招有更优惠价格的供应商供货
 - 外壳资料开放，[开源外壳地址](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230515082541036_%E5%A4%96%E5%A3%B3%E8%B5%84%E6%96%99%E6%9B%B4%E6%96%B0.zip)
 
-IOT Power CC是广大用户随身携带的理想测试工具。
+IoT Power CC是广大用户随身携带的理想测试工具。
 
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2

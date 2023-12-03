@@ -30,7 +30,7 @@ PC通讯接口，严禁正负反接或电压大于6V，反接或大于6V必烧�
 
 ## 供电方式
 
-IOT Power Pro支持通过TypeC口进行供电
+IoT Power Pro支持通过TypeC口进行供电
 
 ## 输出方式
 
