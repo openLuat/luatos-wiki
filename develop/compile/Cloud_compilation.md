@@ -67,7 +67,7 @@
 1. 为未点击保存修改就点击准备就绪。
 2. 组件选择过多，或字体的选择导致flash大小不够,导致编译失败
 3. 固件包都是压缩包, soc也是压缩包,并不直接代表固件大小
-4. 若持续失败, 请[联系我们](../../pages/supports.md) 或者[报issue](https://github.com/openLuat/LuatOS.git)
+4. 若持续失败, 请[联系我们](../../pages/supports.md) 或者[报issue](https://github.com/openLuat/LuatOS)
 
 ## 自定义字库怎么用
 
