@@ -100,7 +100,25 @@ PS:
 7. **GPIO23** 上电后首先是输入+下拉,然后会设置成 **输出+上拉+高电平**, 建议避免使用该GPIO
 8. **注意**,仅 GPIO 20-22 支持`双向触发(上升+下降)`, 其他GPIO仅支持 `上升沿` 或 `下降沿` 的单向触发
 9. GPIO 20-25 的电平翻转速度要比其他GPIO要慢
-10. 使用复用功能的GPIO时，需要先将默认GPIO引脚的复用为其他功能，才能正常使用复用的GPIO，如想使用97引脚的GPIO12，需要先将58引脚的GPIO12复用为I2C或者UART功能
+
+10. 使用复用功能的GPIO时，需要先将默认GPIO引脚的复用为其他功能，才能正常使用复用的GPIO
+
+    ```lua
+    -- 使用97引脚的GPIO12，需要先将58引脚的GPIO12复用为I2C或者UART功能
+    -- 将57、58引脚复用为I2C0
+    mcu.iomux(mcu.I2C, 0, 1)
+    -- 启用I2C
+    i2c.setup(0, i2c.SLOW)
+    
+    local function gpio12CbFnc()
+    	log.info("gpio", "12")    
+    end
+    
+    -- 启用复用为ALT4，97引脚的GPIO12
+    gpio.setup(12, gpio12CbFnc, gpio.PULLUP, gpio.FALLING, 4)
+    ```
+
+    
 
 |对应的GPIO|对应的PAD|使用的API示例|备注|
 |---------|---------|---------|----|
