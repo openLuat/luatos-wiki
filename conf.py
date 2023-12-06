@@ -101,4 +101,5 @@ sitemap_url_scheme = "{link}"
 myst_enable_extensions = [
     "html_admonition",
     "colon_fence",
+    "attrs_inline",
 ]
