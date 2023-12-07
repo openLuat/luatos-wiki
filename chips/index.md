@@ -10,6 +10,7 @@ air103/index
 air105/index
 air601/index
 air780e/index
+air780ep/index
 esp32c3/index
 esp32s3/index
 air32f103/index
