@@ -47,7 +47,7 @@
 |[lvgl](lvgl.md)|`LVGL图像库`|Y|Y|Y|Y|Y|Y|Y|
 |[max30102](max30102.md)|`心率模块(MAX30102)`|Y|Y|Y|Y|Y|Y|Y|
 |[mcu](mcu.md)|`封装mcu一些特殊操作`|Y|Y|Y|Y|Y|Y|Y|
-|[miniz](miniz.md)|`简易zlib压缩`|Y|Y|Y|X|X|Y|Y|
+|[miniz](miniz.md)|`简易zlib压缩`|Y|Y|Y|Y|Y|Y|Y|
 |[mlx90640](mlx90640.md)|`红外测温(MLX90640)`|Y|Y|Y|Y|Y|Y|Y|
 |[mobile](mobile.md)|`蜂窝网络`|X|X|X|X|X|Y|Y|
 |[mqtt](mqtt.md)|`mqtt客户端`|Y|Y|Y|Y|Y|Y|Y|
