@@ -20,7 +20,7 @@
 
 ## LuatOS为它提供哪些功能
 
-- 可用Lua内存: 默认200k,最高300k
+- 可用Lua内存: 默认256k,最高300k
 - 脚本空间: 默认128k,最高448k
 - 基础外设: GPIO/SPI/I2C/PWM/ADC
 - 网络功能: Mobile/TCP/UDP/Http/Mqtt/WebSocket/FTP/NTP/SMS

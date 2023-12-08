@@ -1,17 +1,19 @@
 # Ec618系列固件发行注记
 
-* 固件下载地址: https://gitee.com/openLuat/LuatOS/releases
-* 备用地址: https://pan.air32.cn/s/DJTr?path=%2F
-* 通过云编译,全自动编译最新固件: https://wiki.luatos.com/develop/compile/Cloud_compilation.html
+* [固件下载地址](https://gitee.com/openLuat/LuatOS/releases)
+* [固件下载备用地址](https://pan.air32.cn/s/DJTr?path=%2F)
+* 通过[云编译](https://wiki.luatos.com/develop/compile/Cloud_compilation.html),全自动编译最新固件
 
 ## V1109
 
 预期 `2023.12.31` 前.
 
 缺陷修复:
+
 * fix: websocket心跳包未正常发出
 
 新增功能:
+
 * add: 基于ntp的毫秒级时间戳 socket.ntptm()
 
 ## V1108
@@ -19,11 +21,13 @@
 本版本已发布, 日期 2023.11.15, 对应的git tag为 v1108.ec618.release
 
 兼容性变化:
+
 1. 修正CPU温度的单位
    * 影响, 之前的版本返回的CPU温度是摄氏度, 其他BSP均为1/1000摄氏度
    * 解决办法: 新数据 `//1000` 即得到原有的数据值
 
 缺陷修复:
+
 * fix: **socket close的时候没有清除掉新数据标志** 导致SSL有概率重连持续失败
 * fix: **mqtt库某些情况buffer_offset重连不置零** 导致MQTT有概率重连持续失败
 * fix: **mqtt心跳定时器计数错误** 导致mqtt心跳可能不会发出
@@ -103,6 +107,7 @@
 ## V1107
 
 兼容性变化:
+
 1. 不再自动查询基站信息
    * 影响: 如没有调用mobile.reqCellInfo函数, mobile.cellInfo()会返回空数组
    * 解决办法: 按需调用或定时调用 `mobile.reqCellInfo(60)`
@@ -111,6 +116,7 @@
    * 解决办法: 设置音量到100或以上
 
 功能新增:
+
 * uart.read支持读取指定长度
 * 新增 mcu.iomux 函数,支持配置uart/spi/i2c复用
 * 新增 pm.ioVol 函数, 支持配置io电压
@@ -287,4 +293,3 @@ date: 2023-02-06
 
 **core_V1103.zip** 就是固件文件, 其余两个是底层源码,无需下载.
 ** Air780EG测试定位效果_搭配公众号文章.zip** 是用于测Air780EG定位效果的
-
