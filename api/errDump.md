@@ -79,7 +79,7 @@ errDump.record("socket long time no connect") --记录下"socket long time no co
 
 ---
 
-## errDump.config(enable, period, user_flag, custom_id)
+## errDump.config(enable, period, user_flag, custom_id, host, port)
 
 
 
@@ -93,6 +93,8 @@ errDump.record("socket long time no connect") --记录下"socket long time no co
 |int|定时上传周期，单位秒，默认600秒，这个是自动上传时候后的重试时间时间，在开机后或者有record操作后会很快尝试上传到合宙IOT平台一次，如果为0，则不会上传，由用户dump后自己上传自己的平台|
 |string|用户的特殊标识，可以为空|
 |string|设备识别号, 4G设备默认是imei,其他设备默认是mcu.unique_id|
+|string|服务器域名,默认dev_msg1.openluat.com|
+|int|服务器端口,默认|
 
 **返回值**
 
@@ -106,8 +108,12 @@ errDump.record("socket long time no connect") --记录下"socket long time no co
 errDump.config(true, 3600, "12345678")	--一个小时尝试上次一次，上传时会在imei后附加上12345678
 errDump.config(false)	--关闭记录功能，不再上传
 errDump.config(true, 0)	--记录，但是不会主动上传，由用户实现上传功能
+
 -- 2023.09.22新增custom_id参数
 errDump.config(true, 3600, nil, "ABC")	--一个小时尝试上次一次，上传时使用自定义的设备识别号ABC
+
+-- 2023.12.8 新增host和port参数
+errDump.config(true, 3600, nil, nil, "dev_msg1.openluat.com", 12425)
 
 ```
 
