@@ -12,44 +12,44 @@ EC718P系列固件第一版
 
 基础外设:
 
-1: gpio
-2: uart
-3: iic
-4: spi
-5: adc
-6: pwm
-7: wdt
-8: pm（深度休眠暂时无法使用）
-9: fota
-10: rtc时钟
-11: media（tts/amr/mp3/wav）
-12: wlanscan
+1. gpio
+2. uart
+3. iic
+4. spi
+5. adc
+6. pwm
+7. wdt
+8. pm（深度休眠暂时无法使用）
+9. fota
+10. rtc时钟
+11. media（tts/amr/mp3/wav）
+12. wlanscan
 
 工具库:
 
-1: json
-2: iotauth
-3: fs
-4: pack
-5: zbuff
-7: fskv
-8: miniz
-9: sfud（spi flash）
-10: fatfs（tf卡）
-11: w5500
-12: protobuf
-13: iconv
-14: u8g2
-15: lcd
-16: lvgl
+1. json
+2. iotauth
+3. fs
+4. pack
+5. zbuff
+7. fskv
+8. miniz
+9. sfud（spi flash）
+10. fatfs（tf卡）
+11. w5500
+12. protobuf
+13. iconv
+14. u8g2
+15. lcd
+16. lvgl
 
 网络功能:
 
-1: socket(tcp/udp/tcp_ssl)
-2: http/https
-3: mqtt/mqtts
-4: ftp/ftps
-5: ntp
-6: sms
-7: errDump
-8: websocket
+1. socket(tcp/udp/tcp_ssl)
+2. http/https
+3. mqtt/mqtts
+4. ftp/ftps
+5. ntp
+6. sms
+7. errDump
+8. websocket
