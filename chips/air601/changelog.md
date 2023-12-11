@@ -4,9 +4,11 @@
 
 固件下载地址: https://pan.air32.cn/s/DJTr?path=%2F
 
-## V1021
+## V1022
 
-待发布
+1. 修复与AT固件的兼容性问题, 正确读写AP和STA的MAC地址
+
+## V1021
 
 1. 支持esptouch和airkiss配网,兼容腾讯连连
 2. 修正wifi mac地址导致连接手机/电脑热点失败的问题
