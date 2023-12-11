@@ -2,11 +2,19 @@
 
 本文件描述Air601的LuatOS固件的变更情况
 
-固件下载地址: https://pan.air32.cn/s/DJTr?path=%2F
+固件下载地址: 
+
+1. [合宙云盘](https://pan.air32.cn/s/DJTr?path=%2F)
+2. LuaTools也会自动下载
+3. [Gitee库发布路径](https://gitee.com/openLuat/LuatOS/releases)
 
 ## V1022
 
 1. 修复与AT固件的兼容性问题, 正确读写AP和STA的MAC地址
+2. 修复nimble库无法断开蓝牙连接
+3. socket库支持获取毫秒级时间戳
+
+搭配的soc_script版本为: v2023.12.11.10
 
 ## V1021
 
