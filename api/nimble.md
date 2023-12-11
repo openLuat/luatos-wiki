@@ -32,10 +32,10 @@
 |常量|类型|解释|
 |-|-|-|
 |nimble.CHR_F_WRITE|number|chr的FLAGS值, 可写, 且需要响应|
-|nimble.CHR_F_WRITE|number|chr的FLAGS值, 可读|
-|nimble.CHR_F_WRITE|number|chr的FLAGS值, 可写, 不需要响应|
-|nimble.CHR_F_WRITE|number|chr的FLAGS值, 可订阅, 不需要回复|
-|nimble.CHR_F_WRITE|number|chr的FLAGS值, 可订阅, 需要回复|
+|nimble.CHR_F_READ|number|chr的FLAGS值, 可读|
+|nimble.CHR_F_WRITE_NO_RSP|number|chr的FLAGS值, 可写, 不需要响应|
+|nimble.CHR_F_NOTIFY|number|chr的FLAGS值, 可订阅, 不需要回复|
+|nimble.CHR_F_INDICATE|number|chr的FLAGS值, 可订阅, 需要回复|
 |nimble.CFG_ADDR_ORDER|number|UUID的转换的大小端, 结合config函数使用, 默认0, 可选0/1|
 
 
