@@ -99,7 +99,7 @@ log.info("nmea", "isFix", libgnss.isFix())
 
 ---
 
-## libgnss.getIntLocation()
+## libgnss.getIntLocation(speed_type)
 
 
 
@@ -107,7 +107,9 @@ log.info("nmea", "isFix", libgnss.isFix())
 
 **参数**
 
-无
+|传入值类型|解释|
+|-|-|
+|int|速度单位,默认是m/h|
 
 **返回值**
 
@@ -122,6 +124,23 @@ log.info("nmea", "isFix", libgnss.isFix())
 ```lua
 -- 建议用libgnss.getRmc(1)
 log.info("nmea", "loc", libgnss.getIntLocation())
+
+-- 2023.12.11 新增speed_type参数
+--[[
+速度单位可选值
+0 - m/h 米/小时, 默认值, 整型
+1 - m/s 米/秒, 浮点数
+2 - km/h 千米/小时, 浮点数
+3 - kn/h 英里/小时, 浮点数
+]]
+-- 默认 米/小时
+log.info("nmea", "loc", libgnss.getIntLocation())
+-- 米/秒
+log.info("nmea", "loc", libgnss.getIntLocation(1))
+-- 千米/小时
+log.info("nmea", "loc", libgnss.getIntLocation(2))
+-- 英里/小时
+log.info("nmea", "loc", libgnss.getIntLocation(3))
 
 ```
 
