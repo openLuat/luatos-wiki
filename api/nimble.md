@@ -736,7 +736,7 @@ nimble.scan()
 
 ---
 
-## nimble.writeChr(svr_uuid, chr_uuid)
+## nimble.readChr(svr_uuid, chr_uuid)
 
 
 
