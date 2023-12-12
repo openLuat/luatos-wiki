@@ -46,6 +46,13 @@ Iot Power CC：纯测量设备，支持PD输入诱骗，适配更高电压与更
 
 ```{notice}
 产品反馈群：807846388
+
+:::{dropdown} 产品反馈微信群，扫码加入
+
+![wechat group](img/wechat.png)
+
+:::
+
 ```
 
 ```{note}
