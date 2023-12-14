@@ -60,6 +60,7 @@ LuatOS提供了丰富的外设接口库，可以更便捷地实现创意，无�
 - [模拟器](pages/emulator)
 - [开发板购买](https://luat.taobao.com)
 - [B站视频教程](https://space.bilibili.com/532832)
+- [案例turnkey](https://gitee.com/openLuat/luatos-turnkey)
 
 ---
 
