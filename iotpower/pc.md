@@ -44,7 +44,12 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 - 为设备升级固件
 - 运行lua脚本控制输出，模拟电池等设备放电曲线
 
-![图片.png](img/client1.png)
+```{image} img/pc_client.gif
+:alt: pc_client
+:width: 1782px
+:height: 1176px
+:align: center
+```
 
 ```{note}
 该教程于`2.0.7.11`版本时编写，若有新增或变更的功能没有提到，请在页面最下方留言提醒更新，谢谢
@@ -58,10 +63,21 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 
 ### 当前显示
 
-![pc_now1](img/pc_now1.png)
-![pc_now2](img/pc_now2.png)
+```{image} img/pc_now.gif
+:alt: pc_now
+:width: 386px
+:height: 491px
+:align: center
+```
 
 该区域数值为设备连接后，当前的数据，可以切换为滑动平均值或瞬时值
+
+```{image} img/pc_float.gif
+:alt: pc_float
+:width: 412px
+:height: 355px
+:align: center
+```
 
 软件上方的**数据浮窗**开关可以打开浮窗，显示的数据与此处数据完全相同，始终置顶显示，方便最小化软件后查看实时数据
 
@@ -93,17 +109,25 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 
 ### 切换数据显示方式
 
-![pc_wave_mode1](img/pc_wave_mode1.png)
-![pc_wave_mode2](img/pc_wave_mode2.png)
+```{image} img/pc_wave_mode.gif
+:alt: pc_wave_mode
+:width: 1392px
+:height: 1007px
+:align: center
+```
 
 按下该按钮，可在**实时数据/历史数据**与**选取某个区域**两种显示模式中切换，下方将介绍两种模式
 
 ### 实时数据/历史数据（不缩放）
 
-当鼠标在图表中或在拖动轴上时，可以使用**鼠标滚轮**，调整波形的时间位置
+```{image} img/pc_wave_ctrl.gif
+:alt: pc_wave_ctrl
+:width: 1394px
+:height: 1008px
+:align: center
+```
 
-![pc_wave_ctrl](img/pc_wave_ctrl.png)
-
+当鼠标在图表中或在拖动轴上时，可以使用**鼠标滚轮**，调整波形的时间位置  
 也可以拖动下方的操纵杆，控制当前显示波形的时间位置
 
 ```{notice}
@@ -119,7 +143,12 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 
 也可以**按住CTRL键并滚动鼠标滚轮**，放大或缩小当前显示的区域
 
-![pc_wave_select](img/pc_wave_select.png)
+```{image} img/pc_wave_select.gif
+:alt: pc_wave_select
+:width: 1396px
+:height: 1005px
+:align: center
+```
 
 此处的拉杆同样可以用于控制选择显示的范围
 
@@ -131,7 +160,12 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 
 当处在任意模式下时，都可以**右击鼠标拖动**，选择一个时间段来分析其中的数据
 
-![pc_wave_data](img/pc_wave_data.png)
+```{image} img/pc_wave_data.gif
+:alt: pc_wave_data
+:width: 1427px
+:height: 1143px
+:align: center
+```
 
 当选取一段区域后，`分析窗`将弹出显示分析的结果
 
