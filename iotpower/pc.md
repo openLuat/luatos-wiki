@@ -47,7 +47,6 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 ```{image} img/pc_client.gif
 :alt: pc_client
 :width: 1782px
-:height: 1176px
 :align: center
 ```
 
@@ -66,7 +65,6 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 ```{image} img/pc_now.gif
 :alt: pc_now
 :width: 386px
-:height: 491px
 :align: center
 ```
 
@@ -75,7 +73,6 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 ```{image} img/pc_float.gif
 :alt: pc_float
 :width: 412px
-:height: 355px
 :align: center
 ```
 
@@ -112,7 +109,6 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 ```{image} img/pc_wave_mode.gif
 :alt: pc_wave_mode
 :width: 1392px
-:height: 1007px
 :align: center
 ```
 
@@ -123,7 +119,6 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 ```{image} img/pc_wave_ctrl.gif
 :alt: pc_wave_ctrl
 :width: 1394px
-:height: 1008px
 :align: center
 ```
 
@@ -146,7 +141,6 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 ```{image} img/pc_wave_select.gif
 :alt: pc_wave_select
 :width: 1396px
-:height: 1005px
 :align: center
 ```
 
@@ -163,7 +157,6 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 ```{image} img/pc_wave_data.gif
 :alt: pc_wave_data
 :width: 1427px
-:height: 1143px
 :align: center
 ```
 
