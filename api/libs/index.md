@@ -5,6 +5,7 @@
 
 ```{toctree}
 ads1115
+ads1115plus
 adxl34x
 aht10
 air153C_wtd
