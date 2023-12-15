@@ -58,7 +58,11 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 
 软件首页布局如下图所示
 
-![pc_overview](img/pc_overview.png)
+```{image} img/pc_overview.png
+:alt: pc_overview
+:width: 1782px
+:align: center
+```
 
 ### 当前显示
 
@@ -82,19 +86,32 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 
 ### 平均数据
 
-![pc_avg](img/pc_avg.png)
+```{image} img/pc_avg.png
+:alt: pc_avg
+:width: 365px
+:align: center
+```
 
 此处数据为，**自本次设备连接后的所有数据**的平均值，清空后清零
 
 ### 其他数据
 
-![pc_info](img/pc_info.png)
+```{image} img/pc_info.gif
+:alt: pc_info
+:width: 372px
+:align: center
+```
 
-此处数据为，**自本次设备连接后的所有数据**的相关累计数据，清空后清零
+此处数据为，**自本次设备连接后的所有数据**的相关累计数据，清空后清零  
+单击**耗电数据**的数值区域，可以切换`Wh`与`Ah`数值
 
 ## 图表区域
 
-![pc_wave](img/pc_wave.png)
+```{image} img/pc_wave.png
+:alt: pc_wave
+:width: 1401px
+:align: center
+```
 
 此区域为图表显示区域，可以预览波形图
 
@@ -164,7 +181,11 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 
 ## 控制设备输出
 
-![output](img/client2.png)
+```{image} img/client2.png
+:alt: client2
+:width: 1780px
+:align: center
+```
 
 - 通过`电源符号`按钮，控制设备的输出、关闭状态
 - 通过`设备输出`按钮，设置设备的输出电压与电流
@@ -175,8 +196,17 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 
 ## 导入与导出数据
 
-![pc_import](img/pc_import.png)
-![pc_export](img/pc_export.png)
+```{image} img/pc_import.png
+:alt: pc_import
+:width: 470px
+:align: center
+```
+
+```{image} img/pc_export.png
+:alt: pc_export
+:width: 539px
+:align: center
+```
 
 ### 导入数据
 
@@ -191,7 +221,11 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 
 ## 脚本功能
 
-![script](img/client3.png)
+```{image} img/client3.png
+:alt: client3
+:width: 1780px
+:align: center
+```
 
 该功能可实现输出电压与电流的自动控制  
 脚本使用`Lua语言`，适配了`LuaTask`框架（[教程](https://wiki.luatos.com/luaGuide/luatask.html)）  
@@ -199,7 +233,11 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 
 ## 强制升级固件
 
-![pc_upgrade](img/pc_upgrade.png)
+```{image} img/pc_upgrade.png
+:alt: pc_upgrade
+:width: 1198px
+:align: center
+```
 
 通常来说，设备固件会自动提示升级。但是有时当设备升级途中中断或因其他原因导致固件损坏时，可手动刷入固件
 
@@ -208,7 +246,11 @@ IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iot
 
 ## 数据缓存方式
 
-![pc_cache](img/pc_cache.png)
+```{image} img/pc_cache.png
+:alt: pc_cache
+:width: 1058px
+:align: center
+```
 
 因为设备采样率很高，所以数据量十分庞大，存储在内存中可能导致电脑内存不足  
 所以软件提供了自动保存功能，当达到时间后，将数据自动保存至文件中，防止占用过多内存
