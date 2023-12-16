@@ -74,6 +74,7 @@ LuatOS提供了丰富的外设接口库，可以更便捷地实现创意，无�
 |[Air101](chips/air101/index) |MCU|尺寸小,仅4*4mm|
 |[Air103](chips/air103/index) |MCU|io多,支持psram|
 |[Air105](chips/air105/index) |MCU|内存大,有摄像头,有USB|
+|[Air601](chips/air601/index) |wifi/bt芯片|支持wifi和蓝牙通信|
 |[ESP32](chips/esp32c3/index) 系列| (wifi/bt芯片）|ESP32C3/ESP32S3等|
 |[PC](https://gitee.com/openLuat/luatos-soc-pc) |PC版LuatOS|可作为模拟器使用|
 |[win32](chips/win32) |win32版LuatOS|可作为模拟器使用|
