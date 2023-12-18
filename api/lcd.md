@@ -35,6 +35,7 @@
 |lcd.font_opposansm22_chinese|font|22号中文字体|
 |lcd.font_opposansm24_chinese|font|24号中文字体|
 |lcd.font_opposansm32_chinese|font|32号中文字体|
+|lcd.HWID_0|硬件lcd驱动id0|(根据芯片支持选择)|
 
 
 ## lcd.init(tp, args)
