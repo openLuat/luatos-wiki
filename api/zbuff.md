@@ -34,6 +34,7 @@
 |-|-|
 |int|字节数|
 |any|可选参数，number时为填充数据，string时为填充字符串|
+|number|可选参数，内存类型，可选：zbuff.SRAM(内部sram,默认) zbuff.PSRAM(外部psram) 注意:此项与硬件支持有关|
 
 **返回值**
 
