@@ -565,6 +565,29 @@ local data = buff[0]
 
 ---
 
+## buff:free()
+
+
+
+释放zbuff所申请内存 注意：gc时会自动释放zbuff以及zbuff所申请内存，所以通常无需调用此函数，调用前请确认您已清楚此函数用处！调用此函数并不会释放掉zbuff，仅会释放掉zbuff所申请的内存，zbuff需等gc时自动释放！！！
+
+**参数**
+
+无
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+buff:free()
+
+```
+
+---
+
 ## buff:resize(n)
 
 
