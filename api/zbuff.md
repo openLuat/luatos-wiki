@@ -22,7 +22,7 @@
 |zbuff.SEEK_END|number|以末尾为基点|
 
 
-## zbuff.create(length,data)
+## zbuff.create(length,data,tp)
 
 
 
@@ -50,33 +50,9 @@ local buff = zbuff.create(1024) -- 空白的
 local buff = zbuff.create(1024, 0x33) --创建一个初值全为0x33的内存区域
 local buff = zbuff.create(1024, "123321456654") -- 创建，并填充一个已有字符串的内容
 
-```
-
----
-
-## zbuff.create({width,height,bit},data)
-
-
-
-创建framebuff用的zbuff
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|table|宽度、高度、色位深度|
-|int|可选参数，填充数据|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|object|zbuff对象，如果创建失败会返回nil|
-
-**例子**
-
-```lua
--- 创建zbuff
+-- 创建framebuff用的zbuff
+-- zbuff.create({width,height,bit},data)
+-- table 宽度、高度、色位深度
 local buff = zbuff.create({128,160,16})--创建一个128*160的framebuff
 local buff = zbuff.create({128,160,16},0xf800)--创建一个128*160的framebuff，初始状态红色
 
