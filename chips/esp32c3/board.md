@@ -165,7 +165,16 @@ CORE-ESP32-C3核心板支持以下3种方式供电：
 4.  **外置SPI flash的VDD已链接至3.3V电源系统，使用时不需再配置其他电源，采用普通2线SPI通信方式，对应管脚如表4-3。**
 5. **GPIO11默认为SPI flash的VDD引脚，需要配置后才能作为GPIO使用。**
 
+## GPIO11解锁说明
 
+ESP32C3的GPIO11(VDD_SPI)默认功能是给flash供电，本开发板的Flash的VDD直接接3.3，所以可以将此IO用作GPIO.
+
+以下是操作流程，注意以下的操作只能执行一次，更改后不能复原（因为是设置熔丝位，不是寄存器，一次性操作）
+
+1. 使用python的pip安装esptool。pip install esptool
+2. 将开发板插入电脑, 在设备管理器中可以看到端口, 记录端口号, 例如 `COM20`
+3. 打开命令行窗口输入espefuse.py -p 端口 burn_efuse VDD_SPI_AS_GPIO 1
+4. 看提示，输入'BURN'
 
 ## **相关资料链接**
 
