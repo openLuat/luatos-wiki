@@ -10,6 +10,26 @@
 本库有专属demo，[点此链接查看adc的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/adc)
 ```
 
+**示例**
+
+```lua
+
+-- 本库可读取硬件adc通道, 也支持读取CPU温度和VBAT供电电源(若模块支持的话)
+
+-- 读取CPU温度
+adc.open(adc.CH_CPU)
+local temp = adc.get(adc.CH_CPU)
+adc.close(adc.CH_CPU)
+
+-- 读取VBAT供电电压
+adc.open(adc.CH_VBAT)
+local vbat = adc.get(adc.CH_VBAT)
+adc.close(adc.CH_VBAT)
+
+-- 物理ADC通道请查阅adc.get或者adc.read的注释
+
+```
+
 ## 常量
 
 |常量|类型|解释|
