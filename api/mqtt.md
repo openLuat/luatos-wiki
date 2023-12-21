@@ -460,6 +460,12 @@ mqtt客户端状态
 
 ```lua
 local state = mqttc:state()
+-- 已知状态:
+-- 0: MQTT_STATE_DISCONNECT
+-- 1: MQTT_STATE_CONNECTING
+-- 2: MQTT_STATE_CONNECTED
+-- 3: MQTT_STATE_READY
+-- 4: MQTT_STATE_ERROR
 
 ```
 

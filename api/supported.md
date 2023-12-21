@@ -3,6 +3,7 @@
 |BSP/库|简介|Air101/Air103|Air601|Air105|ESP32C3|ESP32S3|Air780E/Air700E|Air780EP|
 |---|---|---|---|---|---|---|---|---|
 |[adc](adc.md)|`数模转换`|Y|Y|Y|Y|Y|Y|Y|
+|[antbot](antbot.md)|`蚂蚁链`|X|X|X|X|X|Y|X|
 |[audio](audio.md)|`多媒体-音频`|Y|Y|Y|X|X|Y|Y|
 |[bit64](bit64.md)|`32位系统上对64位数据的基本算术运算和逻辑运算`|X|X|Y|Y|Y|Y|Y|
 |[camera](camera.md)|`摄像头`|X|X|Y|X|X|X|X|

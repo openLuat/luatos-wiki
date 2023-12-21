@@ -39,7 +39,7 @@
 |lcd.WIRE_3_BIT_9_INTERFACE_I|三线spi|9bit 模式I|
 |lcd.WIRE_4_BIT_8_INTERFACE_I|四线spi|8bit 模式I|
 |lcd.WIRE_3_BIT_9_INTERFACE_II|三线spi|9bit 模式II|
-|lcd.WIRE_4_BIT_9_INTERFACE_II|四线spi|9bit 模式II|
+|lcd.WIRE_4_BIT_9_INTERFACE_II|四线spi|8bit 模式II|
 
 
 ## lcd.init(tp, args)

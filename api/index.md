@@ -6,6 +6,7 @@
 ```{toctree}
 supported
 adc
+antbot
 audio
 bit64
 camera

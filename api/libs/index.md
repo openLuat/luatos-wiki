@@ -11,6 +11,7 @@ aht10
 air153C_wtd
 ak8963
 am2320
+ap3216c
 bh1750
 bmx
 cht8305c
