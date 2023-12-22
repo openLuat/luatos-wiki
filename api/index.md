@@ -94,6 +94,7 @@ wdt
 websocket
 wlan
 ws2812
+xxtea
 ymodem
 zbuff
 zlib
