@@ -196,7 +196,7 @@ end
 
 ---
 
-## fdb.kv_iter(iter)
+## fdb.kv_next(iter)
 
 
 
@@ -206,7 +206,7 @@ kv迭代器获取下一个key
 
 |传入值类型|解释|
 |-|-|
-|userdata|fdb.kv_iter()返回的指针|
+|userdata|fdb.kv_next()返回的指针|
 
 **返回值**
 
