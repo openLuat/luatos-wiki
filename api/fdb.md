@@ -10,6 +10,13 @@
 本库有专属demo，[点此链接查看fdb的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/fdb)
 ```
 
+**示例**
+
+```lua
+-- 本库已经废弃, 推荐使用 fskv 库
+
+```
+
 ## fdb.kvdb_init(name, partition)
 
 
@@ -206,7 +213,7 @@ kv迭代器获取下一个key
 
 |传入值类型|解释|
 |-|-|
-|userdata|fdb.kv_next()返回的指针|
+|userdata|fdb.kv_iter()返回的指针|
 
 **返回值**
 
