@@ -379,6 +379,7 @@ local result = audio.vol(0, 90)	--通道0的音量调节到90%，result存放了
 |-|-|
 |int|音频通道,例如0|
 |int|总线类型, 例如 audio.BUS_SOFT_DAC|
+|int|硬件id, 例如 总线类型为audio.BUS_I2S时,硬件id即为i2s codec的i2c id|
 
 **返回值**
 
