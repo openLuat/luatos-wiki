@@ -182,6 +182,45 @@ sys.taskInit(
 
 ---
 
+## sensor.cs1237(pin_date,pin_clk)
+
+
+
+获取cs1237传感数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|数据的gpio端口号|
+|int|时钟的gpio端口号|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|cs1237读到的数据|
+
+**例子**
+
+```lua
+--  如果设备不存在会卡在读取接口
+sys.taskInit(
+    function()
+        sys.wait(1000)
+        local cs1237_data = sensor.cs1237(0,7)
+        while true do
+            sys.wait(2000)
+            cs1237_data = sensor.cs1237(0,7) - maopi
+            log.info("cs1237_data:", cs1237_data)--得到原始数据
+        end
+    end
+)
+
+```
+
+---
+
 ## sensor.ws2812b(pin,data,T0H,T0L,T1H,T1L)
 
 
