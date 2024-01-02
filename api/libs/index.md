@@ -35,6 +35,7 @@ mlx90614
 mpu6xxx
 necir
 netLed
+pca9685
 pcf8563t
 pcf8574
 qmc5883l
