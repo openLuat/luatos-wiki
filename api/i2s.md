@@ -29,7 +29,7 @@
 |i2s.MODE_MSB|number|MSB格式，比如TM8211|
 
 
-## i2s.setup(id, mode, sample, bitw, channel, format, framebit, mclk)
+## i2s.setup(id, mode, sample, bitw, channel, format, framebit)
 
 
 
@@ -43,10 +43,9 @@
 |int|模式, 当前仅支持0, MASTER\|TX\|RX 模式, 暂不支持slave. 可选|
 |int|采样率,默认44100. 可选|
 |int|数据位数,默认16, 可以是8的倍数|
-|int|声道, 0 左声道, 1 右声道, 2 双声道. 可选|
+|int|声道, 0 左声道, 1 右声道, 2 立体声. 可选|
 |int|格式, 可选MODE_I2S, MODE_LSB, MODE_MSB|
 |int|1个声道的BCLK数量, 可选16和32|
-|int|mclk频率, 默认 8M. 可选|
 
 **返回值**
 
@@ -61,7 +60,7 @@
 -- 以默认参数初始化i2s
 i2s.setup(0)
 -- 以详细参数初始化i2s, 示例为默认值
-i2s.setup(0, 0, 44100, 16, 0, 0, 8000000)
+i2s.setup(0, 0, 44100, 16, 0, 0, 16)
 
 ```
 
