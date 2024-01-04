@@ -5,4 +5,5 @@ mcu
 board
 hardware
 changelog
+macaddr
 ```
