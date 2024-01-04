@@ -20,7 +20,6 @@ pc
 air302/index
 air640w/index
 W806
-win32
 coremark/README
 supported
 question

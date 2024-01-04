@@ -36,7 +36,7 @@ LuatOS固件:
 7. 假设MAC地址要设置成 12:34:56:78:90:ab
 8. 设置AP的则输入  `AT+CIPAPMAC=12:34:56:78:90:ab`
 9. 设置STA的则输入 `AT+CIPSTAMAC=12:34:56:78:90:ab`
-10. 输入 `AT+CIPAP?` 查看当前mac地址, 如果和设置的相同, 则成功
-11. 输入 `AT+CIPSTA?` 查看当前mac地址, 如果和设置的相同, 则成功
+10. 输入 `AT+CIPAPMAC?` 查看当前mac地址, 如果和设置的相同, 则成功
+11. 输入 `AT+CIPSTAMAC?` 查看当前mac地址, 如果和设置的相同, 则成功
 
 之后刷入LuatOS固件, 即可使用新的mac地址
