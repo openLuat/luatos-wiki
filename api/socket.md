@@ -390,7 +390,7 @@ local succ, full, result = socket.tx(ctrl, "123456", "xxx.xxx.xxx.xxx", xxxx)
 
 ---
 
-## socket.rx(ctrl, buff, flag)
+## socket.rx(ctrl, buff, flag, limit)
 
 
 
@@ -403,6 +403,7 @@ local succ, full, result = socket.tx(ctrl, "123456", "xxx.xxx.xxx.xxx", xxxx)
 |user_data|socket.create得到的ctrl|
 |user_data|zbuff 存放接收的数据，如果缓冲区不够大会自动扩容|
 |int|接收参数，目前预留，不起作用|
+|int|接收数据长度限制，如果指定了，则只取前N个字节. 2024.1.5 新增|
 
 **返回值**
 
@@ -416,7 +417,24 @@ local succ, full, result = socket.tx(ctrl, "123456", "xxx.xxx.xxx.xxx", xxxx)
 **例子**
 
 ```lua
-local succ, data_len, ip, port = socket.rx(ctrl, buff)
+-- 从socket中读取数据, ctrl是socket.create返回的, 请查阅demo/socket
+local buff = zbuff.create(2048)
+local succ, data_len, remote_ip, remote_port = socket.rx(ctrl, buff)
+
+-- 限制读取长度, 2024.1.5 新增
+-- 注意
+-- 如果是UDP数据, 如果limit小于UDP数据包长度, 只会取前limit个字节, 剩余数据会丢弃
+-- 如果是TCP数据, 如果有剩余数据, 不会丢弃, 可继续读取.
+-- 有新的数据到来才会有新的EVENT数据, 未读取完成的数据不会触发新EVENT事件
+local succ, data_len, remote_ip, remote_port = socket.rx(ctrl, buff, 1500)
+
+-- 读取缓冲区大小, 2024.1.5 新增, 注意,老版本固件不传buff参数会报错的
+-- 对于TCP数据, 这里返回的是待读取的数据的总长度
+-- 对于UDP数据, 这里返回的是单个UDP数据包的长度
+local succ, data_len = socket.rx(ctrl)
+if succ then
+	log.info("待收取数据长度", data_len)
+end
 
 ```
 
