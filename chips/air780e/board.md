@@ -1,5 +1,9 @@
 # 开发板
 
+默认不会自动开机, 要**长按pwrkey键2秒才会开机**
+
+电源灯是接上电就亮的, **电源灯亮了不代表开机**, 接电脑且开机了才会有COM设备出现
+
 [ Air780E开发板使用说明V1.0.3.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221214113943532_%E5%BC%80%E5%8F%91%E6%9D%BFCore_Air780E%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8EV1.0.3.pdf)
 
 [Air780E开发板原理图V1.5(pdf版).pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221028114557272_Air780E开发板原理图V1.5(pdf版).pdf)
@@ -33,6 +37,7 @@
 9. 开发板的IO电平为3.3v, 模块本身可配置1.8v/3.3v
 10. SPK是扬声器输出, 需要外接功放, 否则声音很小
 11. PWM可用通道共4个, 分别是 0/1/2/4, 但分别由2种映射.后面有小节说明
+12. 电源灯是不受控的, 没有接到任何GPIO
 
 ## 开发板扩展板相关资料
 
