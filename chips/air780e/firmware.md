@@ -17,12 +17,12 @@
 ## 固件分类的解释
 
 1. 数传版, 不含UI类(U8G2/LCD/EINK/DISP/LVGL)/TTS,仅包含少量外设驱动库
-2. TTS版, 在数传版上添加TTS支持, 但TTS资源需要外置在额外的SPI Flash
+2. TTS版, 在数传版上添加TTS支持, 但TTS资源需要外置在额外的SPI Flash, 且不支持MP3/AMR播放
 3. TTS_ONCHIP版, 在数传版上添加TTS支持, 且TTS资源内置, 但脚本空间小
 4. 全功能版, 会开启大部分库, 但需要特别指出的是,不包含TTS库的内置TTS资源模式
 5. 云构建版, 通过[云编译](../../develop/compile/Cloud_compilation.md)功能定制的固件
 
-若前3款不能满足需求,请使用[云编译](../../develop/compile/Cloud_compilation.md)功能定制你需要的固件
+若前4款不能满足需求,请使用[云编译](../../develop/compile/Cloud_compilation.md)功能定制你需要的固件
 
 V1107版本开始, EC618系列的云编译支持根据发行版本的源码进行定制,已上线
 
