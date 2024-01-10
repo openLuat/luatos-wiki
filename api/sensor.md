@@ -353,3 +353,70 @@ end
 
 ---
 
+## sensor.sc12a(sda,scl)
+
+
+
+获取sc12a被触摸的通道数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|数据的gpio端口号|
+|int|时钟的gpio端口号|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|读取成功返回整形数据，读取失败时返回错误值|
+
+**例子**
+
+```lua
+while true do
+  local temp1=sensor.sc12a(4,7)
+  if bit.rshift(bit.band( temp1, 0x8000), 15 )==0x01 then
+    log.info("被按下的有通道0")
+  end
+  if bit.rshift(bit.band( temp1, 0x4000), 14 )==0x01 then
+    log.info("被按下的有通道1")
+  end
+  if bit.rshift(bit.band( temp1, 0x2000), 13 )==0x01 then
+    log.info("被按下的有通道2")
+  end
+  if bit.rshift(bit.band( temp1, 0x1000), 12 )==0x01 then
+    log.info("被按下的有通道3")
+  end
+  if bit.rshift(bit.band( temp1, 0x800), 11 )==0x01 then
+    log.info("被按下的有通道4")
+  end
+  if bit.rshift(bit.band( temp1, 0x400), 10 )==0x01 then
+    log.info("被按下的有通道5")
+  end
+  if bit.rshift(bit.band( temp1, 0x200), 9 )==0x01 then
+    log.info("被按下的有通道6")
+  end
+  if bit.rshift(bit.band( temp1, 0x100), 8 )==0x01 then
+    log.info("被按下的有通道7")
+  end
+  if bit.rshift(bit.band( temp1, 0x80), 7 )==0x01 then
+    log.info("被按下的有通道8")
+  end
+  if bit.rshift(bit.band( temp1, 0x40), 6 )==0x01 then
+    log.info("被按下的有通道9")
+  end
+  if bit.rshift(bit.band( temp1, 0x20), 5 )==0x01 then
+    log.info("被按下的有通道10")
+  end
+  if bit.rshift(bit.band( temp1, 0x10), 4 )==0x01 then
+    log.info("被按下的有通道11")
+  end
+  sys.wait(200)
+end
+
+```
+
+---
+
