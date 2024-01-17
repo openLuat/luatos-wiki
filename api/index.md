@@ -10,6 +10,7 @@ antbot
 audio
 bit64
 camera
+cc
 codec
 coremark
 crypto
@@ -55,7 +56,6 @@ miniz
 mlx90640
 mobile
 mqtt
-nbiot
 nes
 nimble
 onewire

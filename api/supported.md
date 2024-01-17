@@ -7,6 +7,7 @@
 |[audio](audio.md)|`多媒体-音频`|Y|Y|Y|X|X|Y|Y|
 |[bit64](bit64.md)|`32位系统上对64位数据的基本算术运算和逻辑运算`|X|X|Y|Y|Y|Y|Y|
 |[camera](camera.md)|`摄像头`|X|X|Y|X|X|X|X|
+|[cc](cc.md)|`通话功能`|X|X|X|X|X|Y|Y|
 |[codec](codec.md)|`多媒体-编解码`|Y|Y|Y|X|X|Y|Y|
 |[coremark](coremark.md)|`跑分`|Y|Y|Y|Y|Y|Y|Y|
 |[crypto](crypto.md)|`加解密和hash函数`|Y|Y|Y|Y|Y|Y|Y|
@@ -52,7 +53,6 @@
 |[mlx90640](mlx90640.md)|`红外测温(MLX90640)`|Y|Y|Y|Y|Y|Y|Y|
 |[mobile](mobile.md)|`蜂窝网络`|X|X|X|X|X|Y|Y|
 |[mqtt](mqtt.md)|`mqtt客户端`|Y|Y|Y|Y|Y|Y|Y|
-|[nbiot](nbiot.md)|`NB-IOT操作库`|?|?|?|?|?|?|?|
 |[nes](nes.md)|`nes模拟器`|Y|Y|Y|X|X|Y|Y|
 |[nimble](nimble.md)|`蓝牙BLE库(nimble版)`|Y|Y|X|Y|Y|X|X|
 |[onewire](onewire.md)|`单总线协议驱动`|X|X|X|X|X|X|X|
