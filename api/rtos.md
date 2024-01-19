@@ -228,7 +228,7 @@ rtos.standby(5000)
 
 |传入值类型|解释|
 |-|-|
-|type|"sys"系统内存, "lua"虚拟机内存, 默认为lua虚拟机内存|
+|type|"sys"系统内存, "lua"虚拟机内存,"psram"psram内存, 默认为lua虚拟机内存|
 
 **返回值**
 
