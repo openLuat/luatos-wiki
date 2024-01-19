@@ -7,7 +7,7 @@
 |[audio](audio.md)|`多媒体-音频`|Y|Y|Y|X|X|Y|Y|
 |[bit64](bit64.md)|`32位系统上对64位数据的基本算术运算和逻辑运算`|X|X|Y|Y|Y|Y|Y|
 |[camera](camera.md)|`摄像头`|X|X|Y|X|X|X|X|
-|[cc](cc.md)|`通话功能`|X|X|X|X|X|Y|Y|
+|[cc](cc.md)|`通话功能`|X|X|X|X|X|X|Y|
 |[codec](codec.md)|`多媒体-编解码`|Y|Y|Y|X|X|Y|Y|
 |[coremark](coremark.md)|`跑分`|Y|Y|Y|Y|Y|Y|Y|
 |[crypto](crypto.md)|`加解密和hash函数`|Y|Y|Y|Y|Y|Y|Y|
