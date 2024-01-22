@@ -367,6 +367,34 @@ local result = audio.vol(0, 90)	--通道0的音量调节到90%，result存放了
 
 ---
 
+## audio.micVol(id, value)
+
+
+
+配置一个音频通道的mic音量调节
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|音频通道|
+|int|mic音量，百分比，1%~100%，默认100%，就是不调节|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|当前mic音量|
+
+**例子**
+
+```lua
+local result = audio.vol(0, 90)	--通道0的音量调节到90%，result存放了调节后的音量水平，有可能仍然是100
+
+```
+
+---
+
 ## audio.setBus(id, bus_type)
 
 
