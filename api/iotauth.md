@@ -51,12 +51,13 @@ print(client_id,user_name,password)
 
 |传入值类型|解释|
 |-|-|
-|string|produt_id|
-|string|device_name|
-|string|key|
+|string|produt_id 产品id|
+|string|device_name 设备名称|
+|string|key  设备密钥或者项目的acess_key|
 |string|method 加密方式,"md5" "sha1" "sha256" 可选,默认"md5"|
-|number|cur_timestamp 可选 默认为 32472115200(2999-01-01 0:0:0)|
+|number|时间戳, 不用填|
 |string|version 可选 默认"2018-10-31"|
+|string|当key是access_key时, 填 "products/" .. product_id . 本参数于2024.1.29新增|
 
 **返回值**
 
@@ -69,8 +70,25 @@ print(client_id,user_name,password)
 **例子**
 
 ```lua
-local client_id,user_name,password = iotauth.onenet("123456789","test","KuF3NT/jUBJ62LNBB/A8XZA9CqS3Cu79B/ABmfA1UCw=")
-print(client_id,user_name,password)
+-- OneNet平台官网: https://open.iot.10086.cn/
+-- OneNet有多种版本, 注意区分, 一般来说produt_id纯数字就是老版本, 否则就是新版本
+
+-- 新版OneNET平台, 产品id是英文字母字符串
+-- 对应demo/onenet/studio
+local produt_id = "Ck2AF9QD2K"
+local device_name = "test"
+local device_key = "KuF3NT/jUBJ62LNBB/A8XZA9CqS3Cu79B/ABmfA1UCw="
+local client_id,user_name,password = iotauth.onenet(produt_id, device_name, device_key)
+log.info("onenet.new", client_id,user_name,password)
+
+-- 旧版OneNET平台, 产品id是数字字符串. 2024.1.29新增
+-- 对应demo/onenet/old_mqtt
+local produt_id = "12342334"
+local device_name = "test"
+local access_key = "adfasdfadsfadsf="
+local client_id,user_name,password = iotauth.onenet(produt_id, device_name, access_key, nil, nil, nil, "products/" .. produt_id)
+log.info("onenet.old", client_id,user_name,password)
+
 
 ```
 
