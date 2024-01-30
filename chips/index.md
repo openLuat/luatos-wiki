@@ -16,7 +16,7 @@ esp32s3/index
 air32f103/index
 rp2040/index
 swm181/index
-pc
+pc/index
 air302/index
 air640w/index
 W806
