@@ -17,6 +17,7 @@
 
 |常量|类型|解释|
 |-|-|-|
+|gpio.NONE|number|无效引脚,一般用于告诉底层某功能引脚不指定|
 |gpio.LOW|number|低电平|
 |gpio.HIGH|number|高电平|
 |gpio.PULLUP|number|上拉|
