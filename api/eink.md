@@ -36,6 +36,7 @@
 |eink.MODEL_2in9bc|number|2.9寸bc|
 |eink.MODEL_2in9b_V3|number|2.9寸b_V3|
 |eink.MODEL_2in9d|number|2.9寸d|
+|eink.MODEL_3in52|number|3.52寸|
 |eink.MODEL_3in7|number|3.7寸|
 |eink.MODEL_4in2|number|4.2寸|
 |eink.MODEL_4in2V2|number|4.2寸V2(ssd1683)|
