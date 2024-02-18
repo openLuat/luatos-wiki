@@ -10,9 +10,10 @@
 
 ## 固件及刷机步骤
 
-固件下载: https://pan.air32.cn/s/DJTr?path=%2F%E5%90%84%E7%A7%8D%E6%B5%8B%E8%AF%95%E5%9B%BA%E4%BB%B6%2F%E9%9A%8F%E8%BA%ABwifi%E7%9A%84%E5%9B%BA%E4%BB%B6_ESP32S3
+固件下载: [ESP32S3 MIFI演示固件](https://pan.air32.cn/s/DJTr?path=%2F%E5%90%84%E7%A7%8D%E6%B5%8B%E8%AF%95%E5%9B%BA%E4%BB%B6%2F%E9%9A%8F%E8%BA%ABwifi%E7%9A%84%E5%9B%BA%E4%BB%B6_ESP32S3)
 
 刷机说明:
+
 1. Air780E只需要AT固件, 出厂默认就是AT固件, 所以一般情况下不需要刷机
 2. ESP32S3刷上述链接中的固件
 3. 待刷机完成后, ESP32S3开发板上有一个黄色的拨动开关, 撕掉保护膜, 拨动到USB一侧
@@ -21,13 +22,13 @@
 6. Air780E记得插卡, Air780E联网后对应的wifi网络才会激活,才能被搜到
 7. Air780E需要按pwrkey键2秒, 才会开机. 可短接pwrkey按钮旁边的焊盘,实现上电开机.
 
-## 常见问题:
+## 常见问题
 
-1. ESP32S3固件的源码哪里找:
+1. ESP32S3固件的源码
 
-https://github.com/yangzichen123/ESP32S3-AIR780E_CdcPPPDemo
+[ESP32S3-AIR780E_CdcPPPDemo](https://github.com/yangzichen123/ESP32S3-AIR780E_CdcPPPDemo)
 
-https://github.com/espressif/esp-iot-bridge/blob/master/components/iot_bridge/User_Guide_CN.md
+[esp-iot-bridge](https://github.com/espressif/esp-iot-bridge/blob/master/components/iot_bridge/User_Guide_CN.md)
 
 2. wifi搜不到,怎么办
 
