@@ -18,14 +18,16 @@
 AT固件:
 
 1. 更新AT固件到最新(后面有下载地址), STA地址会与AP地址一致
-2. 蓝牙地址依然会是默认地址, 但当前只能配网, 所以暂未影响, 也暂未人力解决
+2. 蓝牙地址依然会是默认地址, 但当前只能配网, 所以暂无影响, 也暂无人力解决
 
 LuatOS固件:
 
-1. 更新LuatOS固件到最新(后面有下载地址), STA地址会与AP地址一致
+1. 更新LuatOS固件到最新(后面有下载地址), STA地址是AP地址-1
 2. 蓝牙地址会根据flash的唯一值生成, 不会冲突
 
 ## 恢复/改写MAC的操作办法
+
+### AT固件的方式
 
 1. 下载最新的AT固件, [点我下载](https://pan.air32.cn/s/DJTr?path=%2F%E5%90%84%E7%A7%8D%E6%B5%8B%E8%AF%95%E5%9B%BA%E4%BB%B6%2FAir601%E7%9A%84MAC%E5%9C%B0%E5%9D%80%E4%BF%AE%E6%AD%A3%E5%9B%BA%E4%BB%B6)
 2. 使用LuaTools刷机, 选通用串口打印, 波特率不用管
@@ -39,4 +41,6 @@ LuatOS固件:
 10. 输入 `AT+CIPAPMAC?` 查看当前mac地址, 如果和设置的相同, 则成功
 11. 输入 `AT+CIPSTAMAC?` 查看当前mac地址, 如果和设置的相同, 则成功
 
-之后刷入LuatOS固件, 即可使用新的mac地址
+### LuatOS固件的方式
+
+调用LuatOS的wlan.setMAC函数即可, 请使用最新[云编译](https://wiki.luatos.com/develop/compile/Cloud_compilation.html)的固件
