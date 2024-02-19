@@ -14,6 +14,9 @@
 
 |常量|类型|解释|
 |-|-|-|
+|audio.RESUME|number|PM模式 工作模式|
+|audio.STANDBY|number|PM模式 待机模式|
+|audio.SHUTDOWN|number|PM模式 关断模式|
 |audio.PCM|number|PCM格式，即原始ADC数据|
 |audio.MORE_DATA|number|audio.on回调函数传入参数的值，表示底层播放完一段数据，可以传入更多数据|
 |audio.DONE|number|audio.on回调函数传入参数的值，表示底层播放完全部数据了|
@@ -444,6 +447,34 @@ audio.setBus(0, audio.BUS_I2S)	--通道0的硬件输出通道设置为I2S
 **例子**
 
 无
+
+---
+
+## audio.pm(id,pm_mode)
+
+
+
+audio 休眠控制(一般会自动调用不需要手动执行)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|音频通道|
+|int|休眠模式 |
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|true成功|
+
+**例子**
+
+```lua
+audio.pm(multimedia_id,audio.RESUME)
+
+```
 
 ---
 
