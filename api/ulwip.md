@@ -41,6 +41,7 @@ lua代码 <- ulwip回调函数 <- lwip(netif->low_level_output) <- lwip处理逻
 |int|adapter_index 适配器编号|
 |string|mac 网卡mac地址|
 |function|output_lua_ref 回调函数, 参数为(adapter_index, data)|
+|table|额外参数, 例如 {mtu=1500, flags=(ulwip.FLAG_BROADCAST \| ulwip.FLAG_ETHARP \|)}|
 
 **返回值**
 
@@ -56,6 +57,11 @@ ulwip.setup(socket.LWIP_STA, string.fromHex("18fe34a27b69"), function(adapter_in
     log.info("ulwip", "output_lua_ref", adapter_index, data:toHex())
 end)
 -- 注意, setup之后, netif的状态是down, 调用ulwip.updown(adapter_index, true)后, 才能正常收发数据
+
+-- 额外参数配置table可选值
+-- mtu, 默认1460
+-- flags, 默认 ulwip.FLAG_BROADCAST | ulwip.FLAG_ETHARP | ulwip.FLAG_ETHERNET | ulwip.FLAG_IGMP | ulwip.FLAG_MLD6
+-- 即如下格式 {mtu=1460, flags=(ulwip.FLAG_BROADCAST | ulwip.FLAG_ETHARP | ulwip.FLAG_ETHERNET | ulwip.FLAG_IGMP | ulwip.FLAG_MLD6)}
 
 ```
 
