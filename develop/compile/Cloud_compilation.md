@@ -3,20 +3,22 @@
 还在困扰如何搭建编译环境？芯片越来越多，环境也越来越多？电脑好卡呀~ 好，云编译来为你排忧解难~
 
 已支持的平台:
+
 1. air101       - Air101的LuatOS固件
 2. air103       - Air103的LuatOS固件
 3. air105       - Air105的LuatOS固件
 4. idf5-esp32c3 - ESP32C3的LuatOS固件
 5. idf5-esp32s3 - ESP32S3的LuatOS固件
 6. ec618-luatos - ec618系列(Air780E/Air600E等)的LuatOS固件
-6. ec618-csdk   - ec618系列(Air780E/Air600E等)的CSDK
+7. ec618-csdk   - ec618系列(Air780E/Air600E等)的CSDK
 8. air601       - Air601的LuatOS固件
-8. air601-at    - Air601的AT固件
+9. air601-at    - Air601的AT固件
+10. ec718p-luatos - ec718P系列(Air780EP/Air780EPV)的LuatOS固件
 
 ## 提醒
 
 1. 页面显示的flash占用为估算值,若编译成功就是能放得下
-2. soc文件本身也是压缩包(但不需要解压它),soc文件的大小并不代表底层固件的真实大小
+2. soc文件本身也是压缩包(但不需要解压它),**soc文件的大小并不代表底层固件的真实大小**
 
 这里我们以Air101为展示
 
