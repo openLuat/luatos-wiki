@@ -239,3 +239,33 @@ ulwip.ip(socket.LWIP_STA, "192.168.0.1", "255.255.255.0", "192.168.0.1")
 
 ---
 
+## ulwip.dft(adapter_index)
+
+
+
+设置默认netif网卡
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int/boolean|adapter_index 适配器编号或还原默认网卡|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功与否|
+
+**例子**
+
+```lua
+-- 将默认网卡设置为socket.LWIP_ETH
+ulwip.dft(socket.LWIP_ETH)
+-- 还原默认网卡
+ulwip.dft(true)
+
+```
+
+---
+
