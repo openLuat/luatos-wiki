@@ -45,7 +45,7 @@
 |[libgnss](libgnss.md)|`NMEA数据处理`|Y|Y|Y|Y|Y|Y|Y|
 |[log](log.md)|`日志库`|Y|Y|Y|Y|Y|Y|Y|
 |[lora](lora.md)|`lora驱动模块`|Y|Y|Y|Y|Y|Y|Y|
-|[lora2](lora2.md)|`lora2驱动模块(支持多挂)`|X|X|X|Y|Y|Y|Y|
+|[lora2](lora2.md)|`lora2驱动模块(支持多挂)`|X|X|Y|Y|Y|Y|Y|
 |[lvgl](lvgl.md)|`LVGL图像库`|Y|Y|Y|Y|Y|Y|Y|
 |[max30102](max30102.md)|`心率模块(MAX30102)`|Y|Y|Y|Y|Y|Y|Y|
 |[mcu](mcu.md)|`封装mcu一些特殊操作`|Y|Y|Y|Y|Y|Y|Y|

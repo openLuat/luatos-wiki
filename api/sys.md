@@ -207,6 +207,40 @@ end, 1000, "A", "B", "N")
 
 ---
 
+## sys.timerStopAll(fnc)
+
+
+
+关闭同一回调函数的所有定时器.
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|function|fnc回调的函数|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+-- 关闭回调函数为publicTimerCbFnc的所有定时器
+local function publicTimerCbFnc(tag)
+log.info("publicTimerCbFnc",tag)
+end
+sys.timerStart(publicTimerCbFnc,8000,"first")
+sys.timerStart(publicTimerCbFnc,8000,"second")
+sys.timerStart(publicTimerCbFnc,8000,"third")
+sys.timerStopAll(publicTimerCbFnc)
+
+```
+
+---
+
 ## sys.publish(topic, arg1, agr2, argN)
 
 
