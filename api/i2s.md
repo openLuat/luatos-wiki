@@ -27,6 +27,9 @@
 |i2s.MODE_I2S|number|I2S标准，比如ES7149|
 |i2s.MODE_LSB|number|LSB格式|
 |i2s.MODE_MSB|number|MSB格式，比如TM8211|
+|i2s.MONO_L|number|左声道|
+|i2s.MONO_R|number|右声道|
+|i2s.STEREO|number|立体声|
 
 
 ## i2s.setup(id, mode, sample, bitw, channel, format, framebit)
