@@ -15,8 +15,9 @@
 |常量|类型|解释|
 |-|-|-|
 |audio.RESUME|number|PM模式 工作模式|
-|audio.STANDBY|number|PM模式 待机模式|
-|audio.SHUTDOWN|number|PM模式 关断模式|
+|audio.STANDBY|number|PM模式 待机模式，PA断电，codec待机状态，系统不能进低功耗状态，如果PA不可控，codec进入静音模式|
+|audio.SHUTDOWN|number|PM模式 关机模式，PA断电，可配置的codec关机状态，不可配置的codec断电，系统能进低功耗状态|
+|audio.POWEROFF|number|PM模式 断电模式，PA断电，codec断电，系统能进低功耗状态|
 |audio.PCM|number|PCM格式，即原始ADC数据|
 |audio.MORE_DATA|number|audio.on回调函数传入参数的值，表示底层播放完一段数据，可以传入更多数据|
 |audio.DONE|number|audio.on回调函数传入参数的值，表示底层播放完全部数据了|
