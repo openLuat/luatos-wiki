@@ -263,6 +263,34 @@ log.info("sfud.eraseWrite",sfud.eraseWrite(sfud_device,1024,"sfud"))
 
 ---
 
+## sfud.getInfo(flash)
+
+
+
+获取 Flash 容量和page大小
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|flash Flash 设备对象 sfud.get_device_table()返回的数据结构|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|Flash 容量|
+|int|page 页大小|
+
+**例子**
+
+```lua
+log.info("sfud.getInfo",sfud.getInfo(sfud_device))
+
+```
+
+---
+
 ## sfud.mount(flash, mount_point, offset, maxsize)
 
 
