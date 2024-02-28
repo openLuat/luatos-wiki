@@ -151,7 +151,7 @@ sfud.chipErase(flash)
 
 
 
-擦除 Flash 指定地址指定大小
+擦除 Flash 指定地址指定大小，按照flash block大小进行擦除
 
 **参数**
 
