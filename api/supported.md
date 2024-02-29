@@ -34,7 +34,7 @@
 |[i2s](i2s.md)|`数字音频`|Y|Y|X|X|X|Y|Y|
 |[iconv](iconv.md)|`iconv操作`|Y|Y|Y|Y|Y|Y|Y|
 |[io](io.md)|`io操作(扩展)`|Y|Y|Y|Y|Y|Y|Y|
-|[ioqueue](ioqueue.md)|`io序列操作`|X|X|Y|X|X|X|X|
+|[ioqueue](ioqueue.md)|`io序列操作`|X|X|Y|X|X|X|Y|
 |[iotauth](iotauth.md)|`IoT鉴权库, 用于生成各种云平台的参数`|Y|Y|Y|Y|Y|Y|Y|
 |[ir](ir.md)|`红外遥控`|Y|Y|X|Y|Y|Y|Y|
 |[json](json.md)|`json生成和解析库`|Y|Y|Y|Y|Y|Y|Y|
