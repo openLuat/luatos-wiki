@@ -48,7 +48,7 @@ end
 
 ---
 
-## i2c.setup(id, speed, slaveAddr)
+## i2c.setup(id, speed, pullup)
 
 
 
@@ -60,6 +60,7 @@ i2c初始化
 |-|-|
 |int|设备id, 例如i2c1的id为1, i2c2的id为2|
 |int|I2C速度, 例如i2c.FAST|
+|bool|是否软件上拉, 默认不开启，需要硬件支持|
 
 **返回值**
 
