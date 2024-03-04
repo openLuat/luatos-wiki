@@ -146,6 +146,46 @@ end)
 
 ---
 
+### CABLE_INSERT
+
+网线已插入
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+-- 网线插入后会发一次这个消息
+sys.subscribe("CABLE_INSERT", function()
+    log.info("w5500", "CABLE_INSERT")
+end)
+
+```
+
+---
+
+### CABLE_REMOVE
+
+网线已拔出
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+-- 网线拔出后会发一次这个消息
+sys.subscribe("CABLE_REMOVE", function()
+    log.info("w5500", "CABLE_REMOVE")
+end)
+
+```
+
+---
+
 ## libgnss
 
 
