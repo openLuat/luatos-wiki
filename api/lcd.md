@@ -546,7 +546,7 @@ lcd.drawCircle(120,120,20,0x001F)
 
 ---
 
-## lcd.setFont(font)
+## lcd.setFont(font, indentation)
 
 
 
@@ -557,6 +557,7 @@ lcd.drawCircle(120,120,20,0x001F)
 |传入值类型|解释|
 |-|-|
 |int|font lcd.font_XXX 请查阅常量表|
+|int|indentation, 等宽字体ascii右侧缩进0~127个pixel，等宽字体的ascii字符可能在右侧有大片空白，用户可以选择删除部分。留空或者超过127则直接删除右半边, 非等宽字体无效|
 
 **返回值**
 
