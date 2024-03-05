@@ -14,19 +14,15 @@
 
 |常量|类型|解释|
 |-|-|-|
-|lcd.font_opposansm8|font|8号字体|
+|lcd.font_opposansm12|font|12号字体|
 |lcd.font_unifont_t_symbols|font|符号字体|
 |lcd.font_open_iconic_weather_6x_t|font|天气字体|
-|lcd.font_opposansm10|font|10号字体|
-|lcd.font_opposansm12|font|12号字体|
 |lcd.font_opposansm16|font|16号字体|
 |lcd.font_opposansm18|font|18号字体|
 |lcd.font_opposansm20|font|20号字体|
 |lcd.font_opposansm22|font|22号字体|
 |lcd.font_opposansm24|font|24号字体|
 |lcd.font_opposansm32|font|32号字体|
-|lcd.font_opposansm8_chinese|font|8号中文字体|
-|lcd.font_opposansm10_chinese|font|10号中文字体|
 |lcd.font_opposansm12_chinese|font|12号中文字体|
 |lcd.font_opposansm14_chinese|font|14号中文字体|
 |lcd.font_opposansm16_chinese|font|16号中文字体|
