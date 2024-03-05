@@ -10,7 +10,7 @@
 本库有专属demo，[点此链接查看camera的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/camera)
 ```
 
-## camera.init(InitReg)
+## camera.init(InitReg_or_cspi_id, cspi_speed, mode, is_msb, rx_bit, seq_type, is_ddr, only_y, w, h)
 
 
 
@@ -20,13 +20,22 @@
 
 |传入值类型|解释|
 |-|-|
-|table|InitReg camera初始化命令 见demo/camera/AIR105 注意:如扫码 camera初始化时需设置为灰度输出|
+|table/integer|如果是table,则是DVP摄像头的配置见demo/camera/AIR105,同时忽略后续参数;如果是数字,则是camera spi总线序号|
+|int|camera spi总线速度|
+|int|camera spi模式,0~3|
+|int|字节的bit顺序是否是msb,0否1是|
+|int|同时接收bit数,1,2,4|
+|int|byte序列,0~1|
+|int|双边沿采样配置,0不启用,其他值根据实际SOC决定|
+|int|只采集Y分量,0不启用,其他值启用|
+|int|摄像头宽度|
+|int|摄像头高度|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|int|camera_id|
+|int/false|成功返回camera_id，失败返回false|
 
 **例子**
 
@@ -264,6 +273,34 @@ camera.startRaw(0, 320, 240, buff)
 
 ```lua
 camera.getRaw(0)
+
+```
+
+---
+
+## camera.preview(id, onoff)
+
+
+
+启停camera预览功能，直接输出到LCD上，只有硬件支持的SOC可以运行
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|camera id,例如0|
+|boolean|true开启，false停止|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+camera.preview(1, true)
 
 ```
 
