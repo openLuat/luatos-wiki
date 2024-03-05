@@ -159,7 +159,7 @@ w5500状态变化
 ```lua
 sys.subscribe("W5500_IND", function(status)
     -- status的取值有:
-    -- CABLE_INWERT 网线插入
+    -- CABLE_INSERT 网线插入
     -- CABLE_REMOVE 网线拔出
     log.info("w5500 status", status)
 end)
