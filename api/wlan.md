@@ -345,7 +345,7 @@ wlan.setMac(0, mac)
 
 ---
 
-## wlan.createAP(ssid, passwd, gateway, netmask, channel)
+## wlan.createAP(ssid, passwd, gateway, netmask, channel, opts)
 
 
 
@@ -360,6 +360,7 @@ wlan.setMac(0, mac)
 |string|AP的网关地址, 默认192.168.4.1|
 |string|AP的网关掩码, 默认255.255.255.0|
 |int|AP建立的通道, 默认6|
+|table|AP的配置选项, 可选|
 
 **返回值**
 
@@ -374,6 +375,14 @@ wlan.setMac(0, mac)
 wlan.createAP("uiot", "12345678")
 -- 设置网关IP,掩码, 通道, 2023.7.13 新增, BSP未必支持
 -- wlan.createAP("uiot", "12345678", "192.168.4.1", "255.255.255.0", 6)
+
+-- opts更多配置项, 2024.3.5新增
+--[[
+{
+    hidden = false, -- 是否隐藏SSID, 默认false,不隐藏
+    max_conn = 4 -- 最大客户端数量, 默认4
+}
+]]
 
 ```
 

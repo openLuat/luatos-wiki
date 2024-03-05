@@ -146,29 +146,9 @@ end)
 
 ---
 
-### CABLE_INSERT
+### W5500_IND
 
-网线已插入
-
-**额外返回参数**
-
-无
-
-**例子**
-
-```lua
--- 网线插入后会发一次这个消息
-sys.subscribe("CABLE_INSERT", function()
-    log.info("w5500", "CABLE_INSERT")
-end)
-
-```
-
----
-
-### CABLE_REMOVE
-
-网线已拔出
+w5500状态变化
 
 **额外返回参数**
 
@@ -177,9 +157,11 @@ end)
 **例子**
 
 ```lua
--- 网线拔出后会发一次这个消息
-sys.subscribe("CABLE_REMOVE", function()
-    log.info("w5500", "CABLE_REMOVE")
+sys.subscribe("W5500_IND", function(status)
+    -- status的取值有:
+    -- CABLE_INWERT 网线插入
+    -- CABLE_REMOVE 网线拔出
+    log.info("w5500 status", status)
 end)
 
 ```
