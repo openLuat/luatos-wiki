@@ -6,15 +6,50 @@
 
 ## V1109
 
-预期 `2023.12.31` 前.
+兼容性变化:
+
+1：tts_onchip下关闭YMODEM
+2：tts_onchip 关闭 REPL
+3：调整json.encode的浮点数格式化为 %.7f , 更符合实际用途, 不然以为会吃掉浮点精度
 
 缺陷修复:
-
-* fix: websocket心跳包未正常发出
+* fix: **合入原厂补丁 修复SWD CP IO遇到异常信号时会死机，修复伪基站防护漏洞**
+* fix: socket.rx接收数据时,如果zbuff扩容失败,先尝试缩小接收长度,如果没有空间就只能返回错误了
+* fix: u8g2.CopyBuff没有正常工作,原因是判断zbuff长度有错误
+* fix: ftp login失败后死机
+* fix: socket.sntp使用自定义域名会报错死机
+* fix:luatos i2s录音不能配置frame size
+* fix:修复luatos固件启用tts时报luat_sfud无法链接的问题
+* fix:websocket心跳包未正常发出
+* fix:云编译luatos固件选择禁用DTLS时会报mbedtls_ssl_conf_handshake_timeout函数不存在
+* fix:无法验证pin码
 
 新增功能:
-
+* add: sfud支持获取flash容量和page信息
+* add: adc分压范围添加最大限制
+* add: pm.dtimerCheck 添加剩余时间
+* add: http支持大数据上传
+* add: 伪基站屏蔽时间
+* add: u8g2支持配置x轴偏移量
+* add: libgnss.getIntLocation添加速度参数项
+* add: errdump支持自定义域名和端口
+* add: crypto.crc16_modbus支持设置初始值,方便进行多段数据连续计算
+* add: 新增u8g2.SetPowerSave函数
+* add: pcf8563t时钟模块的驱动及demo
+* add: luatos固件添加xxtea库的编译
+* add: luatos添加蚂蚁链的集成
+* add: luatos固件添加ercoap库
 * add: 基于ntp的毫秒级时间戳 socket.ntptm()
+
+更新功能:
+* update: libgnss.casic_aid兼容基站定位返回的字符串坐标值
+* update:去掉mqtt接收单包4096限制
+* update: u8g2新增ssd1309 i2c方式的驱动,之前只有SPI的
+* update:优化w5500的dhcp过程
+* update:luatos固件I2C默认使用poll模式
+* update:luatos补充I2S单声道情况下，左右声道选择
+* update:luatos uart 接收消息不允许过多，防止异常情况下大量uart接收消息死机
+* update:adc分压范围最大限制
 
 ## V1108
 
