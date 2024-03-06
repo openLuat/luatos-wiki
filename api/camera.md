@@ -10,6 +10,14 @@
 本库有专属demo，[点此链接查看camera的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/camera)
 ```
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|camera.AUTO|number|摄像头工作在自动模式|
+|camera.SCAN|number|摄像头工作在扫码模式，只输出Y分量|
+
+
 ## camera.init(InitReg_or_cspi_id, cspi_speed, mode, is_msb, rx_bit, seq_type, is_ddr, only_y, w, h)
 
 
@@ -27,7 +35,7 @@
 |int|同时接收bit数,1,2,4|
 |int|byte序列,0~1|
 |int|双边沿采样配置,0不启用,其他值根据实际SOC决定|
-|int|只采集Y分量,0不启用,其他值启用|
+|int|只接收Y分量,0不启用,1启用,扫码必须启用,不开启时扫码直接失败|
 |int|摄像头宽度|
 |int|摄像头高度|
 
@@ -81,7 +89,7 @@ end)
 
 ---
 
-## camera.start(id)
+## camera.start(id,mode)
 
 
 
@@ -92,6 +100,7 @@ end)
 |传入值类型|解释|
 |-|-|
 |int|camera id,例如0|
+|int|工作模式，目前只有camera.AUTO自动，camera.SCAN连续扫码，默认是0|
 
 **返回值**
 
@@ -173,14 +182,14 @@ camera拍照
 |传入值类型|解释|
 |-|-|
 |int|camera id,例如0|
-|string|save_path,文件保存路径，空则写在上次路径里，默认是/capture.jpg|
+|string/zbuff/nil|save_path,文件保存路径，空则写在上次路径里，默认是/capture.jpg，如果是zbuff，则将图片保存在buff内不写入文件系统|
 |int|quality, jpeg压缩质量，1最差，占用空间小，3最高，占用空间最大而且费时间，默认1|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|boolean|成功返回true,否则返回false|
+|boolean|成功返回true,否则返回false,真正完成后通过camera.on设置的回调函数回调接收到的长度|
 
 **例子**
 
