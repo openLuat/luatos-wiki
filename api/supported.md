@@ -32,7 +32,7 @@
 |[httpsrv](httpsrv.md)|`http服务端`|Y|Y|X|Y|Y|Y|Y|
 |[i2c](i2c.md)|`I2C操作`|Y|Y|Y|Y|Y|Y|Y|
 |[i2s](i2s.md)|`数字音频`|Y|Y|X|X|X|Y|Y|
-|[iconv](iconv.md)|`字符编码转换`|Y|Y|Y|Y|Y|Y|Y|
+|[iconv](iconv.md)|`iconv操作`|Y|Y|Y|Y|Y|Y|Y|
 |[io](io.md)|`io操作(扩展)`|Y|Y|Y|Y|Y|Y|Y|
 |[ioqueue](ioqueue.md)|`io序列操作`|X|X|Y|X|X|X|Y|
 |[iotauth](iotauth.md)|`IoT鉴权库, 用于生成各种云平台的参数`|Y|Y|Y|Y|Y|Y|Y|
