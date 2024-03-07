@@ -18,7 +18,7 @@
 |camera.SCAN|number|摄像头工作在扫码模式，只输出Y分量|
 
 
-## camera.init(InitReg_or_cspi_id, cspi_speed, mode, is_msb, rx_bit, seq_type, is_ddr, only_y, w, h)
+## camera.init(InitReg_or_cspi_id, cspi_speed, mode, is_msb, rx_bit, seq_type, is_ddr, only_y, scan_mode, w, h)
 
 
 
@@ -35,7 +35,8 @@
 |int|同时接收bit数,1,2,4|
 |int|byte序列,0~1|
 |int|双边沿采样配置,0不启用,其他值根据实际SOC决定|
-|int|只接收Y分量,0不启用,1启用,扫码必须启用,不开启时扫码直接失败|
+|int|只接收Y分量，0不启用，1启用，扫码必须启用，否则会失败|
+|int|工作模式，camera.AUTO自动,camera.SCAN扫码|
 |int|摄像头宽度|
 |int|摄像头高度|
 
@@ -89,7 +90,7 @@ end)
 
 ---
 
-## camera.start(id,mode)
+## camera.start(id)
 
 
 
@@ -100,7 +101,6 @@ end)
 |传入值类型|解释|
 |-|-|
 |int|camera id,例如0|
-|int|工作模式，目前只有camera.AUTO自动，camera.SCAN连续扫码，默认是0|
 
 **返回值**
 
