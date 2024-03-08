@@ -4,6 +4,20 @@
 * [固件下载备用地址](https://pan.air32.cn/s/DJTr?path=%2F)
 * 通过[云编译](https://wiki.luatos.com/develop/compile/Cloud_compilation.html),全自动编译最新固件
 
+## V1001
+
+注意事项:
+使用时需要进行充分的测试
+
+
+缺陷修复:
+* 修复V1000版本发现的BUG
+
+新增功能:
+* add: ioqueue操作
+* add: camera功能
+
+
 ## V0001
 
 EC718P系列固件第一版
