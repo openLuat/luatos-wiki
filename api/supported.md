@@ -20,7 +20,7 @@
 |[fatfs](fatfs.md)|`读写fatfs格式`|Y|Y|Y|Y|Y|Y|Y|
 |[fdb](fdb.md)|`kv数据库,掉电不丢数据`|Y|Y|Y|Y|Y|Y|Y|
 |[fonts](fonts.md)|`字体库`|Y|Y|Y|Y|Y|Y|Y|
-|[fota](fota.md)|`底层固件升级`|X|X|Y|X|X|Y|Y|
+|[fota](fota.md)|`底层固件升级`|Y|Y|Y|X|X|Y|Y|
 |[fs](fs.md)|`文件系统额外操作`|Y|Y|Y|Y|Y|Y|Y|
 |[fskv](fskv.md)|`kv数据库,掉电不丢数据`|Y|Y|Y|Y|Y|Y|Y|
 |[ftp](ftp.md)|`ftp 客户端`|Y|Y|Y|Y|Y|Y|Y|
