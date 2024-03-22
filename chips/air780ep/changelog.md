@@ -16,6 +16,7 @@
 新增功能:
 * add: ioqueue操作
 * add: camera功能
+* add: 支持休眠功能
 
 
 ## V0001
