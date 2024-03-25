@@ -177,7 +177,7 @@ ioqueue.output(0,pin.PB01,0)
 
 ---
 
-## ioqueue.setcap(hwtimer_id,pin,pull_mode,irq_mode,max_tick)
+## ioqueue.set_cap(hwtimer_id,pin,pull_mode,irq_mode,max_tick)
 
 
 

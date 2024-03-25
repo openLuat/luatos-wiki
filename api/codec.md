@@ -20,7 +20,7 @@
 |codec.AMR_WB|number|AMR-WB格式|
 
 
-## codec.create(type, isDecoder)
+## codec.create(type, isDecoder, quality)
 
 
 
@@ -32,6 +32,7 @@
 |-|-|
 |int|多媒体类型，目前支持codec.MP3 codec.AMR|
 |boolean|是否是解码器，true解码器，false编码器，默认true，是解码器|
+|int|编码等级，部分bsp有内部编码器，可能需要提前输入编码等级，比如air780ep的内部amr编码器|
 
 **返回值**
 
@@ -46,6 +47,8 @@
 local decoder = codec.create(codec.MP3)--创建一个mp3的decoder
 -- 创建编码器
 local encoder = codec.create(codec.AMR, false)--创建一个amr的encoder
+-- 创建编码器
+local encoder = codec.create(codec.AMR_WB, false, 8)--创建一个amr-wb的encoder，编码等级默认8
 
 ```
 
@@ -122,7 +125,7 @@ local result = codec.data(coder, buff, 4096)
 
 
 
-编码音频数据，由于flash和ram空间一般比较有限，目前只支持amr-nb编码
+编码音频数据，由于flash和ram空间一般比较有限，除了部分bsp有内部amr编码功能，目前只支持amr-nb编码
 
 **参数**
 
@@ -131,7 +134,7 @@ local result = codec.data(coder, buff, 4096)
 |userdata|codec.create创建的编解码用的coder|
 |zbuff|输入的数据,zbuff形式,从0到used|
 |zbuff|输出的数据,zbuff形式,自动添加到buff的尾部,如果空间大小不足,会自动扩展,但是会额外消耗时间,甚至会失败,所以尽量一开始就给足空间|
-|int|amr_nb的编码等级 0~7(即 MR475~MR122)值越大消耗的空间越多,音质越高,默认0|
+|int|amr_nb的编码等级 0~7(即 MR475~MR122)值越大消耗的空间越多,音质越高,默认0 amr_wb的编码等级 0~8,值越大消耗的空间越多,音质越高,默认0|
 
 **返回值**
 

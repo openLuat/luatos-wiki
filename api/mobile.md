@@ -55,6 +55,8 @@ log.info("simid", mobile.simid())
 |mobile.CONF_PSM_MODE|number|PSM模式开关,0关,1开|
 |mobile.CONF_CE_MODE|number|attach模式，0为EPS ONLY 2为混合，遇到IMSI detach脱网问题，设置为0，注意设置为EPS ONLY时会取消短信功能|
 |mobile.CONF_SIM_WC_MODE|number|SIM写入次数的配置和读取|
+|mobile.CONF_FAKE_CELL_BARTIME|number|伪基站禁止接入的时间，取值为0时取消，0xffff永久|
+|mobile.CONF_RESET_TO_FACTORY|number|删除已保存的协议栈参数，重启后会使用默认配置|
 |mobile.PIN_VERIFY|number|验证PIN码操作|
 |mobile.PIN_CHANGE|number|更换PIN码操作|
 |mobile.PIN_ENABLE|number|使能PIN码验证|
@@ -589,6 +591,34 @@ mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name�
 **例子**
 
 无
+
+---
+
+## mobile.syncTime(enable)
+
+
+
+配置基站同步时间开关，默认开启
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|bool|开启,true开启, false关闭, nil不设置|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|当前开关状态|
+
+**例子**
+
+```lua
+mobile.syncTime() --获取当前开关状态
+mobile.syncTime(false) --关闭基站同步时间
+
+```
 
 ---
 

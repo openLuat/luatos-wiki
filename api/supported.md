@@ -20,7 +20,7 @@
 |[fatfs](fatfs.md)|`读写fatfs格式`|Y|Y|Y|Y|Y|Y|Y|
 |[fdb](fdb.md)|`kv数据库,掉电不丢数据`|Y|Y|Y|Y|Y|Y|Y|
 |[fonts](fonts.md)|`字体库`|Y|Y|Y|Y|Y|Y|Y|
-|[fota](fota.md)|`底层固件升级`|X|X|Y|X|X|Y|Y|
+|[fota](fota.md)|`底层固件升级`|Y|Y|Y|X|X|Y|Y|
 |[fs](fs.md)|`文件系统额外操作`|Y|Y|Y|Y|Y|Y|Y|
 |[fskv](fskv.md)|`kv数据库,掉电不丢数据`|Y|Y|Y|Y|Y|Y|Y|
 |[ftp](ftp.md)|`ftp 客户端`|Y|Y|Y|Y|Y|Y|Y|
@@ -84,7 +84,6 @@
 |[touchkey](touchkey.md)|`触摸按键`|Y|Y|X|X|X|X|X|
 |[u8g2](u8g2.md)|`u8g2图形处理库`|Y|Y|Y|Y|Y|Y|Y|
 |[uart](uart.md)|`串口操作库`|Y|Y|Y|Y|Y|Y|Y|
-|[ufont](ufont.md)|`统一字体库(开发中)`|?|?|?|?|?|?|?|
 |[ulwip](ulwip.md)|`用户空间的lwip集成(开发中)`|Y|Y|X|Y|Y|X|X|
 |[usbapp](usbapp.md)|`USB功能操作`|X|X|Y|X|X|X|X|
 |[w5500](w5500.md)|`w5500以太网驱动`|Y|Y|Y|Y|Y|Y|Y|

@@ -87,7 +87,6 @@ timer
 touchkey
 u8g2
 uart
-ufont
 ulwip
 usbapp
 w5500
