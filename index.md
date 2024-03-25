@@ -61,7 +61,7 @@ LuatOS提供了丰富的外设接口库，可以更便捷地实现创意，无�
 - [开发板购买](https://luat.taobao.com)
 - [B站视频教程](https://space.bilibili.com/532832)
 - [案例turnkey](https://gitee.com/openLuat/luatos-turnkey)
-
+- [社区扩展库](develop/libs)
 ---
 
 ```{rubric} 目前已经适配的模组和芯片
@@ -140,7 +140,7 @@ api/index
 api/sys_pub
 🌕 原生API手册 <https://wiki.luatos.com/_static/lua53doc/index.html>
 api/libs/index
-pages/libs
+develop/libs
 ```
 
 ```{toctree}
