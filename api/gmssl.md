@@ -1,4 +1,4 @@
-# gmssl - 国密算法
+# gmssl - 国密算法(SM2/SM3/SM4)
 
 {bdg-success}`已适配` {bdg-primary}`Air101/Air103` {bdg-primary}`Air601` {bdg-primary}`Air105` {bdg-primary}`Air780E/Air700E` {bdg-primary}`Air780EP`
 
@@ -8,6 +8,15 @@
 
 ```{tip}
 本库有专属demo，[点此链接查看gmssl的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/gmssl)
+```
+
+**示例**
+
+```lua
+-- 本库 支持 SM2 SM3 SM4 三个算法
+-- 理论上可以扩展支持 SM9 算法
+-- 不支持SM1, 因为那是硬件算法, 没有软件实现的
+
 ```
 
 ## sm.sm2encrypt(pkx,pky,data, mode, mode2)

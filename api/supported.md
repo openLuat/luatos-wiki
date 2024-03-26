@@ -24,7 +24,7 @@
 |[fs](fs.md)|`文件系统额外操作`|Y|Y|Y|Y|Y|Y|Y|
 |[fskv](fskv.md)|`kv数据库,掉电不丢数据`|Y|Y|Y|Y|Y|Y|Y|
 |[ftp](ftp.md)|`ftp 客户端`|Y|Y|Y|Y|Y|Y|Y|
-|[gmssl](gmssl.md)|`国密算法`|Y|Y|Y|X|X|Y|Y|
+|[gmssl](gmssl.md)|`国密算法(SM2/SM3/SM4)`|Y|Y|Y|X|X|Y|Y|
 |[gpio](gpio.md)|`GPIO操作`|Y|Y|Y|Y|Y|Y|Y|
 |[gtfont](gtfont.md)|`高通字库芯片`|Y|Y|Y|X|X|Y|Y|
 |[hmeta](hmeta.md)|`硬件元数据`|X|X|X|X|X|Y|Y|
