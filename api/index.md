@@ -78,6 +78,7 @@ sms
 socket
 softkeyboard
 spi
+spislave
 sqlite3
 statem
 string
