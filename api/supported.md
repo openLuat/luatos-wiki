@@ -11,7 +11,6 @@
 |[codec](codec.md)|`多媒体-编解码`|Y|Y|Y|Y|Y|X|X|
 |[coremark](coremark.md)|`跑分`|Y|Y|Y|Y|Y|Y|Y|
 |[crypto](crypto.md)|`加解密和hash函数`|Y|Y|Y|Y|Y|Y|Y|
-|[ctiot](ctiot.md)|`中国电信CTIOT集成`|?|?|?|?|?|?|?|
 |[dac](dac.md)|`数模转换`|X|X|X|X|Y|X|X|
 |[disp](disp.md)|`disp库(已废弃)`|Y|Y|Y|Y|Y|Y|Y|
 |[eink](eink.md)|`墨水屏操作库`|Y|Y|Y|Y|Y|Y|Y|
@@ -73,7 +72,7 @@
 |[sfud](sfud.md)|`SPI FLASH sfud软件包`|Y|Y|Y|Y|Y|Y|Y|
 |[sms](sms.md)|`短信`|X|Y|X|X|X|X|X|
 |[socket](socket.md)|`网络接口`|Y|Y|Y|Y|Y|Y|Y|
-|[softkeyboard](softkeyboard.md)|`软件键盘矩阵(当前仅air105支持)`|?|?|?|?|?|?|?|
+|[softkb](softkb.md)|`软件键盘矩阵`|X|X|X|X|Y|X|X|
 |[spi](spi.md)|`spi操作库`|Y|Y|Y|Y|Y|Y|Y|
 |[spislave](spislave.md)|`SPI从机(开发中)`|X|X|Y|Y|X|X|X|
 |[sqlite3](sqlite3.md)|`sqlite3数据库操作`|Y|Y|Y|Y|X|X|X|

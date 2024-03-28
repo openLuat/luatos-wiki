@@ -14,7 +14,6 @@ cc
 codec
 coremark
 crypto
-ctiot
 dac
 disp
 eink
@@ -76,7 +75,7 @@ sfd
 sfud
 sms
 socket
-softkeyboard
+softkb
 spi
 spislave
 sqlite3
