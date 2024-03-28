@@ -75,7 +75,7 @@
 |[socket](socket.md)|`网络接口`|Y|Y|Y|Y|Y|Y|Y|
 |[softkeyboard](softkeyboard.md)|`软件键盘矩阵(当前仅air105支持)`|?|?|?|?|?|?|?|
 |[spi](spi.md)|`spi操作库`|Y|Y|Y|Y|Y|Y|Y|
-|[spislave](spislave.md)|`SPI从机(开发中)`|X|X|X|X|X|X|X|
+|[spislave](spislave.md)|`SPI从机(开发中)`|X|X|Y|Y|X|X|X|
 |[sqlite3](sqlite3.md)|`sqlite3数据库操作`|Y|Y|Y|Y|X|X|X|
 |[statem](statem.md)|`SM状态机`|Y|Y|Y|Y|Y|Y|Y|
 |[string](string.md)|`字符串操作函数`|Y|Y|Y|Y|Y|Y|Y|
@@ -89,7 +89,7 @@
 |[usbapp](usbapp.md)|`USB功能操作`|X|X|X|X|Y|X|X|
 |[w5500](w5500.md)|`w5500以太网驱动`|Y|Y|Y|Y|Y|Y|Y|
 |[wdt](wdt.md)|`watchdog操作库`|Y|Y|Y|Y|Y|Y|Y|
-|[websocket](websocket.md)|`websocket客户端`|Y|Y|X|X|X|X|X|
+|[websocket](websocket.md)|`websocket客户端`|Y|Y|Y|Y|X|X|X|
 |[wlan](wlan.md)|`wifi操作`|Y|Y|Y|Y|X|Y|Y|
 |[ws2812](ws2812.md)|`幻彩灯带RGB控制器(WS2812系列)`|Y|Y|Y|Y|X|X|X|
 |[xxtea](xxtea.md)|`xxtea加密解密 `|Y|Y|Y|Y|X|Y|Y|
