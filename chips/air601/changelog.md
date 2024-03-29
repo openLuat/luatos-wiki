@@ -2,11 +2,23 @@
 
 本文件描述Air601的LuatOS固件的变更情况
 
-固件下载地址: 
+固件下载地址:
 
 1. [合宙云盘](https://pan.air32.cn/s/DJTr?path=%2F)
 2. LuaTools也会自动下载
 3. [Gitee库发布路径](https://gitee.com/openLuat/LuatOS/releases)
+
+## V1023
+
+1. 适配fota功能,支持底层+脚本的全量升级
+2. 支持动态开关ble,以实现ble和wifi共存
+3. 支持spi从机功能,最高速率50M, 对应demo/spi_slave
+4. 支持ulwip库,可集成w5100s, 对应demo/ulwip
+5. 支持AP隐藏ssid
+6. http库支持任意header
+7. 优化ble内存使用, 减少约10k
+8. 优化ble功耗, 固件不含wifi功能时,省电50%以上
+9. 字体优化, 解决中文显示的对齐问题
 
 ## V1022
 
