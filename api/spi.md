@@ -168,7 +168,7 @@ local recv = spi.transfer(0, buff)--把zbuff数据从指针开始，全发出去
 
 ---
 
-## spi.recv(id, size)
+## spi.recv(id, size, buff)
 
 
 
@@ -180,19 +180,26 @@ local recv = spi.transfer(0, buff)--把zbuff数据从指针开始，全发出去
 |-|-|
 |int|SPI号,例如0|
 |int|数据长度|
+|userdata|zbuff对象,可选,2024.3.29新增|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|string|读取成功返回字符串,否则返回nil|
+|string/int|读取成功返回字符串,若传入的是zbuff就返回读取大小,出错返回nil|
 
 **例子**
 
 ```lua
 -- 初始化spi
 spi.setup(0,nil,0,0,8,2000000,spi.MSB,1,1)
+-- 接收数据
 local recv = spi.recv(0, 4)--接收4字节数据
+
+-- 当传入zbuff参数时,返回值有所不同. 2024.3.29新增
+-- 读取成功后, 指针会往后移动len个字节
+-- 写入位置以当前used()位置开始, 请务必确保有足够空间写入len长度的数据
+local len = spi.recv(0, 4, buff)
 
 ```
 
