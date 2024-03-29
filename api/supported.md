@@ -55,7 +55,7 @@
 |[nes](nes.md)|`nes模拟器`|Y|Y|Y|Y|Y|X|X|
 |[nimble](nimble.md)|`蓝牙BLE库(nimble版)`|X|X|Y|Y|X|Y|Y|
 |[onewire](onewire.md)|`单总线协议驱动`|X|X|X|X|X|X|X|
-|[os](os.md)|`os操作`|?|?|?|?|?|?|?|
+|[os](os.md)|`os操作`|Y|Y|Y|Y|Y|Y|Y|
 |[otp](otp.md)|`OTP操作库`|Y|Y|Y|Y|Y|X|X|
 |[pack](pack.md)|`打包和解包格式串`|Y|Y|Y|Y|Y|Y|Y|
 |[pin](pin.md)|`管脚命名映射`|X|X|Y|Y|Y|X|X|

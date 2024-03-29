@@ -1,11 +1,23 @@
 # os - os操作
 
-{bdg-secondary}`适配状态未知`
+{bdg-success}`已适配` {bdg-primary}`Air780E/Air700E` {bdg-primary}`Air780EP` {bdg-primary}`Air601` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../lua/src/loslib.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
 ```
 
+```{tip}
+本库有专属demo，[点此链接查看os的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/os_date_time)
+```
+
+**示例**
+
+```lua
+-- os模块是lua原生模块, 这份文档是为了方便阐述实际使用中的常见问题
+
+-- 原生文档请查阅 https://wiki.luatos.com/_static/lua53doc/manual.html#6.9
+
+```
 
 ## os.remove(path)
 
