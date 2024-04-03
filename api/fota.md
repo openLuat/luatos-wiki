@@ -113,7 +113,7 @@ local isDone = fota.wait()
 
 ---
 
-## fota.run(buff)
+## fota.run(buff, offset, len)
 
 
 
@@ -124,6 +124,8 @@ local isDone = fota.wait()
 |传入值类型|解释|
 |-|-|
 |zbuff/string|fota数据，尽量用zbuff|
+|int|起始偏移量,传入zbuff时有效,默认是0|
+|int|写入长度,传入zbuff时有效,默认是zbuff:used()|
 
 **返回值**
 
@@ -139,6 +141,9 @@ local isDone = fota.wait()
 local result, isDone, cache = fota.run(buf) -- 写入fota流程
 
 -- 提示: ，如果传入的是zbuff，写入成功后，请自行清空zbuff内的数据
+
+-- 2024.4.3新增offset, len参数, 仅对zbuff有效
+fota.run(buff, 0, 1024)
 
 ```
 
