@@ -417,7 +417,7 @@ wlan.stopAP()
 
 
 
-获取信息,如AP的bssid,信号强度
+获取信息,如AP的bssid,信号强度, STA联网后可获取
 
 **参数**
 
