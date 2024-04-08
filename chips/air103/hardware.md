@@ -63,8 +63,8 @@
 | 1                 | 模块ADC1-PA4 |
 | 2                 | 模块ADC2-PA3 |
 | 3                 | 模块ADC3-PA2 |
-| 10                | CPU温度      |
-| 11                | 内部电压     |
+| adc.CH_CPU                | CPU温度      |
+| adc.CH_VBAT                | 内部电压     |
 
 ## 资料链接
 
@@ -74,3 +74,11 @@
 * LDO手册: [SGM2019-3.3YN5G_TR.PDF](https://cdn.openluat-luatcommunity.openluat.com/attachment/20211202193445472_SGM2019-3.3YN5G_TR.PDF)
 * Air103_核心板设计手册: [Air103_核心板设计手册V1.2.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20211202193519160_Air103_核心板设计手册V1.2.pdf)
 * 寄存器手册(不推荐): [寄存器手册与W800通用](https://www.winnermicro.com/upload/1/editor/1607327764402.pdf)
+
+## 射频管脚
+
+作为隐藏功能, Air103的RF管脚为: 14
+
+设计PCB时, 该管脚必须加ESD保护!!!
+
+功能上支持 BLE 4.2 和 wifi 2.4G通信, 不支持wifi 5G
