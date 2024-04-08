@@ -26,10 +26,10 @@
 注意, 鉴于芯片平台的限制,以下功能无法实现或具有局限性:
 
 1. 不支持2G/3G/5G通信
-2. 不支持 `电信`网络 的短信收发
+2. 支持移动和联通的短信收发, 仅Air780EPV支持 `电信`网络 的短信收发
 3. 不支持 `wifi`通信, 仅支持特定场景下的wifi scan
-4. 支持VoLTE,待开发
-5. 支持但不推荐使用LVGL
+4. 仅Air780EPV支持VoLTE
+5. 支持使用LVGL
 
 ## 固件下载
 
@@ -45,5 +45,5 @@
 
 ## 相关资料链接
 
-[开源仓库链接(BSP)](https://gitee.com/openLuat/luatos-soc-2023)
+[开源仓库链接(BSP)](https://gitee.com/openLuat/luatos-soc-2024)
 [开源仓库链接(主库)](https://gitee.com/openLuat/LuatOS)
