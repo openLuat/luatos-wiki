@@ -4,6 +4,10 @@
 
 * Air780EP
 
+
+注意:更详细编译说明可查看 https://gitee.com/openLuat/luatos-soc-2024/blob/master/README.md 
+
+
 ## 准备工作
 
 1. Windows 10(或以上),  linux(仅ubuntu验证过)
@@ -15,11 +19,11 @@
 注意, 需要两个库
 
 * 主库 `https://gitee.com/openLuat/LuatOS`
-* bsp库 `https://gitee.com/openLuat/luatos-soc-2023` linux编译会有更多说明,请查阅README.md
+* bsp库 `https://gitee.com/openLuat/luatos-soc-2024` linux编译会有更多说明,请查阅README.md
 
 代码更新频繁, 推荐使用`git`进行clone下载, 不建议zip下载.
 
-下载的目录**必须**符合下列的结构, 目录名称必须是`LuatOS`和`luatos-soc-2023`.
+下载的目录**必须**符合下列的结构, 目录名称必须是`LuatOS`和`luatos-soc-2024`.
 
 假设在 `D:\gitee`
 
@@ -29,8 +33,8 @@ D:\gitee\
         - lua
         - luat
         - components
-    - luatos-soc-2023
-        - xmake.lua
+    - luatos-soc-2024
+        - csdk.lua
         - project
         - interface
 ```
@@ -39,48 +43,29 @@ D:\gitee\
 
 ## 准备工具
 
-安装 xmake , 可从xmake官网下载, 可以从[本链接直接下载](https://pan.air32.cn/s/DJTr?path=%2F%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7), 需要2.8.5或以上的版本
+安装 xmake , 可从xmake官网下载, 可以从[本链接直接下载](https://pan.air32.cn/s/DJTr?path=%2F%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7), 建议使用最新版.
 
 安装时默认会**选上PATH**, 如果没有就勾上
 
 **注意：环境变量需重启电脑生效**
 
-## 工具链下载
-
-在有网的环境下, xmake会自行下载gcc工具链。如果您拥有正常的互联网连接，请跳过这一步
-
-:::{dropdown} 具体操作方法
-
-如果无法联网, 或者网络受限的情况, 通常会有这种提示:
-
-```
-error: fatal: not a git repository
-```
-
-或者git/http连接失败的提示. 故这里提供离线gcc工具链下载和编译的方法
-
-1. 下载[gcc for arm工具链](http://cdndownload.openluat.com/xmake/toolchains/gcc-arm/gcc-arm-none-eabi-10-2020-q4-major-win32.zip)
-2. 解压, 不要选太深的目录, 不要包含中文字符和特殊符号, 建议解压到`D盘根目录`, 压缩包内自带一层目录`gcc-arm-none-eabi-10-2020-q4`
-3. 假设解压后的路径是 `D:\gcc-arm-none-eabi-10-2020-q4`, 检查 `D:\gcc-arm-none-eabi-10-2020-q4\bin\arm-none-eabi-g++.exe` 是否存在, 如果不存在, 那肯定是多一层目录.
-4. 用文本编辑器(例如vscode)打开 `luatos-soc-2023` 的 `build.bat`, 修改内容如下
-
-```
-原本的内容:
-rem set GCC_PATH=E:\gcc_mcu
-修改成set开头的语句,注意是去掉rem并修改值.
-set GCC_PATH=D:\gcc-arm-none-eabi-10-2020-q4
-```
-
-:::
-
 ## 开始编译
 
-1. 双击`luatos-soc-2023` 下的 `cmd.lnk` . **不要使用PowerShell!!**
-2. 在弹出的cmd命令行下, 输入指令
+示例环境使用windows，linux/macosx 实际上也是通用的编译方式
 
-```shell
-build luatos
-```
+在luatos-soc-2024\project\luatos 下打开终端
+
+首先执行配置，执行 `xmake f --menu`
+
+`Basic Configuration` 我们不用去管，里面是编译架构/编译器相关配置，项目中会自动配置好交叉编译器，这里我们忽略，选择 `Project Configuration` 根据自己实际使用配置即可
+
+配置完成选择Exit退出，询问是否保存选择yes
+
+**注意:上述配置操作只需要配置一次，之后会一直生效，只有修改配置才需要重新执行配置操作**
+
+随后执行 `xmake进行编译即可，生成的binpkg/soc/日志数据库(comdb.txt)等文件都位于项目下`out`目录
+
+
 
 最后会输出如下内容(大概):
 
@@ -106,12 +91,31 @@ Everything is Ok
 end
 ```
 
-即代表编译成功, 输出的`soc` 文件可在 `out\luatos` 目录下找到, 使用LuaTools刷机即可
+即代表编译成功, 生成的binpkg/soc/日志数据库(comdb.txt)等文件都位于项目下`out`目录, 使用LuaTools刷机即可
 
 额外提示, soc文件是压缩包,不代表固件的实际大小!!
 
+
+ps：如果不想使用图形也支持使用命令行配置方式，例如`xmake f --chip_target=ec718p --lspd_mode=y --denoise_force=n` ，具体支持的配置项和参数执行 `xmake f --help` 查看 Command options (Project Configuration)下具体描述
+
+
 ## 常见编译问题
 
-* 提示网络失败, git错误, 请查阅`工具链下载(离线环境)`小节
-* 提示缺`luat_msgbus.h`之类的文件, 请查阅`下载源码`,检查目录结构, 并确保没有路径中不含特殊字符
-* 提示`refer to xxx` 等ld链接错误, 请更新代码, 两个代码库都需要更新. 若依然报错,请报issue
+1，xmake包默认安装c盘，我c盘空间不多不想安装在c盘
+
+答: 设置相关目录到其他盘
+`xmake g --pkg_installdir="xxx"` 设置包安装目录 
+`xmake g --pkg_cachedir="xxx"` 设置包缓存目录
+
+2，我电脑无法联网，如何下载安装包？
+
+答:可以提前准备好包，这里以windows环境安装本仓库gcc交叉编译工具链为例
+
+首先下载好gcc-arm-none-eabi-10-2020-q4-major-win32.zip到D盘根目录，执行 `xmake g --pkg_searchdirs="D:"`xmake会优先搜索设置的目录去搜索安装包，就不必联网了
+
+gcc下载连接参考 csdk.lua中的连接，选择对应平台下载
+
+3，github包是否可以加速？
+
+`xmake g --proxy_pac=github_mirror.lua`可设置内置的github加速镜像
+

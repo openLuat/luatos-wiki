@@ -440,6 +440,26 @@ end
 
 ---
 
+## socket.read(netc, limit)
+
+
+
+读取数据(非zbuff版本)
+
+**参数**
+
+无
+
+**返回值**
+
+无
+
+**例子**
+
+无
+
+---
+
 ## socket.wait(ctrl)
 
 
