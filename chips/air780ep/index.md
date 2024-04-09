@@ -2,5 +2,6 @@
 
 ```{toctree}
 mcu
+iomux
 changelog
 ```
