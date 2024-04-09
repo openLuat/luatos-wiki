@@ -28,6 +28,7 @@ l3g4200d
 lbsLoc
 lbsLoc2
 libfota
+libfota2
 libnet
 lis2dh12
 lm75
