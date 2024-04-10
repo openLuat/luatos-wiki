@@ -6,4 +6,5 @@ board
 hardware
 changelog
 macaddr
+fota_iot
 ```
