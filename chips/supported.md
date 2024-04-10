@@ -33,7 +33,6 @@
 | [zbuff](https://wiki.luatos.com/api/zbuff.html)       | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [pack](https://wiki.luatos.com/api/pack.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [libgnss](https://wiki.luatos.com/api/libgnss.html)   | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
-| [libcoap](https://wiki.luatos.com/api/libcoap.html)   | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [lcd](https://wiki.luatos.com/api/lcd.html)           | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [eink](https://wiki.luatos.com/api/eink.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [u8g2](https://wiki.luatos.com/api/u8g2.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
@@ -48,15 +47,16 @@
 
 | Libs                                                  | Air101 | Air103 | Air105 | Air780E | ESP32C2 | ESP32C3 |
 |-------------------------------------------------------|--------|--------|--------|--------|---------|--------|
-| [socket](https://wiki.luatos.com/api/socket.html)     | ✖      | ✖     | ✔      | ✔     | ⚠      | ⚠      |
-| [wlan](https://wiki.luatos.com/api/wlan.html)         | ✖      | ✖     | ✔      | ✔     | ✔      | ✔      |
+| [socket](https://wiki.luatos.com/api/socket.html)     | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
+| [wlan](https://wiki.luatos.com/api/wlan.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
 | [nimble](https://wiki.luatos.com/api/nimble.html)     | ✔      | ✔     | ✖      | ✖     | ✖      | ✔      |
-| [http](https://wiki.luatos.com/api/http.html)         | ✖      | ✖     | ✔      | ✔     | ✔      | ✔      |
-| [mqtt](https://wiki.luatos.com/api/mqtt.html)         | ✖      | ✖     | ✔      | ✔     | ✔      | ✔      |
-| [websocket](https://wiki.luatos.com/api/websocket.html) | ✖    | ✔     | ✔      | ✔     | ⚠      | ⚠      |
+| [http](https://wiki.luatos.com/api/http.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
+| [mqtt](https://wiki.luatos.com/api/mqtt.html)         | ✔      | ✔     | ✔      | ✔     | ✔      | ✔      |
+| [websocket](https://wiki.luatos.com/api/websocket.html) | ✔    | ✔     | ✔      | ✔     | ✔      | ✔      |
 
 * Air105搭配W5500才有联网功能
 * Air780E仅支持wifi scan ,无 wifi 联网功能
+* Air101/Air103需要云编译开启wifi功能才能联网, 开发板未引出天线
 
 ## 图示含义 Table Legend
 
