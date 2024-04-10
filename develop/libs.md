@@ -7,18 +7,18 @@
 
 ## 部分库展示
 
-
 * RTK相关的ntrip协议库 [ntrip@gitee](https://gitee.com/wendal/luatos-lib-ntrip) [ntrip@github](https://github.com/wendal/luatos-lib-ntrip)
 * 纯wifi定位库 [wifiloc@github](https://github.com/wendal/luatos-lib-wifiloc)
 * 结构体处理zstruct [zstruct@github](https://github.com/wendal/luatos-lib-zstruct)
 * 腾讯基站定位 [qqlbs@github](https://github.com/wendal/luatos-lib-qqlbs)
 * OneNet的单频RTK对接 [onenetcors@github](https://github.com/wendal/luatos-lib-onenetcors)
+* DNS客户端 [dnsclient@github](https://github.com/wendal/luatos-lib-dnsclient)
 
 ## 期待你的扩展库
 
 如果你也做了扩展库，非常欢迎你分享出来，让更多的人受益。
 
 * 库的tag加上 luatos 字样
-* 告知我们 https://gitee.com/openLuat/LuatOS 提交一个issue
+* 告知我们 [LuatOS](https://gitee.com/openLuat/LuatOS) 提交一个issue
 
 期待你的扩展库^_^
