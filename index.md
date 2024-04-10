@@ -86,34 +86,6 @@ LuatOS提供了丰富的外设接口库，可以更便捷地实现创意，无�
 我们正适配更多的单片机和无线芯片模组, 欢迎您的加入^_^
 ```
 
-
-
-<style type="text/css">
-    .chatlink {
-        position: fixed;
-        z-index: 2147483645;
-        width: auto;
-        font-size: 16px;
-        line-height: 24px;
-        top: 60px;
-        right: 100px;
-        color: #19caa6;
-        text-align: center;
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-    }
-</style>
-<div class="chatlink" id="chatlink">
-    <button onclick="window.open('https://chat.openluat.com')">文档没解决，论坛发个帖！</button><p/>
-</div>
-<script>
-if (location.href.indexOf("https://wiki.luatos.org") == 0 ) {
-  document.getElementById('chatlink').style.cssText = "display: none";
-}
-</script>
-
 ```{toctree}
 :hidden:
 :caption: 💁 LuatOS 介绍
