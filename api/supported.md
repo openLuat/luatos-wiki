@@ -90,7 +90,7 @@
 |[wdt](wdt.md)|`watchdog操作库`|Y|Y|Y|Y|Y|Y|Y|
 |[websocket](websocket.md)|`websocket客户端`|Y|Y|Y|Y|X|X|X|
 |[wlan](wlan.md)|`wifi操作`|Y|Y|Y|Y|X|Y|Y|
-|[wlanraw](wlanraw.md)|`WLAN数据RAW传输`|X|X|X|X|X|X|X|
+|[wlanraw](wlanraw.md)|`WLAN数据RAW传输`|X|X|Y|Y|X|X|X|
 |[ws2812](ws2812.md)|`幻彩灯带RGB控制器(WS2812系列)`|Y|Y|Y|Y|X|X|X|
 |[xxtea](xxtea.md)|`xxtea加密解密 `|Y|Y|Y|Y|X|Y|Y|
 |[ymodem](ymodem.md)|`ymodem协议`|Y|Y|Y|Y|Y|Y|Y|
