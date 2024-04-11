@@ -93,6 +93,7 @@ w5500
 wdt
 websocket
 wlan
+wlanraw
 ws2812
 xxtea
 ymodem
