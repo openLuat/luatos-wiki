@@ -84,7 +84,7 @@
 |[touchkey](touchkey.md)|`触摸按键`|X|X|Y|Y|X|X|X|
 |[u8g2](u8g2.md)|`u8g2图形处理库`|Y|Y|Y|Y|Y|Y|Y|
 |[uart](uart.md)|`串口操作库`|Y|Y|Y|Y|Y|Y|Y|
-|[ulwip](ulwip.md)|`用户空间的lwip集成(开发中)`|X|X|Y|Y|X|Y|Y|
+|[ulwip](ulwip.md)|`用户空间的lwip集成(开发中)`|Y|X|Y|Y|X|Y|Y|
 |[usbapp](usbapp.md)|`USB功能操作`|X|X|X|X|Y|X|X|
 |[w5500](w5500.md)|`w5500以太网驱动`|Y|Y|Y|Y|Y|Y|Y|
 |[wdt](wdt.md)|`watchdog操作库`|Y|Y|Y|Y|Y|Y|Y|
