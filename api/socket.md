@@ -569,6 +569,15 @@ local succ, new_netc = socket.listen(ctrl, cb)
 ```lua
 local state, str = socket.state(ctrl)
 log.info("state", state, str)
+state	0	"硬件离线",
+		1	"离线",
+		2	"等待DNS",
+		3	"正在连接",
+		4	"正在TLS握手",
+		5	"在线",
+		6	"在监听",
+		7	"正在离线",
+		8	"未知"
 
 ```
 
