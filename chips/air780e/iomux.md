@@ -162,9 +162,10 @@ pwrkey的说明:
 ```lua
 -- 长按2秒后关机
 gpio.debounce(35, 2000, 1)
-gpio.setup(35, function() end, gpio.PULLUP)
-    rtos.shutdown()
-end
+gpio.setup(35, function()
+    log.info("执行关机")
+    pm.shutdown()
+end, gpio.PULLUP)
 ```
 
 ## 关于USB的额外说明
