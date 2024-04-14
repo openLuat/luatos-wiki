@@ -153,6 +153,20 @@ vbus的说明:
 gpio.setup(32, function() end, gpio.PULLUP)
 ```
 
+pwrkey的说明:
+
+1. pwrkey是上拉输入, 下拉立即开机或1.5秒开机, 取决于启用了开机防抖(`pm.power(pm.PWK_MODE, true)`)
+2. AT固件是默认开机防抖的, 所以对应的是下拉1.5秒开机
+3. 对应LuatOS/CSDK固件, 开机后该管脚的功能是自定义的, 再次下拉并不会关机, 可以通过如下代码实现关机
+
+```lua
+-- 长按2秒后关机
+gpio.debounce(35, 2000, 1)
+gpio.setup(35, function() end, gpio.PULLUP)
+    rtos.shutdown()
+end
+```
+
 ## 关于USB的额外说明
 
 1. **BOOT模式对USB布线要求高**,一定要做差分线和阻抗匹配!!!
