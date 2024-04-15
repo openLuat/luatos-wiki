@@ -27,6 +27,7 @@
 |[gpio](gpio.md)|`GPIO操作`|Y|Y|Y|Y|Y|Y|Y|
 |[gtfont](gtfont.md)|`高通字库芯片`|Y|Y|Y|Y|Y|X|X|
 |[hmeta](hmeta.md)|`硬件元数据`|Y|Y|X|X|X|X|X|
+|[ht1621](ht1621.md)|`液晶屏驱动(HT1621/HT1621B)`|Y|Y|Y|Y|Y|Y|Y|
 |[http](http.md)|`http 客户端`|Y|Y|Y|Y|Y|Y|Y|
 |[httpsrv](httpsrv.md)|`http服务端`|Y|Y|Y|Y|X|Y|Y|
 |[i2c](i2c.md)|`I2C操作`|Y|Y|Y|Y|Y|Y|Y|

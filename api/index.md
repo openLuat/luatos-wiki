@@ -30,6 +30,7 @@ gmssl
 gpio
 gtfont
 hmeta
+ht1621
 http
 httpsrv
 i2c
