@@ -1,4 +1,4 @@
-# spislave - SPI从机(开发中)
+# spislave - SPI从机
 
 {bdg-success}`已适配` {bdg-primary}`Air601` {bdg-primary}`Air101/Air103`
 
@@ -14,6 +14,7 @@
 
 ```lua
 -- 请查阅demo
+-- 当前仅XT804系列支持, 例如 Air101/Air103/Air601
 
 ```
 

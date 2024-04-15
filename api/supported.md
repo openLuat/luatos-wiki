@@ -75,7 +75,7 @@
 |[socket](socket.md)|`网络接口`|Y|Y|Y|Y|Y|Y|Y|
 |[softkb](softkb.md)|`软件键盘矩阵`|X|X|X|X|Y|X|X|
 |[spi](spi.md)|`spi操作库`|Y|Y|Y|Y|Y|Y|Y|
-|[spislave](spislave.md)|`SPI从机(开发中)`|X|X|Y|Y|X|X|X|
+|[spislave](spislave.md)|`SPI从机`|X|X|Y|Y|X|X|X|
 |[sqlite3](sqlite3.md)|`sqlite3数据库操作`|Y|Y|Y|Y|X|X|X|
 |[statem](statem.md)|`SM状态机`|Y|Y|Y|Y|Y|Y|Y|
 |[string](string.md)|`字符串操作函数`|Y|Y|Y|Y|Y|Y|Y|
