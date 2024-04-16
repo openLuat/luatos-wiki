@@ -28,7 +28,7 @@ lua代码 <- ulwip回调函数 <- lwip(netif->low_level_output) <- lwip处理逻
 
 ```
 
-## ulwip.setup(adapter_index, mac, output_lua_ref)
+## ulwip.setup(adapter_index, mac, output_lua_ref, opts)
 
 
 
@@ -41,7 +41,7 @@ lua代码 <- ulwip回调函数 <- lwip(netif->low_level_output) <- lwip处理逻
 |int|adapter_index 适配器编号|
 |string|mac 网卡mac地址|
 |function|output_lua_ref 回调函数, 参数为(adapter_index, data)|
-|table|额外参数, 例如 {mtu=1500, flags=(ulwip.FLAG_BROADCAST \| ulwip.FLAG_ETHARP \|)}|
+|table|额外参数, 例如 {mtu=1500, flags=(ulwip.FLAG_BROADCAST \| ulwip.FLAG_ETHARP)}|
 
 **返回值**
 
