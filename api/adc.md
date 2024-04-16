@@ -96,6 +96,8 @@ adc.close(4) -- 若需要持续读取, 则不需要close, 功耗会高一点.
 **例子**
 
 ```lua
+-- 本函数要在调用adc.open之前就调用, 之后调用无效!!!
+
 -- 关闭air105内部分压
 adc.setRange(adc.ADC_RANGE_1_8)
 -- 打开air105内部分压
