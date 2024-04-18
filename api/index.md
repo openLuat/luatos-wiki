@@ -17,6 +17,7 @@ crypto
 dac
 disp
 eink
+ercoap
 errDump
 fastlz
 fatfs

@@ -14,6 +14,7 @@
 |[dac](dac.md)|`数模转换`|X|X|X|X|Y|X|X|
 |[disp](disp.md)|`disp库(已废弃)`|Y|Y|Y|Y|Y|Y|Y|
 |[eink](eink.md)|`墨水屏操作库`|Y|Y|Y|Y|Y|Y|Y|
+|[ercoap](ercoap.md)|`新的Coap协议解析库`|?|?|?|?|?|?|?|
 |[errDump](errDump.md)|`错误上报`|Y|Y|Y|Y|X|X|X|
 |[fastlz](fastlz.md)|`FastLZ压缩`|Y|Y|Y|Y|X|X|X|
 |[fatfs](fatfs.md)|`读写fatfs格式`|Y|Y|Y|Y|Y|Y|Y|
