@@ -304,7 +304,7 @@ print("ticks", result, diff_tick)
 **例子**
 
 ```lua
-mcu.setXTAL(true, true, 1248)	--高速时钟使用外部时钟,低速32K使用外部晶振, delay1248
+mcu.setXTAL(true, true, 1248)    --高速时钟使用外部时钟,低速32K使用外部晶振, delay1248
 
 ```
 
@@ -329,9 +329,9 @@ mcu死机时处理模式，目前只有EC618平台适用
 **例子**
 
 ```lua
-mcu.hardfault(0)	--死机后停机，一般用于调试状态
-mcu.hardfault(1)	--死机后重启，一般用于正式产品
-mcu.hardfault(2)	--死机后尽量将错误信息提交给外部工具后重启，一般用于压力测试或者正式产品
+mcu.hardfault(0)    --死机后停机，一般用于调试状态
+mcu.hardfault(1)    --死机后重启，一般用于正式产品
+mcu.hardfault(2)    --死机后尽量将错误信息提交给外部工具后重启，一般用于压力测试或者正式产品
 
 ```
 
@@ -358,11 +358,11 @@ mcu.hardfault(2)	--死机后尽量将错误信息提交给外部工具后重启�
 **例子**
 
 ```lua
-mcu.iomux(mcu.UART, 2, 1)	-- Air780E的UART2复用到gpio12和gpio13(Air780EG默认是这个复用，不要动)
-mcu.iomux(mcu.UART, 2, 2)	-- Air780E的UART2复用到gpio6和gpio7
-mcu.iomux(mcu.I2C, 0, 1)	-- Air780E的I2C0复用到gpio12和gpio13
-mcu.iomux(mcu.I2C, 0, 2)	-- Air780E的I2C0复用到gpio16和gpio17
-mcu.iomux(mcu.I2C, 1, 1)	-- Air780E的I2C1复用到gpio4和gpio5
+mcu.iomux(mcu.UART, 2, 1)    -- Air780E的UART2复用到gpio12和gpio13(Air780EG默认是这个复用，不要动)
+mcu.iomux(mcu.UART, 2, 2)    -- Air780E的UART2复用到gpio6和gpio7
+mcu.iomux(mcu.I2C, 0, 1)    -- Air780E的I2C0复用到gpio12和gpio13
+mcu.iomux(mcu.I2C, 0, 2)    -- Air780E的I2C0复用到gpio16和gpio17
+mcu.iomux(mcu.I2C, 1, 1)    -- Air780E的I2C1复用到gpio4和gpio5
 
 ```
 

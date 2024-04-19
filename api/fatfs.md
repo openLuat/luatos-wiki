@@ -59,7 +59,7 @@
     local TF_CS = pin.PB3
     gpio.setup(TF_CS, 1)
     --fatfs.debug(1) -- 若挂载失败,可以尝试打开调试信息,查找原因
-	-- 提醒, 若TF/SD模块带电平转换, 通常不支持10M以上的波特率!!
+    -- 提醒, 若TF/SD模块带电平转换, 通常不支持10M以上的波特率!!
     fatfs.mount(fatfs.SPI,"SD", spiId, TF_CS, 24000000)
     local data, err = fatfs.getfree("SD")
     if data then
@@ -67,7 +67,7 @@
     else
         log.info("fatfs", "err", err)
     end
-	-- 往下的操作, 使用 io.open("/sd/xxx", "w+") 等io库的API就可以了
+    -- 往下的操作, 使用 io.open("/sd/xxx", "w+") 等io库的API就可以了
 
 ```
 

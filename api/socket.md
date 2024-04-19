@@ -132,8 +132,8 @@ sys.taskInit(function()
     while 1 do
         sys.wait(3000)
         log.info("socket", "ip", socket.localIP())
-		-- 输出示例
-		-- 62.39.244.10	255.255.255.255	0.0.0.0
+        -- 输出示例
+        -- 62.39.244.10    255.255.255.255    0.0.0.0
     end
 end)
 
@@ -433,14 +433,14 @@ local succ, data_len, remote_ip, remote_port = socket.rx(ctrl, buff, 1500)
 -- 对于UDP数据, 这里返回的是单个UDP数据包的长度
 local succ, data_len = socket.rx(ctrl)
 if succ then
-	log.info("待收取数据长度", data_len)
+    log.info("待收取数据长度", data_len)
 end
 
 ```
 
 ---
 
-## socket.read(netc, limit)
+## socket.read(netc, len)
 
 
 
@@ -448,15 +448,31 @@ end
 
 **参数**
 
-无
+|传入值类型|解释|
+|-|-|
+|userdata|socket.create得到的ctrl|
+|int|限制读取数据长度,可选,不传就是读出全部|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|boolean|读取成功与否|
+|string|读取的数据,仅当读取成功时有效|
+|string|对方IP地址,仅当读取成功且UDP通信时有效|
+|int|对方端口,仅当读取成功且UDP通信时有效|
 
 **例子**
 
-无
+```lua
+-- 本函数于2024.4.8添加, 用于简易读取不大的数据
+-- 请优先使用socket.rx函数, 本函数主要用于固件不含zbuff库时的变通调用
+local ok, data = socket.read(netc, 1500)
+if ok and #data > 0 then
+    log.info("读取到的数据", data)
+end
+
+```
 
 ---
 
@@ -569,15 +585,15 @@ local succ, new_netc = socket.listen(ctrl, cb)
 ```lua
 local state, str = socket.state(ctrl)
 log.info("state", state, str)
-state	0	"硬件离线",
-		1	"离线",
-		2	"等待DNS",
-		3	"正在连接",
-		4	"正在TLS握手",
-		5	"在线",
-		6	"在监听",
-		7	"正在离线",
-		8	"未知"
+state    0    "硬件离线",
+        1    "离线",
+        2    "等待DNS",
+        3    "正在连接",
+        4    "正在TLS握手",
+        5    "在线",
+        6    "在监听",
+        7    "正在离线",
+        8    "未知"
 
 ```
 
@@ -591,7 +607,9 @@ state	0	"硬件离线",
 
 **参数**
 
-无
+|传入值类型|解释|
+|-|-|
+|user_data|socket.create得到的ctrl|
 
 **返回值**
 
@@ -599,7 +617,11 @@ state	0	"硬件离线",
 
 **例子**
 
-无
+```lua
+-- 释放后就不能再使用了
+socket.release(ctrl)
+
+```
 
 ---
 
@@ -645,7 +667,7 @@ socket.setDNS(socket.ETH0, 1, "114.114.114.114")
 
 |传入值类型|解释|
 |-|-|
-|int	mbedtls|log等级|
+|int|mbedtls log等级|
 
 **返回值**
 

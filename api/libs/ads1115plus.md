@@ -12,13 +12,13 @@
 ```lua
 require 'ads1115plus'
 sys.taskInit(function ()
-	i2c.setup(i2cid, i2c_speed)
+    i2c.setup(i2cid, i2c_speed)
     ads1115plus.Setup(i2cid) -- 一次初始化
-	
-	while true do
-		log.info("ads1115:",ads1115plus.task_read(5))
-		sys.wait(1000)
-	end
+    
+    while true do
+        log.info("ads1115:",ads1115plus.task_read(5))
+        sys.wait(1000)
+    end
 
 end)
 

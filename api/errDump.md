@@ -105,12 +105,12 @@ errDump.record("socket long time no connect") --记录下"socket long time no co
 **例子**
 
 ```lua
-errDump.config(true, 3600, "12345678")	--一个小时尝试上次一次，上传时会在imei后附加上12345678
-errDump.config(false)	--关闭记录功能，不再上传
-errDump.config(true, 0)	--记录，但是不会主动上传，由用户实现上传功能
+errDump.config(true, 3600, "12345678")    --一个小时尝试上次一次，上传时会在imei后附加上12345678
+errDump.config(false)    --关闭记录功能，不再上传
+errDump.config(true, 0)    --记录，但是不会主动上传，由用户实现上传功能
 
 -- 2023.09.22新增custom_id参数
-errDump.config(true, 3600, nil, "ABC")	--一个小时尝试上次一次，上传时使用自定义的设备识别号ABC
+errDump.config(true, 3600, nil, "ABC")    --一个小时尝试上次一次，上传时使用自定义的设备识别号ABC
 
 -- 2023.12.8 新增host和port参数
 errDump.config(true, 3600, nil, nil, "dev_msg1.openluat.com", 12425)

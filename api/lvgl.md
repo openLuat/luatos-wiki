@@ -584,8 +584,8 @@ LVGL休眠控制，暂停/恢复刷新定时器，目前只有105和EC618可以�
 **例子**
 
 ```lua
-lvgl.sleep(true)		--暂停刷新，系统可以休眠
-lvgl.sleep(false)		--恢复刷新，系统不休眠
+lvgl.sleep(true)        --暂停刷新，系统可以休眠
+lvgl.sleep(false)        --恢复刷新，系统不休眠
 
 ```
 

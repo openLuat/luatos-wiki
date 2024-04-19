@@ -266,7 +266,7 @@ mobile.simid(2, true) -- -- 自动识别SIM0, SIM1, 且SIM0优先
 
 ```lua
 local cpin_is_ready = mobile.simPin() -- 当前sim卡是否准备好，一般返回false就是没卡
-local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")	-- 输入pin码验证
+local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")    -- 输入pin码验证
 
 ```
 
@@ -914,7 +914,7 @@ RF测试开关和配置
 **例子**
 
 ```lua
-mobile.nstOnOff(true, uart.VUART_0)	--打开测试模式，并且用虚拟串口发送结果
+mobile.nstOnOff(true, uart.VUART_0)    --打开测试模式，并且用虚拟串口发送结果
 mobile.nstOnOff(false) --关闭测试模式
 
 ```

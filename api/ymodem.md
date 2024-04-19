@@ -14,13 +14,13 @@
 local handler = ymodem.create("/")
 uart.setup(1, 115200)
 uart.on(1, "receive", function(id, len)
-	while 1 do
-		local data = uart.read(id, 512)
-		if not data or #data == 0 then
-			break
-		end
-		ymodem.receive(handler, data)
-	end
+    while 1 do
+        local data = uart.read(id, 512)
+        if not data or #data == 0 then
+            break
+        end
+        ymodem.receive(handler, data)
+    end
 end)
 
 ```

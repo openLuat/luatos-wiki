@@ -18,9 +18,9 @@ require "sys"
 require "sysplus"
 
 sys.taskInit(function()
-	sys.wait(1000)
-	local code,headers,body = http.request("GET", "http://www.example.com/abc").wait()
-	log.info("http", code, body)
+    sys.wait(1000)
+    local code,headers,body = http.request("GET", "http://www.example.com/abc").wait()
+    log.info("http", code, body)
 end)
 
 

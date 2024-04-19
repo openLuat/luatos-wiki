@@ -194,8 +194,8 @@ end)
 **例子**
 
 ```lua
-audio.play(0, "xxxxxx")		--开始播放某个文件
-audio.play(0)				--停止播放某个文件
+audio.play(0, "xxxxxx")        --开始播放某个文件
+audio.play(0)                --停止播放某个文件
 
 ```
 
@@ -336,8 +336,8 @@ local result, user_stop, file_no = audio.getError(0)
 **例子**
 
 ```lua
-audio.config(0, pin.PC0, 1)	--PA控制脚是PC0，高电平打开，air105用这个配置就可以用了
-audio.config(0, 25, 1, 6, 200)	--PA控制脚是GPIO25，高电平打开，Air780E云喇叭板用这个配置就可以用了
+audio.config(0, pin.PC0, 1)    --PA控制脚是PC0，高电平打开，air105用这个配置就可以用了
+audio.config(0, 25, 1, 6, 200)    --PA控制脚是GPIO25，高电平打开，Air780E云喇叭板用这个配置就可以用了
 
 ```
 
@@ -365,7 +365,7 @@ audio.config(0, 25, 1, 6, 200)	--PA控制脚是GPIO25，高电平打开，Air780
 **例子**
 
 ```lua
-local result = audio.vol(0, 90)	--通道0的音量调节到90%，result存放了调节后的音量水平，有可能仍然是100
+local result = audio.vol(0, 90)    --通道0的音量调节到90%，result存放了调节后的音量水平，有可能仍然是100
 
 ```
 
@@ -393,7 +393,7 @@ local result = audio.vol(0, 90)	--通道0的音量调节到90%，result存放了
 **例子**
 
 ```lua
-local result = audio.vol(0, 90)	--通道0的音量调节到90%，result存放了调节后的音量水平，有可能仍然是100
+local result = audio.vol(0, 90)    --通道0的音量调节到90%，result存放了调节后的音量水平，有可能仍然是100
 
 ```
 
@@ -422,8 +422,8 @@ local result = audio.vol(0, 90)	--通道0的音量调节到90%，result存放了
 **例子**
 
 ```lua
-audio.setBus(0, audio.BUS_SOFT_DAC)	--通道0的硬件输出通道设置为软件DAC
-audio.setBus(0, audio.BUS_I2S)	--通道0的硬件输出通道设置为I2S
+audio.setBus(0, audio.BUS_SOFT_DAC)    --通道0的硬件输出通道设置为软件DAC
+audio.setBus(0, audio.BUS_I2S)    --通道0的硬件输出通道设置为I2S
 
 ```
 

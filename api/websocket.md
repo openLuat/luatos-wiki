@@ -15,7 +15,7 @@
 ```lua
 local wsc = nil
 if websocket then
-	wsc = websocket.create(nil, "ws://echo.airtun.air32.cn/ws/echo")
+    wsc = websocket.create(nil, "ws://echo.airtun.air32.cn/ws/echo")
     wsc:autoreconn(true, 3000) -- 自动重连机制
     wsc:on(function(wsc, event, data)
         log.info("wsc", event, data)
@@ -29,8 +29,8 @@ if websocket then
     while true do
         sys.wait(45000)
         if wsc:ready() then
-        	wsc:send((json.encode({action="echo", msg=os.date()})))
-		end
+            wsc:send((json.encode({action="echo", msg=os.date()})))
+        end
     end
     wsc:close()
     wsc = nil
@@ -115,15 +115,15 @@ wsc = websocket.create(nil,"wss://air32.cn/abc")
 
 ```lua
 wsc:on(function(websocket_client, event, data, payload)
-	-- 打印各种事件
-	log.info("websocket", "event", event, data, payload)
+    -- 打印各种事件
+    log.info("websocket", "event", event, data, payload)
 end)
 --[[
 event的值有:
-	conack 连接服务器成功,已经收到websocket协议头部信息,通信已建立
-	recv   收到服务器下发的信息, data, payload 不为nil
-	sent   send函数发送的消息,服务器在TCP协议层已确认收到
-	disconnect 服务器连接已断开
+    conack 连接服务器成功,已经收到websocket协议头部信息,通信已建立
+    recv   收到服务器下发的信息, data, payload 不为nil
+    sent   send函数发送的消息,服务器在TCP协议层已确认收到
+    disconnect 服务器连接已断开
 
 其中 sent/disconnect 事件在 2023.04.01 新增
 ]]
@@ -290,7 +290,7 @@ local stat = wsc:ready()
 ```lua
 -- table形式
 wsc:headers({
-	Auth="Basic ABCDEFGG"
+    Auth="Basic ABCDEFGG"
 })
 -- 字符串形式
 wsc:headers("Auth: Basic ABCDERG\r\n")
