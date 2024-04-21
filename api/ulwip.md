@@ -61,7 +61,8 @@ end)
 -- 额外参数配置table可选值
 -- mtu, 默认1460
 -- flags, 默认 ulwip.FLAG_BROADCAST | ulwip.FLAG_ETHARP | ulwip.FLAG_ETHERNET | ulwip.FLAG_IGMP | ulwip.FLAG_MLD6
--- 即如下格式 {mtu=1460, flags=(ulwip.FLAG_BROADCAST | ulwip.FLAG_ETHARP | ulwip.FLAG_ETHERNET | ulwip.FLAG_IGMP | ulwip.FLAG_MLD6)}
+-- zbuff_out 回调函数接受zbuff作为参数, 默认false
+-- reverse 本地lwip设备,翻转调用逻辑, 默认false, 这个参数是为了拦截当前设备的硬件联网数据所设计的
 
 ```
 
@@ -234,36 +235,6 @@ ulwip.ip(socket.LWIP_STA, "192.168.0.1", "255.255.255.0", "192.168.0.1")
 
 ```lua
 -- 参考ulwip.setup
-
-```
-
----
-
-## ulwip.dft(adapter_index)
-
-
-
-设置默认netif网卡
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int/boolean|adapter_index 适配器编号或还原默认网卡|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|boolean|成功与否|
-
-**例子**
-
-```lua
--- 将默认网卡设置为socket.LWIP_ETH
-ulwip.dft(socket.LWIP_ETH)
--- 还原默认网卡
-ulwip.dft(true)
 
 ```
 
