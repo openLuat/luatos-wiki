@@ -2,12 +2,12 @@
 
 **本文档描述的是LuatOS和CSDK视角**
 
-1. 通过[mcu.iomux函数](https://wiki.luatos.com/api/mcu.html)可以修改部分映射.
+1. 通过[mcu.altfun函数](https://wiki.luatos.com/api/mcu.html)可以修改部分映射.
 2. 不同模块的外部管脚布局不一样, 但`PAD(paddr)`值是一致的, 要对应 "PIN/GPIO对应表格" 文档, 该文档可以在 [air780ep.cn](https://air780ep.cn) 找到
 3. 对于AT固件来说,本文档没有意义, 请无视
-4. 云编译和mcu.iomux函数可以调整部分复用关系, 请查阅链接 [mcu库的文档](https://wiki.luatos.com/api/mcu.html)
+4. 云编译和mcu.altfun函数可以调整部分复用关系, 请查阅链接 [mcu库的文档](https://wiki.luatos.com/api/mcu.html)
 5. 若使用SIM2, 会占用 4个IO(gpio4/5/6/23)
-6. `mcu.altfun` 函数需要搭配GPIO复用表使用, 在[air780ep.cn](https://air780ep.cn) 首页,硬件资料的表格中 找到GPIO字样的PDF文档
+6. `mcu.iomux` 函数需要搭配GPIO复用表使用, 在[air780ep.cn](https://air780ep.cn) 首页,硬件资料的表格中 找到GPIO字样的PDF文档
 
 ## PWM说明
 
@@ -34,7 +34,7 @@
 2. uart1是主串口(MAIN_TX/MAIN_RX), 推荐使用
 3. uart2是次串口(AUX_TX/AUX_RX)
 4. uart3是备用串口,没有默认功能
-5. 下列映射是默认值, 支持通过 `mcu.altfun` 配置
+5. 下列映射是默认值, 支持通过 `mcu.iomux` 配置
 6. 当前不支持释放uart0
 
 |功能    |软件含义  |对应的GPIO|对应的PAD|备注|
