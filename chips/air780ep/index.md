@@ -2,6 +2,7 @@
 
 ```{toctree}
 mcu
+hardware
 iomux
 changelog
 ```
