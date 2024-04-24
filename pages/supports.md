@@ -2,7 +2,7 @@
 
 ## Chat社区(强烈推荐)
 
-地址: chat.openluat.com
+地址: [chat.openluat.com](https://chat.openluat.com)
 
 强烈推荐, 长期有人值守, 有问必答.
 
@@ -29,11 +29,5 @@
 
 ## 购买途径
 
-* 拼多多   http://mobile.yangkeduo.com/mall_page.html?mall_id=500792601
-
-![](pdd.jpg)
-
-* 抖音     [aweme://goods/store?sec_shop_id=fwqlTVqO](aweme://goods/store?sec_shop_id=fwqlTVqO)
-![](douyin.png)
-
+* 合宙淘宝商城 [luat.taobao.com](https://luat.taobao.com)
 * 合宙商城 ![](luatos_shop.jpg)
