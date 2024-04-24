@@ -24,6 +24,8 @@ lua代码 <- ulwip回调函数 <- lwip(netif->low_level_output) <- lwip处理逻
 1. Air601的wifi模块作为被控端, 通过UART/SPI收发MAC包, 实现Air780E/Air780EP集成wifi模块的功能
 2. 使用W5500/CH395/ENC28J60等以太网模块, 在用户lua代码中控制其mac包收发, 并集成到luatos socket框架中
 3. 通过蓝牙模块,集成lowpan6
+
+-- 开发中, 请关注 https://github.com/wendal/xt804-spinet
 ]]
 
 ```
@@ -124,7 +126,7 @@ end)
 
 ---
 
-## ulwip.input(adapter_index, data)
+## ulwip.input(adapter_index, data, len, offset)
 
 
 
@@ -135,7 +137,9 @@ end)
 |传入值类型|解释|
 |-|-|
 |int|adapter_index 适配器编号|
-|string|data 输入的数据|
+|string/userdata|data 输入的数据|
+|int|如果data是zbuff, len默认是zbuff的used, 对string无效|
+|int|如果data是zbuff, offset为数据起始位置, 默认是0, 对string无效|
 
 **返回值**
 

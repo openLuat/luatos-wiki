@@ -57,6 +57,7 @@ miniz
 mlx90640
 mobile
 mqtt
+natp
 nes
 nimble
 onewire
