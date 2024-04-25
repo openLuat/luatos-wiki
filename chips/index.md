@@ -4,19 +4,19 @@
 
 ```{toctree}
 chips
+air780ep/index
+air780e/index
+pc/index
 air001/index
+air32f103/index
+air601/index
 air101/index
 air103/index
 air105/index
-air601/index
-air780e/index
-air780ep/index
 esp32c3/index
 esp32s3/index
-air32f103/index
 rp2040/index
 swm181/index
-pc/index
 air302/index
 air640w/index
 W806

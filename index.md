@@ -77,7 +77,6 @@ LuatOS提供了丰富的外设接口库，可以更便捷地实现创意，无�
 |[Air601](chips/air601/index) |wifi/bt芯片|支持wifi和蓝牙通信|
 |[ESP32](chips/esp32c3/index) 系列| (wifi/bt芯片）|ESP32C3/ESP32S3等|
 |[PC](https://gitee.com/openLuat/luatos-soc-pc) |PC版LuatOS|可作为模拟器使用|
-|[win32](chips/win32) |win32版LuatOS|可作为模拟器使用|
 |[RT-Thread](https://github.com/openLuat/luatos-soc-rtt) |内存需满足最低要求| 已并入rtt主线|
 |[Air302](chips/air302/index) |nbiot模组| EOL|
 |[Air640w](chips/air640w/index) |wifi模组|  EOL|
