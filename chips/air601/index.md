@@ -7,4 +7,5 @@ hardware
 changelog
 macaddr
 fota_iot
+spi_slave
 ```
