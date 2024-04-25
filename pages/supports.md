@@ -20,6 +20,10 @@
 
 请按需加群, 管理员都一样, 都会积极解答问题, 不必重复加
 
+## 技术杂谈
+
+点击访问 👉 [LuatOS技术杂谈](../blog/index.md)
+
 ## 购买途径
 
 * 合宙淘宝商城 [luat.taobao.com](https://luat.taobao.com)

@@ -2,9 +2,9 @@
 
 ## 历史固件,常用工具及其历史版本下载
 
-[合宙云盘](https://pan.air32.cn/s/DJTr)
+点击访问 [合宙云盘](https://pan.air32.cn/s/DJTr)
 
-* 历史固件,包括2G/4G/wifi等模组
+* 最新及历史固件,包括2G/4G/wifi等模组
 * LuaTools历史版本的下载
 * 常用工具和驱动的下载
 
