@@ -19,8 +19,15 @@
 |audio.SHUTDOWN|number|PM模式 关机模式，PA断电，可配置的codec关机状态，不可配置的codec断电，系统能进低功耗状态|
 |audio.POWEROFF|number|PM模式 断电模式，PA断电，codec断电，系统能进低功耗状态|
 |audio.PCM|number|PCM格式，即原始ADC数据|
+|audio.MP3|number|MP3格式|
+|audio.WAV|number|WAV格式|
+|audio.AMR|number|AMR_NB格式|
+|audio.AMR_NB|number|AMR_NB格式|
+|audio.AMR_WB|number|AMR_WB格式|
 |audio.MORE_DATA|number|audio.on回调函数传入参数的值，表示底层播放完一段数据，可以传入更多数据|
 |audio.DONE|number|audio.on回调函数传入参数的值，表示底层播放完全部数据了|
+|audio.RECORD_DATA|number|audio.on回调函数传入参数的值，表示录音数据|
+|audio.RECORD_DONE|number|audio.on回调函数传入参数的值，表示录音完成|
 |audio.BUS_DAC|number|硬件输出总线，DAC类型|
 |audio.BUS_I2S|number|硬件输出总线，I2S类型|
 |audio.BUS_SOFT_DAC|number|硬件输出总线，软件模式DAC类型|
@@ -36,7 +43,7 @@
 
 |传入值类型|解释|
 |-|-|
-|int|多媒体播放通道号，0或者1|
+|int|多媒体播放通道号|
 |int|音频格式|
 |int|声音通道数|
 |int|采样频率|
@@ -53,6 +60,37 @@
 
 ```lua
 audio.start(0, audio.PCM, 1, 16000, 16)
+
+```
+
+---
+
+## audio.record(id, record_type, record_time, amr_quailty, path)
+
+
+
+录音
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|id             多媒体播放通道号|
+|int|record_type    录音文件音频格式,支持 audio.AMR audio.PCM |
+|int|record_time    录制时长 单位秒|
+|int|amr_quailty    质量,audio.AMR下有效|
+|string|path        录音文件路径,可选,不指定则不保存,可在audio.on回调函数中处理原始PCM数据|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+err,info = audio.record(id, type, record_time, quailty, path)
 
 ```
 
@@ -141,7 +179,7 @@ audio.pause(0, false) --恢复通道0
 
 ---
 
-## audio.on(id, event, func)
+## audio.on(audio_id, func)
 
 
 
