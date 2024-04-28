@@ -96,6 +96,33 @@ err,info = audio.record(id, type, record_time, quailty, path)
 
 ---
 
+## audio.recordStop(id)
+
+
+
+录音停止
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|id         多媒体播放通道号|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+audio.recordStop(0)
+
+```
+
+---
+
 ## audio.write(id, data)
 
 
