@@ -76,10 +76,11 @@ audio.start(0, audio.PCM, 1, 16000, 16)
 |传入值类型|解释|
 |-|-|
 |int|id             多媒体播放通道号|
-|int|record_type    录音文件音频格式,支持 audio.AMR audio.PCM |
+|int|record_type    录音音频格式,支持 audio.AMR audio.PCM (部分平台支持audio.AMR_WB)|
 |int|record_time    录制时长 单位秒|
 |int|amr_quailty    质量,audio.AMR下有效|
 |string|path        录音文件路径,可选,不指定则不保存,可在audio.on回调函数中处理原始PCM数据|
+|int|record_callback_time    不指定录音文件路径时，单次录音回调时长，单位是100ms。默认1，既100ms|
 
 **返回值**
 
