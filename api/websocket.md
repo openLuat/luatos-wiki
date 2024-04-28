@@ -62,7 +62,7 @@ end
 
 ---
 
-## websocket.create(adapter, url)
+## websocket.create(adapter, url, keepalive)
 
 
 
@@ -74,6 +74,7 @@ websocket客户端创建
 |-|-|
 |int|适配器序号, 只能是socket.ETH0, socket.STA, socket.AP,如果不填,会选择平台自带的方式,然后是最后一个注册的适配器|
 |string|连接字符串,参考usage|
+|int|心跳间隔,默认60秒. 2024.4.28新增|
 
 **返回值**
 
