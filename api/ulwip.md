@@ -244,3 +244,37 @@ ulwip.ip(socket.LWIP_STA, "192.168.0.1", "255.255.255.0", "192.168.0.1")
 
 ---
 
+## ulwip.xt804_xfer(spi_id, cs_pin, addr, zbuff, len, offset, auto_seek, auto_len)
+
+
+
+操作XT804进行SPI快速收发
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|spi_id SPI的ID号|
+|int|cs_pin CS脚的GPIO号|
+|int|addr 寄存器地址|
+|zbuff|zbuff对象|
+|int|len 长度|
+|int|offset 偏移量, 默认buff:used()|
+|boolean|auto_seek 是否自动移动偏移量, 默认false|
+|int|auto_len 自动分片长度, 默认按寄存器自动选择|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+-- 本函数属于辅助函数
+
+```
+
+---
+
