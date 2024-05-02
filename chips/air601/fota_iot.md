@@ -162,4 +162,4 @@ http://iot.openluat.com/api/site/firmware_upgrade?imei=C81234567830&project_key=
 
 对模块来说, OTA/FOTA的流程就是 请求URL, 是200就继续下载数据然后校验, 不是200就退出.
 
-不能看懂? 那还是算了吧
+不能看懂? 那你需要钞能力了
