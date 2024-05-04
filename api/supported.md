@@ -98,4 +98,4 @@
 |[xxtea](xxtea.md)|`xxtea加密解密 `|Y|Y|Y|Y|X|Y|Y|
 |[ymodem](ymodem.md)|`ymodem协议`|Y|Y|Y|Y|Y|Y|Y|
 |[zbuff](zbuff.md)|`c内存数据操作库`|Y|Y|Y|Y|Y|Y|Y|
-|[zlib](zlib.md)|`zlib压缩/解压缩(已废弃)`|X|X|Y|Y|Y|X|X|
+|[zlib](zlib.md)|`zlib压缩/解压缩(已废弃)`|X|X|X|X|Y|X|X|
