@@ -1,4 +1,4 @@
-# cc - 通话功能
+# cc - VoLTE通话功能
 
 {bdg-success}`已适配` {bdg-primary}`Air780EP`
 
@@ -7,13 +7,13 @@
 ```
 
 ```{tip}
-本库有专属demo，[点此链接查看cc的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/mobile)
+本库有专属demo，[点此链接查看cc的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/cc)
 ```
 
 **示例**
 
 ```lua
-
+-- 当前仅Air780EPV支持VoLTE通话功能
 
 ```
 
