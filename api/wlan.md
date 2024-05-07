@@ -110,7 +110,7 @@ wlan.setMode(wlan.APSTA)
 
 ---
 
-## wlan.connect(ssid, password, auto_reconnect)
+## wlan.connect(ssid, password, auto_reconnect, bssid)
 
 
 
@@ -123,6 +123,7 @@ wlan.setMode(wlan.APSTA)
 |string|AP的ssid|
 |string|AP的password,可选|
 |int|0关闭自动重连,1开启自动重连.当前强制开启自动重连|
+|string|AP的bssid,可选,必须是6字节|
 
 **返回值**
 
@@ -141,6 +142,10 @@ wlan.connect("myap")
 -- 特殊模式, 重用之前的ssid和密码,本次直接连接
 -- 注意, 前提是本次上电后已经传过ssid和或password,否则必失败
 wlan.connect()
+
+-- 特殊模式, 使用ssid和密码,本次连接指定bssid, 2024.5.7新增
+local bssid = string.fromHex("00182946365f")
+wlan.connect("myap", "12345678", 1, bssid)
 
 ```
 
