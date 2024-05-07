@@ -136,6 +136,7 @@ print("unique_id", unique_id)
 ```lua
 local tick = mcu.ticks()
 print("ticks", tick)
+-- 如需不会溢出的值, 可用mcu.ticks32(), 于2024.5.7新增
 
 ```
 
@@ -393,6 +394,47 @@ IO外设功能复用选择，注意普通MCU是以GPIO号为序号，但是专�
 ```lua
 mcu.altfun(mcu.GPIO, 46, 32, 1, 0)
 mcu.altfun(mcu.GPIO, 46)
+
+```
+
+---
+
+## mcu.ticks2(mode)
+
+
+
+获取高精度的计数
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|模式, 看后面的用法说明|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|根据mode的不同,返回值的含义不同|
+
+**例子**
+
+```lua
+-- 本函数于2024.5.7新增
+-- 与mcu.ticks()的区别是,底层计数器是64bit的, 在可预计的将来不会溢出
+-- 所以本函数返回的值总是递增的, 而且32bit固件也能处理
+
+-- 模式可选值 及 对应的返回值
+-- 0: 返回微秒数, 以秒为分割, 例如 1234567890us 返回2个值: 1234, 567890
+-- 1: 返回毫秒数, 以千秒为分割, 例如 1234567890ms 返回2个值: 1234, 567890
+-- 2: 返回秒数,   以百万秒为分割, 例如 1234567890s  返回2个值: 1234, 567890
+
+local us_h, us_l = mcu.ticks2(0)
+local ms_h, ms_l = mcu.ticks2(1)
+local sec_h, sec_l = mcu.ticks2(2)
+log.info("us_h", us_h, "us_l", us_l)
+log.info("ms_h", ms_h, "ms_l", ms_l)
+log.info("sec_h", sec_h, "sec_l", sec_l)
 
 ```
 
