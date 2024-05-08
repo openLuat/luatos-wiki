@@ -40,7 +40,7 @@
 |传入值类型|解释|
 |-|-|
 |int|pin gpio编号,必须是数值|
-|any|mode 输入输出模式：<br>数字0/1代表输出模式<br>nil代表输入模式<br>function代表中断模式|
+|any|mode 输入输出模式：<br>数字0/1代表输出模式<br>nil代表输入模式<br>function代表中断模式，如果填gpio.count，则为中断计数功能，中断时不回调|
 |int|pull 上拉下拉模式, 可以是上拉模式 gpio.PULLUP 或下拉模式 gpio.PULLDOWN, 或者开漏模式 0. 需要根据实际硬件选用|
 |int|irq 中断触发模式,默认gpio.BOTH。中断触发模式<br>上升沿gpio.RISING<br>下降沿gpio.FALLING<br>上升和下降都触发gpio.BOTH |
 |int|alt 复用选项，目前只有EC618平台需要这个参数，有些GPIO可以复用到不同引脚上，可以选择复用选项（0或者4）从而复用到对应的引脚上|
@@ -74,6 +74,10 @@ gpio.setup(27, function(val)
     print("IRQ_27",val) -- 提醒, val并不代表触发方向, 仅代表中断后某个时间点的电平
 end, gpio.PULLUP, gpio.RISING)
 
+-- 中断计数 于2024.5.8新增
+-- 设置gpio7为中断计数，详细demo见gpio/gpio_irq_count
+gpio.setup(7, gpio.count)
+
 -- alt_func 于2023.7.2新增
 -- 本功能仅对部分平台有效, 且仅用于调整GPIO复用,其他复用方式请使用muc.iomux函数
 -- 以下示例代码, 将I2S_DOUT复用成gpio18
@@ -88,7 +92,7 @@ gpio.setup(18, 0, nil, nil, 4)
 -- 当管脚为输出模式,才能通过gpio.set()设置电平
 -- 当管脚为输出模式,通过gpio.get()总会得到0
 -- 中断回调的val参数不代表触发方向, 仅代表中断后某个时间点的电平
--- 对Cat.1模块,通常只有AONGPIO才能双向触发, 其他GPIO只能单向触发
+-- 对Cat.1模块,EC618系列只有AONGPIO才能双向触发，其他系列所有GPIO都能双向触发，具体看硬件手册
 -- 默认设置下,中断是没有防抖时间的,可以通过gpio.set_debounce(pin, 50)来设置防抖时间
 
 -- pull参数的额外说明, 上拉/下拉配置
@@ -344,6 +348,33 @@ gpio.debounce(7, 100, 1)
 
 -- 关闭防抖,时间设置为0就关闭
 gpio.debounce(7, 0)
+
+```
+
+---
+
+## gpio.count(pin)
+
+
+
+获取gpio中断数量，并清空累计值，类似air724的脉冲计数
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|gpio号, 0~127, 与硬件相关|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|返回从上次获取中断数量后到当前的中断计数|
+
+**例子**
+
+```lua
+log.info("irq cnt", gpio.count(10))
 
 ```
 
