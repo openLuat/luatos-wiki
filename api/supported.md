@@ -44,6 +44,7 @@
 |[lcdseg](lcdseg.md)|`段式lcd`|X|X|Y|Y|X|X|X|
 |[libcoap](libcoap.md)|`coap数据处理`|X|X|X|X|X|X|X|
 |[libgnss](libgnss.md)|`NMEA数据处理`|Y|Y|Y|Y|Y|Y|Y|
+|[little_flash](little_flash.md)|`LITTLE FLASH 软件包`|X|X|X|X|X|X|X|
 |[log](log.md)|`日志库`|Y|Y|Y|Y|Y|Y|Y|
 |[lora](lora.md)|`lora驱动模块`|Y|Y|Y|Y|Y|Y|Y|
 |[lora2](lora2.md)|`lora2驱动模块(支持多挂)`|Y|Y|X|X|Y|Y|Y|

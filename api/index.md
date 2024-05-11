@@ -47,6 +47,7 @@ lcd
 lcdseg
 libcoap
 libgnss
+little_flash
 log
 lora
 lora2
