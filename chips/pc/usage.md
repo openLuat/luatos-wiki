@@ -7,13 +7,6 @@
 
 ## 运行方式
 
-### 交互式
-
-这种方式是输入lua语句, 一行一行执行
-
-* windows平台, 直接双击 `luatos-pc.exe` 即可运行
-* linux平台, 直接运行 `./luatos-pc`
-
 ### 脚本运行
 
 这种方式是执行一个lua文件, 或者一批lua文件
@@ -46,3 +39,13 @@ luatos-pc.exe test\001.helloworld\  ..\LuatOS\scrips\libs\
 ![运行效果1](img/pc-usage.png)
 
 ![运行效果2](img/pc-usage2.png)
+
+
+### 交互式
+
+这种方式是输入lua语句, 一行一行执行
+
+* windows平台, 直接双击 `luatos-pc.exe` 即可运行
+* linux平台, 直接运行 `./luatos-pc`
+
+![运行效果3,交互式](img/pc-usage3.png)
