@@ -3,4 +3,5 @@
 ```{toctree}
 usage
 repo
+cmds
 ```

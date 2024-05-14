@@ -9,10 +9,14 @@
 
 ### 交互式
 
+这种方式是输入lua语句, 一行一行执行
+
 * windows平台, 直接双击 `luatos-pc.exe` 即可运行
 * linux平台, 直接运行 `./luatos-pc`
 
 ### 脚本运行
+
+这种方式是执行一个lua文件, 或者一批lua文件
 
 这种方式执行 `单个脚本`和`多目录执行` 两种方式, 需要在命令行下操作
 
@@ -21,12 +25,24 @@
 单脚本运行:
 
 ```cmd
+chcp 65001
 luatos-pc.exe main.lua
 luatos-pc.exe test\001.helloworld\main.lua
 ```
 
 多目录运行:
 
+注意文件夹需要用`\`结尾,否则会当成文件
+
 ```cmd
+chcp 65001
 luatos-pc.exe test\001.helloworld\  ..\LuatOS\scrips\libs\
 ```
+
+其中 `chcp 65001`的意思是切换控制台编码为UCS-2, 否则中文会出现乱码
+
+运行效果如下:
+
+![运行效果1](img/pc-usage.png)
+
+![运行效果2](img/pc-usage2.png)
