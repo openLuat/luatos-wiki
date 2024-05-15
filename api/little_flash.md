@@ -32,7 +32,7 @@
 
 ```lua
 --spi_device
-local spi_device = spi.deviceSetup(0,17,0,0,8,2000000,spi.MSB,1,0)
+spi_device = spi.deviceSetup(0,17,0,0,8,2000000,spi.MSB,1,0)
 log.info("lf.init",lf.init(spi_device))
 
 ```
