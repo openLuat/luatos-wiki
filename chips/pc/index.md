@@ -3,5 +3,5 @@
 ```{toctree}
 usage
 repo
-cmds
+cmd_luadb
 ```

@@ -5,6 +5,9 @@
 1. 通过[合宙网盘](https://pan.air32.cn/s/DJTr?path=%2FLuatOS%E6%A8%A1%E6%8B%9F%E5%99%A8(win32)), 选取`PC模拟器`下载
 2. 自行编译, [源码地址](https://gitee.com/openLuat/luatos-soc-pc) 需搭配LuatOS主库一起编译
 
+
+以下是演示PC模拟器的核心工具, 执行lua脚本
+
 ## 运行方式
 
 ### 脚本运行
