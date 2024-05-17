@@ -446,3 +446,29 @@ log.info("sec_h", sec_h, "sec_l", sec_l)
 
 ---
 
+## mcu.XTALRefOutput(source_main, source_32k)
+
+
+
+晶振参考时钟输出
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|boolean|高速晶振参考时钟是否输出|
+|boolean|低速32K晶振参考时钟是否输出|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+mcu.XTALRefOutput(true, false)    --高速晶振参考时钟输出,低速32K不输出
+
+```
+
+---
+
