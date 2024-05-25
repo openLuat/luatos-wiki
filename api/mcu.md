@@ -466,6 +466,8 @@ log.info("sec_h", sec_h, "sec_l", sec_l)
 **例子**
 
 ```lua
+-- 本函数于2024.5.17新增
+-- 当前仅Air780EP系列支持
 mcu.XTALRefOutput(true, false)    --高速晶振参考时钟输出,低速32K不输出
 
 ```
