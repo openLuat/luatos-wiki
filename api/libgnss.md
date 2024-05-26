@@ -253,7 +253,7 @@ log.info("nmea", "gsv", json.encode(libgnss.getGsv()))
 
 |传入值类型|解释|
 |-|-|
-|int|坐标类数据的格式, 0-DDMM.MMM格式, 1-DDDDDDD格式, 2-DD.DDDDD格式|
+|int|模式|
 
 **返回值**
 
@@ -266,7 +266,7 @@ log.info("nmea", "gsv", json.encode(libgnss.getGsv()))
 ```lua
 -- 获取
 log.info("nmea", "gsa", json.encode(libgnss.getGsa(), "11g"))
--- 示例数据
+-- 示例数据(模式0, 也就是默认模式)
 --[[
 {
     "sats":[ // 正在使用的卫星编号
@@ -291,6 +291,12 @@ log.info("nmea", "gsa", json.encode(libgnss.getGsa(), "11g"))
     "hdop":0.0335      // 位置精度因子，0.00 - 99.99，不定位时值为 99.99
 }
 ]]
+
+-- 示例数据(模式1), 2024.5.26新增
+[
+    {"pdop":7.8299999,"sats":[13,15,18,23],"vdop":3.2400000,"hdop":7.1300001,"fix_type":3},
+    {"pdop":7.8299999,"sats":[20,35,8,13],"vdop":3.2400000,"hdop":7.1300001,"fix_type":3}
+]
 
 ```
 
@@ -327,6 +333,7 @@ log.info("nmea", "vtg", json.encode(libgnss.getVtg()))
     "magnetic_track_degrees":0, // 磁北方向角
     "speed_kph":0           // 速度, 千米/小时
 }
+-- 提醒: Air780EG和Air510U,在速度<5km/h时, 不会返回方向角
 ]]
 
 ```
