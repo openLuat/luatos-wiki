@@ -58,7 +58,7 @@ led1 = gpio.setup(1,0,gpio.PULLUP)
 -- 设置gpio1为高电平，点亮led1
 led1(1)
 
--- 设置gpio2为输出模式，初始状态为低电平，返回的led1为控制gpio的函数
+-- 设置gpio2为输出模式，初始状态为低电平，返回的led2为控制gpio的函数
 led2 = gpio.setup(2,0,gpio.PULLUP)
 -- 记录上次的led状态
 local last = false
