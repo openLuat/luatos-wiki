@@ -224,7 +224,7 @@ log.info("nmea", "gsv", json.encode(libgnss.getGsv()))
             "snr":27,     // 信噪比
             "azimuth":278, // 方向角
             "elevation":59, // 仰角
-            "tp":0,        // 0 - GPS/SASS/QSZZ, 1 - BD
+            "tp":0,        // 0 - GPS, 1 - BD
             "nr":4         // 卫星编号
         },
         // 这里忽略了22个卫星的信息
