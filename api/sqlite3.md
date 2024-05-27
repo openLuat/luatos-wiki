@@ -1,6 +1,6 @@
 # sqlite3 - sqlite3数据库操作
 
-{bdg-success}`已适配` {bdg-primary}`Air780E/Air700E` {bdg-primary}`Air780EP` {bdg-primary}`Air601` {bdg-primary}`Air101/Air103`
+{bdg-success}`已适配` {bdg-primary}`Air780E/Air700E` {bdg-primary}`Air780EP/Air780EPV` {bdg-primary}`Air601` {bdg-primary}`Air101/Air103`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/sqlite3/binding/luat_lib_sqlite.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！

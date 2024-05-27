@@ -1,6 +1,6 @@
 # 适配状态
 
-|BSP/库|简介|Air780E/Air700E|Air780EP|Air601|Air101/Air103|Air105|ESP32C3|ESP32S3|
+|BSP/库|简介|Air780E/Air700E|Air780EP/Air780EPV|Air601|Air101/Air103|Air105|ESP32C3|ESP32S3|
 |---|---|---|---|---|---|---|---|---|
 |[adc](adc.md)|`模数转换`|Y|Y|Y|Y|Y|Y|Y|
 |[antbot](antbot.md)|`蚂蚁链`|Y|X|X|X|X|X|X|

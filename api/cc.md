@@ -1,6 +1,6 @@
 # cc - VoLTE通话功能
 
-{bdg-success}`已适配` {bdg-primary}`Air780EP`
+{bdg-success}`已适配` {bdg-primary}`Air780EP/Air780EPV`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/cc/luat_lib_cc.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
