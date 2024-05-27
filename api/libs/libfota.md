@@ -76,6 +76,7 @@ fota升级
 |string|client_cert 可选,客户端ca证书数据|
 |string|client_key 可选,客户端私钥加密数据|
 |string|client_password 可选,客户端私钥口令数据|
+|boolean|show_otaurl 可选,是否从日志中输出打印OTA升级包的URL路径，默认会打印|
 
 **返回值**
 
