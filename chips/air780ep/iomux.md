@@ -121,6 +121,16 @@ Air780EP(EC718P/EC718PV全系)支持多个虚拟的GPIO, 将非GPIO管脚通过�
 gpio.setup(32, function() end, gpio.PULLUP)
 ```
 
+## iosel脚和usbboot脚
+
+* BOOT脚, 即GPIO0, 开机后可作为普通GPIO使用
+* iosel脚(io_sel脚), 于Air780E(EC618方案)不同, Air780EP(EC718方案)的iosel脚实际为普通GPIO脚
+* iosel脚在开机后可作为普通GPIO使用, 复用关系是 GPIO12 ALT4
+
+```lua
+gpio.setup(12, 1, gpio.PULLUP, nil, 4)
+```
+
 ## 关于USB的额外说明
 
 1. **BOOT模式对USB布线要求高**,一定要做差分线和阻抗匹配!!!
