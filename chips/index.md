@@ -7,6 +7,7 @@ chips
 air780ep/index
 air780e/index
 pc/index
+gnss/index
 air001/index
 air32f103/index
 air601/index
