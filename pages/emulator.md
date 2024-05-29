@@ -2,6 +2,8 @@
 
 LuatOS提供了在线模拟器，可快速体验开发流程、熟悉开发接口、在线实验新奇的想法。
 
+提醒: 本模拟器不支持外设和网络功能, 如需更完整的模拟, 请使用[PC端模拟器](../pc/index.md)
+
 | [![_](../_static/emulator/lua.svg)](https://wiki.luatos.com/_static/luatos-emulator/lua.html)  | [![_](../_static/emulator/log.svg)](https://wiki.luatos.com/_static/luatos-emulator/log.html) | [![_](../_static/emulator/task.svg)](https://wiki.luatos.com/_static/luatos-emulator/task.html) | [![_](../_static/emulator/led.svg)](https://wiki.luatos.com/_static/luatos-emulator/led.html) | [![_](../_static/emulator/key.svg)](https://wiki.luatos.com/_static/luatos-emulator/key.html) |
 |-|-|-|-|-|
 | Lua测试  | 日志输出 | 多任务 | LED控制 |按键输入 |
