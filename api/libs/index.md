@@ -11,7 +11,6 @@ aht10
 air153C_wtd
 ak8963
 aliyun
-aliyun2
 am2320
 ap3216c
 bh1750
