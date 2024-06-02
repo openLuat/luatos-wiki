@@ -160,7 +160,7 @@ log.info("nmea", "loc", libgnss.getIntLocation(3))
 
 |传入值类型|解释|
 |-|-|
-|int|坐标类数据的格式, 0-DDMM.MMM格式, 1-DDDDDDD格式, 2-DD.DDDDD格式|
+|int|坐标类数据的格式, 0-DDMM.MMM格式, 1-DDDDDDD格式, 2-DD.DDDDD格式, 3-原始RMC字符串|
 
 **返回值**
 
