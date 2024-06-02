@@ -41,7 +41,7 @@ $PCAS04,3*1A\r\n
 // 切换到单GPS
 $PCAS04,1*18\r\n
 // 切换到单北斗
-$PCAS04,2*1B
+$PCAS04,2*1B\r\n
 ```
 
 提醒:
@@ -75,3 +75,7 @@ $PCAS04,2*1B
 1. lua库: [at6558r for LuatOS](https://github.com/wendal/luatos-lib-at6558r)
 2. AT固件自带驱动
 3. CSDK请参考 example_gnss
+
+## 已知问题
+
+1. 截止到2024.6.2, 模块软件是支持编号37以上的北斗卫星的, 但北斗星历未包含编号37以上的卫星, 在特定场景下, 单北斗模块注入星历后, 首次定位时间会延长
