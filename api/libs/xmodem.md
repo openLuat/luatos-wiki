@@ -52,3 +52,29 @@ xmodem.send(2,115200,"/luadb/test.bin")
 
 ---
 
+## xmodem.close(uart_id)
+
+
+
+关闭xmodem
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|number|uart_id uart端口号|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 执行xmodem传输后, 无论是否传输成功, 都建议关闭xmodem上下文, 也会关闭uart
+xmodem.close(2)
+
+```
+
+---
+
