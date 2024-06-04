@@ -25,6 +25,7 @@ AGPS(Assisted GPS)辅助定位 是指 通过向GPS/GNSS模组注入三要素数�
 星历下载地址:
 
 * Air510U和Air780EG [GPS+北斗](http://download.openluat.com/9501-xingli/HXXT_GPS_BDS_AGNSS_DATA.dat)
+* Air510U和Air780EG [单北斗](http://download.openluat.com/9501-xingli/HXXT_BDS_AGNSS_DATA.dat)
 * Air530Z系列 [GPS+北斗](http://download.openluat.com/9501-xingli/CASIC_data.dat)
 * Air530Z系列 [单北斗](http://download.openluat.com/9501-xingli/CASIC_data_bds.dat)
 * Air780EPVH [GPS+北斗](http://download.openluat.com/9501-xingli/HXXT_GPS_BDS_AGNSS_DATA.dat)
