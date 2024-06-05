@@ -218,7 +218,7 @@ nimble.setUUID("indicate", string.fromHex("FF32")) -- 订阅本设备的数据�
 
 ---
 
-## nimble.mac()
+## nimble.mac(mac)
 
 
 
@@ -226,7 +226,9 @@ nimble.setUUID("indicate", string.fromHex("FF32")) -- 订阅本设备的数据�
 
 **参数**
 
-无
+|传入值类型|解释|
+|-|-|
+|string|待设置的MAC地址, 6字节, 不传就是单获取|
 
 **返回值**
 
@@ -241,6 +243,9 @@ nimble.setUUID("indicate", string.fromHex("FF32")) -- 订阅本设备的数据�
 -- 本函数对所有模式都适用
 local mac = nimble.mac()
 log.info("ble", "mac", mac and mac:toHex() or "Unknwn")
+
+-- 修改MAC地址, 2024.06.05 新增, 当前仅Air601支持, 修改后重启生效
+nimble.mac(string.fromHex("1234567890AB"))
 
 ```
 
