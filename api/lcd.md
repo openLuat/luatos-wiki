@@ -31,11 +31,16 @@
 |lcd.font_opposansm22_chinese|font|22号中文字体|
 |lcd.font_opposansm24_chinese|font|24号中文字体|
 |lcd.font_opposansm32_chinese|font|32号中文字体|
+|lcd.direction_0|int|0°方向命令|
+|lcd.direction_90|int|90°方向命令|
+|lcd.direction_180|int|180°方向命令|
+|lcd.direction_270|int|270°方向命令|
 |lcd.HWID_0|硬件lcd驱动id0|(根据芯片支持选择)|
 |lcd.WIRE_3_BIT_9_INTERFACE_I|三线spi|9bit 模式I|
 |lcd.WIRE_4_BIT_8_INTERFACE_I|四线spi|8bit 模式I|
 |lcd.WIRE_3_BIT_9_INTERFACE_II|三线spi|9bit 模式II|
 |lcd.WIRE_4_BIT_8_INTERFACE_II|四线spi|8bit 模式II|
+|lcd.DATA_2_LANE|int|双通道模式|
 
 
 ## lcd.init(tp, args, spi_dev, init_in_service)
@@ -833,7 +838,11 @@ lcd.showImage(0,0,"/luadb/logo.jpg")
 
 **例子**
 
-无
+```lua
+-- 本API与 lcd.setupBuff lcd.autoFlush 配合使用
+lcd.flush()
+
+```
 
 ---
 
