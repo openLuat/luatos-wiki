@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: D:/Git_Project/LuatOS/luat/include/luat_uart.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c84d1918a0c60f03a047973dabe1fbea.html">LuatOS</a></li><li class="navelem"><a class="el" href="dir_58e660e76975d16d5415f5038ac9d3ca.html">luat</a></li><li class="navelem"><a class="el" href="dir_1113cf867ec23ec4b862785c4b5d35b9.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">luat_uart.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="luat__uart_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef LUAT_UART_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define LUAT_UART_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;luat_base.h&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;luat_uart_legacy.h&quot;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#ga5347c55ebc2c3fb731322a50d626c7cf">   31</a></span><span class="preprocessor">#define LUAT_PARITY_NONE                     0  </span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#gafb96212ea9b62a82b46934114589ba29">   32</a></span><span class="preprocessor">#define LUAT_PARITY_ODD                      1  </span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#ga6ad2391ba2a05266b705ba051626b797">   33</a></span><span class="preprocessor">#define LUAT_PARITY_EVEN                     2  </span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#ga9265e487d02171243c597be7bba15785">   38</a></span><span class="preprocessor">#define LUAT_BIT_ORDER_LSB                   0  </span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#ga0a64717bcc915cce52a3306052cdda89">   39</a></span><span class="preprocessor">#define LUAT_BIT_ORDER_MSB                   1  </span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#ga0ea003003619c54b872d558f0e2873c6">   44</a></span><span class="preprocessor">#define LUAT_0_5_STOP_BITS                   0xf0   </span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#gaecb537408cbd8ae9aff9a76ce17f76df">   45</a></span><span class="preprocessor">#define LUAT_1_5_STOP_BITS                   0xf1   </span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#ga0307ea5333cf23bb65e4167f434a4c07">   47</a></span><span class="preprocessor">#define LUAT_VUART_ID_0                     0x20    </span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="};">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structluat__uart.html">   52</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structluat__uart.html">luat_uart</a> {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="structluat__uart.html#a7441ef0865bcb3db9b8064dd7375c1ea">   53</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structluat__uart.html#a7441ef0865bcb3db9b8064dd7375c1ea">id</a>;                     </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structluat__uart.html#a784e73e1ce3f90fbcbb0a78d72a053ff">   54</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structluat__uart.html#a784e73e1ce3f90fbcbb0a78d72a053ff">baud_rate</a>;              </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structluat__uart.html#a6ad5ab806aecadd6cc55918f18742678">   56</a></span>    uint8_t <a class="code hl_variable" href="structluat__uart.html#a6ad5ab806aecadd6cc55918f18742678">data_bits</a>;          </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structluat__uart.html#ae847d8b7e1095e0ae8d6eb1e4a281585">   57</a></span>    uint8_t <a class="code hl_variable" href="structluat__uart.html#ae847d8b7e1095e0ae8d6eb1e4a281585">stop_bits</a>;          </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structluat__uart.html#ab2f5400eb39c8663b5ef005339a888ed">   58</a></span>    uint8_t <a class="code hl_variable" href="structluat__uart.html#ab2f5400eb39c8663b5ef005339a888ed">bit_order</a>;          </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structluat__uart.html#aa0e72b59c63431c62f5b5eba36a65d17">   59</a></span>    uint8_t <a class="code hl_variable" href="structluat__uart.html#aa0e72b59c63431c62f5b5eba36a65d17">parity</a>;             </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structluat__uart.html#a2a0790e716bccb2471387f8758962a1b">   61</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structluat__uart.html#a2a0790e716bccb2471387f8758962a1b">bufsz</a>;               </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structluat__uart.html#a1f5f52aa546f2a73c3feaaefc67352cc">   62</a></span>    uint32_t <a class="code hl_variable" href="structluat__uart.html#a1f5f52aa546f2a73c3feaaefc67352cc">pin485</a>;            </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structluat__uart.html#a458421a43d4f6dc515faf427bf579d00">   63</a></span>    uint32_t <a class="code hl_variable" href="structluat__uart.html#a458421a43d4f6dc515faf427bf579d00">delay</a>;             </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structluat__uart.html#a5a83c95e1861079fd7ee9e363067de10">   64</a></span>    uint8_t <a class="code hl_variable" href="structluat__uart.html#a5a83c95e1861079fd7ee9e363067de10">rx_level</a>;           </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#gaa9da40eb569d55557b34226cb4ce77d2">   65</a></span>} <a class="code hl_typedef" href="group__luatos__device__uart.html#gaa9da40eb569d55557b34226cb4ce77d2">luat_uart_t</a>;</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#ga050702949fdd0c5abb3ba8e63eef530c">   73</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__uart.html#ga050702949fdd0c5abb3ba8e63eef530c">luat_uart_setup</a>(<a class="code hl_struct" href="structluat__uart.html">luat_uart_t</a>* uart);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#gaab249830dca3ad924b5d6b2c68698256">   83</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__uart.html#gaab249830dca3ad924b5d6b2c68698256">luat_uart_write</a>(<span class="keywordtype">int</span> uart_id, <span class="keywordtype">void</span>* data, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#ga7aad03f30ff4e421da2b5d5a511c0d32">   93</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__uart.html#ga7aad03f30ff4e421da2b5d5a511c0d32">luat_uart_read</a>(<span class="keywordtype">int</span> uart_id, <span class="keywordtype">void</span>* buffer, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#gac53eaef008d2013f8c858c90e2717ee4">   99</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__luatos__device__uart.html#gac53eaef008d2013f8c858c90e2717ee4">luat_uart_clear_rx_cache</a>(<span class="keywordtype">int</span> uart_id);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#ga76cf1bfce49655b629a3b97b57294c06">  107</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__uart.html#ga76cf1bfce49655b629a3b97b57294c06">luat_uart_close</a>(<span class="keywordtype">int</span> uart_id);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#ga65f91a6e695e91c84df3ec074c2cc69c">  115</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__uart.html#ga65f91a6e695e91c84df3ec074c2cc69c">luat_uart_exist</a>(<span class="keywordtype">int</span> uart_id);</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="foldopen" id="foldopen00120" data-start="{" data-end="};">
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#gaf1e700bc0c706072aa824dedba0191d6">  120</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="group__luatos__device__uart.html#gaf1e700bc0c706072aa824dedba0191d6">LUAT_UART_CTRL_CMD</a></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>{</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#ggaf1e700bc0c706072aa824dedba0191d6a16de175f5341df50030e7fcdc30e656f">  122</a></span>    <a class="code hl_enumvalue" href="group__luatos__device__uart.html#ggaf1e700bc0c706072aa824dedba0191d6a16de175f5341df50030e7fcdc30e656f">LUAT_UART_SET_RECV_CALLBACK</a>,</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <a class="code hl_enumvalue" href="group__luatos__device__uart.html#ggaf1e700bc0c706072aa824dedba0191d6a351392bc9a5bbb303174fb8b9be4ebdc">LUAT_UART_SET_SENT_CALLBACK</a></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#ga4db87a7306c4b58414676ed9852221e3">  124</a></span>}<a class="code hl_typedef" href="group__luatos__device__uart.html#ga4db87a7306c4b58414676ed9852221e3">LUAT_UART_CTRL_CMD_E</a>;</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#gafdc79ce08a0f22141c4e606ece05e28d">  130</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="group__luatos__device__uart.html#gafdc79ce08a0f22141c4e606ece05e28d">luat_uart_recv_callback_t</a>)(<span class="keywordtype">int</span> uart_id, uint32_t data_len);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span> </div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#gaa6e41e6e80f54f026e3df8d0c4d2c4cd">  136</a></span><span class="keyword">typedef</span> void (*<a class="code hl_typedef" href="group__luatos__device__uart.html#gaa6e41e6e80f54f026e3df8d0c4d2c4cd">luat_uart_sent_callback_t</a>)(<span class="keywordtype">int</span> uart_id, <span class="keywordtype">void</span> *param);</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="foldopen" id="foldopen00142" data-start="{" data-end="};">
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="structluat__uart__ctrl__param.html">  142</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structluat__uart__ctrl__param.html">luat_uart_ctrl_param</a></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>{</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="structluat__uart__ctrl__param.html#ac3263660ebc511ef3695ed1c5e7317ad">  144</a></span>    <a class="code hl_typedef" href="group__luatos__device__uart.html#gafdc79ce08a0f22141c4e606ece05e28d">luat_uart_recv_callback_t</a> <a class="code hl_variable" href="structluat__uart__ctrl__param.html#ac3263660ebc511ef3695ed1c5e7317ad">recv_callback_fun</a>;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="structluat__uart__ctrl__param.html#abd710eb8f5d885e9630aaeed81de5ba8">  145</a></span>    <a class="code hl_typedef" href="group__luatos__device__uart.html#gaa6e41e6e80f54f026e3df8d0c4d2c4cd">luat_uart_sent_callback_t</a> <a class="code hl_variable" href="structluat__uart__ctrl__param.html#abd710eb8f5d885e9630aaeed81de5ba8">sent_callback_fun</a>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#ga277db543aa335a011c19457a8ca789a8">  146</a></span>}<a class="code hl_typedef" href="group__luatos__device__uart.html#ga277db543aa335a011c19457a8ca789a8">luat_uart_ctrl_param_t</a>;</div>
+</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#ga8539302121dadacd21db33c7d6f156ca">  156</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__uart.html#ga8539302121dadacd21db33c7d6f156ca">luat_uart_ctrl</a>(<span class="keywordtype">int</span> uart_id, <a class="code hl_typedef" href="group__luatos__device__uart.html#ga4db87a7306c4b58414676ed9852221e3">LUAT_UART_CTRL_CMD_E</a> cmd, <span class="keywordtype">void</span>* param);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="group__luatos__device__uart.html#gae377d1342bbb90ccacc7286c3a759599">  165</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__uart.html#gae377d1342bbb90ccacc7286c3a759599">luat_uart_pre_setup</a>(<span class="keywordtype">int</span> uart_id, uint8_t use_alt_type);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="preprocessor">#ifdef LUAT_USE_SOFT_UART</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="preprocessor">#ifndef __BSP_COMMON_H__</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="preprocessor">#include &quot;c_common.h&quot;</span></div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="keywordtype">int</span> luat_uart_soft_setup_hwtimer_callback(<span class="keywordtype">int</span> hwtimer_id, CommonFun_t callback);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="keywordtype">void</span> luat_uart_soft_gpio_fast_output(<span class="keywordtype">int</span> pin, uint8_t value);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>uint8_t luat_uart_soft_gpio_fast_input(<span class="keywordtype">int</span> pin);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="keywordtype">void</span> luat_uart_soft_gpio_fast_irq_set(<span class="keywordtype">int</span> pin, uint8_t onoff);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>uint32_t luat_uart_soft_cal_baudrate(uint32_t baudrate);</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="keywordtype">void</span> luat_uart_soft_hwtimer_onoff(<span class="keywordtype">int</span> hwtimer_id, uint32_t period);</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span> </div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="keywordtype">void</span> luat_uart_soft_sleep_enable(uint8_t is_enable);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_ga050702949fdd0c5abb3ba8e63eef530c"><div class="ttname"><a href="group__luatos__device__uart.html#ga050702949fdd0c5abb3ba8e63eef530c">luat_uart_setup</a></div><div class="ttdeci">int luat_uart_setup(luat_uart_t *uart)</div><div class="ttdoc">uart初始化</div></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_ga277db543aa335a011c19457a8ca789a8"><div class="ttname"><a href="group__luatos__device__uart.html#ga277db543aa335a011c19457a8ca789a8">luat_uart_ctrl_param_t</a></div><div class="ttdeci">struct luat_uart_ctrl_param luat_uart_ctrl_param_t</div><div class="ttdoc">串口控制参数</div></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_ga4db87a7306c4b58414676ed9852221e3"><div class="ttname"><a href="group__luatos__device__uart.html#ga4db87a7306c4b58414676ed9852221e3">LUAT_UART_CTRL_CMD_E</a></div><div class="ttdeci">enum LUAT_UART_CTRL_CMD LUAT_UART_CTRL_CMD_E</div><div class="ttdoc">串口控制参数</div></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_ga65f91a6e695e91c84df3ec074c2cc69c"><div class="ttname"><a href="group__luatos__device__uart.html#ga65f91a6e695e91c84df3ec074c2cc69c">luat_uart_exist</a></div><div class="ttdeci">int luat_uart_exist(int uart_id)</div><div class="ttdoc">检测串口是否存在</div></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_ga76cf1bfce49655b629a3b97b57294c06"><div class="ttname"><a href="group__luatos__device__uart.html#ga76cf1bfce49655b629a3b97b57294c06">luat_uart_close</a></div><div class="ttdeci">int luat_uart_close(int uart_id)</div><div class="ttdoc">关闭串口</div></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_ga7aad03f30ff4e421da2b5d5a511c0d32"><div class="ttname"><a href="group__luatos__device__uart.html#ga7aad03f30ff4e421da2b5d5a511c0d32">luat_uart_read</a></div><div class="ttdeci">int luat_uart_read(int uart_id, void *buffer, size_t length)</div><div class="ttdoc">串口读数据</div></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_ga8539302121dadacd21db33c7d6f156ca"><div class="ttname"><a href="group__luatos__device__uart.html#ga8539302121dadacd21db33c7d6f156ca">luat_uart_ctrl</a></div><div class="ttdeci">int luat_uart_ctrl(int uart_id, LUAT_UART_CTRL_CMD_E cmd, void *param)</div><div class="ttdoc">串口控制</div></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_gaa6e41e6e80f54f026e3df8d0c4d2c4cd"><div class="ttname"><a href="group__luatos__device__uart.html#gaa6e41e6e80f54f026e3df8d0c4d2c4cd">luat_uart_sent_callback_t</a></div><div class="ttdeci">void(* luat_uart_sent_callback_t)(int uart_id, void *param)</div><div class="ttdoc">发送回调函数</div><div class="ttdef"><b>定义</b> <a href="#l00136">luat_uart.h:136</a></div></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_gaa9da40eb569d55557b34226cb4ce77d2"><div class="ttname"><a href="group__luatos__device__uart.html#gaa9da40eb569d55557b34226cb4ce77d2">luat_uart_t</a></div><div class="ttdeci">struct luat_uart luat_uart_t</div><div class="ttdoc">luat_uart</div></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_gaab249830dca3ad924b5d6b2c68698256"><div class="ttname"><a href="group__luatos__device__uart.html#gaab249830dca3ad924b5d6b2c68698256">luat_uart_write</a></div><div class="ttdeci">int luat_uart_write(int uart_id, void *data, size_t length)</div><div class="ttdoc">串口写数据</div></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_gac53eaef008d2013f8c858c90e2717ee4"><div class="ttname"><a href="group__luatos__device__uart.html#gac53eaef008d2013f8c858c90e2717ee4">luat_uart_clear_rx_cache</a></div><div class="ttdeci">void luat_uart_clear_rx_cache(int uart_id)</div><div class="ttdoc">清除uart的接收缓存数据</div></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_gae377d1342bbb90ccacc7286c3a759599"><div class="ttname"><a href="group__luatos__device__uart.html#gae377d1342bbb90ccacc7286c3a759599">luat_uart_pre_setup</a></div><div class="ttdeci">int luat_uart_pre_setup(int uart_id, uint8_t use_alt_type)</div><div class="ttdoc">串口复用函数，目前支持UART0，UART2</div></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_gaf1e700bc0c706072aa824dedba0191d6"><div class="ttname"><a href="group__luatos__device__uart.html#gaf1e700bc0c706072aa824dedba0191d6">LUAT_UART_CTRL_CMD</a></div><div class="ttdeci">LUAT_UART_CTRL_CMD</div><div class="ttdoc">串口控制参数</div><div class="ttdef"><b>定义</b> <a href="#l00120">luat_uart.h:121</a></div></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_gafdc79ce08a0f22141c4e606ece05e28d"><div class="ttname"><a href="group__luatos__device__uart.html#gafdc79ce08a0f22141c4e606ece05e28d">luat_uart_recv_callback_t</a></div><div class="ttdeci">void(* luat_uart_recv_callback_t)(int uart_id, uint32_t data_len)</div><div class="ttdoc">接收回调函数</div><div class="ttdef"><b>定义</b> <a href="#l00130">luat_uart.h:130</a></div></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_ggaf1e700bc0c706072aa824dedba0191d6a16de175f5341df50030e7fcdc30e656f"><div class="ttname"><a href="group__luatos__device__uart.html#ggaf1e700bc0c706072aa824dedba0191d6a16de175f5341df50030e7fcdc30e656f">LUAT_UART_SET_RECV_CALLBACK</a></div><div class="ttdeci">@ LUAT_UART_SET_RECV_CALLBACK</div><div class="ttdef"><b>定义</b> <a href="#l00122">luat_uart.h:122</a></div></div>
+<div class="ttc" id="agroup__luatos__device__uart_html_ggaf1e700bc0c706072aa824dedba0191d6a351392bc9a5bbb303174fb8b9be4ebdc"><div class="ttname"><a href="group__luatos__device__uart.html#ggaf1e700bc0c706072aa824dedba0191d6a351392bc9a5bbb303174fb8b9be4ebdc">LUAT_UART_SET_SENT_CALLBACK</a></div><div class="ttdeci">@ LUAT_UART_SET_SENT_CALLBACK</div><div class="ttdef"><b>定义</b> <a href="#l00124">luat_uart.h:123</a></div></div>
+<div class="ttc" id="astructluat__uart__ctrl__param_html"><div class="ttname"><a href="structluat__uart__ctrl__param.html">luat_uart_ctrl_param</a></div><div class="ttdoc">串口控制参数</div><div class="ttdef"><b>定义</b> <a href="#l00142">luat_uart.h:143</a></div></div>
+<div class="ttc" id="astructluat__uart__ctrl__param_html_abd710eb8f5d885e9630aaeed81de5ba8"><div class="ttname"><a href="structluat__uart__ctrl__param.html#abd710eb8f5d885e9630aaeed81de5ba8">luat_uart_ctrl_param::sent_callback_fun</a></div><div class="ttdeci">luat_uart_sent_callback_t sent_callback_fun</div><div class="ttdef"><b>定义</b> <a href="#l00145">luat_uart.h:145</a></div></div>
+<div class="ttc" id="astructluat__uart__ctrl__param_html_ac3263660ebc511ef3695ed1c5e7317ad"><div class="ttname"><a href="structluat__uart__ctrl__param.html#ac3263660ebc511ef3695ed1c5e7317ad">luat_uart_ctrl_param::recv_callback_fun</a></div><div class="ttdeci">luat_uart_recv_callback_t recv_callback_fun</div><div class="ttdef"><b>定义</b> <a href="#l00144">luat_uart.h:144</a></div></div>
+<div class="ttc" id="astructluat__uart_html"><div class="ttname"><a href="structluat__uart.html">luat_uart</a></div><div class="ttdoc">luat_uart</div><div class="ttdef"><b>定义</b> <a href="#l00052">luat_uart.h:52</a></div></div>
+<div class="ttc" id="astructluat__uart_html_a1f5f52aa546f2a73c3feaaefc67352cc"><div class="ttname"><a href="structluat__uart.html#a1f5f52aa546f2a73c3feaaefc67352cc">luat_uart::pin485</a></div><div class="ttdeci">uint32_t pin485</div><div class="ttdef"><b>定义</b> <a href="#l00062">luat_uart.h:62</a></div></div>
+<div class="ttc" id="astructluat__uart_html_a2a0790e716bccb2471387f8758962a1b"><div class="ttname"><a href="structluat__uart.html#a2a0790e716bccb2471387f8758962a1b">luat_uart::bufsz</a></div><div class="ttdeci">size_t bufsz</div><div class="ttdef"><b>定义</b> <a href="#l00061">luat_uart.h:61</a></div></div>
+<div class="ttc" id="astructluat__uart_html_a458421a43d4f6dc515faf427bf579d00"><div class="ttname"><a href="structluat__uart.html#a458421a43d4f6dc515faf427bf579d00">luat_uart::delay</a></div><div class="ttdeci">uint32_t delay</div><div class="ttdef"><b>定义</b> <a href="#l00063">luat_uart.h:63</a></div></div>
+<div class="ttc" id="astructluat__uart_html_a5a83c95e1861079fd7ee9e363067de10"><div class="ttname"><a href="structluat__uart.html#a5a83c95e1861079fd7ee9e363067de10">luat_uart::rx_level</a></div><div class="ttdeci">uint8_t rx_level</div><div class="ttdef"><b>定义</b> <a href="#l00064">luat_uart.h:64</a></div></div>
+<div class="ttc" id="astructluat__uart_html_a6ad5ab806aecadd6cc55918f18742678"><div class="ttname"><a href="structluat__uart.html#a6ad5ab806aecadd6cc55918f18742678">luat_uart::data_bits</a></div><div class="ttdeci">uint8_t data_bits</div><div class="ttdef"><b>定义</b> <a href="#l00056">luat_uart.h:56</a></div></div>
+<div class="ttc" id="astructluat__uart_html_a7441ef0865bcb3db9b8064dd7375c1ea"><div class="ttname"><a href="structluat__uart.html#a7441ef0865bcb3db9b8064dd7375c1ea">luat_uart::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>定义</b> <a href="#l00053">luat_uart.h:53</a></div></div>
+<div class="ttc" id="astructluat__uart_html_a784e73e1ce3f90fbcbb0a78d72a053ff"><div class="ttname"><a href="structluat__uart.html#a784e73e1ce3f90fbcbb0a78d72a053ff">luat_uart::baud_rate</a></div><div class="ttdeci">int baud_rate</div><div class="ttdef"><b>定义</b> <a href="#l00054">luat_uart.h:54</a></div></div>
+<div class="ttc" id="astructluat__uart_html_aa0e72b59c63431c62f5b5eba36a65d17"><div class="ttname"><a href="structluat__uart.html#aa0e72b59c63431c62f5b5eba36a65d17">luat_uart::parity</a></div><div class="ttdeci">uint8_t parity</div><div class="ttdef"><b>定义</b> <a href="#l00059">luat_uart.h:59</a></div></div>
+<div class="ttc" id="astructluat__uart_html_ab2f5400eb39c8663b5ef005339a888ed"><div class="ttname"><a href="structluat__uart.html#ab2f5400eb39c8663b5ef005339a888ed">luat_uart::bit_order</a></div><div class="ttdeci">uint8_t bit_order</div><div class="ttdef"><b>定义</b> <a href="#l00058">luat_uart.h:58</a></div></div>
+<div class="ttc" id="astructluat__uart_html_ae847d8b7e1095e0ae8d6eb1e4a281585"><div class="ttname"><a href="structluat__uart.html#ae847d8b7e1095e0ae8d6eb1e4a281585">luat_uart::stop_bits</a></div><div class="ttdeci">uint8_t stop_bits</div><div class="ttdef"><b>定义</b> <a href="#l00057">luat_uart.h:57</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

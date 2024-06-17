@@ -1,0 +1,312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: luat_soc_sdk_2024</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li class="current"><a href="index.html"><span>首页</span></a></li>
+      <li><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div><div class="header">
+  <div class="headertitle"><div class="title">luat_soc_sdk_2024 </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__d_1_2_git___project_2luatos-soc-2024_2_r_e_a_d_m_e"></a> @tableofcontents{html:5} </p>
+<h1><a class="anchor" id="autotoc_md0"></a>
+CSDK for ABCDEGF</h1>
+<p><a href="https://github.com/openLuat/luatos-soc-2024/actions/workflows/ci.yaml"><img src="https://github.com/openLuat/luatos-soc-2024/actions/workflows/ci.yaml/badge.svg" alt="Github Actions" style="pointer-events: none;" class="inline"/></a></p>
+<p><b>注意：不管之前有没有用过合宙其他仓库的CSDK，使用前请详细阅读本readme的每一句话，不要跳过！！！</b></p>
+<p><b>注意：不管之前有没有用过合宙其他仓库的CSDK，使用前请详细阅读本readme的每一句话，不要跳过！！！</b></p>
+<p><b>注意：不管之前有没有用过合宙其他仓库的CSDK，使用前请详细阅读本readme的每一句话，不要跳过！！！</b></p>
+<p><b>注意：对于之前使用luatos-soc-2022仓库开发的项目代码无法直接复制到luatos-soc-2024编译使用，查看本仓库project中各个demo的xmake.lua进行修改并参考主库csdk api进行修改才可使用！！！</b></p>
+<p><b>注意：对于之前使用luatos-soc-2023仓库开发的项目代码可以直接复制到luatos-soc-2024编译使用，但编译脚本要进行修改，查看本仓库project中各个demo的xmake.lua进行修改才可使用！！！</b></p>
+<p>luatos-soc-2023迁移luatos-soc-2024文档请点击<a class="el" href="#section">这里</a>跳转</p>
+<h2><a class="anchor" id="autotoc_md1"></a>
+使用前须知！！！</h2>
+<ol type="1">
+<li><b>强烈推荐使用git来下载本代码库</b>, 不会命令行操作git可以用 <a href="https://tortoisegit.org/download/">tortoiseGit</a></li>
+<li>本CSDK底层是没有AT指令的,不存在"调用某某AT指令"的情况</li>
+<li><b>由于依赖luatos主库，所以要在 luatos-soc-2024/xmake.lua中配置luatos仓库目录，默认luatos目录在luatos-soc-2024同级目录，文件夹名称必须是LuatOS, LuatOS, LuatOS, 即在luatos-soc-2024同级目录 clone <a href="https://gitee.com/openLuat/LuatOS">LuatOS</a> 仓库即可，否则编译报错</b></li>
+<li>本项目使用<a href="https://xmake.io/#/zh-cn/">xmake</a>构建，就算不熟悉lua和构建也能直接上手使用，几乎不会在构建上花费您的时间，**但如需自定义的一些操作请先查看下相关api**</li>
+<li>请留意, 本代码库使用的GCC版本与 luatos-soc-2022 库是不一样的, 无法更换,<b>同样由于lto原因也不要擅自更改编译工具链</b></li>
+</ol>
+<h2><a class="anchor" id="autotoc_md2"></a>
+文档中心</h2>
+<ul>
+<li><a href="https://doc.openluat.com/wiki/37?wiki_page_id=4544">CSDK软件开发资料</a></li>
+<li>差分工具及docker镜像</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md3"></a>
+介绍</h2>
+<p>CSDK for ABCDEGF, 适用于所有基于ABCDEGF的合宙模组, 包括衍生型号及海外型号:</p>
+<ul>
+<li>Air780EP</li>
+<li>Air780ET</li>
+<li>Air780EL</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md4"></a>
+目录说明</h2>
+<ul>
+<li>PLAT 打包好的sdk, 含协议栈, 部分源码, 头文件, 打包工具</li>
+<li>project 项目文件, 每个不同的项目代表不同的demo或者turnkey方案</li>
+<li>xmake.lua 主编译脚本, 一般不需要修改</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md5"></a>
+编译说明</h2>
+<p>​ 安装xmake, <b>Windows安装时注意选取加入PATH</b>. xmake下载地址：https://github.com/xmake-io/xmake/releases windows下载系统对应的xmake-x.x.x-win32.exe或者xmake-x.x.x-win64.exe安装即可. 建议使用最新版.</p>
+<p><b>注意：环境变量需重启电脑生效</b></p>
+<p><b>注意：如果网络无法下载github等地址，采用下面的本地地址下载，后续更新xmake也会同步更新下方地址！！！</b></p>
+<p>本地下载地址: <a href="https://pan.air32.cn/s/DJTr?path=%2F%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7">https://pan.air32.cn/s/DJTr?path=%2F%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7</a></p>
+<p>linux和macos安装请自行参考,但并不建议,因为macos无法打包,并且Luatools只支持windows 安装教程: <a href="https://xmake.io/#/guide/installation">https://xmake.io/#/guide/installation</a></p>
+<h3><a class="anchor" id="autotoc_md6"></a>
+编译操作</h3>
+<p>示例环境使用windows，linux/macosx 实际上也是通用的编译方式</p>
+<p>在项目下打开终端，比如example,就在luatos-soc-2024\project\example下打开终端,即</p>
+<p><img src="./image/shell.png" alt="shell" class="inline"/></p>
+<p>首先执行配置，执行 <code>xmake f --menu</code></p>
+<p><img src="./image/menuconfig.png" alt="menuconfig" class="inline"/></p>
+<p><code>Basic Configuration</code> 我们不用去管，里面是编译架构/编译器相关配置，项目中会自动配置好交叉编译器，这里我们忽略，选择 <code>Project Configuration</code> 根据自己实际使用配置即可</p>
+<p>配置完成选择Exit退出，询问是否保存选择yes</p>
+<p><b>注意:上述配置操作只需要配置一次，之后会一直生效，只有修改配置才需要重新执行配置操作</b></p>
+<p>随后执行 <code>xmake</code>进行编译即可，生成的binpkg/soc/日志数据库(comdb.txt)等文件都位于项目下<code>out</code>目录</p>
+<p>ps：如果不想使用图形也支持使用命令行配置方式，例如<code>xmake f --chip_target=ec718p --lspd_mode=y --denoise_force=n</code> ，具体支持的配置项和参数执行 <code>xmake f --help</code> 查看 <code>Command options (Project Configuration)</code>下具体描述</p>
+<h3><a class="anchor" id="autotoc_md7"></a>
+清理编译</h3>
+<p>执行 <code>xmake clean -a</code>可以清除编译产生的中间文件(通常执行此命令即可)</p>
+<p>执行 <code>xmake f -c</code>可以清除自己的配置(清除后需要重新执行上述配置)</p>
+<h3><a class="anchor" id="autotoc_md8"></a>
+加入自己的项目</h3>
+<p>​ 仿照着example即可，项目可以放在任意目录下，其他盘符也没问题，不需要放在luatos-soc-2024目录下，只需要在自己项目的xmake.lua中配置好 <code>csdk_root</code> 路径即可 <b>注意:路径不要有中文，空格等特殊符号！！！</b></p>
+<h3><a class="anchor" id="autotoc_md9"></a>
+xmake插件(可选)</h3>
+<p>上面的文档已经有了完整编译过程，此处插件说明为可选，目的为更方便使用编译，如不需要可跳过看下面</p>
+<p>在vscode扩展中安装xmake</p>
+<p><img src="./image/xmake.png" alt="xmake" class="inline"/></p>
+<p>之后编写xmake.lua就有代码联想了，并且可以提示错误,并且可以在vscode中直接一键编译</p>
+<p><img src="./image/xmake_build.png" alt="xmake_build" class="inline"/></p>
+<p>非常方便</p>
+<h3><a class="anchor" id="autotoc_md10"></a>
+加入入口函数</h3>
+<ul>
+<li>加入头文件common_api.h</li>
+<li>类似于<code>void main(void)</code>，但是可以任意名字，不能有入口参数和返回参数，同时允许多个入口</li>
+<li>通过INIT_HW_EXPORT INIT_DRV_EXPORT INIT_TASK_EXPORT这3个宏修饰后，系统初始化的时候会调用function，不同的宏涉及到调用顺序不同</li>
+<li>大优先级上<code>INIT_HW_EXPORT</code> &gt; <code>INIT_DRV_EXPORT</code> &gt; <code>INIT_TASK_EXPORT</code></li>
+<li>这3个宏有统一用法<code>INIT_HW_EXPORT(function, level)</code>，其中function就是入口函数，level是小优先级，填"0","1","2"...(引号要写的)，引号里数字越小，优先级越高。</li>
+<li><code>INIT_HW_EXPORT</code>一般用于硬件初始化，GPIO之类的，可以没有</li>
+<li><code>INIT_DRV_EXPORT</code>一般用于外设驱动初始化，初始化外部器件之类的，打开电源，提供时钟之类的，可以没有</li>
+<li><code>INIT_TASK_EXPORT</code>一般用于初始化任务，用户代码基本上都是跑在任务里，原则上必须有</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md11"></a>
+luatos-soc-2023迁移luatos-soc-2024</h2>
+<p><a class="anchor" id="section"></a></p>
+<p>luatos-soc-2023迁移luatos-soc-2024主要有两点：</p>
+<h3><a class="anchor" id="autotoc_md12"></a>
+1，项目xmake.lua改动</h3>
+<p>这里我们直接以example_audio_flash为例，因为它覆盖较全：</p>
+<div class="fragment"><div class="line">local TARGET_NAME = os.scriptdir():match(&quot;.+[/\\]([%w_]+)&quot;)</div>
+<div class="line">local LIB_DIR = &quot;$(buildir)/&quot;.. TARGET_NAME .. &quot;/&quot;</div>
+<div class="line"> </div>
+<div class="line">target(TARGET_NAME)</div>
+<div class="line">    set_kind(&quot;static&quot;)</div>
+<div class="line">    set_targetdir(LIB_DIR)</div>
+<div class="line"> </div>
+<div class="line">    --加入代码和头文件</div>
+<div class="line">    add_includedirs(&quot;./inc&quot;,{public = true})</div>
+<div class="line">    add_files(&quot;./src/*.c&quot;,{public = true})</div>
+<div class="line">    add_defines(&quot;LUAT_USE_SFUD&quot;,{public = true})</div>
+<div class="line"> </div>
+<div class="line">    --sfud</div>
+<div class="line">    add_includedirs(LUATOS_ROOT..&quot;/components/sfud&quot;,{public = true})</div>
+<div class="line">    add_files(LUATOS_ROOT..&quot;/components/sfud/*.c&quot;)</div>
+<div class="line">    remove_files(LUATOS_ROOT..&quot;/components/sfud/luat_lib_sfud.c&quot;)</div>
+<div class="line"> </div>
+<div class="line">    add_linkdirs(&quot;$(projectdir)/lib&quot;,&quot;$(projectdir)/PLAT/core/lib&quot;,{public = true})</div>
+<div class="line">    -- 此处使用 libaisound50_16K.a, 还可选择 8K版本:libaisound50_8K.a,8K英文版本:libaisound50_8K_eng.a,16K英文版本:libaisound50_16K_eng.a</div>
+<div class="line">    add_linkgroups(&quot;tts_res&quot;, &quot;aisound50_16K&quot;, {whole = true,public = true})</div>
+<div class="line">-- </div>
+<div class="line">target_end()</div>
+</div><!-- fragment --><p>前两行直接替换为</p>
+<div class="fragment"><div class="line">project_dir = os.scriptdir()</div>
+<div class="line">project_name = project_dir:match(&quot;.+[/\\]([%w_]+)&quot;)</div>
+</div><!-- fragment --><p>并添加</p>
+<div class="fragment"><div class="line">csdk_root = &quot;../../&quot; --csdk根目录,可自行修改</div>
+<div class="line">includes(csdk_root..&quot;csdk.lua&quot;)</div>
+<div class="line">description_common()</div>
+</div><!-- fragment --><p><code>set_targetdir(LIB_DIR)</code>修改为 <code>set_targetdir("$(buildir)/".. project_name .. "/")</code> 并添加<code>description_csdk()</code></p>
+<p>后面都为变量修改，<code>TARGET_NAME</code>修改为<code>project_name</code>， <code>LUATOS_ROOT</code>替换为<code>luatos_root</code>，修改原因为注意这不算通用全局变量，因为脚本域不可用，一定注意</p>
+<p>由于项目路径修改，<code>$(projectdir)</code> 需改为 <code>csdk_root</code></p>
+<p>至此修改结束，修改后为</p>
+<div class="fragment"><div class="line">project_dir = os.scriptdir()</div>
+<div class="line">project_name = project_dir:match(&quot;.+[/\\]([%w_]+)&quot;)</div>
+<div class="line"> </div>
+<div class="line">csdk_root = &quot;../../&quot; --csdk根目录,可自行修改</div>
+<div class="line">includes(csdk_root..&quot;csdk.lua&quot;)</div>
+<div class="line">description_common()</div>
+<div class="line"> </div>
+<div class="line">target(project_name,function()</div>
+<div class="line">    set_kind(&quot;static&quot;)</div>
+<div class="line">    set_targetdir(&quot;$(buildir)/&quot;.. project_name .. &quot;/&quot;)</div>
+<div class="line">    description_csdk()</div>
+<div class="line">    set_warnings(&quot;error&quot;)</div>
+<div class="line"> </div>
+<div class="line">    --加入代码和头文件</div>
+<div class="line">    add_includedirs(&quot;./inc&quot;,{public = true})</div>
+<div class="line">    add_files(&quot;./src/*.c&quot;,{public = true})</div>
+<div class="line">    add_defines(&quot;LUAT_USE_SFUD&quot;,{public = true})</div>
+<div class="line"> </div>
+<div class="line">    --sfud</div>
+<div class="line">    add_includedirs(luatos_root..&quot;/components/sfud&quot;,{public = true})</div>
+<div class="line">    add_files(luatos_root..&quot;/components/sfud/*.c&quot;)</div>
+<div class="line">    remove_files(luatos_root..&quot;/components/sfud/luat_lib_sfud.c&quot;)</div>
+<div class="line"> </div>
+<div class="line">    add_linkdirs(csdk_root..&quot;/lib&quot;,csdk_root..&quot;/PLAT/core/lib&quot;,{public = true})</div>
+<div class="line">    -- 此处使用 libaisound50_16K.a, 还可选择 8K版本:libaisound50_8K.a,8K英文版本:libaisound50_8K_eng.a,16K英文版本:libaisound50_16K_eng.a</div>
+<div class="line">    add_linkgroups(&quot;tts_res&quot;, &quot;aisound50_16K&quot;, {whole = true,public = true})</div>
+<div class="line">-- </div>
+<div class="line">end)</div>
+</div><!-- fragment --><h3><a class="anchor" id="autotoc_md13"></a>
+2，编译方式改动</h3>
+<p>之前为 build.bat 方式编译，这种方式并不跨平台，并且之前仓库一直引入环境变量也需要去掉，新的编译方式</p>
+<p>编译直接执行xmake即可，并且跨平台，还可以在vscode中直接一键编译，非常方便</p>
+<p><img src="./image/xmake_build.png" alt="xmake_build" class="inline"/></p>
+<p>如果还是想使用2023仓库的build.bat方式编译，这里提供个兼容脚本</p>
+<div class="fragment"><div class="line">@echo off</div>
+<div class="line">set PROJECT_NAME=example</div>
+<div class="line">set LSPD_MODE=enable</div>
+<div class="line">set DENOISE_FORCE=disable</div>
+<div class="line">set CHIP_TARGET=ec718p</div>
+<div class="line"> </div>
+<div class="line">if not &quot;%1&quot;==&quot;&quot; (</div>
+<div class="line">    set PROJECT_NAME=%1</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">if not &quot;%2&quot;==&quot;&quot; (</div>
+<div class="line">    set LSPD_MODE=%2</div>
+<div class="line">) else (</div>
+<div class="line">    if &quot;%1&quot; == &quot;luatos&quot; (</div>
+<div class="line">        set LSPD_MODE=enable</div>
+<div class="line">    ) else (</div>
+<div class="line">        @echo LSPD_MODE not set</div>
+<div class="line">    )</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">if not &quot;%4&quot;==&quot;&quot; (</div>
+<div class="line">    set CHIP_TARGET=%4</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">if not &quot;%5&quot;==&quot;&quot; (</div>
+<div class="line">    set DENOISE_FORCE=%5</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">if %LSPD_MODE% == &quot;enable&quot; (</div>
+<div class="line">    set LSPD_MODE=true</div>
+<div class="line">) else (</div>
+<div class="line">    set LSPD_MODE=false</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">if %DENOISE_FORCE% == &quot;disable&quot; (</div>
+<div class="line">    set DENOISE_FORCE=false</div>
+<div class="line">) else (</div>
+<div class="line">    set DENOISE_FORCE=true</div>
+<div class="line">)</div>
+<div class="line"> </div>
+<div class="line">@echo &quot;==============================&quot;</div>
+<div class="line">@echo &quot;AirM2M https://openluat.com&quot;</div>
+<div class="line">@echo &quot;==============================&quot;</div>
+<div class="line">@echo PROJECT   : %PROJECT_NAME%  </div>
+<div class="line">@echo CHIP_TARGET : %CHIP_TARGET%  </div>
+<div class="line">@echo LSPD_MODE : %LSPD_MODE%  </div>
+<div class="line">@echo DENOISE_FORCE : %DENOISE_FORCE%  </div>
+<div class="line">@echo &quot;==============================&quot;</div>
+<div class="line"> </div>
+<div class="line">cd project/%PROJECT_NAME% </div>
+<div class="line">xmake f --chip_target=%CHIP_TARGET% --lspd_mode=%LSPD_MODE% --denoise_force=%DENOISE_FORCE%</div>
+<div class="line">if &quot;%3&quot;==&quot;-v&quot; (</div>
+<div class="line">    xmake -v</div>
+<div class="line">) else (</div>
+<div class="line">    xmake</div>
+<div class="line">)</div>
+<div class="line">cd ../../</div>
+<div class="line">pause</div>
+</div><!-- fragment --><p>命名为build.bat放在luatos-soc-2024目录下，使用方法和2023一样，但是编译资源生成路径依然有变化，参考前面的编译文档</p>
+<h2><a class="anchor" id="autotoc_md14"></a>
+常见问题:</h2>
+<p>1，xmake包默认安装c盘，我c盘空间不多不想安装在c盘</p>
+<p>答: 设置相关目录到其他盘 <code>xmake g --pkg_installdir="xxx"</code> 设置包安装目录 <code>xmake g --pkg_cachedir="xxx"</code> 设置包缓存目录</p>
+<p>2，我电脑无法联网，如何下载安装包？</p>
+<p>答:可以提前准备好包，这里以windows环境安装本仓库gcc交叉编译工具链为例</p>
+<p>首先下载好gcc-arm-none-eabi-10-2020-q4-major-win32.zip到D盘根目录，执行 <code>xmake g --pkg_searchdirs="D:"</code>xmake会优先搜索设置的目录去搜索安装包，就不必联网了</p>
+<p>gcc下载连接参考 csdk.lua中的连接，选择对应平台下载</p>
+<p>3，github包是否可以加速？</p>
+<p>答:<code>xmake g --proxy_pac=github_mirror.lua</code>可设置内置的github加速镜像</p>
+<p>4，更新xmake时候windows报毒怎么办？</p>
+<p>答:xmake是完全开源的，可以放心使用，误报手动允许即可</p>
+<p>5，更新xmake后使用遇到</p>
+<div class="fragment"><div class="line">PS F:\luatos-soc-2024\project\luatos&gt; xmake f --menu</div>
+<div class="line">checking for Microsoft Visual Studio (x64) version ... 2022</div>
+<div class="line">updating repositoerror: Updating 2c9ad29..695dd08</div>
+<div class="line">ke-mirror/build-artifacts</div>
+<div class="line"> * branch            main       -&gt; FETCH_HEAD</div>
+<div class="line">error: Your local changes to the following files would be overwritten by merge:</div>
+<div class="line">        packages/xxx</div>
+<div class="line">Please commit your changes or stash them before you merge.</div>
+<div class="line">Aborting</div>
+</div><!-- fragment --><p>报错怎么办</p>
+<p>答:最直接的方式是删除 localappdata%/.xmake/repositories (通常为 C:\Users\用户名\AppData\Local\.xmake\repositories) 之后重新执行即可</p>
+<p>更多问题可自己看<a href="https://xmake.io/#/">xmake</a>文档</p>
+<h2><a class="anchor" id="autotoc_md15"></a>
+授权协议</h2>
+<p>[MIT License](LICENSE) </p>
+</div></div><!-- PageDoc -->
+<a href="doxygen_crawl.html"/>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

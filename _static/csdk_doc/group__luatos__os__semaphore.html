@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: 信号量接口函数</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">信号量接口函数<div class="ingroups"><a class="el" href="group__luatos__os.html">操作系统接口</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga0000ac8d08efe43aff4544f129737b92" id="r_ga0000ac8d08efe43aff4544f129737b92"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0000ac8d08efe43aff4544f129737b92">luat_rtos_semaphore_t</a></td></tr>
+<tr class="memdesc:ga0000ac8d08efe43aff4544f129737b92"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义信号量句柄  <br /></td></tr>
+<tr class="separator:ga0000ac8d08efe43aff4544f129737b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gab45ee275e30e8c91d091b436db33460f" id="r_gab45ee275e30e8c91d091b436db33460f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab45ee275e30e8c91d091b436db33460f">luat_rtos_semaphore_create</a> (<a class="el" href="#ga0000ac8d08efe43aff4544f129737b92">luat_rtos_semaphore_t</a> *semaphore_handle, uint32_t init_count)</td></tr>
+<tr class="memdesc:gab45ee275e30e8c91d091b436db33460f"><td class="mdescLeft">&#160;</td><td class="mdescRight">信号量创建，可以在中断中release  <br /></td></tr>
+<tr class="separator:gab45ee275e30e8c91d091b436db33460f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5436f8020bd7bd79418c5ad017cc722a" id="r_ga5436f8020bd7bd79418c5ad017cc722a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5436f8020bd7bd79418c5ad017cc722a">luat_rtos_semaphore_delete</a> (<a class="el" href="#ga0000ac8d08efe43aff4544f129737b92">luat_rtos_semaphore_t</a> semaphore_handle)</td></tr>
+<tr class="memdesc:ga5436f8020bd7bd79418c5ad017cc722a"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除信号量  <br /></td></tr>
+<tr class="separator:ga5436f8020bd7bd79418c5ad017cc722a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8bc07dc3a35c2855fd598f6ed8294125" id="r_ga8bc07dc3a35c2855fd598f6ed8294125"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8bc07dc3a35c2855fd598f6ed8294125">luat_rtos_semaphore_take</a> (<a class="el" href="#ga0000ac8d08efe43aff4544f129737b92">luat_rtos_semaphore_t</a> semaphore_handle, uint32_t timeout)</td></tr>
+<tr class="memdesc:ga8bc07dc3a35c2855fd598f6ed8294125"><td class="mdescLeft">&#160;</td><td class="mdescRight">信号量等待获取  <br /></td></tr>
+<tr class="separator:ga8bc07dc3a35c2855fd598f6ed8294125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac5918f19131f3c4cbd55458b7d499068" id="r_gac5918f19131f3c4cbd55458b7d499068"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac5918f19131f3c4cbd55458b7d499068">luat_rtos_semaphore_release</a> (<a class="el" href="#ga0000ac8d08efe43aff4544f129737b92">luat_rtos_semaphore_t</a> semaphore_handle)</td></tr>
+<tr class="memdesc:gac5918f19131f3c4cbd55458b7d499068"><td class="mdescLeft">&#160;</td><td class="mdescRight">信号量释放发送  <br /></td></tr>
+<tr class="separator:gac5918f19131f3c4cbd55458b7d499068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ga0000ac8d08efe43aff4544f129737b92" name="ga0000ac8d08efe43aff4544f129737b92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0000ac8d08efe43aff4544f129737b92">&#9670;&#160;</a></span>luat_rtos_semaphore_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void* <a class="el" href="#ga0000ac8d08efe43aff4544f129737b92">luat_rtos_semaphore_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定义信号量句柄 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__rtos_8h_source.html">luat_rtos.h</a> 第 <a class="el" href="luat__rtos_8h_source.html#l00220">220</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="gab45ee275e30e8c91d091b436db33460f" name="gab45ee275e30e8c91d091b436db33460f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab45ee275e30e8c91d091b436db33460f">&#9670;&#160;</a></span>luat_rtos_semaphore_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_semaphore_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga0000ac8d08efe43aff4544f129737b92">luat_rtos_semaphore_t</a> *</td>          <td class="paramname"><span class="paramname"><em>semaphore_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>init_count</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>信号量创建，可以在中断中release </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">semaphore_handle[OUT]</td><td>信号量句柄 </td></tr>
+    <tr><td class="paramname">init_count</td><td>初始值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga5436f8020bd7bd79418c5ad017cc722a" name="ga5436f8020bd7bd79418c5ad017cc722a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5436f8020bd7bd79418c5ad017cc722a">&#9670;&#160;</a></span>luat_rtos_semaphore_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_semaphore_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga0000ac8d08efe43aff4544f129737b92">luat_rtos_semaphore_t</a></td>          <td class="paramname"><span class="paramname"><em>semaphore_handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除信号量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">semaphore_handle</td><td>信号量句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="gac5918f19131f3c4cbd55458b7d499068" name="gac5918f19131f3c4cbd55458b7d499068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac5918f19131f3c4cbd55458b7d499068">&#9670;&#160;</a></span>luat_rtos_semaphore_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_semaphore_release </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga0000ac8d08efe43aff4544f129737b92">luat_rtos_semaphore_t</a></td>          <td class="paramname"><span class="paramname"><em>semaphore_handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>信号量释放发送 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">semaphore_handle</td><td>信号量句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga8bc07dc3a35c2855fd598f6ed8294125" name="ga8bc07dc3a35c2855fd598f6ed8294125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8bc07dc3a35c2855fd598f6ed8294125">&#9670;&#160;</a></span>luat_rtos_semaphore_take()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_semaphore_take </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga0000ac8d08efe43aff4544f129737b92">luat_rtos_semaphore_t</a></td>          <td class="paramname"><span class="paramname"><em>semaphore_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>信号量等待获取 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">semaphore_handle</td><td>信号量句柄 </td></tr>
+    <tr><td class="paramname">timeout</td><td>接收超时，单位ms，特殊值见LUAT_RTOS_WAIT_E </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

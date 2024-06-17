@@ -1,0 +1,239 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: 远程升级接口</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">远程升级接口</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga808b8ee0a339c6d1ba2d7af7ca0b2157" id="r_ga808b8ee0a339c6d1ba2d7af7ca0b2157"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga808b8ee0a339c6d1ba2d7af7ca0b2157">luat_fota_init</a> (uint32_t start_address, uint32_t len, <a class="el" href="group__luatos__device__spi.html#gac3f806a5129a8cae8ea590459dc1eaec">luat_spi_device_t</a> *spi_device, const char *path, uint32_t pathlen)</td></tr>
+<tr class="memdesc:ga808b8ee0a339c6d1ba2d7af7ca0b2157"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于初始化fota,创建写入升级包数据的上下文结构体  <br /></td></tr>
+<tr class="separator:ga808b8ee0a339c6d1ba2d7af7ca0b2157"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab5af8a8cbd9ba9aa4dbeae6a9fee7366" id="r_gab5af8a8cbd9ba9aa4dbeae6a9fee7366"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab5af8a8cbd9ba9aa4dbeae6a9fee7366">luat_fota_write</a> (uint8_t *data, uint32_t len)</td></tr>
+<tr class="memdesc:gab5af8a8cbd9ba9aa4dbeae6a9fee7366"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于向本地 Flash 中写入升级包数据  <br /></td></tr>
+<tr class="separator:gab5af8a8cbd9ba9aa4dbeae6a9fee7366"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacd86ce1d2fb59ec84688b2a366b0fb77" id="r_gacd86ce1d2fb59ec84688b2a366b0fb77"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gacd86ce1d2fb59ec84688b2a366b0fb77">luat_fota_done</a> (void)</td></tr>
+<tr class="memdesc:gacd86ce1d2fb59ec84688b2a366b0fb77"><td class="mdescLeft">&#160;</td><td class="mdescRight">用于结束升级包下载  <br /></td></tr>
+<tr class="separator:gacd86ce1d2fb59ec84688b2a366b0fb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b916f3d36a68945674ad907593a951a" id="r_ga4b916f3d36a68945674ad907593a951a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4b916f3d36a68945674ad907593a951a">luat_fota_end</a> (uint8_t is_ok)</td></tr>
+<tr class="memdesc:ga4b916f3d36a68945674ad907593a951a"><td class="mdescLeft">&#160;</td><td class="mdescRight">结束fota流程  <br /></td></tr>
+<tr class="separator:ga4b916f3d36a68945674ad907593a951a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae589efc428935c940e506416b989ea3d" id="r_gae589efc428935c940e506416b989ea3d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae589efc428935c940e506416b989ea3d">luat_fota_wait_ready</a> (void)</td></tr>
+<tr class="memdesc:gae589efc428935c940e506416b989ea3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">等待fota 准备，目前没有什么作用  <br /></td></tr>
+<tr class="separator:gae589efc428935c940e506416b989ea3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">函数说明</h2>
+<a id="gacd86ce1d2fb59ec84688b2a366b0fb77" name="gacd86ce1d2fb59ec84688b2a366b0fb77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacd86ce1d2fb59ec84688b2a366b0fb77">&#9670;&#160;</a></span>luat_fota_done()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_fota_done </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>用于结束升级包下载 </p>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga4b916f3d36a68945674ad907593a951a" name="ga4b916f3d36a68945674ad907593a951a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4b916f3d36a68945674ad907593a951a">&#9670;&#160;</a></span>luat_fota_end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_fota_end </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>is_ok</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>结束fota流程 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">is_ok</td><td>是否结束流程 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga808b8ee0a339c6d1ba2d7af7ca0b2157" name="ga808b8ee0a339c6d1ba2d7af7ca0b2157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga808b8ee0a339c6d1ba2d7af7ca0b2157">&#9670;&#160;</a></span>luat_fota_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_fota_init </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>start_address</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__luatos__device__spi.html#gac3f806a5129a8cae8ea590459dc1eaec">luat_spi_device_t</a> *</td>          <td class="paramname"><span class="paramname"><em>spi_device</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>pathlen</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>用于初始化fota,创建写入升级包数据的上下文结构体 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">start_address,开始地址</td><td>718/716系列填0 </td></tr>
+    <tr><td class="paramname">len</td><td>长度 718/716系列填0 </td></tr>
+    <tr><td class="paramname">spi_device</td><td>长度 718/716系列填NULL </td></tr>
+    <tr><td class="paramname">path</td><td>长度 718/716系列填NULL </td></tr>
+    <tr><td class="paramname">pathlen</td><td>长度 718/716系列填0 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd><br  />
+ </dd></dl>
+
+</div>
+</div>
+<a id="gae589efc428935c940e506416b989ea3d" name="gae589efc428935c940e506416b989ea3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae589efc428935c940e506416b989ea3d">&#9670;&#160;</a></span>luat_fota_wait_ready()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t luat_fota_wait_ready </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>等待fota 准备，目前没有什么作用 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">&lt;br&gt;</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uint8_t =1 准备好 </dd></dl>
+
+</div>
+</div>
+<a id="gab5af8a8cbd9ba9aa4dbeae6a9fee7366" name="gab5af8a8cbd9ba9aa4dbeae6a9fee7366"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab5af8a8cbd9ba9aa4dbeae6a9fee7366">&#9670;&#160;</a></span>luat_fota_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_fota_write </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>用于向本地 Flash 中写入升级包数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>升级包数据 </td></tr>
+    <tr><td class="paramname">len</td><td>升级包数据长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

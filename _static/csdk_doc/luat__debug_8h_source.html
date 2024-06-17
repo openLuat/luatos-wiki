@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: D:/Git_Project/LuatOS/luat/include/luat_debug.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c84d1918a0c60f03a047973dabe1fbea.html">LuatOS</a></li><li class="navelem"><a class="el" href="dir_58e660e76975d16d5415f5038ac9d3ca.html">luat</a></li><li class="navelem"><a class="el" href="dir_1113cf867ec23ec4b862785c4b5d35b9.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">luat_debug.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="luat__debug_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (c) 2022 OpenLuat &amp; AirM2M</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy of</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * this software and associated documentation files (the &quot;Software&quot;), to deal in</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * the Software without restriction, including without limitation the rights to</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * the Software, and to permit persons to whom the Software is furnished to do so,</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * subject to the following conditions:</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * The above copyright notice and this permission notice shall be included in all</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * copies or substantial portions of the Software.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#ifndef LUAT_DEBUG_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#define LUAT_DEBUG_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="};">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="group__luatos__debug.html#gac03ca0fda57da3eac149d55c387c1004">   34</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="group__luatos__debug.html#gac03ca0fda57da3eac149d55c387c1004">LUAT_DEBUG_FAULT_MODE</a></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>{</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="group__luatos__debug.html#ggac03ca0fda57da3eac149d55c387c1004a6b6c0a74cf52fc1b88f46abc9a446880">   36</a></span>    <a class="code hl_enumvalue" href="group__luatos__debug.html#ggac03ca0fda57da3eac149d55c387c1004a6b6c0a74cf52fc1b88f46abc9a446880">LUAT_DEBUG_FAULT_RESET</a>, </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="group__luatos__debug.html#ggac03ca0fda57da3eac149d55c387c1004a3035761c3834b36277d38bc70879ffaf">   37</a></span>    <a class="code hl_enumvalue" href="group__luatos__debug.html#ggac03ca0fda57da3eac149d55c387c1004a3035761c3834b36277d38bc70879ffaf">LUAT_DEBUG_FAULT_HANG</a>, </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="group__luatos__debug.html#ggac03ca0fda57da3eac149d55c387c1004a9bbe0485e7e6b85aab41cce2a9004430">   38</a></span>    <a class="code hl_enumvalue" href="group__luatos__debug.html#ggac03ca0fda57da3eac149d55c387c1004a9bbe0485e7e6b85aab41cce2a9004430">LUAT_DEBUG_FAULT_HANG_RESET</a>, </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_enumvalue" href="group__luatos__debug.html#ggac03ca0fda57da3eac149d55c387c1004a170f12717032221aae8b73e553ae0e49">LUAT_DEBUG_FAULT_SAVE_RESET</a> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="group__luatos__debug.html#ga737b03d3ff05fa13a72f289aa8143573">   40</a></span>}<a class="code hl_typedef" href="group__luatos__debug.html#ga737b03d3ff05fa13a72f289aa8143573">LUAT_DEBUG_FAULT_MODE_E</a>;</div>
+</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="group__luatos__debug.html#ga3eeb2d2b80201efa41df8308f3dabae0">   48</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__luatos__debug.html#ga3eeb2d2b80201efa41df8308f3dabae0">luat_debug_print</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="group__luatos__debug.html#ga173d607bb0d5433d6e8d13d9b5bcbd68">   54</a></span><span class="preprocessor">#define LUAT_DEBUG_PRINT(fmt, argv...) luat_debug_print(&quot;%s %d:&quot;fmt, __FUNCTION__,__LINE__, ##argv)</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="group__luatos__debug.html#gae177dd88a281097c8431c09235ae19fb">   64</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__luatos__debug.html#gae177dd88a281097c8431c09235ae19fb">luat_debug_assert</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *fun_name, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> line_no, <span class="keyword">const</span> <span class="keywordtype">char</span> *fmt, ...);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="" data-end="">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__luatos__debug.html#gaf99f20c3612ee65b2ac4b755ffbc759b">   67</a></span><span class="preprocessor">#define LUAT_DEBUG_ASSERT(condition, fmt, argv...)  do {  \</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">                                                        { \</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">                                                            if((condition) == 0) \</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">                                                            { \</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">                                                                luat_debug_assert(__FUNCTION__, __LINE__, fmt, ##argv); \</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">                                                            }\</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">                                                        } \</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">                                                    } while(0) </span></div>
+</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="group__luatos__debug.html#gaea5ac20b1d8bffe828a8110bbd7d4ea8">   82</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__luatos__debug.html#gaea5ac20b1d8bffe828a8110bbd7d4ea8">luat_debug_set_fault_mode</a>(<a class="code hl_typedef" href="group__luatos__debug.html#ga737b03d3ff05fa13a72f289aa8143573">LUAT_DEBUG_FAULT_MODE_E</a> mode);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="group__luatos__debug.html#ga123df153abf0c7d8b56e1d4c6103e1ff">   89</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group__luatos__debug.html#ga123df153abf0c7d8b56e1d4c6103e1ff">luat_debug_print_onoff</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> onoff);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__luatos__debug_html_ga123df153abf0c7d8b56e1d4c6103e1ff"><div class="ttname"><a href="group__luatos__debug.html#ga123df153abf0c7d8b56e1d4c6103e1ff">luat_debug_print_onoff</a></div><div class="ttdeci">void luat_debug_print_onoff(unsigned char onoff)</div><div class="ttdoc">是否开启/停止csdk log</div></div>
+<div class="ttc" id="agroup__luatos__debug_html_ga3eeb2d2b80201efa41df8308f3dabae0"><div class="ttname"><a href="group__luatos__debug.html#ga3eeb2d2b80201efa41df8308f3dabae0">luat_debug_print</a></div><div class="ttdeci">void luat_debug_print(const char *fmt,...)</div><div class="ttdoc">格式打印并输出到LOG口</div></div>
+<div class="ttc" id="agroup__luatos__debug_html_ga737b03d3ff05fa13a72f289aa8143573"><div class="ttname"><a href="group__luatos__debug.html#ga737b03d3ff05fa13a72f289aa8143573">LUAT_DEBUG_FAULT_MODE_E</a></div><div class="ttdeci">enum LUAT_DEBUG_FAULT_MODE LUAT_DEBUG_FAULT_MODE_E</div><div class="ttdoc">出现异常后系统处理</div></div>
+<div class="ttc" id="agroup__luatos__debug_html_gac03ca0fda57da3eac149d55c387c1004"><div class="ttname"><a href="group__luatos__debug.html#gac03ca0fda57da3eac149d55c387c1004">LUAT_DEBUG_FAULT_MODE</a></div><div class="ttdeci">LUAT_DEBUG_FAULT_MODE</div><div class="ttdoc">出现异常后系统处理</div><div class="ttdef"><b>定义</b> <a href="#l00034">luat_debug.h:35</a></div></div>
+<div class="ttc" id="agroup__luatos__debug_html_gae177dd88a281097c8431c09235ae19fb"><div class="ttname"><a href="group__luatos__debug.html#gae177dd88a281097c8431c09235ae19fb">luat_debug_assert</a></div><div class="ttdeci">void luat_debug_assert(const char *fun_name, unsigned int line_no, const char *fmt,...)</div><div class="ttdoc">断言处理，并格式打印输出到LOG口</div></div>
+<div class="ttc" id="agroup__luatos__debug_html_gaea5ac20b1d8bffe828a8110bbd7d4ea8"><div class="ttname"><a href="group__luatos__debug.html#gaea5ac20b1d8bffe828a8110bbd7d4ea8">luat_debug_set_fault_mode</a></div><div class="ttdeci">void luat_debug_set_fault_mode(LUAT_DEBUG_FAULT_MODE_E mode)</div><div class="ttdoc">设置出现异常后系统处理模式</div></div>
+<div class="ttc" id="agroup__luatos__debug_html_ggac03ca0fda57da3eac149d55c387c1004a170f12717032221aae8b73e553ae0e49"><div class="ttname"><a href="group__luatos__debug.html#ggac03ca0fda57da3eac149d55c387c1004a170f12717032221aae8b73e553ae0e49">LUAT_DEBUG_FAULT_SAVE_RESET</a></div><div class="ttdeci">@ LUAT_DEBUG_FAULT_SAVE_RESET</div><div class="ttdef"><b>定义</b> <a href="#l00040">luat_debug.h:39</a></div></div>
+<div class="ttc" id="agroup__luatos__debug_html_ggac03ca0fda57da3eac149d55c387c1004a3035761c3834b36277d38bc70879ffaf"><div class="ttname"><a href="group__luatos__debug.html#ggac03ca0fda57da3eac149d55c387c1004a3035761c3834b36277d38bc70879ffaf">LUAT_DEBUG_FAULT_HANG</a></div><div class="ttdeci">@ LUAT_DEBUG_FAULT_HANG</div><div class="ttdef"><b>定义</b> <a href="#l00037">luat_debug.h:37</a></div></div>
+<div class="ttc" id="agroup__luatos__debug_html_ggac03ca0fda57da3eac149d55c387c1004a6b6c0a74cf52fc1b88f46abc9a446880"><div class="ttname"><a href="group__luatos__debug.html#ggac03ca0fda57da3eac149d55c387c1004a6b6c0a74cf52fc1b88f46abc9a446880">LUAT_DEBUG_FAULT_RESET</a></div><div class="ttdeci">@ LUAT_DEBUG_FAULT_RESET</div><div class="ttdef"><b>定义</b> <a href="#l00036">luat_debug.h:36</a></div></div>
+<div class="ttc" id="agroup__luatos__debug_html_ggac03ca0fda57da3eac149d55c387c1004a9bbe0485e7e6b85aab41cce2a9004430"><div class="ttname"><a href="group__luatos__debug.html#ggac03ca0fda57da3eac149d55c387c1004a9bbe0485e7e6b85aab41cce2a9004430">LUAT_DEBUG_FAULT_HANG_RESET</a></div><div class="ttdeci">@ LUAT_DEBUG_FAULT_HANG_RESET</div><div class="ttdef"><b>定义</b> <a href="#l00038">luat_debug.h:38</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: crypto数据加密</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">crypto数据加密</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga3406ece85dbb8a38b389bbba68e01614" id="r_ga3406ece85dbb8a38b389bbba68e01614"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3406ece85dbb8a38b389bbba68e01614">luat_crypto_trng</a> (char *buff, size_t len)</td></tr>
+<tr class="memdesc:ga3406ece85dbb8a38b389bbba68e01614"><td class="mdescLeft">&#160;</td><td class="mdescRight">生成随机数  <br /></td></tr>
+<tr class="separator:ga3406ece85dbb8a38b389bbba68e01614"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1d9a536728a6ad19a883fcd68ee76ec" id="r_gaf1d9a536728a6ad19a883fcd68ee76ec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf1d9a536728a6ad19a883fcd68ee76ec">luat_crypto_md5_simple</a> (const char *str, size_t str_size, void *out_ptr)</td></tr>
+<tr class="memdesc:gaf1d9a536728a6ad19a883fcd68ee76ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算md5值  <br /></td></tr>
+<tr class="separator:gaf1d9a536728a6ad19a883fcd68ee76ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b2d97ef6af074bed69c15076ab21890" id="r_ga2b2d97ef6af074bed69c15076ab21890"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2b2d97ef6af074bed69c15076ab21890">luat_crypto_hmac_md5_simple</a> (const char *str, size_t str_size, const char *mac, size_t mac_size, void *out_ptr)</td></tr>
+<tr class="memdesc:ga2b2d97ef6af074bed69c15076ab21890"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算hmac_md5值  <br /></td></tr>
+<tr class="separator:ga2b2d97ef6af074bed69c15076ab21890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15279790c32e23c6fc2ced086ac09ca6" id="r_ga15279790c32e23c6fc2ced086ac09ca6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga15279790c32e23c6fc2ced086ac09ca6">luat_crypto_sha1_simple</a> (const char *str, size_t str_size, void *out_ptr)</td></tr>
+<tr class="memdesc:ga15279790c32e23c6fc2ced086ac09ca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算sha1值  <br /></td></tr>
+<tr class="separator:ga15279790c32e23c6fc2ced086ac09ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8363bf6a18ea256f28c0bcc9e61b2adf" id="r_ga8363bf6a18ea256f28c0bcc9e61b2adf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8363bf6a18ea256f28c0bcc9e61b2adf">luat_crypto_hmac_sha1_simple</a> (const char *str, size_t str_size, const char *mac, size_t mac_size, void *out_ptr)</td></tr>
+<tr class="memdesc:ga8363bf6a18ea256f28c0bcc9e61b2adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算hmac_sha1值  <br /></td></tr>
+<tr class="separator:ga8363bf6a18ea256f28c0bcc9e61b2adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd8b4aa2c52ffd4c72d6ea8f057b75f6" id="r_gafd8b4aa2c52ffd4c72d6ea8f057b75f6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafd8b4aa2c52ffd4c72d6ea8f057b75f6">luat_crypto_sha256_simple</a> (const char *str, size_t str_size, void *out_ptr)</td></tr>
+<tr class="memdesc:gafd8b4aa2c52ffd4c72d6ea8f057b75f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算sha256值  <br /></td></tr>
+<tr class="separator:gafd8b4aa2c52ffd4c72d6ea8f057b75f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24e4fbadf7fae43ee7fa597438093687" id="r_ga24e4fbadf7fae43ee7fa597438093687"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga24e4fbadf7fae43ee7fa597438093687">luat_crypto_hmac_sha256_simple</a> (const char *str, size_t str_size, const char *mac, size_t mac_size, void *out_ptr)</td></tr>
+<tr class="memdesc:ga24e4fbadf7fae43ee7fa597438093687"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算hmac_sha256值  <br /></td></tr>
+<tr class="separator:ga24e4fbadf7fae43ee7fa597438093687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga55ada9652eec71e4810c5bc738cb583c" id="r_ga55ada9652eec71e4810c5bc738cb583c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga55ada9652eec71e4810c5bc738cb583c">luat_crypto_sha512_simple</a> (const char *str, size_t str_size, void *out_ptr)</td></tr>
+<tr class="memdesc:ga55ada9652eec71e4810c5bc738cb583c"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算sha512值  <br /></td></tr>
+<tr class="separator:ga55ada9652eec71e4810c5bc738cb583c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82ee1aaf84a8eda59ce1b8dfb5004719" id="r_ga82ee1aaf84a8eda59ce1b8dfb5004719"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga82ee1aaf84a8eda59ce1b8dfb5004719">luat_crypto_hmac_sha512_simple</a> (const char *str, size_t str_size, const char *mac, size_t mac_size, void *out_ptr)</td></tr>
+<tr class="memdesc:ga82ee1aaf84a8eda59ce1b8dfb5004719"><td class="mdescLeft">&#160;</td><td class="mdescRight">计算hmac_sha512值  <br /></td></tr>
+<tr class="separator:ga82ee1aaf84a8eda59ce1b8dfb5004719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga57d924870e937dda788adcb3da4f4572" id="r_ga57d924870e937dda788adcb3da4f4572"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga57d924870e937dda788adcb3da4f4572">luat_crypto_base64_encode</a> (unsigned char *dst, size_t dlen, size_t *olen, const unsigned char *src, size_t slen)</td></tr>
+<tr class="memdesc:ga57d924870e937dda788adcb3da4f4572"><td class="mdescLeft">&#160;</td><td class="mdescRight">BASE64加密  <br /></td></tr>
+<tr class="separator:ga57d924870e937dda788adcb3da4f4572"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae5450dfc605e52da0a7b15461c72667a" id="r_gae5450dfc605e52da0a7b15461c72667a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae5450dfc605e52da0a7b15461c72667a">luat_crypto_base64_decode</a> (unsigned char *dst, size_t dlen, size_t *olen, const unsigned char *src, size_t slen)</td></tr>
+<tr class="memdesc:gae5450dfc605e52da0a7b15461c72667a"><td class="mdescLeft">&#160;</td><td class="mdescRight">BASE64解密  <br /></td></tr>
+<tr class="separator:gae5450dfc605e52da0a7b15461c72667a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">函数说明</h2>
+<a id="gae5450dfc605e52da0a7b15461c72667a" name="gae5450dfc605e52da0a7b15461c72667a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae5450dfc605e52da0a7b15461c72667a">&#9670;&#160;</a></span>luat_crypto_base64_decode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_crypto_base64_decode </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>dlen</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>olen</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>slen</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BASE64解密 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>buffer </td></tr>
+    <tr><td class="paramname">dlen</td><td>buffer长度 </td></tr>
+    <tr><td class="paramname">olen</td><td>写入的字节数 </td></tr>
+    <tr><td class="paramname">src</td><td>密钥 </td></tr>
+    <tr><td class="paramname">slen</td><td>密钥长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0成功 </dd></dl>
+
+</div>
+</div>
+<a id="ga57d924870e937dda788adcb3da4f4572" name="ga57d924870e937dda788adcb3da4f4572"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga57d924870e937dda788adcb3da4f4572">&#9670;&#160;</a></span>luat_crypto_base64_encode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_crypto_base64_encode </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char *</td>          <td class="paramname"><span class="paramname"><em>dst</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>dlen</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>olen</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const unsigned char *</td>          <td class="paramname"><span class="paramname"><em>src</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>slen</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BASE64加密 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dst</td><td>buffer </td></tr>
+    <tr><td class="paramname">dlen</td><td>buffer长度 </td></tr>
+    <tr><td class="paramname">olen</td><td>写入的字节数 </td></tr>
+    <tr><td class="paramname">src</td><td>加密密钥 </td></tr>
+    <tr><td class="paramname">slen</td><td>加密密钥长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0成功 </dd></dl>
+
+</div>
+</div>
+<a id="ga2b2d97ef6af074bed69c15076ab21890" name="ga2b2d97ef6af074bed69c15076ab21890"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2b2d97ef6af074bed69c15076ab21890">&#9670;&#160;</a></span>luat_crypto_hmac_md5_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_crypto_hmac_md5_simple </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>str_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>mac</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>mac_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>out_ptr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算hmac_md5值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>需要计算的字符串 </td></tr>
+    <tr><td class="paramname">str_size</td><td>字符串长度 </td></tr>
+    <tr><td class="paramname">mac</td><td>密钥 </td></tr>
+    <tr><td class="paramname">mac_size</td><td>密钥的长度 </td></tr>
+    <tr><td class="paramname">out_ptr</td><td>输出 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功0，失败-1 </dd></dl>
+
+</div>
+</div>
+<a id="ga8363bf6a18ea256f28c0bcc9e61b2adf" name="ga8363bf6a18ea256f28c0bcc9e61b2adf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8363bf6a18ea256f28c0bcc9e61b2adf">&#9670;&#160;</a></span>luat_crypto_hmac_sha1_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_crypto_hmac_sha1_simple </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>str_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>mac</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>mac_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>out_ptr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算hmac_sha1值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>需要计算的字符串 </td></tr>
+    <tr><td class="paramname">str_size</td><td>字符串长度 </td></tr>
+    <tr><td class="paramname">mac</td><td>密钥 </td></tr>
+    <tr><td class="paramname">mac_size</td><td>密钥的长度 </td></tr>
+    <tr><td class="paramname">out_ptr</td><td>输出 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功0，失败-1 </dd></dl>
+
+</div>
+</div>
+<a id="ga24e4fbadf7fae43ee7fa597438093687" name="ga24e4fbadf7fae43ee7fa597438093687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24e4fbadf7fae43ee7fa597438093687">&#9670;&#160;</a></span>luat_crypto_hmac_sha256_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_crypto_hmac_sha256_simple </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>str_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>mac</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>mac_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>out_ptr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算hmac_sha256值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>需要计算的字符串 </td></tr>
+    <tr><td class="paramname">str_size</td><td>字符串长度 </td></tr>
+    <tr><td class="paramname">mac</td><td>密钥 </td></tr>
+    <tr><td class="paramname">mac_size</td><td>密钥的长度 </td></tr>
+    <tr><td class="paramname">out_ptr</td><td>输出 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功0，失败-1 </dd></dl>
+
+</div>
+</div>
+<a id="ga82ee1aaf84a8eda59ce1b8dfb5004719" name="ga82ee1aaf84a8eda59ce1b8dfb5004719"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga82ee1aaf84a8eda59ce1b8dfb5004719">&#9670;&#160;</a></span>luat_crypto_hmac_sha512_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_crypto_hmac_sha512_simple </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>str_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>mac</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>mac_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>out_ptr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算hmac_sha512值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>需要计算的字符串 </td></tr>
+    <tr><td class="paramname">str_size</td><td>字符串长度 </td></tr>
+    <tr><td class="paramname">mac</td><td>密钥 </td></tr>
+    <tr><td class="paramname">mac_size</td><td>密钥的长度 </td></tr>
+    <tr><td class="paramname">out_ptr</td><td>输出 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功0，失败-1 </dd></dl>
+
+</div>
+</div>
+<a id="gaf1d9a536728a6ad19a883fcd68ee76ec" name="gaf1d9a536728a6ad19a883fcd68ee76ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1d9a536728a6ad19a883fcd68ee76ec">&#9670;&#160;</a></span>luat_crypto_md5_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_crypto_md5_simple </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>str_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>out_ptr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算md5值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>需要计算的字符串 </td></tr>
+    <tr><td class="paramname">str_size</td><td>需要计算的字符串的长度 </td></tr>
+    <tr><td class="paramname">out_ptr</td><td>输出 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功0，失败-1 </dd></dl>
+
+</div>
+</div>
+<a id="ga15279790c32e23c6fc2ced086ac09ca6" name="ga15279790c32e23c6fc2ced086ac09ca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga15279790c32e23c6fc2ced086ac09ca6">&#9670;&#160;</a></span>luat_crypto_sha1_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_crypto_sha1_simple </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>str_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>out_ptr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算sha1值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>需要计算的字符串 </td></tr>
+    <tr><td class="paramname">str_size</td><td>需要计算的字符串的长度 </td></tr>
+    <tr><td class="paramname">out_ptr</td><td>输出 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功0，失败-1 </dd></dl>
+
+</div>
+</div>
+<a id="gafd8b4aa2c52ffd4c72d6ea8f057b75f6" name="gafd8b4aa2c52ffd4c72d6ea8f057b75f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafd8b4aa2c52ffd4c72d6ea8f057b75f6">&#9670;&#160;</a></span>luat_crypto_sha256_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_crypto_sha256_simple </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>str_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>out_ptr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算sha256值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>需要计算的字符串 </td></tr>
+    <tr><td class="paramname">str_size</td><td>需要计算的字符串的长度 </td></tr>
+    <tr><td class="paramname">out_ptr</td><td>输出 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功0，失败-1 </dd></dl>
+
+</div>
+</div>
+<a id="ga55ada9652eec71e4810c5bc738cb583c" name="ga55ada9652eec71e4810c5bc738cb583c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga55ada9652eec71e4810c5bc738cb583c">&#9670;&#160;</a></span>luat_crypto_sha512_simple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_crypto_sha512_simple </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>str</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>str_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>out_ptr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>计算sha512值 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str</td><td>需要计算的字符串 </td></tr>
+    <tr><td class="paramname">str_size</td><td>需要计算的字符串的长度 </td></tr>
+    <tr><td class="paramname">out_ptr</td><td>输出 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>成功0，失败-1 </dd></dl>
+
+</div>
+</div>
+<a id="ga3406ece85dbb8a38b389bbba68e01614" name="ga3406ece85dbb8a38b389bbba68e01614"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3406ece85dbb8a38b389bbba68e01614">&#9670;&#160;</a></span>luat_crypto_trng()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_crypto_trng </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buff</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>生成随机数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buff</td><td>随机数保存内存 </td></tr>
+    <tr><td class="paramname">len</td><td>长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

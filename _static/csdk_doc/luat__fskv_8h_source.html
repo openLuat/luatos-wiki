@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: D:/Git_Project/LuatOS/components/fskv/luat_fskv.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c84d1918a0c60f03a047973dabe1fbea.html">LuatOS</a></li><li class="navelem"><a class="el" href="dir_4202e7a4185ce9275067794b8a91a8d2.html">components</a></li><li class="navelem"><a class="el" href="dir_13148b424a65264d192a1d917ef02fcd.html">fskv</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">luat_fskv.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="luat__fskv_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (c) 2022 OpenLuat &amp; AirM2M</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy of</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * this software and associated documentation files (the &quot;Software&quot;), to deal in</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * the Software without restriction, including without limitation the rights to</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * the Software, and to permit persons to whom the Software is furnished to do so,</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * subject to the following conditions:</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * The above copyright notice and this permission notice shall be included in all</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * copies or substantial portions of the Software.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#ifndef LUAT_FSKV_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#define LUAT_FSKV_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;lfs.h&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="group__luatos__fskv.html#ga1063893e822eb6d49e69af202cde4d1c">   39</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__fskv.html#ga1063893e822eb6d49e69af202cde4d1c">luat_fskv_init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="group__luatos__fskv.html#ga780c86e3caa97c437ebcf54292fbaedf">   46</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__fskv.html#ga780c86e3caa97c437ebcf54292fbaedf">luat_fskv_del</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* key);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="group__luatos__fskv.html#gac48a72c429b45c94a2bd5553b34271f6">   55</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__fskv.html#gac48a72c429b45c94a2bd5553b34271f6">luat_fskv_set</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* key, <span class="keywordtype">void</span>* data, <span class="keywordtype">size_t</span> len);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="group__luatos__fskv.html#gaff423e3adf0420c0a23797277f0e6e2d">   63</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__fskv.html#gaff423e3adf0420c0a23797277f0e6e2d">luat_fskv_size</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* key, <span class="keywordtype">char</span> buff[4]);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="group__luatos__fskv.html#gaa69d8194a44c14664d768f8748ec4b48">   72</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__fskv.html#gaa69d8194a44c14664d768f8748ec4b48">luat_fskv_get</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* key, <span class="keywordtype">void</span>* data, <span class="keywordtype">size_t</span> len);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="group__luatos__fskv.html#ga94df4742bb0bbcba98ebfee75a67d9d8">   78</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__fskv.html#ga94df4742bb0bbcba98ebfee75a67d9d8">luat_fskv_clear</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="group__luatos__fskv.html#ga20bd69b37032d6c24a41758ab8de74e7">   86</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__fskv.html#ga20bd69b37032d6c24a41758ab8de74e7">luat_fskv_stat</a>(<span class="keywordtype">size_t</span> *using_sz, <span class="keywordtype">size_t</span> *max_sz, <span class="keywordtype">size_t</span> *kv_count);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="group__luatos__fskv.html#ga10444025cb85cf3aef9ed433a9b6da0a">   93</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__fskv.html#ga10444025cb85cf3aef9ed433a9b6da0a">luat_fskv_next</a>(<span class="keywordtype">char</span>* buff, <span class="keywordtype">size_t</span> offset);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__luatos__fskv_html_ga10444025cb85cf3aef9ed433a9b6da0a"><div class="ttname"><a href="group__luatos__fskv.html#ga10444025cb85cf3aef9ed433a9b6da0a">luat_fskv_next</a></div><div class="ttdeci">int luat_fskv_next(char *buff, size_t offset)</div><div class="ttdoc">读取下一个偏移的数据</div></div>
+<div class="ttc" id="agroup__luatos__fskv_html_ga1063893e822eb6d49e69af202cde4d1c"><div class="ttname"><a href="group__luatos__fskv.html#ga1063893e822eb6d49e69af202cde4d1c">luat_fskv_init</a></div><div class="ttdeci">int luat_fskv_init(void)</div><div class="ttdoc">初始化kv数据存储</div></div>
+<div class="ttc" id="agroup__luatos__fskv_html_ga20bd69b37032d6c24a41758ab8de74e7"><div class="ttname"><a href="group__luatos__fskv.html#ga20bd69b37032d6c24a41758ab8de74e7">luat_fskv_stat</a></div><div class="ttdeci">int luat_fskv_stat(size_t *using_sz, size_t *max_sz, size_t *kv_count)</div><div class="ttdoc">获取kv数据库状态</div></div>
+<div class="ttc" id="agroup__luatos__fskv_html_ga780c86e3caa97c437ebcf54292fbaedf"><div class="ttname"><a href="group__luatos__fskv.html#ga780c86e3caa97c437ebcf54292fbaedf">luat_fskv_del</a></div><div class="ttdeci">int luat_fskv_del(const char *key)</div><div class="ttdoc">删除指定的key</div></div>
+<div class="ttc" id="agroup__luatos__fskv_html_ga94df4742bb0bbcba98ebfee75a67d9d8"><div class="ttname"><a href="group__luatos__fskv.html#ga94df4742bb0bbcba98ebfee75a67d9d8">luat_fskv_clear</a></div><div class="ttdeci">int luat_fskv_clear(void)</div><div class="ttdoc">清空所有数据</div></div>
+<div class="ttc" id="agroup__luatos__fskv_html_gaa69d8194a44c14664d768f8748ec4b48"><div class="ttname"><a href="group__luatos__fskv.html#gaa69d8194a44c14664d768f8748ec4b48">luat_fskv_get</a></div><div class="ttdeci">int luat_fskv_get(const char *key, void *data, size_t len)</div><div class="ttdoc">读取指定key的数据</div></div>
+<div class="ttc" id="agroup__luatos__fskv_html_gac48a72c429b45c94a2bd5553b34271f6"><div class="ttname"><a href="group__luatos__fskv.html#gac48a72c429b45c94a2bd5553b34271f6">luat_fskv_set</a></div><div class="ttdeci">int luat_fskv_set(const char *key, void *data, size_t len)</div><div class="ttdoc">写入指定key的数据</div></div>
+<div class="ttc" id="agroup__luatos__fskv_html_gaff423e3adf0420c0a23797277f0e6e2d"><div class="ttname"><a href="group__luatos__fskv.html#gaff423e3adf0420c0a23797277f0e6e2d">luat_fskv_size</a></div><div class="ttdeci">int luat_fskv_size(const char *key, char buff[4])</div><div class="ttdoc">读取key大小</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: D:/Git_Project/LuatOS/components/camera/luat_camera.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c84d1918a0c60f03a047973dabe1fbea.html">LuatOS</a></li><li class="navelem"><a class="el" href="dir_4202e7a4185ce9275067794b8a91a8d2.html">components</a></li><li class="navelem"><a class="el" href="dir_40fb69650ce48621ee111f8936ee3681.html">camera</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">luat_camera.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="luat__camera_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/******************************************************************************</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> *  CAMERA设备操作抽象层</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *  @author Dozingfiretruck</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> *  @since 0.0.1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> *****************************************************************************/</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef Luat_CAMERA_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define Luat_CAMERA_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;luat_base.h&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#ifdef __LUATOS__</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;luat_lcd.h&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">enum</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635a69c15c35351183b38c44d80307840524">   19</a></span>    <a class="code hl_enumvalue" href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635a69c15c35351183b38c44d80307840524">LUAT_CAMERA_FRAME_START</a> = 0,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635a10999e7dd057acf036f4b2ff3cdbd3a5">   20</a></span>    <a class="code hl_enumvalue" href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635a10999e7dd057acf036f4b2ff3cdbd3a5">LUAT_CAMERA_FRAME_END</a>,</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635a4bb36a8b0ebfd97c2c8df6f68f9dfdc6">   21</a></span>    <a class="code hl_enumvalue" href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635a4bb36a8b0ebfd97c2c8df6f68f9dfdc6">LUAT_CAMERA_FRAME_RX_DONE</a>,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635a92a4235028795a3b96330553fe83052f">   22</a></span>    <a class="code hl_enumvalue" href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635a92a4235028795a3b96330553fe83052f">LUAT_CAMERA_FRAME_ERROR</a>,</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635aeb333ff20eedb3571a805bdeadf5469d">   24</a></span>    <a class="code hl_enumvalue" href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635aeb333ff20eedb3571a805bdeadf5469d">LUAT_CAMERA_MODE_AUTO</a> = 0,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635a19f540a1e59eaeded5ec9f5a52ce7c9c">   25</a></span>    <a class="code hl_enumvalue" href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635a19f540a1e59eaeded5ec9f5a52ce7c9c">LUAT_CAMERA_MODE_SCAN</a>,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html">   28</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structluat__camera__conf.html">luat_camera_conf</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#a1e6927fa1486224044e568f9c370519b">   30</a></span>    uint8_t <a class="code hl_variable" href="structluat__camera__conf.html#a1e6927fa1486224044e568f9c370519b">id</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#a2bb13a9e8dfd2f7a4308af65676bf1a7">   31</a></span>    uint8_t <a class="code hl_variable" href="structluat__camera__conf.html#a2bb13a9e8dfd2f7a4308af65676bf1a7">zbar_scan</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#a595739b054550a78c95e5842b46bccc1">   32</a></span>    uint8_t <a class="code hl_variable" href="structluat__camera__conf.html#a595739b054550a78c95e5842b46bccc1">draw_lcd</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#a1ea3d376711b29af5b25d366958ce682">   33</a></span>    uint8_t <a class="code hl_variable" href="structluat__camera__conf.html#a1ea3d376711b29af5b25d366958ce682">i2c_id</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#a3590df8c0f943a671fd63d696a55a50c">   34</a></span>    uint8_t <a class="code hl_variable" href="structluat__camera__conf.html#a3590df8c0f943a671fd63d696a55a50c">i2c_addr</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#af191958ad77323914b0d834c7dde47b8">   35</a></span>    uint8_t <a class="code hl_variable" href="structluat__camera__conf.html#af191958ad77323914b0d834c7dde47b8">pwm_id</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#adf41ef7a9a0174e869fd21c5f44ecea0">   36</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structluat__camera__conf.html#adf41ef7a9a0174e869fd21c5f44ecea0">pwm_period</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#a0ee86ca946879ca80d4fa85a8a3528c5">   37</a></span>    uint8_t <a class="code hl_variable" href="structluat__camera__conf.html#a0ee86ca946879ca80d4fa85a8a3528c5">pwm_pulse</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#a764c7e1a333ea274052b54f10741e989">   38</a></span>    uint16_t <a class="code hl_variable" href="structluat__camera__conf.html#a764c7e1a333ea274052b54f10741e989">sensor_width</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#a1fcb9c517e194621b5ee0426fba2ae1e">   39</a></span>    uint16_t <a class="code hl_variable" href="structluat__camera__conf.html#a1fcb9c517e194621b5ee0426fba2ae1e">sensor_height</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#a20303e3baf7a44885164f4a273c8b23d">   40</a></span>    uint8_t <a class="code hl_variable" href="structluat__camera__conf.html#a20303e3baf7a44885164f4a273c8b23d">color_bit</a>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#ab433574c0711330cfd2d2678d4d59044">   41</a></span>    uint8_t <a class="code hl_variable" href="structluat__camera__conf.html#ab433574c0711330cfd2d2678d4d59044">id_reg</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#acb0c285bcf7a3d8946f7384d4515a6ad">   42</a></span>    uint8_t <a class="code hl_variable" href="structluat__camera__conf.html#acb0c285bcf7a3d8946f7384d4515a6ad">id_value</a>;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#a22cb52ef50309118c0c4b2c12cab08cc">   43</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structluat__camera__conf.html#a22cb52ef50309118c0c4b2c12cab08cc">init_cmd_size</a>;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#ae8ef2402d9783c48b85ace3ee32a6888">   44</a></span>    uint8_t *<a class="code hl_variable" href="structluat__camera__conf.html#ae8ef2402d9783c48b85ace3ee32a6888">init_cmd</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#ifdef __LUATOS__</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    luat_lcd_conf_t* <a class="code hl_variable" href="structluat__camera__conf.html#abceea536b4ec1c47d42b569aaa0b0bd7">lcd_conf</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structluat__camera__conf.html#abceea536b4ec1c47d42b569aaa0b0bd7">   48</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="structluat__camera__conf.html#abceea536b4ec1c47d42b569aaa0b0bd7">lcd_conf</a>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#ga5be612ac6acdf900dd89a0067a7ac49a">   50</a></span>} <a class="code hl_typedef" href="group___c_a_m_e_r_a.html#ga5be612ac6acdf900dd89a0067a7ac49a">luat_camera_conf_t</a>;</div>
+</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="foldopen" id="foldopen00052" data-start="{" data-end="};">
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="structluat__spi__camera__t.html">   52</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>{</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="structluat__spi__camera__t.html#a6a9bf2bdd0c349bf524d5217ff25dc25">   54</a></span>    <span class="keywordtype">size_t</span>  <a class="code hl_variable" href="structluat__spi__camera__t.html#a6a9bf2bdd0c349bf524d5217ff25dc25">camera_speed</a>;           <span class="comment">//提供给camera时钟频率</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="structluat__spi__camera__t.html#a764c7e1a333ea274052b54f10741e989">   55</a></span>    uint16_t <a class="code hl_variable" href="structluat__spi__camera__t.html#a764c7e1a333ea274052b54f10741e989">sensor_width</a>;          <span class="comment">//camera的最大宽度</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="structluat__spi__camera__t.html#a1fcb9c517e194621b5ee0426fba2ae1e">   56</a></span>    uint16_t <a class="code hl_variable" href="structluat__spi__camera__t.html#a1fcb9c517e194621b5ee0426fba2ae1e">sensor_height</a>;         <span class="comment">//camera的最大高度</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="structluat__spi__camera__t.html#a01d73cbeef26ddf573c632425d2984c0">   57</a></span>    uint8_t <a class="code hl_variable" href="structluat__spi__camera__t.html#a01d73cbeef26ddf573c632425d2984c0">only_y</a>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="structluat__spi__camera__t.html#a19f2443f14198b033414acffe598eba2">   58</a></span>    uint8_t <a class="code hl_variable" href="structluat__spi__camera__t.html#a19f2443f14198b033414acffe598eba2">rowScaleRatio</a>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="structluat__spi__camera__t.html#a4f26925fc9037f821b436a84eb702786">   59</a></span>    uint8_t <a class="code hl_variable" href="structluat__spi__camera__t.html#a4f26925fc9037f821b436a84eb702786">colScaleRatio</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="structluat__spi__camera__t.html#aa51d3dc12e73eb43b2dd8fd676dacacf">   60</a></span>    uint8_t <a class="code hl_variable" href="structluat__spi__camera__t.html#aa51d3dc12e73eb43b2dd8fd676dacacf">scaleBytes</a>;</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="structluat__spi__camera__t.html#a1c20335158c6291e857616395a719344">   61</a></span>    uint8_t <a class="code hl_variable" href="structluat__spi__camera__t.html#a1c20335158c6291e857616395a719344">spi_mode</a>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structluat__spi__camera__t.html#a89982487cb84a0a95b3a3fcfab1b7d47">   62</a></span>    uint8_t <a class="code hl_variable" href="structluat__spi__camera__t.html#a89982487cb84a0a95b3a3fcfab1b7d47">is_msb</a>; <span class="comment">//0 or 1;</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structluat__spi__camera__t.html#adf7d78304c2f1cc8a00de7d3479ca285">   63</a></span>    uint8_t <a class="code hl_variable" href="structluat__spi__camera__t.html#adf7d78304c2f1cc8a00de7d3479ca285">is_two_line_rx</a>; <span class="comment">//0 or 1;</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structluat__spi__camera__t.html#a885498cd37dc0eda15d5ad2cb53a93e1">   64</a></span>    uint8_t <a class="code hl_variable" href="structluat__spi__camera__t.html#a885498cd37dc0eda15d5ad2cb53a93e1">seq_type</a>;   <span class="comment">//0 or 1</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structluat__spi__camera__t.html#aaa262bf82bd64d82d152d86f7eab7166">   65</a></span>    uint8_t plat_param[4];</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#ifdef __LUATOS__</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    luat_lcd_conf_t* lcd_conf;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="structluat__spi__camera__t.html#abceea536b4ec1c47d42b569aaa0b0bd7">   69</a></span>    <span class="keywordtype">void</span> *<a class="code hl_variable" href="structluat__spi__camera__t.html#abceea536b4ec1c47d42b569aaa0b0bd7">lcd_conf</a>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>} <a class="code hl_struct" href="structluat__spi__camera__t.html">luat_spi_camera_t</a>;</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="preprocessor">#ifdef __LUATOS__</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keywordtype">int</span> l_camera_handler(lua_State *L, <span class="keywordtype">void</span>* ptr);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#ga2df079fa81a057c6ccc2c7e61d7d5ceb">   83</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#ga2df079fa81a057c6ccc2c7e61d7d5ceb">luat_camera_setup</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <a class="code hl_struct" href="structluat__spi__camera__t.html">luat_spi_camera_t</a> *conf, <span class="keywordtype">void</span>* callback, <span class="keywordtype">void</span> *param);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#gadf1a4b15d1949c280a60651bbbb6dd8f">   92</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#gadf1a4b15d1949c280a60651bbbb6dd8f">luat_camera_set_image_w_h</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, uint16_t w, uint16_t h);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#ga39e7342be7ee9036714874b9cccd2fe5">   99</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#ga39e7342be7ee9036714874b9cccd2fe5">luat_camera_init</a>(<a class="code hl_struct" href="structluat__camera__conf.html">luat_camera_conf_t</a> *conf);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#ga8a6aeae6d6db31ed493b8230726a34cf">  106</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#ga8a6aeae6d6db31ed493b8230726a34cf">luat_camera_close</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#gab98ad0fdb900c306f0aac49b54800774">  114</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#gab98ad0fdb900c306f0aac49b54800774">luat_camera_start_with_buffer</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">void</span> *buf);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#ga6c10153e558b602c95b777f2951b6f05">  121</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#ga6c10153e558b602c95b777f2951b6f05">luat_camera_continue_with_buffer</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">void</span> *buf);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#gad74435c9c41be37a2e0f8634587fb3c0">  128</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#gad74435c9c41be37a2e0f8634587fb3c0">luat_camera_pause</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, uint8_t is_pause);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment"> * @brief 扫码库初始化</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment"> * @param type 扫码库型号，目前只支持0</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment"> * @param stack 扫码库任务的堆栈地址</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment"> * @param stack_length 扫码库任务的堆栈深度，type=0时需要至少220KB</span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment"> * @param priority 扫码库任务优先级</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment"> * @return 0成功，其他失败</span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#ga8bfa11e0fd81094dfe59edfcd89fe58b">  137</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#ga8bfa11e0fd81094dfe59edfcd89fe58b">luat_camera_image_decode_init</a>(uint8_t type, <span class="keywordtype">void</span> *stack, uint32_t stack_length, uint32_t priority);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><span class="comment"> * @brief 扫码库进行一次解码</span></div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span><span class="comment"> * @param data 缓冲区</span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment"> * @param image_w 图像宽</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span><span class="comment"> * @param image_h 图像高</span></div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span><span class="comment"> * @param timeout 超时</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment"> * @param callback 回调函数</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span><span class="comment"> * @param param 回调参数</span></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span><span class="comment"> * @return 0成功，其他失败</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#gac67b029378d255185d831683e484b73b">  148</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#gac67b029378d255185d831683e484b73b">luat_camera_image_decode_once</a>(uint8_t *data, uint16_t image_w, uint16_t image_h, uint32_t timeout, <span class="keywordtype">void</span> *callback, <span class="keywordtype">void</span> *param);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span> </div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="comment"> * @brief 扫码库反初始化</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#ga29ae734c3469529a8ff1c738e4391acf">  153</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#ga29ae734c3469529a8ff1c738e4391acf">luat_camera_image_decode_deinit</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment"> * @brief 获取解码结果</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span><span class="comment"> * @param buf 缓冲区</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span><span class="comment"> * @return 1成功，其他失败</span></div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#ga709fa8af57813ba3ad9a99f6e9b9f2bd">  159</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#ga709fa8af57813ba3ad9a99f6e9b9f2bd">luat_camera_image_decode_get_result</a>(uint8_t *buf);</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span><span class="comment">/**********以下是luatos使用，csdk不要使用***********/</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#gae2fe500afb1e4c1f96563822f436d32b">  167</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#gae2fe500afb1e4c1f96563822f436d32b">luat_camera_start</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#ga5a0a21fd42f0456bc9231beec0de3812">  173</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#ga5a0a21fd42f0456bc9231beec0de3812">luat_camera_stop</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#ga2a841f92110b6f839d335bc68db54edc">  175</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#ga2a841f92110b6f839d335bc68db54edc">luat_camera_preview</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, uint8_t on_off);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#ga0112ea5667e81a31302974f7d6663c1a">  177</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#ga0112ea5667e81a31302974f7d6663c1a">luat_camera_work_mode</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> mode);</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#ga7844cb7dec867135204a6c94c8429ed1">  179</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#ga7844cb7dec867135204a6c94c8429ed1">luat_camera_capture</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, uint8_t quality, <span class="keyword">const</span> <span class="keywordtype">char</span> *path);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno"><a class="line" href="group___c_a_m_e_r_a.html#ga741568f0c4d619fe2a81d94fad462905">  181</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group___c_a_m_e_r_a.html#ga741568f0c4d619fe2a81d94fad462905">luat_camera_capture_in_ram</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, uint8_t quality, <span class="keywordtype">void</span> *buffer);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_ga0112ea5667e81a31302974f7d6663c1a"><div class="ttname"><a href="group___c_a_m_e_r_a.html#ga0112ea5667e81a31302974f7d6663c1a">luat_camera_work_mode</a></div><div class="ttdeci">int luat_camera_work_mode(int id, int mode)</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_ga29ae734c3469529a8ff1c738e4391acf"><div class="ttname"><a href="group___c_a_m_e_r_a.html#ga29ae734c3469529a8ff1c738e4391acf">luat_camera_image_decode_deinit</a></div><div class="ttdeci">void luat_camera_image_decode_deinit(void)</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_ga2a841f92110b6f839d335bc68db54edc"><div class="ttname"><a href="group___c_a_m_e_r_a.html#ga2a841f92110b6f839d335bc68db54edc">luat_camera_preview</a></div><div class="ttdeci">int luat_camera_preview(int id, uint8_t on_off)</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_ga2df079fa81a057c6ccc2c7e61d7d5ceb"><div class="ttname"><a href="group___c_a_m_e_r_a.html#ga2df079fa81a057c6ccc2c7e61d7d5ceb">luat_camera_setup</a></div><div class="ttdeci">int luat_camera_setup(int id, luat_spi_camera_t *conf, void *callback, void *param)</div><div class="ttdoc">配置spi camera并且初始化camera</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_ga39e7342be7ee9036714874b9cccd2fe5"><div class="ttname"><a href="group___c_a_m_e_r_a.html#ga39e7342be7ee9036714874b9cccd2fe5">luat_camera_init</a></div><div class="ttdeci">int luat_camera_init(luat_camera_conf_t *conf)</div><div class="ttdoc">配置camera并且初始化camera，spi camera不要使用这个</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_ga5a0a21fd42f0456bc9231beec0de3812"><div class="ttname"><a href="group___c_a_m_e_r_a.html#ga5a0a21fd42f0456bc9231beec0de3812">luat_camera_stop</a></div><div class="ttdeci">int luat_camera_stop(int id)</div><div class="ttdoc">停止接收camera数据</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_ga5be612ac6acdf900dd89a0067a7ac49a"><div class="ttname"><a href="group___c_a_m_e_r_a.html#ga5be612ac6acdf900dd89a0067a7ac49a">luat_camera_conf_t</a></div><div class="ttdeci">struct luat_camera_conf luat_camera_conf_t</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_ga6c10153e558b602c95b777f2951b6f05"><div class="ttname"><a href="group___c_a_m_e_r_a.html#ga6c10153e558b602c95b777f2951b6f05">luat_camera_continue_with_buffer</a></div><div class="ttdeci">void luat_camera_continue_with_buffer(int id, void *buf)</div><div class="ttdoc">摄像头切换接收数据缓冲区，csdk专用</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_ga709fa8af57813ba3ad9a99f6e9b9f2bd"><div class="ttname"><a href="group___c_a_m_e_r_a.html#ga709fa8af57813ba3ad9a99f6e9b9f2bd">luat_camera_image_decode_get_result</a></div><div class="ttdeci">int luat_camera_image_decode_get_result(uint8_t *buf)</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_ga741568f0c4d619fe2a81d94fad462905"><div class="ttname"><a href="group___c_a_m_e_r_a.html#ga741568f0c4d619fe2a81d94fad462905">luat_camera_capture_in_ram</a></div><div class="ttdeci">int luat_camera_capture_in_ram(int id, uint8_t quality, void *buffer)</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_ga7844cb7dec867135204a6c94c8429ed1"><div class="ttname"><a href="group___c_a_m_e_r_a.html#ga7844cb7dec867135204a6c94c8429ed1">luat_camera_capture</a></div><div class="ttdeci">int luat_camera_capture(int id, uint8_t quality, const char *path)</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_ga8a6aeae6d6db31ed493b8230726a34cf"><div class="ttname"><a href="group___c_a_m_e_r_a.html#ga8a6aeae6d6db31ed493b8230726a34cf">luat_camera_close</a></div><div class="ttdeci">int luat_camera_close(int id)</div><div class="ttdoc">关闭camera并且释放资源</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_ga8bfa11e0fd81094dfe59edfcd89fe58b"><div class="ttname"><a href="group___c_a_m_e_r_a.html#ga8bfa11e0fd81094dfe59edfcd89fe58b">luat_camera_image_decode_init</a></div><div class="ttdeci">int luat_camera_image_decode_init(uint8_t type, void *stack, uint32_t stack_length, uint32_t priority)</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_gab98ad0fdb900c306f0aac49b54800774"><div class="ttname"><a href="group___c_a_m_e_r_a.html#gab98ad0fdb900c306f0aac49b54800774">luat_camera_start_with_buffer</a></div><div class="ttdeci">int luat_camera_start_with_buffer(int id, void *buf)</div><div class="ttdoc">摄像头启动开始接收数据，csdk专用</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_gac67b029378d255185d831683e484b73b"><div class="ttname"><a href="group___c_a_m_e_r_a.html#gac67b029378d255185d831683e484b73b">luat_camera_image_decode_once</a></div><div class="ttdeci">int luat_camera_image_decode_once(uint8_t *data, uint16_t image_w, uint16_t image_h, uint32_t timeout, void *callback, void *param)</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_gad74435c9c41be37a2e0f8634587fb3c0"><div class="ttname"><a href="group___c_a_m_e_r_a.html#gad74435c9c41be37a2e0f8634587fb3c0">luat_camera_pause</a></div><div class="ttdeci">int luat_camera_pause(int id, uint8_t is_pause)</div><div class="ttdoc">暂停接收camera数据</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_gadf1a4b15d1949c280a60651bbbb6dd8f"><div class="ttname"><a href="group___c_a_m_e_r_a.html#gadf1a4b15d1949c280a60651bbbb6dd8f">luat_camera_set_image_w_h</a></div><div class="ttdeci">int luat_camera_set_image_w_h(int id, uint16_t w, uint16_t h)</div><div class="ttdoc">配置图像大小</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_gae2fe500afb1e4c1f96563822f436d32b"><div class="ttname"><a href="group___c_a_m_e_r_a.html#gae2fe500afb1e4c1f96563822f436d32b">luat_camera_start</a></div><div class="ttdeci">int luat_camera_start(int id)</div><div class="ttdoc">开始接收camera数据</div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_gga726ca809ffd3d67ab4b8476646f26635a10999e7dd057acf036f4b2ff3cdbd3a5"><div class="ttname"><a href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635a10999e7dd057acf036f4b2ff3cdbd3a5">LUAT_CAMERA_FRAME_END</a></div><div class="ttdeci">@ LUAT_CAMERA_FRAME_END</div><div class="ttdef"><b>定义</b> <a href="#l00020">luat_camera.h:20</a></div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_gga726ca809ffd3d67ab4b8476646f26635a19f540a1e59eaeded5ec9f5a52ce7c9c"><div class="ttname"><a href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635a19f540a1e59eaeded5ec9f5a52ce7c9c">LUAT_CAMERA_MODE_SCAN</a></div><div class="ttdeci">@ LUAT_CAMERA_MODE_SCAN</div><div class="ttdef"><b>定义</b> <a href="#l00025">luat_camera.h:25</a></div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_gga726ca809ffd3d67ab4b8476646f26635a4bb36a8b0ebfd97c2c8df6f68f9dfdc6"><div class="ttname"><a href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635a4bb36a8b0ebfd97c2c8df6f68f9dfdc6">LUAT_CAMERA_FRAME_RX_DONE</a></div><div class="ttdeci">@ LUAT_CAMERA_FRAME_RX_DONE</div><div class="ttdef"><b>定义</b> <a href="#l00021">luat_camera.h:21</a></div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_gga726ca809ffd3d67ab4b8476646f26635a69c15c35351183b38c44d80307840524"><div class="ttname"><a href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635a69c15c35351183b38c44d80307840524">LUAT_CAMERA_FRAME_START</a></div><div class="ttdeci">@ LUAT_CAMERA_FRAME_START</div><div class="ttdef"><b>定义</b> <a href="#l00019">luat_camera.h:19</a></div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_gga726ca809ffd3d67ab4b8476646f26635a92a4235028795a3b96330553fe83052f"><div class="ttname"><a href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635a92a4235028795a3b96330553fe83052f">LUAT_CAMERA_FRAME_ERROR</a></div><div class="ttdeci">@ LUAT_CAMERA_FRAME_ERROR</div><div class="ttdef"><b>定义</b> <a href="#l00022">luat_camera.h:22</a></div></div>
+<div class="ttc" id="agroup___c_a_m_e_r_a_html_gga726ca809ffd3d67ab4b8476646f26635aeb333ff20eedb3571a805bdeadf5469d"><div class="ttname"><a href="group___c_a_m_e_r_a.html#gga726ca809ffd3d67ab4b8476646f26635aeb333ff20eedb3571a805bdeadf5469d">LUAT_CAMERA_MODE_AUTO</a></div><div class="ttdeci">@ LUAT_CAMERA_MODE_AUTO</div><div class="ttdef"><b>定义</b> <a href="#l00024">luat_camera.h:24</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html"><div class="ttname"><a href="structluat__camera__conf.html">luat_camera_conf</a></div><div class="ttdef"><b>定义</b> <a href="#l00028">luat_camera.h:29</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_a0ee86ca946879ca80d4fa85a8a3528c5"><div class="ttname"><a href="structluat__camera__conf.html#a0ee86ca946879ca80d4fa85a8a3528c5">luat_camera_conf::pwm_pulse</a></div><div class="ttdeci">uint8_t pwm_pulse</div><div class="ttdef"><b>定义</b> <a href="#l00037">luat_camera.h:37</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_a1e6927fa1486224044e568f9c370519b"><div class="ttname"><a href="structluat__camera__conf.html#a1e6927fa1486224044e568f9c370519b">luat_camera_conf::id</a></div><div class="ttdeci">uint8_t id</div><div class="ttdef"><b>定义</b> <a href="#l00030">luat_camera.h:30</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_a1ea3d376711b29af5b25d366958ce682"><div class="ttname"><a href="structluat__camera__conf.html#a1ea3d376711b29af5b25d366958ce682">luat_camera_conf::i2c_id</a></div><div class="ttdeci">uint8_t i2c_id</div><div class="ttdef"><b>定义</b> <a href="#l00033">luat_camera.h:33</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_a1fcb9c517e194621b5ee0426fba2ae1e"><div class="ttname"><a href="structluat__camera__conf.html#a1fcb9c517e194621b5ee0426fba2ae1e">luat_camera_conf::sensor_height</a></div><div class="ttdeci">uint16_t sensor_height</div><div class="ttdef"><b>定义</b> <a href="#l00039">luat_camera.h:39</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_a20303e3baf7a44885164f4a273c8b23d"><div class="ttname"><a href="structluat__camera__conf.html#a20303e3baf7a44885164f4a273c8b23d">luat_camera_conf::color_bit</a></div><div class="ttdeci">uint8_t color_bit</div><div class="ttdef"><b>定义</b> <a href="#l00040">luat_camera.h:40</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_a22cb52ef50309118c0c4b2c12cab08cc"><div class="ttname"><a href="structluat__camera__conf.html#a22cb52ef50309118c0c4b2c12cab08cc">luat_camera_conf::init_cmd_size</a></div><div class="ttdeci">size_t init_cmd_size</div><div class="ttdef"><b>定义</b> <a href="#l00043">luat_camera.h:43</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_a2bb13a9e8dfd2f7a4308af65676bf1a7"><div class="ttname"><a href="structluat__camera__conf.html#a2bb13a9e8dfd2f7a4308af65676bf1a7">luat_camera_conf::zbar_scan</a></div><div class="ttdeci">uint8_t zbar_scan</div><div class="ttdef"><b>定义</b> <a href="#l00031">luat_camera.h:31</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_a3590df8c0f943a671fd63d696a55a50c"><div class="ttname"><a href="structluat__camera__conf.html#a3590df8c0f943a671fd63d696a55a50c">luat_camera_conf::i2c_addr</a></div><div class="ttdeci">uint8_t i2c_addr</div><div class="ttdef"><b>定义</b> <a href="#l00034">luat_camera.h:34</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_a595739b054550a78c95e5842b46bccc1"><div class="ttname"><a href="structluat__camera__conf.html#a595739b054550a78c95e5842b46bccc1">luat_camera_conf::draw_lcd</a></div><div class="ttdeci">uint8_t draw_lcd</div><div class="ttdef"><b>定义</b> <a href="#l00032">luat_camera.h:32</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_a764c7e1a333ea274052b54f10741e989"><div class="ttname"><a href="structluat__camera__conf.html#a764c7e1a333ea274052b54f10741e989">luat_camera_conf::sensor_width</a></div><div class="ttdeci">uint16_t sensor_width</div><div class="ttdef"><b>定义</b> <a href="#l00038">luat_camera.h:38</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_ab433574c0711330cfd2d2678d4d59044"><div class="ttname"><a href="structluat__camera__conf.html#ab433574c0711330cfd2d2678d4d59044">luat_camera_conf::id_reg</a></div><div class="ttdeci">uint8_t id_reg</div><div class="ttdef"><b>定义</b> <a href="#l00041">luat_camera.h:41</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_abceea536b4ec1c47d42b569aaa0b0bd7"><div class="ttname"><a href="structluat__camera__conf.html#abceea536b4ec1c47d42b569aaa0b0bd7">luat_camera_conf::lcd_conf</a></div><div class="ttdeci">void * lcd_conf</div><div class="ttdef"><b>定义</b> <a href="#l00048">luat_camera.h:48</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_acb0c285bcf7a3d8946f7384d4515a6ad"><div class="ttname"><a href="structluat__camera__conf.html#acb0c285bcf7a3d8946f7384d4515a6ad">luat_camera_conf::id_value</a></div><div class="ttdeci">uint8_t id_value</div><div class="ttdef"><b>定义</b> <a href="#l00042">luat_camera.h:42</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_adf41ef7a9a0174e869fd21c5f44ecea0"><div class="ttname"><a href="structluat__camera__conf.html#adf41ef7a9a0174e869fd21c5f44ecea0">luat_camera_conf::pwm_period</a></div><div class="ttdeci">size_t pwm_period</div><div class="ttdef"><b>定义</b> <a href="#l00036">luat_camera.h:36</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_ae8ef2402d9783c48b85ace3ee32a6888"><div class="ttname"><a href="structluat__camera__conf.html#ae8ef2402d9783c48b85ace3ee32a6888">luat_camera_conf::init_cmd</a></div><div class="ttdeci">uint8_t * init_cmd</div><div class="ttdef"><b>定义</b> <a href="#l00044">luat_camera.h:44</a></div></div>
+<div class="ttc" id="astructluat__camera__conf_html_af191958ad77323914b0d834c7dde47b8"><div class="ttname"><a href="structluat__camera__conf.html#af191958ad77323914b0d834c7dde47b8">luat_camera_conf::pwm_id</a></div><div class="ttdeci">uint8_t pwm_id</div><div class="ttdef"><b>定义</b> <a href="#l00035">luat_camera.h:35</a></div></div>
+<div class="ttc" id="astructluat__spi__camera__t_html"><div class="ttname"><a href="structluat__spi__camera__t.html">luat_spi_camera_t</a></div><div class="ttdef"><b>定义</b> <a href="#l00052">luat_camera.h:53</a></div></div>
+<div class="ttc" id="astructluat__spi__camera__t_html_a01d73cbeef26ddf573c632425d2984c0"><div class="ttname"><a href="structluat__spi__camera__t.html#a01d73cbeef26ddf573c632425d2984c0">luat_spi_camera_t::only_y</a></div><div class="ttdeci">uint8_t only_y</div><div class="ttdef"><b>定义</b> <a href="#l00057">luat_camera.h:57</a></div></div>
+<div class="ttc" id="astructluat__spi__camera__t_html_a19f2443f14198b033414acffe598eba2"><div class="ttname"><a href="structluat__spi__camera__t.html#a19f2443f14198b033414acffe598eba2">luat_spi_camera_t::rowScaleRatio</a></div><div class="ttdeci">uint8_t rowScaleRatio</div><div class="ttdef"><b>定义</b> <a href="#l00058">luat_camera.h:58</a></div></div>
+<div class="ttc" id="astructluat__spi__camera__t_html_a1c20335158c6291e857616395a719344"><div class="ttname"><a href="structluat__spi__camera__t.html#a1c20335158c6291e857616395a719344">luat_spi_camera_t::spi_mode</a></div><div class="ttdeci">uint8_t spi_mode</div><div class="ttdef"><b>定义</b> <a href="#l00061">luat_camera.h:61</a></div></div>
+<div class="ttc" id="astructluat__spi__camera__t_html_a1fcb9c517e194621b5ee0426fba2ae1e"><div class="ttname"><a href="structluat__spi__camera__t.html#a1fcb9c517e194621b5ee0426fba2ae1e">luat_spi_camera_t::sensor_height</a></div><div class="ttdeci">uint16_t sensor_height</div><div class="ttdef"><b>定义</b> <a href="#l00056">luat_camera.h:56</a></div></div>
+<div class="ttc" id="astructluat__spi__camera__t_html_a4f26925fc9037f821b436a84eb702786"><div class="ttname"><a href="structluat__spi__camera__t.html#a4f26925fc9037f821b436a84eb702786">luat_spi_camera_t::colScaleRatio</a></div><div class="ttdeci">uint8_t colScaleRatio</div><div class="ttdef"><b>定义</b> <a href="#l00059">luat_camera.h:59</a></div></div>
+<div class="ttc" id="astructluat__spi__camera__t_html_a6a9bf2bdd0c349bf524d5217ff25dc25"><div class="ttname"><a href="structluat__spi__camera__t.html#a6a9bf2bdd0c349bf524d5217ff25dc25">luat_spi_camera_t::camera_speed</a></div><div class="ttdeci">size_t camera_speed</div><div class="ttdef"><b>定义</b> <a href="#l00054">luat_camera.h:54</a></div></div>
+<div class="ttc" id="astructluat__spi__camera__t_html_a764c7e1a333ea274052b54f10741e989"><div class="ttname"><a href="structluat__spi__camera__t.html#a764c7e1a333ea274052b54f10741e989">luat_spi_camera_t::sensor_width</a></div><div class="ttdeci">uint16_t sensor_width</div><div class="ttdef"><b>定义</b> <a href="#l00055">luat_camera.h:55</a></div></div>
+<div class="ttc" id="astructluat__spi__camera__t_html_a885498cd37dc0eda15d5ad2cb53a93e1"><div class="ttname"><a href="structluat__spi__camera__t.html#a885498cd37dc0eda15d5ad2cb53a93e1">luat_spi_camera_t::seq_type</a></div><div class="ttdeci">uint8_t seq_type</div><div class="ttdef"><b>定义</b> <a href="#l00064">luat_camera.h:64</a></div></div>
+<div class="ttc" id="astructluat__spi__camera__t_html_a89982487cb84a0a95b3a3fcfab1b7d47"><div class="ttname"><a href="structluat__spi__camera__t.html#a89982487cb84a0a95b3a3fcfab1b7d47">luat_spi_camera_t::is_msb</a></div><div class="ttdeci">uint8_t is_msb</div><div class="ttdef"><b>定义</b> <a href="#l00062">luat_camera.h:62</a></div></div>
+<div class="ttc" id="astructluat__spi__camera__t_html_aa51d3dc12e73eb43b2dd8fd676dacacf"><div class="ttname"><a href="structluat__spi__camera__t.html#aa51d3dc12e73eb43b2dd8fd676dacacf">luat_spi_camera_t::scaleBytes</a></div><div class="ttdeci">uint8_t scaleBytes</div><div class="ttdef"><b>定义</b> <a href="#l00060">luat_camera.h:60</a></div></div>
+<div class="ttc" id="astructluat__spi__camera__t_html_abceea536b4ec1c47d42b569aaa0b0bd7"><div class="ttname"><a href="structluat__spi__camera__t.html#abceea536b4ec1c47d42b569aaa0b0bd7">luat_spi_camera_t::lcd_conf</a></div><div class="ttdeci">void * lcd_conf</div><div class="ttdef"><b>定义</b> <a href="#l00069">luat_camera.h:69</a></div></div>
+<div class="ttc" id="astructluat__spi__camera__t_html_adf7d78304c2f1cc8a00de7d3479ca285"><div class="ttname"><a href="structluat__spi__camera__t.html#adf7d78304c2f1cc8a00de7d3479ca285">luat_spi_camera_t::is_two_line_rx</a></div><div class="ttdeci">uint8_t is_two_line_rx</div><div class="ttdef"><b>定义</b> <a href="#l00063">luat_camera.h:63</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

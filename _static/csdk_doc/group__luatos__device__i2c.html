@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: I2C接口</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">I2C接口</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga6ab5b91a019c8e1743be864da5f86955" id="r_ga6ab5b91a019c8e1743be864da5f86955"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6ab5b91a019c8e1743be864da5f86955">luat_i2c_exist</a> (int id)</td></tr>
+<tr class="memdesc:ga6ab5b91a019c8e1743be864da5f86955"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查i2c是否存在  <br /></td></tr>
+<tr class="separator:ga6ab5b91a019c8e1743be864da5f86955"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga709e865aaa995f4629a610930d37960f" id="r_ga709e865aaa995f4629a610930d37960f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga709e865aaa995f4629a610930d37960f">luat_i2c_setup</a> (int id, int speed)</td></tr>
+<tr class="memdesc:ga709e865aaa995f4629a610930d37960f"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化i2c  <br /></td></tr>
+<tr class="separator:ga709e865aaa995f4629a610930d37960f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad06ea0676d926f3765b5c8170e1601b8" id="r_gad06ea0676d926f3765b5c8170e1601b8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad06ea0676d926f3765b5c8170e1601b8">luat_i2c_close</a> (int id)</td></tr>
+<tr class="memdesc:gad06ea0676d926f3765b5c8170e1601b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭 i2c  <br /></td></tr>
+<tr class="separator:gad06ea0676d926f3765b5c8170e1601b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga82dba9dd04593b3bec791133b4428c9b" id="r_ga82dba9dd04593b3bec791133b4428c9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga82dba9dd04593b3bec791133b4428c9b">luat_i2c_send</a> (int id, int addr, void *buff, size_t len, uint8_t stop)</td></tr>
+<tr class="memdesc:ga82dba9dd04593b3bec791133b4428c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C 发送数据  <br /></td></tr>
+<tr class="separator:ga82dba9dd04593b3bec791133b4428c9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf5248b7cd3f3f2cfb95992d4c91a23ea" id="r_gaf5248b7cd3f3f2cfb95992d4c91a23ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf5248b7cd3f3f2cfb95992d4c91a23ea">luat_i2c_recv</a> (int id, int addr, void *buff, size_t len)</td></tr>
+<tr class="memdesc:gaf5248b7cd3f3f2cfb95992d4c91a23ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C 接受数据  <br /></td></tr>
+<tr class="separator:gaf5248b7cd3f3f2cfb95992d4c91a23ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga207eee2e5bc50a1cf308abc14f726922" id="r_ga207eee2e5bc50a1cf308abc14f726922"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga207eee2e5bc50a1cf308abc14f726922">luat_i2c_write_reg</a> (int id, int addr, int reg, void *buff, size_t len, uint8_t stop)</td></tr>
+<tr class="memdesc:ga207eee2e5bc50a1cf308abc14f726922"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C 写寄存器  <br /></td></tr>
+<tr class="separator:ga207eee2e5bc50a1cf308abc14f726922"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3aafb5b7635534362679c1a1c2497e0d" id="r_ga3aafb5b7635534362679c1a1c2497e0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3aafb5b7635534362679c1a1c2497e0d">luat_i2c_read_reg</a> (int id, int addr, int reg, void *buff, size_t len)</td></tr>
+<tr class="memdesc:ga3aafb5b7635534362679c1a1c2497e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C 读寄存器  <br /></td></tr>
+<tr class="separator:ga3aafb5b7635534362679c1a1c2497e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17710017fbb20ba313775d569b278971" id="r_ga17710017fbb20ba313775d569b278971"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga17710017fbb20ba313775d569b278971">luat_i2c_transfer</a> (int id, int addr, uint8_t *reg, size_t reg_len, uint8_t *buff, size_t len)</td></tr>
+<tr class="memdesc:ga17710017fbb20ba313775d569b278971"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C 收发数据  <br /></td></tr>
+<tr class="separator:ga17710017fbb20ba313775d569b278971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae4729d951176cb911d4df9323eef44ff" id="r_gae4729d951176cb911d4df9323eef44ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae4729d951176cb911d4df9323eef44ff">luat_i2c_no_block_transfer</a> (int id, int addr, uint8_t is_read, uint8_t *reg, size_t reg_len, uint8_t *buff, size_t len, uint16_t Toms, void *CB, void *pParam)</td></tr>
+<tr class="memdesc:gae4729d951176cb911d4df9323eef44ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">I2C 收发数据(异步)  <br /></td></tr>
+<tr class="separator:gae4729d951176cb911d4df9323eef44ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8f1586912323894fee81e26549a7656f" id="r_ga8f1586912323894fee81e26549a7656f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8f1586912323894fee81e26549a7656f">luat_i2c_set_iomux</a> (int id, uint8_t value)</td></tr>
+<tr class="memdesc:ga8f1586912323894fee81e26549a7656f"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置i2c复用  <br /></td></tr>
+<tr class="separator:ga8f1586912323894fee81e26549a7656f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b802df559efa36f1374223634298512" id="r_ga7b802df559efa36f1374223634298512"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7b802df559efa36f1374223634298512">luat_i2c_set_polling_mode</a> (int id, uint8_t on_off)</td></tr>
+<tr class="separator:ga7b802df559efa36f1374223634298512"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">函数说明</h2>
+<a id="gad06ea0676d926f3765b5c8170e1601b8" name="gad06ea0676d926f3765b5c8170e1601b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad06ea0676d926f3765b5c8170e1601b8">&#9670;&#160;</a></span>luat_i2c_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_i2c_close </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭 i2c </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>i2c_id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0成功 其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga6ab5b91a019c8e1743be864da5f86955" name="ga6ab5b91a019c8e1743be864da5f86955"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6ab5b91a019c8e1743be864da5f86955">&#9670;&#160;</a></span>luat_i2c_exist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_i2c_exist </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查i2c是否存在 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>i2c_id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>1存在 0不存在 </dd></dl>
+
+</div>
+</div>
+<a id="gae4729d951176cb911d4df9323eef44ff" name="gae4729d951176cb911d4df9323eef44ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae4729d951176cb911d4df9323eef44ff">&#9670;&#160;</a></span>luat_i2c_no_block_transfer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_i2c_no_block_transfer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>addr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>is_read</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>reg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>reg_len</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buff</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>Toms</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>CB</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>pParam</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C 收发数据(异步) </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>i2c_id </td></tr>
+    <tr><td class="paramname">addr</td><td>7位设备地址 </td></tr>
+    <tr><td class="paramname">is_read</td><td>是否为读写 </td></tr>
+    <tr><td class="paramname">reg</td><td>读的寄存器 </td></tr>
+    <tr><td class="paramname">reg_len</td><td>寄存器长度 </td></tr>
+    <tr><td class="paramname">buff</td><td>如果reg，reg_len 不为NULL，buff 为读的数据保存缓冲区，反之为写的缓冲区 </td></tr>
+    <tr><td class="paramname">len</td><td>数据长度 </td></tr>
+    <tr><td class="paramname">Toms</td><td>数据长度 </td></tr>
+    <tr><td class="paramname">CB</td><td>回调函数 </td></tr>
+    <tr><td class="paramname">pParam</td><td>回调函数参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0成功 其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga3aafb5b7635534362679c1a1c2497e0d" name="ga3aafb5b7635534362679c1a1c2497e0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3aafb5b7635534362679c1a1c2497e0d">&#9670;&#160;</a></span>luat_i2c_read_reg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_i2c_read_reg </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>addr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>reg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>buff</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C 读寄存器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>i2c_id </td></tr>
+    <tr><td class="paramname">addr</td><td>7位设备地址 </td></tr>
+    <tr><td class="paramname">reg</td><td>寄存器地址 </td></tr>
+    <tr><td class="paramname">buff</td><td>数据 </td></tr>
+    <tr><td class="paramname">len</td><td>数据长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0成功 其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="gaf5248b7cd3f3f2cfb95992d4c91a23ea" name="gaf5248b7cd3f3f2cfb95992d4c91a23ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf5248b7cd3f3f2cfb95992d4c91a23ea">&#9670;&#160;</a></span>luat_i2c_recv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_i2c_recv </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>addr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>buff</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C 接受数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>i2c_id </td></tr>
+    <tr><td class="paramname">addr</td><td>7位设备地址 </td></tr>
+    <tr><td class="paramname">buff</td><td>数据buff </td></tr>
+    <tr><td class="paramname">len</td><td>数据长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0成功 其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga82dba9dd04593b3bec791133b4428c9b" name="ga82dba9dd04593b3bec791133b4428c9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga82dba9dd04593b3bec791133b4428c9b">&#9670;&#160;</a></span>luat_i2c_send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_i2c_send </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>addr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>buff</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>stop</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C 发送数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>i2c_id </td></tr>
+    <tr><td class="paramname">addr</td><td>7位设备地址 </td></tr>
+    <tr><td class="paramname">buff</td><td>数据buff </td></tr>
+    <tr><td class="paramname">len</td><td>数据长度 </td></tr>
+    <tr><td class="paramname">stop</td><td>是否发送停止位 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0成功 其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga8f1586912323894fee81e26549a7656f" name="ga8f1586912323894fee81e26549a7656f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8f1586912323894fee81e26549a7656f">&#9670;&#160;</a></span>luat_i2c_set_iomux()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_i2c_set_iomux </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置i2c复用 </p>
+<dl class="section attention"><dt>注意</dt><dd></dd>
+<dd>
+</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>i2c_id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>-1 失败 其他正常 </dd></dl>
+
+</div>
+</div>
+<a id="ga7b802df559efa36f1374223634298512" name="ga7b802df559efa36f1374223634298512"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7b802df559efa36f1374223634298512">&#9670;&#160;</a></span>luat_i2c_set_polling_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_i2c_set_polling_mode </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>on_off</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga709e865aaa995f4629a610930d37960f" name="ga709e865aaa995f4629a610930d37960f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga709e865aaa995f4629a610930d37960f">&#9670;&#160;</a></span>luat_i2c_setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_i2c_setup </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化i2c </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>i2c_id </td></tr>
+    <tr><td class="paramname">speed</td><td>i2c 速度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0成功 其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga17710017fbb20ba313775d569b278971" name="ga17710017fbb20ba313775d569b278971"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga17710017fbb20ba313775d569b278971">&#9670;&#160;</a></span>luat_i2c_transfer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_i2c_transfer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>addr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>reg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>reg_len</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buff</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C 收发数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>i2c_id </td></tr>
+    <tr><td class="paramname">addr</td><td>7位设备地址 </td></tr>
+    <tr><td class="paramname">reg</td><td>读的寄存器 </td></tr>
+    <tr><td class="paramname">reg_len</td><td>寄存器长度 </td></tr>
+    <tr><td class="paramname">buff</td><td>如果reg，reg_len 不为NULL，buff 为读的数据保存缓冲区，反之为写的缓冲区 </td></tr>
+    <tr><td class="paramname">len</td><td>数据长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0成功 其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga207eee2e5bc50a1cf308abc14f726922" name="ga207eee2e5bc50a1cf308abc14f726922"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga207eee2e5bc50a1cf308abc14f726922">&#9670;&#160;</a></span>luat_i2c_write_reg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_i2c_write_reg </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>addr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>reg</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>buff</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>len</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>stop</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>I2C 写寄存器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>i2c_id </td></tr>
+    <tr><td class="paramname">addr</td><td>7位设备地址 </td></tr>
+    <tr><td class="paramname">reg</td><td>寄存器地址 </td></tr>
+    <tr><td class="paramname">buff</td><td>数据 </td></tr>
+    <tr><td class="paramname">len</td><td>数据长度 </td></tr>
+    <tr><td class="paramname">stop</td><td>是否发送停止位 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0成功 其他失败 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

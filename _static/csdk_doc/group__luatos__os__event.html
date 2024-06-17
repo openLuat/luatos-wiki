@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: 消息事件函数</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">消息事件函数<div class="ingroups"><a class="el" href="group__luatos__os.html">操作系统接口</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gade497d1bf73057d58b251dad2c54ce66" id="r_gade497d1bf73057d58b251dad2c54ce66"><td class="memItemLeft" align="right" valign="top">typedef LUAT_RT_RET_TYPE(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gade497d1bf73057d58b251dad2c54ce66">luat_rtos_event_wait_callback_t</a>) (LUAT_RT_CB_PARAM)</td></tr>
+<tr class="memdesc:gade497d1bf73057d58b251dad2c54ce66"><td class="mdescLeft">&#160;</td><td class="mdescRight">在等待event中，如果设置了目标event id，而到来的不是目标event id，可以通过回调函数交给用户处理  <br /></td></tr>
+<tr class="separator:gade497d1bf73057d58b251dad2c54ce66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga993c050d62c433f4d277fe4c5c3c6b5e" id="r_ga993c050d62c433f4d277fe4c5c3c6b5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga993c050d62c433f4d277fe4c5c3c6b5e">luat_rtos_event_send</a> (<a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle, uint32_t id, uint32_t param1, uint32_t param2, uint32_t param3, uint32_t timeout)</td></tr>
+<tr class="memdesc:ga993c050d62c433f4d277fe4c5c3c6b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送一个event给task的mailbox，只有设置了mailbox启用的task能接收，如果缓存了超过1024个event会断言  <br /></td></tr>
+<tr class="separator:ga993c050d62c433f4d277fe4c5c3c6b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b2312c1227ff3f04a7aafc40c7f46c1" id="r_ga1b2312c1227ff3f04a7aafc40c7f46c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1b2312c1227ff3f04a7aafc40c7f46c1">luat_rtos_event_recv</a> (<a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle, uint32_t wait_event_id, luat_event_t *out_event, <a class="el" href="#gade497d1bf73057d58b251dad2c54ce66">luat_rtos_event_wait_callback_t</a> *callback_fun, uint32_t timeout)</td></tr>
+<tr class="memdesc:ga1b2312c1227ff3f04a7aafc40c7f46c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收一个event，只能在task里接收  <br /></td></tr>
+<tr class="separator:ga1b2312c1227ff3f04a7aafc40c7f46c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga146b6635feea75406d0af2a43bcd6b04" id="r_ga146b6635feea75406d0af2a43bcd6b04"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga146b6635feea75406d0af2a43bcd6b04">luat_rtos_message_send</a> (<a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle, uint32_t message_id, void *p_message)</td></tr>
+<tr class="memdesc:ga146b6635feea75406d0af2a43bcd6b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送一个message给task的mailbox，只有设置了mailbox启用的task能接收，message可以动态创建的，可以任意大小，如果缓存了超过1024个message会断言  <br /></td></tr>
+<tr class="separator:ga146b6635feea75406d0af2a43bcd6b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad48272e2d0cdfc077e60169547a40902" id="r_gad48272e2d0cdfc077e60169547a40902"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad48272e2d0cdfc077e60169547a40902">luat_rtos_message_recv</a> (<a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle, uint32_t *message_id, void **p_p_message, uint32_t timeout)</td></tr>
+<tr class="memdesc:gad48272e2d0cdfc077e60169547a40902"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收一个message，只能在task里接收  <br /></td></tr>
+<tr class="separator:gad48272e2d0cdfc077e60169547a40902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="gade497d1bf73057d58b251dad2c54ce66" name="gade497d1bf73057d58b251dad2c54ce66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gade497d1bf73057d58b251dad2c54ce66">&#9670;&#160;</a></span>luat_rtos_event_wait_callback_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef LUAT_RT_RET_TYPE(* luat_rtos_event_wait_callback_t) (LUAT_RT_CB_PARAM)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在等待event中，如果设置了目标event id，而到来的不是目标event id，可以通过回调函数交给用户处理 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__rtos_8h_source.html">luat_rtos.h</a> 第 <a class="el" href="luat__rtos_8h_source.html#l00157">157</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga1b2312c1227ff3f04a7aafc40c7f46c1" name="ga1b2312c1227ff3f04a7aafc40c7f46c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1b2312c1227ff3f04a7aafc40c7f46c1">&#9670;&#160;</a></span>luat_rtos_event_recv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_event_recv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a></td>          <td class="paramname"><span class="paramname"><em>task_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>wait_event_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">luat_event_t *</td>          <td class="paramname"><span class="paramname"><em>out_event</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#gade497d1bf73057d58b251dad2c54ce66">luat_rtos_event_wait_callback_t</a> *</td>          <td class="paramname"><span class="paramname"><em>callback_fun</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>接收一个event，只能在task里接收 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task_handle</td><td>需要接收event的task句柄 </td></tr>
+    <tr><td class="paramname">wait_event_id</td><td>目标event的ID，=0表示不限制，任意event id都会返回 </td></tr>
+    <tr><td class="paramname">out_event[OUT]</td><td>接收到的event </td></tr>
+    <tr><td class="paramname">callback_fun</td><td>event的ID不是目标ID时，用户回调函数，可以为NULL，从而抛弃掉这个event </td></tr>
+    <tr><td class="paramname">timeout</td><td>接收超时，单位ms，特殊值见LUAT_RTOS_WAIT_E </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga993c050d62c433f4d277fe4c5c3c6b5e" name="ga993c050d62c433f4d277fe4c5c3c6b5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga993c050d62c433f4d277fe4c5c3c6b5e">&#9670;&#160;</a></span>luat_rtos_event_send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_event_send </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a></td>          <td class="paramname"><span class="paramname"><em>task_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>param1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>param2</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>param3</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送一个event给task的mailbox，只有设置了mailbox启用的task能接收，如果缓存了超过1024个event会断言 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task_handle</td><td>需要接收event的task句柄 </td></tr>
+    <tr><td class="paramname">id</td><td>event id </td></tr>
+    <tr><td class="paramname">param1</td><td>event参数1 </td></tr>
+    <tr><td class="paramname">param2</td><td>event参数2 </td></tr>
+    <tr><td class="paramname">param3</td><td>event参数3 </td></tr>
+    <tr><td class="paramname">timeout</td><td>发送超时，已经废弃了 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="gad48272e2d0cdfc077e60169547a40902" name="gad48272e2d0cdfc077e60169547a40902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad48272e2d0cdfc077e60169547a40902">&#9670;&#160;</a></span>luat_rtos_message_recv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_message_recv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a></td>          <td class="paramname"><span class="paramname"><em>task_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *</td>          <td class="paramname"><span class="paramname"><em>message_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **</td>          <td class="paramname"><span class="paramname"><em>p_p_message</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>接收一个message，只能在task里接收 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task_handle</td><td>需要接收massage的task句柄 </td></tr>
+    <tr><td class="paramname">message_id[OUT]</td><td>接收到的message id </td></tr>
+    <tr><td class="paramname">p_p_message[OUT]</td><td>message内容，输出一个void *指针，如果是发送时动态创建的，需要释放掉 </td></tr>
+    <tr><td class="paramname">timeout</td><td>接收超时，单位ms，特殊值见LUAT_RTOS_WAIT_E </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga146b6635feea75406d0af2a43bcd6b04" name="ga146b6635feea75406d0af2a43bcd6b04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga146b6635feea75406d0af2a43bcd6b04">&#9670;&#160;</a></span>luat_rtos_message_send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_message_send </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a></td>          <td class="paramname"><span class="paramname"><em>task_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>message_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>p_message</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送一个message给task的mailbox，只有设置了mailbox启用的task能接收，message可以动态创建的，可以任意大小，如果缓存了超过1024个message会断言 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task_handle</td><td>需要接收massage的task句柄 </td></tr>
+    <tr><td class="paramname">message_id</td><td>message id </td></tr>
+    <tr><td class="paramname">p_message</td><td>message内容，传入指针，如果动态创建，需要在接收时释放 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

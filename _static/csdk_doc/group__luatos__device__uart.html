@@ -1,0 +1,634 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: UART接口</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a>  </div>
+  <div class="headertitle"><div class="title">UART接口</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structluat__uart.html">luat_uart</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structluat__uart.html" title="luat_uart">luat_uart</a>  <a href="structluat__uart.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structluat__uart__ctrl__param.html">luat_uart_ctrl_param</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口控制参数  <a href="structluat__uart__ctrl__param.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1e700bc0c706072aa824dedba0191d6" id="r_gaf1e700bc0c706072aa824dedba0191d6"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf1e700bc0c706072aa824dedba0191d6">LUAT_UART_CTRL_CMD</a> { <a class="el" href="#ggaf1e700bc0c706072aa824dedba0191d6a16de175f5341df50030e7fcdc30e656f">LUAT_UART_SET_RECV_CALLBACK</a>
+, <a class="el" href="#ggaf1e700bc0c706072aa824dedba0191d6a351392bc9a5bbb303174fb8b9be4ebdc">LUAT_UART_SET_SENT_CALLBACK</a>
+ }</td></tr>
+<tr class="memdesc:gaf1e700bc0c706072aa824dedba0191d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口控制参数  <a href="#gaf1e700bc0c706072aa824dedba0191d6">更多...</a><br /></td></tr>
+<tr class="separator:gaf1e700bc0c706072aa824dedba0191d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa9da40eb569d55557b34226cb4ce77d2" id="r_gaa9da40eb569d55557b34226cb4ce77d2"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structluat__uart.html">luat_uart</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa9da40eb569d55557b34226cb4ce77d2">luat_uart_t</a></td></tr>
+<tr class="memdesc:gaa9da40eb569d55557b34226cb4ce77d2"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structluat__uart.html" title="luat_uart">luat_uart</a>  <br /></td></tr>
+<tr class="separator:gaa9da40eb569d55557b34226cb4ce77d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4db87a7306c4b58414676ed9852221e3" id="r_ga4db87a7306c4b58414676ed9852221e3"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="#gaf1e700bc0c706072aa824dedba0191d6">LUAT_UART_CTRL_CMD</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4db87a7306c4b58414676ed9852221e3">LUAT_UART_CTRL_CMD_E</a></td></tr>
+<tr class="memdesc:ga4db87a7306c4b58414676ed9852221e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口控制参数  <br /></td></tr>
+<tr class="separator:ga4db87a7306c4b58414676ed9852221e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafdc79ce08a0f22141c4e606ece05e28d" id="r_gafdc79ce08a0f22141c4e606ece05e28d"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafdc79ce08a0f22141c4e606ece05e28d">luat_uart_recv_callback_t</a>) (int uart_id, uint32_t data_len)</td></tr>
+<tr class="memdesc:gafdc79ce08a0f22141c4e606ece05e28d"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收回调函数  <br /></td></tr>
+<tr class="separator:gafdc79ce08a0f22141c4e606ece05e28d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa6e41e6e80f54f026e3df8d0c4d2c4cd" id="r_gaa6e41e6e80f54f026e3df8d0c4d2c4cd"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa6e41e6e80f54f026e3df8d0c4d2c4cd">luat_uart_sent_callback_t</a>) (int uart_id, void *param)</td></tr>
+<tr class="memdesc:gaa6e41e6e80f54f026e3df8d0c4d2c4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送回调函数  <br /></td></tr>
+<tr class="separator:gaa6e41e6e80f54f026e3df8d0c4d2c4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga277db543aa335a011c19457a8ca789a8" id="r_ga277db543aa335a011c19457a8ca789a8"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structluat__uart__ctrl__param.html">luat_uart_ctrl_param</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga277db543aa335a011c19457a8ca789a8">luat_uart_ctrl_param_t</a></td></tr>
+<tr class="memdesc:ga277db543aa335a011c19457a8ca789a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口控制参数  <br /></td></tr>
+<tr class="separator:ga277db543aa335a011c19457a8ca789a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga050702949fdd0c5abb3ba8e63eef530c" id="r_ga050702949fdd0c5abb3ba8e63eef530c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga050702949fdd0c5abb3ba8e63eef530c">luat_uart_setup</a> (<a class="el" href="#gaa9da40eb569d55557b34226cb4ce77d2">luat_uart_t</a> *uart)</td></tr>
+<tr class="memdesc:ga050702949fdd0c5abb3ba8e63eef530c"><td class="mdescLeft">&#160;</td><td class="mdescRight">uart初始化  <br /></td></tr>
+<tr class="separator:ga050702949fdd0c5abb3ba8e63eef530c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaab249830dca3ad924b5d6b2c68698256" id="r_gaab249830dca3ad924b5d6b2c68698256"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaab249830dca3ad924b5d6b2c68698256">luat_uart_write</a> (int uart_id, void *data, size_t length)</td></tr>
+<tr class="memdesc:gaab249830dca3ad924b5d6b2c68698256"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口写数据  <br /></td></tr>
+<tr class="separator:gaab249830dca3ad924b5d6b2c68698256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7aad03f30ff4e421da2b5d5a511c0d32" id="r_ga7aad03f30ff4e421da2b5d5a511c0d32"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7aad03f30ff4e421da2b5d5a511c0d32">luat_uart_read</a> (int uart_id, void *buffer, size_t length)</td></tr>
+<tr class="memdesc:ga7aad03f30ff4e421da2b5d5a511c0d32"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口读数据  <br /></td></tr>
+<tr class="separator:ga7aad03f30ff4e421da2b5d5a511c0d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac53eaef008d2013f8c858c90e2717ee4" id="r_gac53eaef008d2013f8c858c90e2717ee4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gac53eaef008d2013f8c858c90e2717ee4">luat_uart_clear_rx_cache</a> (int uart_id)</td></tr>
+<tr class="memdesc:gac53eaef008d2013f8c858c90e2717ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">清除uart的接收缓存数据  <br /></td></tr>
+<tr class="separator:gac53eaef008d2013f8c858c90e2717ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga76cf1bfce49655b629a3b97b57294c06" id="r_ga76cf1bfce49655b629a3b97b57294c06"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga76cf1bfce49655b629a3b97b57294c06">luat_uart_close</a> (int uart_id)</td></tr>
+<tr class="memdesc:ga76cf1bfce49655b629a3b97b57294c06"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭串口  <br /></td></tr>
+<tr class="separator:ga76cf1bfce49655b629a3b97b57294c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga65f91a6e695e91c84df3ec074c2cc69c" id="r_ga65f91a6e695e91c84df3ec074c2cc69c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga65f91a6e695e91c84df3ec074c2cc69c">luat_uart_exist</a> (int uart_id)</td></tr>
+<tr class="memdesc:ga65f91a6e695e91c84df3ec074c2cc69c"><td class="mdescLeft">&#160;</td><td class="mdescRight">检测串口是否存在  <br /></td></tr>
+<tr class="separator:ga65f91a6e695e91c84df3ec074c2cc69c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8539302121dadacd21db33c7d6f156ca" id="r_ga8539302121dadacd21db33c7d6f156ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8539302121dadacd21db33c7d6f156ca">luat_uart_ctrl</a> (int uart_id, <a class="el" href="#ga4db87a7306c4b58414676ed9852221e3">LUAT_UART_CTRL_CMD_E</a> cmd, void *param)</td></tr>
+<tr class="memdesc:ga8539302121dadacd21db33c7d6f156ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口控制  <br /></td></tr>
+<tr class="separator:ga8539302121dadacd21db33c7d6f156ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae377d1342bbb90ccacc7286c3a759599" id="r_gae377d1342bbb90ccacc7286c3a759599"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae377d1342bbb90ccacc7286c3a759599">luat_uart_pre_setup</a> (int uart_id, uint8_t use_alt_type)</td></tr>
+<tr class="memdesc:gae377d1342bbb90ccacc7286c3a759599"><td class="mdescLeft">&#160;</td><td class="mdescRight">串口复用函数，目前支持UART0，UART2  <br /></td></tr>
+<tr class="separator:gae377d1342bbb90ccacc7286c3a759599"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5347c55ebc2c3fb731322a50d626c7cf" id="r_ga5347c55ebc2c3fb731322a50d626c7cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5347c55ebc2c3fb731322a50d626c7cf">LUAT_PARITY_NONE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:ga5347c55ebc2c3fb731322a50d626c7cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">校验位  <br /></td></tr>
+<tr class="separator:ga5347c55ebc2c3fb731322a50d626c7cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafb96212ea9b62a82b46934114589ba29" id="r_gafb96212ea9b62a82b46934114589ba29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafb96212ea9b62a82b46934114589ba29">LUAT_PARITY_ODD</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:gafb96212ea9b62a82b46934114589ba29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6ad2391ba2a05266b705ba051626b797" id="r_ga6ad2391ba2a05266b705ba051626b797"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6ad2391ba2a05266b705ba051626b797">LUAT_PARITY_EVEN</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:ga6ad2391ba2a05266b705ba051626b797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9265e487d02171243c597be7bba15785" id="r_ga9265e487d02171243c597be7bba15785"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9265e487d02171243c597be7bba15785">LUAT_BIT_ORDER_LSB</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memdesc:ga9265e487d02171243c597be7bba15785"><td class="mdescLeft">&#160;</td><td class="mdescRight">高低位顺序  <br /></td></tr>
+<tr class="separator:ga9265e487d02171243c597be7bba15785"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a64717bcc915cce52a3306052cdda89" id="r_ga0a64717bcc915cce52a3306052cdda89"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0a64717bcc915cce52a3306052cdda89">LUAT_BIT_ORDER_MSB</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga0a64717bcc915cce52a3306052cdda89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ea003003619c54b872d558f0e2873c6" id="r_ga0ea003003619c54b872d558f0e2873c6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0ea003003619c54b872d558f0e2873c6">LUAT_0_5_STOP_BITS</a>&#160;&#160;&#160;0xf0</td></tr>
+<tr class="memdesc:ga0ea003003619c54b872d558f0e2873c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止位  <br /></td></tr>
+<tr class="separator:ga0ea003003619c54b872d558f0e2873c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaecb537408cbd8ae9aff9a76ce17f76df" id="r_gaecb537408cbd8ae9aff9a76ce17f76df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaecb537408cbd8ae9aff9a76ce17f76df">LUAT_1_5_STOP_BITS</a>&#160;&#160;&#160;0xf1</td></tr>
+<tr class="separator:gaecb537408cbd8ae9aff9a76ce17f76df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0307ea5333cf23bb65e4167f434a4c07" id="r_ga0307ea5333cf23bb65e4167f434a4c07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0307ea5333cf23bb65e4167f434a4c07">LUAT_VUART_ID_0</a>&#160;&#160;&#160;0x20</td></tr>
+<tr class="separator:ga0307ea5333cf23bb65e4167f434a4c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<dl class="section version"><dt>版本</dt><dd>V1.0 </dd></dl>
+<dl class="section attention"><dt>注意</dt><dd>上报接收数据中断的逻辑： 1.串口初始化时，新建一个缓冲区 2.可以考虑多为用户申请几百字节的缓冲长度，用户处理时防止丢包 3.每次串口收到数据时，先存入缓冲区，记录长度 4.遇到以下情况时，再调用串口中断 a)缓冲区满（帮用户多申请的的情况）/缓冲区只剩几百字节（按实际长度申请缓冲区的情况） b)收到fifo接收超时中断（此时串口数据应该是没有继续收了） 5.触发收到数据中断时，返回的数据应是缓冲区的数据 6.关闭串口时，释放缓冲区资源    </dd></dl>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="ga0ea003003619c54b872d558f0e2873c6" name="ga0ea003003619c54b872d558f0e2873c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ea003003619c54b872d558f0e2873c6">&#9670;&#160;</a></span>LUAT_0_5_STOP_BITS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_0_5_STOP_BITS&#160;&#160;&#160;0xf0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>停止位 </p>
+<p>0.5 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__uart_8h_source.html">luat_uart.h</a> 第 <a class="el" href="luat__uart_8h_source.html#l00044">44</a> 行定义.</p>
+
+</div>
+</div>
+<a id="gaecb537408cbd8ae9aff9a76ce17f76df" name="gaecb537408cbd8ae9aff9a76ce17f76df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaecb537408cbd8ae9aff9a76ce17f76df">&#9670;&#160;</a></span>LUAT_1_5_STOP_BITS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_1_5_STOP_BITS&#160;&#160;&#160;0xf1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>1.5 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__uart_8h_source.html">luat_uart.h</a> 第 <a class="el" href="luat__uart_8h_source.html#l00045">45</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga9265e487d02171243c597be7bba15785" name="ga9265e487d02171243c597be7bba15785"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9265e487d02171243c597be7bba15785">&#9670;&#160;</a></span>LUAT_BIT_ORDER_LSB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_BIT_ORDER_LSB&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>高低位顺序 </p>
+<p>低位有效 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__uart_8h_source.html">luat_uart.h</a> 第 <a class="el" href="luat__uart_8h_source.html#l00038">38</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga0a64717bcc915cce52a3306052cdda89" name="ga0a64717bcc915cce52a3306052cdda89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0a64717bcc915cce52a3306052cdda89">&#9670;&#160;</a></span>LUAT_BIT_ORDER_MSB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_BIT_ORDER_MSB&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>高位有效 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__uart_8h_source.html">luat_uart.h</a> 第 <a class="el" href="luat__uart_8h_source.html#l00039">39</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga6ad2391ba2a05266b705ba051626b797" name="ga6ad2391ba2a05266b705ba051626b797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6ad2391ba2a05266b705ba051626b797">&#9670;&#160;</a></span>LUAT_PARITY_EVEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_PARITY_EVEN&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>偶校验 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__uart_8h_source.html">luat_uart.h</a> 第 <a class="el" href="luat__uart_8h_source.html#l00033">33</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga5347c55ebc2c3fb731322a50d626c7cf" name="ga5347c55ebc2c3fb731322a50d626c7cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5347c55ebc2c3fb731322a50d626c7cf">&#9670;&#160;</a></span>LUAT_PARITY_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_PARITY_NONE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>校验位 </p>
+<p>无校验 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__uart_8h_source.html">luat_uart.h</a> 第 <a class="el" href="luat__uart_8h_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<a id="gafb96212ea9b62a82b46934114589ba29" name="gafb96212ea9b62a82b46934114589ba29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafb96212ea9b62a82b46934114589ba29">&#9670;&#160;</a></span>LUAT_PARITY_ODD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_PARITY_ODD&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>奇校验 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__uart_8h_source.html">luat_uart.h</a> 第 <a class="el" href="luat__uart_8h_source.html#l00032">32</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga0307ea5333cf23bb65e4167f434a4c07" name="ga0307ea5333cf23bb65e4167f434a4c07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0307ea5333cf23bb65e4167f434a4c07">&#9670;&#160;</a></span>LUAT_VUART_ID_0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_VUART_ID_0&#160;&#160;&#160;0x20</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="luat__uart_8h_source.html">luat_uart.h</a> 第 <a class="el" href="luat__uart_8h_source.html#l00047">47</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ga4db87a7306c4b58414676ed9852221e3" name="ga4db87a7306c4b58414676ed9852221e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4db87a7306c4b58414676ed9852221e3">&#9670;&#160;</a></span>LUAT_UART_CTRL_CMD_E</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#gaf1e700bc0c706072aa824dedba0191d6">LUAT_UART_CTRL_CMD</a> <a class="el" href="#ga4db87a7306c4b58414676ed9852221e3">LUAT_UART_CTRL_CMD_E</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>串口控制参数 </p>
+
+</div>
+</div>
+<a id="ga277db543aa335a011c19457a8ca789a8" name="ga277db543aa335a011c19457a8ca789a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga277db543aa335a011c19457a8ca789a8">&#9670;&#160;</a></span>luat_uart_ctrl_param_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structluat__uart__ctrl__param.html">luat_uart_ctrl_param</a> <a class="el" href="#ga277db543aa335a011c19457a8ca789a8">luat_uart_ctrl_param_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>串口控制参数 </p>
+
+</div>
+</div>
+<a id="gafdc79ce08a0f22141c4e606ece05e28d" name="gafdc79ce08a0f22141c4e606ece05e28d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafdc79ce08a0f22141c4e606ece05e28d">&#9670;&#160;</a></span>luat_uart_recv_callback_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* luat_uart_recv_callback_t) (int uart_id, uint32_t data_len)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>接收回调函数 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__uart_8h_source.html">luat_uart.h</a> 第 <a class="el" href="luat__uart_8h_source.html#l00130">130</a> 行定义.</p>
+
+</div>
+</div>
+<a id="gaa6e41e6e80f54f026e3df8d0c4d2c4cd" name="gaa6e41e6e80f54f026e3df8d0c4d2c4cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa6e41e6e80f54f026e3df8d0c4d2c4cd">&#9670;&#160;</a></span>luat_uart_sent_callback_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* luat_uart_sent_callback_t) (int uart_id, void *param)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送回调函数 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__uart_8h_source.html">luat_uart.h</a> 第 <a class="el" href="luat__uart_8h_source.html#l00136">136</a> 行定义.</p>
+
+</div>
+</div>
+<a id="gaa9da40eb569d55557b34226cb4ce77d2" name="gaa9da40eb569d55557b34226cb4ce77d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa9da40eb569d55557b34226cb4ce77d2">&#9670;&#160;</a></span>luat_uart_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structluat__uart.html">luat_uart</a> <a class="el" href="#gaa9da40eb569d55557b34226cb4ce77d2">luat_uart_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="structluat__uart.html" title="luat_uart">luat_uart</a> </p>
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="gaf1e700bc0c706072aa824dedba0191d6" name="gaf1e700bc0c706072aa824dedba0191d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1e700bc0c706072aa824dedba0191d6">&#9670;&#160;</a></span>LUAT_UART_CTRL_CMD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#gaf1e700bc0c706072aa824dedba0191d6">LUAT_UART_CTRL_CMD</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>串口控制参数 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggaf1e700bc0c706072aa824dedba0191d6a16de175f5341df50030e7fcdc30e656f" name="ggaf1e700bc0c706072aa824dedba0191d6a16de175f5341df50030e7fcdc30e656f"></a>LUAT_UART_SET_RECV_CALLBACK&#160;</td><td class="fielddoc"><p>接收回调 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaf1e700bc0c706072aa824dedba0191d6a351392bc9a5bbb303174fb8b9be4ebdc" name="ggaf1e700bc0c706072aa824dedba0191d6a351392bc9a5bbb303174fb8b9be4ebdc"></a>LUAT_UART_SET_SENT_CALLBACK&#160;</td><td class="fielddoc"><p>发送回调 </p>
+</td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="luat__uart_8h_source.html">luat_uart.h</a> 第 <a class="el" href="luat__uart_8h_source.html#l00120">120</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="gac53eaef008d2013f8c858c90e2717ee4" name="gac53eaef008d2013f8c858c90e2717ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac53eaef008d2013f8c858c90e2717ee4">&#9670;&#160;</a></span>luat_uart_clear_rx_cache()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void luat_uart_clear_rx_cache </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>uart_id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>清除uart的接收缓存数据 </p>
+<dl class="section return"><dt>返回</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="ga76cf1bfce49655b629a3b97b57294c06" name="ga76cf1bfce49655b629a3b97b57294c06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga76cf1bfce49655b629a3b97b57294c06">&#9670;&#160;</a></span>luat_uart_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_uart_close </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>uart_id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭串口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uart_id</td><td>串口id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="ga8539302121dadacd21db33c7d6f156ca" name="ga8539302121dadacd21db33c7d6f156ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8539302121dadacd21db33c7d6f156ca">&#9670;&#160;</a></span>luat_uart_ctrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_uart_ctrl </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>uart_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga4db87a7306c4b58414676ed9852221e3">LUAT_UART_CTRL_CMD_E</a></td>          <td class="paramname"><span class="paramname"><em>cmd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>串口控制 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uart_id</td><td>串口id </td></tr>
+    <tr><td class="paramname">cmd</td><td>串口控制命令 </td></tr>
+    <tr><td class="paramname">param</td><td>串口控制参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="ga65f91a6e695e91c84df3ec074c2cc69c" name="ga65f91a6e695e91c84df3ec074c2cc69c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga65f91a6e695e91c84df3ec074c2cc69c">&#9670;&#160;</a></span>luat_uart_exist()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_uart_exist </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>uart_id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检测串口是否存在 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uart_id</td><td>串口id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="gae377d1342bbb90ccacc7286c3a759599" name="gae377d1342bbb90ccacc7286c3a759599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae377d1342bbb90ccacc7286c3a759599">&#9670;&#160;</a></span>luat_uart_pre_setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_uart_pre_setup </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>uart_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>use_alt_type</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>串口复用函数，目前支持UART0，UART2 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uart_id</td><td>串口id </td></tr>
+    <tr><td class="paramname">use_alt_type</td><td>如果为1，UART0，复用到GPIO16,GPIO17;UART2复用到GPIO12 GPIO13 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 0 失败，其他成功 </dd></dl>
+
+</div>
+</div>
+<a id="ga7aad03f30ff4e421da2b5d5a511c0d32" name="ga7aad03f30ff4e421da2b5d5a511c0d32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7aad03f30ff4e421da2b5d5a511c0d32">&#9670;&#160;</a></span>luat_uart_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_uart_read </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>uart_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>buffer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>串口读数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uart_id</td><td>串口id </td></tr>
+    <tr><td class="paramname">buffer</td><td>数据 </td></tr>
+    <tr><td class="paramname">length</td><td>数据长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="ga050702949fdd0c5abb3ba8e63eef530c" name="ga050702949fdd0c5abb3ba8e63eef530c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga050702949fdd0c5abb3ba8e63eef530c">&#9670;&#160;</a></span>luat_uart_setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_uart_setup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gaa9da40eb569d55557b34226cb4ce77d2">luat_uart_t</a> *</td>          <td class="paramname"><span class="paramname"><em>uart</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>uart初始化 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uart</td><td>luat_uart结构体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="gaab249830dca3ad924b5d6b2c68698256" name="gaab249830dca3ad924b5d6b2c68698256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaab249830dca3ad924b5d6b2c68698256">&#9670;&#160;</a></span>luat_uart_write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_uart_write </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>uart_id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>串口写数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">uart_id</td><td>串口id </td></tr>
+    <tr><td class="paramname">data</td><td>数据 </td></tr>
+    <tr><td class="paramname">length</td><td>数据长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

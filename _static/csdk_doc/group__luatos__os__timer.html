@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: 软件定时器接口函数</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">软件定时器接口函数<div class="ingroups"><a class="el" href="group__luatos__os.html">操作系统接口</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga5e6fb4c944f924580b612e9f1d9baffb" id="r_ga5e6fb4c944f924580b612e9f1d9baffb"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a></td></tr>
+<tr class="memdesc:ga5e6fb4c944f924580b612e9f1d9baffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时器头数据类型  <br /></td></tr>
+<tr class="separator:ga5e6fb4c944f924580b612e9f1d9baffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4656708846615c1813d4ed53ad21b20f" id="r_ga4656708846615c1813d4ed53ad21b20f"><td class="memItemLeft" align="right" valign="top">typedef LUAT_RT_RET_TYPE(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4656708846615c1813d4ed53ad21b20f">luat_rtos_timer_callback_t</a>) (LUAT_RT_CB_PARAM)</td></tr>
+<tr class="memdesc:ga4656708846615c1813d4ed53ad21b20f"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义定时器处理函数  <br /></td></tr>
+<tr class="separator:ga4656708846615c1813d4ed53ad21b20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga17d433fef157186c816e9b5eb41ecc9f" id="r_ga17d433fef157186c816e9b5eb41ecc9f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga17d433fef157186c816e9b5eb41ecc9f">luat_rtos_timer_create</a> (<a class="el" href="#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a> *timer_handle)</td></tr>
+<tr class="memdesc:ga17d433fef157186c816e9b5eb41ecc9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建软件定时器  <br /></td></tr>
+<tr class="separator:ga17d433fef157186c816e9b5eb41ecc9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb6d96500537d806a77686bb0b7ba63b" id="r_gacb6d96500537d806a77686bb0b7ba63b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gacb6d96500537d806a77686bb0b7ba63b">luat_rtos_timer_delete</a> (<a class="el" href="#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a> timer_handle)</td></tr>
+<tr class="memdesc:gacb6d96500537d806a77686bb0b7ba63b"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除软件定时器  <br /></td></tr>
+<tr class="separator:gacb6d96500537d806a77686bb0b7ba63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace36a9b9d3c21d9f9aa9b3f506b1e7e3" id="r_gace36a9b9d3c21d9f9aa9b3f506b1e7e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gace36a9b9d3c21d9f9aa9b3f506b1e7e3">luat_rtos_timer_start</a> (<a class="el" href="#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a> timer_handle, uint32_t timeout, uint8_t repeat, <a class="el" href="#ga4656708846615c1813d4ed53ad21b20f">luat_rtos_timer_callback_t</a> callback_fun, void *user_param)</td></tr>
+<tr class="memdesc:gace36a9b9d3c21d9f9aa9b3f506b1e7e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动软件定时器  <br /></td></tr>
+<tr class="separator:gace36a9b9d3c21d9f9aa9b3f506b1e7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29d233c3585ff83187c217775c1d9560" id="r_ga29d233c3585ff83187c217775c1d9560"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga29d233c3585ff83187c217775c1d9560">luat_rtos_timer_stop</a> (<a class="el" href="#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a> timer_handle)</td></tr>
+<tr class="memdesc:ga29d233c3585ff83187c217775c1d9560"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止软件定时器  <br /></td></tr>
+<tr class="separator:ga29d233c3585ff83187c217775c1d9560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f88cde281ef1efbd9d7bb7f45aa113a" id="r_ga9f88cde281ef1efbd9d7bb7f45aa113a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9f88cde281ef1efbd9d7bb7f45aa113a">luat_rtos_timer_is_active</a> (<a class="el" href="#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a> timer_handle)</td></tr>
+<tr class="memdesc:ga9f88cde281ef1efbd9d7bb7f45aa113a"><td class="mdescLeft">&#160;</td><td class="mdescRight">检测软件定时器是否处于激活状态  <br /></td></tr>
+<tr class="separator:ga9f88cde281ef1efbd9d7bb7f45aa113a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ga4656708846615c1813d4ed53ad21b20f" name="ga4656708846615c1813d4ed53ad21b20f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4656708846615c1813d4ed53ad21b20f">&#9670;&#160;</a></span>luat_rtos_timer_callback_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef LUAT_RT_RET_TYPE(* luat_rtos_timer_callback_t) (LUAT_RT_CB_PARAM)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定义定时器处理函数 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__rtos_8h_source.html">luat_rtos.h</a> 第 <a class="el" href="luat__rtos_8h_source.html#l00420">420</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga5e6fb4c944f924580b612e9f1d9baffb" name="ga5e6fb4c944f924580b612e9f1d9baffb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5e6fb4c944f924580b612e9f1d9baffb">&#9670;&#160;</a></span>luat_rtos_timer_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void* <a class="el" href="#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定时器头数据类型 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__rtos_8h_source.html">luat_rtos.h</a> 第 <a class="el" href="luat__rtos_8h_source.html#l00416">416</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga17d433fef157186c816e9b5eb41ecc9f" name="ga17d433fef157186c816e9b5eb41ecc9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga17d433fef157186c816e9b5eb41ecc9f">&#9670;&#160;</a></span>luat_rtos_timer_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_timer_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a> *</td>          <td class="paramname"><span class="paramname"><em>timer_handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建软件定时器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer_handle[OUT]</td><td>返回定时器句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="gacb6d96500537d806a77686bb0b7ba63b" name="gacb6d96500537d806a77686bb0b7ba63b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacb6d96500537d806a77686bb0b7ba63b">&#9670;&#160;</a></span>luat_rtos_timer_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_timer_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a></td>          <td class="paramname"><span class="paramname"><em>timer_handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除软件定时器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer_handle</td><td>定时器句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga9f88cde281ef1efbd9d7bb7f45aa113a" name="ga9f88cde281ef1efbd9d7bb7f45aa113a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9f88cde281ef1efbd9d7bb7f45aa113a">&#9670;&#160;</a></span>luat_rtos_timer_is_active()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_timer_is_active </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a></td>          <td class="paramname"><span class="paramname"><em>timer_handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检测软件定时器是否处于激活状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer_handle</td><td>定时器句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0未激活，1激活，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="gace36a9b9d3c21d9f9aa9b3f506b1e7e3" name="gace36a9b9d3c21d9f9aa9b3f506b1e7e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gace36a9b9d3c21d9f9aa9b3f506b1e7e3">&#9670;&#160;</a></span>luat_rtos_timer_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_timer_start </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a></td>          <td class="paramname"><span class="paramname"><em>timer_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>repeat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#ga4656708846615c1813d4ed53ad21b20f">luat_rtos_timer_callback_t</a></td>          <td class="paramname"><span class="paramname"><em>callback_fun</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>user_param</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>启动软件定时器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer_handle</td><td>定时器句柄 </td></tr>
+    <tr><td class="paramname">timeout</td><td>超时时间，单位ms，没有特殊值 </td></tr>
+    <tr><td class="paramname">repeat</td><td>0不重复，其他重复 </td></tr>
+    <tr><td class="paramname">callback_fun</td><td>定时时间到后的回调函数 </td></tr>
+    <tr><td class="paramname">user_param</td><td>回调函数时的最后一个输入参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga29d233c3585ff83187c217775c1d9560" name="ga29d233c3585ff83187c217775c1d9560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga29d233c3585ff83187c217775c1d9560">&#9670;&#160;</a></span>luat_rtos_timer_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_timer_stop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a></td>          <td class="paramname"><span class="paramname"><em>timer_handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>停止软件定时器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timer_handle</td><td>定时器句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: 事件接口函数</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">事件接口函数<div class="ingroups"><a class="el" href="group__luatos__os.html">操作系统接口</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga140974436d94202cf660b8f0ac8fe8e2" id="r_ga140974436d94202cf660b8f0ac8fe8e2"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga140974436d94202cf660b8f0ac8fe8e2">luat_rtos_flag_t</a></td></tr>
+<tr class="memdesc:ga140974436d94202cf660b8f0ac8fe8e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义事件句柄  <br /></td></tr>
+<tr class="separator:ga140974436d94202cf660b8f0ac8fe8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga093b366365219c797532bdb36cea4ab8" id="r_ga093b366365219c797532bdb36cea4ab8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga093b366365219c797532bdb36cea4ab8">luat_rtos_flag_create</a> (<a class="el" href="#ga140974436d94202cf660b8f0ac8fe8e2">luat_rtos_flag_t</a> *flag_handle)</td></tr>
+<tr class="memdesc:ga093b366365219c797532bdb36cea4ab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建事件  <br /></td></tr>
+<tr class="separator:ga093b366365219c797532bdb36cea4ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2910bc751124761eb03821a399191552" id="r_ga2910bc751124761eb03821a399191552"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2910bc751124761eb03821a399191552">luat_rtos_flag_wait</a> (<a class="el" href="#ga140974436d94202cf660b8f0ac8fe8e2">luat_rtos_flag_t</a> flag_handle, uint32_t mask, <a class="el" href="group__luatos__os.html#gaafe76c0940c639b08eefbb0c739b4da5">LUAT_FLAG_OP_E</a> operation, uint32_t *flags, uint32_t timeout)</td></tr>
+<tr class="memdesc:ga2910bc751124761eb03821a399191552"><td class="mdescLeft">&#160;</td><td class="mdescRight">等待事件  <br /></td></tr>
+<tr class="separator:ga2910bc751124761eb03821a399191552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa67c7f8b912d8e8db8839a038f7b191d" id="r_gaa67c7f8b912d8e8db8839a038f7b191d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa67c7f8b912d8e8db8839a038f7b191d">luat_rtos_flag_release</a> (<a class="el" href="#ga140974436d94202cf660b8f0ac8fe8e2">luat_rtos_flag_t</a> flag_handle, uint32_t mask, <a class="el" href="group__luatos__os.html#gaafe76c0940c639b08eefbb0c739b4da5">LUAT_FLAG_OP_E</a> operation)</td></tr>
+<tr class="memdesc:gaa67c7f8b912d8e8db8839a038f7b191d"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置事件  <br /></td></tr>
+<tr class="separator:gaa67c7f8b912d8e8db8839a038f7b191d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4753efba48379432272bd5e6d2147bfe" id="r_ga4753efba48379432272bd5e6d2147bfe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4753efba48379432272bd5e6d2147bfe">luat_rtos_flag_delete</a> (<a class="el" href="#ga140974436d94202cf660b8f0ac8fe8e2">luat_rtos_flag_t</a> flag_handle)</td></tr>
+<tr class="memdesc:ga4753efba48379432272bd5e6d2147bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除事件  <br /></td></tr>
+<tr class="separator:ga4753efba48379432272bd5e6d2147bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ga140974436d94202cf660b8f0ac8fe8e2" name="ga140974436d94202cf660b8f0ac8fe8e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga140974436d94202cf660b8f0ac8fe8e2">&#9670;&#160;</a></span>luat_rtos_flag_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void* <a class="el" href="#ga140974436d94202cf660b8f0ac8fe8e2">luat_rtos_flag_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定义事件句柄 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__rtos_8h_source.html">luat_rtos.h</a> 第 <a class="el" href="luat__rtos_8h_source.html#l00372">372</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga093b366365219c797532bdb36cea4ab8" name="ga093b366365219c797532bdb36cea4ab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga093b366365219c797532bdb36cea4ab8">&#9670;&#160;</a></span>luat_rtos_flag_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_flag_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga140974436d94202cf660b8f0ac8fe8e2">luat_rtos_flag_t</a> *</td>          <td class="paramname"><span class="paramname"><em>flag_handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flag_handle[OUT]</td><td>返回的事件句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga4753efba48379432272bd5e6d2147bfe" name="ga4753efba48379432272bd5e6d2147bfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4753efba48379432272bd5e6d2147bfe">&#9670;&#160;</a></span>luat_rtos_flag_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_flag_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga140974436d94202cf660b8f0ac8fe8e2">luat_rtos_flag_t</a></td>          <td class="paramname"><span class="paramname"><em>flag_handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flag_handle</td><td>事件句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="gaa67c7f8b912d8e8db8839a038f7b191d" name="gaa67c7f8b912d8e8db8839a038f7b191d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa67c7f8b912d8e8db8839a038f7b191d">&#9670;&#160;</a></span>luat_rtos_flag_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_flag_release </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga140974436d94202cf660b8f0ac8fe8e2">luat_rtos_flag_t</a></td>          <td class="paramname"><span class="paramname"><em>flag_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>mask</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__luatos__os.html#gaafe76c0940c639b08eefbb0c739b4da5">LUAT_FLAG_OP_E</a></td>          <td class="paramname"><span class="paramname"><em>operation</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flag_handle</td><td>事件句柄 </td></tr>
+    <tr><td class="paramname">mask</td><td>设置掩码 </td></tr>
+    <tr><td class="paramname">operation</td><td>事件判断（与或）和操作（是否要清除），freertos支持或操作LUAT_FLAG_OR </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga2910bc751124761eb03821a399191552" name="ga2910bc751124761eb03821a399191552"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2910bc751124761eb03821a399191552">&#9670;&#160;</a></span>luat_rtos_flag_wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_flag_wait </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga140974436d94202cf660b8f0ac8fe8e2">luat_rtos_flag_t</a></td>          <td class="paramname"><span class="paramname"><em>flag_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>mask</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__luatos__os.html#gaafe76c0940c639b08eefbb0c739b4da5">LUAT_FLAG_OP_E</a></td>          <td class="paramname"><span class="paramname"><em>operation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>等待事件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mask</td><td>等待的事件掩码 </td></tr>
+    <tr><td class="paramname">operation</td><td>事件触发要求（与操作需要全部满足才触发，或操作有一个就触发）和操作（是否要清除） </td></tr>
+    <tr><td class="paramname">flags[OUT]</td><td>当前事件状态值 </td></tr>
+    <tr><td class="paramname">timeout</td><td>超时时间 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

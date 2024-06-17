@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: PWM接口</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">PWM接口</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structluat__pwm__conf.html">luat_pwm_conf</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">PWM控制参数  <a href="structluat__pwm__conf.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gafab0715046bb475ce01ca8bf73e31615" id="r_gafab0715046bb475ce01ca8bf73e31615"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structluat__pwm__conf.html">luat_pwm_conf</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafab0715046bb475ce01ca8bf73e31615">luat_pwm_conf_t</a></td></tr>
+<tr class="memdesc:gafab0715046bb475ce01ca8bf73e31615"><td class="mdescLeft">&#160;</td><td class="mdescRight">PWM控制参数  <br /></td></tr>
+<tr class="separator:gafab0715046bb475ce01ca8bf73e31615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga9ce8b3d873a6e190e30b00c7e8086a9b" id="r_ga9ce8b3d873a6e190e30b00c7e8086a9b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9ce8b3d873a6e190e30b00c7e8086a9b">luat_pwm_set_callback</a> (int channel, CBFuncEx_t callback, void *param)</td></tr>
+<tr class="memdesc:ga9ce8b3d873a6e190e30b00c7e8086a9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置PWM输出完成回调，只有open时，pnum不为0才有回调，必须在pwm open前设置  <br /></td></tr>
+<tr class="separator:ga9ce8b3d873a6e190e30b00c7e8086a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1ae1801daaa1d67d5c3701c22e3deed1" id="r_ga1ae1801daaa1d67d5c3701c22e3deed1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1ae1801daaa1d67d5c3701c22e3deed1">luat_pwm_open</a> (int channel, size_t period, size_t pulse, int pnum)</td></tr>
+<tr class="memdesc:ga1ae1801daaa1d67d5c3701c22e3deed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">打开pwm 通道  <br /></td></tr>
+<tr class="separator:ga1ae1801daaa1d67d5c3701c22e3deed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf8178564037742543cf950ee80162aa5" id="r_gaf8178564037742543cf950ee80162aa5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf8178564037742543cf950ee80162aa5">luat_pwm_setup</a> (<a class="el" href="#gafab0715046bb475ce01ca8bf73e31615">luat_pwm_conf_t</a> *conf)</td></tr>
+<tr class="memdesc:gaf8178564037742543cf950ee80162aa5"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置pwm 参数  <br /></td></tr>
+<tr class="separator:gaf8178564037742543cf950ee80162aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga12f1aef62d6768b184284259a6664018" id="r_ga12f1aef62d6768b184284259a6664018"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga12f1aef62d6768b184284259a6664018">luat_pwm_capture</a> (int channel, int freq)</td></tr>
+<tr class="memdesc:ga12f1aef62d6768b184284259a6664018"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取pwm 频率 本功能暂未实现  <br /></td></tr>
+<tr class="separator:ga12f1aef62d6768b184284259a6664018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e7cb477c3bc8d354759ab739d779e4e" id="r_ga4e7cb477c3bc8d354759ab739d779e4e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4e7cb477c3bc8d354759ab739d779e4e">luat_pwm_close</a> (int channel)</td></tr>
+<tr class="memdesc:ga4e7cb477c3bc8d354759ab739d779e4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭pwm 接口  <br /></td></tr>
+<tr class="separator:ga4e7cb477c3bc8d354759ab739d779e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6befb316e4bc25f2d01e9576ab753522" id="r_ga6befb316e4bc25f2d01e9576ab753522"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6befb316e4bc25f2d01e9576ab753522">luat_pwm_update_dutycycle</a> (int channel, size_t pulse)</td></tr>
+<tr class="memdesc:ga6befb316e4bc25f2d01e9576ab753522"><td class="mdescLeft">&#160;</td><td class="mdescRight">修改占空比  <br /></td></tr>
+<tr class="separator:ga6befb316e4bc25f2d01e9576ab753522"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="gafab0715046bb475ce01ca8bf73e31615" name="gafab0715046bb475ce01ca8bf73e31615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafab0715046bb475ce01ca8bf73e31615">&#9670;&#160;</a></span>luat_pwm_conf_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structluat__pwm__conf.html">luat_pwm_conf</a> <a class="el" href="#gafab0715046bb475ce01ca8bf73e31615">luat_pwm_conf_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PWM控制参数 </p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga12f1aef62d6768b184284259a6664018" name="ga12f1aef62d6768b184284259a6664018"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga12f1aef62d6768b184284259a6664018">&#9670;&#160;</a></span>luat_pwm_capture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pwm_capture </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>channel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>freq</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取pwm 频率 本功能暂未实现 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>i2c_id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="ga4e7cb477c3bc8d354759ab739d779e4e" name="ga4e7cb477c3bc8d354759ab739d779e4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e7cb477c3bc8d354759ab739d779e4e">&#9670;&#160;</a></span>luat_pwm_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pwm_close </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>channel</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭pwm 接口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>选择PWM通道 可选通道为 0 / 1 / 2 / 4 总计4个通道 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="ga1ae1801daaa1d67d5c3701c22e3deed1" name="ga1ae1801daaa1d67d5c3701c22e3deed1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ae1801daaa1d67d5c3701c22e3deed1">&#9670;&#160;</a></span>luat_pwm_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pwm_open </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>channel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>period</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>pulse</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pnum</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>打开pwm 通道 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>选择PWM通道 可选通道为 0 / 1 / 2 / 4 总计4个通道 period : 设置产生的PWM频率 pulse : 设置产生的PWM占空比，单位0.1% pnum ：设置产生的PWM个数，若pnum设为0将一直输出PWM </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 返回值为 0 : 配置PWM成功 返回值为 -1: PWM通道选择错误 返回值为 -2: PWM频率设置错误 返回值为 -3：PWM占空比设置错误 返回值为 -4: 该PWM通道已被使用 </dd></dl>
+
+</div>
+</div>
+<a id="ga9ce8b3d873a6e190e30b00c7e8086a9b" name="ga9ce8b3d873a6e190e30b00c7e8086a9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9ce8b3d873a6e190e30b00c7e8086a9b">&#9670;&#160;</a></span>luat_pwm_set_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pwm_set_callback </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>channel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CBFuncEx_t</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>param</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置PWM输出完成回调，只有open时，pnum不为0才有回调，必须在pwm open前设置 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>选择pwm通道 可选通道为 0 / 1 / 2 / 4 总计4个通道 callback ：回调函数 param ：回调时用户参数 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int </dd></dl>
+
+</div>
+</div>
+<a id="gaf8178564037742543cf950ee80162aa5" name="gaf8178564037742543cf950ee80162aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf8178564037742543cf950ee80162aa5">&#9670;&#160;</a></span>luat_pwm_setup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pwm_setup </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gafab0715046bb475ce01ca8bf73e31615">luat_pwm_conf_t</a> *</td>          <td class="paramname"><span class="paramname"><em>conf</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>配置pwm 参数 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conf-&gt;channel</td><td>选择PWM通道 可选通道为 0 / 1 / 2 / 4 总计4个通道 conf-&gt;period : 设置产生的PWM频率 conf-&gt;pulse : 设置产生的PWM占空比 conf-&gt;pnum : 设置产生的PWM个数，若pnum设为0将一直输出PWM </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 返回值为 0 : 配置PWM成功 返回值为 -1: PWM通道选择错误 返回值为 -2: PWM频率设置错误 返回值为 -3：PWM占空比设置错误 返回值为 -4: 该PWM通道已被使用 </dd></dl>
+
+</div>
+</div>
+<a id="ga6befb316e4bc25f2d01e9576ab753522" name="ga6befb316e4bc25f2d01e9576ab753522"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6befb316e4bc25f2d01e9576ab753522">&#9670;&#160;</a></span>luat_pwm_update_dutycycle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pwm_update_dutycycle </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>channel</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>pulse</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>修改占空比 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">channel</td><td>选择pwm通道 可选通道为 0 / 1 / 2 / 4 总计4个通道 pulse ：修改pwm占空比值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: D:/Git_Project/LuatOS/luat/include/luat_rtc.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c84d1918a0c60f03a047973dabe1fbea.html">LuatOS</a></li><li class="navelem"><a class="el" href="dir_58e660e76975d16d5415f5038ac9d3ca.html">luat</a></li><li class="navelem"><a class="el" href="dir_1113cf867ec23ec4b862785c4b5d35b9.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">luat_rtc.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;luat_base.h&quot;</code><br />
+<code>#include &quot;time.h&quot;</code><br />
+</div>
+<p><a href="luat__rtc_8h_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga70e2946fd527de12f943733b4c46cfec" id="r_ga70e2946fd527de12f943733b4c46cfec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___r_t_c.html#ga70e2946fd527de12f943733b4c46cfec">luat_rtc_set</a> (struct tm *tblock)</td></tr>
+<tr class="memdesc:ga70e2946fd527de12f943733b4c46cfec"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置系统时间  <br /></td></tr>
+<tr class="separator:ga70e2946fd527de12f943733b4c46cfec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2fbc13fc3d5d850bc5eab1a22821ec1f" id="r_ga2fbc13fc3d5d850bc5eab1a22821ec1f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___r_t_c.html#ga2fbc13fc3d5d850bc5eab1a22821ec1f">luat_rtc_get</a> (struct tm *tblock)</td></tr>
+<tr class="memdesc:ga2fbc13fc3d5d850bc5eab1a22821ec1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取系统时间  <br /></td></tr>
+<tr class="separator:ga2fbc13fc3d5d850bc5eab1a22821ec1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a968f35582d58a73c0d535765ad5f6e86" id="r_a968f35582d58a73c0d535765ad5f6e86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a968f35582d58a73c0d535765ad5f6e86">luat_rtc_timer_start</a> (int id, struct tm *tblock)</td></tr>
+<tr class="separator:a968f35582d58a73c0d535765ad5f6e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae783bd4d220f8f881d01551237a33fd3" id="r_ae783bd4d220f8f881d01551237a33fd3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae783bd4d220f8f881d01551237a33fd3">luat_rtc_timer_stop</a> (int id)</td></tr>
+<tr class="separator:ae783bd4d220f8f881d01551237a33fd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39c3da0611e9efd664b243e396a2b1f2" id="r_a39c3da0611e9efd664b243e396a2b1f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39c3da0611e9efd664b243e396a2b1f2">luat_rtc_set_tamp32</a> (uint32_t tamp)</td></tr>
+<tr class="separator:a39c3da0611e9efd664b243e396a2b1f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac40ccce16654715690d3b73acc6e0b27" id="r_ac40ccce16654715690d3b73acc6e0b27"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac40ccce16654715690d3b73acc6e0b27">luat_rtc_timezone</a> (int *timezone)</td></tr>
+<tr class="separator:ac40ccce16654715690d3b73acc6e0b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">函数说明</h2>
+<a id="a39c3da0611e9efd664b243e396a2b1f2" name="a39c3da0611e9efd664b243e396a2b1f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39c3da0611e9efd664b243e396a2b1f2">&#9670;&#160;</a></span>luat_rtc_set_tamp32()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void luat_rtc_set_tamp32 </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>tamp</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a968f35582d58a73c0d535765ad5f6e86" name="a968f35582d58a73c0d535765ad5f6e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a968f35582d58a73c0d535765ad5f6e86">&#9670;&#160;</a></span>luat_rtc_timer_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtc_timer_start </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct tm *</td>          <td class="paramname"><span class="paramname"><em>tblock</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae783bd4d220f8f881d01551237a33fd3" name="ae783bd4d220f8f881d01551237a33fd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae783bd4d220f8f881d01551237a33fd3">&#9670;&#160;</a></span>luat_rtc_timer_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtc_timer_stop </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac40ccce16654715690d3b73acc6e0b27" name="ac40ccce16654715690d3b73acc6e0b27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac40ccce16654715690d3b73acc6e0b27">&#9670;&#160;</a></span>luat_rtc_timezone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtc_timezone </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>timezone</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

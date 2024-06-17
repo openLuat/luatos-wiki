@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: 线程任务接口函数</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">线程任务接口函数<div class="ingroups"><a class="el" href="group__luatos__os.html">操作系统接口</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gafa84b37a02f05aedb082746d79e2cd63" id="r_gafa84b37a02f05aedb082746d79e2cd63"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafa84b37a02f05aedb082746d79e2cd63">luat_rtos_task_entry</a>) (void *)</td></tr>
+<tr class="memdesc:gafa84b37a02f05aedb082746d79e2cd63"><td class="mdescLeft">&#160;</td><td class="mdescRight">task的入口函数,函数类型  <br /></td></tr>
+<tr class="separator:gafa84b37a02f05aedb082746d79e2cd63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6aba72e4faeb87b022f4ce9e68a6f176" id="r_ga6aba72e4faeb87b022f4ce9e68a6f176"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a></td></tr>
+<tr class="memdesc:ga6aba72e4faeb87b022f4ce9e68a6f176"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义task任务句柄  <br /></td></tr>
+<tr class="separator:ga6aba72e4faeb87b022f4ce9e68a6f176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga1c150d136c126720e2f6944212cf6829" id="r_ga1c150d136c126720e2f6944212cf6829"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga1c150d136c126720e2f6944212cf6829">luat_rtos_task_create</a> (<a class="el" href="#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> *task_handle, uint32_t stack_size, uint8_t priority, const char *task_name, <a class="el" href="#gafa84b37a02f05aedb082746d79e2cd63">luat_rtos_task_entry</a> task_fun, void *user_data, uint16_t event_cout)</td></tr>
+<tr class="memdesc:ga1c150d136c126720e2f6944212cf6829"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建一个可以带mailbox机制的task，mailbox是message和event的基础，但是和queue无关  <br /></td></tr>
+<tr class="separator:ga1c150d136c126720e2f6944212cf6829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2bf29c6d1737471b479ee78c79401000" id="r_ga2bf29c6d1737471b479ee78c79401000"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2bf29c6d1737471b479ee78c79401000">luat_rtos_task_delete</a> (<a class="el" href="#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle)</td></tr>
+<tr class="memdesc:ga2bf29c6d1737471b479ee78c79401000"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除task  <br /></td></tr>
+<tr class="separator:ga2bf29c6d1737471b479ee78c79401000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga143f20b66b708eca3d1da842a59e0ab5" id="r_ga143f20b66b708eca3d1da842a59e0ab5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga143f20b66b708eca3d1da842a59e0ab5">luat_rtos_task_suspend</a> (<a class="el" href="#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle)</td></tr>
+<tr class="memdesc:ga143f20b66b708eca3d1da842a59e0ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">挂起某个task  <br /></td></tr>
+<tr class="separator:ga143f20b66b708eca3d1da842a59e0ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga614cf5a1f3b9f4c349c0551aee132fb1" id="r_ga614cf5a1f3b9f4c349c0551aee132fb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga614cf5a1f3b9f4c349c0551aee132fb1">luat_rtos_task_resume</a> (<a class="el" href="#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle)</td></tr>
+<tr class="memdesc:ga614cf5a1f3b9f4c349c0551aee132fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">恢复挂起的task  <br /></td></tr>
+<tr class="separator:ga614cf5a1f3b9f4c349c0551aee132fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe1eb79720a2e65fa4b13a0c7b14a4d7" id="r_gabe1eb79720a2e65fa4b13a0c7b14a4d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabe1eb79720a2e65fa4b13a0c7b14a4d7">luat_rtos_task_suspend_all</a> (void)</td></tr>
+<tr class="memdesc:gabe1eb79720a2e65fa4b13a0c7b14a4d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">挂起全部task  <br /></td></tr>
+<tr class="separator:gabe1eb79720a2e65fa4b13a0c7b14a4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24569105431ce04088e50dfa570177d2" id="r_ga24569105431ce04088e50dfa570177d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga24569105431ce04088e50dfa570177d2">luat_rtos_task_resume_all</a> (void)</td></tr>
+<tr class="memdesc:ga24569105431ce04088e50dfa570177d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">恢复全部task  <br /></td></tr>
+<tr class="separator:ga24569105431ce04088e50dfa570177d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf05c24b326d9eeb83f4698ab19ad744" id="r_gabf05c24b326d9eeb83f4698ab19ad744"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabf05c24b326d9eeb83f4698ab19ad744">luat_rtos_task_sleep</a> (uint32_t ms)</td></tr>
+<tr class="memdesc:gabf05c24b326d9eeb83f4698ab19ad744"><td class="mdescLeft">&#160;</td><td class="mdescRight">task休眠一段时间  <br /></td></tr>
+<tr class="separator:gabf05c24b326d9eeb83f4698ab19ad744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad6640564f4c6dd7f5b7c9abab38a0843" id="r_gad6640564f4c6dd7f5b7c9abab38a0843"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad6640564f4c6dd7f5b7c9abab38a0843">luat_rtos_get_current_handle</a> (void)</td></tr>
+<tr class="memdesc:gad6640564f4c6dd7f5b7c9abab38a0843"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前task的句柄  <br /></td></tr>
+<tr class="separator:gad6640564f4c6dd7f5b7c9abab38a0843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5dd49929adbab031665c9143d10a14aa" id="r_ga5dd49929adbab031665c9143d10a14aa"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5dd49929adbab031665c9143d10a14aa">luat_rtos_task_get_high_water_mark</a> (<a class="el" href="#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle)</td></tr>
+<tr class="memdesc:ga5dd49929adbab031665c9143d10a14aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取task堆栈剩余的最小值，叫做“高水位线”  <br /></td></tr>
+<tr class="separator:ga5dd49929adbab031665c9143d10a14aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga707538d4ee5e8d77c89e0c3f99b2516d" id="r_ga707538d4ee5e8d77c89e0c3f99b2516d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga707538d4ee5e8d77c89e0c3f99b2516d">luat_rtos_task_run_time_record_enable</a> (void)</td></tr>
+<tr class="memdesc:ga707538d4ee5e8d77c89e0c3f99b2516d"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动task运行时间记录功能，必须在task调度前启用  <br /></td></tr>
+<tr class="separator:ga707538d4ee5e8d77c89e0c3f99b2516d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67fd4f74307f1182d06c53f4e43c2f6a" id="r_ga67fd4f74307f1182d06c53f4e43c2f6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga67fd4f74307f1182d06c53f4e43c2f6a">luat_rtos_task_run_time_record_print</a> (uint8_t print_ticks)</td></tr>
+<tr class="memdesc:ga67fd4f74307f1182d06c53f4e43c2f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">打印所有task运行时间和占用百分比  <br /></td></tr>
+<tr class="separator:ga67fd4f74307f1182d06c53f4e43c2f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="gafa84b37a02f05aedb082746d79e2cd63" name="gafa84b37a02f05aedb082746d79e2cd63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafa84b37a02f05aedb082746d79e2cd63">&#9670;&#160;</a></span>luat_rtos_task_entry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* luat_rtos_task_entry) (void *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>task的入口函数,函数类型 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__rtos_8h_source.html">luat_rtos.h</a> 第 <a class="el" href="luat__rtos_8h_source.html#l00059">59</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga6aba72e4faeb87b022f4ce9e68a6f176" name="ga6aba72e4faeb87b022f4ce9e68a6f176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6aba72e4faeb87b022f4ce9e68a6f176">&#9670;&#160;</a></span>luat_rtos_task_handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void* <a class="el" href="#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定义task任务句柄 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__rtos_8h_source.html">luat_rtos.h</a> 第 <a class="el" href="luat__rtos_8h_source.html#l00063">63</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="gad6640564f4c6dd7f5b7c9abab38a0843" name="gad6640564f4c6dd7f5b7c9abab38a0843"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad6640564f4c6dd7f5b7c9abab38a0843">&#9670;&#160;</a></span>luat_rtos_get_current_handle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> luat_rtos_get_current_handle </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取当前task的句柄 </p>
+<dl class="section return"><dt>返回</dt><dd>luat_rtos_task_handle 当前task的句柄 </dd></dl>
+
+</div>
+</div>
+<a id="ga1c150d136c126720e2f6944212cf6829" name="ga1c150d136c126720e2f6944212cf6829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1c150d136c126720e2f6944212cf6829">&#9670;&#160;</a></span>luat_rtos_task_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_task_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> *</td>          <td class="paramname"><span class="paramname"><em>task_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>stack_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>priority</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>task_name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#gafa84b37a02f05aedb082746d79e2cd63">luat_rtos_task_entry</a></td>          <td class="paramname"><span class="paramname"><em>task_fun</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>user_data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t</td>          <td class="paramname"><span class="paramname"><em>event_cout</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建一个可以带mailbox机制的task，mailbox是message和event的基础，但是和queue无关 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task_handle[OUT]</td><td>返回创建的句柄 </td></tr>
+    <tr><td class="paramname">stack_size</td><td>task的栈空间大小，单位byte，必须4字节对齐 </td></tr>
+    <tr><td class="paramname">priority</td><td>优先级，单位是百分比，0%~100%,100为最高等级，由具体实现转换到底层SDK用的优先级 </td></tr>
+    <tr><td class="paramname">task_name</td><td>task名字 </td></tr>
+    <tr><td class="paramname">task_fun</td><td>task的入口函数 </td></tr>
+    <tr><td class="paramname">user_data</td><td>task的入口参数 </td></tr>
+    <tr><td class="paramname">event_cout</td><td>如果OS允许在中断里malloc，或者不使用message和event机制的，这个参数无视，如果OS不允许在中断里malloc，则这里填写预分配的event空间用于中断里使用，如果写0会使用公共event </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga2bf29c6d1737471b479ee78c79401000" name="ga2bf29c6d1737471b479ee78c79401000"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2bf29c6d1737471b479ee78c79401000">&#9670;&#160;</a></span>luat_rtos_task_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_task_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a></td>          <td class="paramname"><span class="paramname"><em>task_handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除task </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task_handle</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga5dd49929adbab031665c9143d10a14aa" name="ga5dd49929adbab031665c9143d10a14aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5dd49929adbab031665c9143d10a14aa">&#9670;&#160;</a></span>luat_rtos_task_get_high_water_mark()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t luat_rtos_task_get_high_water_mark </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a></td>          <td class="paramname"><span class="paramname"><em>task_handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取task堆栈剩余的最小值，叫做“高水位线” </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">luat_rtos_task_handle</td><td>task的句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>task堆栈剩余的最小值,单位为字 </dd></dl>
+
+</div>
+</div>
+<a id="ga614cf5a1f3b9f4c349c0551aee132fb1" name="ga614cf5a1f3b9f4c349c0551aee132fb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga614cf5a1f3b9f4c349c0551aee132fb1">&#9670;&#160;</a></span>luat_rtos_task_resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_task_resume </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a></td>          <td class="paramname"><span class="paramname"><em>task_handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>恢复挂起的task </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task_handle</td><td>task句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga24569105431ce04088e50dfa570177d2" name="ga24569105431ce04088e50dfa570177d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga24569105431ce04088e50dfa570177d2">&#9670;&#160;</a></span>luat_rtos_task_resume_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void luat_rtos_task_resume_all </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>恢复全部task </p>
+
+</div>
+</div>
+<a id="ga707538d4ee5e8d77c89e0c3f99b2516d" name="ga707538d4ee5e8d77c89e0c3f99b2516d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga707538d4ee5e8d77c89e0c3f99b2516d">&#9670;&#160;</a></span>luat_rtos_task_run_time_record_enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void luat_rtos_task_run_time_record_enable </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>启动task运行时间记录功能，必须在task调度前启用 </p>
+
+</div>
+</div>
+<a id="ga67fd4f74307f1182d06c53f4e43c2f6a" name="ga67fd4f74307f1182d06c53f4e43c2f6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga67fd4f74307f1182d06c53f4e43c2f6a">&#9670;&#160;</a></span>luat_rtos_task_run_time_record_print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void luat_rtos_task_run_time_record_print </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>print_ticks</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>打印所有task运行时间和占用百分比 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">print_ticks</td><td>打印具体ticks </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gabf05c24b326d9eeb83f4698ab19ad744" name="gabf05c24b326d9eeb83f4698ab19ad744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabf05c24b326d9eeb83f4698ab19ad744">&#9670;&#160;</a></span>luat_rtos_task_sleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void luat_rtos_task_sleep </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>ms</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>task休眠一段时间 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ms</td><td>休眠时间，单位ms </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga143f20b66b708eca3d1da842a59e0ab5" name="ga143f20b66b708eca3d1da842a59e0ab5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga143f20b66b708eca3d1da842a59e0ab5">&#9670;&#160;</a></span>luat_rtos_task_suspend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_task_suspend </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a></td>          <td class="paramname"><span class="paramname"><em>task_handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>挂起某个task </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task_handle</td><td>task句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="gabe1eb79720a2e65fa4b13a0c7b14a4d7" name="gabe1eb79720a2e65fa4b13a0c7b14a4d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe1eb79720a2e65fa4b13a0c7b14a4d7">&#9670;&#160;</a></span>luat_rtos_task_suspend_all()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void luat_rtos_task_suspend_all </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>挂起全部task </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

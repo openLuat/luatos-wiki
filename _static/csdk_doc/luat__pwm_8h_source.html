@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: D:/Git_Project/LuatOS/luat/include/luat_pwm.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c84d1918a0c60f03a047973dabe1fbea.html">LuatOS</a></li><li class="navelem"><a class="el" href="dir_58e660e76975d16d5415f5038ac9d3ca.html">luat</a></li><li class="navelem"><a class="el" href="dir_1113cf867ec23ec4b862785c4b5d35b9.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">luat_pwm.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="luat__pwm_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef Luat_PWM_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define Luat_PWM_H</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;luat_base.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structluat__pwm__conf.html">   14</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structluat__pwm__conf.html">luat_pwm_conf</a> {</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structluat__pwm__conf.html#adf7dff2c57c0da9a4a2b70e3e815be31">   15</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structluat__pwm__conf.html#adf7dff2c57c0da9a4a2b70e3e815be31">channel</a>; </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structluat__pwm__conf.html#a5e45c11eb1cdfba3786d5083629815b9">   16</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structluat__pwm__conf.html#a5e45c11eb1cdfba3786d5083629815b9">stop_level</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structluat__pwm__conf.html#a227ee8509806bda3e6bc2b52c4405cc9">   17</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structluat__pwm__conf.html#a227ee8509806bda3e6bc2b52c4405cc9">period</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structluat__pwm__conf.html#ab668f3c2cd74e4f5bc0bb4c35d4f67c0">   18</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structluat__pwm__conf.html#ab668f3c2cd74e4f5bc0bb4c35d4f67c0">pulse</a>; </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structluat__pwm__conf.html#ac0e234d4f773c6c723a61b640c59bd95">   19</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structluat__pwm__conf.html#ac0e234d4f773c6c723a61b640c59bd95">pnum</a>; </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structluat__pwm__conf.html#a19a254febcf2ce797babef3a85a6076b">   20</a></span>    <span class="keywordtype">size_t</span> <a class="code hl_variable" href="structluat__pwm__conf.html#a19a254febcf2ce797babef3a85a6076b">precision</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structluat__pwm__conf.html#a240249cb6662aeea620af614f610c9c4">   21</a></span>    uint8_t <a class="code hl_variable" href="structluat__pwm__conf.html#a240249cb6662aeea620af614f610c9c4">reverse</a>;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="group__luatos__device___p_w_m.html#gafab0715046bb475ce01ca8bf73e31615">   22</a></span>} <a class="code hl_typedef" href="group__luatos__device___p_w_m.html#gafab0715046bb475ce01ca8bf73e31615">luat_pwm_conf_t</a>;</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#ifdef __LUATOS__</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#else</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="group__luatos__device___p_w_m.html#ga9ce8b3d873a6e190e30b00c7e8086a9b">   33</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device___p_w_m.html#ga9ce8b3d873a6e190e30b00c7e8086a9b">luat_pwm_set_callback</a>(<span class="keywordtype">int</span> channel, CBFuncEx_t callback, <span class="keywordtype">void</span> *param);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="group__luatos__device___p_w_m.html#ga1ae1801daaa1d67d5c3701c22e3deed1">   49</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device___p_w_m.html#ga1ae1801daaa1d67d5c3701c22e3deed1">luat_pwm_open</a>(<span class="keywordtype">int</span> channel, <span class="keywordtype">size_t</span> period, <span class="keywordtype">size_t</span> pulse, <span class="keywordtype">int</span> pnum);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="group__luatos__device___p_w_m.html#gaf8178564037742543cf950ee80162aa5">   64</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device___p_w_m.html#gaf8178564037742543cf950ee80162aa5">luat_pwm_setup</a>(<a class="code hl_struct" href="structluat__pwm__conf.html">luat_pwm_conf_t</a>* conf);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="group__luatos__device___p_w_m.html#ga12f1aef62d6768b184284259a6664018">   71</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device___p_w_m.html#ga12f1aef62d6768b184284259a6664018">luat_pwm_capture</a>(<span class="keywordtype">int</span> channel,<span class="keywordtype">int</span> freq);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="group__luatos__device___p_w_m.html#ga4e7cb477c3bc8d354759ab739d779e4e">   78</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device___p_w_m.html#ga4e7cb477c3bc8d354759ab739d779e4e">luat_pwm_close</a>(<span class="keywordtype">int</span> channel);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="group__luatos__device___p_w_m.html#ga6befb316e4bc25f2d01e9576ab753522">   85</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device___p_w_m.html#ga6befb316e4bc25f2d01e9576ab753522">luat_pwm_update_dutycycle</a>(<span class="keywordtype">int</span> channel, <span class="keywordtype">size_t</span> pulse);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__luatos__device___p_w_m_html_ga12f1aef62d6768b184284259a6664018"><div class="ttname"><a href="group__luatos__device___p_w_m.html#ga12f1aef62d6768b184284259a6664018">luat_pwm_capture</a></div><div class="ttdeci">int luat_pwm_capture(int channel, int freq)</div><div class="ttdoc">获取pwm 频率 本功能暂未实现</div></div>
+<div class="ttc" id="agroup__luatos__device___p_w_m_html_ga1ae1801daaa1d67d5c3701c22e3deed1"><div class="ttname"><a href="group__luatos__device___p_w_m.html#ga1ae1801daaa1d67d5c3701c22e3deed1">luat_pwm_open</a></div><div class="ttdeci">int luat_pwm_open(int channel, size_t period, size_t pulse, int pnum)</div><div class="ttdoc">打开pwm 通道</div></div>
+<div class="ttc" id="agroup__luatos__device___p_w_m_html_ga4e7cb477c3bc8d354759ab739d779e4e"><div class="ttname"><a href="group__luatos__device___p_w_m.html#ga4e7cb477c3bc8d354759ab739d779e4e">luat_pwm_close</a></div><div class="ttdeci">int luat_pwm_close(int channel)</div><div class="ttdoc">关闭pwm 接口</div></div>
+<div class="ttc" id="agroup__luatos__device___p_w_m_html_ga6befb316e4bc25f2d01e9576ab753522"><div class="ttname"><a href="group__luatos__device___p_w_m.html#ga6befb316e4bc25f2d01e9576ab753522">luat_pwm_update_dutycycle</a></div><div class="ttdeci">int luat_pwm_update_dutycycle(int channel, size_t pulse)</div><div class="ttdoc">修改占空比</div></div>
+<div class="ttc" id="agroup__luatos__device___p_w_m_html_ga9ce8b3d873a6e190e30b00c7e8086a9b"><div class="ttname"><a href="group__luatos__device___p_w_m.html#ga9ce8b3d873a6e190e30b00c7e8086a9b">luat_pwm_set_callback</a></div><div class="ttdeci">int luat_pwm_set_callback(int channel, CBFuncEx_t callback, void *param)</div><div class="ttdoc">设置PWM输出完成回调，只有open时，pnum不为0才有回调，必须在pwm open前设置</div></div>
+<div class="ttc" id="agroup__luatos__device___p_w_m_html_gaf8178564037742543cf950ee80162aa5"><div class="ttname"><a href="group__luatos__device___p_w_m.html#gaf8178564037742543cf950ee80162aa5">luat_pwm_setup</a></div><div class="ttdeci">int luat_pwm_setup(luat_pwm_conf_t *conf)</div><div class="ttdoc">配置pwm 参数</div></div>
+<div class="ttc" id="agroup__luatos__device___p_w_m_html_gafab0715046bb475ce01ca8bf73e31615"><div class="ttname"><a href="group__luatos__device___p_w_m.html#gafab0715046bb475ce01ca8bf73e31615">luat_pwm_conf_t</a></div><div class="ttdeci">struct luat_pwm_conf luat_pwm_conf_t</div><div class="ttdoc">PWM控制参数</div></div>
+<div class="ttc" id="astructluat__pwm__conf_html"><div class="ttname"><a href="structluat__pwm__conf.html">luat_pwm_conf</a></div><div class="ttdoc">PWM控制参数</div><div class="ttdef"><b>定义</b> <a href="#l00014">luat_pwm.h:14</a></div></div>
+<div class="ttc" id="astructluat__pwm__conf_html_a19a254febcf2ce797babef3a85a6076b"><div class="ttname"><a href="structluat__pwm__conf.html#a19a254febcf2ce797babef3a85a6076b">luat_pwm_conf::precision</a></div><div class="ttdeci">size_t precision</div><div class="ttdef"><b>定义</b> <a href="#l00020">luat_pwm.h:20</a></div></div>
+<div class="ttc" id="astructluat__pwm__conf_html_a227ee8509806bda3e6bc2b52c4405cc9"><div class="ttname"><a href="structluat__pwm__conf.html#a227ee8509806bda3e6bc2b52c4405cc9">luat_pwm_conf::period</a></div><div class="ttdeci">size_t period</div><div class="ttdef"><b>定义</b> <a href="#l00017">luat_pwm.h:17</a></div></div>
+<div class="ttc" id="astructluat__pwm__conf_html_a240249cb6662aeea620af614f610c9c4"><div class="ttname"><a href="structluat__pwm__conf.html#a240249cb6662aeea620af614f610c9c4">luat_pwm_conf::reverse</a></div><div class="ttdeci">uint8_t reverse</div><div class="ttdef"><b>定义</b> <a href="#l00021">luat_pwm.h:21</a></div></div>
+<div class="ttc" id="astructluat__pwm__conf_html_a5e45c11eb1cdfba3786d5083629815b9"><div class="ttname"><a href="structluat__pwm__conf.html#a5e45c11eb1cdfba3786d5083629815b9">luat_pwm_conf::stop_level</a></div><div class="ttdeci">int stop_level</div><div class="ttdef"><b>定义</b> <a href="#l00016">luat_pwm.h:16</a></div></div>
+<div class="ttc" id="astructluat__pwm__conf_html_ab668f3c2cd74e4f5bc0bb4c35d4f67c0"><div class="ttname"><a href="structluat__pwm__conf.html#ab668f3c2cd74e4f5bc0bb4c35d4f67c0">luat_pwm_conf::pulse</a></div><div class="ttdeci">size_t pulse</div><div class="ttdef"><b>定义</b> <a href="#l00018">luat_pwm.h:18</a></div></div>
+<div class="ttc" id="astructluat__pwm__conf_html_ac0e234d4f773c6c723a61b640c59bd95"><div class="ttname"><a href="structluat__pwm__conf.html#ac0e234d4f773c6c723a61b640c59bd95">luat_pwm_conf::pnum</a></div><div class="ttdeci">size_t pnum</div><div class="ttdef"><b>定义</b> <a href="#l00019">luat_pwm.h:19</a></div></div>
+<div class="ttc" id="astructluat__pwm__conf_html_adf7dff2c57c0da9a4a2b70e3e815be31"><div class="ttname"><a href="structluat__pwm__conf.html#adf7dff2c57c0da9a4a2b70e3e815be31">luat_pwm_conf::channel</a></div><div class="ttdeci">int channel</div><div class="ttdef"><b>定义</b> <a href="#l00015">luat_pwm.h:15</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

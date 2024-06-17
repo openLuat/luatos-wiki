@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: 队列接口函数</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">队列接口函数<div class="ingroups"><a class="el" href="group__luatos__os.html">操作系统接口</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gacf6c651bc7f5879bbfceb1e38ca99c93" id="r_gacf6c651bc7f5879bbfceb1e38ca99c93"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a></td></tr>
+<tr class="memdesc:gacf6c651bc7f5879bbfceb1e38ca99c93"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义队列句柄  <br /></td></tr>
+<tr class="separator:gacf6c651bc7f5879bbfceb1e38ca99c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga7cd54683e9edae87464ef0a1f1506fcb" id="r_ga7cd54683e9edae87464ef0a1f1506fcb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7cd54683e9edae87464ef0a1f1506fcb">luat_rtos_queue_create</a> (<a class="el" href="#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a> *queue_handle, uint32_t item_count, uint32_t item_size)</td></tr>
+<tr class="memdesc:ga7cd54683e9edae87464ef0a1f1506fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建队列  <br /></td></tr>
+<tr class="separator:ga7cd54683e9edae87464ef0a1f1506fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d036537196d0eacac8c3d97b88463ff" id="r_ga7d036537196d0eacac8c3d97b88463ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7d036537196d0eacac8c3d97b88463ff">luat_rtos_queue_delete</a> (<a class="el" href="#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a> queue_handle)</td></tr>
+<tr class="memdesc:ga7d036537196d0eacac8c3d97b88463ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除队列  <br /></td></tr>
+<tr class="separator:ga7d036537196d0eacac8c3d97b88463ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga018b0cb453ce14011212119655efe6cf" id="r_ga018b0cb453ce14011212119655efe6cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga018b0cb453ce14011212119655efe6cf">luat_rtos_queue_send</a> (<a class="el" href="#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a> queue_handle, void *item, uint32_t item_size, uint32_t timeout)</td></tr>
+<tr class="memdesc:ga018b0cb453ce14011212119655efe6cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">往队列里发送一个元素  <br /></td></tr>
+<tr class="separator:ga018b0cb453ce14011212119655efe6cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad116e03a162e6dc7af165b72c5bbecb9" id="r_gad116e03a162e6dc7af165b72c5bbecb9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad116e03a162e6dc7af165b72c5bbecb9">luat_rtos_queue_recv</a> (<a class="el" href="#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a> queue_handle, void *item, uint32_t item_size, uint32_t timeout)</td></tr>
+<tr class="memdesc:gad116e03a162e6dc7af165b72c5bbecb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">从队列里取出一个元素  <br /></td></tr>
+<tr class="separator:gad116e03a162e6dc7af165b72c5bbecb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1e456ae2bbf2a40e0f5aa5db4bedeb2" id="r_gaf1e456ae2bbf2a40e0f5aa5db4bedeb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf1e456ae2bbf2a40e0f5aa5db4bedeb2">luat_rtos_queue_get_cnt</a> (<a class="el" href="#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a> queue_handle, uint32_t *item_cnt)</td></tr>
+<tr class="memdesc:gaf1e456ae2bbf2a40e0f5aa5db4bedeb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询队列中剩余未处理的元素数量  <br /></td></tr>
+<tr class="separator:gaf1e456ae2bbf2a40e0f5aa5db4bedeb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="gacf6c651bc7f5879bbfceb1e38ca99c93" name="gacf6c651bc7f5879bbfceb1e38ca99c93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacf6c651bc7f5879bbfceb1e38ca99c93">&#9670;&#160;</a></span>luat_rtos_queue_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void* <a class="el" href="#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定义队列句柄 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__rtos_8h_source.html">luat_rtos.h</a> 第 <a class="el" href="luat__rtos_8h_source.html#l00311">311</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga7cd54683e9edae87464ef0a1f1506fcb" name="ga7cd54683e9edae87464ef0a1f1506fcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7cd54683e9edae87464ef0a1f1506fcb">&#9670;&#160;</a></span>luat_rtos_queue_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_queue_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a> *</td>          <td class="paramname"><span class="paramname"><em>queue_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>item_count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>item_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>创建队列 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue_handle[OUT]</td><td>返回的队列句柄 </td></tr>
+    <tr><td class="paramname">msgcount</td><td>队列里元素的最大数量 </td></tr>
+    <tr><td class="paramname">msgsize</td><td>队列里单个元素的大小 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga7d036537196d0eacac8c3d97b88463ff" name="ga7d036537196d0eacac8c3d97b88463ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d036537196d0eacac8c3d97b88463ff">&#9670;&#160;</a></span>luat_rtos_queue_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_queue_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a></td>          <td class="paramname"><span class="paramname"><em>queue_handle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>删除队列 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue_handle</td><td>队列句柄 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="gaf1e456ae2bbf2a40e0f5aa5db4bedeb2" name="gaf1e456ae2bbf2a40e0f5aa5db4bedeb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1e456ae2bbf2a40e0f5aa5db4bedeb2">&#9670;&#160;</a></span>luat_rtos_queue_get_cnt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_queue_get_cnt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a></td>          <td class="paramname"><span class="paramname"><em>queue_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *</td>          <td class="paramname"><span class="paramname"><em>item_cnt</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>查询队列中剩余未处理的元素数量 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue_handle</td><td>队列句柄 </td></tr>
+    <tr><td class="paramname">item_cnt[OUT]</td><td>返回未处理的元素数量 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="gad116e03a162e6dc7af165b72c5bbecb9" name="gad116e03a162e6dc7af165b72c5bbecb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad116e03a162e6dc7af165b72c5bbecb9">&#9670;&#160;</a></span>luat_rtos_queue_recv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_queue_recv </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a></td>          <td class="paramname"><span class="paramname"><em>queue_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>item</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>item_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>从队列里取出一个元素 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue_handle</td><td>队列句柄 </td></tr>
+    <tr><td class="paramname">item</td><td>元素指针 </td></tr>
+    <tr><td class="paramname">item_size</td><td>元素大小，这个是兼容性参数，实际上必须于创建时的item_size一致，所以忽略 </td></tr>
+    <tr><td class="paramname">timeout</td><td>超时，单位ms，特殊值见LUAT_RTOS_WAIT_E </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga018b0cb453ce14011212119655efe6cf" name="ga018b0cb453ce14011212119655efe6cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga018b0cb453ce14011212119655efe6cf">&#9670;&#160;</a></span>luat_rtos_queue_send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_rtos_queue_send </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a></td>          <td class="paramname"><span class="paramname"><em>queue_handle</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *</td>          <td class="paramname"><span class="paramname"><em>item</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>item_size</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>往队列里发送一个元素 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">queue_handle</td><td>队列句柄 </td></tr>
+    <tr><td class="paramname">item</td><td>元素指针 </td></tr>
+    <tr><td class="paramname">item_size</td><td>元素大小，这个是兼容性参数，实际上必须于创建时的item_size一致，所以忽略 </td></tr>
+    <tr><td class="paramname">timeout</td><td>超时，单位ms，特殊值见LUAT_RTOS_WAIT_E </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

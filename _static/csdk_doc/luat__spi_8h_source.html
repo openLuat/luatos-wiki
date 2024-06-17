@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: D:/Git_Project/LuatOS/luat/include/luat_spi.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c84d1918a0c60f03a047973dabe1fbea.html">LuatOS</a></li><li class="navelem"><a class="el" href="dir_58e660e76975d16d5415f5038ac9d3ca.html">luat</a></li><li class="navelem"><a class="el" href="dir_1113cf867ec23ec4b862785c4b5d35b9.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">luat_spi.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="luat__spi_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#ifndef LUAT_SPI_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#define LUAT_SPI_H</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;luat_base.h&quot;</span></div>
+<div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="structluat__spi.html">    9</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structluat__spi.html">luat_spi</a></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>{</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="structluat__spi.html#a7441ef0865bcb3db9b8064dd7375c1ea">   11</a></span>    <span class="keywordtype">int</span>  <a class="code hl_variable" href="structluat__spi.html#a7441ef0865bcb3db9b8064dd7375c1ea">id</a>;            </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="structluat__spi.html#a3049336295df874616d2fdc92ed4199b">   12</a></span>    <span class="keywordtype">int</span>  <a class="code hl_variable" href="structluat__spi.html#a3049336295df874616d2fdc92ed4199b">CPHA</a>;          </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="structluat__spi.html#a6aa63a980c2d8d2ac1a506e209268659">   13</a></span>    <span class="keywordtype">int</span>  <a class="code hl_variable" href="structluat__spi.html#a6aa63a980c2d8d2ac1a506e209268659">CPOL</a>;          </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="structluat__spi.html#aa3ca591762bace6b4c9952aeeccea89b">   14</a></span>    <span class="keywordtype">int</span>  <a class="code hl_variable" href="structluat__spi.html#aa3ca591762bace6b4c9952aeeccea89b">dataw</a>;         </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="structluat__spi.html#a82fbc8491d32eeabbfcd2a66c2f9f127">   15</a></span>    <span class="keywordtype">int</span>  <a class="code hl_variable" href="structluat__spi.html#a82fbc8491d32eeabbfcd2a66c2f9f127">bit_dict</a>;      </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structluat__spi.html#a12828bf492e2410c9efe0f15ad2205ee">   16</a></span>    <span class="keywordtype">int</span>  <a class="code hl_variable" href="structluat__spi.html#a12828bf492e2410c9efe0f15ad2205ee">master</a>;        </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structluat__spi.html#a1ea5d0cb93f22f7d0fdf804bd68c3326">   17</a></span>    <span class="keywordtype">int</span>  <a class="code hl_variable" href="structluat__spi.html#a1ea5d0cb93f22f7d0fdf804bd68c3326">mode</a>;          </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structluat__spi.html#afd9ef7664915ff88c78877a89e51fc12">   18</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structluat__spi.html#afd9ef7664915ff88c78877a89e51fc12">bandrate</a>;       </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structluat__spi.html#ad35c7ed2784f4fb57849237ce534f17e">   19</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structluat__spi.html#ad35c7ed2784f4fb57849237ce534f17e">cs</a>;             </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#ga8c62ec5718f4b1d2cce7198b36d50b67">   20</a></span>} <a class="code hl_typedef" href="group__luatos__device__spi.html#ga8c62ec5718f4b1d2cce7198b36d50b67">luat_spi_t</a>;</div>
+</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structluat__spi__device.html">   22</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structluat__spi__device.html">luat_spi_device</a></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structluat__spi__device.html#ad4f720b5cfd34e2ccdfdee58b41aa732">   24</a></span>    uint8_t  <a class="code hl_variable" href="structluat__spi__device.html#ad4f720b5cfd34e2ccdfdee58b41aa732">bus_id</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structluat__spi__device.html#aad8dcd73c56e1c676b831c2232645082">   25</a></span>    <a class="code hl_struct" href="structluat__spi.html">luat_spi_t</a> <a class="code hl_variable" href="structluat__spi__device.html#aad8dcd73c56e1c676b831c2232645082">spi_config</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structluat__spi__device.html#a0f53d287ac7c064d1a49d4bd93ca1cb9">   26</a></span>    <span class="keywordtype">void</span>* <a class="code hl_variable" href="structluat__spi__device.html#a0f53d287ac7c064d1a49d4bd93ca1cb9">user_data</a>;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#gac3f806a5129a8cae8ea590459dc1eaec">   27</a></span>} <a class="code hl_typedef" href="group__luatos__device__spi.html#gac3f806a5129a8cae8ea590459dc1eaec">luat_spi_device_t</a>;</div>
+</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="};">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structluat__fatfs__spi.html">   29</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structluat__fatfs__spi.html">luat_fatfs_spi</a></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>{</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structluat__fatfs__spi.html#a1d127017fb298b889f4ba24752d08b8e">   31</a></span>    uint8_t <a class="code hl_variable" href="structluat__fatfs__spi.html#a1d127017fb298b889f4ba24752d08b8e">type</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="structluat__fatfs__spi.html#ac4a379c26a8d526fad4f51cbe69efe03">   32</a></span>    uint8_t <a class="code hl_variable" href="structluat__fatfs__spi.html#ac4a379c26a8d526fad4f51cbe69efe03">spi_id</a>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="structluat__fatfs__spi.html#a00c1e28665496044c8b73502fc9776a0">   33</a></span>    uint8_t <a class="code hl_variable" href="structluat__fatfs__spi.html#a00c1e28665496044c8b73502fc9776a0">spi_cs</a>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="structluat__fatfs__spi.html#ae6cdadfea2bcc8709bbc7f066f76145a">   34</a></span>    uint8_t <a class="code hl_variable" href="structluat__fatfs__spi.html#ae6cdadfea2bcc8709bbc7f066f76145a">nop</a>;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="structluat__fatfs__spi.html#ad83a7ec58909a4bfe198c8ca5989d3e6">   35</a></span>    uint32_t <a class="code hl_variable" href="structluat__fatfs__spi.html#ad83a7ec58909a4bfe198c8ca5989d3e6">fast_speed</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="structluat__fatfs__spi.html#a1827b1dcee816b3705ad9bba5d4ac2c2">   36</a></span>    uint8_t <a class="code hl_variable" href="structluat__fatfs__spi.html#a1827b1dcee816b3705ad9bba5d4ac2c2">transfer_buf</a>[7];</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="structluat__fatfs__spi.html#aa2625c8e19c78b157bb7eaa98aeb3680">   37</a></span>    <a class="code hl_struct" href="structluat__spi__device.html">luat_spi_device_t</a> * <a class="code hl_variable" href="structluat__fatfs__spi.html#aa2625c8e19c78b157bb7eaa98aeb3680">spi_device</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#ga7bfbfa85a436c2ff2c0d3e399d2a5180">   38</a></span>}<a class="code hl_typedef" href="group__luatos__device__spi.html#ga7bfbfa85a436c2ff2c0d3e399d2a5180">luat_fatfs_spi_t</a>;</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#gab10698ed19fb5297602ccdc51aeb58b3">   55</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#gab10698ed19fb5297602ccdc51aeb58b3">luat_spi_setup</a>(<a class="code hl_struct" href="structluat__spi.html">luat_spi_t</a>* spi);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#ga98e3c428b4d20d623e0c266fed99b3d8">   64</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#ga98e3c428b4d20d623e0c266fed99b3d8">luat_spi_config_dma</a>(<span class="keywordtype">int</span> spi_id, uint32_t tx_channel, uint32_t rx_channel);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#ga801cfdc7dab6685c22783fa2868c4bfa">   71</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#ga801cfdc7dab6685c22783fa2868c4bfa">luat_spi_close</a>(<span class="keywordtype">int</span> spi_id);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#gad1a3beba62b65416eb2a702347d1e787">   82</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#gad1a3beba62b65416eb2a702347d1e787">luat_spi_transfer</a>(<span class="keywordtype">int</span> spi_id, <span class="keyword">const</span> <span class="keywordtype">char</span>* send_buf, <span class="keywordtype">size_t</span> send_length, <span class="keywordtype">char</span>* recv_buf, <span class="keywordtype">size_t</span> recv_length);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#ga307b16866f0ca35ec29e64db782aa4ce">   91</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#ga307b16866f0ca35ec29e64db782aa4ce">luat_spi_recv</a>(<span class="keywordtype">int</span> spi_id, <span class="keywordtype">char</span>* recv_buf, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#gaeafdd8e0e6f86c9d61c639ab67a38801">  100</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#gaeafdd8e0e6f86c9d61c639ab67a38801">luat_spi_send</a>(<span class="keywordtype">int</span> spi_id, <span class="keyword">const</span> <span class="keywordtype">char</span>* send_buf, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#ga9a5ce582898afa02fac4bc2ed8b92384">  108</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#ga9a5ce582898afa02fac4bc2ed8b92384">luat_spi_change_speed</a>(<span class="keywordtype">int</span> spi_id, uint32_t speed);</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#gaa80c5b06a98b05ce357775a7b891a6bf">  120</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#gaa80c5b06a98b05ce357775a7b891a6bf">luat_spi_no_block_transfer</a>(<span class="keywordtype">int</span> spi_id, uint8_t *tx_buff, uint8_t *rx_buff, <span class="keywordtype">size_t</span> len, <span class="keywordtype">void</span> *CB, <span class="keywordtype">void</span> *pParam);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#ga9509e9c1bd87f67dd7dc3ace9769a16a">  127</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#ga9509e9c1bd87f67dd7dc3ace9769a16a">luat_spi_get_mode</a>(<span class="keywordtype">int</span> spi_id);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#gac9e6155e0635bc627762d2dba13b070c">  135</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#gac9e6155e0635bc627762d2dba13b070c">luat_spi_set_mode</a>(<span class="keywordtype">int</span> spi_id, uint8_t mode);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#ga08e04e6a1f6a8dc68a7c49777b76068f">  143</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#ga08e04e6a1f6a8dc68a7c49777b76068f">luat_spi_bus_setup</a>(<a class="code hl_struct" href="structluat__spi__device.html">luat_spi_device_t</a>* spi_dev);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#ga1278dc8decd3e4aca6e53d2252654cab">  150</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#ga1278dc8decd3e4aca6e53d2252654cab">luat_spi_device_setup</a>(<a class="code hl_struct" href="structluat__spi__device.html">luat_spi_device_t</a>* spi_dev);</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#ga84f002b4a4a73a95a94bb6094eda2bfb">  157</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#ga84f002b4a4a73a95a94bb6094eda2bfb">luat_spi_device_config</a>(<a class="code hl_struct" href="structluat__spi__device.html">luat_spi_device_t</a>* spi_dev);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#gac9bb1f371b877683d85eddd7167215be">  164</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#gac9bb1f371b877683d85eddd7167215be">luat_spi_device_close</a>(<a class="code hl_struct" href="structluat__spi__device.html">luat_spi_device_t</a>* spi_dev);</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#ga3b81cc0c4960b7485b254405d2840413">  175</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#ga3b81cc0c4960b7485b254405d2840413">luat_spi_device_transfer</a>(<a class="code hl_struct" href="structluat__spi__device.html">luat_spi_device_t</a>* spi_dev, <span class="keyword">const</span> <span class="keywordtype">char</span>* send_buf, <span class="keywordtype">size_t</span> send_length, <span class="keywordtype">char</span>* recv_buf, <span class="keywordtype">size_t</span> recv_length);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#ga83af2db63b06f70d25d067a982590401">  184</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#ga83af2db63b06f70d25d067a982590401">luat_spi_device_recv</a>(<a class="code hl_struct" href="structluat__spi__device.html">luat_spi_device_t</a>* spi_dev, <span class="keywordtype">char</span>* recv_buf, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="group__luatos__device__spi.html#ga5d8251a940c19117a1366fdd324f6395">  193</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__device__spi.html#ga5d8251a940c19117a1366fdd324f6395">luat_spi_device_send</a>(<a class="code hl_struct" href="structluat__spi__device.html">luat_spi_device_t</a>* spi_dev, <span class="keyword">const</span> <span class="keywordtype">char</span>* send_buf, <span class="keywordtype">size_t</span> length);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_ga08e04e6a1f6a8dc68a7c49777b76068f"><div class="ttname"><a href="group__luatos__device__spi.html#ga08e04e6a1f6a8dc68a7c49777b76068f">luat_spi_bus_setup</a></div><div class="ttdeci">int luat_spi_bus_setup(luat_spi_device_t *spi_dev)</div><div class="ttdoc">spi总线初始化</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_ga1278dc8decd3e4aca6e53d2252654cab"><div class="ttname"><a href="group__luatos__device__spi.html#ga1278dc8decd3e4aca6e53d2252654cab">luat_spi_device_setup</a></div><div class="ttdeci">int luat_spi_device_setup(luat_spi_device_t *spi_dev)</div><div class="ttdoc">spi设备初始化</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_ga307b16866f0ca35ec29e64db782aa4ce"><div class="ttname"><a href="group__luatos__device__spi.html#ga307b16866f0ca35ec29e64db782aa4ce">luat_spi_recv</a></div><div class="ttdeci">int luat_spi_recv(int spi_id, char *recv_buf, size_t length)</div><div class="ttdoc">收SPI数据</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_ga3b81cc0c4960b7485b254405d2840413"><div class="ttname"><a href="group__luatos__device__spi.html#ga3b81cc0c4960b7485b254405d2840413">luat_spi_device_transfer</a></div><div class="ttdeci">int luat_spi_device_transfer(luat_spi_device_t *spi_dev, const char *send_buf, size_t send_length, char *recv_buf, size_t recv_length)</div><div class="ttdoc">spi设备收发数据，返回接收字节数</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_ga5d8251a940c19117a1366fdd324f6395"><div class="ttname"><a href="group__luatos__device__spi.html#ga5d8251a940c19117a1366fdd324f6395">luat_spi_device_send</a></div><div class="ttdeci">int luat_spi_device_send(luat_spi_device_t *spi_dev, const char *send_buf, size_t length)</div><div class="ttdoc">spi设备发送数据，返回接收字节数</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_ga7bfbfa85a436c2ff2c0d3e399d2a5180"><div class="ttname"><a href="group__luatos__device__spi.html#ga7bfbfa85a436c2ff2c0d3e399d2a5180">luat_fatfs_spi_t</a></div><div class="ttdeci">struct luat_fatfs_spi luat_fatfs_spi_t</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_ga801cfdc7dab6685c22783fa2868c4bfa"><div class="ttname"><a href="group__luatos__device__spi.html#ga801cfdc7dab6685c22783fa2868c4bfa">luat_spi_close</a></div><div class="ttdeci">int luat_spi_close(int spi_id)</div><div class="ttdoc">关闭SPI</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_ga83af2db63b06f70d25d067a982590401"><div class="ttname"><a href="group__luatos__device__spi.html#ga83af2db63b06f70d25d067a982590401">luat_spi_device_recv</a></div><div class="ttdeci">int luat_spi_device_recv(luat_spi_device_t *spi_dev, char *recv_buf, size_t length)</div><div class="ttdoc">spi设备接收数据，返回接收字节数</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_ga84f002b4a4a73a95a94bb6094eda2bfb"><div class="ttname"><a href="group__luatos__device__spi.html#ga84f002b4a4a73a95a94bb6094eda2bfb">luat_spi_device_config</a></div><div class="ttdeci">int luat_spi_device_config(luat_spi_device_t *spi_dev)</div><div class="ttdoc">spi设备配置</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_ga8c62ec5718f4b1d2cce7198b36d50b67"><div class="ttname"><a href="group__luatos__device__spi.html#ga8c62ec5718f4b1d2cce7198b36d50b67">luat_spi_t</a></div><div class="ttdeci">struct luat_spi luat_spi_t</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_ga9509e9c1bd87f67dd7dc3ace9769a16a"><div class="ttname"><a href="group__luatos__device__spi.html#ga9509e9c1bd87f67dd7dc3ace9769a16a">luat_spi_get_mode</a></div><div class="ttdeci">int luat_spi_get_mode(int spi_id)</div><div class="ttdoc">SPI模式获取</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_ga98e3c428b4d20d623e0c266fed99b3d8"><div class="ttname"><a href="group__luatos__device__spi.html#ga98e3c428b4d20d623e0c266fed99b3d8">luat_spi_config_dma</a></div><div class="ttdeci">int luat_spi_config_dma(int spi_id, uint32_t tx_channel, uint32_t rx_channel)</div><div class="ttdoc">SPI收发数据尝试启动DMA模式</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_ga9a5ce582898afa02fac4bc2ed8b92384"><div class="ttname"><a href="group__luatos__device__spi.html#ga9a5ce582898afa02fac4bc2ed8b92384">luat_spi_change_speed</a></div><div class="ttdeci">int luat_spi_change_speed(int spi_id, uint32_t speed)</div><div class="ttdoc">SPI速率修改</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_gaa80c5b06a98b05ce357775a7b891a6bf"><div class="ttname"><a href="group__luatos__device__spi.html#gaa80c5b06a98b05ce357775a7b891a6bf">luat_spi_no_block_transfer</a></div><div class="ttdeci">int luat_spi_no_block_transfer(int spi_id, uint8_t *tx_buff, uint8_t *rx_buff, size_t len, void *CB, void *pParam)</div><div class="ttdoc">SPI收发数据(异步)</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_gab10698ed19fb5297602ccdc51aeb58b3"><div class="ttname"><a href="group__luatos__device__spi.html#gab10698ed19fb5297602ccdc51aeb58b3">luat_spi_setup</a></div><div class="ttdeci">int luat_spi_setup(luat_spi_t *spi)</div><div class="ttdoc">初始化配置SPI各项参数，并打开SPI luat_spi_t 结构体参数  spiId,–串口id  cs,  0,–CPHA  0,–CPOL  8,–数据宽度  20000000,...</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_gac3f806a5129a8cae8ea590459dc1eaec"><div class="ttname"><a href="group__luatos__device__spi.html#gac3f806a5129a8cae8ea590459dc1eaec">luat_spi_device_t</a></div><div class="ttdeci">struct luat_spi_device luat_spi_device_t</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_gac9bb1f371b877683d85eddd7167215be"><div class="ttname"><a href="group__luatos__device__spi.html#gac9bb1f371b877683d85eddd7167215be">luat_spi_device_close</a></div><div class="ttdeci">int luat_spi_device_close(luat_spi_device_t *spi_dev)</div><div class="ttdoc">spi设备关闭</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_gac9e6155e0635bc627762d2dba13b070c"><div class="ttname"><a href="group__luatos__device__spi.html#gac9e6155e0635bc627762d2dba13b070c">luat_spi_set_mode</a></div><div class="ttdeci">int luat_spi_set_mode(int spi_id, uint8_t mode)</div><div class="ttdoc">SPI模式修改</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_gad1a3beba62b65416eb2a702347d1e787"><div class="ttname"><a href="group__luatos__device__spi.html#gad1a3beba62b65416eb2a702347d1e787">luat_spi_transfer</a></div><div class="ttdeci">int luat_spi_transfer(int spi_id, const char *send_buf, size_t send_length, char *recv_buf, size_t recv_length)</div><div class="ttdoc">收发SPI数据</div></div>
+<div class="ttc" id="agroup__luatos__device__spi_html_gaeafdd8e0e6f86c9d61c639ab67a38801"><div class="ttname"><a href="group__luatos__device__spi.html#gaeafdd8e0e6f86c9d61c639ab67a38801">luat_spi_send</a></div><div class="ttdeci">int luat_spi_send(int spi_id, const char *send_buf, size_t length)</div><div class="ttdoc">发SPI数据</div></div>
+<div class="ttc" id="astructluat__fatfs__spi_html"><div class="ttname"><a href="structluat__fatfs__spi.html">luat_fatfs_spi</a></div><div class="ttdef"><b>定义</b> <a href="#l00029">luat_spi.h:30</a></div></div>
+<div class="ttc" id="astructluat__fatfs__spi_html_a00c1e28665496044c8b73502fc9776a0"><div class="ttname"><a href="structluat__fatfs__spi.html#a00c1e28665496044c8b73502fc9776a0">luat_fatfs_spi::spi_cs</a></div><div class="ttdeci">uint8_t spi_cs</div><div class="ttdef"><b>定义</b> <a href="#l00033">luat_spi.h:33</a></div></div>
+<div class="ttc" id="astructluat__fatfs__spi_html_a1827b1dcee816b3705ad9bba5d4ac2c2"><div class="ttname"><a href="structluat__fatfs__spi.html#a1827b1dcee816b3705ad9bba5d4ac2c2">luat_fatfs_spi::transfer_buf</a></div><div class="ttdeci">uint8_t transfer_buf[7]</div><div class="ttdef"><b>定义</b> <a href="#l00036">luat_spi.h:36</a></div></div>
+<div class="ttc" id="astructluat__fatfs__spi_html_a1d127017fb298b889f4ba24752d08b8e"><div class="ttname"><a href="structluat__fatfs__spi.html#a1d127017fb298b889f4ba24752d08b8e">luat_fatfs_spi::type</a></div><div class="ttdeci">uint8_t type</div><div class="ttdef"><b>定义</b> <a href="#l00031">luat_spi.h:31</a></div></div>
+<div class="ttc" id="astructluat__fatfs__spi_html_aa2625c8e19c78b157bb7eaa98aeb3680"><div class="ttname"><a href="structluat__fatfs__spi.html#aa2625c8e19c78b157bb7eaa98aeb3680">luat_fatfs_spi::spi_device</a></div><div class="ttdeci">luat_spi_device_t * spi_device</div><div class="ttdef"><b>定义</b> <a href="#l00037">luat_spi.h:37</a></div></div>
+<div class="ttc" id="astructluat__fatfs__spi_html_ac4a379c26a8d526fad4f51cbe69efe03"><div class="ttname"><a href="structluat__fatfs__spi.html#ac4a379c26a8d526fad4f51cbe69efe03">luat_fatfs_spi::spi_id</a></div><div class="ttdeci">uint8_t spi_id</div><div class="ttdef"><b>定义</b> <a href="#l00032">luat_spi.h:32</a></div></div>
+<div class="ttc" id="astructluat__fatfs__spi_html_ad83a7ec58909a4bfe198c8ca5989d3e6"><div class="ttname"><a href="structluat__fatfs__spi.html#ad83a7ec58909a4bfe198c8ca5989d3e6">luat_fatfs_spi::fast_speed</a></div><div class="ttdeci">uint32_t fast_speed</div><div class="ttdef"><b>定义</b> <a href="#l00035">luat_spi.h:35</a></div></div>
+<div class="ttc" id="astructluat__fatfs__spi_html_ae6cdadfea2bcc8709bbc7f066f76145a"><div class="ttname"><a href="structluat__fatfs__spi.html#ae6cdadfea2bcc8709bbc7f066f76145a">luat_fatfs_spi::nop</a></div><div class="ttdeci">uint8_t nop</div><div class="ttdef"><b>定义</b> <a href="#l00034">luat_spi.h:34</a></div></div>
+<div class="ttc" id="astructluat__spi__device_html"><div class="ttname"><a href="structluat__spi__device.html">luat_spi_device</a></div><div class="ttdef"><b>定义</b> <a href="#l00022">luat_spi.h:23</a></div></div>
+<div class="ttc" id="astructluat__spi__device_html_a0f53d287ac7c064d1a49d4bd93ca1cb9"><div class="ttname"><a href="structluat__spi__device.html#a0f53d287ac7c064d1a49d4bd93ca1cb9">luat_spi_device::user_data</a></div><div class="ttdeci">void * user_data</div><div class="ttdef"><b>定义</b> <a href="#l00026">luat_spi.h:26</a></div></div>
+<div class="ttc" id="astructluat__spi__device_html_aad8dcd73c56e1c676b831c2232645082"><div class="ttname"><a href="structluat__spi__device.html#aad8dcd73c56e1c676b831c2232645082">luat_spi_device::spi_config</a></div><div class="ttdeci">luat_spi_t spi_config</div><div class="ttdef"><b>定义</b> <a href="#l00025">luat_spi.h:25</a></div></div>
+<div class="ttc" id="astructluat__spi__device_html_ad4f720b5cfd34e2ccdfdee58b41aa732"><div class="ttname"><a href="structluat__spi__device.html#ad4f720b5cfd34e2ccdfdee58b41aa732">luat_spi_device::bus_id</a></div><div class="ttdeci">uint8_t bus_id</div><div class="ttdef"><b>定义</b> <a href="#l00024">luat_spi.h:24</a></div></div>
+<div class="ttc" id="astructluat__spi_html"><div class="ttname"><a href="structluat__spi.html">luat_spi</a></div><div class="ttdef"><b>定义</b> <a href="#l00009">luat_spi.h:10</a></div></div>
+<div class="ttc" id="astructluat__spi_html_a12828bf492e2410c9efe0f15ad2205ee"><div class="ttname"><a href="structluat__spi.html#a12828bf492e2410c9efe0f15ad2205ee">luat_spi::master</a></div><div class="ttdeci">int master</div><div class="ttdef"><b>定义</b> <a href="#l00016">luat_spi.h:16</a></div></div>
+<div class="ttc" id="astructluat__spi_html_a1ea5d0cb93f22f7d0fdf804bd68c3326"><div class="ttname"><a href="structluat__spi.html#a1ea5d0cb93f22f7d0fdf804bd68c3326">luat_spi::mode</a></div><div class="ttdeci">int mode</div><div class="ttdef"><b>定义</b> <a href="#l00017">luat_spi.h:17</a></div></div>
+<div class="ttc" id="astructluat__spi_html_a3049336295df874616d2fdc92ed4199b"><div class="ttname"><a href="structluat__spi.html#a3049336295df874616d2fdc92ed4199b">luat_spi::CPHA</a></div><div class="ttdeci">int CPHA</div><div class="ttdef"><b>定义</b> <a href="#l00012">luat_spi.h:12</a></div></div>
+<div class="ttc" id="astructluat__spi_html_a6aa63a980c2d8d2ac1a506e209268659"><div class="ttname"><a href="structluat__spi.html#a6aa63a980c2d8d2ac1a506e209268659">luat_spi::CPOL</a></div><div class="ttdeci">int CPOL</div><div class="ttdef"><b>定义</b> <a href="#l00013">luat_spi.h:13</a></div></div>
+<div class="ttc" id="astructluat__spi_html_a7441ef0865bcb3db9b8064dd7375c1ea"><div class="ttname"><a href="structluat__spi.html#a7441ef0865bcb3db9b8064dd7375c1ea">luat_spi::id</a></div><div class="ttdeci">int id</div><div class="ttdef"><b>定义</b> <a href="#l00011">luat_spi.h:11</a></div></div>
+<div class="ttc" id="astructluat__spi_html_a82fbc8491d32eeabbfcd2a66c2f9f127"><div class="ttname"><a href="structluat__spi.html#a82fbc8491d32eeabbfcd2a66c2f9f127">luat_spi::bit_dict</a></div><div class="ttdeci">int bit_dict</div><div class="ttdef"><b>定义</b> <a href="#l00015">luat_spi.h:15</a></div></div>
+<div class="ttc" id="astructluat__spi_html_aa3ca591762bace6b4c9952aeeccea89b"><div class="ttname"><a href="structluat__spi.html#aa3ca591762bace6b4c9952aeeccea89b">luat_spi::dataw</a></div><div class="ttdeci">int dataw</div><div class="ttdef"><b>定义</b> <a href="#l00014">luat_spi.h:14</a></div></div>
+<div class="ttc" id="astructluat__spi_html_ad35c7ed2784f4fb57849237ce534f17e"><div class="ttname"><a href="structluat__spi.html#ad35c7ed2784f4fb57849237ce534f17e">luat_spi::cs</a></div><div class="ttdeci">int cs</div><div class="ttdef"><b>定义</b> <a href="#l00019">luat_spi.h:19</a></div></div>
+<div class="ttc" id="astructluat__spi_html_afd9ef7664915ff88c78877a89e51fc12"><div class="ttname"><a href="structluat__spi.html#afd9ef7664915ff88c78877a89e51fc12">luat_spi::bandrate</a></div><div class="ttdeci">int bandrate</div><div class="ttdef"><b>定义</b> <a href="#l00018">luat_spi.h:18</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

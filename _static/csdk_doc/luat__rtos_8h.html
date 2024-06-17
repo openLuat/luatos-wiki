@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: D:/Git_Project/LuatOS/luat/include/luat_rtos.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c84d1918a0c60f03a047973dabe1fbea.html">LuatOS</a></li><li class="navelem"><a class="el" href="dir_58e660e76975d16d5415f5038ac9d3ca.html">luat</a></li><li class="navelem"><a class="el" href="dir_1113cf867ec23ec4b862785c4b5d35b9.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">luat_rtos.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;luat_base.h&quot;</code><br />
+<code>#include &quot;luat_rtos_legacy.h&quot;</code><br />
+</div>
+<p><a href="luat__rtos_8h_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gae1c2bebb1e22845ae34459c404614445" id="r_gae1c2bebb1e22845ae34459c404614445"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="group__luatos__os.html#gaa5ec377c8bc68128d863f5892adcd03b">LUAT_RTOS_WAIT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os.html#gae1c2bebb1e22845ae34459c404614445">LUAT_RTOS_WAIT_E</a></td></tr>
+<tr class="memdesc:gae1c2bebb1e22845ae34459c404614445"><td class="mdescLeft">&#160;</td><td class="mdescRight">LUAT_RTOS 超时时间枚举值  <br /></td></tr>
+<tr class="separator:gae1c2bebb1e22845ae34459c404614445"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafa84b37a02f05aedb082746d79e2cd63" id="r_gafa84b37a02f05aedb082746d79e2cd63"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os___task.html#gafa84b37a02f05aedb082746d79e2cd63">luat_rtos_task_entry</a>) (void *)</td></tr>
+<tr class="memdesc:gafa84b37a02f05aedb082746d79e2cd63"><td class="mdescLeft">&#160;</td><td class="mdescRight">task的入口函数,函数类型  <br /></td></tr>
+<tr class="separator:gafa84b37a02f05aedb082746d79e2cd63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6aba72e4faeb87b022f4ce9e68a6f176" id="r_ga6aba72e4faeb87b022f4ce9e68a6f176"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a></td></tr>
+<tr class="memdesc:ga6aba72e4faeb87b022f4ce9e68a6f176"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义task任务句柄  <br /></td></tr>
+<tr class="separator:ga6aba72e4faeb87b022f4ce9e68a6f176"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade497d1bf73057d58b251dad2c54ce66" id="r_gade497d1bf73057d58b251dad2c54ce66"><td class="memItemLeft" align="right" valign="top">typedef LUAT_RT_RET_TYPE(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__event.html#gade497d1bf73057d58b251dad2c54ce66">luat_rtos_event_wait_callback_t</a>) (LUAT_RT_CB_PARAM)</td></tr>
+<tr class="memdesc:gade497d1bf73057d58b251dad2c54ce66"><td class="mdescLeft">&#160;</td><td class="mdescRight">在等待event中，如果设置了目标event id，而到来的不是目标event id，可以通过回调函数交给用户处理  <br /></td></tr>
+<tr class="separator:gade497d1bf73057d58b251dad2c54ce66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0000ac8d08efe43aff4544f129737b92" id="r_ga0000ac8d08efe43aff4544f129737b92"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__semaphore.html#ga0000ac8d08efe43aff4544f129737b92">luat_rtos_semaphore_t</a></td></tr>
+<tr class="memdesc:ga0000ac8d08efe43aff4544f129737b92"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义信号量句柄  <br /></td></tr>
+<tr class="separator:ga0000ac8d08efe43aff4544f129737b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga37bbc5a3f5ef228be2d34d19d989799c" id="r_ga37bbc5a3f5ef228be2d34d19d989799c"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__mutex.html#ga37bbc5a3f5ef228be2d34d19d989799c">luat_rtos_mutex_t</a></td></tr>
+<tr class="memdesc:ga37bbc5a3f5ef228be2d34d19d989799c"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义mutex句柄  <br /></td></tr>
+<tr class="separator:ga37bbc5a3f5ef228be2d34d19d989799c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf6c651bc7f5879bbfceb1e38ca99c93" id="r_gacf6c651bc7f5879bbfceb1e38ca99c93"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__queue.html#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a></td></tr>
+<tr class="memdesc:gacf6c651bc7f5879bbfceb1e38ca99c93"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义队列句柄  <br /></td></tr>
+<tr class="separator:gacf6c651bc7f5879bbfceb1e38ca99c93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga140974436d94202cf660b8f0ac8fe8e2" id="r_ga140974436d94202cf660b8f0ac8fe8e2"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__flag.html#ga140974436d94202cf660b8f0ac8fe8e2">luat_rtos_flag_t</a></td></tr>
+<tr class="memdesc:ga140974436d94202cf660b8f0ac8fe8e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义事件句柄  <br /></td></tr>
+<tr class="separator:ga140974436d94202cf660b8f0ac8fe8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5e6fb4c944f924580b612e9f1d9baffb" id="r_ga5e6fb4c944f924580b612e9f1d9baffb"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__timer.html#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a></td></tr>
+<tr class="memdesc:ga5e6fb4c944f924580b612e9f1d9baffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">定时器头数据类型  <br /></td></tr>
+<tr class="separator:ga5e6fb4c944f924580b612e9f1d9baffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4656708846615c1813d4ed53ad21b20f" id="r_ga4656708846615c1813d4ed53ad21b20f"><td class="memItemLeft" align="right" valign="top">typedef LUAT_RT_RET_TYPE(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__timer.html#ga4656708846615c1813d4ed53ad21b20f">luat_rtos_timer_callback_t</a>) (LUAT_RT_CB_PARAM)</td></tr>
+<tr class="memdesc:ga4656708846615c1813d4ed53ad21b20f"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义定时器处理函数  <br /></td></tr>
+<tr class="separator:ga4656708846615c1813d4ed53ad21b20f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:gaa5ec377c8bc68128d863f5892adcd03b" id="r_gaa5ec377c8bc68128d863f5892adcd03b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os.html#gaa5ec377c8bc68128d863f5892adcd03b">LUAT_RTOS_WAIT</a> { <a class="el" href="group__luatos__os.html#ggaa5ec377c8bc68128d863f5892adcd03ba97aa306a3b698d87b384c037054d4c06">LUAT_NO_WAIT</a> = 0
+, <a class="el" href="group__luatos__os.html#ggaa5ec377c8bc68128d863f5892adcd03bad4cc28ac9f143f0e46d38ed58a7eeda1">LUAT_WAIT_FOREVER</a> = (uint32_t)0xFFFFFFFF
+ }</td></tr>
+<tr class="memdesc:gaa5ec377c8bc68128d863f5892adcd03b"><td class="mdescLeft">&#160;</td><td class="mdescRight">LUAT_RTOS 超时时间枚举值  <a href="group__luatos__os.html#gaa5ec377c8bc68128d863f5892adcd03b">更多...</a><br /></td></tr>
+<tr class="separator:gaa5ec377c8bc68128d863f5892adcd03b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaafe76c0940c639b08eefbb0c739b4da5" id="r_gaafe76c0940c639b08eefbb0c739b4da5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os.html#gaafe76c0940c639b08eefbb0c739b4da5">LUAT_FLAG_OP_E</a> { <a class="el" href="group__luatos__os.html#ggaafe76c0940c639b08eefbb0c739b4da5ad3fc6917a9e14ec6825b1d17b9044ab0">LUAT_FLAG_AND</a> = 5
+, <a class="el" href="group__luatos__os.html#ggaafe76c0940c639b08eefbb0c739b4da5a4ee82842203f2d32ba0e6d9858ef5dad">LUAT_FLAG_AND_CLEAR</a> = 6
+, <a class="el" href="group__luatos__os.html#ggaafe76c0940c639b08eefbb0c739b4da5a2c608311fc3b4a68ee2adfb0bbb39993">LUAT_FLAG_OR</a> = 7
+, <a class="el" href="group__luatos__os.html#ggaafe76c0940c639b08eefbb0c739b4da5abc371bee0d285a4e2cf95079c25f8544">LUAT_FLAG_OR_CLEAR</a> = 8
+ }</td></tr>
+<tr class="separator:gaafe76c0940c639b08eefbb0c739b4da5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga1c150d136c126720e2f6944212cf6829" id="r_ga1c150d136c126720e2f6944212cf6829"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os___task.html#ga1c150d136c126720e2f6944212cf6829">luat_rtos_task_create</a> (<a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> *task_handle, uint32_t stack_size, uint8_t priority, const char *task_name, <a class="el" href="group__luatos__os___task.html#gafa84b37a02f05aedb082746d79e2cd63">luat_rtos_task_entry</a> task_fun, void *user_data, uint16_t event_cout)</td></tr>
+<tr class="memdesc:ga1c150d136c126720e2f6944212cf6829"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建一个可以带mailbox机制的task，mailbox是message和event的基础，但是和queue无关  <br /></td></tr>
+<tr class="separator:ga1c150d136c126720e2f6944212cf6829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2bf29c6d1737471b479ee78c79401000" id="r_ga2bf29c6d1737471b479ee78c79401000"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os___task.html#ga2bf29c6d1737471b479ee78c79401000">luat_rtos_task_delete</a> (<a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle)</td></tr>
+<tr class="memdesc:ga2bf29c6d1737471b479ee78c79401000"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除task  <br /></td></tr>
+<tr class="separator:ga2bf29c6d1737471b479ee78c79401000"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga143f20b66b708eca3d1da842a59e0ab5" id="r_ga143f20b66b708eca3d1da842a59e0ab5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os___task.html#ga143f20b66b708eca3d1da842a59e0ab5">luat_rtos_task_suspend</a> (<a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle)</td></tr>
+<tr class="memdesc:ga143f20b66b708eca3d1da842a59e0ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">挂起某个task  <br /></td></tr>
+<tr class="separator:ga143f20b66b708eca3d1da842a59e0ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga614cf5a1f3b9f4c349c0551aee132fb1" id="r_ga614cf5a1f3b9f4c349c0551aee132fb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os___task.html#ga614cf5a1f3b9f4c349c0551aee132fb1">luat_rtos_task_resume</a> (<a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle)</td></tr>
+<tr class="memdesc:ga614cf5a1f3b9f4c349c0551aee132fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">恢复挂起的task  <br /></td></tr>
+<tr class="separator:ga614cf5a1f3b9f4c349c0551aee132fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe1eb79720a2e65fa4b13a0c7b14a4d7" id="r_gabe1eb79720a2e65fa4b13a0c7b14a4d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os___task.html#gabe1eb79720a2e65fa4b13a0c7b14a4d7">luat_rtos_task_suspend_all</a> (void)</td></tr>
+<tr class="memdesc:gabe1eb79720a2e65fa4b13a0c7b14a4d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">挂起全部task  <br /></td></tr>
+<tr class="separator:gabe1eb79720a2e65fa4b13a0c7b14a4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24569105431ce04088e50dfa570177d2" id="r_ga24569105431ce04088e50dfa570177d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os___task.html#ga24569105431ce04088e50dfa570177d2">luat_rtos_task_resume_all</a> (void)</td></tr>
+<tr class="memdesc:ga24569105431ce04088e50dfa570177d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">恢复全部task  <br /></td></tr>
+<tr class="separator:ga24569105431ce04088e50dfa570177d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf05c24b326d9eeb83f4698ab19ad744" id="r_gabf05c24b326d9eeb83f4698ab19ad744"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os___task.html#gabf05c24b326d9eeb83f4698ab19ad744">luat_rtos_task_sleep</a> (uint32_t ms)</td></tr>
+<tr class="memdesc:gabf05c24b326d9eeb83f4698ab19ad744"><td class="mdescLeft">&#160;</td><td class="mdescRight">task休眠一段时间  <br /></td></tr>
+<tr class="separator:gabf05c24b326d9eeb83f4698ab19ad744"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad6640564f4c6dd7f5b7c9abab38a0843" id="r_gad6640564f4c6dd7f5b7c9abab38a0843"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os___task.html#gad6640564f4c6dd7f5b7c9abab38a0843">luat_rtos_get_current_handle</a> (void)</td></tr>
+<tr class="memdesc:gad6640564f4c6dd7f5b7c9abab38a0843"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前task的句柄  <br /></td></tr>
+<tr class="separator:gad6640564f4c6dd7f5b7c9abab38a0843"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5dd49929adbab031665c9143d10a14aa" id="r_ga5dd49929adbab031665c9143d10a14aa"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os___task.html#ga5dd49929adbab031665c9143d10a14aa">luat_rtos_task_get_high_water_mark</a> (<a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle)</td></tr>
+<tr class="memdesc:ga5dd49929adbab031665c9143d10a14aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取task堆栈剩余的最小值，叫做“高水位线”  <br /></td></tr>
+<tr class="separator:ga5dd49929adbab031665c9143d10a14aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga707538d4ee5e8d77c89e0c3f99b2516d" id="r_ga707538d4ee5e8d77c89e0c3f99b2516d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os___task.html#ga707538d4ee5e8d77c89e0c3f99b2516d">luat_rtos_task_run_time_record_enable</a> (void)</td></tr>
+<tr class="memdesc:ga707538d4ee5e8d77c89e0c3f99b2516d"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动task运行时间记录功能，必须在task调度前启用  <br /></td></tr>
+<tr class="separator:ga707538d4ee5e8d77c89e0c3f99b2516d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga67fd4f74307f1182d06c53f4e43c2f6a" id="r_ga67fd4f74307f1182d06c53f4e43c2f6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os___task.html#ga67fd4f74307f1182d06c53f4e43c2f6a">luat_rtos_task_run_time_record_print</a> (uint8_t print_ticks)</td></tr>
+<tr class="memdesc:ga67fd4f74307f1182d06c53f4e43c2f6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">打印所有task运行时间和占用百分比  <br /></td></tr>
+<tr class="separator:ga67fd4f74307f1182d06c53f4e43c2f6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga993c050d62c433f4d277fe4c5c3c6b5e" id="r_ga993c050d62c433f4d277fe4c5c3c6b5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__event.html#ga993c050d62c433f4d277fe4c5c3c6b5e">luat_rtos_event_send</a> (<a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle, uint32_t id, uint32_t param1, uint32_t param2, uint32_t param3, uint32_t timeout)</td></tr>
+<tr class="memdesc:ga993c050d62c433f4d277fe4c5c3c6b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送一个event给task的mailbox，只有设置了mailbox启用的task能接收，如果缓存了超过1024个event会断言  <br /></td></tr>
+<tr class="separator:ga993c050d62c433f4d277fe4c5c3c6b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1b2312c1227ff3f04a7aafc40c7f46c1" id="r_ga1b2312c1227ff3f04a7aafc40c7f46c1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__event.html#ga1b2312c1227ff3f04a7aafc40c7f46c1">luat_rtos_event_recv</a> (<a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle, uint32_t wait_event_id, luat_event_t *out_event, <a class="el" href="group__luatos__os__event.html#gade497d1bf73057d58b251dad2c54ce66">luat_rtos_event_wait_callback_t</a> *callback_fun, uint32_t timeout)</td></tr>
+<tr class="memdesc:ga1b2312c1227ff3f04a7aafc40c7f46c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收一个event，只能在task里接收  <br /></td></tr>
+<tr class="separator:ga1b2312c1227ff3f04a7aafc40c7f46c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga146b6635feea75406d0af2a43bcd6b04" id="r_ga146b6635feea75406d0af2a43bcd6b04"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__event.html#ga146b6635feea75406d0af2a43bcd6b04">luat_rtos_message_send</a> (<a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle, uint32_t message_id, void *p_message)</td></tr>
+<tr class="memdesc:ga146b6635feea75406d0af2a43bcd6b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送一个message给task的mailbox，只有设置了mailbox启用的task能接收，message可以动态创建的，可以任意大小，如果缓存了超过1024个message会断言  <br /></td></tr>
+<tr class="separator:ga146b6635feea75406d0af2a43bcd6b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad48272e2d0cdfc077e60169547a40902" id="r_gad48272e2d0cdfc077e60169547a40902"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__event.html#gad48272e2d0cdfc077e60169547a40902">luat_rtos_message_recv</a> (<a class="el" href="group__luatos__os___task.html#ga6aba72e4faeb87b022f4ce9e68a6f176">luat_rtos_task_handle</a> task_handle, uint32_t *message_id, void **p_p_message, uint32_t timeout)</td></tr>
+<tr class="memdesc:gad48272e2d0cdfc077e60169547a40902"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收一个message，只能在task里接收  <br /></td></tr>
+<tr class="separator:gad48272e2d0cdfc077e60169547a40902"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab45ee275e30e8c91d091b436db33460f" id="r_gab45ee275e30e8c91d091b436db33460f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__semaphore.html#gab45ee275e30e8c91d091b436db33460f">luat_rtos_semaphore_create</a> (<a class="el" href="group__luatos__os__semaphore.html#ga0000ac8d08efe43aff4544f129737b92">luat_rtos_semaphore_t</a> *semaphore_handle, uint32_t init_count)</td></tr>
+<tr class="memdesc:gab45ee275e30e8c91d091b436db33460f"><td class="mdescLeft">&#160;</td><td class="mdescRight">信号量创建，可以在中断中release  <br /></td></tr>
+<tr class="separator:gab45ee275e30e8c91d091b436db33460f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5436f8020bd7bd79418c5ad017cc722a" id="r_ga5436f8020bd7bd79418c5ad017cc722a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__semaphore.html#ga5436f8020bd7bd79418c5ad017cc722a">luat_rtos_semaphore_delete</a> (<a class="el" href="group__luatos__os__semaphore.html#ga0000ac8d08efe43aff4544f129737b92">luat_rtos_semaphore_t</a> semaphore_handle)</td></tr>
+<tr class="memdesc:ga5436f8020bd7bd79418c5ad017cc722a"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除信号量  <br /></td></tr>
+<tr class="separator:ga5436f8020bd7bd79418c5ad017cc722a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8bc07dc3a35c2855fd598f6ed8294125" id="r_ga8bc07dc3a35c2855fd598f6ed8294125"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__semaphore.html#ga8bc07dc3a35c2855fd598f6ed8294125">luat_rtos_semaphore_take</a> (<a class="el" href="group__luatos__os__semaphore.html#ga0000ac8d08efe43aff4544f129737b92">luat_rtos_semaphore_t</a> semaphore_handle, uint32_t timeout)</td></tr>
+<tr class="memdesc:ga8bc07dc3a35c2855fd598f6ed8294125"><td class="mdescLeft">&#160;</td><td class="mdescRight">信号量等待获取  <br /></td></tr>
+<tr class="separator:ga8bc07dc3a35c2855fd598f6ed8294125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac5918f19131f3c4cbd55458b7d499068" id="r_gac5918f19131f3c4cbd55458b7d499068"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__semaphore.html#gac5918f19131f3c4cbd55458b7d499068">luat_rtos_semaphore_release</a> (<a class="el" href="group__luatos__os__semaphore.html#ga0000ac8d08efe43aff4544f129737b92">luat_rtos_semaphore_t</a> semaphore_handle)</td></tr>
+<tr class="memdesc:gac5918f19131f3c4cbd55458b7d499068"><td class="mdescLeft">&#160;</td><td class="mdescRight">信号量释放发送  <br /></td></tr>
+<tr class="separator:gac5918f19131f3c4cbd55458b7d499068"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga213b06ff85320e2ec7b3e9034455a618" id="r_ga213b06ff85320e2ec7b3e9034455a618"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__mutex.html#ga213b06ff85320e2ec7b3e9034455a618">luat_rtos_mutex_create</a> (<a class="el" href="group__luatos__os__mutex.html#ga37bbc5a3f5ef228be2d34d19d989799c">luat_rtos_mutex_t</a> *mutex_handle)</td></tr>
+<tr class="memdesc:ga213b06ff85320e2ec7b3e9034455a618"><td class="mdescLeft">&#160;</td><td class="mdescRight">互斥锁创建，不能在中断中unlock  <br /></td></tr>
+<tr class="separator:ga213b06ff85320e2ec7b3e9034455a618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2a70abf01d1f3a211108d48e930ae4a1" id="r_ga2a70abf01d1f3a211108d48e930ae4a1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__mutex.html#ga2a70abf01d1f3a211108d48e930ae4a1">luat_rtos_mutex_lock</a> (<a class="el" href="group__luatos__os__mutex.html#ga37bbc5a3f5ef228be2d34d19d989799c">luat_rtos_mutex_t</a> mutex_handle, uint32_t timeout)</td></tr>
+<tr class="memdesc:ga2a70abf01d1f3a211108d48e930ae4a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">获得锁  <br /></td></tr>
+<tr class="separator:ga2a70abf01d1f3a211108d48e930ae4a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae70b7e3fe75a8fe826376d27fadb3356" id="r_gae70b7e3fe75a8fe826376d27fadb3356"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__mutex.html#gae70b7e3fe75a8fe826376d27fadb3356">luat_rtos_mutex_unlock</a> (<a class="el" href="group__luatos__os__mutex.html#ga37bbc5a3f5ef228be2d34d19d989799c">luat_rtos_mutex_t</a> mutex_handle)</td></tr>
+<tr class="memdesc:gae70b7e3fe75a8fe826376d27fadb3356"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放锁  <br /></td></tr>
+<tr class="separator:gae70b7e3fe75a8fe826376d27fadb3356"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4445b82ae091f9fb82a71ee1a04c5584" id="r_ga4445b82ae091f9fb82a71ee1a04c5584"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__mutex.html#ga4445b82ae091f9fb82a71ee1a04c5584">luat_rtos_mutex_delete</a> (<a class="el" href="group__luatos__os__mutex.html#ga37bbc5a3f5ef228be2d34d19d989799c">luat_rtos_mutex_t</a> mutex_handle)</td></tr>
+<tr class="memdesc:ga4445b82ae091f9fb82a71ee1a04c5584"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除互斥锁  <br /></td></tr>
+<tr class="separator:ga4445b82ae091f9fb82a71ee1a04c5584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7cd54683e9edae87464ef0a1f1506fcb" id="r_ga7cd54683e9edae87464ef0a1f1506fcb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__queue.html#ga7cd54683e9edae87464ef0a1f1506fcb">luat_rtos_queue_create</a> (<a class="el" href="group__luatos__os__queue.html#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a> *queue_handle, uint32_t item_count, uint32_t item_size)</td></tr>
+<tr class="memdesc:ga7cd54683e9edae87464ef0a1f1506fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建队列  <br /></td></tr>
+<tr class="separator:ga7cd54683e9edae87464ef0a1f1506fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7d036537196d0eacac8c3d97b88463ff" id="r_ga7d036537196d0eacac8c3d97b88463ff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__queue.html#ga7d036537196d0eacac8c3d97b88463ff">luat_rtos_queue_delete</a> (<a class="el" href="group__luatos__os__queue.html#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a> queue_handle)</td></tr>
+<tr class="memdesc:ga7d036537196d0eacac8c3d97b88463ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除队列  <br /></td></tr>
+<tr class="separator:ga7d036537196d0eacac8c3d97b88463ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga018b0cb453ce14011212119655efe6cf" id="r_ga018b0cb453ce14011212119655efe6cf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__queue.html#ga018b0cb453ce14011212119655efe6cf">luat_rtos_queue_send</a> (<a class="el" href="group__luatos__os__queue.html#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a> queue_handle, void *item, uint32_t item_size, uint32_t timeout)</td></tr>
+<tr class="memdesc:ga018b0cb453ce14011212119655efe6cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">往队列里发送一个元素  <br /></td></tr>
+<tr class="separator:ga018b0cb453ce14011212119655efe6cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad116e03a162e6dc7af165b72c5bbecb9" id="r_gad116e03a162e6dc7af165b72c5bbecb9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__queue.html#gad116e03a162e6dc7af165b72c5bbecb9">luat_rtos_queue_recv</a> (<a class="el" href="group__luatos__os__queue.html#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a> queue_handle, void *item, uint32_t item_size, uint32_t timeout)</td></tr>
+<tr class="memdesc:gad116e03a162e6dc7af165b72c5bbecb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">从队列里取出一个元素  <br /></td></tr>
+<tr class="separator:gad116e03a162e6dc7af165b72c5bbecb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1e456ae2bbf2a40e0f5aa5db4bedeb2" id="r_gaf1e456ae2bbf2a40e0f5aa5db4bedeb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__queue.html#gaf1e456ae2bbf2a40e0f5aa5db4bedeb2">luat_rtos_queue_get_cnt</a> (<a class="el" href="group__luatos__os__queue.html#gacf6c651bc7f5879bbfceb1e38ca99c93">luat_rtos_queue_t</a> queue_handle, uint32_t *item_cnt)</td></tr>
+<tr class="memdesc:gaf1e456ae2bbf2a40e0f5aa5db4bedeb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">查询队列中剩余未处理的元素数量  <br /></td></tr>
+<tr class="separator:gaf1e456ae2bbf2a40e0f5aa5db4bedeb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga093b366365219c797532bdb36cea4ab8" id="r_ga093b366365219c797532bdb36cea4ab8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__flag.html#ga093b366365219c797532bdb36cea4ab8">luat_rtos_flag_create</a> (<a class="el" href="group__luatos__os__flag.html#ga140974436d94202cf660b8f0ac8fe8e2">luat_rtos_flag_t</a> *flag_handle)</td></tr>
+<tr class="memdesc:ga093b366365219c797532bdb36cea4ab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建事件  <br /></td></tr>
+<tr class="separator:ga093b366365219c797532bdb36cea4ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2910bc751124761eb03821a399191552" id="r_ga2910bc751124761eb03821a399191552"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__flag.html#ga2910bc751124761eb03821a399191552">luat_rtos_flag_wait</a> (<a class="el" href="group__luatos__os__flag.html#ga140974436d94202cf660b8f0ac8fe8e2">luat_rtos_flag_t</a> flag_handle, uint32_t mask, <a class="el" href="group__luatos__os.html#gaafe76c0940c639b08eefbb0c739b4da5">LUAT_FLAG_OP_E</a> operation, uint32_t *flags, uint32_t timeout)</td></tr>
+<tr class="memdesc:ga2910bc751124761eb03821a399191552"><td class="mdescLeft">&#160;</td><td class="mdescRight">等待事件  <br /></td></tr>
+<tr class="separator:ga2910bc751124761eb03821a399191552"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa67c7f8b912d8e8db8839a038f7b191d" id="r_gaa67c7f8b912d8e8db8839a038f7b191d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__flag.html#gaa67c7f8b912d8e8db8839a038f7b191d">luat_rtos_flag_release</a> (<a class="el" href="group__luatos__os__flag.html#ga140974436d94202cf660b8f0ac8fe8e2">luat_rtos_flag_t</a> flag_handle, uint32_t mask, <a class="el" href="group__luatos__os.html#gaafe76c0940c639b08eefbb0c739b4da5">LUAT_FLAG_OP_E</a> operation)</td></tr>
+<tr class="memdesc:gaa67c7f8b912d8e8db8839a038f7b191d"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置事件  <br /></td></tr>
+<tr class="separator:gaa67c7f8b912d8e8db8839a038f7b191d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4753efba48379432272bd5e6d2147bfe" id="r_ga4753efba48379432272bd5e6d2147bfe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__flag.html#ga4753efba48379432272bd5e6d2147bfe">luat_rtos_flag_delete</a> (<a class="el" href="group__luatos__os__flag.html#ga140974436d94202cf660b8f0ac8fe8e2">luat_rtos_flag_t</a> flag_handle)</td></tr>
+<tr class="memdesc:ga4753efba48379432272bd5e6d2147bfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除事件  <br /></td></tr>
+<tr class="separator:ga4753efba48379432272bd5e6d2147bfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga17d433fef157186c816e9b5eb41ecc9f" id="r_ga17d433fef157186c816e9b5eb41ecc9f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__timer.html#ga17d433fef157186c816e9b5eb41ecc9f">luat_rtos_timer_create</a> (<a class="el" href="group__luatos__os__timer.html#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a> *timer_handle)</td></tr>
+<tr class="memdesc:ga17d433fef157186c816e9b5eb41ecc9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建软件定时器  <br /></td></tr>
+<tr class="separator:ga17d433fef157186c816e9b5eb41ecc9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb6d96500537d806a77686bb0b7ba63b" id="r_gacb6d96500537d806a77686bb0b7ba63b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__timer.html#gacb6d96500537d806a77686bb0b7ba63b">luat_rtos_timer_delete</a> (<a class="el" href="group__luatos__os__timer.html#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a> timer_handle)</td></tr>
+<tr class="memdesc:gacb6d96500537d806a77686bb0b7ba63b"><td class="mdescLeft">&#160;</td><td class="mdescRight">删除软件定时器  <br /></td></tr>
+<tr class="separator:gacb6d96500537d806a77686bb0b7ba63b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace36a9b9d3c21d9f9aa9b3f506b1e7e3" id="r_gace36a9b9d3c21d9f9aa9b3f506b1e7e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__timer.html#gace36a9b9d3c21d9f9aa9b3f506b1e7e3">luat_rtos_timer_start</a> (<a class="el" href="group__luatos__os__timer.html#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a> timer_handle, uint32_t timeout, uint8_t repeat, <a class="el" href="group__luatos__os__timer.html#ga4656708846615c1813d4ed53ad21b20f">luat_rtos_timer_callback_t</a> callback_fun, void *user_param)</td></tr>
+<tr class="memdesc:gace36a9b9d3c21d9f9aa9b3f506b1e7e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动软件定时器  <br /></td></tr>
+<tr class="separator:gace36a9b9d3c21d9f9aa9b3f506b1e7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29d233c3585ff83187c217775c1d9560" id="r_ga29d233c3585ff83187c217775c1d9560"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__timer.html#ga29d233c3585ff83187c217775c1d9560">luat_rtos_timer_stop</a> (<a class="el" href="group__luatos__os__timer.html#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a> timer_handle)</td></tr>
+<tr class="memdesc:ga29d233c3585ff83187c217775c1d9560"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止软件定时器  <br /></td></tr>
+<tr class="separator:ga29d233c3585ff83187c217775c1d9560"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f88cde281ef1efbd9d7bb7f45aa113a" id="r_ga9f88cde281ef1efbd9d7bb7f45aa113a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__timer.html#ga9f88cde281ef1efbd9d7bb7f45aa113a">luat_rtos_timer_is_active</a> (<a class="el" href="group__luatos__os__timer.html#ga5e6fb4c944f924580b612e9f1d9baffb">luat_rtos_timer_t</a> timer_handle)</td></tr>
+<tr class="memdesc:ga9f88cde281ef1efbd9d7bb7f45aa113a"><td class="mdescLeft">&#160;</td><td class="mdescRight">检测软件定时器是否处于激活状态  <br /></td></tr>
+<tr class="separator:ga9f88cde281ef1efbd9d7bb7f45aa113a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b827086e16ede71582241f648d4f732" id="r_ga7b827086e16ede71582241f648d4f732"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__critical.html#ga7b827086e16ede71582241f648d4f732">luat_rtos_entry_critical</a> (void)</td></tr>
+<tr class="memdesc:ga7b827086e16ede71582241f648d4f732"><td class="mdescLeft">&#160;</td><td class="mdescRight">进入临界保护  <br /></td></tr>
+<tr class="separator:ga7b827086e16ede71582241f648d4f732"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac11d3495d8faa42b315d954dd9df0fd9" id="r_gac11d3495d8faa42b315d954dd9df0fd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__critical.html#gac11d3495d8faa42b315d954dd9df0fd9">luat_rtos_exit_critical</a> (uint32_t critical)</td></tr>
+<tr class="memdesc:gac11d3495d8faa42b315d954dd9df0fd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">退出临界保护  <br /></td></tr>
+<tr class="separator:gac11d3495d8faa42b315d954dd9df0fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga830a3187bbdf75495f24036226df16f3" id="r_ga830a3187bbdf75495f24036226df16f3"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos__os__critical.html#ga830a3187bbdf75495f24036226df16f3">luat_rtos_get_ipsr</a> (void)</td></tr>
+<tr class="memdesc:ga830a3187bbdf75495f24036226df16f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取是否为中断  <br /></td></tr>
+<tr class="separator:ga830a3187bbdf75495f24036226df16f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

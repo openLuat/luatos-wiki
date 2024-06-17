@@ -1,0 +1,450 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: luat_mqtt_ctrl_t结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="topics.html"><span>专题</span></a></li>
+      <li class="current"><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="classes.html"><span>结构体索引</span></a></li>
+      <li><a href="functions.html"><span>成员变量</span></a></li>
+    </ul>
+  </div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">成员变量</a>  </div>
+  <div class="headertitle"><div class="title">luat_mqtt_ctrl_t结构体 参考<div class="ingroups"><a class="el" href="group__luatos___m_q_t_t.html">MQTT相关接口</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>设置MQTT客户端的配置参数  
+ <a href="#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+成员变量</h2></td></tr>
+<tr class="memitem:a54a10fc6a92ee6fb22a14ca194c45253" id="r_a54a10fc6a92ee6fb22a14ca194c45253"><td class="memItemLeft" align="right" valign="top">mqtt_broker_handle_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54a10fc6a92ee6fb22a14ca194c45253">broker</a></td></tr>
+<tr class="separator:a54a10fc6a92ee6fb22a14ca194c45253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a1f0a999dc267e4be8b0bb2b7dfc05d" id="r_a8a1f0a999dc267e4be8b0bb2b7dfc05d"><td class="memItemLeft" align="right" valign="top">network_ctrl_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8a1f0a999dc267e4be8b0bb2b7dfc05d">netc</a></td></tr>
+<tr class="separator:a8a1f0a999dc267e4be8b0bb2b7dfc05d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a452b8e922d725810c373c8fa888d446c" id="r_a452b8e922d725810c373c8fa888d446c"><td class="memItemLeft" align="right" valign="top">luat_ip_addr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a452b8e922d725810c373c8fa888d446c">ip_addr</a></td></tr>
+<tr class="separator:a452b8e922d725810c373c8fa888d446c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd57ef4f789daf59ba1e816fa4629b07" id="r_acd57ef4f789daf59ba1e816fa4629b07"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd57ef4f789daf59ba1e816fa4629b07">host</a> [192]</td></tr>
+<tr class="separator:acd57ef4f789daf59ba1e816fa4629b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a142fa22642f8476dd064a014504dba4c" id="r_a142fa22642f8476dd064a014504dba4c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a142fa22642f8476dd064a014504dba4c">buffer_offset</a></td></tr>
+<tr class="separator:a142fa22642f8476dd064a014504dba4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae02fcea8c978fa71f330eb90c914a36" id="r_aae02fcea8c978fa71f330eb90c914a36"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae02fcea8c978fa71f330eb90c914a36">rxbuff_size</a></td></tr>
+<tr class="separator:aae02fcea8c978fa71f330eb90c914a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ffc2732ddfefea40e348c649807e43f" id="r_a7ffc2732ddfefea40e348c649807e43f"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7ffc2732ddfefea40e348c649807e43f">mqtt_packet_buffer</a></td></tr>
+<tr class="separator:a7ffc2732ddfefea40e348c649807e43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add3c9e77c97aaf0d4fc4ed0e309dcbf2" id="r_add3c9e77c97aaf0d4fc4ed0e309dcbf2"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#add3c9e77c97aaf0d4fc4ed0e309dcbf2">mqtt_cb</a></td></tr>
+<tr class="separator:add3c9e77c97aaf0d4fc4ed0e309dcbf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeecdb777d01db4cd9c555e636bd6e6ce" id="r_aeecdb777d01db4cd9c555e636bd6e6ce"><td class="memItemLeft" align="right" valign="top">int8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeecdb777d01db4cd9c555e636bd6e6ce">error_state</a></td></tr>
+<tr class="separator:aeecdb777d01db4cd9c555e636bd6e6ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78f55417df3c5a6ab11ece9f724e595e" id="r_a78f55417df3c5a6ab11ece9f724e595e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78f55417df3c5a6ab11ece9f724e595e">remote_port</a></td></tr>
+<tr class="separator:a78f55417df3c5a6ab11ece9f724e595e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad95867633821ba629487d16e630e2fd6" id="r_ad95867633821ba629487d16e630e2fd6"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad95867633821ba629487d16e630e2fd6">keepalive</a></td></tr>
+<tr class="separator:ad95867633821ba629487d16e630e2fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9b2ca667ddfbec9e812c1e09f76727c" id="r_ac9b2ca667ddfbec9e812c1e09f76727c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9b2ca667ddfbec9e812c1e09f76727c">adapter_index</a></td></tr>
+<tr class="separator:ac9b2ca667ddfbec9e812c1e09f76727c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04a42450db1b1d0f392248610edab348" id="r_a04a42450db1b1d0f392248610edab348"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__luatos___m_q_t_t.html#ga9c461bddcfaf176a4c2543b4b4a75297">LUAT_MQTT_STATE_E</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04a42450db1b1d0f392248610edab348">mqtt_state</a></td></tr>
+<tr class="separator:a04a42450db1b1d0f392248610edab348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acad3db565323083ce992c95b55a8463d" id="r_acad3db565323083ce992c95b55a8463d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acad3db565323083ce992c95b55a8463d">reconnect</a></td></tr>
+<tr class="separator:acad3db565323083ce992c95b55a8463d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86fc6cc61a3410038ac01f0a56b58770" id="r_a86fc6cc61a3410038ac01f0a56b58770"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86fc6cc61a3410038ac01f0a56b58770">reconnect_time</a></td></tr>
+<tr class="separator:a86fc6cc61a3410038ac01f0a56b58770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44598a34d7262b60da2bf168785aa8ed" id="r_a44598a34d7262b60da2bf168785aa8ed"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44598a34d7262b60da2bf168785aa8ed">reconnect_timer</a></td></tr>
+<tr class="separator:a44598a34d7262b60da2bf168785aa8ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1043ea9e37a48a2a6b91775ac13aecba" id="r_a1043ea9e37a48a2a6b91775ac13aecba"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1043ea9e37a48a2a6b91775ac13aecba">ping_timer</a></td></tr>
+<tr class="separator:a1043ea9e37a48a2a6b91775ac13aecba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d8feca9d99aee95222543c532285e8" id="r_ae3d8feca9d99aee95222543c532285e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3d8feca9d99aee95222543c532285e8">mqtt_ref</a></td></tr>
+<tr class="separator:ae3d8feca9d99aee95222543c532285e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd0ffb02780e738d4c0a10ab833b7834" id="r_afd0ffb02780e738d4c0a10ab833b7834"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd0ffb02780e738d4c0a10ab833b7834">userdata</a></td></tr>
+<tr class="separator:afd0ffb02780e738d4c0a10ab833b7834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>设置MQTT客户端的配置参数 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00038">38</a> 行定义.</p>
+</div><h2 class="groupheader">结构体成员变量说明</h2>
+<a id="ac9b2ca667ddfbec9e812c1e09f76727c" name="ac9b2ca667ddfbec9e812c1e09f76727c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9b2ca667ddfbec9e812c1e09f76727c">&#9670;&#160;</a></span>adapter_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t adapter_index</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>适配器索引号, 似乎并没有什么用 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00050">50</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a54a10fc6a92ee6fb22a14ca194c45253" name="a54a10fc6a92ee6fb22a14ca194c45253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a10fc6a92ee6fb22a14ca194c45253">&#9670;&#160;</a></span>broker</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">mqtt_broker_handle_t broker</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mqtt broker </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00039">39</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a142fa22642f8476dd064a014504dba4c" name="a142fa22642f8476dd064a014504dba4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a142fa22642f8476dd064a014504dba4c">&#9670;&#160;</a></span>buffer_offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t buffer_offset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>用于标识mqtt_packet_buffer当前有多少数据 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00043">43</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aeecdb777d01db4cd9c555e636bd6e6ce" name="aeecdb777d01db4cd9c555e636bd6e6ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeecdb777d01db4cd9c555e636bd6e6ce">&#9670;&#160;</a></span>error_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int8_t error_state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mqtt 错误状态 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00047">47</a> 行定义.</p>
+
+</div>
+</div>
+<a id="acd57ef4f789daf59ba1e816fa4629b07" name="acd57ef4f789daf59ba1e816fa4629b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd57ef4f789daf59ba1e816fa4629b07">&#9670;&#160;</a></span>host</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char host[192]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mqtt host </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00042">42</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a452b8e922d725810c373c8fa888d446c" name="a452b8e922d725810c373c8fa888d446c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a452b8e922d725810c373c8fa888d446c">&#9670;&#160;</a></span>ip_addr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">luat_ip_addr_t ip_addr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mqtt ip </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00041">41</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad95867633821ba629487d16e630e2fd6" name="ad95867633821ba629487d16e630e2fd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95867633821ba629487d16e630e2fd6">&#9670;&#160;</a></span>keepalive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t keepalive</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>心跳时长 单位s </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00049">49</a> 行定义.</p>
+
+</div>
+</div>
+<a id="add3c9e77c97aaf0d4fc4ed0e309dcbf2" name="add3c9e77c97aaf0d4fc4ed0e309dcbf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add3c9e77c97aaf0d4fc4ed0e309dcbf2">&#9670;&#160;</a></span>mqtt_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* mqtt_cb</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mqtt 回调函数 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00046">46</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a7ffc2732ddfefea40e348c649807e43f" name="a7ffc2732ddfefea40e348c649807e43f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ffc2732ddfefea40e348c649807e43f">&#9670;&#160;</a></span>mqtt_packet_buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t* mqtt_packet_buffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>接收BUFF </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00045">45</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae3d8feca9d99aee95222543c532285e8" name="ae3d8feca9d99aee95222543c532285e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3d8feca9d99aee95222543c532285e8">&#9670;&#160;</a></span>mqtt_ref</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int mqtt_ref</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>强制引用自身避免被GC </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00056">56</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a04a42450db1b1d0f392248610edab348" name="a04a42450db1b1d0f392248610edab348"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04a42450db1b1d0f392248610edab348">&#9670;&#160;</a></span>mqtt_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__luatos___m_q_t_t.html#ga9c461bddcfaf176a4c2543b4b4a75297">LUAT_MQTT_STATE_E</a> mqtt_state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mqtt状态 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00051">51</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8a1f0a999dc267e4be8b0bb2b7dfc05d" name="a8a1f0a999dc267e4be8b0bb2b7dfc05d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a1f0a999dc267e4be8b0bb2b7dfc05d">&#9670;&#160;</a></span>netc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">network_ctrl_t* netc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mqtt netc </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00040">40</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1043ea9e37a48a2a6b91775ac13aecba" name="a1043ea9e37a48a2a6b91775ac13aecba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1043ea9e37a48a2a6b91775ac13aecba">&#9670;&#160;</a></span>ping_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* ping_timer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mqtt_ping定时器 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00055">55</a> 行定义.</p>
+
+</div>
+</div>
+<a id="acad3db565323083ce992c95b55a8463d" name="acad3db565323083ce992c95b55a8463d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acad3db565323083ce992c95b55a8463d">&#9670;&#160;</a></span>reconnect</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t reconnect</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mqtt是否重连 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a86fc6cc61a3410038ac01f0a56b58770" name="a86fc6cc61a3410038ac01f0a56b58770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86fc6cc61a3410038ac01f0a56b58770">&#9670;&#160;</a></span>reconnect_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t reconnect_time</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mqtt重连时间 单位ms </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00053">53</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a44598a34d7262b60da2bf168785aa8ed" name="a44598a34d7262b60da2bf168785aa8ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44598a34d7262b60da2bf168785aa8ed">&#9670;&#160;</a></span>reconnect_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* reconnect_timer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mqtt重连定时器 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00054">54</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a78f55417df3c5a6ab11ece9f724e595e" name="a78f55417df3c5a6ab11ece9f724e595e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78f55417df3c5a6ab11ece9f724e595e">&#9670;&#160;</a></span>remote_port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t remote_port</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>远程端口号 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00048">48</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aae02fcea8c978fa71f330eb90c914a36" name="aae02fcea8c978fa71f330eb90c914a36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae02fcea8c978fa71f330eb90c914a36">&#9670;&#160;</a></span>rxbuff_size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t rxbuff_size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>mqtt_packet_buffer的长度 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00044">44</a> 行定义.</p>
+
+</div>
+</div>
+<a id="afd0ffb02780e738d4c0a10ab833b7834" name="afd0ffb02780e738d4c0a10ab833b7834"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd0ffb02780e738d4c0a10ab833b7834">&#9670;&#160;</a></span>userdata</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* userdata</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>userdata </p>
+
+<p class="definition">在文件 <a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a> 第 <a class="el" href="luat__mqtt_8h_source.html#l00057">57</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>D:/Git_Project/LuatOS/components/network/libemqtt/<a class="el" href="luat__mqtt_8h_source.html">luat_mqtt.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

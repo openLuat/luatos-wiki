@@ -1,0 +1,958 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: 电源管理类（低功耗）</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">电源管理类（低功耗）</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga681a13238bbb34aef330f190f7277ed6" id="r_ga681a13238bbb34aef330f190f7277ed6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga681a13238bbb34aef330f190f7277ed6">LUAT_PM_SLEEP_MODE_NONE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga681a13238bbb34aef330f190f7277ed6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8c745bfb0ed6a98b1b78fc414888b577" id="r_ga8c745bfb0ed6a98b1b78fc414888b577"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga8c745bfb0ed6a98b1b78fc414888b577">LUAT_PM_SLEEP_MODE_IDLE</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga8c745bfb0ed6a98b1b78fc414888b577"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa73f938b5e14bf928838b9ccb4344f20" id="r_gaa73f938b5e14bf928838b9ccb4344f20"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa73f938b5e14bf928838b9ccb4344f20">LUAT_PM_SLEEP_MODE_LIGHT</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:gaa73f938b5e14bf928838b9ccb4344f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga46ffeb0e165ba2f17503e527842966aa" id="r_ga46ffeb0e165ba2f17503e527842966aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga46ffeb0e165ba2f17503e527842966aa">LUAT_PM_SLEEP_MODE_DEEP</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:ga46ffeb0e165ba2f17503e527842966aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2b8ac4b65897127ee40f52236bfb469a" id="r_ga2b8ac4b65897127ee40f52236bfb469a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2b8ac4b65897127ee40f52236bfb469a">LUAT_PM_SLEEP_MODE_STANDBY</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:ga2b8ac4b65897127ee40f52236bfb469a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0e7f6aac5d28228866210df2b6f2cf3a" id="r_ga0e7f6aac5d28228866210df2b6f2cf3a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0e7f6aac5d28228866210df2b6f2cf3a">LUAT_PM_POWER_MODE_NORMAL</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="memdesc:ga0e7f6aac5d28228866210df2b6f2cf3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">去除所有降低功耗的措施  <br /></td></tr>
+<tr class="separator:ga0e7f6aac5d28228866210df2b6f2cf3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe024949dcad537672c05d5d9c78dace" id="r_gafe024949dcad537672c05d5d9c78dace"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gafe024949dcad537672c05d5d9c78dace">LUAT_PM_POWER_MODE_HIGH_PERFORMANCE</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="memdesc:gafe024949dcad537672c05d5d9c78dace"><td class="mdescLeft">&#160;</td><td class="mdescRight">尽可能保持性能，兼顾低功耗，使用LUAT_PM_SLEEP_MODE_LIGHT  <br /></td></tr>
+<tr class="separator:gafe024949dcad537672c05d5d9c78dace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf44e035e4959eabbc8c8beb3137d04b9" id="r_gaf44e035e4959eabbc8c8beb3137d04b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf44e035e4959eabbc8c8beb3137d04b9">LUAT_PM_POWER_MODE_BALANCED</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="memdesc:gaf44e035e4959eabbc8c8beb3137d04b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">性能和功耗平衡，使用LUAT_PM_SLEEP_MODE_LIGHT  <br /></td></tr>
+<tr class="separator:gaf44e035e4959eabbc8c8beb3137d04b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf03241e442fc2c0f1c7058ec66306cb9" id="r_gaf03241e442fc2c0f1c7058ec66306cb9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf03241e442fc2c0f1c7058ec66306cb9">LUAT_PM_POWER_MODE_POWER_SAVER</a>&#160;&#160;&#160;(3)</td></tr>
+<tr class="memdesc:gaf03241e442fc2c0f1c7058ec66306cb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">超低功耗，使用LUAT_PM_SLEEP_MODE_STANDBY，进入PSM模式  <br /></td></tr>
+<tr class="separator:gaf03241e442fc2c0f1c7058ec66306cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga7bfbf01ea44923b656d8d4de68e42eb3" id="r_ga7bfbf01ea44923b656d8d4de68e42eb3"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="#ga60bdc1c8bc6ded8c4831a04959aa9592">LUAT_PM_POWERON_REASON</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga7bfbf01ea44923b656d8d4de68e42eb3">LUAT_PM_POWERON_REASON_E</a></td></tr>
+<tr class="memdesc:ga7bfbf01ea44923b656d8d4de68e42eb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">开机原因  <br /></td></tr>
+<tr class="separator:ga7bfbf01ea44923b656d8d4de68e42eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga60bdc1c8bc6ded8c4831a04959aa9592" id="r_ga60bdc1c8bc6ded8c4831a04959aa9592"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga60bdc1c8bc6ded8c4831a04959aa9592">LUAT_PM_POWERON_REASON</a> { <br />
+&#160;&#160;<a class="el" href="#gga60bdc1c8bc6ded8c4831a04959aa9592ab32a42a3128006242a19b19a325bfa15">LUAT_PM_POWERON_REASON_NORMAL</a> = 0
+, <a class="el" href="#gga60bdc1c8bc6ded8c4831a04959aa9592a318c52d3f0654c5b6bc346cf46152d20">LUAT_PM_POWERON_REASON_FOTA</a>
+, <a class="el" href="#gga60bdc1c8bc6ded8c4831a04959aa9592acaee03cd182ff305c2c0b59494f8b06b">LUAT_PM_POWERON_REASON_ALARM</a>
+, <a class="el" href="#gga60bdc1c8bc6ded8c4831a04959aa9592a5bda93fbce834ab6a4ec8020fb8970ba">LUAT_PM_POWERON_REASON_SWRESET</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga60bdc1c8bc6ded8c4831a04959aa9592a2b29475fde2d23c6f8f44e27b06d169e">LUAT_PM_POWERON_REASON_UNKNOWN</a>
+, <a class="el" href="#gga60bdc1c8bc6ded8c4831a04959aa9592abec030f1a0cbc974256a0d288b4c76b3">LUAT_PM_POWERON_REASON_HWRESET</a>
+, <a class="el" href="#gga60bdc1c8bc6ded8c4831a04959aa9592a908fc3ae5e6d43e7bacd4571f15b1fc3">LUAT_PM_POWERON_REASON_EXCEPTION</a>
+, <a class="el" href="#gga60bdc1c8bc6ded8c4831a04959aa9592a443973e497839ebfcd57385972b655cd">LUAT_PM_POWERON_REASON_TOOL</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga60bdc1c8bc6ded8c4831a04959aa9592ac9673607caeace05b75e33bbbb47baf7">LUAT_PM_POWERON_REASON_WDT</a>
+, <a class="el" href="#gga60bdc1c8bc6ded8c4831a04959aa9592a08c011c30144236423240350034264d1">LUAT_PM_POWERON_REASON_EXTERNAL</a>
+, <a class="el" href="#gga60bdc1c8bc6ded8c4831a04959aa9592aea667cbbdd02bfa445f2781f3c1e29a4">LUAT_PM_POWERON_REASON_CHARGING</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:ga60bdc1c8bc6ded8c4831a04959aa9592"><td class="mdescLeft">&#160;</td><td class="mdescRight">开机原因  <a href="#ga60bdc1c8bc6ded8c4831a04959aa9592">更多...</a><br /></td></tr>
+<tr class="separator:ga60bdc1c8bc6ded8c4831a04959aa9592"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06fc87d81c62e9abb8790b6e5713c55b" id="r_ga06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="#gga06fc87d81c62e9abb8790b6e5713c55baaa695181dbd56e53af9591118d14f62f">LUAT_PM_POWER_USB</a>
+, <a class="el" href="#gga06fc87d81c62e9abb8790b6e5713c55ba9a6723a139df15f6edc0e3953a5e5da8">LUAT_PM_POWER_GPS</a>
+, <a class="el" href="#gga06fc87d81c62e9abb8790b6e5713c55bac2d9472e684956b0b141c469d6f4165a">LUAT_PM_POWER_GPS_ANT</a>
+, <a class="el" href="#gga06fc87d81c62e9abb8790b6e5713c55ba1e8bdd02b87066a84a301e833596ee07">LUAT_PM_POWER_CAMERA</a>
+, <br />
+&#160;&#160;<a class="el" href="#gga06fc87d81c62e9abb8790b6e5713c55baa74eb77d649e489327dc3f1e606c7904">LUAT_PM_POWER_DAC_EN_PIN</a>
+, <a class="el" href="#gga06fc87d81c62e9abb8790b6e5713c55baf499cf8b88d6d393cd33c15229966849">LUAT_PM_POWER_POWERKEY_MODE</a>
+, <a class="el" href="#gga06fc87d81c62e9abb8790b6e5713c55baa40a8dd80cf3301a965a1814bd5e83ea">LUAT_PM_POWER_WORK_MODE</a>
+, <a class="el" href="#gga06fc87d81c62e9abb8790b6e5713c55ba95cec12c51daf6d56e6af0f01d54e5cc">LUAT_PM_POWER_LDO_CTL_PIN</a>
+<br />
+ }</td></tr>
+<tr class="separator:ga06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf764cbdea00d65edcd07bb9953ad2b7" id="r_gadf764cbdea00d65edcd07bb9953ad2b7"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="#ggadf764cbdea00d65edcd07bb9953ad2b7a43074d55bb6f3c1795bbff598eb36092">LUAT_PM_ALL_GPIO</a>
+, <a class="el" href="#ggadf764cbdea00d65edcd07bb9953ad2b7a554d37051758d549e444a6a5853a03c2">LUAT_PM_LDO_TYPE_VMMC</a>
+, <a class="el" href="#ggadf764cbdea00d65edcd07bb9953ad2b7ae2a3f4e16b4784501bb106f54fe2913d">LUAT_PM_LDO_TYPE_VLCD</a>
+, <a class="el" href="#ggadf764cbdea00d65edcd07bb9953ad2b7a9ed2e4e7c6e043446812dcbe6d488102">LUAT_PM_LDO_TYPE_CAMA</a>
+, <br />
+&#160;&#160;<a class="el" href="#ggadf764cbdea00d65edcd07bb9953ad2b7ae5ecb07450391bbb867482639c28b9d0">LUAT_PM_LDO_TYPE_CAMD</a>
+, <a class="el" href="#ggadf764cbdea00d65edcd07bb9953ad2b7a4cbc69f01b5c14a5ae75050e667e7f1c">LUAT_PM_LDO_TYPE_VLP33</a>
+, <a class="el" href="#ggadf764cbdea00d65edcd07bb9953ad2b7a485c4b513ea0e545c55bb6f7ce2d6aa3">LUAT_PM_LDO_TYPE_VLP18</a>
+, <a class="el" href="#ggadf764cbdea00d65edcd07bb9953ad2b7ad81c3901880b8f1e01cda5f4952e1335">LUAT_PM_LDO_TYPE_VIO18</a>
+, <br />
+&#160;&#160;<a class="el" href="#ggadf764cbdea00d65edcd07bb9953ad2b7a20c1aff13ec3dc91215ad9916f8118d4">LUAT_PM_LDO_TYPE_VIBR</a>
+, <a class="el" href="#ggadf764cbdea00d65edcd07bb9953ad2b7a73698725bcaff5c0d32734bdcdf05f4e">LUAT_PM_LDO_TYPE_KEYLED</a>
+, <a class="el" href="#ggadf764cbdea00d65edcd07bb9953ad2b7a47caee7230125caff0257dfba080be89">LUAT_PM_LDO_TYPE_VSIM1</a>
+, <a class="el" href="#ggadf764cbdea00d65edcd07bb9953ad2b7a274625367d600a7df5feccfb42e6bf86">LUAT_PM_LDO_TYPE_QTY</a>
+<br />
+ }</td></tr>
+<tr class="separator:gadf764cbdea00d65edcd07bb9953ad2b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga35dda64c0aa73cb7de20f4e3e15c9c67" id="r_ga35dda64c0aa73cb7de20f4e3e15c9c67"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga35dda64c0aa73cb7de20f4e3e15c9c67">luat_pm_request</a> (int mode)</td></tr>
+<tr class="memdesc:ga35dda64c0aa73cb7de20f4e3e15c9c67"><td class="mdescLeft">&#160;</td><td class="mdescRight">请求进入指定的休眠模式  <br /></td></tr>
+<tr class="separator:ga35dda64c0aa73cb7de20f4e3e15c9c67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6403b51bf340c8790395a6f9e6d48b2c" id="r_ga6403b51bf340c8790395a6f9e6d48b2c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6403b51bf340c8790395a6f9e6d48b2c">luat_pm_release</a> (int mode)</td></tr>
+<tr class="memdesc:ga6403b51bf340c8790395a6f9e6d48b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">退出休眠模式  <br /></td></tr>
+<tr class="separator:ga6403b51bf340c8790395a6f9e6d48b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9dadd49d4ceaac5e2b0b70bb5c2ade38" id="r_ga9dadd49d4ceaac5e2b0b70bb5c2ade38"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9dadd49d4ceaac5e2b0b70bb5c2ade38">luat_pm_dtimer_start</a> (int id, size_t timeout)</td></tr>
+<tr class="memdesc:ga9dadd49d4ceaac5e2b0b70bb5c2ade38"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动底层定时器,在休眠模式下依然生效. 只触发一次  <br /></td></tr>
+<tr class="separator:ga9dadd49d4ceaac5e2b0b70bb5c2ade38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6d4a7ad2191adfe3562341e047799e9f" id="r_ga6d4a7ad2191adfe3562341e047799e9f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga6d4a7ad2191adfe3562341e047799e9f">luat_pm_dtimer_stop</a> (int id)</td></tr>
+<tr class="memdesc:ga6d4a7ad2191adfe3562341e047799e9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止底层定时器  <br /></td></tr>
+<tr class="separator:ga6d4a7ad2191adfe3562341e047799e9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9db9d3704afba004f296adaad230c589" id="r_ga9db9d3704afba004f296adaad230c589"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9db9d3704afba004f296adaad230c589">luat_pm_dtimer_check</a> (int id)</td></tr>
+<tr class="memdesc:ga9db9d3704afba004f296adaad230c589"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查底层定时器运行状态  <br /></td></tr>
+<tr class="separator:ga9db9d3704afba004f296adaad230c589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7753cb7aeacaf86efc87b68c339d8c2" id="r_gad7753cb7aeacaf86efc87b68c339d8c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad7753cb7aeacaf86efc87b68c339d8c2">luat_pm_last_state</a> (int *lastState, int *rtcOrPad)</td></tr>
+<tr class="memdesc:gad7753cb7aeacaf86efc87b68c339d8c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">唤醒原因,用于判断是从开机是否是由休眠状态下开机/唤醒  <br /></td></tr>
+<tr class="separator:gad7753cb7aeacaf86efc87b68c339d8c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad50ed5ca815939cae646678f61882ac3" id="r_gad50ed5ca815939cae646678f61882ac3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gad50ed5ca815939cae646678f61882ac3">luat_pm_force</a> (int mode)</td></tr>
+<tr class="memdesc:gad50ed5ca815939cae646678f61882ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">强制进入指定的休眠模式，忽略某些外设的影响，比如USB  <br /></td></tr>
+<tr class="separator:gad50ed5ca815939cae646678f61882ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab0a43f12531082f4feffb00bdc4feff2" id="r_gab0a43f12531082f4feffb00bdc4feff2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gab0a43f12531082f4feffb00bdc4feff2">luat_pm_check</a> (void)</td></tr>
+<tr class="memdesc:gab0a43f12531082f4feffb00bdc4feff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">检查休眠状态  <br /></td></tr>
+<tr class="separator:gab0a43f12531082f4feffb00bdc4feff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga35a8e34498a012008bec78f506b328b4" id="r_ga35a8e34498a012008bec78f506b328b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga35a8e34498a012008bec78f506b328b4">luat_pm_dtimer_list</a> (size_t *count, size_t *list)</td></tr>
+<tr class="memdesc:ga35a8e34498a012008bec78f506b328b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取所有深度休眠定时器的剩余时间，单位ms  <br /></td></tr>
+<tr class="separator:ga35a8e34498a012008bec78f506b328b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga998d6801e4d20490017cdcc778f590cd" id="r_ga998d6801e4d20490017cdcc778f590cd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga998d6801e4d20490017cdcc778f590cd">luat_pm_dtimer_wakeup_id</a> (int *id)</td></tr>
+<tr class="memdesc:ga998d6801e4d20490017cdcc778f590cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取唤醒定时器id  <br /></td></tr>
+<tr class="separator:ga998d6801e4d20490017cdcc778f590cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8a27790ef8ed06c60b7a9fbccfc9d65" id="r_gae8a27790ef8ed06c60b7a9fbccfc9d65"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae8a27790ef8ed06c60b7a9fbccfc9d65">luat_pm_poweroff</a> (void)</td></tr>
+<tr class="memdesc:gae8a27790ef8ed06c60b7a9fbccfc9d65"><td class="mdescLeft">&#160;</td><td class="mdescRight">关机  <br /></td></tr>
+<tr class="separator:gae8a27790ef8ed06c60b7a9fbccfc9d65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b023876c28d145ba42fac4ab85f7814" id="r_ga5b023876c28d145ba42fac4ab85f7814"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga5b023876c28d145ba42fac4ab85f7814">luat_pm_reset</a> (void)</td></tr>
+<tr class="memdesc:ga5b023876c28d145ba42fac4ab85f7814"><td class="mdescLeft">&#160;</td><td class="mdescRight">重启  <br /></td></tr>
+<tr class="separator:ga5b023876c28d145ba42fac4ab85f7814"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1c832f8dcc8679615a53f935eed93b6" id="r_gaf1c832f8dcc8679615a53f935eed93b6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf1c832f8dcc8679615a53f935eed93b6">luat_pm_power_ctrl</a> (int id, uint8_t val)</td></tr>
+<tr class="memdesc:gaf1c832f8dcc8679615a53f935eed93b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启内部的电源控制，注意不是所有的平台都支持，可能部分平台支持部分选项，看硬件  <br /></td></tr>
+<tr class="separator:gaf1c832f8dcc8679615a53f935eed93b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaafa377eed3554d3caa47db397c0674a0" id="r_gaafa377eed3554d3caa47db397c0674a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaafa377eed3554d3caa47db397c0674a0">luat_pm_get_poweron_reason</a> (void)</td></tr>
+<tr class="memdesc:gaafa377eed3554d3caa47db397c0674a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">开机原因  <br /></td></tr>
+<tr class="separator:gaafa377eed3554d3caa47db397c0674a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeabc35a146917af5dbfd8814ee4a0ac7" id="r_gaeabc35a146917af5dbfd8814ee4a0ac7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaeabc35a146917af5dbfd8814ee4a0ac7">luat_pm_iovolt_ctrl</a> (int id, int val)</td></tr>
+<tr class="memdesc:gaeabc35a146917af5dbfd8814ee4a0ac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置IO电压域的电平  <br /></td></tr>
+<tr class="separator:gaeabc35a146917af5dbfd8814ee4a0ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae5f2bad29aae001d14b7ad6854830082" id="r_gae5f2bad29aae001d14b7ad6854830082"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gae5f2bad29aae001d14b7ad6854830082">luat_pm_wakeup_pin</a> (int pin, int val)</td></tr>
+<tr class="memdesc:gae5f2bad29aae001d14b7ad6854830082"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置唤醒引脚，只针对esp系列  <br /></td></tr>
+<tr class="separator:gae5f2bad29aae001d14b7ad6854830082"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3e4136fb33ac263126cc19ab488af589" id="r_ga3e4136fb33ac263126cc19ab488af589"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga3e4136fb33ac263126cc19ab488af589">luat_pm_set_power_mode</a> (uint8_t mode, uint8_t sub_mode)</td></tr>
+<tr class="memdesc:ga3e4136fb33ac263126cc19ab488af589"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置联网低功耗模式，等同于AT+POWERMODE  <br /></td></tr>
+<tr class="separator:ga3e4136fb33ac263126cc19ab488af589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga758e3f62cb774f87aef84e9fdff4b62e" id="r_ga758e3f62cb774f87aef84e9fdff4b62e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga758e3f62cb774f87aef84e9fdff4b62e">luat_pm_dtimer_remain</a> (int id)</td></tr>
+<tr class="memdesc:ga758e3f62cb774f87aef84e9fdff4b62e"><td class="mdescLeft">&#160;</td><td class="mdescRight">深度休眠定时器剩余时间，单位ms  <br /></td></tr>
+<tr class="separator:ga758e3f62cb774f87aef84e9fdff4b62e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="gaf44e035e4959eabbc8c8beb3137d04b9" name="gaf44e035e4959eabbc8c8beb3137d04b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf44e035e4959eabbc8c8beb3137d04b9">&#9670;&#160;</a></span>LUAT_PM_POWER_MODE_BALANCED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_PM_POWER_MODE_BALANCED&#160;&#160;&#160;(2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>性能和功耗平衡，使用LUAT_PM_SLEEP_MODE_LIGHT </p>
+
+<p class="definition">在文件 <a class="el" href="luat__pm_8h_source.html">luat_pm.h</a> 第 <a class="el" href="luat__pm_8h_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<a id="gafe024949dcad537672c05d5d9c78dace" name="gafe024949dcad537672c05d5d9c78dace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe024949dcad537672c05d5d9c78dace">&#9670;&#160;</a></span>LUAT_PM_POWER_MODE_HIGH_PERFORMANCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_PM_POWER_MODE_HIGH_PERFORMANCE&#160;&#160;&#160;(1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>尽可能保持性能，兼顾低功耗，使用LUAT_PM_SLEEP_MODE_LIGHT </p>
+
+<p class="definition">在文件 <a class="el" href="luat__pm_8h_source.html">luat_pm.h</a> 第 <a class="el" href="luat__pm_8h_source.html#l00016">16</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga0e7f6aac5d28228866210df2b6f2cf3a" name="ga0e7f6aac5d28228866210df2b6f2cf3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0e7f6aac5d28228866210df2b6f2cf3a">&#9670;&#160;</a></span>LUAT_PM_POWER_MODE_NORMAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_PM_POWER_MODE_NORMAL&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>去除所有降低功耗的措施 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__pm_8h_source.html">luat_pm.h</a> 第 <a class="el" href="luat__pm_8h_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a id="gaf03241e442fc2c0f1c7058ec66306cb9" name="gaf03241e442fc2c0f1c7058ec66306cb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf03241e442fc2c0f1c7058ec66306cb9">&#9670;&#160;</a></span>LUAT_PM_POWER_MODE_POWER_SAVER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_PM_POWER_MODE_POWER_SAVER&#160;&#160;&#160;(3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>超低功耗，使用LUAT_PM_SLEEP_MODE_STANDBY，进入PSM模式 </p>
+
+<p class="definition">在文件 <a class="el" href="luat__pm_8h_source.html">luat_pm.h</a> 第 <a class="el" href="luat__pm_8h_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga46ffeb0e165ba2f17503e527842966aa" name="ga46ffeb0e165ba2f17503e527842966aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga46ffeb0e165ba2f17503e527842966aa">&#9670;&#160;</a></span>LUAT_PM_SLEEP_MODE_DEEP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_PM_SLEEP_MODE_DEEP&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="luat__pm_8h_source.html">luat_pm.h</a> 第 <a class="el" href="luat__pm_8h_source.html#l00012">12</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga8c745bfb0ed6a98b1b78fc414888b577" name="ga8c745bfb0ed6a98b1b78fc414888b577"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8c745bfb0ed6a98b1b78fc414888b577">&#9670;&#160;</a></span>LUAT_PM_SLEEP_MODE_IDLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_PM_SLEEP_MODE_IDLE&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="luat__pm_8h_source.html">luat_pm.h</a> 第 <a class="el" href="luat__pm_8h_source.html#l00010">10</a> 行定义.</p>
+
+</div>
+</div>
+<a id="gaa73f938b5e14bf928838b9ccb4344f20" name="gaa73f938b5e14bf928838b9ccb4344f20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa73f938b5e14bf928838b9ccb4344f20">&#9670;&#160;</a></span>LUAT_PM_SLEEP_MODE_LIGHT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_PM_SLEEP_MODE_LIGHT&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="luat__pm_8h_source.html">luat_pm.h</a> 第 <a class="el" href="luat__pm_8h_source.html#l00011">11</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga681a13238bbb34aef330f190f7277ed6" name="ga681a13238bbb34aef330f190f7277ed6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga681a13238bbb34aef330f190f7277ed6">&#9670;&#160;</a></span>LUAT_PM_SLEEP_MODE_NONE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_PM_SLEEP_MODE_NONE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="luat__pm_8h_source.html">luat_pm.h</a> 第 <a class="el" href="luat__pm_8h_source.html#l00009">9</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga2b8ac4b65897127ee40f52236bfb469a" name="ga2b8ac4b65897127ee40f52236bfb469a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2b8ac4b65897127ee40f52236bfb469a">&#9670;&#160;</a></span>LUAT_PM_SLEEP_MODE_STANDBY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LUAT_PM_SLEEP_MODE_STANDBY&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="luat__pm_8h_source.html">luat_pm.h</a> 第 <a class="el" href="luat__pm_8h_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ga7bfbf01ea44923b656d8d4de68e42eb3" name="ga7bfbf01ea44923b656d8d4de68e42eb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7bfbf01ea44923b656d8d4de68e42eb3">&#9670;&#160;</a></span>LUAT_PM_POWERON_REASON_E</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="#ga60bdc1c8bc6ded8c4831a04959aa9592">LUAT_PM_POWERON_REASON</a> <a class="el" href="#ga7bfbf01ea44923b656d8d4de68e42eb3">LUAT_PM_POWERON_REASON_E</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开机原因 </p>
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="ga06fc87d81c62e9abb8790b6e5713c55b" name="ga06fc87d81c62e9abb8790b6e5713c55b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga06fc87d81c62e9abb8790b6e5713c55b">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55baaa695181dbd56e53af9591118d14f62f" name="gga06fc87d81c62e9abb8790b6e5713c55baaa695181dbd56e53af9591118d14f62f"></a>LUAT_PM_POWER_USB&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba9a6723a139df15f6edc0e3953a5e5da8" name="gga06fc87d81c62e9abb8790b6e5713c55ba9a6723a139df15f6edc0e3953a5e5da8"></a>LUAT_PM_POWER_GPS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55bac2d9472e684956b0b141c469d6f4165a" name="gga06fc87d81c62e9abb8790b6e5713c55bac2d9472e684956b0b141c469d6f4165a"></a>LUAT_PM_POWER_GPS_ANT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba1e8bdd02b87066a84a301e833596ee07" name="gga06fc87d81c62e9abb8790b6e5713c55ba1e8bdd02b87066a84a301e833596ee07"></a>LUAT_PM_POWER_CAMERA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55baa74eb77d649e489327dc3f1e606c7904" name="gga06fc87d81c62e9abb8790b6e5713c55baa74eb77d649e489327dc3f1e606c7904"></a>LUAT_PM_POWER_DAC_EN_PIN&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55baf499cf8b88d6d393cd33c15229966849" name="gga06fc87d81c62e9abb8790b6e5713c55baf499cf8b88d6d393cd33c15229966849"></a>LUAT_PM_POWER_POWERKEY_MODE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55baa40a8dd80cf3301a965a1814bd5e83ea" name="gga06fc87d81c62e9abb8790b6e5713c55baa40a8dd80cf3301a965a1814bd5e83ea"></a>LUAT_PM_POWER_WORK_MODE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba95cec12c51daf6d56e6af0f01d54e5cc" name="gga06fc87d81c62e9abb8790b6e5713c55ba95cec12c51daf6d56e6af0f01d54e5cc"></a>LUAT_PM_POWER_LDO_CTL_PIN&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="luat__pm_8h_source.html">luat_pm.h</a> 第 <a class="el" href="luat__pm_8h_source.html#l00040">40</a> 行定义.</p>
+
+</div>
+</div>
+<a id="gadf764cbdea00d65edcd07bb9953ad2b7" name="gadf764cbdea00d65edcd07bb9953ad2b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadf764cbdea00d65edcd07bb9953ad2b7">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="ggadf764cbdea00d65edcd07bb9953ad2b7a43074d55bb6f3c1795bbff598eb36092" name="ggadf764cbdea00d65edcd07bb9953ad2b7a43074d55bb6f3c1795bbff598eb36092"></a>LUAT_PM_ALL_GPIO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggadf764cbdea00d65edcd07bb9953ad2b7a554d37051758d549e444a6a5853a03c2" name="ggadf764cbdea00d65edcd07bb9953ad2b7a554d37051758d549e444a6a5853a03c2"></a>LUAT_PM_LDO_TYPE_VMMC&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggadf764cbdea00d65edcd07bb9953ad2b7ae2a3f4e16b4784501bb106f54fe2913d" name="ggadf764cbdea00d65edcd07bb9953ad2b7ae2a3f4e16b4784501bb106f54fe2913d"></a>LUAT_PM_LDO_TYPE_VLCD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggadf764cbdea00d65edcd07bb9953ad2b7a9ed2e4e7c6e043446812dcbe6d488102" name="ggadf764cbdea00d65edcd07bb9953ad2b7a9ed2e4e7c6e043446812dcbe6d488102"></a>LUAT_PM_LDO_TYPE_CAMA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggadf764cbdea00d65edcd07bb9953ad2b7ae5ecb07450391bbb867482639c28b9d0" name="ggadf764cbdea00d65edcd07bb9953ad2b7ae5ecb07450391bbb867482639c28b9d0"></a>LUAT_PM_LDO_TYPE_CAMD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggadf764cbdea00d65edcd07bb9953ad2b7a4cbc69f01b5c14a5ae75050e667e7f1c" name="ggadf764cbdea00d65edcd07bb9953ad2b7a4cbc69f01b5c14a5ae75050e667e7f1c"></a>LUAT_PM_LDO_TYPE_VLP33&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggadf764cbdea00d65edcd07bb9953ad2b7a485c4b513ea0e545c55bb6f7ce2d6aa3" name="ggadf764cbdea00d65edcd07bb9953ad2b7a485c4b513ea0e545c55bb6f7ce2d6aa3"></a>LUAT_PM_LDO_TYPE_VLP18&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggadf764cbdea00d65edcd07bb9953ad2b7ad81c3901880b8f1e01cda5f4952e1335" name="ggadf764cbdea00d65edcd07bb9953ad2b7ad81c3901880b8f1e01cda5f4952e1335"></a>LUAT_PM_LDO_TYPE_VIO18&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggadf764cbdea00d65edcd07bb9953ad2b7a20c1aff13ec3dc91215ad9916f8118d4" name="ggadf764cbdea00d65edcd07bb9953ad2b7a20c1aff13ec3dc91215ad9916f8118d4"></a>LUAT_PM_LDO_TYPE_VIBR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggadf764cbdea00d65edcd07bb9953ad2b7a73698725bcaff5c0d32734bdcdf05f4e" name="ggadf764cbdea00d65edcd07bb9953ad2b7a73698725bcaff5c0d32734bdcdf05f4e"></a>LUAT_PM_LDO_TYPE_KEYLED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggadf764cbdea00d65edcd07bb9953ad2b7a47caee7230125caff0257dfba080be89" name="ggadf764cbdea00d65edcd07bb9953ad2b7a47caee7230125caff0257dfba080be89"></a>LUAT_PM_LDO_TYPE_VSIM1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggadf764cbdea00d65edcd07bb9953ad2b7a274625367d600a7df5feccfb42e6bf86" name="ggadf764cbdea00d65edcd07bb9953ad2b7a274625367d600a7df5feccfb42e6bf86"></a>LUAT_PM_LDO_TYPE_QTY&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="luat__pm_8h_source.html">luat_pm.h</a> 第 <a class="el" href="luat__pm_8h_source.html#l00053">53</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga60bdc1c8bc6ded8c4831a04959aa9592" name="ga60bdc1c8bc6ded8c4831a04959aa9592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga60bdc1c8bc6ded8c4831a04959aa9592">&#9670;&#160;</a></span>LUAT_PM_POWERON_REASON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ga60bdc1c8bc6ded8c4831a04959aa9592">LUAT_PM_POWERON_REASON</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开机原因 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga60bdc1c8bc6ded8c4831a04959aa9592ab32a42a3128006242a19b19a325bfa15" name="gga60bdc1c8bc6ded8c4831a04959aa9592ab32a42a3128006242a19b19a325bfa15"></a>LUAT_PM_POWERON_REASON_NORMAL&#160;</td><td class="fielddoc"><p>powerkey或者上电开机 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga60bdc1c8bc6ded8c4831a04959aa9592a318c52d3f0654c5b6bc346cf46152d20" name="gga60bdc1c8bc6ded8c4831a04959aa9592a318c52d3f0654c5b6bc346cf46152d20"></a>LUAT_PM_POWERON_REASON_FOTA&#160;</td><td class="fielddoc"><p>充电或者AT指令下载完成后开机 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga60bdc1c8bc6ded8c4831a04959aa9592acaee03cd182ff305c2c0b59494f8b06b" name="gga60bdc1c8bc6ded8c4831a04959aa9592acaee03cd182ff305c2c0b59494f8b06b"></a>LUAT_PM_POWERON_REASON_ALARM&#160;</td><td class="fielddoc"><p>闹钟开机 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga60bdc1c8bc6ded8c4831a04959aa9592a5bda93fbce834ab6a4ec8020fb8970ba" name="gga60bdc1c8bc6ded8c4831a04959aa9592a5bda93fbce834ab6a4ec8020fb8970ba"></a>LUAT_PM_POWERON_REASON_SWRESET&#160;</td><td class="fielddoc"><p>软件重启 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga60bdc1c8bc6ded8c4831a04959aa9592a2b29475fde2d23c6f8f44e27b06d169e" name="gga60bdc1c8bc6ded8c4831a04959aa9592a2b29475fde2d23c6f8f44e27b06d169e"></a>LUAT_PM_POWERON_REASON_UNKNOWN&#160;</td><td class="fielddoc"><p>未知原因 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga60bdc1c8bc6ded8c4831a04959aa9592abec030f1a0cbc974256a0d288b4c76b3" name="gga60bdc1c8bc6ded8c4831a04959aa9592abec030f1a0cbc974256a0d288b4c76b3"></a>LUAT_PM_POWERON_REASON_HWRESET&#160;</td><td class="fielddoc"><p>RESET键重启 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga60bdc1c8bc6ded8c4831a04959aa9592a908fc3ae5e6d43e7bacd4571f15b1fc3" name="gga60bdc1c8bc6ded8c4831a04959aa9592a908fc3ae5e6d43e7bacd4571f15b1fc3"></a>LUAT_PM_POWERON_REASON_EXCEPTION&#160;</td><td class="fielddoc"><p>异常重启 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga60bdc1c8bc6ded8c4831a04959aa9592a443973e497839ebfcd57385972b655cd" name="gga60bdc1c8bc6ded8c4831a04959aa9592a443973e497839ebfcd57385972b655cd"></a>LUAT_PM_POWERON_REASON_TOOL&#160;</td><td class="fielddoc"><p>工具控制重启 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga60bdc1c8bc6ded8c4831a04959aa9592ac9673607caeace05b75e33bbbb47baf7" name="gga60bdc1c8bc6ded8c4831a04959aa9592ac9673607caeace05b75e33bbbb47baf7"></a>LUAT_PM_POWERON_REASON_WDT&#160;</td><td class="fielddoc"><p>内部看门狗重启 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga60bdc1c8bc6ded8c4831a04959aa9592a08c011c30144236423240350034264d1" name="gga60bdc1c8bc6ded8c4831a04959aa9592a08c011c30144236423240350034264d1"></a>LUAT_PM_POWERON_REASON_EXTERNAL&#160;</td><td class="fielddoc"><p>外部重启 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga60bdc1c8bc6ded8c4831a04959aa9592aea667cbbdd02bfa445f2781f3c1e29a4" name="gga60bdc1c8bc6ded8c4831a04959aa9592aea667cbbdd02bfa445f2781f3c1e29a4"></a>LUAT_PM_POWERON_REASON_CHARGING&#160;</td><td class="fielddoc"><p>充电开机 </p>
+</td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="luat__pm_8h_source.html">luat_pm.h</a> 第 <a class="el" href="luat__pm_8h_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="gab0a43f12531082f4feffb00bdc4feff2" name="gab0a43f12531082f4feffb00bdc4feff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab0a43f12531082f4feffb00bdc4feff2">&#9670;&#160;</a></span>luat_pm_check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_check </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查休眠状态 </p>
+<dl class="section return"><dt>返回</dt><dd>int ，见LUAT_PM_SLEEP_MODE_XXX </dd></dl>
+
+</div>
+</div>
+<a id="ga9db9d3704afba004f296adaad230c589" name="ga9db9d3704afba004f296adaad230c589"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9db9d3704afba004f296adaad230c589">&#9670;&#160;</a></span>luat_pm_dtimer_check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_dtimer_check </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>检查底层定时器运行状态 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>定时器id, 通常为0-3 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =1正在运行，0为未运行 </dd></dl>
+
+</div>
+</div>
+<a id="ga35a8e34498a012008bec78f506b328b4" name="ga35a8e34498a012008bec78f506b328b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga35a8e34498a012008bec78f506b328b4">&#9670;&#160;</a></span>luat_pm_dtimer_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_dtimer_list </td>
+          <td>(</td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>list</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取所有深度休眠定时器的剩余时间，单位ms </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">count</td><td>[OUT]定时器数量 </td></tr>
+    <tr><td class="paramname">list</td><td>[OUT]剩余时间列表 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga758e3f62cb774f87aef84e9fdff4b62e" name="ga758e3f62cb774f87aef84e9fdff4b62e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga758e3f62cb774f87aef84e9fdff4b62e">&#9670;&#160;</a></span>luat_pm_dtimer_remain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t luat_pm_dtimer_remain </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>深度休眠定时器剩余时间，单位ms </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>定时器ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uint32_t 0xffffffff失败，其他是剩余时间 </dd></dl>
+
+</div>
+</div>
+<a id="ga9dadd49d4ceaac5e2b0b70bb5c2ade38" name="ga9dadd49d4ceaac5e2b0b70bb5c2ade38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9dadd49d4ceaac5e2b0b70bb5c2ade38">&#9670;&#160;</a></span>luat_pm_dtimer_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_dtimer_start </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>启动底层定时器,在休眠模式下依然生效. 只触发一次 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>定时器id, 通常为0-3 </td></tr>
+    <tr><td class="paramname">timeout</td><td>定时时长, 单位毫秒 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga6d4a7ad2191adfe3562341e047799e9f" name="ga6d4a7ad2191adfe3562341e047799e9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6d4a7ad2191adfe3562341e047799e9f">&#9670;&#160;</a></span>luat_pm_dtimer_stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_dtimer_stop </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>停止底层定时器 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>定时器id, 通常为0-3 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga998d6801e4d20490017cdcc778f590cd" name="ga998d6801e4d20490017cdcc778f590cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga998d6801e4d20490017cdcc778f590cd">&#9670;&#160;</a></span>luat_pm_dtimer_wakeup_id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_dtimer_wakeup_id </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>id</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取唤醒定时器id </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>唤醒的定时id </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="gad50ed5ca815939cae646678f61882ac3" name="gad50ed5ca815939cae646678f61882ac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad50ed5ca815939cae646678f61882ac3">&#9670;&#160;</a></span>luat_pm_force()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_force </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>强制进入指定的休眠模式，忽略某些外设的影响，比如USB </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>休眠模式 见LUAT_PM_SLEEP_MODE_XXX </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="gaafa377eed3554d3caa47db397c0674a0" name="gaafa377eed3554d3caa47db397c0674a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaafa377eed3554d3caa47db397c0674a0">&#9670;&#160;</a></span>luat_pm_get_poweron_reason()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_get_poweron_reason </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开机原因 </p>
+<dl class="section return"><dt>返回</dt><dd>int ，见LUAT_PM_POWERON_REASON </dd></dl>
+
+</div>
+</div>
+<a id="gaeabc35a146917af5dbfd8814ee4a0ac7" name="gaeabc35a146917af5dbfd8814ee4a0ac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeabc35a146917af5dbfd8814ee4a0ac7">&#9670;&#160;</a></span>luat_pm_iovolt_ctrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_iovolt_ctrl </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置IO电压域的电平 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>电压域ID，移芯平台忽略 </td></tr>
+    <tr><td class="paramname">val</td><td>期望的电平值，单位mv </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int 成功返回0，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="gad7753cb7aeacaf86efc87b68c339d8c2" name="gad7753cb7aeacaf86efc87b68c339d8c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad7753cb7aeacaf86efc87b68c339d8c2">&#9670;&#160;</a></span>luat_pm_last_state()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_last_state </td>
+          <td>(</td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>lastState</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>rtcOrPad</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>唤醒原因,用于判断是从开机是否是由休眠状态下开机/唤醒 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lastState</td><td>0-普通开机(上电/复位),3-深睡眠开机,4-休眠开机 </td></tr>
+    <tr><td class="paramname">rtcOrPad</td><td>0-上电/复位开机, 1-RTC开机, 2-WakeupIn/Pad/IO开机, 3-Wakeup/RTC开机 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="gaf1c832f8dcc8679615a53f935eed93b6" name="gaf1c832f8dcc8679615a53f935eed93b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1c832f8dcc8679615a53f935eed93b6">&#9670;&#160;</a></span>luat_pm_power_ctrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_power_ctrl </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开启内部的电源控制，注意不是所有的平台都支持，可能部分平台支持部分选项，看硬件 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>电源控制id, 见LUAT_PM_POWER_XXX </td></tr>
+    <tr><td class="paramname">val</td><td>开关true/1开，false/0关，默认关，部分选项支持数值 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="gae8a27790ef8ed06c60b7a9fbccfc9d65" name="gae8a27790ef8ed06c60b7a9fbccfc9d65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae8a27790ef8ed06c60b7a9fbccfc9d65">&#9670;&#160;</a></span>luat_pm_poweroff()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_poweroff </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关机 </p>
+
+</div>
+</div>
+<a id="ga6403b51bf340c8790395a6f9e6d48b2c" name="ga6403b51bf340c8790395a6f9e6d48b2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6403b51bf340c8790395a6f9e6d48b2c">&#9670;&#160;</a></span>luat_pm_release()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_release </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>退出休眠模式 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>休眠模式 见LUAT_PM_SLEEP_MODE_XXX </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga35dda64c0aa73cb7de20f4e3e15c9c67" name="ga35dda64c0aa73cb7de20f4e3e15c9c67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga35dda64c0aa73cb7de20f4e3e15c9c67">&#9670;&#160;</a></span>luat_pm_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_request </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>请求进入指定的休眠模式 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>休眠模式 见LUAT_PM_SLEEP_MODE_XXX </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga5b023876c28d145ba42fac4ab85f7814" name="ga5b023876c28d145ba42fac4ab85f7814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5b023876c28d145ba42fac4ab85f7814">&#9670;&#160;</a></span>luat_pm_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_reset </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>重启 </p>
+
+</div>
+</div>
+<a id="ga3e4136fb33ac263126cc19ab488af589" name="ga3e4136fb33ac263126cc19ab488af589"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3e4136fb33ac263126cc19ab488af589">&#9670;&#160;</a></span>luat_pm_set_power_mode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_set_power_mode </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>sub_mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>设置联网低功耗模式，等同于AT+POWERMODE </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">低功耗主模式</td><td>见LUAT_PM_POWER_MODE_XXX </td></tr>
+    <tr><td class="paramname">预留，低功耗次级模式，当主模式设置成LUAT_PM_POWER_MODE_BALANCED，可以微调功耗模式，当前不可用</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>int =0成功，其他失败 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>和luat_pm_set_sleep_mode，luat_pm_set_usb_power冲突，不可以同时使用 </dd></dl>
+
+</div>
+</div>
+<a id="gae5f2bad29aae001d14b7ad6854830082" name="gae5f2bad29aae001d14b7ad6854830082"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae5f2bad29aae001d14b7ad6854830082">&#9670;&#160;</a></span>luat_pm_wakeup_pin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_pm_wakeup_pin </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>val</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>配置唤醒引脚，只针对esp系列 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>引脚 </td></tr>
+    <tr><td class="paramname">val</td><td>电平 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd></dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

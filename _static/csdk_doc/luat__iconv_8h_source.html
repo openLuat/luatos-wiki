@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: D:/Git_Project/LuatOS/components/iconv/luat_iconv.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c84d1918a0c60f03a047973dabe1fbea.html">LuatOS</a></li><li class="navelem"><a class="el" href="dir_4202e7a4185ce9275067794b8a91a8d2.html">components</a></li><li class="navelem"><a class="el" href="dir_0ec5dfa5642bf5fbc6b2b0f9e415fd56.html">iconv</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">luat_iconv.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="luat__iconv_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * Copyright (c) 2022 OpenLuat &amp; AirM2M</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * Permission is hereby granted, free of charge, to any person obtaining a copy of</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * this software and associated documentation files (the &quot;Software&quot;), to deal in</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * the Software without restriction, including without limitation the rights to</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * the Software, and to permit persons to whom the Software is furnished to do so,</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> * subject to the following conditions:</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> * The above copyright notice and this permission notice shall be included in all</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * copies or substantial portions of the Software.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> *</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#ifndef LUAT_ICONV_H</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#define LUAT_ICONV_H</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &quot;luat_base.h&quot;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="group__luatos__iconv.html#ga882bfe5899c0d3c242bf26874eb44586">   31</a></span><span class="keyword">typedef</span> <span class="keywordtype">void</span> *<a class="code hl_typedef" href="group__luatos__iconv.html#ga882bfe5899c0d3c242bf26874eb44586">luat_iconv_t</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="group__luatos__iconv.html#ga616a9391976b2f0737a0129e7f723192">   39</a></span><a class="code hl_typedef" href="group__luatos__iconv.html#ga882bfe5899c0d3c242bf26874eb44586">luat_iconv_t</a> <a class="code hl_function" href="group__luatos__iconv.html#ga616a9391976b2f0737a0129e7f723192">luat_iconv_open</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> *to_code, <span class="keyword">const</span> <span class="keywordtype">char</span> *from_code);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="group__luatos__iconv.html#ga9cb8da723e2527e4694b9d0fbd448903">   50</a></span><span class="keywordtype">size_t</span> <a class="code hl_function" href="group__luatos__iconv.html#ga9cb8da723e2527e4694b9d0fbd448903">luat_iconv_convert</a> (<a class="code hl_typedef" href="group__luatos__iconv.html#ga882bfe5899c0d3c242bf26874eb44586">luat_iconv_t</a> cd, <span class="keywordtype">char</span> ** inbuf, <span class="keywordtype">size_t</span> * in_bytes_left, <span class="keywordtype">char</span> ** outbuf, <span class="keywordtype">size_t</span> * out_bytes_left);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="group__luatos__iconv.html#gaf1364ac04d960b1eebab421edd9363d9">   57</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="group__luatos__iconv.html#gaf1364ac04d960b1eebab421edd9363d9">luat_iconv_close</a> (<a class="code hl_typedef" href="group__luatos__iconv.html#ga882bfe5899c0d3c242bf26874eb44586">luat_iconv_t</a> cd);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__luatos__iconv_html_ga616a9391976b2f0737a0129e7f723192"><div class="ttname"><a href="group__luatos__iconv.html#ga616a9391976b2f0737a0129e7f723192">luat_iconv_open</a></div><div class="ttdeci">luat_iconv_t luat_iconv_open(const char *to_code, const char *from_code)</div><div class="ttdoc">开启iconv转换流，分配内存</div></div>
+<div class="ttc" id="agroup__luatos__iconv_html_ga882bfe5899c0d3c242bf26874eb44586"><div class="ttname"><a href="group__luatos__iconv.html#ga882bfe5899c0d3c242bf26874eb44586">luat_iconv_t</a></div><div class="ttdeci">void * luat_iconv_t</div><div class="ttdef"><b>定义</b> <a href="#l00031">luat_iconv.h:31</a></div></div>
+<div class="ttc" id="agroup__luatos__iconv_html_ga9cb8da723e2527e4694b9d0fbd448903"><div class="ttname"><a href="group__luatos__iconv.html#ga9cb8da723e2527e4694b9d0fbd448903">luat_iconv_convert</a></div><div class="ttdeci">size_t luat_iconv_convert(luat_iconv_t cd, char **inbuf, size_t *in_bytes_left, char **outbuf, size_t *out_bytes_left)</div><div class="ttdoc">转换编码格式</div></div>
+<div class="ttc" id="agroup__luatos__iconv_html_gaf1364ac04d960b1eebab421edd9363d9"><div class="ttname"><a href="group__luatos__iconv.html#gaf1364ac04d960b1eebab421edd9363d9">luat_iconv_close</a></div><div class="ttdeci">int luat_iconv_close(luat_iconv_t cd)</div><div class="ttdoc">关闭iconv转换流，释放内存</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

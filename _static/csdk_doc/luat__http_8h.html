@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: D:/Git_Project/LuatOS/components/network/libhttp/luat_http.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li class="current"><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>文件列表</span></a></li>
+      <li><a href="globals.html"><span>全局定义</span></a></li>
+    </ul>
+  </div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_c84d1918a0c60f03a047973dabe1fbea.html">LuatOS</a></li><li class="navelem"><a class="el" href="dir_4202e7a4185ce9275067794b8a91a8d2.html">components</a></li><li class="navelem"><a class="el" href="dir_f5fbcb22df9240dcee702e3e93bf6af1.html">network</a></li><li class="navelem"><a class="el" href="dir_9eddb86fe41391b1c547b3a669858129.html">libhttp</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">结构体</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">luat_http.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;http_parser.h&quot;</code><br />
+</div>
+<p><a href="luat__http_8h_source.html">浏览该文件的源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+结构体</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structluat__http__ctrl__t.html">luat_http_ctrl_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:afd1ebf099de5093d2aec51c89ec8c15a" id="r_afd1ebf099de5093d2aec51c89ec8c15a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd1ebf099de5093d2aec51c89ec8c15a">HTTP_HEADER_BASE_SIZE</a>&#160;&#160;&#160;(1024)</td></tr>
+<tr class="separator:afd1ebf099de5093d2aec51c89ec8c15a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a098121cdbe4e3a2c27ca0c0921d693a5" id="r_a098121cdbe4e3a2c27ca0c0921d693a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a098121cdbe4e3a2c27ca0c0921d693a5">HTTP_RESP_BUFF_SIZE</a>&#160;&#160;&#160;(4096)</td></tr>
+<tr class="separator:a098121cdbe4e3a2c27ca0c0921d693a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5d93aa4eae9ee29221a5efa8fc5a5733" id="r_ga5d93aa4eae9ee29221a5efa8fc5a5733"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga5d93aa4eae9ee29221a5efa8fc5a5733">HTTP_GET_DATA</a>&#160;&#160;&#160;(2)</td></tr>
+<tr class="separator:ga5d93aa4eae9ee29221a5efa8fc5a5733"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga137c72500434c2acc2bc12d198b3de0f" id="r_ga137c72500434c2acc2bc12d198b3de0f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga137c72500434c2acc2bc12d198b3de0f">HTTP_POST_DATA</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="separator:ga137c72500434c2acc2bc12d198b3de0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga02e6d59009dee759528ec81fc9a8eeff" id="r_ga02e6d59009dee759528ec81fc9a8eeff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga02e6d59009dee759528ec81fc9a8eeff">HTTP_OK</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="separator:ga02e6d59009dee759528ec81fc9a8eeff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga407e66ef13496a6c7da02c39b11b1f4e" id="r_ga407e66ef13496a6c7da02c39b11b1f4e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga407e66ef13496a6c7da02c39b11b1f4e">HTTP_ERROR_STATE</a>&#160;&#160;&#160;(-1)</td></tr>
+<tr class="separator:ga407e66ef13496a6c7da02c39b11b1f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae618fe7f5e2bdf2b1986072a4745b708" id="r_gae618fe7f5e2bdf2b1986072a4745b708"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#gae618fe7f5e2bdf2b1986072a4745b708">HTTP_ERROR_HEADER</a>&#160;&#160;&#160;(-2)</td></tr>
+<tr class="separator:gae618fe7f5e2bdf2b1986072a4745b708"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8e597eb91c701f1691df1eca677ab71d" id="r_ga8e597eb91c701f1691df1eca677ab71d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga8e597eb91c701f1691df1eca677ab71d">HTTP_ERROR_BODY</a>&#160;&#160;&#160;(-3)</td></tr>
+<tr class="separator:ga8e597eb91c701f1691df1eca677ab71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga002c114799f97d6fb1f77dde5f37febb" id="r_ga002c114799f97d6fb1f77dde5f37febb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga002c114799f97d6fb1f77dde5f37febb">HTTP_ERROR_CONNECT</a>&#160;&#160;&#160;(-4)</td></tr>
+<tr class="separator:ga002c114799f97d6fb1f77dde5f37febb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3db6c86bd2fe5f04dec56d61924386e4" id="r_ga3db6c86bd2fe5f04dec56d61924386e4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga3db6c86bd2fe5f04dec56d61924386e4">HTTP_ERROR_CLOSE</a>&#160;&#160;&#160;(-5)</td></tr>
+<tr class="separator:ga3db6c86bd2fe5f04dec56d61924386e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07023babe7cb56d58dedab006752b895" id="r_ga07023babe7cb56d58dedab006752b895"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga07023babe7cb56d58dedab006752b895">HTTP_ERROR_RX</a>&#160;&#160;&#160;(-6)</td></tr>
+<tr class="separator:ga07023babe7cb56d58dedab006752b895"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa03dfd861e018121a0a3a46e70a938a8" id="r_gaa03dfd861e018121a0a3a46e70a938a8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#gaa03dfd861e018121a0a3a46e70a938a8">HTTP_ERROR_DOWNLOAD</a>&#160;&#160;&#160;(-7)</td></tr>
+<tr class="separator:gaa03dfd861e018121a0a3a46e70a938a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf67569287ddda108860c2f7ca05bd970" id="r_gaf67569287ddda108860c2f7ca05bd970"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#gaf67569287ddda108860c2f7ca05bd970">HTTP_ERROR_TIMEOUT</a>&#160;&#160;&#160;(-8)</td></tr>
+<tr class="separator:gaf67569287ddda108860c2f7ca05bd970"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga286be4c700f8df21b095ea70e55af7ec" id="r_ga286be4c700f8df21b095ea70e55af7ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga286be4c700f8df21b095ea70e55af7ec">HTTP_ERROR_FOTA</a>&#160;&#160;&#160;(-9)</td></tr>
+<tr class="separator:ga286be4c700f8df21b095ea70e55af7ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7440c5db3c0406f048210a7a1e1c7be" id="r_gad7440c5db3c0406f048210a7a1e1c7be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#gad7440c5db3c0406f048210a7a1e1c7be">HTTP_CALLBACK</a>&#160;&#160;&#160;(1)</td></tr>
+<tr class="separator:gad7440c5db3c0406f048210a7a1e1c7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga94f45e44e0a560c84deedbb07d537557" id="r_ga94f45e44e0a560c84deedbb07d537557"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga94f45e44e0a560c84deedbb07d537557">HTTP_RE_REQUEST_MAX</a>&#160;&#160;&#160;(3)</td></tr>
+<tr class="separator:ga94f45e44e0a560c84deedbb07d537557"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga603d7eb76ca889e39ca041e5e298337a" id="r_ga603d7eb76ca889e39ca041e5e298337a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga603d7eb76ca889e39ca041e5e298337a">HTTP_TIMEOUT</a>&#160;&#160;&#160;(10*60*1000)</td></tr>
+<tr class="separator:ga603d7eb76ca889e39ca041e5e298337a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:gad29f5a720033cbfd7a9faee1e4723b27" id="r_gad29f5a720033cbfd7a9faee1e4723b27"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#gad29f5a720033cbfd7a9faee1e4723b27">luat_http_cb</a>) (int status, void *data, uint32_t data_len, void *user_param)</td></tr>
+<tr class="separator:gad29f5a720033cbfd7a9faee1e4723b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga0411cd49bb5b71852cecd93bcbf0ca2d" id="r_ga0411cd49bb5b71852cecd93bcbf0ca2d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__luatos___h_t_t_p.html#gga0411cd49bb5b71852cecd93bcbf0ca2da999643d8a01c4161f9d59ccbd3d4f7a2">HTTP_STATE_IDLE</a>
+, <a class="el" href="group__luatos___h_t_t_p.html#gga0411cd49bb5b71852cecd93bcbf0ca2dac89223552656b224039c004ca17403cc">HTTP_STATE_CONNECT</a>
+, <a class="el" href="group__luatos___h_t_t_p.html#gga0411cd49bb5b71852cecd93bcbf0ca2da83942bc8d022a24bfb9c30bb3fea2279">HTTP_STATE_SEND_HEAD</a>
+, <a class="el" href="group__luatos___h_t_t_p.html#gga0411cd49bb5b71852cecd93bcbf0ca2da0dc0cb0762a1bb4a6dae716d348cbd4e">HTTP_STATE_SEND_BODY_START</a>
+, <br />
+&#160;&#160;<a class="el" href="group__luatos___h_t_t_p.html#gga0411cd49bb5b71852cecd93bcbf0ca2dab9b76e1b4d860f5157ccd48c23dfa7fc">HTTP_STATE_SEND_BODY</a>
+, <a class="el" href="group__luatos___h_t_t_p.html#gga0411cd49bb5b71852cecd93bcbf0ca2da6fefc59fac1632794a84213ccae6e988">HTTP_STATE_GET_HEAD</a>
+, <a class="el" href="group__luatos___h_t_t_p.html#gga0411cd49bb5b71852cecd93bcbf0ca2da0e63188fbcbff1243359d9bfac3951cf">HTTP_STATE_GET_BODY</a>
+, <a class="el" href="group__luatos___h_t_t_p.html#gga0411cd49bb5b71852cecd93bcbf0ca2dae31948b6ea6692f923caa53fffa828a7">HTTP_STATE_DONE</a>
+, <br />
+&#160;&#160;<a class="el" href="group__luatos___h_t_t_p.html#gga0411cd49bb5b71852cecd93bcbf0ca2da0ccddbdd6f030a41f99142f380dc907d">HTTP_STATE_WAIT_CLOSE</a>
+<br />
+ }</td></tr>
+<tr class="separator:ga0411cd49bb5b71852cecd93bcbf0ca2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gaa63e0081f0fca2d3a64546ab5ee564d1" id="r_gaa63e0081f0fca2d3a64546ab5ee564d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structluat__http__ctrl__t.html">luat_http_ctrl_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#gaa63e0081f0fca2d3a64546ab5ee564d1">luat_http_client_create</a> (<a class="el" href="group__luatos___h_t_t_p.html#gad29f5a720033cbfd7a9faee1e4723b27">luat_http_cb</a> cb, void *user_param, int adapter_index)</td></tr>
+<tr class="memdesc:gaa63e0081f0fca2d3a64546ab5ee564d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建一个http客户端  <br /></td></tr>
+<tr class="separator:gaa63e0081f0fca2d3a64546ab5ee564d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga016d4b44367e1c887209d50b517cc7a2" id="r_ga016d4b44367e1c887209d50b517cc7a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga016d4b44367e1c887209d50b517cc7a2">luat_http_client_base_config</a> (<a class="el" href="structluat__http__ctrl__t.html">luat_http_ctrl_t</a> *http_ctrl, uint32_t timeout, uint8_t debug_onoff, uint8_t retry_cnt)</td></tr>
+<tr class="memdesc:ga016d4b44367e1c887209d50b517cc7a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">http客户端的通用配置，创建客户端时已经有默认配置，可以不配置  <br /></td></tr>
+<tr class="separator:ga016d4b44367e1c887209d50b517cc7a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga806d6d2e2f9220e1913ab8e3ed14bfb3" id="r_ga806d6d2e2f9220e1913ab8e3ed14bfb3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga806d6d2e2f9220e1913ab8e3ed14bfb3">luat_http_client_ssl_config</a> (<a class="el" href="structluat__http__ctrl__t.html">luat_http_ctrl_t</a> *http_ctrl, int mode, const char *server_cert, uint32_t server_cert_len, const char *client_cert, uint32_t client_cert_len, const char *client_cert_key, uint32_t client_cert_key_len, const char *client_cert_key_password, uint32_t client_cert_key_password_len)</td></tr>
+<tr class="memdesc:ga806d6d2e2f9220e1913ab8e3ed14bfb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">客户端SSL配置，只有访问https才需要配置  <br /></td></tr>
+<tr class="separator:ga806d6d2e2f9220e1913ab8e3ed14bfb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf009eb3070aa5d3b6d759fe8406e40bc" id="r_gaf009eb3070aa5d3b6d759fe8406e40bc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#gaf009eb3070aa5d3b6d759fe8406e40bc">luat_http_client_clear</a> (<a class="el" href="structluat__http__ctrl__t.html">luat_http_ctrl_t</a> *http_ctrl)</td></tr>
+<tr class="memdesc:gaf009eb3070aa5d3b6d759fe8406e40bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">清空用户设置的POST数据和request head参数  <br /></td></tr>
+<tr class="separator:gaf009eb3070aa5d3b6d759fe8406e40bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae9c183da0d19fa3ad06df4845de5ddd7" id="r_gae9c183da0d19fa3ad06df4845de5ddd7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#gae9c183da0d19fa3ad06df4845de5ddd7">luat_http_client_set_user_head</a> (<a class="el" href="structluat__http__ctrl__t.html">luat_http_ctrl_t</a> *http_ctrl, const char *name, const char *value)</td></tr>
+<tr class="memdesc:gae9c183da0d19fa3ad06df4845de5ddd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置一条用户的request head参数，Content-Length一般不需要，在设置POST的body时自动生成  <br /></td></tr>
+<tr class="separator:gae9c183da0d19fa3ad06df4845de5ddd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a44f420b6758f5fc151ec8f9109ae5b" id="r_ga1a44f420b6758f5fc151ec8f9109ae5b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga1a44f420b6758f5fc151ec8f9109ae5b">luat_http_client_start</a> (<a class="el" href="structluat__http__ctrl__t.html">luat_http_ctrl_t</a> *http_ctrl, const char *url, uint8_t type, uint8_t ipv6, uint8_t continue_mode)</td></tr>
+<tr class="memdesc:ga1a44f420b6758f5fc151ec8f9109ae5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">启动一个http请求  <br /></td></tr>
+<tr class="separator:ga1a44f420b6758f5fc151ec8f9109ae5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4ca2ddcdb5bf0742dec2e9449fa1dfc" id="r_gac4ca2ddcdb5bf0742dec2e9449fa1dfc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#gac4ca2ddcdb5bf0742dec2e9449fa1dfc">luat_http_client_close</a> (<a class="el" href="structluat__http__ctrl__t.html">luat_http_ctrl_t</a> *http_ctrl)</td></tr>
+<tr class="memdesc:gac4ca2ddcdb5bf0742dec2e9449fa1dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">停止当前的http请求，调用后不再有http回调了  <br /></td></tr>
+<tr class="separator:gac4ca2ddcdb5bf0742dec2e9449fa1dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga505dbe3a501adf858344cf7a7492b0ca" id="r_ga505dbe3a501adf858344cf7a7492b0ca"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga505dbe3a501adf858344cf7a7492b0ca">luat_http_client_destroy</a> (<a class="el" href="structluat__http__ctrl__t.html">luat_http_ctrl_t</a> **p_http_ctrl)</td></tr>
+<tr class="memdesc:ga505dbe3a501adf858344cf7a7492b0ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">完全释放掉当前的http客户端  <br /></td></tr>
+<tr class="separator:ga505dbe3a501adf858344cf7a7492b0ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabd6e52b8f9c3d868d247943f03ce5a70" id="r_gabd6e52b8f9c3d868d247943f03ce5a70"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#gabd6e52b8f9c3d868d247943f03ce5a70">luat_http_client_post_body</a> (<a class="el" href="structluat__http__ctrl__t.html">luat_http_ctrl_t</a> *http_ctrl, void *data, uint32_t len)</td></tr>
+<tr class="memdesc:gabd6e52b8f9c3d868d247943f03ce5a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">POST请求时发送body数据，如果数据量比较大，可以在HTTP_STATE_SEND_BODY回调里分次发送  <br /></td></tr>
+<tr class="separator:gabd6e52b8f9c3d868d247943f03ce5a70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga124539b380f6697f83282b0b15e44f0d" id="r_ga124539b380f6697f83282b0b15e44f0d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga124539b380f6697f83282b0b15e44f0d">luat_http_client_get_status_code</a> (<a class="el" href="structluat__http__ctrl__t.html">luat_http_ctrl_t</a> *http_ctrl)</td></tr>
+<tr class="memdesc:ga124539b380f6697f83282b0b15e44f0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">http获取状态码  <br /></td></tr>
+<tr class="separator:ga124539b380f6697f83282b0b15e44f0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga159641d095a025421258f8f6c7b53dec" id="r_ga159641d095a025421258f8f6c7b53dec"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga159641d095a025421258f8f6c7b53dec">luat_http_client_pause</a> (<a class="el" href="structluat__http__ctrl__t.html">luat_http_ctrl_t</a> *http_ctrl, uint8_t is_pause)</td></tr>
+<tr class="memdesc:ga159641d095a025421258f8f6c7b53dec"><td class="mdescLeft">&#160;</td><td class="mdescRight">http客户端设置暂停  <br /></td></tr>
+<tr class="separator:ga159641d095a025421258f8f6c7b53dec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05a569949f357a339b9237f39155a354" id="r_ga05a569949f357a339b9237f39155a354"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__luatos___h_t_t_p.html#ga05a569949f357a339b9237f39155a354">luat_http_client_set_get_offset</a> (<a class="el" href="structluat__http__ctrl__t.html">luat_http_ctrl_t</a> *http_ctrl, uint32_t offset)</td></tr>
+<tr class="memdesc:ga05a569949f357a339b9237f39155a354"><td class="mdescLeft">&#160;</td><td class="mdescRight">GET请求时要求服务器从offset位置开始传输数据，谨慎使用  <br /></td></tr>
+<tr class="separator:ga05a569949f357a339b9237f39155a354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="afd1ebf099de5093d2aec51c89ec8c15a" name="afd1ebf099de5093d2aec51c89ec8c15a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd1ebf099de5093d2aec51c89ec8c15a">&#9670;&#160;</a></span>HTTP_HEADER_BASE_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HTTP_HEADER_BASE_SIZE&#160;&#160;&#160;(1024)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="luat__http_8h_source.html">luat_http.h</a> 第 <a class="el" href="luat__http_8h_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a098121cdbe4e3a2c27ca0c0921d693a5" name="a098121cdbe4e3a2c27ca0c0921d693a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a098121cdbe4e3a2c27ca0c0921d693a5">&#9670;&#160;</a></span>HTTP_RESP_BUFF_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HTTP_RESP_BUFF_SIZE&#160;&#160;&#160;(4096)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="luat__http_8h_source.html">luat_http.h</a> 第 <a class="el" href="luat__http_8h_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

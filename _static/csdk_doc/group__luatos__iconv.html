@@ -1,0 +1,209 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>luat_soc_sdk_2024: 字符编码转换接口</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">luat_soc_sdk_2024<span id="projectnumber">&#160;V1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>首页</span></a></li>
+      <li class="current"><a href="topics.html"><span>专题</span></a></li>
+      <li><a href="annotated.html"><span>结构体</span></a></li>
+      <li><a href="files.html"><span>文件</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">字符编码转换接口</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga882bfe5899c0d3c242bf26874eb44586" id="r_ga882bfe5899c0d3c242bf26874eb44586"><td class="memItemLeft" align="right" valign="top">typedef void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga882bfe5899c0d3c242bf26874eb44586">luat_iconv_t</a></td></tr>
+<tr class="separator:ga882bfe5899c0d3c242bf26874eb44586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga616a9391976b2f0737a0129e7f723192" id="r_ga616a9391976b2f0737a0129e7f723192"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ga882bfe5899c0d3c242bf26874eb44586">luat_iconv_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga616a9391976b2f0737a0129e7f723192">luat_iconv_open</a> (const char *to_code, const char *from_code)</td></tr>
+<tr class="memdesc:ga616a9391976b2f0737a0129e7f723192"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启iconv转换流，分配内存  <br /></td></tr>
+<tr class="separator:ga616a9391976b2f0737a0129e7f723192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9cb8da723e2527e4694b9d0fbd448903" id="r_ga9cb8da723e2527e4694b9d0fbd448903"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga9cb8da723e2527e4694b9d0fbd448903">luat_iconv_convert</a> (<a class="el" href="#ga882bfe5899c0d3c242bf26874eb44586">luat_iconv_t</a> cd, char **inbuf, size_t *in_bytes_left, char **outbuf, size_t *out_bytes_left)</td></tr>
+<tr class="memdesc:ga9cb8da723e2527e4694b9d0fbd448903"><td class="mdescLeft">&#160;</td><td class="mdescRight">转换编码格式  <br /></td></tr>
+<tr class="separator:ga9cb8da723e2527e4694b9d0fbd448903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1364ac04d960b1eebab421edd9363d9" id="r_gaf1364ac04d960b1eebab421edd9363d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaf1364ac04d960b1eebab421edd9363d9">luat_iconv_close</a> (<a class="el" href="#ga882bfe5899c0d3c242bf26874eb44586">luat_iconv_t</a> cd)</td></tr>
+<tr class="memdesc:gaf1364ac04d960b1eebab421edd9363d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭iconv转换流，释放内存  <br /></td></tr>
+<tr class="separator:gaf1364ac04d960b1eebab421edd9363d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ga882bfe5899c0d3c242bf26874eb44586" name="ga882bfe5899c0d3c242bf26874eb44586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga882bfe5899c0d3c242bf26874eb44586">&#9670;&#160;</a></span>luat_iconv_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void* <a class="el" href="#ga882bfe5899c0d3c242bf26874eb44586">luat_iconv_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="luat__iconv_8h_source.html">luat_iconv.h</a> 第 <a class="el" href="luat__iconv_8h_source.html#l00031">31</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="gaf1364ac04d960b1eebab421edd9363d9" name="gaf1364ac04d960b1eebab421edd9363d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1364ac04d960b1eebab421edd9363d9">&#9670;&#160;</a></span>luat_iconv_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int luat_iconv_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga882bfe5899c0d3c242bf26874eb44586">luat_iconv_t</a></td>          <td class="paramname"><span class="paramname"><em>cd</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭iconv转换流，释放内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cd</td><td>cionv转换流 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>1成功，0失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga9cb8da723e2527e4694b9d0fbd448903" name="ga9cb8da723e2527e4694b9d0fbd448903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9cb8da723e2527e4694b9d0fbd448903">&#9670;&#160;</a></span>luat_iconv_convert()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t luat_iconv_convert </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#ga882bfe5899c0d3c242bf26874eb44586">luat_iconv_t</a></td>          <td class="paramname"><span class="paramname"><em>cd</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>inbuf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>in_bytes_left</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>outbuf</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t *</td>          <td class="paramname"><span class="paramname"><em>out_bytes_left</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>转换编码格式 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cd</td><td>cionv转换流 </td></tr>
+    <tr><td class="paramname">inbuf</td><td>输入缓冲区 </td></tr>
+    <tr><td class="paramname">in_bytes_left</td><td>输入缓冲区长度 </td></tr>
+    <tr><td class="paramname">outbuf</td><td>输出缓冲区 </td></tr>
+    <tr><td class="paramname">out_bytes_left</td><td>输出缓冲区长度 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>0为成功，-1为失败 </dd></dl>
+
+</div>
+</div>
+<a id="ga616a9391976b2f0737a0129e7f723192" name="ga616a9391976b2f0737a0129e7f723192"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga616a9391976b2f0737a0129e7f723192">&#9670;&#160;</a></span>luat_iconv_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ga882bfe5899c0d3c242bf26874eb44586">luat_iconv_t</a> luat_iconv_open </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>to_code</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>from_code</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开启iconv转换流，分配内存 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">to_code</td><td>目标编码格式，gb2312/ucs2/ucs2be/utf8 </td></tr>
+    <tr><td class="paramname">from_code</td><td>源编码格式，gb2312/ucs2/ucs2be/utf8 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>cionv转换流 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
