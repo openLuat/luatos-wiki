@@ -30,6 +30,16 @@ mcu.XTALRefOutput(true, false)
 $PCAS01,5*19\r\n
 ```
 
+## 支持的导航星座
+
+* GPS L1I
+* QZSS L1I
+* 北斗 B1I/B1Q//B2I/B2b/B2Q
+
+## 实测演示图
+
+![Air780EPVH实测演示图](./image/air780epvh_gnss.jpg)
+
 ## 资料链接
 
 1. [Air780EPVH资料](https://air780epvh.cn)
