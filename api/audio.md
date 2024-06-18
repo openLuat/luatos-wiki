@@ -31,6 +31,8 @@
 |audio.BUS_DAC|number|硬件输出总线，DAC类型|
 |audio.BUS_I2S|number|硬件输出总线，I2S类型|
 |audio.BUS_SOFT_DAC|number|硬件输出总线，软件模式DAC类型|
+|audio.VOLTAGE_1800|number|可配置的codec工作电压，1.8V|
+|audio.VOLTAGE_3300|number|可配置的codec工作电压，3.3V|
 
 
 ## audio.start(id, audio_format, num_channels, sample_rate, bits_per_sample, is_signed)
