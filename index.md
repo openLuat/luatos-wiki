@@ -110,6 +110,7 @@ boardGuide/index
 api/index
 api/sys_pub
 🌕 原生API手册 <https://wiki.luatos.com/_static/lua53doc/index.html>
+👓 CSDK开发手册 <https://wiki.luatos.com/_static/csdk_doc/index.html>
 api/libs/index
 develop/libs
 ```
