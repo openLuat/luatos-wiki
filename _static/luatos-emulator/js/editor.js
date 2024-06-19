@@ -33,7 +33,7 @@ require(['vs/editor/editor.main'], function () {
                         kind: monaco.languages.CompletionItemKind.Snippet,
                         insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
                         insertText: snippets[i].t,
-                        documentation: snippets[i].description,
+                        detail: snippets[i].d,
                     });
                 }
             }
