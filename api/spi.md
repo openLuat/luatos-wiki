@@ -330,6 +330,7 @@ spi_device.close()
 -- 初始化spi
 local spi_device = spi.device_setup(0,17,0,0,8,2000000,spi.MSB,1,1)
 local recv = spi_device:transfer("123")--发送123,并读取数据
+local result = spi_device:transfer({0x00,0x01})--发送0x00,0x01,并读取数据
 
 local buff = zbuff.create(1024, 0x33) --创建一个初值全为0x33的内存区域
 local recv = spi_device:transfer(buff)--把zbuff数据从指针开始，全发出去,并读取数据
@@ -363,6 +364,7 @@ local recv = spi_device:transfer(buff)--把zbuff数据从指针开始，全发�
 -- 初始化spi
 local spi_device = spi.device_setup(0,17,0,0,8,2000000,spi.MSB,1,1)
 local result = spi_device:send("123")--发送123
+local result = spi_device:send({0x00,0x01})--发送0x00,0x01
 
 local buff = zbuff.create(1024, 0x33) --创建一个初值全为0x33的内存区域
 local result = spi_device:send(buff)--把zbuff数据从指针开始，全发出去
