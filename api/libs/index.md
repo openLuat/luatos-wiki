@@ -32,6 +32,7 @@ libfota2
 libnet
 lis2dh12
 lm75
+max31856
 mcp2515
 mlx90614
 mpu6xxx
