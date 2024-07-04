@@ -4,6 +4,50 @@
 * [固件下载备用地址](https://pan.air32.cn/s/DJTr?path=%2F)
 * 通过[云编译](https://wiki.luatos.com/develop/compile/Cloud_compilation.html),全自动编译最新固件
 
+
+## V1002
+兼容性变化
+1：因功能变化较多，FLASH空间不足
+    (1)LuatOS-SoC_V1001_EC718PV无法远程升级到LuatOS-SoC_V1002_EC718PV
+    (2)LuatOS-SoC_V1002_EC718PV为正式发行的最后一版EPV固件，后续需要EPV固件请使用云编译或本地自行编译
+
+
+缺陷修复
+fix: 拍照的时候无法选择jpeg编码质量
+fix：pwm在没有先close的情况下，既改周期，又改占空比，有可能死机的问题
+fix：在使用uart485时，无法设置转向pin为GPIO16和GPIO17的问题
+fix：otp功能异常
+fix：ota时，在ota完成的最后一刻死机，会导致底层OTA成功，而脚本ota失败
+fix：EPV固件，无法进入休眠
+fix：socket主动关闭时，回调消息错误
+fix：mqtt发送时，一次性将数据发出去，避免被打断
+fix：mqttconnect报文长度超过256时，无法连接服务器
+fix：ftp异常死机
+fix：socket添加防护，防止已释放的资源再次使用
+fix：防止可能的时间设置错误
+fix：spi table方式发送异常
+
+
+新增功能
+add：audio库添加录音功能
+add：agpio在深度休眠唤醒后，依然可以保持休眠前电平的能力
+add：重置协议栈参数到默认
+add：基站同步时间开关
+add：深度休眠定时器回调消息
+add：w5500添加DHCP超时消息
+add：DHCP重试次数增加，应对运行速度慢的路由器
+add：socket查询当前连接状态
+add：http自定义header支持自定义大小
+add：sfud互斥锁保护
+add: 支持外部flash全量升级
+add：支持配置codec的工作电压
+add：mqtt添加设置缓冲区大小的功能
+
+更新功能
+update：当遇到无法解析的NMEA语句时，屏蔽打印
+
+
+
 ## V1001
 
 注意事项:
