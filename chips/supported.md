@@ -1,6 +1,10 @@
 
 # 设备支持情况/Supported Devices
 
+## bsp支持情况
+
+[适配状态 - LuatOS 文档](https://wiki.luatos.com/api/supported.html)
+
 ## 基础外设支持
 
 | Libs                                                  | Air101 | Air103 | Air105 | Air780E | ESP32C2 | ESP32C3 | Air780E/Air700E | Air780EP/Air780EPV |
