@@ -73,6 +73,33 @@
 
 ---
 
+## fatfs.unmount(mount_point)
+
+
+
+取消挂载fatfs
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|虚拟文件系统的挂载点, 默认是 fatfs,必须与fatfs.mount一致|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|成功返回0, 否则返回失败码|
+
+**例子**
+
+```lua
+fatfs.mount("SD")
+
+```
+
+---
+
 ## fatfs.getfree(mount_point)
 
 
