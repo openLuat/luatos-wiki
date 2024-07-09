@@ -7,40 +7,40 @@
 ## v1110
 
 兼容性变化:
-1：tts_onchip下关闭websocket和ftp客户端的支持
-2：tts_onchip下关闭ftp
-3：因空间不足，后续需要tts_onchip的版本可自行云编译或本地编译，本版本不再更新
+* 1：tts_onchip下关闭websocket和ftp客户端的支持
+* 2：tts_onchip下关闭ftp
+* 3：因空间不足，后续需要tts_onchip的版本可自行云编译或本地编译，本版本不再更新
 
 缺陷修复
-1：防止可能的时间设置错误
-2：luatos固件读取的luadb分区大小不对
-3：wait485时，485转向io控制timer没有停止，导致数据接收出问题
-4：当pwm未close，既改周期又改占空比时，可能死机
-5：485换向脚用不了GPIO14、GPIO15
-6：软件串口无法使用timer1和timer4
-7：OTA底层数据写入完成，但脚本数据没完成时，不允许升级
-8：uart485无法使用ALT4的GPIO18和GPIO19
-9：socket主动关闭时，回调消息错误
-10：合入原厂补丁
-11：mqtt发送时，一次性将数据发出去，避免被打断
-12：mqttconnect报文长度超过256时，无法连接服务器
-13：ftp异常死机
-14：socket添加防护，防止已释放的资源再次使用
+* 1：防止可能的时间设置错误
+* 2：luatos固件读取的luadb分区大小不对
+* 3：wait485时，485转向io控制timer没有停止，导致数据接收出问题
+* 4：当pwm未close，既改周期又改占空比时，可能死机
+* 5：485换向脚用不了GPIO14、GPIO15
+* 6：软件串口无法使用timer1和timer4
+* 7：OTA底层数据写入完成，但脚本数据没完成时，不允许升级
+* 8：uart485无法使用ALT4的GPIO18和GPIO19
+* 9：socket主动关闭时，回调消息错误
+* 10：合入原厂补丁
+* 11：mqtt发送时，一次性将数据发出去，避免被打断
+* 12：mqttconnect报文长度超过256时，无法连接服务器
+* 13：ftp异常死机
+* 14：socket添加防护，防止已释放的资源再次使用
 
 
 新增功能
-add：重置协议栈参数到默认
-add：基站同步时间开关
-add：深度休眠定时器回调消息
-add：深度休眠唤醒时保持休眠前设置的电平
-add：w5500添加DHCP超时消息
-add：DHCP重试次数增加，应对运行速度慢的路由器
-add：socket查询当前连接状态
-add：http自定义header支持自定义大小
-add：sfud互斥锁保护
+* add：重置协议栈参数到默认
+* add：基站同步时间开关
+* add：深度休眠定时器回调消息
+* add：深度休眠唤醒时保持休眠前设置的电平
+* add：w5500添加DHCP超时消息
+* add：DHCP重试次数增加，应对运行速度慢的路由器
+* add：socket查询当前连接状态
+* add：http自定义header支持自定义大小
+* add：sfud互斥锁保护
 
 更新功能
-update：当遇到无法解析的NMEA语句时，屏蔽打印
+* update：当遇到无法解析的NMEA语句时，屏蔽打印
 
 
 ## V1109
