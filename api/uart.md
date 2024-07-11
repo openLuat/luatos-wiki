@@ -26,9 +26,11 @@
 |uart.LSB|number|小端模式|
 |uart.MSB|number|大端模式|
 |uart.VUART_0|number|虚拟串口0|
+|uart.ERROR_DROP|number|遇到错误时抛弃缓存的数据|
+|uart.DEBUG|number|开启调试功能|
 
 
-## uart.setup(id, baud_rate, data_bits, stop_bits, partiy, bit_order, buff_size, rs485_gpio, rs485_level, rs485_delay)
+## uart.setup(id, baud_rate, data_bits, stop_bits, partiy, bit_order, buff_size, rs485_gpio, rs485_level, rs485_delay, debug_enable, error_drop)
 
 
 
@@ -48,6 +50,8 @@
 |int|485模式下的转换GPIO, 默认值0xffffffff|
 |int|485模式下的rx方向GPIO的电平, 默认值0|
 |int|485模式下tx向rx转换的延迟时间，默认值12bit的时间，单位us, 9600波特率填20000|
+|int|开启调试功能，默认使能，填写uart.DEBUG或者非数字使能，其他值都是关闭，目前只有移芯平台支持|
+|int|遇到接收错误是否放弃缓存数据，默认使能，填写uart.ERROR_DROP或者非数字使能，其他值都是关闭，目前只有移芯平台支持|
 
 **返回值**
 
@@ -64,6 +68,8 @@ uart.setup(1, 115200, 8, 1, uart.NONE)
 
 -- 485自动切换, 选取GPIO10作为收发转换脚
 uart.setup(1, 115200, 8, 1, uart.NONE, uart.LSB, 1024, 10, 0, 2000)
+-- 遇到接收错误不抛弃缓存数据
+uart.setup(1, 115200, 8, 1, uart.NONE, nil, 1024, nil, nil, nil, nil, 0)
 
 ```
 
