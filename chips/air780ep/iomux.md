@@ -105,15 +105,17 @@ Air780EP(EC718P/EC718PV全系)支持多个虚拟的GPIO, 将非GPIO管脚通过�
 |39| wakeup0|仅支持输入和中断| wakeup0休眠唤醒脚|
 |40| wakeup1/vbus|仅支持输入和中断| USB的VBUS, 检测USB是否是插入状态|
 |41| wakeup2|仅支持输入和中断| wakeup2休眠唤醒脚, USIM_DET|
+|42| wakeup3|仅支持输入和中断| wakeup3休眠唤醒脚, AGPIOWU0|
+|43| wakeup4|仅支持输入和中断| wakeup4休眠唤醒脚, AGPIOWU1|
+|44| wakeup5|仅支持输入和中断| wakeup5休眠唤醒脚, MAIN_DTR|
 |46| pwrkey |仅支持输入和中断| 即开机键, 开机之后当普通GPIO使用|
 
 说明:
 
 1. vbus与USB功能是解耦的
 2. 与常规认识不同, 在不接vbus的情况下, USB功能依然可用
-3. 在进入休眠前, 将上述`wakeup0/wakeup1/wakeup2`设置成中断状态, 即可实现管脚唤醒功能
+3. 在进入休眠前, 将上述`wakeup0/wakeup1/wakeup2/wakeup3/wakeup4/wakeup5`设置成中断状态, 即可实现管脚唤醒功能
 4. 非wakeup的普通GPIO, 是不支持休眠唤醒的
-5. wakeup3/wakeup4/wakeup5在模块未引出
 
 例如将`wakup0`设置为唤醒脚, 中断回调可以是空函数
 
