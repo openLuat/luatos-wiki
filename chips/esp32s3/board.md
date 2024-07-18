@@ -45,6 +45,43 @@ CORE ESP32S3核心板是基于乐鑫ESP32-S3进行设计的一款核心板，尺
 
 ![footprint](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/PinOut_esp32s3.png)
 
+**详细管脚描述**
+
+| **编号** | **名称** | **复位后默认功能**                      | **复用功能**    | **电源域** | **上下拉能力** |
+| ------------ | -------- | --------------------------------------- | -----------| ---------- | -------------- |
+| 32           | GND      | 接地                                    |            |            |                |
+| 31           | 5V       | 5V电源接口，与USB的VBUS相连             |             |            |                |
+| 30           | IO00     | GPIO00,输入                            |             | VDD3P3_CPU | UP/DOWN        |
+| 29           | IO10     | GPIO10,输入，输出，高阻                 |             | VDD3P3_CPU | UP/DOWN        |
+| 28           | IO11     | GPIO11,输入，输出，高阻                 | I2C_SDA     | VDD3P3_RTC | UP/DOWN        |
+| 27           | IO12     | GPIO12,输入，输出，高阻                 | I2C_SCL     | VDD3P3_RTC | UP/DOWN        |
+| 26           | 3.3V     | 芯片电源，3.3V                         |              |            |                |
+| 25           | GND      | 接地                                   |              |            |                |
+| 24           | IO13     | GPIO13,输入，输出，高阻                 |               | VDD3P3_CPU | UP/DOWN        |
+| 23           | IO14     | GPIO14,输入，输出，高阻                 | SPI2_CS       | VDD3P3_CPU | UP/DOWN        |
+| 22           | IO15     | GPIO15,输入，输出，高阻                 |               | VDD3P3_CPU | UP/DOWN        |
+| 21           | IO16     | GPIO16,输入，输出，高阻                 | SPI2_MISO     | VDD3P3_CPU | UP/DOWN        |
+| 20           | IO17     | GPIO17,输入，输出，高阻                 | SPI2_MOSI     | VDD3P3_RTC | UP/DOWN        |
+| 19           | IO18     | GPIO18,输入，输出，高阻                 | SPI2_CK       | VDD3P3_CPU | UP/DOWN        |
+| 18           | 3.3V     | 芯片电源，3.3V                          |                 |            |                |
+| 17           | GND      | 接地                                    |                 |            |                |
+| 16           | 5V       | 5V电源接口，与USB的VBUS相连             |                 |            |                |
+| 15           | PWB      | 芯片3.3V供电控制,高电平有效，不用可悬空  |                 |            |                |
+| 14           | GND      | 接地                                   |                 |            |                |
+| 13           | 3.3V     | 芯片电源，3.3V                         |                 |            |                |
+| 12           | RESET    | 芯片复位                               |                    | VDD3P3_RTC |                |
+| 11           | IO09     | GPIO09,输入，输出，高阻                 |                    | VDD3P3_CPU | UP/DOWN        |
+| 10           | IO08     | GPIO08,输入，输出，高阻                 | SDIO_D3            | VDD3P3_CPU | UP/DOWN        |
+| 09           | IO07     | GPIO07,输入，输出，高阻                 | UART2_RX           | VDD3P3_CPU | UP/DOWN        |
+| 08           | IO06     | GPIO06,输入，输出，高阻                 | UART2_TX           | VDD3P3_CPU | UP/DOWN        |
+| 07           | GND      | 接地                                   |                    |            |                |
+| 06           | IO05     | GPIO05,输入，输出，高阻                 | SDIO_D2            | VDD3P3_CPU | UP/DOWN        |
+| 05           | IO04     | GPIO04,输入，输出，高阻                 | SDIO_D1            | VDD3P3_CPU | UP/DOWN        |
+| 04           | IO03     | GPIO03,输入，输出，高阻                 | SDIO_D0            | VDD3P3_CPU | UP/DOWN        |
+| 03           | IO02     | GPIO2,输入，输出，高阻                  | UART1_RX/SDIO_CMD  | VDD3P3_CPU | UP/DOWN        |
+| 02           | IO01     | GPIO1,输入，输出，高阻                  | UART1_TX/SDIO_CLK  | VDD3P3_CPU | UP/DOWN        |
+| 01           | GND      | 接地                                   |                    |            |                |
+
 - 任意GPIO均可作为PWM脚, 编号与GPIO一致, 但`同时只能开启8路PWM`,务必注意
 - 图示SPI为 SPI 2
 
