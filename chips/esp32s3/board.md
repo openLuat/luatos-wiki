@@ -83,7 +83,8 @@ CORE ESP32S3核心板是基于乐鑫ESP32-S3进行设计的一款核心板，尺
 | 01           | GND      | 接地                                   |                    |            |                |
 
 - 任意GPIO均可作为PWM脚, 编号与GPIO一致, 但`同时只能开启8路PWM`,务必注意
-- 图示SPI为 SPI 2
+- 开发板图示SPI为 SPI 2
+- SPI 3 对应IO：SPI3_MISO -> GPIO33、SPI3_MOSI -> GPIO47、SPI3_SCLK -> GPIO48
 
 ## 四、功能介绍
 
