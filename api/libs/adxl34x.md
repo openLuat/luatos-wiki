@@ -80,3 +80,83 @@ log.info("adxl34x_data", "adxl34x_data.x"..(adxl34x_data.x),"adxl34x_data.y"..(a
 
 ---
 
+## adxl34x.get_int_source()
+
+
+
+获取 adxl34x 中断源
+
+**参数**
+
+无
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+adxl34x.get_int_source()
+
+```
+
+---
+
+## adxl34x.set_thresh(i2cid, activity, inactivity, time_inactivity)
+
+
+
+设置 adxl34x 活动和静止阀值
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|number|所在的i2c总线id|
+|number|活动阀值|
+|number|静止阀值|
+|number|静止时间|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+adxl34x.set_thresh(i2cid, string.char(0x05), string.char(0x02), string.char(0x05)) 
+log.info("adxl34x_data", "adxl34x_data.x"..(adxl34x_data.x),"adxl34x_data.y"..(adxl34x_data.y),"adxl34x_data.z"..(adxl34x_data.z))
+
+```
+
+---
+
+## adxl34x.set_irqf(i2cid, irqf_map, irqf_act_ctl, irqf_enable)
+
+
+
+adxl34x 中断设置
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|number|所在的i2c总线id|
+|number|中断映射|
+|number|中断活动控制|
+|number|中断使能|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+adxl34x.set_irqf(i2cid, string.char(0x10), string.char(0xff), string.char(0x10))
+
+```
+
+---
+
