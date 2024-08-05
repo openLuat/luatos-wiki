@@ -13,6 +13,7 @@
 * 腾讯基站定位 [qqlbs@github](https://github.com/wendal/luatos-lib-qqlbs)
 * OneNet的单频RTK对接 [onenetcors@github](https://github.com/wendal/luatos-lib-onenetcors)
 * DNS客户端 [dnsclient@github](https://github.com/wendal/luatos-lib-dnsclient)
+* 接入ThingsCloud平台SDK [luatos-thingscloud-sdk@github](https://github.com/IoT-ThingsCloud/luatos-thingscloud-sdk)
 
 ## 期待你的扩展库
 
