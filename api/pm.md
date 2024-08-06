@@ -68,11 +68,11 @@ pm.request(pm.IDLE) -- 通过切换不同的值请求进入不同的休眠模式
 |pm.GPS|number|GPS电源|
 |pm.GPS_ANT|number|GPS的天线电源，有源天线才需要|
 |pm.CAMERA|number|camera电源，CAM_VCC输出|
-|pm.DAC_EN|number|Air780E和Air600E的DAC_EN(新版硬件手册的LDO_CTL，同一个PIN，命名变更)，注意audio的默认配置会自动使用这个脚来控制CODEC的使能|
-|pm.LDO_CTL|number|Air780E和Air600E的LDO_CTL(老版硬件手册的DAC_EN，同一个PIN，命名变更)，Air780EP的LDO_CTL, 注意audio的默认配置会自动使用这个脚来控制CODEC的使能|
-|pm.PWK_MODE|number|是否开启ec618的powerkey滤波模式，true开，注意滤波模式下reset变成直接关机|
-|pm.WORK_MODE|number|ec618的节能模式，0~3，0完全关闭，1性能优先，2平衡，3极致功耗|
-|pm.IOVL|number|所有GPIO高电平电压控制,当前仅ec618系列可用|
+|pm.DAC_EN|number|Air780E和Air600E，Air780EP的DAC_EN(新版硬件手册的LDO_CTL，同一个PIN，命名变更)，注意audio的默认配置会自动使用这个脚来控制CODEC的使能|
+|pm.LDO_CTL|number|Air780E和Air600E，Air780EP的LDO_CTL(老版硬件手册的DAC_EN，同一个PIN，命名变更)，Air780EP的LDO_CTL, 注意audio的默认配置会自动使用这个脚来控制CODEC的使能|
+|pm.PWK_MODE|number|是否开启移芯CAT1平台系列(Air780E/Air700E/Air780EP等等)的powerkey滤波模式，true开，注意滤波模式下reset变成直接关机|
+|pm.WORK_MODE|number|移芯CAT1平台系列(Air780E/Air700E/Air780EP等等)的节能模式，0~3，0完全关闭，1性能优先，2平衡，3极致功耗|
+|pm.IOVL|number|所有GPIO高电平电压控制,当前仅移芯CAT1平台系列(Air780E/Air700E/Air780EP等等)可用|
 
 
 ## pm.request(mode)
@@ -134,7 +134,7 @@ pm.request(pm.HIB)
 ```lua
 -- 添加底层定时器
 pm.dtimerStart(0, 300 * 1000) -- 5分钟后唤醒
--- Air780E/Air780EP系列
+-- 移芯CAT1平台系列(Air780E/Air700E/Air780EP等等)
 -- id = 0 或者 id = 1 是, 最大休眠时长是2.5小时
 -- id >= 2是, 最大休眠时长是740小时
 
@@ -273,7 +273,7 @@ log.info("pm", "last power reson", pm.lastReson())
 ```lua
 -- 请求进入休眠模式
 pm.force(pm.HIB)
--- 对应EC618系列(Air780E/Air700E等), 该操作会关闭USB通信
+-- 移芯CAT1平台系列(Air780E/Air700E/Air780EP等等), 该操作会关闭USB通信
 -- 唤醒后如需开启USB, 请打开USB电压
 --pm.power(pm.USB, true)
 
@@ -306,7 +306,7 @@ pm.request(pm.HIB)
 if pm.check() then
     log.info("pm", "it is ok to hib")
 else
-    -- 对应EC618系列(Air780E/Air700E等), 该操作会关闭USB通信
+    -- 移芯CAT1平台系列(Air780E/Air700E/Air780EP等等), 该操作会关闭USB通信
     pm.force(pm.HIB) -- 强制休眠
     -- 唤醒后如需开启USB, 请打开USB电压
     --sys.wait(100)
@@ -336,8 +336,7 @@ end
 **例子**
 
 ```lua
--- 当前支持EC618系列(Air780E/Air600E/Air700E/Air780EG支持)
--- 当前支持EC718系列(Air780EP/Air780EPU等衍生型号支持)
+-- 当前支持移芯CAT1平台系列(Air780E/Air700E/Air780EP等等)
 -- 需要2022-12-22之后编译的固件
 pm.shutdown()
 
@@ -395,12 +394,12 @@ pm.power(pm.USB, false)
 -- Air780EG,为内置的GPS芯片上电. 注意, Air780EG的GPS和GPS_ANT是一起控制的,所以合并了.
 pm.power(pm.GPS, true)
 
--- EC618/EC718系列开启pwrkey开机防抖
+-- 移芯CAT1平台系列(Air780E/Air700E/Air780EP等等)开启pwrkey开机防抖
 -- 注意: 开启后, 复位键就变成关机了!!! pwrkey要长按2秒才能开机
 -- pm.power(pm.PWK_MODE, true)
 
--- EC618/EC718系列PSM+低功耗设置
--- ec618/ec718的节能模式，0~3，0完全关闭，1性能优先，2平衡，3极致功耗
+-- 移芯CAT1平台系列(Air780E/Air700E/Air780EP等等)PSM+低功耗设置
+-- 移芯CAT1平台系列(Air780E/Air700E/Air780EP等等)节能模式，0~3，0完全关闭，1性能优先，2平衡，3极致功耗
 -- 详情访问: https://airpsm.cn
 -- pm.power(pm.WORK_MODE, 1)
 
@@ -430,8 +429,7 @@ IO高电平电压控制
 **例子**
 
 ```lua
--- EC618/EC718系列设置IO电平, 范围 1650 ~ 2000，2650~3400 , 单位毫伏, 步进50mv
--- 例如Air780E/Air600E/Air700E/Air780EG/Air780EP/Air780EPV等
+-- 移芯CAT1平台系列(Air780E/Air700E/Air780EP等等)设置IO电平, 范围 1650 ~ 2000，2650~3400 , 单位毫伏, 步进50mv
 -- 注意, 这里的设置优先级会高于硬件IOSEL脚的配置
 -- 但开机时依然先使用硬件配置,直至调用本API进行配置, 所以io电平会变化
 -- pm.ioVol(pm.IOVOL_ALL_GPIO, 3300)    -- 所有GPIO高电平输出3.3V
