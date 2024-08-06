@@ -21,7 +21,7 @@
 
 ### 通用的
 
-* [看看电池能用多久](/_static/tools/psmplus/index.html) 合宙PSM+超低功耗
+* [看看电池能用多久](https://wiki.luatos.com/_static/tools/psmplus/index.html) 合宙PSM+超低功耗
 * [基站查询网页工具](http://bs.openluat.com)
 * [坐标系转换工具](http://old.openluat.com/GPS-Offset.html) GNSS模块输出的坐标是WGS84,需要转国内的坐标系
 * [网络测试工具](https://netlab.luatos.com) 支持TCP/UDP/TCP-TLS等外网端口的获取
