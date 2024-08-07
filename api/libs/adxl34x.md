@@ -88,7 +88,9 @@ log.info("adxl34x_data", "adxl34x_data.x"..(adxl34x_data.x),"adxl34x_data.y"..(a
 
 **参数**
 
-无
+|传入值类型|解释|
+|-|-|
+|number|所在的i2c总线id|
 
 **返回值**
 
@@ -97,7 +99,7 @@ log.info("adxl34x_data", "adxl34x_data.x"..(adxl34x_data.x),"adxl34x_data.y"..(a
 **例子**
 
 ```lua
-adxl34x.get_int_source()
+adxl34x.get_int_source(i2cid)
 
 ```
 

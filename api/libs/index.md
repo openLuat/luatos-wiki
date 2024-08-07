@@ -44,6 +44,7 @@ pcf8574
 qmc5883l
 rc522
 rtkv
+sc7a20
 shift595
 si24r1
 spl06
