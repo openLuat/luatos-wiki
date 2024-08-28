@@ -1,8 +1,30 @@
-# Ec618系列固件发行注记
+# EC618系列固件发行注记
 
 * [固件下载地址](https://gitee.com/openLuat/LuatOS/releases)
 * [固件下载备用地址](https://pan.air32.cn/s/DJTr?path=%2F)
 * 通过[云编译](https://wiki.luatos.com/develop/compile/Cloud_compilation.html),全自动编译最新固件
+
+## v1111
+
+缺陷修复
+
+* 1：软件串口在没有全部发送完前close，出现异常
+
+* 2：spi table方式发送异常
+* 3：libgnss.clear没有清理干净残留数据
+* 4：gnss定位成功后，执行libgnss.clear，关闭再打开gnss芯片，如果一上电就定位成功，无GNSS_STATE消息
+* 5：mqtt启用后，内存占用过大，导致其他业务逻辑申请不到可用内存
+* 6：http 响应头分包，导致解析失败
+
+新增功能
+
+* add：mqtt添加设置接收缓冲区大小的功能
+* add：fatfs卸载功能
+
+更新功能
+
+* update：限制uart.read单词最大读取量，一次性读取太多数据，容易死机
+* update：已经释放过的socket ctrl，不再允许其他操作，防止异常死机
 
 ## v1110
 
