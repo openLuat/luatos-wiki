@@ -39,7 +39,7 @@
 
 ---
 
-## cc.dial(sim_id,number)
+## cc.dial(sim_id, number)
 
 
 
@@ -50,7 +50,7 @@
 |传入值类型|解释|
 |-|-|
 |number|sim_id|
-|number|电话号码|
+|string|电话号码|
 
 **返回值**
 
