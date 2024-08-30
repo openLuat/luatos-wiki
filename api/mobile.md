@@ -57,7 +57,7 @@ log.info("simid", mobile.simid())
 |mobile.CONF_SIM_WC_MODE|number|SIM写入次数的配置和读取|
 |mobile.CONF_FAKE_CELL_BARTIME|number|伪基站禁止接入的时间，取值为0时取消，0xffff永久|
 |mobile.CONF_RESET_TO_FACTORY|number|删除已保存的协议栈参数，重启后会使用默认配置|
-|mobile.CONF_USB_ETHERNET|number|蜂窝网络模块的usb以太网卡控制，bit0开关1,开0关，bit1模式1NAT,0独立IP，bit2协议1ECM,0RNDIS，飞行模式里设置|
+|mobile.CONF_USB_ETHERNET|number|蜂窝网络模块的usb以太网卡控制，bit0开关1,开0关，bit1模式1NAT,0独立IP(目前强制为1)，bit2协议1ECM,0RNDIS，飞行模式里设置|
 |mobile.PIN_VERIFY|number|验证PIN码操作|
 |mobile.PIN_CHANGE|number|更换PIN码操作|
 |mobile.PIN_ENABLE|number|使能PIN码验证|
