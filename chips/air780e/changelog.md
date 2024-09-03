@@ -4,6 +4,13 @@
 * [固件下载备用地址](https://pan.air32.cn/s/DJTr?path=%2F)
 * 通过[云编译](https://wiki.luatos.com/develop/compile/Cloud_compilation.html),全自动编译最新固件
 
+## v1112
+
+缺陷修复
+
+* 1：从hib模式唤醒后死机
+
+
 ## v1111
 
 缺陷修复
