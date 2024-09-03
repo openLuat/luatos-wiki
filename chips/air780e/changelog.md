@@ -9,22 +9,25 @@
 缺陷修复
 
 * 1：软件串口在没有全部发送完前close，出现异常
-
 * 2：spi table方式发送异常
 * 3：libgnss.clear没有清理干净残留数据
 * 4：gnss定位成功后，执行libgnss.clear，关闭再打开gnss芯片，如果一上电就定位成功，无GNSS_STATE消息
 * 5：mqtt启用后，内存占用过大，导致其他业务逻辑申请不到可用内存
 * 6：http 响应头分包，导致解析失败
+* 7：修复FTP在PASV模式下接受少量数据可能会提示失败
 
 新增功能
 
 * add：mqtt添加设置接收缓冲区大小的功能
 * add：fatfs卸载功能
+* add：mcu.hardfault新增死机处理模式参数
 
 更新功能
 
-* update：限制uart.read单词最大读取量，一次性读取太多数据，容易死机
+* update：限制uart.read单次最大读取量，一次性读取太多数据，容易死机
 * update：已经释放过的socket ctrl，不再允许其他操作，防止异常死机
+* update：兼容部分FTP服务器
+* update：RRC快速释放的优化选项
 
 ## v1110
 
