@@ -69,15 +69,15 @@ LuatOS提供了丰富的外设接口库，可以更便捷地实现创意，无�
 
 |型号    |分类    |备注|
 |--------|--------|-------|
-|[Air780E](chips/air780e/index) |4G-Cat.1移动通信模块| 也支持Air780EG/Air600E|
 |[Air780EP](chips/air780ep/index) |4G-Cat.1移动通信模块| 支持Air780EP系列|
-|[Air101](chips/air101/index) |MCU|尺寸小,仅4*4mm|
-|[Air103](chips/air103/index) |MCU|io多,支持psram|
-|[Air105](chips/air105/index) |MCU|内存大,有摄像头,有USB|
-|[Air601](chips/air601/index) |wifi/bt芯片|支持wifi和蓝牙通信|
-|[ESP32](chips/esp32c3/index) 系列| (wifi/bt芯片）|ESP32C3/ESP32S3等|
+|[Air780E](chips/air780e/index) |4G-Cat.1移动通信模块| 也支持Air780EG|
 |[PC](https://gitee.com/openLuat/luatos-soc-pc) |PC版LuatOS|可作为模拟器使用|
-|[RT-Thread](https://github.com/openLuat/luatos-soc-rtt) |内存需满足最低要求| 已并入rtt主线|
+|[Air101](chips/air101/index) |MCU|EOL|
+|[Air103](chips/air103/index) |MCU|EOL|
+|[Air105](chips/air105/index) |MCU|EOL|
+|[Air601](chips/air601/index) |wifi|EOL|
+|[ESP32](chips/esp32c3/index) 系列|wifi|EOL|
+|[RT-Thread](https://github.com/openLuat/luatos-soc-rtt) |内存需满足最低要求| EOL|
 |[Air302](chips/air302/index) |nbiot模组| EOL|
 |[Air640w](chips/air640w/index) |wifi模组|  EOL|
 
