@@ -1,6 +1,6 @@
 # pin - 管脚命名映射
 
-{bdg-success}`已适配` {bdg-primary}`Air601` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105`
+{bdg-secondary}`适配状态未知`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_pin.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！

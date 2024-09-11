@@ -1,6 +1,6 @@
 # mobile - 蜂窝网络
 
-{bdg-success}`已适配` {bdg-primary}`Air780E/Air700E` {bdg-primary}`Air780EP/Air780EPV`
+{bdg-success}`已适配` {bdg-primary}`Air780E` {bdg-primary}`Air780EP` {bdg-primary}`Air780EPS`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/mobile/luat_lib_mobile.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -737,6 +737,36 @@ end)
 
 ```lua
 -- 参考 mobile.getCellInfo 函数
+
+```
+
+---
+
+## mobile.lockCell(mode, earfcn, pci)
+
+
+
+锁定/解锁小区，仅用于外场测试，没接触过的，或者生产环境中请勿使用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|操作码 0删除优先的频点，1设置优先频点，2锁定小区，3解锁小区|
+|int|下行频点|
+|int|phycellid|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功true 失败false|
+
+**例子**
+
+```lua
+mobile.lockCell(2,1860,32)    --锁定小区
+mobile.lockCell(3)            --解锁小区
 
 ```
 

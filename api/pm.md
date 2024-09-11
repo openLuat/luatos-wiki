@@ -1,6 +1,6 @@
 # pm - 电源管理
 
-{bdg-success}`已适配` {bdg-primary}`Air780E/Air700E` {bdg-primary}`Air780EP/Air780EPV` {bdg-primary}`Air601` {bdg-primary}`Air101/Air103` {bdg-primary}`Air105` {bdg-primary}`ESP32C3` {bdg-primary}`ESP32S3`
+{bdg-success}`已适配` {bdg-primary}`Air780E` {bdg-primary}`Air780EP` {bdg-primary}`Air780EPS`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_pm.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
@@ -22,7 +22,8 @@
         RAM保持供电
         定时器/网络事件/IO中断均可自动唤醒
         唤醒后程序继续运行
-        GPIO保持电平
+        普通GPIO掉电,外设驱动掉电
+        AON_GPIO保持电平
 -- DEEP 深睡眠模式
         CPU暂停
         核心RAM掉电, 保留RAM维持供电

@@ -1,6 +1,6 @@
 # ioqueue - io序列操作
 
-{bdg-success}`已适配` {bdg-primary}`Air780EP/Air780EPV` {bdg-primary}`Air105`
+{bdg-success}`已适配` {bdg-primary}`Air780EP` {bdg-primary}`Air780EPS`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/io_queue/luat_lib_io_queue.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！

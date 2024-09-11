@@ -17,7 +17,6 @@ crypto
 dac
 disp
 eink
-ercoap
 errDump
 fastlz
 fatfs
@@ -58,10 +57,6 @@ miniz
 mlx90640
 mobile
 mqtt
-natp
-nes
-nimble
-onewire
 os
 otp
 pack
@@ -81,8 +76,6 @@ sms
 socket
 softkb
 spi
-spislave
-sqlite3
 statem
 string
 sys
@@ -91,16 +84,12 @@ timer
 touchkey
 u8g2
 uart
-ulwip
 usbapp
 w5500
 wdt
 websocket
 wlan
-wlanraw
-ws2812
 xxtea
 ymodem
 zbuff
-zlib
 ```
