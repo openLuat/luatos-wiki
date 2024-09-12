@@ -280,6 +280,26 @@ end)
 
 ---
 
+### SCELL_INFO
+
+服务小区额外信息更新
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+-- 订阅式
+sys.subscribe("SCELL_INFO", function()
+    log.info("service cell", mobile.scell()))
+end)
+
+```
+
+---
+
 ### IP_READY
 
 已联网
