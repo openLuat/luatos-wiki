@@ -37,7 +37,7 @@
     -- 一型一密
     -- iotcloudc = iotcloud.new(iotcloud.ONENET,{produt_id = "xxx",product_secret = "xxx"})
     -- 一机一密
-    -- iotcloudc = iotcloud.new(iotcloud.ONENET,{produt_id = "xxx",device_name = "xxx",key = "xxx"})
+    -- iotcloudc = iotcloud.new(iotcloud.ONENET,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})
 
     -- 华为云
     -- 动态注册(免预注册)
@@ -126,7 +126,7 @@
     -- 一型一密
     -- iotcloudc = iotcloud.new(iotcloud.ONENET,{produt_id = "xxx",product_secret = "xxx"})
     -- 一机一密
-    -- iotcloudc = iotcloud.new(iotcloud.ONENET,{produt_id = "xxx",device_name = "xxx",key = "xxx"})
+    -- iotcloudc = iotcloud.new(iotcloud.ONENET,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})
 
     -- 华为云
     -- 动态注册(免预注册)
