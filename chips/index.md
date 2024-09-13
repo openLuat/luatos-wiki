@@ -6,6 +6,7 @@
 chips
 air780ep/index
 air780e/index
+air780eps/index
 pc/index
 gnss/index
 luatools/index
