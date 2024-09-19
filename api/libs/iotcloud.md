@@ -28,8 +28,6 @@
 
     -- 密钥校验 (预注册)(一机一密)
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})
-    -- 证书校验(预注册)
-    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx"},{tls={client_cert=io.readFile("/luadb/client_cert.crt")}})
 
     -- ONENET云
     -- 动态注册
@@ -117,8 +115,6 @@
 
     -- 密钥校验 (预注册)(一机一密)
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",key = "xxx"})
-    -- 证书校验(预注册)
-    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx"},{tls={client_cert=io.readFile("/luadb/client_cert.crt")}})
 
     -- ONENET云
     -- 动态注册
