@@ -15,17 +15,16 @@
     -- 腾讯云 
     -- 动态注册
     -- iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx" ,product_secret = "xxx"})
-
     -- 密钥校验
     -- iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx",device_name = "123456789",device_secret = "xxx=="})
     -- 证书校验
     -- iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx",device_name = "123456789"},{tls={client_cert=io.readFile("/luadb/client_cert.crt")}})
 
-
     -- 阿里云  
     -- 动态注册(免预注册)(一型一密)
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",product_secret = "xxx"})
-
+    -- 动态注册(预注册)(一型一密)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})
     -- 密钥校验 (预注册)(一机一密)
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})
 
@@ -112,7 +111,8 @@
     -- 阿里云  
     -- 动态注册(免预注册)(一型一密)
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",product_secret = "xxx"})
-
+    -- 动态注册(预注册)(一型一密)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})
     -- 密钥校验 (预注册)(一机一密)
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",key = "xxx"})
 
