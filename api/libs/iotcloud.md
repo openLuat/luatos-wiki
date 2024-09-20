@@ -89,7 +89,7 @@
 |-|-|
 |string|云平台 iotcloud.TENCENT:腾讯云 iotcloud.ALIYUN:阿里云 iotcloud.ONENET:中国移动云 iotcloud.HUAWEI:华为云 iotcloud.TUYA:涂鸦云|
 |table|iot云平台配置, device_name:可选，默认为imei否则为unique_id iot_config.product_id:产品id(阿里云则为产品key) iot_config.product_secret:产品密钥,有此项则为动态注册 iot_config.device_secret:设备秘钥,有此项则为秘钥连接 instance_id:公共实例id,新版阿里云公共实例专用 userid:用户ID,onenet专用,动态注册使用  userkey:用户Accesskey,onenet专用,动态注册使用|
-|table|mqtt配置, host:可选,默认为平台默认host ip:可选,默认为平台默认ip tls:加密,若有此项一般为产品认证 keepalive:心跳时间,单位s 可选,默认240|
+|table|mqtt配置, host:可选,默认为平台默认host ip:可选,默认为平台默认ip tls:加密,若有此项一般为产品认证 keepalive:心跳时间,单位s 可选,默认240 autoreconn:自动重连,number:重连时间，单位ms /bool 是否重连,默认3000ms 可选，默认不自动重连|
 
 **返回值**
 
@@ -110,12 +110,12 @@
     -- iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx",device_name = "123456789"},{tls={client_cert=io.readFile("/luadb/client_cert.crt")}})
 
     -- 阿里云  
-    -- 动态注册(免预注册)(一型一密)(仅企业版支持)
+    -- 一型一密(免预注册-仅企业版支持)
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",product_secret = "xxx"}) -- 企业版公共实例
-    -- 动态注册(预注册)(一型一密)
+    -- 一型一密(预注册)
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})                     -- 旧版公共实例
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",product_secret = "xxx"}) -- 新版公共实例
-    -- 密钥校验 (预注册)(一机一密)
+    -- 一机一密 (预注册)
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",key = "xxx"})                    -- 旧版公共实例
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",key = "xxx"})-- 新版公共实例
 
