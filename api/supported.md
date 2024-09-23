@@ -33,7 +33,7 @@
 |[i2c](i2c.md)|`I2C操作`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[i2s](i2s.md)|`数字音频`|Y|Y|X|X|X|X|X|X|
 |[iconv](iconv.md)|`iconv操作`|Y|Y|Y|Y|Y|Y|Y|Y|
-|[io](io.md)|`io操作(扩展)`|Y|X|X|X|X|X|X|X|
+|[io](io.md)|`io操作(扩展)`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[ioqueue](ioqueue.md)|`io序列操作`|X|Y|X|X|X|X|X|X|
 |[iotauth](iotauth.md)|`IoT鉴权库, 用于生成各种云平台的参数`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[ir](ir.md)|`红外遥控`|Y|Y|X|X|X|X|X|X|
@@ -44,7 +44,7 @@
 |[libcoap](libcoap.md)|`coap数据处理`|X|X|X|X|X|X|X|X|
 |[libgnss](libgnss.md)|`NMEA数据处理`|Y|Y|Y|Y|X|X|X|Y|
 |[little_flash](little_flash.md)|`LITTLE FLASH 软件包`|X|Y|X|X|X|X|X|Y|
-|[log](log.md)|`日志库`|Y|X|X|X|X|X|X|X|
+|[log](log.md)|`日志库`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[lora](lora.md)|`lora驱动模块`|Y|Y|X|X|X|X|X|X|
 |[lora2](lora2.md)|`lora2驱动模块(支持多挂)`|Y|Y|X|X|X|X|X|X|
 |[lvgl](lvgl.md)|`LVGL图像库`|Y|Y|X|X|X|X|X|X|
@@ -54,7 +54,7 @@
 |[mlx90640](mlx90640.md)|`红外测温(MLX90640)`|Y|Y|X|X|X|X|X|X|
 |[mobile](mobile.md)|`蜂窝网络`|Y|Y|X|X|X|X|X|X|
 |[mqtt](mqtt.md)|`mqtt客户端`|Y|Y|X|X|X|X|X|X|
-|[os](os.md)|`os操作`|Y|X|X|X|X|X|X|X|
+|[os](os.md)|`os操作`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[otp](otp.md)|`OTP操作库`|Y|Y|Y|Y|X|X|X|Y|
 |[pack](pack.md)|`打包和解包格式串`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[pin](pin.md)|`管脚命名映射`|X|X|X|X|X|X|X|X|
@@ -64,7 +64,7 @@
 |[repl](repl.md)|`"读取-求值-输出" 循环`|Y|Y|X|X|X|X|X|X|
 |[rsa](rsa.md)|`RSA加密解密`|Y|Y|X|X|X|X|X|X|
 |[rtc](rtc.md)|`实时时钟`|Y|Y|Y|Y|X|X|X|Y|
-|[rtos](rtos.md)|`RTOS底层操作库`|Y|X|X|X|X|X|X|X|
+|[rtos](rtos.md)|`RTOS底层操作库`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[sdio](sdio.md)|`sdio`|X|X|X|X|X|X|X|X|
 |[sensor](sensor.md)|`传感器操作库`|Y|Y|Y|Y|X|X|X|Y|
 |[sfd](sfd.md)|`SPI FLASH操作库`|Y|Y|X|X|X|X|X|X|
@@ -74,9 +74,9 @@
 |[softkb](softkb.md)|`软件键盘矩阵`|X|X|X|X|X|X|X|X|
 |[spi](spi.md)|`spi操作库`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[statem](statem.md)|`SM状态机`|Y|Y|X|X|X|X|X|X|
-|[string](string.md)|`字符串操作函数`|Y|X|X|X|X|X|X|X|
-|[sys](sys.md)|`sys库`|Y|X|X|X|X|X|X|X|
-|[sysplus](sysplus.md)|`sys库的强力补充`|Y|X|X|X|X|X|X|X|
+|[string](string.md)|`字符串操作函数`|Y|Y|Y|Y|Y|Y|Y|Y|
+|[sys](sys.md)|`sys库`|Y|Y|Y|Y|Y|Y|Y|Y|
+|[sysplus](sysplus.md)|`sys库的强力补充`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[timer](timer.md)|`操作底层定时器`|X|X|X|X|X|X|X|X|
 |[touchkey](touchkey.md)|`触摸按键`|X|X|X|X|X|X|X|X|
 |[u8g2](u8g2.md)|`u8g2图形处理库`|Y|Y|X|X|X|X|X|Y|
