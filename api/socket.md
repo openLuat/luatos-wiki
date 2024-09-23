@@ -1,6 +1,6 @@
 # socket - 网络接口
 
-{bdg-success}`已适配` {bdg-primary}`Air780E` {bdg-primary}`Air780EP` {bdg-primary}`Air780EPS`
+{bdg-success}`已适配` {bdg-primary}`Air780E` {bdg-primary}`Air780EP`
 
 ```{tip}
 本库有专属demo，[点此链接查看socket的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/socket)
@@ -25,7 +25,7 @@
 
 ## socket.sntp(sntp_server)
 
-{bdg-success}`本接口仅支持` {bdg-primary}`Air780E` {bdg-primary}`Air780EP` {bdg-primary}`Air780EPS`
+{bdg-success}`本接口仅支持` {bdg-primary}`Air780E` {bdg-primary}`Air780EP`
 
 sntp时间同步
 

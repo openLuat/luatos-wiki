@@ -1,6 +1,6 @@
 # httpplus - http库的补充
 
-{bdg-success}`已适配` {bdg-primary}`Air780E` {bdg-primary}`Air780EP` {bdg-primary}`Air780EPS`
+{bdg-success}`已适配` {bdg-primary}`Air780E` {bdg-primary}`Air780EP`
 
 ```{note}
 本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../script/libs/httpplus.lua)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
