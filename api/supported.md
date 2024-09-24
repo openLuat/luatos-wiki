@@ -2,13 +2,13 @@
 
 |BSP/库|简介|Air780E|Air780EP|Air780EPS|Air780EQ|Air700EAQ|Air700EMQ|Air700ECQ|Air201|
 |---|---|---|---|---|---|---|---|---|---|
-|[adc](adc.md)|`模数转换`|Y|Y|Y|Y|Y|Y|Y|Y|
+|[adc](adc.md)|`模数转换`|Y|Y|Y|X|Y|Y|Y|Y|
 |[antbot](antbot.md)|`蚂蚁链`|Y|X|X|X|X|X|X|X|
-|[audio](audio.md)|`多媒体-音频`|Y|Y|Y|Y|X|X|X|Y|
+|[audio](audio.md)|`多媒体-音频`|Y|Y|X|X|X|X|X|Y|
 |[bit64](bit64.md)|`32位系统上对64位数据的基本算术运算和逻辑运算`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[camera](camera.md)|`摄像头`|X|Y|X|X|X|X|X|X|
 |[cc](cc.md)|`VoLTE通话功能`|X|X|X|X|X|X|X|X|
-|[codec](codec.md)|`多媒体-编解码`|Y|Y|Y|Y|X|X|X|Y|
+|[codec](codec.md)|`多媒体-编解码`|Y|Y|X|X|X|X|X|Y|
 |[coremark](coremark.md)|`跑分`|Y|Y|X|X|X|X|X|X|
 |[crypto](crypto.md)|`加解密和hash函数`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[dac](dac.md)|`数模转换`|X|X|X|X|X|X|X|X|
@@ -26,11 +26,11 @@
 |[gmssl](gmssl.md)|`国密算法(SM2/SM3/SM4)`|Y|Y|X|X|X|X|X|X|
 |[gpio](gpio.md)|`GPIO操作`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[gtfont](gtfont.md)|`高通字库芯片`|Y|Y|X|X|X|X|X|X|
-|[hmeta](hmeta.md)|`硬件元数据`|Y|Y|Y|Y|X|X|X|Y|
+|[hmeta](hmeta.md)|`硬件元数据`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[ht1621](ht1621.md)|`液晶屏驱动(HT1621/HT1621B)`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[http](http.md)|`http 客户端`|Y|Y|X|X|X|X|X|X|
 |[httpsrv](httpsrv.md)|`http服务端`|Y|Y|X|X|X|X|X|X|
-|[i2c](i2c.md)|`I2C操作`|Y|Y|Y|Y|Y|Y|Y|Y|
+|[i2c](i2c.md)|`I2C操作`|Y|Y|Y|X|Y|Y|Y|Y|
 |[i2s](i2s.md)|`数字音频`|Y|Y|X|X|X|X|X|X|
 |[iconv](iconv.md)|`iconv操作`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[io](io.md)|`io操作(扩展)`|Y|Y|Y|Y|Y|Y|Y|Y|
@@ -42,7 +42,7 @@
 |[lcd](lcd.md)|`lcd驱动模块`|Y|Y|X|X|X|X|X|Y|
 |[lcdseg](lcdseg.md)|`段式lcd`|X|X|X|X|X|X|X|X|
 |[libcoap](libcoap.md)|`coap数据处理`|X|X|X|X|X|X|X|X|
-|[libgnss](libgnss.md)|`NMEA数据处理`|Y|Y|Y|Y|X|X|X|Y|
+|[libgnss](libgnss.md)|`NMEA数据处理`|Y|Y|Y|X|X|X|X|Y|
 |[little_flash](little_flash.md)|`LITTLE FLASH 软件包`|X|Y|X|X|X|X|X|Y|
 |[log](log.md)|`日志库`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[lora](lora.md)|`lora驱动模块`|Y|Y|X|X|X|X|X|X|
@@ -55,24 +55,24 @@
 |[mobile](mobile.md)|`蜂窝网络`|Y|Y|X|X|X|X|X|X|
 |[mqtt](mqtt.md)|`mqtt客户端`|Y|Y|X|X|X|X|X|X|
 |[os](os.md)|`os操作`|Y|Y|Y|Y|Y|Y|Y|Y|
-|[otp](otp.md)|`OTP操作库`|Y|Y|Y|Y|X|X|X|Y|
+|[otp](otp.md)|`OTP操作库`|Y|Y|Y|X|X|X|X|Y|
 |[pack](pack.md)|`打包和解包格式串`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[pin](pin.md)|`管脚命名映射`|X|X|X|X|X|X|X|X|
 |[pm](pm.md)|`电源管理`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[protobuf](protobuf.md)|`ProtoBuffs编解码`|Y|Y|X|X|X|X|X|X|
-|[pwm](pwm.md)|`PWM模块`|Y|Y|Y|Y|Y|Y|Y|Y|
+|[pwm](pwm.md)|`PWM模块`|Y|Y|Y|X|Y|Y|Y|Y|
 |[repl](repl.md)|`"读取-求值-输出" 循环`|Y|Y|X|X|X|X|X|X|
 |[rsa](rsa.md)|`RSA加密解密`|Y|Y|X|X|X|X|X|X|
 |[rtc](rtc.md)|`实时时钟`|Y|Y|Y|Y|X|X|X|Y|
 |[rtos](rtos.md)|`RTOS底层操作库`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[sdio](sdio.md)|`sdio`|X|X|X|X|X|X|X|X|
-|[sensor](sensor.md)|`传感器操作库`|Y|Y|Y|Y|X|X|X|Y|
+|[sensor](sensor.md)|`传感器操作库`|Y|Y|Y|X|X|X|X|Y|
 |[sfd](sfd.md)|`SPI FLASH操作库`|Y|Y|X|X|X|X|X|X|
 |[sfud](sfud.md)|`SPI FLASH sfud软件包`|Y|Y|X|X|X|X|X|Y|
 |[sms](sms.md)|`短信`|X|Y|Y|Y|Y|Y|Y|X|
 |[socket](socket.md)|`网络接口`|Y|Y|X|X|X|X|X|X|
 |[softkb](softkb.md)|`软件键盘矩阵`|X|X|X|X|X|X|X|X|
-|[spi](spi.md)|`spi操作库`|Y|Y|Y|Y|Y|Y|Y|Y|
+|[spi](spi.md)|`spi操作库`|Y|Y|Y|X|Y|Y|Y|Y|
 |[statem](statem.md)|`SM状态机`|Y|Y|X|X|X|X|X|X|
 |[string](string.md)|`字符串操作函数`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[sys](sys.md)|`sys库`|Y|Y|Y|Y|Y|Y|Y|Y|
