@@ -21,9 +21,9 @@
 |[fonts](fonts.md)|`字体库`|Y|Y|X|X|X|X|X|Y|
 |[fota](fota.md)|`底层固件升级`|Y|Y|X|X|X|X|X|X|
 |[fs](fs.md)|`文件系统额外操作`|Y|Y|Y|Y|X|X|X|Y|
-|[fskv](fskv.md)|`kv数据库,掉电不丢数据`|Y|Y|Y|Y|X|X|X|Y|
+|[fskv](fskv.md)|`kv数据库,掉电不丢数据`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[ftp](ftp.md)|`ftp 客户端`|Y|Y|Y|Y|Y|Y|Y|Y|
-|[gmssl](gmssl.md)|`国密算法(SM2/SM3/SM4)`|Y|Y|X|X|X|X|X|X|
+|[gmssl](gmssl.md)|`国密算法(SM2/SM3/SM4)`|Y|Y|Y|X|X|X|X|X|
 |[gpio](gpio.md)|`GPIO操作`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[gtfont](gtfont.md)|`高通字库芯片`|Y|Y|X|X|X|X|X|X|
 |[hmeta](hmeta.md)|`硬件元数据`|Y|Y|Y|Y|Y|Y|Y|Y|
@@ -42,7 +42,7 @@
 |[lcd](lcd.md)|`lcd驱动模块`|Y|Y|X|X|X|X|X|Y|
 |[lcdseg](lcdseg.md)|`段式lcd`|X|X|X|X|X|X|X|X|
 |[libcoap](libcoap.md)|`coap数据处理`|X|X|X|X|X|X|X|X|
-|[libgnss](libgnss.md)|`NMEA数据处理`|Y|Y|Y|X|X|X|X|Y|
+|[libgnss](libgnss.md)|`NMEA数据处理`|Y|Y|X|X|X|X|X|Y|
 |[little_flash](little_flash.md)|`LITTLE FLASH 软件包`|X|Y|X|X|X|X|X|Y|
 |[log](log.md)|`日志库`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[lora](lora.md)|`lora驱动模块`|Y|Y|X|X|X|X|X|X|
@@ -59,11 +59,11 @@
 |[pack](pack.md)|`打包和解包格式串`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[pin](pin.md)|`管脚命名映射`|X|X|X|X|X|X|X|X|
 |[pm](pm.md)|`电源管理`|Y|Y|Y|Y|Y|Y|Y|Y|
-|[protobuf](protobuf.md)|`ProtoBuffs编解码`|Y|Y|X|X|X|X|X|X|
+|[protobuf](protobuf.md)|`ProtoBuffs编解码`|Y|Y|Y|X|X|X|X|X|
 |[pwm](pwm.md)|`PWM模块`|Y|Y|Y|X|Y|Y|Y|Y|
 |[repl](repl.md)|`"读取-求值-输出" 循环`|Y|Y|X|X|X|X|X|X|
-|[rsa](rsa.md)|`RSA加密解密`|Y|Y|X|X|X|X|X|X|
-|[rtc](rtc.md)|`实时时钟`|Y|Y|Y|Y|X|X|X|Y|
+|[rsa](rsa.md)|`RSA加密解密`|Y|Y|Y|X|X|X|X|X|
+|[rtc](rtc.md)|`实时时钟`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[rtos](rtos.md)|`RTOS底层操作库`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[sdio](sdio.md)|`sdio`|X|X|X|X|X|X|X|X|
 |[sensor](sensor.md)|`传感器操作库`|Y|Y|Y|X|X|X|X|Y|
@@ -86,6 +86,6 @@
 |[wdt](wdt.md)|`watchdog操作库`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[websocket](websocket.md)|`websocket客户端`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[wlan](wlan.md)|`wifi操作`|Y|Y|Y|Y|Y|Y|Y|Y|
-|[xxtea](xxtea.md)|`xxtea加密解密 `|Y|Y|X|X|X|X|X|X|
+|[xxtea](xxtea.md)|`xxtea加密解密 `|Y|Y|Y|X|X|X|X|X|
 |[ymodem](ymodem.md)|`ymodem协议`|Y|Y|X|X|X|X|X|X|
 |[zbuff](zbuff.md)|`c内存数据操作库`|Y|Y|Y|Y|Y|Y|Y|Y|
