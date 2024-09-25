@@ -606,6 +606,7 @@ log.info("cell", json.encode(mobile.scell()))
     "rsrp": -107,
     "tac": 30005,
     "eci": 124045360,
+    "cid": 124045360,
     "rsrq": -9,
     "snr": 15,
     "earfcn": 1850
