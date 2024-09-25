@@ -49,7 +49,7 @@
 |[lora2](lora2.md)|`lora2驱动模块(支持多挂)`|Y|Y|X|X|X|X|X|X|
 |[lvgl](lvgl.md)|`LVGL图像库`|Y|Y|X|X|X|X|X|X|
 |[max30102](max30102.md)|`心率模块(MAX30102)`|Y|Y|X|X|X|X|X|X|
-|[mcu](mcu.md)|`封装mcu一些特殊操作`|Y|Y|Y|Y|X|X|X|Y|
+|[mcu](mcu.md)|`封装mcu一些特殊操作`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[miniz](miniz.md)|`简易zlib压缩`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[mlx90640](mlx90640.md)|`红外测温(MLX90640)`|Y|Y|X|X|X|X|X|X|
 |[mobile](mobile.md)|`蜂窝网络`|Y|Y|X|X|X|X|X|X|
