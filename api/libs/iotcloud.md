@@ -21,12 +21,12 @@
     -- iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx",device_name = "123456789"},{tls={client_cert=io.readFile("/luadb/client_cert.crt")}})
 
     -- 阿里云  
-    -- 动态注册(免预注册)(一型一密)(仅企业版支持)
+    -- 一型一密(免预注册-仅企业版支持)
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",product_secret = "xxx"}) -- 企业版公共实例
-    -- 动态注册(预注册)(一型一密)
+    -- 一型一密(预注册)
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})                     -- 旧版公共实例
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",product_secret = "xxx"}) -- 新版公共实例
-    -- 密钥校验 (预注册)(一机一密)
+    -- 一机一密(预注册)
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",key = "xxx"})                    -- 旧版公共实例
     -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",key = "xxx"})-- 新版公共实例
 
@@ -43,7 +43,7 @@
     -- 动态注册(免预注册)
     -- iotcloudc = iotcloud.new(iotcloud.HUAWEI,{produt_id = "xxx",project_id = "xxx",endpoint = "xxx",
     --                         iam_username="xxx",iam_password="xxx",iam_domain="xxx"})
-    -- 密钥校验 (预注册)
+    -- 手动注册(预注册)
     -- iotcloudc = iotcloud.new(iotcloud.HUAWEI,{produt_id = "xxx",endpoint = "xxx",device_name = "xxx",device_secret = "xxx"})
 
     -- -- 涂鸦云 
