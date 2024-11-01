@@ -43,7 +43,7 @@ end)
 
 |传入值类型|解释|
 |-|-|
-|param|table 参数(联系销售获取id与key) project_id:项目ID project_key:项目密钥 timeout:超时时间|
+|param|table 参数(联系销售获取id与key) project_id:项目ID project_key:项目密钥 timeout:超时时间,单位毫秒 默认15000|
 
 **返回值**
 
