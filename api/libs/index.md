@@ -9,6 +9,7 @@ ads1115plus
 adxl34x
 aht10
 air153C_wtd
+airlbs
 ak8963
 aliyun
 am2320
