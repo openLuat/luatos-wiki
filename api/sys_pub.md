@@ -360,6 +360,26 @@ end)
 
 ---
 
+### CSCON
+
+RRC状态
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+-- state 1 CONNECT 0 IDLE
+sys.subscribe("CSCON", function(state)
+	log.info("mobile", "CSCON", state)
+end)
+
+```
+
+---
+
 ### CC_IND
 
 通话状态变化
