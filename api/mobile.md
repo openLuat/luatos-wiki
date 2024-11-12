@@ -1100,3 +1100,62 @@ mobile.vsimOnOff(false) --使用外置实体卡
 
 ---
 
+## mobile.apnTableInit()
+
+
+
+初始化自定义APN列表，主要用于海外SIM卡
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+mobile.vsimInit()
+
+```
+
+---
+
+## mobile.apnTableAdd(mcc, mnc, ip_type, protocol, apn_name, user_name, password)
+
+
+
+往自定义APN列表添加一条APN信息，主要用于海外SIM卡
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|MCC码,16进制BCD码|
+|int|MNC码,16进制BCD码|
+|int|激活APN时的IP TYPE,1=IPV4 2=IPV6 3=IPV4V6,默认是1|
+|int|激活APN时,如果需要username和password,就要写鉴权协议类型,1~3,默认3,代表1和2都尝试一下。不需要鉴权的写0|
+|string|APN name,不能为空|
+|string|APN的username|
+|string|APN的password|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+mobile.apnTableAdd(0x460,00,3,0,"cmiot","","") -- 单独添加一条APN信息，移动公网卡设置APN为cmiot,一般不用设置
+
+
+```
+
+---
+
