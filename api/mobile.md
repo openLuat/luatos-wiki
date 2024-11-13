@@ -1119,7 +1119,7 @@ mobile.vsimOnOff(false) --使用外置实体卡
 **例子**
 
 ```lua
-mobile.vsimInit()
+mobile.apnTableInit()
 
 ```
 
@@ -1152,7 +1152,8 @@ mobile.vsimInit()
 **例子**
 
 ```lua
-mobile.apnTableAdd(0x460,00,3,0,"cmiot","","") -- 单独添加一条APN信息，移动公网卡设置APN为cmiot,一般不用设置
+mobile.apnTableInit() -- 先初始化，必须放在SIM卡识别完成前加入，最好就是写在开头
+mobile.apnTableAdd(0x460,0x00,3,0,"cmiot","","") -- 单独添加一条APN信息，必须放在SIM卡识别完成前加入，最好就是写在开头，移动公网卡设置APN为cmiot（一般不用设置，这里只是举个例子）
 
 
 ```
