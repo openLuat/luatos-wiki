@@ -1160,3 +1160,32 @@ mobile.apnTableAdd(0x460,0x00,3,0,"cmiot","","") -- 单独添加一条APN信息�
 
 ---
 
+## mobile.apnTablePrint(mcc, mnc)
+
+
+
+打印自定义APN列表里的一条信息，在没有拿到卡的情况下，测试一下对应的APN信息是否和运营商提供的匹配
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|MCC码,16进制BCD码|
+|int|MNC码,16进制BCD码|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+mobile.apnTableInit()
+mobile.apnTablePrint(0x202, 0x01)
+
+```
+
+---
+
