@@ -59,7 +59,7 @@
 |[pack](pack.md)|`打包和解包格式串`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[pin](pin.md)|`管脚命名映射`|X|X|X|X|X|X|X|X|
 |[pm](pm.md)|`电源管理`|Y|Y|Y|Y|Y|Y|Y|Y|
-|[protobuf](protobuf.md)|`ProtoBuffs编解码`|Y|Y|Y|X|X|X|X|X|
+|[protobuf](protobuf.md)|`ProtoBuffs编解码`|Y|Y|Y|X|X|X|X|Y|
 |[pwm](pwm.md)|`PWM模块`|Y|Y|Y|X|Y|Y|Y|Y|
 |[repl](repl.md)|`"读取-求值-输出" 循环`|Y|Y|X|X|X|X|X|X|
 |[rsa](rsa.md)|`RSA加密解密`|Y|Y|Y|X|X|X|X|X|
@@ -69,7 +69,7 @@
 |[sensor](sensor.md)|`传感器操作库`|Y|Y|Y|X|X|X|X|Y|
 |[sfd](sfd.md)|`SPI FLASH操作库`|Y|Y|X|X|X|X|X|X|
 |[sfud](sfud.md)|`SPI FLASH sfud软件包`|Y|Y|X|X|X|X|X|Y|
-|[sms](sms.md)|`短信`|X|Y|Y|Y|Y|Y|Y|X|
+|[sms](sms.md)|`短信`|X|Y|Y|Y|Y|Y|Y|Y|
 |[socket](socket.md)|`网络接口`|Y|Y|X|X|X|X|X|X|
 |[softkb](softkb.md)|`软件键盘矩阵`|X|X|X|X|X|X|X|X|
 |[spi](spi.md)|`spi操作库`|Y|Y|Y|X|Y|Y|Y|Y|
