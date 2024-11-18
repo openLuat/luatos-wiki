@@ -4,12 +4,36 @@
 * [固件下载备用地址](https://pan.air32.cn/s/DJTr?path=%2F)
 * 通过[云编译](https://wiki.luatos.com/develop/compile/Cloud_compilation.html),全自动编译最新固件
 
+## V1113
+
+* add: 支持设置最大发送功率,仅特殊客户使用
+* add: 支持关闭邻区测量用于功耗测试，非功耗测试情况下不要使用
+* add: 获取更详细的服务小区信息,支持mobile.scell()函数
+* add: 添加锁小区函数 mobile.lockCell()
+* add: mqtt加pong消息上报
+* add: 自定义apn列表，用于多个已知海外卡切换，需要用户提供相关APN信息
+* add: 打印一条自定义APN列表里的信息
+* update: 更新蚂蚁链底层库
+* update: 更新高通字库静态库
+* update: 优化full ota的下载速度控制，并且对https下载优化
+* update: SDK基线合入V013P1.11
+* update: SDK基线合入V013P2.11
+* update: 优化低功耗模式
+* update: luatos socket的端口号分布的更加均匀
+* update: tonumber可以输出到0xffffffff
+* change: pb编码应该使用固定顺序
+* change: http的部分错误状态强制打印出来
+* fix: i2c在poll模式下，特殊硬件条件下遇到一直BUSY情况没有超时退出
+* fix: eink异步方式通信失败时，死机
+* fix: iotcloud库,onenet自动注册三元组生成异常
+* fix: UTF8编码输入的短信发不到70汉字
+* fix: libgnss.debug在gnss报文过长时，无法打印出来
+
 ## v1112
 
 缺陷修复
 
 * 1：从hib模式唤醒后死机
-
 
 ## v1111
 
