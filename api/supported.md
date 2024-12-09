@@ -14,6 +14,7 @@
 |[dac](dac.md)|`数模转换`|X|X|X|X|X|X|X|X|
 |[disp](disp.md)|`disp库(已废弃)`|Y|Y|X|X|X|X|X|X|
 |[eink](eink.md)|`墨水屏操作库`|Y|Y|X|X|X|X|X|Y|
+|[ercoap](ercoap.md)|`新的Coap协议解析库`|?|?|?|?|?|?|?|?|
 |[errDump](errDump.md)|`错误上报`|Y|Y|X|X|X|X|X|X|
 |[fastlz](fastlz.md)|`FastLZ压缩`|Y|Y|X|X|X|X|X|X|
 |[fatfs](fatfs.md)|`读写fatfs格式`|Y|Y|X|X|X|X|X|Y|
@@ -54,6 +55,10 @@
 |[mlx90640](mlx90640.md)|`红外测温(MLX90640)`|Y|Y|X|X|X|X|X|X|
 |[mobile](mobile.md)|`蜂窝网络`|Y|Y|X|X|X|X|X|X|
 |[mqtt](mqtt.md)|`mqtt客户端`|Y|Y|X|X|X|X|X|X|
+|[natp](natp.md)|`网络地址端口转换(开发中)`|X|Y|X|X|X|X|X|X|
+|[nes](nes.md)|`nes模拟器`|Y|Y|X|X|X|X|X|X|
+|[nimble](nimble.md)|`蓝牙BLE库(nimble版)`|X|X|X|X|X|X|X|X|
+|[onewire](onewire.md)|`单总线协议驱动`|X|X|X|X|X|X|X|X|
 |[os](os.md)|`os操作`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[otp](otp.md)|`OTP操作库`|Y|Y|Y|X|X|X|X|Y|
 |[pack](pack.md)|`打包和解包格式串`|Y|Y|Y|Y|Y|Y|Y|Y|
@@ -73,6 +78,8 @@
 |[socket](socket.md)|`网络接口`|Y|Y|X|X|X|X|X|X|
 |[softkb](softkb.md)|`软件键盘矩阵`|X|X|X|X|X|X|X|X|
 |[spi](spi.md)|`spi操作库`|Y|Y|Y|X|Y|Y|Y|Y|
+|[spislave](spislave.md)|`SPI从机`|X|X|X|X|X|X|X|X|
+|[sqlite3](sqlite3.md)|`sqlite3数据库操作`|Y|Y|X|X|X|X|X|X|
 |[statem](statem.md)|`SM状态机`|Y|Y|X|X|X|X|X|X|
 |[string](string.md)|`字符串操作函数`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[sys](sys.md)|`sys库`|Y|Y|Y|Y|Y|Y|Y|Y|
@@ -81,11 +88,15 @@
 |[touchkey](touchkey.md)|`触摸按键`|X|X|X|X|X|X|X|X|
 |[u8g2](u8g2.md)|`u8g2图形处理库`|Y|Y|X|X|X|X|X|Y|
 |[uart](uart.md)|`串口操作库`|Y|Y|Y|Y|Y|Y|Y|Y|
+|[ulwip](ulwip.md)|`用户空间的lwip集成(开发中)`|Y|Y|X|X|X|X|X|X|
 |[usbapp](usbapp.md)|`USB功能操作`|X|X|X|X|X|X|X|X|
 |[w5500](w5500.md)|`w5500以太网驱动`|Y|Y|X|X|X|X|X|X|
 |[wdt](wdt.md)|`watchdog操作库`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[websocket](websocket.md)|`websocket客户端`|Y|Y|Y|Y|Y|Y|Y|Y|
 |[wlan](wlan.md)|`wifi操作`|Y|Y|Y|Y|Y|Y|Y|Y|
+|[wlanraw](wlanraw.md)|`WLAN数据RAW传输`|X|X|X|X|X|X|X|X|
+|[ws2812](ws2812.md)|`幻彩灯带RGB控制器(WS2812系列)`|Y|Y|X|X|X|X|X|X|
 |[xxtea](xxtea.md)|`xxtea加密解密 `|Y|Y|Y|X|X|X|X|X|
 |[ymodem](ymodem.md)|`ymodem协议`|Y|Y|X|X|X|X|X|X|
 |[zbuff](zbuff.md)|`c内存数据操作库`|Y|Y|Y|Y|Y|Y|Y|Y|
+|[zlib](zlib.md)|`zlib压缩/解压缩(已废弃)`|X|X|X|X|X|X|X|X|
