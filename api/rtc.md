@@ -32,7 +32,6 @@
 
 ```lua
 rtc.set({year=2021,mon=8,day=31,hour=17,min=8,sec=43})
---目前只有Air101/Air103/Air105/EC618系列支持时间戳方式
 rtc.set(1652230554)
 
 ```
