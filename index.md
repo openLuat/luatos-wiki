@@ -15,6 +15,8 @@ LuatOS是一款针对嵌入式的脚本运行框架，可以极大提升开发�
 使用Lua 5.3作为主要语言，针对资源较少的嵌入式环境进行了优化，极大提升了运行效率。  
 Powerful embedded Lua Engine for IoT devices, with many components and low memory requirements (16K RAM, 128K Flash)
 
+推荐使用新的文档中心 [https://docs.openluat.com](https://docs.openluat.com)
+
 ::::{grid} 1 2 2 3
 :gutter: 1 1 1 2
 
