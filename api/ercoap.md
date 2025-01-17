@@ -1,15 +1,5 @@
 # ercoap - 新的Coap协议解析库
 
-{bdg-secondary}`适配状态未知`
-
-```{note}
-本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/network/ercoap/binding/luat_lib_ercoap.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
-```
-
-```{tip}
-本库有专属demo，[点此链接查看ercoap的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/ercoap)
-```
-
 ## ercoap.parse(data)
 
 

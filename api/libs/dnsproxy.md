@@ -1,4 +1,4 @@
-# udpsrv - UDP服务器
+# dnsproxy - DNS代理转发
 
 **示例**
 
@@ -7,7 +7,7 @@
 
 ```
 
-## udpsrv.create(port, topic, adapter)
+## dnsproxy.create(adapter, main_adapter)
 
 
 
@@ -17,8 +17,7 @@
 
 |传入值类型|解释|
 |-|-|
-|int|端口号, 必填, 必须大于0小于65525|
-|string|收取UDP数据的topic,必填|
+|int|监听的网络适配器id|
 |int|网络适配编号, 默认为nil,可选|
 
 **返回值**

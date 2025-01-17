@@ -1,12 +1,5 @@
 # touchkey - 触摸按键
 
-{bdg-secondary}`适配状态未知`
-
-```{note}
-本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_touchkey.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
-```
-
-
 ## touchkey.setup(id, scan_period, window, threshold)
 
 

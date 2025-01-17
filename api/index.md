@@ -26,7 +26,6 @@ fonts
 fota
 fs
 fskv
-ftp
 gmssl
 gpio
 gtfont
@@ -60,6 +59,7 @@ mobile
 mqtt
 natp
 nes
+netdrv
 nimble
 onewire
 os

@@ -1,12 +1,5 @@
 # zlib - zlib压缩/解压缩(已废弃)
 
-{bdg-secondary}`适配状态未知`
-
-```{note}
-本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/zlib/luat_lib_zlib.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
-```
-
-
 **示例**
 
 ```lua

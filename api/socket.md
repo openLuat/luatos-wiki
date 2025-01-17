@@ -1,11 +1,5 @@
 # socket - 网络接口
 
-{bdg-success}`已适配` {bdg-primary}`Air780E` {bdg-primary}`Air780EP`
-
-```{tip}
-本库有专属demo，[点此链接查看socket的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/socket)
-```
-
 ## 常量
 
 |常量|类型|解释|
@@ -21,117 +15,15 @@
 |socket.EVENT|number|EVENT事件|
 |socket.TX_OK|number|TX_OK事件|
 |socket.CLOSED|number|CLOSED事件|
+|socket.LWIP_USER0|number|使用LWIP协议栈的自定义网卡0, 2025.1.12新增|
+|socket.LWIP_USER1|number|使用LWIP协议栈的自定义网卡1, 2025.1.12新增|
+|socket.LWIP_USER2|number|使用LWIP协议栈的自定义网卡2, 2025.1.12新增|
+|socket.LWIP_USER3|number|使用LWIP协议栈的自定义网卡3, 2025.1.12新增|
+|socket.LWIP_USER4|number|使用LWIP协议栈的自定义网卡4, 2025.1.12新增|
+|socket.LWIP_USER5|number|使用LWIP协议栈的自定义网卡5, 2025.1.12新增|
+|socket.LWIP_USER6|number|使用LWIP协议栈的自定义网卡6, 2025.1.12新增|
+|socket.LWIP_USER7|number|使用LWIP协议栈的自定义网卡7, 2025.1.12新增|
 
-
-## socket.sntp(sntp_server)
-
-{bdg-success}`本接口仅支持` {bdg-primary}`Air780E` {bdg-primary}`Air780EP`
-
-sntp时间同步
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|string/table|sntp服务器地址 选填|
-|int|适配器序号， 只能是socket.ETH0（外置以太网），socket.LWIP_ETH（内置以太网），socket.LWIP_STA（内置WIFI的STA），socket.LWIP_AP（内置WIFI的AP），socket.LWIP_GP（内置蜂窝网络的GPRS），socket.USB（外置USB网卡），如果不填，优先选择soc平台自带能上外网的适配器，若仍然没有，选择最后一个注册的适配器|
-
-**返回值**
-
-无
-
-**例子**
-
-```lua
-socket.sntp()
---socket.sntp("ntp.aliyun.com") --自定义sntp服务器地址
---socket.sntp({"ntp.aliyun.com","ntp1.aliyun.com","ntp2.aliyun.com"}) --sntp自定义服务器地址
---socket.sntp(nil, socket.ETH0) --sntp自定义适配器序号
-sys.subscribe("NTP_UPDATE", function()
-    log.info("sntp", "time", os.date())
-end)
-sys.subscribe("NTP_ERROR", function()
-    log.info("socket", "sntp error")
-    socket.sntp()
-end)
-
-```
-
----
-
-## socket.ntptm()
-
-
-
-网络对时后的时间戳(ms级别)
-
-**参数**
-
-无
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|table|包含时间信息的数据|
-
-**例子**
-
-```lua
--- 本API于 2023.11.15 新增
--- 注意, 本函数在执行socket.sntp()且获取到NTP时间后才有效
--- 而且是2次sntp之后才是比较准确的值
--- 网络波动越小, 该时间戳越稳定
-local tm = socket.ntptm()
-
--- 对应的table包含多个数据, 均为整数值
-
--- 标准数据
--- tsec 当前秒数,从1900.1.1 0:0:0 开始算, UTC时间
--- tms  当前毫秒数
--- vaild 是否有效, true 或者 nil
-
--- 调试数据, 调试用,一般用户不用管
--- ndelay 网络延时平均值,单位毫秒
--- ssec 系统启动时刻与1900.1.1 0:0:0的秒数偏移量
--- sms 系统启动时刻与1900.1.1 0:0:0的毫秒偏移量
--- lsec 本地秒数计数器,基于mcu.tick64()
--- lms 本地毫秒数计数器,基于mcu.tick64()
-
-log.info("tm数据", json.encode(tm))
-log.info("时间戳", string.format("%u.%03d", tm.tsec, tm.tms))
-
-```
-
----
-
-## socket.sntp_port(port)
-
-
-
-设置SNTP服务器的端口号
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|port 端口号, 默认123|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|int|返回当前的端口号|
-
-**例子**
-
-```lua
--- 本函数于2024.5.17新增
--- 大部分情况下不需要设置NTP服务器的端口号,默认123即可
-
-```
-
----
 
 ## socket.localIP(adapter)
 
@@ -780,6 +672,148 @@ local isReady,default = socket.adapter(socket.ETH0)
 -- 注意: ，必须在接收到socket.ON_LINE消息之后才可能获取到，最多返回4个IP。
 -- socket.connect里如果remote_port设置成0，则当DNS完成时就返回socket.ON_LINE消息
 local ip1,ip2,ip3,ip4 = socket.remoteIP(ctrl)
+
+```
+
+---
+
+## socket.dft(id)
+
+
+
+设置默认网络适配器编号
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|默认适配器编号,若不传,则打包获取|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|默认适配器编号|
+
+**例子**
+
+```lua
+-- 本函数于 2025.1.6 新增
+-- 获取当前默认适配器编号
+local id = socket.dft()
+
+-- 设置默认适配器编号
+socket.dft(socket.LWIP_ETH)
+
+```
+
+---
+
+## socket.sntp(sntp_server)
+
+{bdg-success}`本接口仅支持` {bdg-primary}`Air780E` {bdg-primary}`Air780EP`
+
+sntp时间同步
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string/table|sntp服务器地址 选填|
+|int|适配器序号， 只能是socket.ETH0（外置以太网），socket.LWIP_ETH（内置以太网），socket.LWIP_STA（内置WIFI的STA），socket.LWIP_AP（内置WIFI的AP），socket.LWIP_GP（内置蜂窝网络的GPRS），socket.USB（外置USB网卡），如果不填，优先选择soc平台自带能上外网的适配器，若仍然没有，选择最后一个注册的适配器|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+socket.sntp()
+--socket.sntp("ntp.aliyun.com") --自定义sntp服务器地址
+--socket.sntp({"ntp.aliyun.com","ntp1.aliyun.com","ntp2.aliyun.com"}) --sntp自定义服务器地址
+--socket.sntp(nil, socket.ETH0) --sntp自定义适配器序号
+sys.subscribe("NTP_UPDATE", function()
+    log.info("sntp", "time", os.date())
+end)
+sys.subscribe("NTP_ERROR", function()
+    log.info("socket", "sntp error")
+    socket.sntp()
+end)
+
+```
+
+---
+
+## socket.ntptm()
+
+
+
+网络对时后的时间戳(ms级别)
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|table|包含时间信息的数据|
+
+**例子**
+
+```lua
+-- 本API于 2023.11.15 新增
+-- 注意, 本函数在执行socket.sntp()且获取到NTP时间后才有效
+-- 而且是2次sntp之后才是比较准确的值
+-- 网络波动越小, 该时间戳越稳定
+local tm = socket.ntptm()
+
+-- 对应的table包含多个数据, 均为整数值
+
+-- 标准数据
+-- tsec 当前秒数,从1900.1.1 0:0:0 开始算, UTC时间
+-- tms  当前毫秒数
+-- vaild 是否有效, true 或者 nil
+
+-- 调试数据, 调试用,一般用户不用管
+-- ndelay 网络延时平均值,单位毫秒
+-- ssec 系统启动时刻与1900.1.1 0:0:0的秒数偏移量
+-- sms 系统启动时刻与1900.1.1 0:0:0的毫秒偏移量
+-- lsec 本地秒数计数器,基于mcu.tick64()
+-- lms 本地毫秒数计数器,基于mcu.tick64()
+
+log.info("tm数据", json.encode(tm))
+log.info("时间戳", string.format("%u.%03d", tm.tsec, tm.tms))
+
+```
+
+---
+
+## socket.sntp_port(port)
+
+
+
+设置SNTP服务器的端口号
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|port 端口号, 默认123|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|返回当前的端口号|
+
+**例子**
+
+```lua
+-- 本函数于2024.5.17新增
+-- 大部分情况下不需要设置NTP服务器的端口号,默认123即可
 
 ```
 

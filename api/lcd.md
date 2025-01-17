@@ -1,15 +1,5 @@
 # lcd - lcd驱动模块
 
-{bdg-success}`已适配` {bdg-primary}`Air780E` {bdg-primary}`Air780EP` {bdg-primary}`Air201`
-
-```{note}
-本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/lcd/luat_lib_lcd.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
-```
-
-```{tip}
-本库有专属demo，[点此链接查看lcd的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/lcd)
-```
-
 ## 常量
 
 |常量|类型|解释|
@@ -35,7 +25,11 @@
 |lcd.direction_90|int|90°方向命令|
 |lcd.direction_180|int|180°方向命令|
 |lcd.direction_270|int|270°方向命令|
+|lcd.SPI|硬件spi|device lcd驱动|
 |lcd.HWID_0|硬件lcd驱动id0|(根据芯片支持选择)|
+|lcd.RGB|硬件RGB|lcd驱动 (根据芯片支持选择)|
+|lcd.ARM2D|硬件ARM2D|lcd驱动 (根据芯片支持选择)|
+|lcd.DMA2D|硬件DMA2D|lcd驱动 (根据芯片支持选择)|
 |lcd.WIRE_3_BIT_9_INTERFACE_I|三线spi|9bit 模式I|
 |lcd.WIRE_4_BIT_8_INTERFACE_I|四线spi|8bit 模式I|
 |lcd.WIRE_3_BIT_9_INTERFACE_II|三线spi|9bit 模式II|
@@ -69,6 +63,11 @@ lcd显示屏初始化
 spi_lcd = spi.deviceSetup(0,20,0,0,8,2000000,spi.MSB,1,1)
 log.info("lcd.init",
 lcd.init("st7735s",{port = "device",pin_dc = 17, pin_pwr = 7,pin_rst = 19,direction = 2,w = 160,h = 80,xoffset = 1,yoffset = 26},spi_lcd))
+
+-- rgb屏幕初始化
+lcd.init("h050iwv",{port = lcd.RGB, w = 800,h = 480})
+-- lcd.init("custom",{port = port,hbp = 46, hspw = 2, hfp = 48,vbp = 24, vspw = 2, vfp = 24,bus_speed = 60*1000*1000,w = 800,h = 480})
+
 
 ```
 

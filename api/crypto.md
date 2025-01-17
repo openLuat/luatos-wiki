@@ -1,15 +1,5 @@
 # crypto - 加解密和hash函数
 
-{bdg-success}`已适配` {bdg-primary}`Air780E` {bdg-primary}`Air780EP` {bdg-primary}`Air780EPS` {bdg-primary}`Air780EQ` {bdg-primary}`Air700EAQ` {bdg-primary}`Air700EMQ` {bdg-primary}`Air700ECQ` {bdg-primary}`Air201`
-
-```{note}
-本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/modules/luat_lib_crypto.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
-```
-
-```{tip}
-本库有专属demo，[点此链接查看crypto的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/crypto)
-```
-
 ## crypto.md5(str)
 
 

@@ -1,15 +1,5 @@
 # disp - disp库(已废弃)
 
-{bdg-success}`已适配` {bdg-primary}`Air780E` {bdg-primary}`Air780EP`
-
-```{note}
-本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/u8g2/luat_lib_disp.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
-```
-
-```{tip}
-本库有专属demo，[点此链接查看disp的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/u8g2)
-```
-
 **示例**
 
 ```lua

@@ -1,15 +1,5 @@
 # sqlite3 - sqlite3数据库操作
 
-{bdg-success}`已适配` {bdg-primary}`Air780E` {bdg-primary}`Air780EP`
-
-```{note}
-本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/sqlite3/binding/luat_lib_sqlite.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
-```
-
-```{tip}
-本库有专属demo，[点此链接查看sqlite3的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/sqlite3)
-```
-
 **示例**
 
 ```lua

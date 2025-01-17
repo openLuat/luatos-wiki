@@ -17,6 +17,7 @@ ap3216c
 bh1750
 bmx
 cht8305c
+dnsproxy
 ds3231
 ec11
 gt911
@@ -36,6 +37,7 @@ lm75
 max31856
 mcp2515
 mlx90614
+modbus_rtu
 mpu6xxx
 necir
 netLed

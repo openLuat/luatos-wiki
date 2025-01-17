@@ -1,12 +1,5 @@
 # airlbs - airlbs 定位服务(收费服务，需自行联系销售申请)
 
-{bdg-secondary}`适配状态未知`
-
-```{note}
-本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../script/libs/airlbs.lua)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
-```
-
-
 **示例**
 
 ```lua

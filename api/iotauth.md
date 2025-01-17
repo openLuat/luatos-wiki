@@ -1,11 +1,5 @@
 # iotauth - IoT鉴权库, 用于生成各种云平台的参数
 
-{bdg-success}`已适配` {bdg-primary}`Air780E` {bdg-primary}`Air780EP` {bdg-primary}`Air780EPS` {bdg-primary}`Air780EQ` {bdg-primary}`Air700EAQ` {bdg-primary}`Air700EMQ` {bdg-primary}`Air700ECQ` {bdg-primary}`Air201`
-
-```{tip}
-本库有专属demo，[点此链接查看iotauth的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/iotauth)
-```
-
 ## iotauth.aliyun(product_key, device_name,device_secret,method,cur_timestamp)
 
 

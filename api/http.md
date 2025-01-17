@@ -1,15 +1,5 @@
 # http - http 客户端
 
-{bdg-success}`已适配` {bdg-primary}`Air780E` {bdg-primary}`Air780EP`
-
-```{note}
-本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/network/libhttp/luat_lib_http.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
-```
-
-```{tip}
-本库有专属demo，[点此链接查看http的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/http)
-```
-
 **示例**
 
 ```lua

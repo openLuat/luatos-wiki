@@ -1,15 +1,5 @@
 # sfud - SPI FLASH sfud软件包
 
-{bdg-success}`已适配` {bdg-primary}`Air780E` {bdg-primary}`Air780EP` {bdg-primary}`Air201`
-
-```{note}
-本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/sfud/luat_lib_sfud.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
-```
-
-```{tip}
-本库有专属demo，[点此链接查看sfud的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/sfud)
-```
-
 ## sfud.init(spi_id, spi_cs, spi_bandrate)/sfud.init(spi_device)
 
 

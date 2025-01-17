@@ -1,15 +1,5 @@
 # lora2 - lora2驱动模块(支持多挂)
 
-{bdg-success}`已适配` {bdg-primary}`Air780E` {bdg-primary}`Air780EP`
-
-```{note}
-本页文档由[这个文件](https://gitee.com/openLuat/LuatOS/tree/master/luat/../components/lora2/luat_lib_lora.c)自动生成。如有错误，请提交issue或帮忙修改后pr，谢谢！
-```
-
-```{tip}
-本库有专属demo，[点此链接查看lora2的demo例子](https://gitee.com/openLuat/LuatOS/tree/master/demo/lora)
-```
-
 ## 常量
 
 |常量|类型|解释|
