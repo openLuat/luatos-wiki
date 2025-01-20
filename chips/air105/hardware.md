@@ -3,7 +3,7 @@
 
 ## 硬件文档
 
-* 硬件设计手册: [Air105_MCU设计手册V1.7.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220513112445291_Air105_MCU设计手册V1.7.pdf)
+* 硬件设计手册: [Air105_MCU设计手册V1.8.pdf](hAir105_MCU设计手册V1.8.pdf)
 * 开发板手册: [Air105_核心板使用手册V1.1.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220303111656608_Air105%20核心板使用手册V1.1.pdf)
 * 开发板原理图: [CORE-Air105-V1.1.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220110133139675_CORE-Air105-V1.1.pdf)
 * 开发板bom表: [CORE-Air105-V1.0-Bom.xlsx](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220109114039040_CORE-Air105-V1.0-Bom.xlsx)
