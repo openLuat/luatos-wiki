@@ -75,6 +75,10 @@ log.info("http.get", code, headers, body)
 -- 自定义超时时间, 5000ms
 http.request("GET","http://httpbin.com/", nil, nil, {timeout=5000}).wait()
 
+-- 分段下载
+local heads = {["Range"] = "bytes=0-99"} --下载0-99之间的数据
+http.request("GET","http://httpbin.air32.cn/get", heads, nil, {timeout=5000}).wait()
+
 ```
 
 ---
