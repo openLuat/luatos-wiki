@@ -41,6 +41,7 @@ modbus_rtu
 mpu6xxx
 necir
 netLed
+openai
 pca9685
 pcf8563t
 pcf8574
