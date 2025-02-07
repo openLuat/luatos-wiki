@@ -97,7 +97,7 @@ log.info("netdrv", "mac addr", netdrv.mac(socket.LWIP_ETH))
 
 ---
 
-## netdrv.ipv4(addr, mark, gw)
+## netdrv.ipv4(id, addr, mark, gw)
 
 
 
@@ -107,6 +107,7 @@ log.info("netdrv", "mac addr", netdrv.mac(socket.LWIP_ETH))
 
 |传入值类型|解释|
 |-|-|
+|int|网络适配器编号, 例如 socket.LWIP_ETH|
 |string|ipv4地址,如果是读取就不需要传|
 |string|掩码|
 |string|网关|
