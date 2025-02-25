@@ -1,0 +1,382 @@
+# can - can操作库
+
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|can.MODE_NORMAL|number|正常工作模式|
+|can.MODE_LISTEN|number|监听模式|
+|can.MODE_TEST|number|自测模式|
+|can.MODE_SLEEP|number|休眠模式|
+|can.STATE_STOP|number|停止工作状态|
+|can.STATE_ACTIVE|number|主动错误状态，一般都是这个状态|
+|can.STATE_PASSIVE|number|被动错误状态，总线上错误多会进入这个状态，但是还能正常收发|
+|can.STATE_BUSOFF|number|离线状态，总线上错误非常多会进入这个状态，不能收发，需要手动退出|
+|can.STATE_LISTEN|number|监听状态，选择监听模式时进入这个状态|
+|can.STATE_TEST|number|自收自发状态，选择自测模式时进入这个状态|
+|can.STATE_SLEEP|number|休眠状态，选择休眠模式时进入这个状态|
+|can.CB_MSG|number|回调消息类型，有新数据写入缓存|
+|can.CB_TX|number|回调消息类型，数据发送结束，需要根据后续param确定发送成功还是失败|
+|can.CB_ERR|number|回调消息类型，有错误报告，后续param是错误码|
+|can.CB_STATE|number|回调消息类型，总线状态变更，后续param是新的状态，也可以用can.state读出|
+|can.STATE_TEST|number|自收自发状态，选择自测模式时进入这个状态|
+|can.STATE_SLEEP|number|休眠状态，选择休眠模式时进入这个状态|
+
+
+## can.init(id, rx_message_cache_max)
+
+
+
+CAN总线初始化
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|id, 如果只有一条总线写0或者留空, 有多条的，can0写0，can1写1, 如此类推, 一般情况只有1条|
+|int|rx_message_cache_max，接收缓存消息数的最大值，写0或者留空则使用平台默认值|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,失败返回false|
+
+**例子**
+
+```lua
+can.init()
+
+```
+
+---
+
+## can.on(id, func)
+
+
+
+注册CAN事件回调
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|id, 如果只有一条总线写0或者留空, 有多条的，can0写0，can1写1, 如此类推, 一般情况只有1条|
+|function|回调方法|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+can.on(1, function(id, type, param)
+    log.info("can", id, type, param)
+end)
+
+```
+
+---
+
+## can.timing(id, br, PTS, PBS1, PBS2, SJW)
+
+
+
+CAN总线配置时序
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|id, 如果只有一条总线写0或者留空, 有多条的，can0写0，can1写1, 如此类推, 一般情况只有1条|
+|int|br, 波特率, 默认1Mbps|
+|int|PTS, 传播时间段, 范围1~8，默认5|
+|int|PBS1, 相位缓冲段1，范围1~8，默认4|
+|int|PBS2, 相位缓冲段2，范围2~8，默认3|
+|int|SJW, 同步补偿宽度值，范围1~4，默认2|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,失败返回false|
+
+**例子**
+
+```lua
+can.timing(0, 1000000, 5, 4, 3, 2)
+can.timing(0, 650000, 9, 6, 4, 2)
+can.timing(0, 500000, 5, 4, 3, 2)
+can.timing(0, 250000, 5, 4, 3, 2)
+can.timing(0, 125000, 5, 4, 3, 2)
+can.timing(0, 100000, 5, 4, 3, 2)
+can.timing(0, 50000, 9, 6, 4, 2)
+can.timing(0, 25000, 9, 6, 4, 2)
+
+```
+
+---
+
+## can.mode(id, mode)
+
+
+
+CAN总线设置工作模式
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|id, 如果只有一条总线写0或者留空, 有多条的，can0写0，can1写1, 如此类推, 一般情况只有1条|
+|int|mode, 见MODE_XXX，默认是MODE_NORMAL|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,失败返回false|
+
+**例子**
+
+```lua
+can.mode(0, CAN.MODE_NORMAL)
+
+```
+
+---
+
+## can.node(id, node_id, id_type)
+
+
+
+CAN总线设置节点ID，这是一种简易的过滤规则，只接收和ID完全匹配的消息，和can.filter选择一个使用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|id, 如果只有一条总线写0或者留空, 有多条的，can0写0，can1写1, 如此类推, 一般情况只有1条|
+|int|node_id, 节点ID, 标准格式11位或者扩展格式29位，根据is_extend_id决定，默认值是0x1fffffff，id值越小，优先级越高|
+|int|id_type，ID类型，填1或者CAN.EXT为扩展格式，填0或者CAN.STD为标准格式|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,失败返回false|
+
+**例子**
+
+```lua
+can.node(0, 0x12345678, CAN.EXT)
+can.node(0, 0x123, CAN.STD)
+
+```
+
+---
+
+## can.filter(id, dual_mode, ACR, AMR)
+
+
+
+CAN总线设置接收过滤模式，当can.node不满足需求时才使用这个，和can.node选择一个使用，过滤模式比较复杂，请参考SJA1000的Pelican模式下滤波
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|id, 如果只有一条总线写0或者留空, 有多条的，can0写0，can1写1, 如此类推, 一般情况只有1条|
+|boolean|dual_mode, 是否是双过滤模式，true是，false不是，默认是false|
+|int|ACR, 接收代码寄存器值，必须写0xnnnnnnnn这样的格式，大端格式赋值到4个ACR寄存器上，默认值是0|
+|int|AMR, 接收屏蔽寄存器值，必须写0xnnnnnnnn这样的格式，大端格式赋值到4个AMR寄存器上，对应bit写0表示需要检测，写1表示不检测，默认是0xffffffff，不过滤全接收|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,失败返回false|
+
+**例子**
+
+```lua
+can.filter(0, false, 0x12345678, 0x07) --效果等同于can.node(0, 0x12345678, CAN.EXT)
+can.filter(0, false, 0x123, 0x0001fffff) --效果等同于can.node(0, 0x123, CAN.STD)
+
+```
+
+---
+
+## can.state(id)
+
+
+
+CAN工作状态
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|id, 如果只有一条总线写0或者留空, 有多条的，can0写0，can1写1, 如此类推, 一般情况只有1条|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|返回值见STATE_XXX|
+
+**例子**
+
+```lua
+can.state(0)
+
+```
+
+---
+
+## can.tx(id, msg_id, id_type, RTR, need_ack, data)
+
+
+
+CAN发送一条消息
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|id, 如果只有一条总线写0或者留空, 有多条的，can0写0，can1写1, 如此类推, 一般情况只有1条|
+|int|msg_id, 节点ID, 标准格式11位或者扩展格式29位，根据is_extend_id决定，默认值是0x1fffffff，id值越小，优先级越高|
+|int|id_type, ID类型，填1或者CAN.EXT为扩展格式，填0或者CAN.STD为标准格式|
+|boolean|RTR, 是否是双过滤模式，true是，false不是，默认是false|
+|boolean|need_ack，是否需要应答，true是，false不需要，默认是true|
+|string/zbuff|data, 需要发送的数据, 如果是zbuff会从指针起始位置开始发送，最多发送8字节|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,失败返回false|
+
+**例子**
+
+```lua
+can.tx(id, 0x12345678, CAN.EXT, false, true, "\x00\x01\x02\x03\0x04\x05\0x6\x07")
+
+```
+
+---
+
+## can.rx(id)
+
+
+
+从缓存里读出一条消息
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|id, 如果只有一条总线写0或者留空, 有多条的，can0写0，can1写1, 如此类推, 一般情况只有1条|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|是否读出数据，true读出，false没有读出，缓存已经空了，或者id不对|
+|int|消息ID|
+|int|ID类型，1或者CAN.EXT为扩展格式，0或者CAN.STD为标准格式|
+|boolean|是否是遥控帧，true是，false不是|
+|string|数据|
+
+**例子**
+
+```lua
+local succ, id, type, rtr, data = can.rx(0)
+
+```
+
+---
+
+## can.stop(id)
+
+
+
+立刻停止当前的发送
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|id, 如果只有一条总线写0或者留空, 有多条的，can0写0，can1写1, 如此类推, 一般情况只有1条|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,失败返回false|
+
+**例子**
+
+```lua
+can.stop(0)
+
+```
+
+---
+
+## can.reset(id)
+
+
+
+CAN总线复位，一般用于从总线关闭状态恢复成主动错误
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|id, 如果只有一条总线写0或者留空, 有多条的，can0写0，can1写1, 如此类推, 一般情况只有1条|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,失败返回false|
+
+**例子**
+
+```lua
+can.reset(0)
+
+```
+
+---
+
+## can.deinit(id)
+
+
+
+CAN完全关闭
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|id, 如果只有一条总线写0或者留空, 有多条的，can0写0，can1写1, 如此类推, 一般情况只有1条|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,失败返回false|
+
+**例子**
+
+```lua
+can.state(0)
+
+```
+
+---
+

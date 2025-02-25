@@ -10,6 +10,7 @@ antbot
 audio
 bit64
 camera
+can
 cc
 codec
 coremark
@@ -39,6 +40,7 @@ iconv
 io
 ioqueue
 iotauth
+iperf
 ir
 json
 keyboard
@@ -89,6 +91,7 @@ sys
 sysplus
 timer
 touchkey
+tp
 u8g2
 uart
 ulwip

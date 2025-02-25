@@ -8,10 +8,12 @@
 |mcu.I2C|number|外设类型-I2C|
 |mcu.SPI|number|外设类型-SPI|
 |mcu.PWM|number|外设类型-PWM|
+|mcu.PWM|number|外设类型-CAN|
 |mcu.GPIO|number|外设类型-GPIO|
 |mcu.I2S|number|外设类型-I2S|
 |mcu.LCD|number|外设类型-LCD|
 |mcu.CAM|number|外设类型-CAM|
+|mcu.CAM|number|外设类型-CAMERA，就是CAM|
 
 
 ## mcu.setClk(mhz)

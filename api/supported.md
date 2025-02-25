@@ -7,6 +7,7 @@
 |[audio](audio.md)|`多媒体-音频`|X|Y|Y|X|Y|
 |[bit64](bit64.md)|`32位系统上对64位数据的基本算术运算和逻辑运算`|Y|Y|Y|Y|Y|
 |[camera](camera.md)|`摄像头`|Y|X|Y|X|X|
+|[can](can.md)|`can操作库`|X|X|Y|X|X|
 |[cc](cc.md)|`VoLTE通话功能`|X|X|X|X|X|
 |[codec](codec.md)|`多媒体-编解码`|X|Y|Y|X|Y|
 |[coremark](coremark.md)|`跑分`|X|Y|Y|X|X|
@@ -36,6 +37,7 @@
 |[io](io.md)|`io操作(扩展)`|Y|Y|Y|Y|Y|
 |[ioqueue](ioqueue.md)|`io序列操作`|X|X|Y|X|X|
 |[iotauth](iotauth.md)|`IoT鉴权库, 用于生成各种云平台的参数`|Y|Y|Y|Y|Y|
+|[iperf](iperf.md)|`吞吐量测试`|X|X|X|X|X|
 |[ir](ir.md)|`红外遥控`|X|Y|Y|X|X|
 |[json](json.md)|`json生成和解析库`|Y|Y|Y|Y|Y|
 |[keyboard](keyboard.md)|`键盘矩阵`|X|X|X|X|X|
@@ -86,6 +88,7 @@
 |[sysplus](sysplus.md)|`sys库的强力补充`|Y|Y|Y|Y|Y|
 |[timer](timer.md)|`操作底层定时器`|X|X|X|X|X|
 |[touchkey](touchkey.md)|`触摸按键`|X|X|X|X|X|
+|[tp](tp.md)|`触摸库`|X|X|X|X|X|
 |[u8g2](u8g2.md)|`u8g2图形处理库`|X|Y|Y|X|Y|
 |[uart](uart.md)|`串口操作库`|Y|Y|Y|Y|Y|
 |[ulwip](ulwip.md)|`用户空间的lwip集成(开发中)`|Y|Y|Y|X|X|
