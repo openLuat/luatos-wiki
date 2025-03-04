@@ -471,7 +471,7 @@ log.info("wlan", "PS", wlan.powerSave(wlan.PS_NONE))
 
 ---
 
-## wlan.hostname(new_name)
+## wlan.hostname(id, new_name)
 
 
 
@@ -481,6 +481,7 @@ log.info("wlan", "PS", wlan.powerSave(wlan.PS_NONE))
 
 |传入值类型|解释|
 |-|-|
+|int|STA为0, AP为1. 本参数需要2025.2.25及之后编译的固件|
 |string|新的hostname,可选, 传入就是设置|
 
 **返回值**
@@ -497,7 +498,11 @@ log.info("wlan", "PS", wlan.powerSave(wlan.PS_NONE))
 -- hostname的默认值是  "LUATOS_" + 设备的MAC值
 -- 例如: LUATOS_0022EECC2399
 
+-- 老写法, 直接设置STA的hostname
 wlan.hostname("我的wifi物联网设备")
+-- 新的API, 支持设置STA或AP的hostname, 也可以分别取
+wlan.hostname(1, "myhost")
+wlan.hostname(0) -- 取STA的hostname
 
 ```
 

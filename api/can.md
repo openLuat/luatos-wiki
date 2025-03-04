@@ -380,3 +380,29 @@ can.state(0)
 
 ---
 
+## can.debug(on_off)
+
+
+
+CAN debug开关，打开后有更详细的打印
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|boolean|true打开，false关闭|
+|return|nil|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+can.debug(true)
+
+```
+
+---
+

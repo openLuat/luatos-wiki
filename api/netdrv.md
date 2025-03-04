@@ -34,7 +34,7 @@
 netdrv.setup(socket.LWIP_ETH)
 
 -- Air8000/Air780EPM初始化CH390H/D作为LAN口, 单一使用.不含WAN.
-netdrv.setup(socket.LWIP_ETH, netdrv.CH390, {spiid=0,cs=8})
+netdrv.setup(socket.LWIP_ETH, netdrv.CH390, {spi=0,cs=8})
 netdrv.dhcp(socket.LWIP_ETH, true)
 
 ```

@@ -761,3 +761,30 @@ local result, offset = buff:isEqual(1, buff2, 2, 10) --等同于memcmp(&buff[1],
 
 ---
 
+## buff:toBase64(dst)
+
+
+
+将当前zbuff数据转base64,输出到下一个zbuff中
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|zbuff指针, 必须大于目标长度, 即buff:used() * 1.35|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|转换后的长度|
+
+**例子**
+
+```lua
+buff:toBase64(dst) -- dst:len必须大于buff:used() * 1.35
+
+```
+
+---
+

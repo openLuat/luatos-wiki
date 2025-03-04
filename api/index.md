@@ -27,6 +27,7 @@ fonts
 fota
 fs
 fskv
+ftp
 gmssl
 gpio
 gtfont

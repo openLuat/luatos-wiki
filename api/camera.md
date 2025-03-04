@@ -162,7 +162,7 @@ camera.close(0)
 
 ---
 
-## camera.capture(id, save_path, quality)
+## camera.capture(id, save_path, quality, x, y, w, h)
 
 
 
@@ -175,6 +175,10 @@ camera拍照
 |int|camera id,例如0|
 |string/zbuff/nil|save_path,文件保存路径，空则写在上次路径里，默认是/capture.jpg，如果是zbuff，则将图片保存在buff内不写入文件系统|
 |int|quality, jpeg压缩质量，1最差，占用空间小，3最高，占用空间最大而且费时间，默认1|
+|int|x, 裁剪起始横坐标，从x列开始|
+|int|y, 裁剪起始纵坐标，从y行开始|
+|int|w, 裁剪后的宽度|
+|int|h, 裁剪后的高度|
 
 **返回值**
 

@@ -7,7 +7,7 @@
 |[audio](audio.md)|`多媒体-音频`|X|Y|Y|X|Y|
 |[bit64](bit64.md)|`32位系统上对64位数据的基本算术运算和逻辑运算`|Y|Y|Y|Y|Y|
 |[camera](camera.md)|`摄像头`|Y|X|Y|X|X|
-|[can](can.md)|`can操作库`|X|X|Y|X|X|
+|[can](can.md)|`can操作库`|Y|X|Y|X|X|
 |[cc](cc.md)|`VoLTE通话功能`|X|X|X|X|X|
 |[codec](codec.md)|`多媒体-编解码`|X|Y|Y|X|Y|
 |[coremark](coremark.md)|`跑分`|X|Y|Y|X|X|
@@ -24,6 +24,7 @@
 |[fota](fota.md)|`底层固件升级`|X|Y|Y|X|X|
 |[fs](fs.md)|`文件系统额外操作`|X|Y|Y|Y|Y|
 |[fskv](fskv.md)|`kv数据库,掉电不丢数据`|Y|Y|Y|Y|Y|
+|[ftp](ftp.md)|`ftp 客户端`|Y|Y|Y|Y|Y|
 |[gmssl](gmssl.md)|`国密算法(SM2/SM3/SM4)`|Y|Y|Y|Y|X|
 |[gpio](gpio.md)|`GPIO操作`|Y|Y|Y|Y|Y|
 |[gtfont](gtfont.md)|`高通字库芯片`|X|Y|Y|X|X|
@@ -44,7 +45,7 @@
 |[lcd](lcd.md)|`lcd驱动模块`|Y|Y|Y|X|Y|
 |[lcdseg](lcdseg.md)|`段式lcd`|X|X|X|X|X|
 |[libcoap](libcoap.md)|`coap数据处理`|X|X|X|X|X|
-|[libgnss](libgnss.md)|`NMEA数据处理`|X|Y|Y|X|Y|
+|[libgnss](libgnss.md)|`NMEA数据处理`|Y|Y|Y|X|Y|
 |[little_flash](little_flash.md)|`LITTLE FLASH 软件包`|X|X|Y|X|Y|
 |[log](log.md)|`日志库`|Y|Y|Y|Y|Y|
 |[lora](lora.md)|`lora驱动模块`|X|Y|Y|X|X|
@@ -73,7 +74,7 @@
 |[rtc](rtc.md)|`实时时钟`|Y|Y|Y|Y|Y|
 |[rtos](rtos.md)|`RTOS底层操作库`|Y|Y|Y|Y|Y|
 |[sdio](sdio.md)|`sdio`|X|X|X|X|X|
-|[sensor](sensor.md)|`传感器操作库`|X|Y|Y|Y|Y|
+|[sensor](sensor.md)|`传感器操作库`|Y|Y|Y|Y|Y|
 |[sfd](sfd.md)|`SPI FLASH操作库`|X|Y|Y|X|X|
 |[sfud](sfud.md)|`SPI FLASH sfud软件包`|X|Y|Y|X|Y|
 |[sms](sms.md)|`短信`|Y|X|Y|Y|Y|

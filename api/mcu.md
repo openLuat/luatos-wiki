@@ -13,7 +13,8 @@
 |mcu.I2S|number|外设类型-I2S|
 |mcu.LCD|number|外设类型-LCD|
 |mcu.CAM|number|外设类型-CAM|
-|mcu.CAM|number|外设类型-CAMERA，就是CAM|
+|mcu.CAMERA|number|外设类型-CAMERA，就是CAM|
+|mcu.ONEWIRE|number|外设类型-ONEWIRE，单总线|
 
 
 ## mcu.setClk(mhz)
