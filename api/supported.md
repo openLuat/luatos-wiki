@@ -61,7 +61,7 @@
 |[nes](nes.md)|`nes模拟器`|X|Y|Y|X|X|
 |[netdrv](netdrv.md)|`网络设备管理`|Y|Y|X|X|X|
 |[nimble](nimble.md)|`蓝牙BLE库(nimble版)`|X|X|X|X|X|
-|[onewire](onewire.md)|`单总线协议驱动`|X|X|X|X|X|
+|[onewire](onewire.md)|`单总线协议驱动`|Y|X|Y|X|X|
 |[os](os.md)|`os操作`|Y|Y|Y|Y|Y|
 |[otp](otp.md)|`OTP操作库`|X|Y|Y|Y|Y|
 |[pack](pack.md)|`打包和解包格式串`|Y|Y|Y|Y|Y|
@@ -81,7 +81,6 @@
 |[socket](socket.md)|`网络接口`|X|Y|Y|X|X|
 |[softkb](softkb.md)|`软件键盘矩阵`|X|X|X|X|X|
 |[spi](spi.md)|`spi操作库`|Y|Y|Y|Y|Y|
-|[spislave](spislave.md)|`SPI从机`|X|X|X|X|X|
 |[sqlite3](sqlite3.md)|`sqlite3数据库操作`|X|Y|Y|X|X|
 |[statem](statem.md)|`SM状态机`|X|Y|Y|X|X|
 |[string](string.md)|`字符串操作函数`|Y|Y|Y|Y|Y|

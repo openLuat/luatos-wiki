@@ -84,7 +84,6 @@ sms
 socket
 softkb
 spi
-spislave
 sqlite3
 statem
 string
