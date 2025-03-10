@@ -43,7 +43,7 @@ CORE ESP32S3核心板是基于乐鑫ESP32-S3进行设计的一款核心板，尺
 
 ## 三、管脚定义
 
-![footprint](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/PinOut_esp32s3.png)
+![footprint](https://cdn.openluat-luatcommunity.openluat.com/images/PinOut_esp32s3.png)
 
 **详细管脚描述**
 
@@ -96,7 +96,7 @@ CORE-ESP32-S3核心板支持以下3种方式供电：
 - 5V和GND排针供电
 - 3V3 和 GND 排针供电
 
-![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image002.jpg)
+![img](https://cdn.openluat-luatcommunity.openluat.com/images/clip_image002.jpg)
 
  调试过程中优先推荐的供电方式：TYPE-C USB接口供电。
 
@@ -104,7 +104,7 @@ CORE-ESP32-S3核心板支持以下3种方式供电：
 
 合宙CORE ESP32S3核心板板载2颗LED，开发者可参考表4-1进行对应管脚的控制。
 
-![image-20230109141355277](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/image-20230109141355277.png)
+![image-20230109141355277](https://cdn.openluat-luatcommunity.openluat.com/images/image-20230109141355277.png)
 
 表4-1
 
@@ -117,7 +117,7 @@ CORE-ESP32-S3核心板支持以下3种方式供电：
 
 合宙CORE ESP32S3核心板板载两颗按键，其中BOOT键可实现BOOT下载功能，RST键可实现复位功能，管脚控制参考表4-2。
 
-  ![image-20230109141521515](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/image-20230109141521515.png)
+  ![image-20230109141521515](https://cdn.openluat-luatcommunity.openluat.com/images/image-20230109141521515.png)
 
 表4-2
 

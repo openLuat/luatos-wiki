@@ -3702,20 +3702,20 @@ LVGL的内部就已经支持多种字体大小，可通过 *LV_FONT_...* 定义�
 
 当你要使用一些好看的字体，或者中文等LVGL没有集成的字体怎么办呢？当然可以自己制作字库，首先介绍的是使用LvglFontTool制作内部字体，打开LvglFontTool
 
-![image.png](http://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/20210825160157099_image.png)
+![image.png](http://cdn.openluat-luatcommunity.openluat.com/images/20210825160157099_image.png)
 
 抗锯齿选择默认，我们的lvgl是7.11版本，所以此处版本选择用于6.0版本以上，英文和数字根据自己需要勾选，类型选择内部字体，剩下都勾选上即可，字体名自己设置，包含里加上lvgl.h头文件，之后我们点击选择字体
 
-![image.png](http://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/20210825160651153_image.png)
+![image.png](http://cdn.openluat-luatcommunity.openluat.com/images/20210825160651153_image.png)
 
 字体我们选择我们的ttf字体，选择字体大小，点击确定
 之后写入需要的汉字或者根据自己需要点击加入常用汉字、全部汉字、图标
 
-![image.png](http://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/20210825161646132_image.png)
+![image.png](http://cdn.openluat-luatcommunity.openluat.com/images/20210825161646132_image.png)
 之后点击保存，开始转换
-![image.png](http://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/20210825161741318_image.png)
+![image.png](http://cdn.openluat-luatcommunity.openluat.com/images/20210825161741318_image.png)
 稍作等待
-![image.png](http://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/20210825161800994_image.png)
+![image.png](http://cdn.openluat-luatcommunity.openluat.com/images/20210825161800994_image.png)
 之后将生成的.c文件放在LuatOS\components\lvgl\font目录下，在luat_lvgl_fonts.h中声明你的字库
 
 ```c
@@ -3822,7 +3822,7 @@ npm i lv_font_conv -g
 
 我们cmd运行`lv_font_conv`测试
 
-![image.png](http://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/20210825170955069_image.png)
+![image.png](http://cdn.openluat-luatcommunity.openluat.com/images/20210825170955069_image.png)
 
 证明lv_font_conv 已正常运行
 
@@ -3873,7 +3873,7 @@ lv_font_conv --no-compress --format bin --font H:\OPPOSans-M.ttf -o H:\myfontd\o
 
 不想自己做？好的，我已经做好一些放在LuatOS\docs\markdown\exts\lvgl\fonts目录下了呦~
 
-![image.png](http://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/20210825172817011_image.png)
+![image.png](http://cdn.openluat-luatcommunity.openluat.com/images/20210825172817011_image.png)
 
 ### 字体使用
 
@@ -3895,7 +3895,7 @@ lv_font_conv --no-compress --format bin --font H:\OPPOSans-M.ttf -o H:\myfontd\o
 效果：
 
 
-![image.png](http://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/20210825174200997_image.png)
+![image.png](http://cdn.openluat-luatcommunity.openluat.com/images/20210825174200997_image.png)
 
 外部字体：
 
@@ -3909,7 +3909,7 @@ lv_font_conv --no-compress --format bin --font H:\OPPOSans-M.ttf -o H:\myfontd\o
 
 效果：
 
-![image.png](http://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/20210825173423618_image.png)
+![image.png](http://cdn.openluat-luatcommunity.openluat.com/images/20210825173423618_image.png)
 
 ### 字体说明
 

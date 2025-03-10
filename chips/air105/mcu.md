@@ -170,7 +170,7 @@
 
 开关机电路通过控制内部5V转3.3V LDO使能/关闭，实现芯片的开关机的功能。使用 CHARGE_VBAT 供电，并使用开关机功能时，要注意VBAT33管脚在位，芯片未上电时 POWER_KEY 拉高 150ms 内部 LDO 使能，通过POWER_KEY开机电路，注意：POWER_KEY键平时为低电平，按下拉高；CHARGE_VCC 有电时（电压范围4.7V~5.4V）内部 LDO 直接使能输出 3.3V 且无法关闭。可以参考下图中的两种开机供电方式。
 
-![](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/105powerkey.png)
+![](https://cdn.openluat-luatcommunity.openluat.com/images/105powerkey.png)
 
 关机功能可以通过POWER_KEY 拉高7S关闭内部LDO输出，以达到关机目的。
 
@@ -178,7 +178,7 @@
 
 Air105芯片支持电池充电功能，可以给3.7V锂电池充电，支持最大200mA的充电电流，电池充满电压为4.15±0.05V，电池充满后电压降到4.05V之后将重新给电池充电。电池这块给模块供电的时候，建议外加二极管切换电路
 
-![](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/105charge.png)
+![](https://cdn.openluat-luatcommunity.openluat.com/images/105charge.png)
 
 ### 2.4 LDO
 
@@ -204,7 +204,7 @@ I2C(芯片间)总线接口连接微控制器和串行I2C总线。它提供多主
 
 Air105连接USB时，要注意DN、DP保证90 Ohm的阻抗控制，差分走线；在VBUS管脚到芯片要串接100Ω的电阻用于抗浪涌，信号线上要串接22欧姆电阻（也可以是其他如33欧姆），防止信号反射，可以参考如下原理图。
 
-<img src="https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/image-20211214105553826.png" alt="image-20211214105553826" style="zoom: 50%;" />
+<img src="https://cdn.openluat-luatcommunity.openluat.com/images/image-20211214105553826.png" alt="image-20211214105553826" style="zoom: 50%;" />
 
 ## 三、参考电路设计
 
@@ -214,11 +214,11 @@ Air105芯片供电电压为5V，正常工作供电范围：4.0V~5.5V，内部LDO
 
 ## 四、封装尺寸
 
-![](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/1052021%E5%B9%B412%E6%9C%8814%E6%97%A5.png)
+![](https://cdn.openluat-luatcommunity.openluat.com/images/1052021%E5%B9%B412%E6%9C%8814%E6%97%A5.png)
 
 **参数对照表**
 
-![](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/105%E5%8F%82%E6%95%B0%E5%AF%B9%E7%85%A7.png)
+![](https://cdn.openluat-luatcommunity.openluat.com/images/105%E5%8F%82%E6%95%B0%E5%AF%B9%E7%85%A7.png)
 
  
 

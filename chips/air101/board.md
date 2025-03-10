@@ -17,4 +17,4 @@
 
 ## 开发板尺寸图
 
-![开发板尺寸图](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/image-20220315111243670.png)
+![开发板尺寸图](https://cdn.openluat-luatcommunity.openluat.com/images/image-20220315111243670.png)

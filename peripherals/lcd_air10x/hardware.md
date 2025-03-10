@@ -4,7 +4,7 @@
 
 ## 原理图
 
-![image-20220223143108801](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/image-20220223143108801.png)
+![image-20220223143108801](https://cdn.openluat-luatcommunity.openluat.com/images/image-20220223143108801.png)
 
 
 ## 资料下载

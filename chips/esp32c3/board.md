@@ -118,7 +118,7 @@ CORE-ESP32-C3核心板支持以下3种方式供电：
 - 5V和GND排针供电
 - 3V3 和 GND 排针供电 
 
-![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image002.jpg)
+![img](https://cdn.openluat-luatcommunity.openluat.com/images/clip_image002.jpg)
 
  调试过程中优先推荐的供电方式：TYPE-C USB接口供电。 
 
@@ -126,7 +126,7 @@ CORE-ESP32-C3核心板支持以下3种方式供电：
 
 合宙CORE ESP32核心板板载2颗LED，开发者可参考表4-1进行对应管脚的控制。
 
-​         ![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image010.jpg)
+​         ![img](https://cdn.openluat-luatcommunity.openluat.com/images/clip_image010.jpg)
 
 表4-1
 
@@ -139,7 +139,7 @@ CORE-ESP32-C3核心板支持以下3种方式供电：
 
 合宙CORE ESP32核心板板载两颗按键，其中BOOT键可实现BOOT下载功能，RST键可实现复位功能，管脚控制参考表4-2。
 
-​           ![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image012.jpg)
+​           ![img](https://cdn.openluat-luatcommunity.openluat.com/images/clip_image012.jpg)
 
  
 
@@ -156,7 +156,7 @@ CORE-ESP32-C3核心板支持以下3种方式供电：
 
  
 
-![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image014.jpg)
+![img](https://cdn.openluat-luatcommunity.openluat.com/images/clip_image014.jpg)
 
  
 
@@ -175,7 +175,7 @@ CORE-ESP32-C3核心板支持以下3种方式供电：
 
  
 
-![img](https://openluat-luatcommunity.oss-cn-hangzhou.aliyuncs.com/images/clip_image016.jpg)
+![img](https://cdn.openluat-luatcommunity.openluat.com/images/clip_image016.jpg)
 
  
 
