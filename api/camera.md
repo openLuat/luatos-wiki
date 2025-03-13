@@ -7,6 +7,7 @@
 |camera.AUTO|number|摄像头工作在自动模式|
 |camera.SCAN|number|摄像头工作在扫码模式，只输出Y分量|
 |camera.TYPE|number|摄像头类型，USB|
+|camera.TYPE|number|摄像头类型，DVP|
 
 
 ## camera.init(InitReg_or_cspi_id, cspi_speed, mode, is_msb, rx_bit, seq_type, is_ddr, only_y, scan_mode, w, h)

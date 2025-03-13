@@ -88,8 +88,8 @@
 |[sysplus](sysplus.md)|`sys库的强力补充`|Y|Y|Y|Y|Y|
 |[timer](timer.md)|`操作底层定时器`|X|X|X|X|X|
 |[touchkey](touchkey.md)|`触摸按键`|X|X|X|X|X|
-|[tp](tp.md)|`触摸库`|X|X|X|X|X|
-|[u8g2](u8g2.md)|`u8g2图形处理库`|X|Y|Y|X|Y|
+|[tp](tp.md)|`触摸库`|Y|X|Y|X|X|
+|[u8g2](u8g2.md)|`u8g2图形处理库`|Y|Y|Y|X|Y|
 |[uart](uart.md)|`串口操作库`|Y|Y|Y|Y|Y|
 |[ulwip](ulwip.md)|`用户空间的lwip集成(开发中)`|Y|Y|Y|X|X|
 |[usbapp](usbapp.md)|`USB功能操作`|X|X|X|X|X|

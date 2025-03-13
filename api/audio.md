@@ -14,6 +14,8 @@
 |audio.AMR|number|AMR_NB格式|
 |audio.AMR_NB|number|AMR_NB格式|
 |audio.AMR_WB|number|AMR_WB格式|
+|audio.ULAW|number|G711 ulaw格式|
+|audio.ALAW|number|G711 alaw格式|
 |audio.MORE_DATA|number|audio.on回调函数传入参数的值，表示底层播放完一段数据，可以传入更多数据|
 |audio.DONE|number|audio.on回调函数传入参数的值，表示底层播放完全部数据了|
 |audio.RECORD_DATA|number|audio.on回调函数传入参数的值，表示录音数据|
@@ -57,7 +59,7 @@ audio.start(0, audio.PCM, 1, 16000, 16)
 
 ---
 
-## audio.record(id, record_type, record_time, amr_quailty, path)
+## audio.record(id, record_type, record_time, amr_quailty, path, record_callback_time, buff0, buff1)
 
 
 
@@ -68,11 +70,13 @@ audio.start(0, audio.PCM, 1, 16000, 16)
 |传入值类型|解释|
 |-|-|
 |int|id             多媒体播放通道号|
-|int|record_type    录音音频格式,支持 audio.AMR audio.PCM (部分平台支持audio.AMR_WB)|
+|int|record_type    录音音频格式,支持 audio.AMR audio.PCM (部分平台支持audio.AMR_WB),或者直接输入采样率|
 |int|record_time    录制时长 单位秒,可选，默认0即表示一直录制|
 |int|amr_quailty    质量,audio.AMR下有效|
 |string|path        录音文件路径,可选,不指定则不保存,可在audio.on回调函数中处理原始PCM数据|
 |int|record_callback_time    不指定录音文件路径时，单次录音回调时长，单位是100ms。默认1，既100ms|
+|zbuff|录音原始PCM数据缓存0,不填写录音文件路径才会用到|
+|zbuff|录音原始PCM数据缓存1,不填写录音文件路径才会用到|
 
 **返回值**
 
@@ -210,7 +214,7 @@ audio.pause(0, false) --恢复通道0
 |传入值类型|解释|
 |-|-|
 |int|audio id, audio 0写0, audio 1写1|
-|function|回调方法，回调时传入参数为1、int 通道ID 2、int 消息值，只有audio.MORE_DATA和audio.DONE|
+|function|回调方法，回调时传入参数为1、int 通道ID 2、int 消息值，有audio.MORE_DATA,audio.DONE,audio.RECORD_DATA,audio.RECORD_DONE,3、RECORD_DATA后面跟数据存在哪个zbuff内，0或者1|
 
 **返回值**
 
