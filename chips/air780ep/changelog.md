@@ -4,6 +4,22 @@
 * [固件下载备用地址](https://pan.air32.cn/s/DJTr?path=%2F)
 * 通过[云编译](https://wiki.luatos.com/develop/compile/Cloud_compilation.html),全自动编译最新固件
 
+## V2004
+
+发布日期: 2025.3.13
+
+* add: 支持CAN
+* add: 支持OneWire
+* add: 支持U8G2
+* add: gpio库添加WAKEUPx/PWR_KEY/CHG_KEY 等常量
+* add: CH390以太网驱动,支持WAN和LAN模式
+* change: websocket缓冲区改大到64k
+* change: fatfs更新到15.a
+
+## V2003
+
+发布日期: 2024-12-31
+
 ## V2002
 
 请搭配 Luatools 3.0.11 以上版本!!!
