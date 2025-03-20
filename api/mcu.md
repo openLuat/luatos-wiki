@@ -10,11 +10,12 @@
 |mcu.PWM|number|外设类型-PWM|
 |mcu.PWM|number|外设类型-CAN|
 |mcu.GPIO|number|外设类型-GPIO|
-|mcu.I2S|number|外设类型-I2S|
-|mcu.LCD|number|外设类型-LCD|
-|mcu.CAM|number|外设类型-CAM|
-|mcu.CAMERA|number|外设类型-CAMERA，就是CAM|
-|mcu.ONEWIRE|number|外设类型-ONEWIRE，单总线|
+|mcu.I2S|number|外设类型-I2S, 音频总线|
+|mcu.LCD|number|外设类型-LCD, LCD专用总线|
+|mcu.CAM|number|外设类型-CAM,与 mcu.CAMERA一样|
+|mcu.CAMERA|number|外设类型-CAMERA，就是CAM,摄像头|
+|mcu.ONEWIRE|number|外设类型-ONEWIRE，单总线协议|
+|mcu.SDIO|number|外设类型-SDIO，接TF卡|
 
 
 ## mcu.setClk(mhz)
@@ -396,6 +397,14 @@ mcu.altfun(mcu.GPIO, 46, 32, 1, 0)
 -- UART2复用到paddr 25/26 alt 3
 mcu.altfun(mcu.UART,2,  25, 3, 1)
 mcu.altfun(mcu.UART,2,  26, 3, 0)
+
+-- Air8101的SDIO复用演示, 1线模式, 暂不支持4线
+mcu.altfun(mcu.SDI0,0,14)
+mcu.altfun(mcu.SDI0,0,15)
+mcu.altfun(mcu.SDI0,0,16)
+// mcu.altfun(mcu.SDI0,0,17)
+// mcu.altfun(mcu.SDI0,0,18)
+// mcu.altfun(mcu.SDI0,0,19)
 
 ```
 

@@ -156,7 +156,7 @@ log.info("netdrv", "mac addr", netdrv.mac(socket.LWIP_ETH))
 netdrv.napt(socket.LWIP_GP)
 
 -- 关闭napt功能
-netdrv.napt(socket.LWIP_GP)
+netdrv.napt(-1)
 
 ```
 

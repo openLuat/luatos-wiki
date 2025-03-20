@@ -25,6 +25,8 @@
 |audio.BUS_SOFT_DAC|number|硬件输出总线，软件模式DAC类型|
 |audio.VOLTAGE_1800|number|可配置的codec工作电压，1.8V|
 |audio.VOLTAGE_3300|number|可配置的codec工作电压，3.3V|
+|audio.RECORD_MONO|number|录音使用单声道|
+|audio.RECORD_STEREO|number|录音使用立体声|
 
 
 ## audio.start(id, audio_format, num_channels, sample_rate, bits_per_sample, is_signed)
@@ -59,7 +61,7 @@ audio.start(0, audio.PCM, 1, 16000, 16)
 
 ---
 
-## audio.record(id, record_type, record_time, amr_quailty, path, record_callback_time, buff0, buff1)
+## audio.record(id, record_type, record_time, amr_quailty, path, record_callback_time, buff0, buff1,channelCount)
 
 
 
@@ -77,6 +79,7 @@ audio.start(0, audio.PCM, 1, 16000, 16)
 |int|record_callback_time    不指定录音文件路径时，单次录音回调时长，单位是100ms。默认1，既100ms|
 |zbuff|录音原始PCM数据缓存0,不填写录音文件路径才会用到|
 |zbuff|录音原始PCM数据缓存1,不填写录音文件路径才会用到|
+|channelCount|声道数量,只针对非I2S设备有效,1单声道录音 2立体声录音 默认单声道.I2S设备在I2S相关API里配置|
 
 **返回值**
 

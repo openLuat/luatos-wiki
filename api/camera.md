@@ -6,8 +6,13 @@
 |-|-|-|
 |camera.AUTO|number|摄像头工作在自动模式|
 |camera.SCAN|number|摄像头工作在扫码模式，只输出Y分量|
-|camera.TYPE|number|摄像头类型，USB|
-|camera.TYPE|number|摄像头类型，DVP|
+|camera.USB|number|摄像头类型，USB|
+|camera.DVP|number|摄像头类型，DVP|
+|camera.CONF_H264_QP_INIT|number|H264编码器初始化QP值|
+|camera.CONF_H264_QP_I_MAX|number|H264编码器I的最大QP值|
+|camera.CONF_H264_QP_P_MAX|number|H264编码器P的最大QP值|
+|camera.CONF_H264_IMB_BITS|number|H264编码器IMB_BITS值|
+|camera.CONF_H264_PMB_BITS|number|H264编码器PMB_BITS值|
 
 
 ## camera.init(InitReg_or_cspi_id, cspi_speed, mode, is_msb, rx_bit, seq_type, is_ddr, only_y, scan_mode, w, h)
@@ -306,6 +311,36 @@ camera.getRaw(0)
 
 ```lua
 camera.preview(1, true)
+
+```
+
+---
+
+## camera.config(id, key, value)
+
+
+
+配置摄像头参数
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|camera id,例如0|
+|int|配置项的id|
+|int|配置项的值|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|配置结果,成功为0,否则为其他值|
+
+**例子**
+
+```lua
+-- 本函数于 2025.3.17 新增, 当前仅Air8101可用
+camera.config(0, camera.CONF_H264_QP_INIT, 20)
 
 ```
 
