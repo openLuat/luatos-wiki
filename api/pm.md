@@ -368,7 +368,7 @@ pm.shutdown()
 |传入值类型|解释|
 |-|-|
 |int|电源控制id,pm.USB pm.GPS之类|
-|boolean|or int 开关true/1开，false/0关，默认关，部分选项支持数值|
+|boolean/int|开关true/1开，false/0关，默认关，部分选项支持数值|
 
 **返回值**
 

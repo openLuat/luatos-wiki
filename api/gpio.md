@@ -126,7 +126,7 @@ gpio.setup(18, 0, nil, nil, 4)
 
 ```lua
 -- 捕获pin.PA07为高电平的持续时间
-gpio.caplevel(pin.PA07,1,function(val) print(val) end)
+gpio.caplevel(pin.PA07,1,function(us_int) print(us_float) end)
 
 ```
 
