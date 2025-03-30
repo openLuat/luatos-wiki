@@ -173,7 +173,7 @@ lvgl.theme_set_act("empty")
 
 
 
-LVGL休眠控制，暂停/恢复刷新定时器，目前只有105和EC618可以用
+LVGL休眠控制，暂停/恢复刷新定时器，目前只有Air105和Air780EXXX可以用
 
 **参数**
 
@@ -209,7 +209,7 @@ lvgl.sleep(false)        --恢复刷新，系统不休眠
 |int|屏幕高,可选,默认从lcd取|
 |userdata|lcd指针,可选,lcd初始化后有默认值,预留的多屏入口|
 |int|缓冲区大小,默认宽*10, 不含色深.|
-|int|缓冲模式,默认0, 单buff模式, 可选1,双buff模式|
+|int|缓冲模式,默认0x06, bit0:是否使用lcdbuff bit1:buff1 bit2:buff2 bit3:是否使用lua heap|
 
 **返回值**
 

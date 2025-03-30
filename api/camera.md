@@ -334,13 +334,17 @@ camera.preview(1, true)
 
 |返回值类型|解释|
 |-|-|
-|int|配置结果,成功为0,否则为其他值|
+|nil|当前无返回值|
 
 **例子**
 
 ```lua
 -- 本函数于 2025.3.17 新增, 当前仅Air8101可用
-camera.config(0, camera.CONF_H264_QP_INIT, 20)
+camera.config(0, camera.CONF_H264_QP_INIT, 16)
+camera.config(0, camera.CONF_H264_QP_I_MAX, 16)
+camera.config(0, camera.CONF_H264_QP_P_MAX, 8)
+camera.config(0, camera.CONF_H264_IMB_BITS, 3)
+camera.config(0, camera.CONF_H264_PMB_BITS, 1)
 
 ```
 

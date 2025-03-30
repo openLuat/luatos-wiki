@@ -312,7 +312,7 @@ mcu.setXTAL(true, true, 1248)    --高速时钟使用外部时钟,低速32K使�
 
 
 
-mcu死机时处理模式，目前只有EC618平台适用
+mcu死机时处理模式
 
 **参数**
 
@@ -467,7 +467,7 @@ log.info("sec_h", sec_h, "sec_l", sec_l)
 
 ```lua
 -- 本函数于2024.5.17新增
--- 当前仅Air780EP系列支持
+-- 当前仅Air780EXXX系列支持
 mcu.XTALRefOutput(true, false)    --高速晶振参考时钟输出,低速32K不输出
 
 ```

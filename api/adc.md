@@ -26,8 +26,8 @@ adc.close(adc.CH_VBAT)
 |-|-|-|
 |adc.ADC_RANGE_3_6|number|air105的ADC分压电阻开启，范围0~3.76V|
 |adc.ADC_RANGE_1_8|number|air105的ADC分压电阻关闭，范围0~1.88V|
-|adc.ADC_RANGE_3_8|number|air780E开启ADC0,1分压电阻，范围0~3.8V|
-|adc.ADC_RANGE_1_2|number|air780E关闭ADC0,1分压电阻，范围0~1.2V|
+|adc.ADC_RANGE_3_8|number|air780E开启ADC0,1分压电阻，范围0~3.8V，将要废弃，不建议使用|
+|adc.ADC_RANGE_1_2|number|air780E关闭ADC0,1分压电阻，范围0~1.2V，将要废弃，不建议使用|
 |adc.ADC_RANGE_MAX|number|ADC开启内部分压后所能到达最大量程，由具体芯片决定|
 |adc.ADC_RANGE_MIN|number|ADC关闭内部分压后所能到达最大量程，由具体芯片决定|
 |adc.CH_CPU|number|CPU内部温度的通道id|
@@ -72,7 +72,7 @@ adc.close(4) -- 若需要持续读取, 则不需要close, 功耗会高一点.
 
 
 
-设置ADC的测量范围，注意这个和具体芯片有关，目前只支持air105/Air780E系列
+设置ADC的测量范围，注意这个和具体芯片有关，目前只支持air105/Air780EXXX系列
 
 **参数**
 
@@ -96,9 +96,9 @@ adc.setRange(adc.ADC_RANGE_1_8)
 adc.setRange(adc.ADC_RANGE_3_6)
 
 
--- EC618系列(Air780E等)/EC718E系列(Air780EP/Air780EPV等)支持以下2种
-adc.setRange(adc.ADC_RANGE_1_2) -- 关闭分压
-adc.setRange(adc.ADC_RANGE_3_8) -- 启用分压
+-- Air780EXXX支持多种，但是建议用以下2种
+adc.setRange(adc.ADC_RANGE_MIN) -- 关闭分压
+adc.setRange(adc.ADC_RANGE_MAX) -- 启用分压
 
 ```
 

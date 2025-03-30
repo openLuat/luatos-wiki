@@ -159,7 +159,7 @@ CAN总线设置节点ID，这是一种简易的过滤规则，只接收和ID完�
 |传入值类型|解释|
 |-|-|
 |int|id, 如果只有一条总线写0或者留空, 有多条的，can0写0，can1写1, 如此类推, 一般情况只有1条|
-|int|node_id, 节点ID, 标准格式11位或者扩展格式29位，根据is_extend_id决定，默认值是0x1fffffff，id值越小，优先级越高|
+|int|node_id, 节点ID, 标准格式11位或者扩展格式29位，根据id_type决定，默认值是0x1fffffff，id值越小，优先级越高|
 |int|id_type，ID类型，填1或者CAN.EXT为扩展格式，填0或者CAN.STD为标准格式|
 
 **返回值**
@@ -202,8 +202,8 @@ CAN总线设置接收过滤模式，当can.node不满足需求时才使用这个
 **例子**
 
 ```lua
-can.filter(0, false, 0x12345678, 0x07) --效果等同于can.node(0, 0x12345678, CAN.EXT)
-can.filter(0, false, 0x123, 0x0001fffff) --效果等同于can.node(0, 0x123, CAN.STD)
+can.filter(0, false, 0x12345678 << 3, 0x07) --效果等同于can.node(0, 0x12345678, CAN.EXT)
+can.filter(0, false, 0x123 << 21, 0x0001fffff) --效果等同于can.node(0, 0x123, CAN.STD)
 
 ```
 
@@ -247,9 +247,9 @@ CAN发送一条消息
 |传入值类型|解释|
 |-|-|
 |int|id, 如果只有一条总线写0或者留空, 有多条的，can0写0，can1写1, 如此类推, 一般情况只有1条|
-|int|msg_id, 节点ID, 标准格式11位或者扩展格式29位，根据is_extend_id决定，默认值是0x1fffffff，id值越小，优先级越高|
+|int|msg_id, 节点ID, 标准格式11位或者扩展格式29位，根据id_type决定，默认值是0x1fffffff，id值越小，优先级越高|
 |int|id_type, ID类型，填1或者CAN.EXT为扩展格式，填0或者CAN.STD为标准格式|
-|boolean|RTR, 是否是双过滤模式，true是，false不是，默认是false|
+|boolean|RTR, 是否是遥控帧，true是，false不是，默认是false|
 |boolean|need_ack，是否需要应答，true是，false不需要，默认是true|
 |string/zbuff|data, 需要发送的数据, 如果是zbuff会从指针起始位置开始发送，最多发送8字节|
 
