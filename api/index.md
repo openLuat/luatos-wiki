@@ -103,6 +103,7 @@ wlan
 wlanraw
 ws2812
 xxtea
+yhm27xx
 ymodem
 zbuff
 zlib

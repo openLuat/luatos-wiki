@@ -100,6 +100,7 @@
 |[wlanraw](wlanraw.md)|`WLAN数据RAW传输`|X|X|X|X|X|
 |[ws2812](ws2812.md)|`幻彩灯带RGB控制器(WS2812系列)`|X|Y|Y|X|X|
 |[xxtea](xxtea.md)|`xxtea加密解密 `|Y|Y|Y|Y|X|
+|[yhm27xx](yhm27xx.md)|`yhm27xx充电芯片`|Y|Y|Y|Y|Y|
 |[ymodem](ymodem.md)|`ymodem协议`|X|Y|Y|X|X|
 |[zbuff](zbuff.md)|`c内存数据操作库`|Y|Y|Y|Y|Y|
 |[zlib](zlib.md)|`zlib压缩/解压缩(已废弃)`|X|X|X|X|X|
