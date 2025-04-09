@@ -477,7 +477,7 @@ local succ, result = socket.listen(ctrl)
 **例子**
 
 ```lua
-local succ, new_netc = socket.listen(ctrl, cb)
+local succ, new_netc = socket.accept(ctrl, cb)
 
 ```
 
