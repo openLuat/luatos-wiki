@@ -66,6 +66,7 @@
 |[otp](otp.md)|`OTP操作库`|X|Y|Y|Y|Y|
 |[pack](pack.md)|`打包和解包格式串`|Y|Y|Y|Y|Y|
 |[pin](pin.md)|`管脚命名映射`|X|X|X|X|X|
+|[pins](pins.md)|`管脚外设复用`|X|X|X|X|X|
 |[pm](pm.md)|`电源管理`|Y|Y|Y|Y|Y|
 |[protobuf](protobuf.md)|`ProtoBuffs编解码`|Y|Y|Y|Y|Y|
 |[pwm](pwm.md)|`PWM模块`|Y|Y|Y|Y|Y|

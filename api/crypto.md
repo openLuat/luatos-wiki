@@ -361,7 +361,7 @@ crc = crypto.crc16_modbus(data, 0xFFFF)
 
 ---
 
-## crypto.crc32(data)
+## crypto.crc32(data, start, poly)
 
 
 
@@ -372,6 +372,8 @@ crc = crypto.crc16_modbus(data, 0xFFFF)
 |传入值类型|解释|
 |-|-|
 |string|数据|
+|int|初始化值,默认0xFFFFFFFF|
+|int|crc多项式，可选，默认0x04C11DB7|
 
 **返回值**
 
@@ -384,6 +386,8 @@ crc = crypto.crc16_modbus(data, 0xFFFF)
 ```lua
 -- 计算CRC32
 local crc = crypto.crc32(data)
+-- start和poly可选, 是 2025.4.9 新增的参数
+local crc = crypto.crc32(data, 0xFFFFFFFF, 0x04C11DB7)
 
 ```
 

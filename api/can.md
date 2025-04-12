@@ -19,8 +19,8 @@
 |can.CB_TX|number|回调消息类型，数据发送结束，需要根据后续param确定发送成功还是失败|
 |can.CB_ERR|number|回调消息类型，有错误报告，后续param是错误码|
 |can.CB_STATE|number|回调消息类型，总线状态变更，后续param是新的状态，也可以用can.state读出|
-|can.STATE_TEST|number|自收自发状态，选择自测模式时进入这个状态|
-|can.STATE_SLEEP|number|休眠状态，选择休眠模式时进入这个状态|
+|can.EXT|number|扩展帧|
+|can.STD|number|标准帧|
 
 
 ## can.init(id, rx_message_cache_max)

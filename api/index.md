@@ -69,6 +69,7 @@ os
 otp
 pack
 pin
+pins
 pm
 protobuf
 pwm

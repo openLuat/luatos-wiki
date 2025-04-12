@@ -52,6 +52,12 @@ local result , data = airlbs.request({project_id = airlbs_project_id,project_key
 if result then
     print("airlbs", json.encode(data))
 end
+-- 2025.4.10 新增adapter参数
+local result , data = airlbs.request({
+    project_id = airlbs_project_id,
+    project_key = airlbs_project_key,
+    adapter = socket.LWIP_STA
+})
 
 ```
 

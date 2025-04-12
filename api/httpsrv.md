@@ -1,6 +1,6 @@
 # httpsrv - http服务端
 
-## httpsrv.start(port, func)
+## httpsrv.start(port, func, adapter)
 
 
 
@@ -12,6 +12,7 @@
 |-|-|
 |int|端口号|
 |function|回调函数|
+|int|网络适配器编号, 默认是平台自带的网络协议栈|
 
 **返回值**
 
