@@ -216,3 +216,34 @@ netdrv.napt(-1)
 
 ---
 
+## netdrv.ctrl(id, cmd, arg)
+
+
+
+给具体的驱动发送控制指令
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|网络适配器编号, 例如 socket.LWIP_ETH|
+|int|指令, 例如 netdrv.CTRL_RESET|
+|int|参数, 例如 netdrv.RESET_HARD|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功与否|
+
+**例子**
+
+```lua
+-- 重启网卡, 仅CH390H支持, 其他网络设备暂不支持
+-- 本函数于 2025.4.14 新增
+netdrv.ctrl(socket.LWIP_ETH, netdrv.CTRL_RESET, netdrv.RESET_HARD)
+
+```
+
+---
+
