@@ -54,7 +54,7 @@
 
 ---
 
-## pins.load(path)
+## pins.loadjson(path)
 
 
 
@@ -71,11 +71,37 @@
 |返回值类型|解释|
 |-|-|
 |boolean|成功返回true, 失败返回nil, 并在日志中提示失败原因|
+|int|失败返回错误码, 成功返回0|
 
 **例子**
 
 ```lua
-pins.load("/my.json")
+pins.loadjson("/my.json")
+
+```
+
+---
+
+## pins.debug(mode)
+
+
+
+调试模式
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|boolean|是否开启调试模式, 默认是关闭的, 就是日志多一些|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+pins.debug(true)
 
 ```
 

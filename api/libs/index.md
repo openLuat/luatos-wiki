@@ -17,6 +17,7 @@ ap3216c
 bh1750
 bmx
 cht8305c
+dhcpsrv
 dnsproxy
 ds3231
 ec11
