@@ -14,14 +14,14 @@
 |gpio.BOTH|number|双向触发,部分设备支持|
 |gpio.HIGH_IRQ|number|高电平触发,部分设备支持|
 |gpio.LOW_IRQ|number|低电平触发,部分设备支持|
-|gpio.WAKEUP0|number|休眠唤醒脚0|
-|gpio.WAKEUP1|number|休眠唤醒脚1|
-|gpio.WAKEUP2|number|休眠唤醒脚2|
-|gpio.WAKEUP3|number|休眠唤醒脚3|
-|gpio.WAKEUP4|number|休眠唤醒脚4|
-|gpio.WAKEUP5|number|休眠唤醒脚5|
-|gpio.WAKEUP6|number|休眠唤醒脚6|
-|gpio.PWR_KEY|number|WAKEUP_PAD|
+|gpio.WAKEUP0|number|休眠唤醒脚0,不支持输出|
+|gpio.WAKEUP1|number|VBUS,USB唤醒脚,不支持输出|
+|gpio.WAKEUP2|number|USIM热插拔脚,不支持输出|
+|gpio.WAKEUP3|number|休眠唤醒脚3,与GPIO20是同一个引脚|
+|gpio.WAKEUP4|number|休眠唤醒脚4,与GPIO21是同一个引脚|
+|gpio.WAKEUP5|number|休眠唤醒脚5,与GPIO22是同一个引脚|
+|gpio.WAKEUP6|number|休眠唤醒脚6,,不支持输出|
+|gpio.PWR_KEY|number|开机键,支持双向触发中断,不支持输出|
 
 
 ## gpio.setup(pin, mode, pull, irq, alt)

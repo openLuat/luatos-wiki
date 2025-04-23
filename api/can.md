@@ -1,5 +1,39 @@
 # can - can操作库
 
+**示例**
+
+```lua
+--[[
+错误码介绍
+错误码由4byte组成小端格式的uint32
+byte3预留无意义
+byte2方向，0TX 1RX
+byte1类型，0bit 1form 2stuff
+byte0位置：
+0x03 start of frame
+0x02 extended: ID bits 28 - 21, standard:  10 - 3
+0x06 extended: ID bits 20 - 18, standard:  2 - 0
+0x04 extended: substitute RTR, standard: RTR
+0x05 identifier extension
+0x07 extended: ID bits 17 - 13
+0x0f extended: ID bits 12 - 5
+0x0e extended: ID bits 4 - 0
+0x0C RTR
+0x0D reserved bit 1
+0x09 reserved bit 0
+0x0b data length code
+0x0a data section
+0x08 CRC sequence
+0x18 CRC delimiter
+0x19 ACK slot
+0x1b ACK delimiter
+0x1a end of frame
+0x12 intermission
+0x00 unspecified
+]]
+
+```
+
 ## 常量
 
 |常量|类型|解释|
@@ -17,7 +51,7 @@
 |can.STATE_SLEEP|number|休眠状态，选择休眠模式时进入这个状态|
 |can.CB_MSG|number|回调消息类型，有新数据写入缓存|
 |can.CB_TX|number|回调消息类型，数据发送结束，需要根据后续param确定发送成功还是失败|
-|can.CB_ERR|number|回调消息类型，有错误报告，后续param是错误码|
+|can.CB_ERR|number|回调消息类型，有错误报告，后续param是错误码，具体见错误码介绍|
 |can.CB_STATE|number|回调消息类型，总线状态变更，后续param是新的状态，也可以用can.state读出|
 |can.EXT|number|扩展帧|
 |can.STD|number|标准帧|
@@ -348,6 +382,33 @@ CAN总线复位，一般用于从总线关闭状态恢复成主动错误
 
 ```lua
 can.reset(0)
+
+```
+
+---
+
+## can.busOff(id)
+
+
+
+CAN总线关闭，此时可以重新进行timing,filter,node等配置
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|id, 如果只有一条总线写0或者留空, 有多条的，can0写0，can1写1, 如此类推, 一般情况只有1条|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,失败返回false|
+
+**例子**
+
+```lua
+can.busOff(0)
 
 ```
 

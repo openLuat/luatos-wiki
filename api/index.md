@@ -37,6 +37,7 @@ http
 httpsrv
 i2c
 i2s
+icmp
 iconv
 io
 ioqueue

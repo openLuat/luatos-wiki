@@ -58,7 +58,7 @@
 
 
 
-加载硬件配置，如果存在/luadb/pins.json，开机后自动加载/luadb/pins.json，无需调用
+加载硬件配置
 
 **参数**
 
@@ -76,6 +76,10 @@
 **例子**
 
 ```lua
+-- ，如果存在/luadb/pins_$model.json 就自动加载
+-- 其中的 $model是型号, 例如 Air780EPM, 默认加载的是 luadb/pins_Air780EPM.json
+
+-- 以下是自行加载配置的例子, 一般用不到
 pins.loadjson("/my.json")
 
 ```

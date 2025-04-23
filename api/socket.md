@@ -713,7 +713,7 @@ socket.dft(socket.LWIP_ETH)
 
 ## socket.sntp(sntp_server)
 
-{bdg-success}`本接口仅支持` {bdg-primary}`Air780E` {bdg-primary}`Air780EP`
+{bdg-secondary}`适配状态未知`
 
 sntp时间同步
 

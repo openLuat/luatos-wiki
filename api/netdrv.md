@@ -125,6 +125,8 @@ log.info("netdrv", "mac addr", netdrv.mac(socket.LWIP_ETH))
 ```lua
 -- 注意, 不是所有netdrv都支持设置的, 尤其4G Cat.1自带的netdrv就不能设置ipv4
 -- 注意, 设置ipv4时, DHCP要处于关闭状态!!
+-- 当前设置ip但ip值非法, 不返回任何东西
+-- 如果设置ip且ip值合法, 会返回ip, mask, gw
 
 ```
 
