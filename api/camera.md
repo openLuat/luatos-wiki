@@ -180,7 +180,7 @@ camera拍照
 |-|-|
 |int|camera id,例如0|
 |string/zbuff/nil|save_path,文件保存路径，空则写在上次路径里，默认是/capture.jpg，如果是zbuff，则将图片保存在buff内不写入文件系统|
-|int|quality, jpeg压缩质量，1最差，占用空间小，3最高，占用空间最大而且费时间，默认1|
+|int|quality, jpeg压缩质量, 见下面的使用说明|
 |int|x, 裁剪起始横坐标，从x列开始|
 |int|y, 裁剪起始纵坐标，从y行开始|
 |int|w, 裁剪后的宽度|
@@ -195,7 +195,16 @@ camera拍照
 **例子**
 
 ```lua
-camera.capture(0)
+-- 保存到文件,质量为80
+camera.capture(0, "/capture.jpg", 80)
+-- 保存到内存文件系统
+camera.capture(0, "/ram/123.jpg", 80)
+
+-- 保存到zbuff,质量为80
+camera.capture(0, buff, 80)
+
+-- jpeg压缩质量,请使用 50 - 95 之间的数值
+-- 为保持兼容性, 质量值1/2/3, 分别对应 90/85/99
 
 ```
 
