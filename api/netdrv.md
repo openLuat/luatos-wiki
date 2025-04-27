@@ -5,6 +5,10 @@
 |常量|类型|解释|
 |-|-|-|
 |netdrv.CH390|number|南京沁恒CH390系列,支持CH390D/CH390H, SPI通信|
+|netdrv.WHALE|number|虚拟网卡|
+|netdrv.CTRL_RESET|number|控制类型-复位,当前仅支持CH390H|
+|netdrv.CTRL_RESET|number|请求对网卡硬复位,当前仅支持CH390H|
+|netdrv.CTRL_RESET|number|请求对网卡硬复位,当前仅支持CH390H|
 
 
 ## netdrv.setup(id, tp, opts)
@@ -33,9 +37,13 @@
 -- Air8101初始化内部以太网控制器
 netdrv.setup(socket.LWIP_ETH)
 
--- Air8000/Air780EPM初始化CH390H/D作为LAN口, 单一使用.不含WAN.
+-- Air8000/Air780EPM初始化CH390H/D作为LAN/WAN
+-- 支持多个CH390H, 使用不同的CS脚区分不同网口
 netdrv.setup(socket.LWIP_ETH, netdrv.CH390, {spi=0,cs=8})
 netdrv.dhcp(socket.LWIP_ETH, true)
+-- 支持CH390H的中断模式, 能提供响应速度, 但是需要外接中断引脚
+-- 实测对总网速没有帮助, 轻负载时能降低功耗, 让模组能进入低功耗模式
+netdrv.setup(socket.LWIP_ETH, netdrv.CH390, {spi=0,cs=8,irq=20})
 
 ```
 

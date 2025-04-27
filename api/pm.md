@@ -188,7 +188,7 @@ pm.dtimerCheck(0) -- 检查id=0的底层定时器
 
 ---
 
-## dtimerWkId()
+## pm.dtimerWkId()
 
 
 
