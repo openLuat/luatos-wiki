@@ -61,4 +61,4 @@ AGPS(Assisted GPS)辅助定位 是指 通过向GPS/GNSS模组注入三要素数�
 
 ## 星历分析(非必须, 研究用途)
 
-学习研究用 [https://gitee.com/openLuat/luatos-ext-gnss](https://gitee.com/openLuat/luatos-ext-gnss)
+学习研究用 [https://github.com/wendal/luatos-ext-gnss](https://github.com/wendal/luatos-ext-gnss)
