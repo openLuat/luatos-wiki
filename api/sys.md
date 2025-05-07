@@ -155,7 +155,7 @@ end, 1000, "A", "B", "N")
 
 ```lua
 sys.timerLoopStart(function(a, b, c)
-    log.info("task", a, b, c) -- 1000毫秒后才会执行, 打印 task A B C
+    log.info("task", a, b, c) -- 1000毫秒后才会执行, 打印 task A B C, 仅打印一次
 end, 1000, "A", "B", "N")
 
 ```
@@ -186,7 +186,7 @@ end, 1000, "A", "B", "N")
 local tcount = 0
 local tid 
 tid = sys.timerLoopStart(function(a, b, c)
-    log.info("task", a, b, c) -- 1000毫秒后才会执行, 打印 task A B C
+    log.info("task", a, b, c) -- 1000毫秒后才会执行, 打印 task A B C, 每1000毫秒打印一次
     if tcount > 10 then
         sys.timerStop(tid)
     end
