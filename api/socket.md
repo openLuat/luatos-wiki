@@ -67,7 +67,7 @@ end)
 
 
 
-在某个适配的网卡上申请一个socket_ctrl
+在指定网卡上申请一个socket_ctrl
 
 **参数**
 
@@ -78,11 +78,30 @@ end)
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|userdata|成功返回network_ctrl，失败返回nil|
 
 **例子**
 
-无
+```lua
+
+--以太网网卡上申请一个network_ctrl,通过socket_cb_fun回调相关消息
+local netc = socket.create(socket.LWIP_GP, socket_cb_fun)
+--以太网网卡上申请一个network_ctrl,通过sendMsg方式通知taskName为"IOT_TASK"回调相关消息
+local netc = socket.create(socket.LWIP_GP, "IOT_TASK")
+
+-- 在默认网络适配器上创建一个network_ctrl
+local netc = socket.create(nil, "MySocket")
+
+--[[
+当通过回调函数回调消息时，输入给function一共3个参数：
+param1为申请的network_ctrl
+param2为具体的消息，只能是socket.RESET, socket.LINK, socket.ON_LINE, socket.TX_OK, socket.RX_NEW, socket.CLOSED等等
+param3为消息对应的参数
+]]
+
+```
 
 ---
 
