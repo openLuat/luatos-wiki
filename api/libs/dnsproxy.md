@@ -7,7 +7,7 @@
 
 ```
 
-## dnsproxy.create(adapter, main_adapter)
+## dnsproxy.setup(adapter, main_adapter)
 
 
 

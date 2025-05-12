@@ -479,10 +479,17 @@ can.debug(true)
 |返回值类型|解释|
 |-|-|
 |boolean|成功返回true,失败返回false,如果失败就不用看后面的参数了|
+|int|基础时钟|
+|int|最小分频系数|
+|int|最大分频系数|
+|int|分频系数步进，一般为1|
 
 **例子**
 
-无
+```lua
+local res, clk, div_min, div_max, div_step = can.capacity(0)
+
+```
 
 ---
 
