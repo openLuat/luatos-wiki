@@ -10,7 +10,7 @@ FTP客户端
 
 |传入值类型|解释|
 |-|-|
-|int|适配器序号, 只能是socket.ETH0, socket.STA, socket.AP,如果不填,会选择平台自带的方式,然后是最后一个注册的适配器|
+|int|适配器序号, 如果不填,会选择平台自带的方式,然后是最后一个注册的适配器,可选值请查阅socket库的常量表|
 |string|ip_addr 地址|
 |string|port 端口,默认21|
 |string|username 用户名|

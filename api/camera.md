@@ -8,11 +8,16 @@
 |camera.SCAN|number|摄像头工作在扫码模式，只输出Y分量|
 |camera.USB|number|摄像头类型，USB|
 |camera.DVP|number|摄像头类型，DVP|
+|camera.ROTATE_0|number|摄像头预览，画面不旋转|
+|camera.ROTATE_90|number|摄像头预览，画面旋转90度|
+|camera.ROTATE_270|number|摄像头预览，画面旋转270度|
 |camera.CONF_H264_QP_INIT|number|H264编码器初始化QP值|
 |camera.CONF_H264_QP_I_MAX|number|H264编码器I的最大QP值|
 |camera.CONF_H264_QP_P_MAX|number|H264编码器P的最大QP值|
 |camera.CONF_H264_IMB_BITS|number|H264编码器IMB_BITS值|
 |camera.CONF_H264_PMB_BITS|number|H264编码器PMB_BITS值|
+|camera.CONF_PREVIEW_ENABLE|number|是否启动摄像头预览功能，默认开启|
+|camera.CONF_PREVIEW_ROTATE|number|摄像头预览画面的旋转角度|
 
 
 ## camera.init(InitReg_or_cspi_id, cspi_speed, mode, is_msb, rx_bit, seq_type, is_ddr, only_y, scan_mode, w, h)
