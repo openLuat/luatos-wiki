@@ -74,7 +74,7 @@ end)
 |传入值类型|解释|
 |-|-|
 |int|适配器序号， 只能是socket.ETH0（外置以太网），socket.LWIP_ETH（内置以太网），socket.LWIP_STA（内置WIFI的STA），socket.LWIP_AP（内置WIFI的AP），socket.LWIP_GP（内置蜂窝网络的GPRS），socket.USB（外置USB网卡），如果不填，优先选择soc平台自带能上外网的适配器，若仍然没有，选择最后一个注册的适配器|
-|string|or function string为消息通知的taskName，function则为回调函数，如果固件没有内置sys_wait，则必须是function|
+|string/function|string为消息通知的taskName，function则为回调函数，如果固件没有内置sys_wait，则必须是function|
 
 **返回值**
 
@@ -97,7 +97,7 @@ local netc = socket.create(nil, "MySocket")
 --[[
 当通过回调函数回调消息时，输入给function一共3个参数：
 param1为申请的network_ctrl
-param2为具体的消息，只能是socket.RESET, socket.LINK, socket.ON_LINE, socket.TX_OK, socket.RX_NEW, socket.CLOSED等等
+param2为具体的消息，只能是socket.LINK, socket.ON_LINE, socket.TX_OK, socket.EVENT, socket.CLOSED等等
 param3为消息对应的参数
 ]]
 
