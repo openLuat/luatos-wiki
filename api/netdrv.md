@@ -257,3 +257,32 @@ netdrv.ctrl(socket.LWIP_ETH, netdrv.CTRL_RESET, netdrv.RESET_HARD)
 
 ---
 
+## netdrv.debug(id, enable)
+
+
+
+设置调试信息输出
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|网络适配器编号, 例如 socket.LWIP_ETH, 如果传0就是全局调试开关|
+|boolean|是否开启调试信息输出|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功与否|
+
+**例子**
+
+```lua
+-- 打开netdrv全局调试开关
+netdrv.debug(0, true)
+
+```
+
+---
+

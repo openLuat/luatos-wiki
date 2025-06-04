@@ -6,6 +6,7 @@
 ```{toctree}
 supported
 adc
+airlink
 antbot
 audio
 bit64
