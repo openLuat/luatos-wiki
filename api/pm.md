@@ -64,9 +64,11 @@ pm.request(pm.IDLE) -- 通过切换不同的值请求进入不同的休眠模式
 |pm.PWK_MODE|number|是否Air780EXXX的powerkey滤波模式，true开，注意滤波模式下reset变成直接关机|
 |pm.WORK_MODE|number|Air780EXXX的节能模式，0~3，0完全关闭，1~2普通低功耗，3超低功耗，深度休眠|
 |pm.IOVL|number|所有GPIO高电平电压控制,当前仅Air780EXXX可用|
+|pm.ID_NATIVE|number|PM控制的ID, 主芯片, 任意芯片的默认值就是它|
+|pm.ID_WIFI|number|PM控制的ID, WIFI芯片, 仅Air8000可用|
 
 
-## pm.request(mode)
+## pm.request(mode, chip)
 
 
 
@@ -77,6 +79,7 @@ pm.request(pm.IDLE) -- 通过切换不同的值请求进入不同的休眠模式
 |传入值类型|解释|
 |-|-|
 |int|休眠模式,例如pm.IDLE/LIGHT/DEEP/HIB.|
+|int|休眠芯片的ID, 默认是0, 大部分型号都只有0|
 
 **返回值**
 
@@ -357,7 +360,7 @@ pm.shutdown()
 
 ---
 
-## pm.power(id, onoff)
+## pm.power(id, onoff, chip)
 
 
 
@@ -369,6 +372,7 @@ pm.shutdown()
 |-|-|
 |int|电源控制id,pm.USB pm.GPS之类|
 |boolean/int|开关true/1开，false/0关，默认关，部分选项支持数值|
+|int|休眠芯片的ID, 默认是0, 大部分型号都只有0|
 
 **返回值**
 
