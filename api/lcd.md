@@ -644,7 +644,7 @@ lcd.drawGtfontGb2312("啊啊啊",32,0,0)
 |-|-|
 |string|str 显示字符串|
 |int|size 字体大小 (支持16-192号大小字体)|
-|int|gray 灰度[1阶/2阶/3阶/4阶]|
+|int|gray 灰度[1阶/2阶/4阶]|
 |int|x 横坐标|
 |int|y 竖坐标|
 
@@ -702,7 +702,7 @@ lcd.drawGtfontUtf8("啊啊啊",32,0,0)
 |-|-|
 |string|str 显示字符串|
 |int|size 字体大小 (支持16-192号大小字体)|
-|int|gray 灰度[1阶/2阶/3阶/4阶]|
+|int|gray 灰度[1阶/2阶/4阶]|
 |int|x 横坐标|
 |int|y 竖坐标|
 
