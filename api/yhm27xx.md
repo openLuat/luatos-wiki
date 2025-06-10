@@ -42,3 +42,36 @@ end
 
 ---
 
+## yhm27xx.reqinfo(pin, chip_id)
+
+
+
+获取最新的寄存器信息(异步)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|gpio端口号|
+|int|芯片ID|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+
+sys.subscribe("YHM27XX_REG", function(data)
+  -- 注意, 会一次性读出0-9,总共8个寄存器值
+  log.info("yhm27xx", data and data:toHex())
+end)
+yhm27xx.reqinfo(24, 0x04)
+
+```
+
+---
+
