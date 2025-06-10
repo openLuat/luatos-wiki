@@ -58,6 +58,7 @@
 |[miniz](miniz.md)|`简易zlib压缩`|X|X|X|X|X|
 |[mlx90640](mlx90640.md)|`红外测温(MLX90640)`|X|X|X|X|X|
 |[mobile](mobile.md)|`蜂窝网络`|X|X|X|X|X|
+|[modbus](modbus.md)|`modbus主从协议栈协议`|X|X|X|X|X|
 |[mqtt](mqtt.md)|`mqtt客户端`|X|X|X|X|X|
 |[natp](natp.md)|`网络地址端口转换(开发中)`|X|X|X|X|X|
 |[nes](nes.md)|`nes模拟器`|X|X|X|X|X|

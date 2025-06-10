@@ -61,6 +61,7 @@ mcu
 miniz
 mlx90640
 mobile
+modbus
 mqtt
 natp
 nes
