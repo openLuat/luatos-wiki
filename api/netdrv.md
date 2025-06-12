@@ -7,8 +7,8 @@
 |netdrv.CH390|number|南京沁恒CH390系列,支持CH390D/CH390H, SPI通信|
 |netdrv.WHALE|number|虚拟网卡|
 |netdrv.CTRL_RESET|number|控制类型-复位,当前仅支持CH390H|
-|netdrv.CTRL_RESET|number|请求对网卡硬复位,当前仅支持CH390H|
-|netdrv.CTRL_RESET|number|请求对网卡硬复位,当前仅支持CH390H|
+|netdrv.RESET_HARD|number|请求对网卡硬复位,当前仅支持CH390H|
+|netdrv.RESET_SOFT|number|请求对网卡软复位,当前仅支持CH390H|
 
 
 ## netdrv.setup(id, tp, opts)

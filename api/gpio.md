@@ -21,6 +21,7 @@
 |gpio.WAKEUP4|number|休眠唤醒脚4,与GPIO21是同一个引脚|
 |gpio.WAKEUP5|number|休眠唤醒脚5,与GPIO22是同一个引脚|
 |gpio.WAKEUP6|number|休眠唤醒脚6,,不支持输出|
+|gpio.AUDIOPA_EN|number|音频PA使能脚, 仅Air780EHV特有的引脚|
 |gpio.PWR_KEY|number|开机键,支持双向触发中断,不支持输出|
 
 

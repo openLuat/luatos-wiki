@@ -397,3 +397,36 @@ airlink.irqmode(true, 20, 140)
 
 ---
 
+## airlink.power(enable)
+
+
+
+关闭airlink相关供电
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|boolean|enable true: 使能 false: 禁用|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+-- 关闭airlink相关供电, 通常用于省电
+-- 当前仅对Air8000带wifi功能的模组有效
+-- 关闭之后, 如需使用wifi功能, 需要重新执行wifi.init等操作
+-- 注意, wifi供电关掉后, >=128的GPIO也会变成输入高阻态
+airlink.power(false)
+-- 开启wifi芯片,恢复airlink通信
+airlink.power(true)
+
+```
+
+---
+
