@@ -430,3 +430,30 @@ airlink.power(true)
 
 ---
 
+## airlink.sver()
+
+
+
+获取从机版本号
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|从机固件版本号|
+
+**例子**
+
+```lua
+-- 注意, 获取之前, 需要确定airlink.ready()已经返回true
+log.info("airlink", "从机固件版本号", airlink.sver())
+
+
+```
+
+---
+
