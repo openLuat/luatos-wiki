@@ -66,6 +66,7 @@ pm.request(pm.IDLE) -- 通过切换不同的值请求进入不同的休眠模式
 |pm.IOVL|number|所有GPIO高电平电压控制,当前仅Air780EXXX可用|
 |pm.ID_NATIVE|number|PM控制的ID, 主芯片, 任意芯片的默认值就是它|
 |pm.ID_WIFI|number|PM控制的ID, WIFI芯片, 仅Air8000可用|
+|pm.WIFI_STA_DTIM|number|wifi芯片控制STA模式下的DTIM间隔,单位100ms,默认值是1|
 
 
 ## pm.request(mode, chip)
