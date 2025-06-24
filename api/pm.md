@@ -438,14 +438,15 @@ IO高电平电压控制
 
 
 
-配置唤醒引脚 (当前仅仅esp系列可用)
+配置唤醒引脚
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|int/table|gpio引脚|
-|int|唤醒电压 可选,默认低电平唤醒|
+|int|gpio引脚|
+|int|唤醒方式, 例如gpio.RISING (上升沿), gpio.FALLING (下降沿)|
+|int|芯片的ID, 默认是0, 大部分型号都只有0|
 
 **返回值**
 
@@ -456,7 +457,7 @@ IO高电平电压控制
 **例子**
 
 ```lua
-pm.wakeupPin(8,0)
+pm.wakeupPin(8, gpio.RISING)
 
 ```
 

@@ -397,6 +397,38 @@ airlink.irqmode(true, 20, 140)
 
 ---
 
+## airlink.wakeupIrqmode(mode, master_gpio, slave_gpio, irq_mode)
+
+
+
+开启wakeup唤醒中断模式
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|mode false: 禁用 true: 启用|
+|int|master_gpio 主机引脚, 建议使用GPIO20|
+|int|slave_gpio 从机引脚, Air8000使用GPIO140, Air8101使用GPIO28|
+|int|irq_mode 中断模式, 例如gpio.RISING (上升沿), gpio.FALLING (下降沿)|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+-- 用于设置唤醒wifi 开启此功能后, 会在Air8000主机休眠唤醒时，允许在master_gpio上产生一个脉冲，从而通过绑定的slave_gpio触发中断唤醒wifi
+airlink.wakeupIrqmode(true, 20, 140, gpio.RISING)
+-- 注意, 开启本模式, 外部接线必须稳固, 否则可能会导致触发的中断脉冲不完整或接收不到，从而无法唤醒wifi
+
+```
+
+---
+
 ## airlink.power(enable)
 
 
