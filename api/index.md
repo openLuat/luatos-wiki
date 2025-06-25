@@ -10,6 +10,8 @@ airlink
 antbot
 audio
 bit64
+ble
+bluetooth
 camera
 can
 cc

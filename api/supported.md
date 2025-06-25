@@ -7,6 +7,8 @@
 |[antbot](antbot.md)|`蚂蚁链`|X|X|X|X|X|
 |[audio](audio.md)|`多媒体-音频`|X|X|X|X|X|
 |[bit64](bit64.md)|`32位系统上对64位数据的基本算术运算和逻辑运算`|X|X|X|X|X|
+|[ble](ble.md)|`低功耗蓝牙`|?|?|?|?|?|
+|[bluetooth](bluetooth.md)|`蓝牙(总库)`|?|?|?|?|?|
 |[camera](camera.md)|`摄像头`|X|X|X|X|X|
 |[can](can.md)|`can操作库`|X|X|X|X|X|
 |[cc](cc.md)|`VoLTE通话功能`|X|X|X|X|X|
