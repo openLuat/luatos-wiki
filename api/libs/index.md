@@ -26,7 +26,6 @@ gy53l1
 httpdns
 httpplus
 ina226
-iotcloud
 l3g4200d
 lbsLoc
 lbsLoc2
