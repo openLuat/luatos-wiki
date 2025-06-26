@@ -76,11 +76,8 @@ local att_db = { -- Service
     -- Characteristic
     { -- Characteristic 1
         string.fromHex("EA01"), -- Characteristic UUID Value, 特征的UUID值, 可以是16位、32位或128位
-        ble.NOTIFY | ble.READ | ble.WRITE -- Properties, 对应蓝牙特征的属性, 可以是以下值的组合:
-        -- ble.READ: 可读
-        -- ble.WRITE: 可写
-        -- ble.NOTIFY: 可通知
-        -- ble.INDICATE: 可指示
+        ble.NOTIFY | ble.READ | ble.WRITE -- Properties, 对应蓝牙特征的属性, 参考权限常量
+        string.fromHex("1234"), -- 默认value
     }
 }
 ble_device:gatt_create(att_db)
@@ -304,6 +301,36 @@ ble_device:read_value({
     uuid_service = "FA00", -- 服务的UUID, 可以是16位、32位或128位
     uuid_characteristic = "EA01", -- 特征的UUID值, 可以是16位、32位或128位
 })
+
+```
+
+---
+
+## ble.scan_create(addr_mode, scan_interval, scan_window)
+
+
+
+创建一个BLE扫描
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|number|addr_mode 广播地址模式, 可选值: ble.PUBLIC, ble.RANDOM, ble.RPA, ble.NRPA|
+|number|scan_interval 扫描间隔, 单位为0.625ms, 最小值为20, 最大值为10240|
+|number|scan_window 扫描窗口, 单位为0.625ms, 最小值为20, 最大值为10240|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|是否创建成功|
+
+**例子**
+
+```lua
+-- 创建BLE扫描
+ble_device:scan_create(ble.PUBLIC, 100, 100)
 
 ```
 
