@@ -43,6 +43,13 @@
 
 ```
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|ble.CHNLS_ALL|所有通道(37|38 39)|
+
+
 ## ble.gatt_create(opts)
 
 
@@ -201,7 +208,6 @@ ble_device:adv_stop()
 ble_device:write_notify({
     uuid_service = "FA00", -- 服务的UUID, 可以是16位、32位或128位
     uuid_characteristic = "EA01", -- 特征的UUID值, 可以是16位、32位或128位
-    uuid_descriptor = "2902" -- 可选, 描述符的UUID值, 可以是16位、32位或128位
 }, "Hello BLE") -- 要写入的值
 
 ```
@@ -234,7 +240,6 @@ ble_device:write_notify({
 ble_device:write_indicate({
     uuid_service = "FA00", -- 服务的UUID, 可以是16位、32位或128位
     uuid_characteristic = "EA01", -- 特征的UUID值, 可以是16位、32位或128位
-    uuid_descriptor = "2902" -- 可选, 描述符的UUID值, 可以是16位、32位或128位
 }, "Hello BLE") -- 要写入的值
 
 ```
@@ -267,8 +272,38 @@ ble_device:write_indicate({
 ble_device:write_value({
     uuid_service = "FA00", -- 服务的UUID, 可以是16位、32位或128位
     uuid_characteristic = "EA01", -- 特征的UUID值, 可以是16位、32位或128位
-    uuid_descriptor = "2902" -- 可选, 描述符的UUID值, 可以是16位、32位或128位
 }, "Hello BLE") -- 要写入的值
+
+```
+
+---
+
+## ble.read_value(opts)
+
+
+
+读取特征值
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|table|特征值的描述信息|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|是否成功|
+
+**例子**
+
+```lua
+-- 读取特征值,通过回调中的 EVENT_READ_VALUE 事件返回读取的value值
+ble_device:read_value({
+    uuid_service = "FA00", -- 服务的UUID, 可以是16位、32位或128位
+    uuid_characteristic = "EA01", -- 特征的UUID值, 可以是16位、32位或128位
+})
 
 ```
 
@@ -324,6 +359,61 @@ ble_device:scan_start()
 -- 停止BLE扫描
 ble_device:scan_stop()
 -- 提醒, 扫描会一直进行, 直到调用ble.scan_stop()停止扫描
+
+```
+
+---
+
+## ble.connect()
+
+
+
+BLE连接
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|mac 地址|
+|int|地址类型 ble.PUBLIC ble.RANDOM|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|是否成功|
+
+**例子**
+
+```lua
+-- BLE连接
+ble_device:connect(string.fromHex("C8478C4E027D"),0)
+
+```
+
+---
+
+## ble.disconnect()
+
+
+
+BLE断开连接
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|是否成功|
+
+**例子**
+
+```lua
+-- BLE断开连接
+ble_device:disconnect()
 
 ```
 
