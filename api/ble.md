@@ -113,7 +113,7 @@ ble_device:adv_create({
     channel_map = ble.CHNLS_ALL, -- 广播的通道, 可选值: ble.CHNLS_37, ble.CHNLS_38, ble.CHNLS_39, ble.CHNLS_ALL
     intv_min = 120, -- 广播间隔最小值, 单位为0.625ms, 最小值为20, 最大值为10240
     intv_max = 120, -- 广播间隔最大值, 单位为0.625ms, 最小值为20, 最大值为10240
-    adv_data = {
+    adv_data = { -- 支持表格形式, 也支持字符串形式(255字节以内)
         {ble.FLAGS, string.char(0x06)},
         {ble.COMPLETE_LOCAL_NAME, "LuatOS123"}, -- 广播的设备名
         {ble.SERVICE_DATA, string.fromHex("FE01")}, -- 广播的服务数据
@@ -473,6 +473,41 @@ BLE断开连接
 ```lua
 -- BLE断开连接
 ble_device:disconnect()
+
+```
+
+---
+
+## ble.adv_decode(data)
+
+
+
+解码广播数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|data 广播数据|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|table|广播数据的解码结果|
+
+**例子**
+
+```lua
+-- 解码广播数据
+local data = string.fromHex("1EFF060001092002BE0F0AAD8A6D2E251ED6DFBB3D15249929E10BE138DF7B")
+-- 解析广播数据
+local adv_data = ble_device:adv_decode(data)
+if adv_data then
+    for k, v in pairs(adv_data) do
+        log.info("ble", "adv data", v.len, v.tp, v.data:toHex())
+    end
+end
 
 ```
 
