@@ -34,7 +34,6 @@
 |lcd.WIRE_4_BIT_8_INTERFACE_I|四线spi|8bit 模式I|
 |lcd.WIRE_3_BIT_9_INTERFACE_II|三线spi|9bit 模式II|
 |lcd.WIRE_4_BIT_8_INTERFACE_II|四线spi|8bit 模式II|
-|lcd.DATA_2_LANE|int|双通道模式|
 
 
 ## lcd.init(tp, args, spi_dev, init_in_service)
@@ -243,7 +242,7 @@ lcd.invoff()
 
 ---
 
-## lcd.cmd(cmd)
+## lcd.cmd(cmd, param, param_len)
 
 
 
@@ -253,7 +252,10 @@ lcd命令
 
 |传入值类型|解释|
 |-|-|
-|int|cmd|
+|int|lcd命令模式下的命令值|
+|int/zbuff|lcd命令模式下的参数值，如果只有1个参数，可以用int，如果有多个，使用zbuff传入|
+|int|参数长度，如果上一个参数是int，则忽略长度|
+|return|boolean|
 
 **返回值**
 
@@ -263,6 +265,7 @@ lcd命令
 
 ```lua
 -- lcd命令
+lcd.cmd(0x21)
 lcd.cmd(0x21)
 
 ```
@@ -950,6 +953,64 @@ local green = lcd.rgb565(0x00, 0xFF, 0x00, true)
 local blue = lcd.rgb565(0x00, 0x00, 0xFF, true)
 
 ```
+
+---
+
+## lcd.qspi(1_wire_command, 1_wire_command, 1_wire_command_4_wire_data, 4_wire_command_4_wire_data, vsync_reg, hsync_cmd, hsync_reg)
+
+
+
+硬件lcd qspi接口配置，需要在lcd.init前配置好
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|lcd命令模式下的qspi指令|
+|int|lcd数据模式下，1线地址，4线数据的qspi指令，|
+|int|lcd数据模式下，4线地址，4线数据的qspi指令，可以留空，如果存在，发送数据时优先使用这个模式|
+|int|帧同步时的地址值，只有无ram的屏幕需要，如果能用0x2c发送数据则不需要这个参数|
+|int|行同步时的指令，一般情况和命令模式下的指令一致，只有无ram的屏幕需要，如果能用0x2c发送数据则不需要这个参数|
+|int|行同步时的地址值，只有无ram的屏幕需要，如果能用0x2c发送数据则不需要这个参数|
+|return|nil|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- sh8601z驱动ic所需的qspi配置
+lcd.qspi(0x02, 0x32, 0x12)
+-- jd9261t驱动ic所需的qspi配置
+lcd.qspi(0xde, 0xde, nil, 0x61, 0xde, 0x60)
+-- CO5300驱动ic所需的qspi配置
+lcd.qspi(0x02, 0x32, 0x12)
+
+```
+
+---
+
+## lcd.user_done()
+
+
+
+用户使用脚本初始化LCD完成后，必须调用本API
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|return|nil|
+
+**返回值**
+
+无
+
+**例子**
+
+无
 
 ---
 
