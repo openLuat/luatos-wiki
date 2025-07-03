@@ -39,7 +39,7 @@
 |userdata|network_ctrl或者mqtt客户端，如果协议是mqtt类型，传入mqtt.create返回值，如果是其他类型，传入socket.create的返回值|
 |int|缓冲时间，单位ms，默认500ms，值越小，delay越小，抗网络波动能力越差|
 |int|单次编码帧数，默认值5，不能低于2，不能高于5|
-|int|单次解码帧数，如果缓冲没有足够的帧数，自动补0，默认值5，不能低于2，不能高于10，不能低于encode_int, decode_cnt * 4 必须是 encode_cnt的整数倍|
+|int|单次解码帧数，如果缓冲没有足够的帧数，自动补0，默认值5，不能低于2，不能高于10，不能低于encode_cnt, decode_cnt * 4 必须是 encode_cnt的整数倍|
 |int|对讲停止后，audio的pm状态，默认是audio.SHUTDOWN|
 |return|nil|
 
