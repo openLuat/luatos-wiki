@@ -98,14 +98,14 @@ uart.write(1, string.char(0x55,0xAA,0x4B,0x03,0x86))
 
 
 
-读串口
+FIFO方式取出串口缓存的数据
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
 |int|串口id, uart0写0, uart1写1|
-|int|读取长度|
+|int|期望读取长度，可选，不填时读取全部，无论写多少，最多读取当前缓存区所有数据|
 |file/zbuff|可选：文件句柄或zbuff对象|
 
 **返回值**
@@ -161,7 +161,7 @@ uart.close(1)
 |传入值类型|解释|
 |-|-|
 |int|串口id, uart0写0, uart1写1|
-|string|事件名称|
+|string|事件名称，目前只有"receive"/"recv":新数据接收完成或者接收缓存满了,"sent":发送结束|
 |function|回调方法|
 
 **返回值**

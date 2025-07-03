@@ -21,6 +21,7 @@ dhcpsrv
 dnsproxy
 ds3231
 ec11
+espblufi
 gt911
 gy53l1
 httpdns
