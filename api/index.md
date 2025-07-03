@@ -7,6 +7,7 @@
 supported
 adc
 airlink
+airtalk
 antbot
 audio
 bit64
