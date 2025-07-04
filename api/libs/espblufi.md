@@ -1,4 +1,4 @@
-# espblufi - espblufi esp blufi 蓝牙配网(注意:初版不支持加密功能,需要后续版本支持!!!!!!!!)
+# espblufi - espblufi esp blufi 蓝牙配网(注意:初版暂不支持加密功能!!!!!!!!)
 
 **示例**
 
@@ -15,7 +15,7 @@
 -- 小程序测试:微信搜索小程序:ESP Config
 -- 小程序源码下载地址:https://github.com/EspressifApps/ESP-Config-WeChat
 
--- 注意:初版不支持加密功能,需要后续版本支持!!!!!!!!
+-- 注意:初版暂不支持加密功能!!!!!!!!
 
 -- 用法实例
 local espblufi = require("espblufi")
@@ -35,7 +35,8 @@ local function espblufi_callback(event,data)
 end
 
 sys.taskInit(function()
-    espblufi.init(espblufi_callback)
+    local bluetooth_device = bluetooth.init()
+    espblufi.init(bluetooth_device, espblufi_callback)
     espblufi.start()
     while 1 do
         sys.wait(1000)
@@ -45,7 +46,7 @@ end)
 
 ```
 
-## espblufi.init(espblufi_callback,local_name)
+## espblufi.init(bluetooth_device,espblufi_callback,local_name)
 
 
 
@@ -55,6 +56,7 @@ end)
 
 |传入值类型|解释|
 |-|-|
+|userdata|bluetooth_device 蓝牙设备对象|
 |function|事件回调函数|
 |number|蓝牙名，可选，默认为"BLUFI_xxx",xxx为设备型号(因为esp的配网测试app默认过滤蓝牙名称为BLUFI_开头的设备进行显示,可手动修改)|
 
