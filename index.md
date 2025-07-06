@@ -71,8 +71,14 @@ LuatOS提供了丰富的外设接口库，可以更便捷地实现创意，无�
 
 |型号    |分类    |备注|
 |--------|--------|-------|
-|[Air780EP](chips/air780ep/index) |4G-Cat.1移动通信模块| 支持Air780EP系列|
+|[Air780EPM](https://air780epm.cn) |4G-Cat.1移动通信模块| 支持Air780EPM|
+|[Air780EPV](https://air780epv.cn) |4G-Cat.1移动通信模块| 支持Air780EPV|
+|[Air780EPM](https://air780egh.cn) |4G-Cat.1移动通信模块| 支持Air780EGH|
+|[Air780EPM](https://air780ehm.cn) |4G-Cat.1移动通信模块| 支持Air780EHM|
+|[Air780EPM](https://air8000.cn) |4G-Cat.1移动通信模块,带WIFI和蓝牙| 支持Air8000|
+|[Air8101](https://air8101.cn) |WIFI/蓝牙/USB摄像头/大屏| 支持Air8101/Air8101A|
 |[Air780E](chips/air780e/index) |4G-Cat.1移动通信模块| 也支持Air780EG|
+|[Air780EP](chips/air780ep/index) |4G-Cat.1移动通信模块| 支持Air780EP系列|
 |[PC](https://gitee.com/openLuat/luatos-soc-pc) |PC版LuatOS|可作为模拟器使用|
 |[Air101](chips/air101/index) |MCU|EOL|
 |[Air103](chips/air103/index) |MCU|EOL|
