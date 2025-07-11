@@ -35,6 +35,32 @@
 
 ---
 
+## sms.sendLong(phone, msg, auto_phone_fix).wait()
+
+
+
+发送长短信(每段PDU发送超时时间30s)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|电话号码,必填|
+|string|短信内容,必填|
+|bool|是否自动处理电话号号码的格式,默认是按短信内容和号码格式进行自动判断, 设置为false可禁用|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|异步等待结果 成功返回true, 否则返回false或nil|
+
+**例子**
+
+无
+
+---
+
 ## sms.setNewSmsCb(func)
 
 
