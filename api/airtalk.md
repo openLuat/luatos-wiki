@@ -14,6 +14,7 @@
 |常量|类型|解释|
 |-|-|-|
 |airtalk.PROTOCOL_DEMO_MQTT_8K|number|演示用MQTT协议，音频采样率8K|
+|airtalk.PROTOCOL_DEMO_MQTT_16K|number|演示用MQTT协议，音频采样率16K|
 |airtalk.EVENT_OFF_LINE|number|airtalk离线|
 |airtalk.EVENT_ON_LINE_IDLE|number|airtalk在线处于空闲状态|
 |airtalk.EVENT_PLAY_START|number|airtalk下行播放开始|

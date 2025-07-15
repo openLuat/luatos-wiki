@@ -399,7 +399,7 @@ msg = modbus.create_msg(mb_rtu, slave, modbus.REGISTERS, modbus.READ, 0, 10, zbu
 |int|modbus协议类型，modbus.MODBUS_RTU、modbus.MODBUS_ASCII、modbus.MODBUS_TCP|
 |int|从站地址，范围1-247|
 |int|若协议类型为modbus.MODBUS_RTU、modbus.MODBUS_ASCII模式，则该参数为串口ID（uartid）；若协议类型为modbus.MODBUS_TCP则该参数为本地端口号|
-|int|网卡适配器序列号，如果不填，则为最后一个注册的网卡适配器序号（协议类型为modbus.MODBUS_RTU、modbus.MODBUS_ASCII模式时，该参数无效）|
+|int|若协议类型为modbus.MODBUS_RTU、modbus.MODBUS_ASCII模式，则该参数为串口的波特率，默认9600；若协议类型为modbus.MODBUS_TCP则该参数为网卡适配器序列号，默认最后一个注册的网卡适配器序号。|
 
 **返回值**
 
@@ -410,8 +410,8 @@ msg = modbus.create_msg(mb_rtu, slave, modbus.REGISTERS, modbus.READ, 0, 10, zbu
 **例子**
 
 ```lua
--- 创建一个从站句柄，协议类型为RTU模式，从站ID为1，usrt设备id为1
-mb_rtu_s = modbus.create_slave(modbus.MODBUS_RTU, 1, 1)
+-- 创建一个从站句柄，协议类型为RTU模式，从站ID为1，usrt设备id为1，波特率为9600
+mb_rtu_s = modbus.create_slave(modbus.MODBUS_RTU, 1, 1, 9600)
 
 -- 创建一个从站句柄，协议类型为TCP模式，从站ID为1，本次端口号为502，网络设备为本地有线网络
 mb_tcp_s = modbus.create_slave(modbus.MODBUS_TCP, 1, 502, socket.LWIP_ETH)
@@ -501,6 +501,35 @@ modbus.slave_start(mb_tcp_s)
 ```lua
 -- 停止modbus从协议栈
 modbus.slave_stop(mb_tcp_s)
+
+```
+
+---
+
+## modbus.debug(en)
+
+
+
+开启或关闭debug模式
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|bool|1表示开启调试模式，0表示关闭调试模式|
+|return|无|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 开启调试模式
+modbus.debug(1)
+-- 关闭调试模式
+modbus.debug(0)
 
 ```
 

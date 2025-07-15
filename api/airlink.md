@@ -20,6 +20,7 @@
 |airlink.CONF_SPI_CS|number|SPI配置参数, 设置SPI的CS脚的GPIO|
 |airlink.CONF_SPI_RDY|number|SPI/UART配置参数, 设置RDY脚的GPIO|
 |airlink.CONF_SPI_IRQ|number|SPI/UART配置参数, 设置IRQ脚的GPIO|
+|airlink.CONF_SPI_SPEED|number|SPI配置参数, 设置SPI的波特率|
 |airlink.CONF_IRQ_TIMEOUT|number|SPIUART配置参数, 设置IRQ模式的等待超时时间|
 
 
