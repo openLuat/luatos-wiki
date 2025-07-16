@@ -9,31 +9,31 @@
 -- 相关链接: https://lbsyun.baidu.com/index.php?title=coordinate
 -- 相关链接: https://www.openluat.com/GPS-Offset.html
 
---关于GPS的三种应用场景：
+--关于gnss的三种应用场景：
 gnss.DEFAULT:
---- GPS应用模式1.
+--- gnss应用模式1.
 --
--- 打开GPS后，GPS定位成功时，如果有回调函数，会调用回调函数
+-- 打开gnss后，gnss定位成功时，如果有回调函数，会调用回调函数
 --
--- 使用此应用模式调用gnss.open打开的“GPS应用”，必须主动调用gnss.close或者gnss.closeAll才能关闭此“GPS应用”,主动关闭时，即使有回调函数，也不会调用回调函数
+-- 使用此应用模式调用gnss.open打开的“gnss应用”，必须主动调用gnss.close或者gnss.closeAll才能关闭此“gnss应用”,主动关闭时，即使有回调函数，也不会调用回调函数
 -- 通俗点说就是一直打开，除非自己手动关闭掉
 
 gnss.TIMERORSUC:
---- GPS应用模式2.
+--- gnss应用模式2.
 --
--- 打开GPS后，如果在GPS开启最大时长到达时，没有定位成功，如果有回调函数，会调用回调函数，然后自动关闭此“GPS应用”
+-- 打开gnss后，如果在gnss开启最大时长到达时，没有定位成功，如果有回调函数，会调用回调函数，然后自动关闭此“gnss应用”
 --
--- 打开GPS后，如果在GPS开启最大时长内，定位成功，如果有回调函数，会调用回调函数，然后自动关闭此“GPS应用”
+-- 打开gnss后，如果在gnss开启最大时长内，定位成功，如果有回调函数，会调用回调函数，然后自动关闭此“gnss应用”
 --
--- 打开GPS后，在自动关闭此“GPS应用”前，可以调用gnss.close或者gnss.closeAll主动关闭此“GPS应用”，主动关闭时，即使有回调函数，也不会调用回调函数
+-- 打开gnss后，在自动关闭此“gnss应用”前，可以调用gnss.close或者gnss.closeAll主动关闭此“gnss应用”，主动关闭时，即使有回调函数，也不会调用回调函数
 -- 通俗点说就是设置规定时间打开，如果规定时间内定位成功就会关闭此应用，如果没有定位成功，时间到了也会关闭此应用
 
 gnss.TIMER:
---- GPS应用模式3.
+--- gnss应用模式3.
 --
--- 打开GPS后，在GPS开启最大时长时间到达时，无论是否定位成功，如果有回调函数，会调用回调函数，然后自动关闭此“GPS应用”
+-- 打开gnss后，在gnss开启最大时长时间到达时，无论是否定位成功，如果有回调函数，会调用回调函数，然后自动关闭此“gnss应用”
 --
--- 打开GPS后，在自动关闭此“GPS应用”前，可以调用gnss.close或者gnss.closeAll主动关闭此“GPS应用”，主动关闭时，即使有回调函数，也不会调用回调函数
+-- 打开gnss后，在自动关闭此“gnss应用”前，可以调用gnss.close或者gnss.closeAll主动关闭此“gnss应用”，主动关闭时，即使有回调函数，也不会调用回调函数
 -- 通俗点说就是设置规定时间打开，无论是否定位成功，到了时间都会关闭此应用，和第二种的区别在于定位成功之后不会关闭，到时间之后才会关闭
 
 gnss=require("gnss")    
@@ -108,11 +108,81 @@ end)
 
 ---
 
+## gnss.open(mode,para)
+
+
+
+打开一个“gnss应用”
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|number|mode gnss应用模式，支持gnss.DEFAULT，gnss.TIMERORSUC，gnss.TIMER三种|
+|param|para table类型，gnss应用参数,para.tag：string类型，gnss应用标记,para.val：number类型，gnss应用开启最大时长，mode参数为gnss.TIMERORSUC或者gnss.TIMER时，此值才有意义；使用close接口时，不需要传入此参数,para.cb：gnss应用结束时的回调函数，回调函数的调用形式为para.cb(para.tag)；使用close接口时，不需要传入此参数|
+|return|nil|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- “gnss应用”：指的是使用gnss功能的一个应用
+-- 例如，假设有如下3种需求，要打开gnss，则一共有3个“gnss应用”：
+-- “gnss应用1”：每隔1分钟打开一次gnss
+-- “gnss应用2”：设备发生震动时打开gnss
+-- “gnss应用3”：收到一条特殊短信时打开gnss
+-- 只有所有“gnss应用”都关闭了，才会去真正关闭gnss
+-- 每个“gnss应用”打开或者关闭gnss时，最多有4个参数，其中 gnss应用模式和gnss应用标记 共同决定了一个唯一的“gnss应用”：
+-- 1、gnss应用模式(必选)
+-- 2、gnss应用标记(必选)
+-- 3、gnss开启最大时长[可选]
+-- 4、回调函数[可选]
+-- 例如gnss.open(gnss.TIMERORSUC,{tag="TEST",val=120,cb=testgnssCb})
+-- gnss.TIMERORSUC为gnss应用模式，"TEST"为gnss应用标记，120秒为gnss开启最大时长，testgnssCb为回调函数
+gnss.open(gnss.DEFAULT,{tag="TEST1",cb=test1Cb})
+gnss.open(gnss.TIMERORSUC,{tag="TEST2",val=60,cb=test2Cb})
+gnss.open(gnss.TIMER,{tag="TEST3",val=120,cb=test3Cb})
+
+```
+
+---
+
+## gnss.close()
+
+
+
+关闭一个“gnss应用”，只是从逻辑上关闭一个gnss应用，并不一定真正关闭gnss，是有所有的gnss应用都处于关闭状态，才会去真正关闭gnss
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|number|mode gnss应用模式，支持gnss.DEFAULT，gnss.TIMERORSUC，gnss.TIMER三种|
+|param|para table类型，gnss应用参数,para.tag：string类型，gnss应用标记,para.val：number类型，gnss应用开启最大时长，mode参数为gnss.TIMERORSUC或者gnss.TIMER时，此值才有意义；使用close接口时，不需要传入此参数,para.cb：gnss应用结束时的回调函数，回调函数的调用形式为para.cb(para.tag)；使用close接口时，不需要传入此参数|
+|return|nil|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+gnss.open(gnss.TIMER,{tag="TEST1",val=60,cb=test1Cb})
+gnss.close(gnss.TIMER,{tag="TEST1"})
+
+```
+
+---
+
 ## gnss.closeAll()
 
 
 
-关闭所有“GPS应用”
+关闭所有“gnss应用”
 
 **参数**
 
@@ -140,22 +210,32 @@ gnss.closeAll()
 
 
 
-判断一个“GPS应用”是否处于激活状态
+判断一个“gnss应用”是否处于激活状态
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|number|mode GPS应用模式，支持gnss.DEFAULT，gnss.TIMERORSUC，gnss.TIMER三种|
-|param|para table类型，GPS应用参数|
+|number|mode gnss应用模式，支持gnss.DEFAULT，gnss.TIMERORSUC，gnss.TIMER三种|
+|param|para table类型，gnss应用参数,para.tag：string类型，gnss应用标记,para.val：number类型，gnss应用开启最大时长，mode参数为gnss.TIMERORSUC或者gnss.TIMER时，此值才有意义；使用close接口时，不需要传入此参数,para.cb：gnss应用结束时的回调函数，回调函数的调用形式为para.cb(para.tag)；使用close接口时，不需要传入此参数,gnss应用模式和gnss应用标记唯一确定一个“gnss应用”，调用本接口查询状态时，mode和para.tag要和gnss.open打开一个“gnss应用”时传入的mode和para.tag保持一致|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|bool|result，处于激活状态返回true，否则返回nil|
 
 **例子**
 
-无
+```lua
+gnss.open(gnss.TIMER,{tag="TEST1",val=60,cb=test1Cb})
+gnss.open(gnss.TIMERORSUC,{tag="TEST3",val=60,cb=test2Cb})
+gnss.open(gnss.DEFAULT,{tag="TEST2",cb=test2Cb})
+log.info("定时器状态1",gnss.isActive(gnss.TIMER,{tag="TEST1"}))
+log.info("定时器状态2",gnss.isActive(gnss.DEFAULT,{tag="TEST2"}))
+log.info("定时器状态3",gnss.isActive(gnss.TIMERORSUC,{tag="TEST3"}))
+
+```
 
 ---
 
@@ -382,7 +462,6 @@ log.info("nmea", "gsa", json.encode(gnss.getGsa(), "11g"))
 -- 解析nmea
 log.info("nmea", "vtg", json.encode(gnss.getVtg()))
 -- 示例
---[[
 {
     "speed_knots":0,        // 速度, 英里/小时
     "true_track_degrees":0,  // 真北方向角
@@ -392,7 +471,7 @@ log.info("nmea", "vtg", json.encode(gnss.getVtg()))
 
 --模式3
 log.info("nmea", "vtg", json.encode(gnss.getVtg(3)))
-返回值："$GNVTG,0.000,T,,M,0.000,N,0.000,K,A*13\r"
+-- 返回值："$GNVTG,0.000,T,,M,0.000,N,0.000,K,A*13\r"
 -- 提醒: 在速度<5km/h时, 不会返回方向角
 
 ```
@@ -517,7 +596,7 @@ end
 
 ---
 
-## libgnss.locStr(mode)
+## gnss.locStr(mode)
 
 
 
