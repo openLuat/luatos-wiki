@@ -22,6 +22,7 @@ dnsproxy
 ds3231
 ec11
 espblufi
+gnss
 gt911
 gy53l1
 httpdns
