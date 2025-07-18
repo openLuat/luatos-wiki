@@ -133,7 +133,7 @@ print("unique_id", unique_id)
 ```lua
 local tick = mcu.ticks()
 print("ticks", tick)
--- 如需不会溢出的值, 可用mcu.ticks32(), 于2024.5.7新增
+-- 如需不会溢出的值, 可用mcu.ticks2(), 于2024.5.7新增
 
 ```
 
