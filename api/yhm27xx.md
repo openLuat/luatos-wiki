@@ -9,8 +9,6 @@
 
 ## yhm27xx.cmd(pin, chip_id, reg, data)
 
-
-
 单总线命令读写YHM27XX
 
 **参数**
@@ -43,8 +41,6 @@ end
 ---
 
 ## yhm27xx.reqinfo(pin, chip_id)
-
-
 
 获取最新的寄存器信息(异步)
 

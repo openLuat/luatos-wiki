@@ -47,8 +47,6 @@ end)
 
 ## fota.init(storge_location, len, param1, param2)
 
-
-
 初始化fota流程
 
 **参数**
@@ -80,8 +78,6 @@ local result = fota.init(0xe0000000, 0, spi_device, 27)    --EC7XX系列允许�
 
 ## fota.wait()
 
-
-
 等待底层fota流程准备好
 
 **参数**
@@ -106,8 +102,6 @@ local isDone = fota.wait()
 ---
 
 ## fota.run(buff, offset, len)
-
-
 
 写入fota数据
 
@@ -143,8 +137,6 @@ fota.run(buff, 0, 1024)
 
 ## fota.file(path)
 
-
-
 从指定文件读取fota数据
 
 **参数**
@@ -173,8 +165,6 @@ local result, isDone, cache = fota.file("/xxx.bin") -- 写入fota流程
 
 ## fota.isDone()
 
-
-
 等待底层fota流程完成
 
 **参数**
@@ -198,8 +188,6 @@ local result, isDone = fota.isDone()
 ---
 
 ## fota.finish(is_ok)
-
-
 
 结束fota流程
 

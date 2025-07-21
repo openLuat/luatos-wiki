@@ -12,8 +12,6 @@
 
 ## codec.create(type, isDecoder, quality)
 
-
-
 创建编解码用的codec
 
 **参数**
@@ -46,8 +44,6 @@ local encoder = codec.create(codec.AMR_WB, false, 8)--创建一个amr-wb的encod
 
 ## codec.info(decoder, file_path)
 
-
-
 decoder从文件中解析出音频信息
 
 **参数**
@@ -78,8 +74,6 @@ local result, audio_format, num_channels, sample_rate, bits_per_sample, is_signe
 ---
 
 ## codec.data(decoder, out_buff)
-
-
 
 decoder从文件中解析出原始音频数据，比如从MP3文件里解析出PCM数据，这里的文件路径已经在codec.info传入，不需要再次传入
 
@@ -113,8 +107,6 @@ local result = codec.data(coder, buff, 4096)
 
 ## codec.encode(coder, in_buffer, out_buffer, mode)
 
-
-
 编码音频数据，由于flash和ram空间一般比较有限，除了部分bsp有内部amr编码功能，目前只支持amr-nb编码
 
 **参数**
@@ -142,8 +134,6 @@ codec.encode(amr_coder, inbuf, outbuf, codec.AMR_)
 ---
 
 ## codec.release(coder)
-
-
 
 释放编解码用的coder
 

@@ -19,8 +19,6 @@ gpio.setup(pin.get("PA12"), 0) -- 不推荐, 太长^_^
 
 ## pin.get(name)
 
-
-
 获取管脚对应的GPIO号, 可简写为  pin.PA01 , 推荐使用简写
 
 **参数**

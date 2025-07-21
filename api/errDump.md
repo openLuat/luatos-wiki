@@ -14,8 +14,6 @@ end
 
 ## errDump.dump(zbuff, type, isDelete)
 
-
-
 手动读取异常日志，主要用于用户将日志发送给自己的服务器而不是IOT平台，如果在errDump.config配置了周期上传，则不能使用本函数
 
 **参数**
@@ -44,8 +42,6 @@ local result = errDump.dump(nil, errDump.TYPE_SYS, true) --清除系统记录的
 
 ## errDump.record(string)
 
-
-
 写入用户的异常日志，注意最大只有4KB，超过部分新的覆盖旧的，开启自动上传后会上传到合宙IOT平台
 
 **参数**
@@ -70,8 +66,6 @@ errDump.record("socket long time no connect") --记录下"socket long time no co
 ---
 
 ## errDump.config(enable, period, user_flag, custom_id, host, port)
-
-
 
 配置关键日志上传IOT平台，这里的日志包括引起luavm异常退出的日志和用户通过record写入的日志，类似于air的errDump
 

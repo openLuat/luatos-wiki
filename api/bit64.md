@@ -2,8 +2,6 @@
 
 ## bit64.to32(data64bit)
 
-
-
 64bit数据转成32bit输出
 
 **参数**
@@ -26,8 +24,6 @@
 
 ## bit64.to64(data32bit)
 
-
-
 32bit数据转成64bit数据
 
 **参数**
@@ -49,8 +45,6 @@
 ---
 
 ## bit64.show(a,type,flag)
-
-
 
 64bit数据格式化打印成字符串，用于显示值
 
@@ -75,8 +69,6 @@
 ---
 
 ## bit64.plus(a,b,flag1,flag2)
-
-
 
 64bit数据加,a+b,a和b中有一个为浮点，则按照浮点运算
 
@@ -103,8 +95,6 @@
 
 ## bit64.minus(a,b,flag1,flag2)
 
-
-
 64bit数据减,a-b,a和b中有一个为浮点，则按照浮点运算
 
 **参数**
@@ -129,8 +119,6 @@
 ---
 
 ## bit64.multi(a,b,flag1,flag2)
-
-
 
 64bit数据乘,a*b,a和b中有一个为浮点，则按照浮点运算
 
@@ -157,8 +145,6 @@
 
 ## bit64.pide(a,b,flag1,flag2)
 
-
-
 64bit数据除,a/b,a和b中有一个为浮点，则按照浮点运算
 
 **参数**
@@ -184,8 +170,6 @@
 
 ## bit64.shift(a,b,flag)
 
-
-
 64bit数据位移 a>>b 或者 a<<b
 
 **参数**
@@ -209,8 +193,6 @@
 ---
 
 ## bit64.strtoll(data, base)
-
-
 
 将字符串转为LongLong数据
 

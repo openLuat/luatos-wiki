@@ -26,8 +26,6 @@ end
 
 ## fastlz.compress(data, level)
 
-
-
 快速压缩
 
 **参数**
@@ -55,8 +53,6 @@ end
 ---
 
 ## fastlz.uncompress(data, maxout)
-
-
 
 快速解压
 

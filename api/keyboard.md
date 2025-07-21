@@ -2,8 +2,6 @@
 
 ## keyboard.init(port, conf, map, debounce)
 
-
-
 初始化键盘矩阵
 
 **参数**

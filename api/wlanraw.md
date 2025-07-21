@@ -9,8 +9,6 @@
 
 ## wlanraw.setup(opts, cb)
 
-
-
 初始化WLAN的RAW层
 
 **参数**

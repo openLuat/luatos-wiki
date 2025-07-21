@@ -29,8 +29,6 @@ end)
 
 ## sqlite3.open(path)
 
-
-
 打开数据库
 
 **参数**
@@ -62,8 +60,6 @@ end
 
 ## sqlite3.exec(db, sql)
 
-
-
 执行SQL语句
 
 **参数**
@@ -87,8 +83,6 @@ end
 ---
 
 ## sqlite3.close(db)
-
-
 
 关闭数据库
 

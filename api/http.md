@@ -18,8 +18,6 @@ end)
 
 ## http.request(method,url,headers,body,opts,ca_file,client_ca, client_key, client_password)
 
-
-
 http客户端
 
 **参数**

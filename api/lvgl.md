@@ -2,8 +2,6 @@
 
 ## lvgl.scr_act()
 
-
-
 获取当前活跃的screen对象
 
 **参数**
@@ -28,8 +26,6 @@ local scr = lvgl.scr_act()
 
 ## lvgl.layer_top()
 
-
-
 获取layer_top
 
 **参数**
@@ -50,8 +46,6 @@ local scr = lvgl.scr_act()
 
 ## lvgl.layer_sys()
 
-
-
 获取layer_sys
 
 **参数**
@@ -71,8 +65,6 @@ local scr = lvgl.scr_act()
 ---
 
 ## lvgl.scr_load(scr)
-
-
 
 载入指定的screen
 
@@ -101,8 +93,6 @@ local scr = lvgl.scr_act()
 ---
 
 ## lvgl.scr_load_anim(scr)
-
-
 
 载入指定的screen并使用指定的转场动画
 
@@ -141,8 +131,6 @@ local scr = lvgl.scr_act()
 
 ## lvgl.theme_set_act(name)
 
-
-
 设置主题
 
 **参数**
@@ -171,8 +159,6 @@ lvgl.theme_set_act("empty")
 
 ## lvgl.sleep(enable)
 
-
-
 LVGL休眠控制，暂停/恢复刷新定时器，目前只有Air105和Air780EXXX可以用
 
 **参数**
@@ -196,8 +182,6 @@ lvgl.sleep(false)        --恢复刷新，系统不休眠
 ---
 
 ## lvgl.init(w, h, lcd, buff_size, buff_mode)
-
-
 
 初始化LVGL
 
@@ -225,8 +209,6 @@ lvgl.sleep(false)        --恢复刷新，系统不休眠
 
 ## lvgl.anim_create()
 
-
-
 创建并初始化一个anim
 
 **参数**
@@ -250,8 +232,6 @@ local anim = lvgl.anim_create()
 
 ## lvgl.anim_free(anim)
 
-
-
 释放一个anim
 
 **参数**
@@ -272,8 +252,6 @@ local lvgl.anim_free(anim)
 ---
 
 ## lvgl.anim_path_t()
-
-
 
 创建一个lv_anim_path_t
 
@@ -298,8 +276,6 @@ local anim_path_t = lvgl.anim_path_t()
 
 ## lvgl.anim_path_t_free(anim_path_t)
 
-
-
 释放一个lv_anim_path_t
 
 **参数**
@@ -320,8 +296,6 @@ local lvgl.anim_path_t_free(anim_path_t)
 ---
 
 ## lvgl.anim_set_path_str(anim, tp)
-
-
 
 设置动画路径方式
 
@@ -346,8 +320,6 @@ local lvgl.anim_path_t_free(anim_path_t)
 
 ## lvgl.obj_set_event_cb(obj, func)
 
-
-
 设置组件的事件回调
 
 **参数**
@@ -371,8 +343,6 @@ local lvgl.anim_path_t_free(anim_path_t)
 
 ## lvgl.obj_set_signal_cb(obj, func)
 
-
-
 设置组件的信号回调
 
 **参数**
@@ -395,8 +365,6 @@ local lvgl.anim_path_t_free(anim_path_t)
 ---
 
 ## lvgl.anim_set_exec_cb(anim, func)
-
-
 
 设置动画回调
 
@@ -422,8 +390,6 @@ local lvgl.anim_path_t_free(anim_path_t)
 
 ## lvgl.anim_set_ready_cb(anim, func)
 
-
-
 设置动画回调
 
 **参数**
@@ -447,8 +413,6 @@ local lvgl.anim_path_t_free(anim_path_t)
 ---
 
 ## lvgl.anim_path_set_cb(path, func)
-
-
 
 设置动画回调
 
@@ -474,8 +438,6 @@ local lvgl.anim_path_t_free(anim_path_t)
 
 ## lvgl.event_send(obj, ent)
 
-
-
 发送事件给组件
 
 **参数**
@@ -499,8 +461,6 @@ local lvgl.anim_path_t_free(anim_path_t)
 ---
 
 ## lvgl.demo_benchmark()
-
-
 
 lvgl benchmark demo
 
@@ -526,8 +486,6 @@ lvgl.demo_benchmark()
 
 ## lvgl.demo_keypad_encoder()
 
-
-
 lvgl keypad_encoder demo
 
 **参数**
@@ -551,8 +509,6 @@ lvgl.demo_keypad_encoder()
 ---
 
 ## lvgl.demo_music()
-
-
 
 lvgl music demo
 
@@ -578,8 +534,6 @@ lvgl.demo_music()
 
 ## lvgl.demo_printer()
 
-
-
 lvgl printer demo
 
 **参数**
@@ -603,8 +557,6 @@ lvgl.demo_printer()
 ---
 
 ## lvgl.demo_stress()
-
-
 
 lvgl stress demo
 
@@ -630,8 +582,6 @@ lvgl.demo_stress()
 
 ## lvgl.demo_widgets()
 
-
-
 lvgl widgets demo
 
 **参数**
@@ -656,8 +606,6 @@ lvgl.demo_widgets()
 
 ## lvgl.draw_mask_radius_param_t()
 
-
-
 创建一个lv_draw_mask_radius_param_t
 
 **参数**
@@ -681,8 +629,6 @@ local radius = lvgl.draw_mask_radius_param_t()
 
 ## lvgl.draw_mask_radius_param_t_free(radius)
 
-
-
 释放一个lv_draw_mask_radius_param_t
 
 **参数**
@@ -703,8 +649,6 @@ local lvgl.draw_mask_radius_param_t_free(radius)
 ---
 
 ## lvgl.draw_mask_line_param_t()
-
-
 
 创建一个lv_draw_mask_line_param_t
 
@@ -729,8 +673,6 @@ local line = lvgl.draw_mask_line_param_t()
 
 ## lvgl.draw_mask_line_param_t_free(line)
 
-
-
 释放一个lv_draw_mask_line_param_t
 
 **参数**
@@ -751,8 +693,6 @@ local lvgl.draw_mask_line_param_t_free(line)
 ---
 
 ## lvgl.draw_mask_fade_param_t()
-
-
 
 创建一个lv_draw_mask_fade_param_t
 
@@ -777,8 +717,6 @@ local fade = lvgl.draw_mask_fade_param_t()
 
 ## lvgl.draw_mask_fade_param_t_free(fade)
 
-
-
 释放一个lv_draw_mask_fade_param_t
 
 **参数**
@@ -799,8 +737,6 @@ local lvgl.draw_mask_fade_param_t_free(fade)
 ---
 
 ## lvgl.font_get(name)
-
-
 
 获取内置字体
 
@@ -827,8 +763,6 @@ local font = lvgl.font_get("opposans_m_12")
 ---
 
 ## lvgl.font_load(path/spi_device,size,bpp,thickness,cache_size,sty_zh,sty_en)
-
-
 
 从文件系统加载字体
 
@@ -862,8 +796,6 @@ local font = lvgl.font_load("/font_32.bin")
 
 ## lvgl.font_free(font)
 
-
-
 释放字体,慎用!!!仅通过font_load加载的字体允许卸载,通过font_get获取的字体不允许卸载
 
 **参数**
@@ -891,8 +823,6 @@ lvgl.font_free(font)
 ---
 
 ## lvgl.gif_create(parent, path)
-
-
 
 创建gif组件
 
@@ -924,8 +854,6 @@ end
 
 ## lvgl.gif_restart(gif)
 
-
-
 重新播放gif组件
 
 **参数**
@@ -955,8 +883,6 @@ end
 
 ## lvgl.indev_drv_register(tp, dtp)
 
-
-
 注册输入设备驱动
 
 **参数**
@@ -982,8 +908,6 @@ lvgl.indev_drv_register("pointer", "emulator")
 ---
 
 ## lvgl.indev_point_emulator_update(x, y, state)
-
-
 
 更新模拟输入设备的坐标数据
 
@@ -1017,8 +941,6 @@ end, 240, 120, 50)
 
 ## lvgl.indev_kb_update(key)
 
-
-
 更新键盘输入设备的按键值
 
 **参数**
@@ -1040,8 +962,6 @@ end, 240, 120, 50)
 ---
 
 ## lvgl.qrcode_create(parent, size, dark_color, light_color)
-
-
 
 创建qrcode组件
 
@@ -1074,8 +994,6 @@ lvgl.obj_align(qrcode, lvgl.scr_act(), lvgl.ALIGN_CENTER, -100, -100)
 
 ## lvgl.qrcode_update(qrcode, cnt)
 
-
-
 设置qrcode组件的二维码内容,配合qrcode_create使用
 
 **参数**
@@ -1099,8 +1017,6 @@ lvgl.obj_align(qrcode, lvgl.scr_act(), lvgl.ALIGN_CENTER, -100, -100)
 
 ## lvgl.qrcode_delete(qrcode)
 
-
-
 删除qrcode组件
 
 **参数**
@@ -1122,8 +1038,6 @@ lvgl.obj_align(qrcode, lvgl.scr_act(), lvgl.ALIGN_CENTER, -100, -100)
 ---
 
 ## lvgl.style_t()
-
-
 
 创建一个style
 
@@ -1149,8 +1063,6 @@ lvgl.style_init(style)
 
 ## lvgl.style_create()
 
-
-
 创建一个style并初始化
 
 **参数**
@@ -1173,8 +1085,6 @@ local style = lvgl.style_create()
 ---
 
 ## lvgl.style_list_create()
-
-
 
 创建一个style_list
 
@@ -1199,8 +1109,6 @@ local style_list = lvgl.style_list_create()
 
 ## lvgl.style_list_t()
 
-
-
 创建一个style_list
 
 **参数**
@@ -1223,8 +1131,6 @@ local style = lvgl.style_list_t()
 ---
 
 ## lvgl.style_delete(style)
-
-
 
 删除style,慎用,通常不会执行删除操作
 
@@ -1251,8 +1157,6 @@ local style = lvgl.style_create()
 ---
 
 ## lvgl.style_list_delete(style)
-
-
 
 删除style_list,慎用,通常不会执行删除操作
 

@@ -46,8 +46,6 @@ end)
 
 ## lbsLoc.request(cbFnc,reqAddr,timeout,productKey,host,port,reqTime,reqWifi)
 
-
-
 发送基站定位请求
 
 **参数**

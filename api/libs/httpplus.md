@@ -18,8 +18,6 @@
 
 ## httpplus.request(opts)
 
-
-
 执行HTTP请求
 
 **参数**

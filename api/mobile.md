@@ -59,8 +59,6 @@ log.info("simid", mobile.simid())
 
 ## mobile.imei(index)
 
-
-
 获取IMEI
 
 **参数**
@@ -83,8 +81,6 @@ log.info("simid", mobile.simid())
 
 ## mobile.imsi(index)
 
-
-
 获取IMSI
 
 **参数**
@@ -106,8 +102,6 @@ log.info("simid", mobile.simid())
 ---
 
 ## mobile.sn()
-
-
 
 获取SN
 
@@ -134,8 +128,6 @@ log.info("simid", mobile.simid())
 
 ## mobile.muid()
 
-
-
 获取MUID
 
 **参数**
@@ -155,8 +147,6 @@ log.info("simid", mobile.simid())
 ---
 
 ## mobile.iccid(id)
-
-
 
 获取或设置ICCID
 
@@ -180,8 +170,6 @@ log.info("simid", mobile.simid())
 
 ## mobile.number(id)
 
-
-
 获取手机卡号，注意，只有写入了手机号才能读出，因此有可能读出来是空的
 
 **参数**
@@ -203,8 +191,6 @@ log.info("simid", mobile.simid())
 ---
 
 ## mobile.simid(id)
-
-
 
 获取当前SIM卡槽,或者切换卡槽
 
@@ -236,8 +222,6 @@ mobile.simid(2, true) -- -- 自动识别SIM0, SIM1, 且SIM0优先
 
 ## mobile.simPin(id,operation,pin1,pin2)
 
-
-
 检测当前SIM卡是否准备好，对SIM卡的PIN码做相关操作
 
 **参数**
@@ -267,8 +251,6 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")    -- 输入pin码验�
 
 ## mobile.rtime(time, auto_reset_stack, data_first)
 
-
-
 设置RRC自动释放时间间隔，当开启时后，遇到极弱信号+频繁数据操作可能会引起网络严重故障，因此需要额外设置自动重启协议栈
 
 **参数**
@@ -297,8 +279,6 @@ mobile.rtime(3,nil,true) --启用数据传输优化，与基站无数据交互3�
 
 ## mobile.setAuto(check_sim_period, get_cell_period, search_cell_time, auto_reset_stack, network_check_period)
 
-
-
 设置一些辅助周期性或者自动功能，目前支持SIM卡暂时脱离后恢复，周期性获取小区信息，网络遇到严重故障时尝试自动恢复
 
 **参数**
@@ -324,8 +304,6 @@ mobile.rtime(3,nil,true) --启用数据传输优化，与基站无数据交互3�
 ---
 
 ## mobile.apn(index, cid, new_apn_name, user_name, password, ip_type, protocol)
-
-
 
 获取或设置APN，设置APN必须在入网前就设置好，比如在SIM卡识别完成前就设置好
 
@@ -360,8 +338,6 @@ mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name�
 
 ## mobile.ipv6(onff)
 
-
-
 是否默认开启IPV6功能，必须在LTE网络连接前就设置好
 
 **参数**
@@ -387,8 +363,6 @@ mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name�
 
 ## mobile.csq()
 
-
-
 获取csq
 
 **参数**
@@ -412,8 +386,6 @@ mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name�
 
 ## mobile.rssi()
 
-
-
 获取rssi
 
 **参数**
@@ -433,8 +405,6 @@ mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name�
 ---
 
 ## mobile.rsrp()
-
-
 
 获取rsrp,参考信号接收功率
 
@@ -456,8 +426,6 @@ mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name�
 
 ## mobile.rsrq()
 
-
-
 获取rsrq,参考信号发送功率
 
 **参数**
@@ -477,8 +445,6 @@ mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name�
 ---
 
 ## mobile.snr()
-
-
 
 获取snr,信噪比
 
@@ -500,8 +466,6 @@ mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name�
 
 ## mobile.eci()
 
-
-
 获取当前服务小区的ECI(E-UTRAN Cell Identifier)
 
 **参数**
@@ -521,8 +485,6 @@ mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name�
 ---
 
 ## mobile.tac()
-
-
 
 获取当前服务小区的TAC或者LAC
 
@@ -547,8 +509,6 @@ mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name�
 
 ## mobile.enbid()
 
-
-
 获取当前服务小区的eNBID(eNodeB Identifier)
 
 **参数**
@@ -568,8 +528,6 @@ mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name�
 ---
 
 ## mobile.scell()
-
-
 
 获取当前服务小区更详细的信息
 
@@ -609,8 +567,6 @@ log.info("cell", json.encode(mobile.scell()))
 
 ## mobile.flymode(index, enable)
 
-
-
 进出飞行模式
 
 **参数**
@@ -633,8 +589,6 @@ log.info("cell", json.encode(mobile.scell()))
 ---
 
 ## mobile.syncTime(enable)
-
-
 
 配置基站同步时间开关，默认开启
 
@@ -661,8 +615,6 @@ mobile.syncTime(false) --关闭基站同步时间
 ---
 
 ## mobile.status()
-
-
 
 获取网络状态
 
@@ -697,8 +649,6 @@ mobile.syncTime(false) --关闭基站同步时间
 ---
 
 ## mobile.getCellInfo()
-
-
 
 获取基站信息
 
@@ -748,8 +698,6 @@ end)
 
 ## mobile.reqCellInfo(timeout)
 
-
-
 发起基站信息查询,含临近小区
 
 **参数**
@@ -774,8 +722,6 @@ end)
 ---
 
 ## mobile.lockCell(mode, earfcn, pci)
-
-
 
 锁定/解锁小区，仅用于外场测试，没接触过的，或者生产环境中请勿使用
 
@@ -805,8 +751,6 @@ mobile.lockCell(3)            --解锁小区
 
 ## mobile.reset()
 
-
-
 重启协议栈
 
 **参数**
@@ -830,8 +774,6 @@ mobile.reset()
 ---
 
 ## mobile.dataTraffic(clearUplink, clearDownlink)
-
-
 
 数据量流量处理
 
@@ -869,8 +811,6 @@ mobile.dataTraffic(true, true)
 ---
 
 ## mobile.config(item, value)
-
-
 
 网络特殊配置
 
@@ -920,8 +860,6 @@ mobile.config(mobile.CONF_SIM_WC_MODE, 3)
 
 ## mobile.getBand(band, is_default)
 
-
-
 获取当前使用/支持的band
 
 **参数**
@@ -948,8 +886,6 @@ mobile.getBand(buff) --输出当前使用的band，band号放在buff内，buff[0
 ---
 
 ## mobile.setBand(band, num)
-
-
 
 设置使用的band
 
@@ -982,8 +918,6 @@ mobile.setBand(buff, 4) --设置使用的band一共4个，为3,5,8,40
 
 ## mobile.nstOnOff(onoff, uart_id)
 
-
-
 RF测试开关和配置
 
 **参数**
@@ -1011,8 +945,6 @@ mobile.nstOnOff(false) --关闭测试模式
 
 ## mobile.nstInput(data)
 
-
-
 RF测试数据输入
 
 **参数**
@@ -1039,8 +971,6 @@ mobile.nstInput(nil)
 
 ## mobile.vsimInit()
 
-
-
 初始化内置默认虚拟卡功能(不可用)
 
 **参数**
@@ -1063,8 +993,6 @@ mobile.vsimInit()
 ---
 
 ## mobile.vsimOnOff(enable)
-
-
 
 切换内置虚拟卡和外置实体卡，2024年8月13日启用，虚拟卡需要固件支持，否则切换后无网络，需要在飞行模式下切换，或者切换后重启协议栈
 
@@ -1092,8 +1020,6 @@ mobile.vsimOnOff(false) --使用外置实体卡
 
 ## mobile.apnTableInit()
 
-
-
 初始化自定义APN列表，主要用于海外SIM卡
 
 **参数**
@@ -1116,8 +1042,6 @@ mobile.apnTableInit()
 ---
 
 ## mobile.apnTableAdd(mcc, mnc, ip_type, protocol, apn_name, user_name, password)
-
-
 
 往自定义APN列表添加一条APN信息，主要用于海外SIM卡
 
@@ -1151,8 +1075,6 @@ mobile.apnTableAdd(0x460,0x00,3,0,"cmiot","","") -- 单独添加一条APN信息�
 ---
 
 ## mobile.apnTablePrint(mcc, mnc)
-
-
 
 打印自定义APN列表里的一条信息，在没有拿到卡的情况下，测试一下对应的APN信息是否和运营商提供的匹配
 

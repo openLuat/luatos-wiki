@@ -27,8 +27,6 @@
 
 ## gpio.setup(pin, mode, pull, irq, alt)
 
-
-
 设置管脚功能
 
 **参数**
@@ -105,8 +103,6 @@ gpio.setup(18, 0, nil, nil, 4)
 
 ## gpio.caplevel(pin, level,func)
 
-
-
 捕获管脚电平持续时长，单位us
 
 **参数**
@@ -135,8 +131,6 @@ gpio.caplevel(pin.PA07,1,function(us_int) print(us_float) end)
 
 ## gpio.set(pin, value)
 
-
-
 设置管脚电平
 
 **参数**
@@ -164,8 +158,6 @@ gpio.set(17, 0)
 
 ## gpio.get(pin)
 
-
-
 获取管脚电平
 
 **参数**
@@ -191,8 +183,6 @@ gpio.get(17)
 ---
 
 ## gpio.close(pin)
-
-
 
 关闭管脚功能(高阻输入态),关掉中断
 
@@ -220,8 +210,6 @@ gpio.close(17)
 
 ## gpio.setDefaultPull(val)
 
-
-
 设置GPIO脚的默认上拉/下拉设置, 默认是平台自定义(一般为开漏).
 
 **参数**
@@ -247,8 +235,6 @@ gpio.setDefaultPull(1)
 ---
 
 ## gpio.toggle(pin)
-
-
 
 变换GPIO脚输出电平,仅输出模式可用
 
@@ -280,8 +266,6 @@ end, 500)
 
 ## gpio.pulse(pin,level,len,delay)
 
-
-
 在同一个GPIO输出一组脉冲, 注意, len的单位是bit, 高位在前.
 
 **参数**
@@ -310,8 +294,6 @@ gpio.pulse(pin.PB06,0xA9, 8, 0)
 ---
 
 ## gpio.debounce(pin, ms, mode)
-
-
 
 防抖设置, 根据硬件ticks进行防抖
 
@@ -350,8 +332,6 @@ gpio.debounce(7, 0)
 ---
 
 ## gpio.count(pin)
-
-
 
 获取gpio中断数量，并清空累计值，类似air724的脉冲计数
 

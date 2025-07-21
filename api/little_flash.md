@@ -2,8 +2,6 @@
 
 ## lf.init(spi_device)
 
-
-
 初始化 little_flash
 
 **参数**
@@ -30,8 +28,6 @@ log.info("lf.init",lf.init(spi_device))
 ---
 
 ## lf.mount(flash, mount_point, offset, maxsize)
-
-
 
 挂载 little_flash lfs文件系统
 

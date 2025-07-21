@@ -31,8 +31,6 @@
 
 ## nimble.init(name)
 
-
-
 初始化BLE上下文,开始对外广播/扫描
 
 **参数**
@@ -59,8 +57,6 @@
 
 ## nimble.deinit()
 
-
-
 关闭BLE上下文
 
 **参数**
@@ -84,8 +80,6 @@
 ---
 
 ## nimble.mode(tp)
-
-
 
 设置模式
 
@@ -114,8 +108,6 @@
 
 ## nimble.connok()
 
-
-
 是否已经建立连接
 
 **参数**
@@ -141,8 +133,6 @@ log.info("ble", "connected?", nimble.connok())
 ---
 
 ## nimble.send_msg(conn, handle, data)
-
-
 
 发送信息
 
@@ -171,8 +161,6 @@ log.info("ble", "connected?", nimble.connok())
 ---
 
 ## nimble.setUUID(tp, addr)
-
-
 
 设置server/peripheral的UUID
 
@@ -210,8 +198,6 @@ nimble.setUUID("indicate", string.fromHex("FF32")) -- 订阅本设备的数据�
 
 ## nimble.mac(mac)
 
-
-
 获取蓝牙MAC
 
 **参数**
@@ -243,8 +229,6 @@ nimble.mac(string.fromHex("1234567890AB"))
 
 ## nimble.sendNotify(srv_uuid, chr_uuid, data)
 
-
-
 发送notify
 
 **参数**
@@ -274,8 +258,6 @@ nimble.sendNotify(nil, string.fromHex("FF01"), string.char(0x31, 0x32, 0x33, 0x3
 
 ## nimble.sendIndicate(srv_uuid, chr_uuid, data)
 
-
-
 发送indicate
 
 **参数**
@@ -304,8 +286,6 @@ nimble.sendIndicate(nil, string.fromHex("FF01"), string.char(0x31, 0x32, 0x33, 0
 ---
 
 ## nimble.advParams(conn_mode, disc_mode, itvl_min, itvl_max, channel_map, filter_policy, high_duty_cycle)
-
-
 
 设置广播参数
 
@@ -342,8 +322,6 @@ nimble.advParams(0, 1)
 
 ## nimble.setChr(index, uuid, flags)
 
-
-
 设置chr的特征
 
 **参数**
@@ -375,8 +353,6 @@ nimble.setChr(2, string.fromHex("FF03"), nimble.CHR_F_WRITE_NO_RSP)
 
 ## nimble.config(id, value)
 
-
-
 设置chr的特征
 
 **参数**
@@ -406,8 +382,6 @@ nimble.config(nimble.CFG_ADDR_ORDER, 1)
 ---
 
 ## nimble.ibeacon(data, major, minor, measured_power)
-
-
 
 配置iBeacon的参数,仅iBeacon模式可用
 
@@ -439,8 +413,6 @@ nimble.init()
 ---
 
 ## nimble.advData(data, flags)
-
-
 
 配置广播数据,仅iBeacon模式可用
 
@@ -483,8 +455,6 @@ end
 
 ## nimble.scan(timeout)
 
-
-
 扫描从机
 
 **参数**
@@ -516,8 +486,6 @@ nimble.scan()
 
 ## nimble.connect(mac)
 
-
-
 连接到从机
 
 **参数**
@@ -544,8 +512,6 @@ nimble.scan()
 
 ## nimble.disconnect()
 
-
-
 断开与从机的连接
 
 **参数**
@@ -569,8 +535,6 @@ nimble.scan()
 ---
 
 ## nimble.discSvr()
-
-
 
 扫描从机的服务列表
 
@@ -597,8 +561,6 @@ nimble.scan()
 
 ## nimble.listSvr()
 
-
-
 获取从机的服务列表
 
 **参数**
@@ -621,8 +583,6 @@ nimble.scan()
 ---
 
 ## nimble.discChr(svr_uuid)
-
-
 
 扫描从机的指定服务的特征值
 
@@ -649,8 +609,6 @@ nimble.scan()
 
 ## nimble.listChr(svr_uuid)
 
-
-
 获取从机的指定服务的特征值列表
 
 **参数**
@@ -675,8 +633,6 @@ nimble.scan()
 ---
 
 ## nimble.discDsc(svr_uuid, chr_uuid)
-
-
 
 扫描从机的指定服务的特征值的其他属性
 
@@ -703,8 +659,6 @@ nimble.scan()
 ---
 
 ## nimble.writeChr(svr_uuid, chr_uuid, data)
-
-
 
 往指定的服务的指定特征值写入数据
 
@@ -733,8 +687,6 @@ nimble.scan()
 
 ## nimble.readChr(svr_uuid, chr_uuid)
 
-
-
 从指定的服务的指定特征值读取数据(异步)
 
 **参数**
@@ -762,8 +714,6 @@ nimble.scan()
 
 ## nimble.subChr(svr_uuid, chr_uuid)
 
-
-
 订阅指定的服务的指定特征值
 
 **参数**
@@ -790,8 +740,6 @@ nimble.scan()
 ---
 
 ## nimble.unsubChr(svr_uuid, chr_uuid)
-
-
 
 取消订阅指定的服务的指定特征值
 

@@ -10,8 +10,6 @@
 
 ## lora2.init(ic, loraconfig,spiconfig)
 
-
-
 lora初始化
 
 **参数**
@@ -39,8 +37,6 @@ lora_device = lora2.init("llcc68",{res = pin_reset,busy = pin_busy,dio1 = pin_di
 
 ## lora_device:set_channel(freq)
 
-
-
 设置频道频率
 
 **参数**
@@ -63,8 +59,6 @@ lora_device:set_channel(433000000)
 ---
 
 ## lora_device:set_txconfig(txconfig)
-
-
 
 lora配置发送参数
 
@@ -104,8 +98,6 @@ lora_device:set_txconfig(
 ---
 
 ## lora_device:set_rxconfig(set_rxconfig)
-
-
 
 lora配置接收参数
 
@@ -147,8 +139,6 @@ lora_device:set_rxconfig(
 
 ## lora_device:send(data)
 
-
-
 发数据
 
 **参数**
@@ -171,8 +161,6 @@ lora_device:send("PING")
 ---
 
 ## lora_device:recv(timeout)
-
-
 
 开启收数据
 
@@ -201,8 +189,6 @@ lora_device:recv(1000)
 
 ## lora_device:mode(mode)
 
-
-
 设置进入模式(休眠，正常等)
 
 **参数**
@@ -225,8 +211,6 @@ lora_device:mode(lora.STANDBY)
 ---
 
 ## lora_device:on(cb)
-
-
 
 注册lora回调
 

@@ -20,8 +20,6 @@
 
 ## lcdseg.setup(bias, duty, vlcd, com_number, fresh_rate, com_mark, seg_mark)
 
-
-
 初始化lcdseg库
 
 **参数**
@@ -60,8 +58,6 @@ end
 
 ## lcdseg.enable(en)
 
-
-
 启用或禁用lcdseg库
 
 **参数**
@@ -84,8 +80,6 @@ end
 
 ## lcdseg.power(en)
 
-
-
 启用或禁用lcdseg的输出
 
 **参数**
@@ -107,8 +101,6 @@ end
 ---
 
 ## lcdseg.seg_set(com, seg, en)
-
-
 
 设置具体一个段码的状态
 

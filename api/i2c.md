@@ -10,8 +10,6 @@
 
 ## i2c.exist(id)
 
-
-
 i2c编号是否存在
 
 **参数**
@@ -39,8 +37,6 @@ end
 ---
 
 ## i2c.setup(id, speed, pullup)
-
-
 
 i2c初始化
 
@@ -70,8 +66,6 @@ i2c.setup(1, i2c.FAST) -- id正确就一定成功
 ---
 
 ## i2c.createSoft(scl,sda,delay)
-
-
 
 新建一个软件i2c对象
 
@@ -106,8 +100,6 @@ i2c.send(softI2C, 0x5C, string.char(0x0F, 0x2F))
 
 ## i2c.send(id, addr, data,stop)
 
-
-
 i2c发送数据
 
 **参数**
@@ -140,8 +132,6 @@ i2c.send(1, 0x5C, {0x0F, 0x2F})
 
 ## i2c.recv(id, addr, len)
 
-
-
 i2c接收数据
 
 **参数**
@@ -169,8 +159,6 @@ local data = i2c.recv(1, 0x5C, 2)
 ---
 
 ## i2c.writeReg(id, addr, reg, data,stop)
-
-
 
 i2c写寄存器数据
 
@@ -202,8 +190,6 @@ i2c.writeReg(1, 0x5C, 0x01, string.char(0x00, 0xF2))
 
 ## i2c.readReg(id, addr, reg, len)
 
-
-
 i2c读寄存器数据
 
 **参数**
@@ -234,8 +220,6 @@ i2c.readReg(1, 0x5C, 0x01, 2)
 
 ## i2c.close(id)
 
-
-
 关闭i2c设备
 
 **参数**
@@ -261,8 +245,6 @@ i2c.close(1)
 ---
 
 ## i2c.readDHT12(id)
-
-
 
 从i2c总线读取DHT12的温湿度数据
 
@@ -297,8 +279,6 @@ end
 
 ## i2c.readSHT30(id,addr)
 
-
-
 从i2c总线读取DHT30的温湿度数据(由"好奇星"贡献)
 
 **参数**
@@ -331,8 +311,6 @@ end
 ---
 
 ## i2c.transfer(id, addr, txBuff, rxBuff, rxLen)
-
-
 
 i2c通用传输，包括发送N字节，发送N字节+接收N字节，接收N字节三种功能，在发送转接收过程中发送reStart信号,解决类似mlx90614必须带restart信号，但是又不能用i2c.send来控制的，比如air105
 
@@ -368,8 +346,6 @@ local result, rxdata = i2c.transfer(0, 0x11, 0x00, nil, 1) --发送0x00，然后
 
 ## i2c.xfer(id, addr, txBuff, rxBuff, rxLen, transfer_done_topic, timeout)
 
-
-
 i2c非阻塞通用传输，类似transfer，但是不会等到I2C传输完成才返回，调用本函数会立刻返回，I2C传输完成后，通过消息回调
 
 **参数**
@@ -401,8 +377,6 @@ local result = i2c.xfer(0, 0x11, txbuff, rxbuff, 1, "I2CDONE") if result then re
 ---
 
 ## i2c.scan(id,speed)
-
-
 
 扫描i2c设备
 

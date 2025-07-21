@@ -2,8 +2,6 @@
 
 ## ir.sendNEC(pin, addr, cmd, repeat, disablePWM)
 
-
-
 发送NEC数据
 
 **参数**

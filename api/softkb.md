@@ -2,8 +2,6 @@
 
 ## softkb.init(port, key_in, key_out)
 
-
-
 初始化软件键盘矩阵
 
 **参数**
@@ -37,8 +35,6 @@ end)
 ---
 
 ## softkb.deinit(port)
-
-
 
 删除软件键盘矩阵
 

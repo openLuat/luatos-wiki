@@ -11,8 +11,6 @@ log.info("fskv", "wendal", fskv.get("wendal"))
 
 ## fskv.init()
 
-
-
 初始化kv数据库
 
 **参数**
@@ -37,8 +35,6 @@ end
 ---
 
 ## fskv.set(key, value)
-
-
 
 设置一对kv数据
 
@@ -70,8 +66,6 @@ log.info("fskv", fskv.set("bigd", {name="wendal",age=123}))
 ---
 
 ## fskv.sett(key, skey, value)
-
-
 
 设置table内的键值对数据
 
@@ -119,8 +113,6 @@ log.info("fskv", fskv.sett("mykv", "name")) -- 相当于删除
 
 ## fskv.get(key, skey)
 
-
-
 根据key获取对应的数据
 
 **参数**
@@ -152,8 +144,6 @@ local v = fskv.get("wendal") or "123"
 
 ## fskv.del(key)
 
-
-
 根据key删除数据
 
 **参数**
@@ -179,8 +169,6 @@ log.info("fskv", fskv.del("wendal"))
 
 ## fskv.clear()
 
-
-
 清空整个kv数据库
 
 **参数**
@@ -204,8 +192,6 @@ fskv.clear()
 ---
 
 ## fskv.iter()
-
-
 
 kv数据库迭代器
 
@@ -239,8 +225,6 @@ end
 ---
 
 ## fskv.next(iter)
-
-
 
 kv迭代器获取下一个key
 
@@ -276,8 +260,6 @@ end
 ---
 
 ## fskv.status()
-
-
 
 获取kv数据库状态
 

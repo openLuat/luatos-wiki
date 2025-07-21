@@ -28,8 +28,6 @@
 
 ## airtalk.config(protocol,netc,cache_time,encode_cnt,decode_cnt,audio_pm_mode_when_stop)
 
-
-
 配置airtalk参数
 
 **参数**
@@ -60,8 +58,6 @@ airtalk.config(airtalk.PROTOCOL_DEMO_MQTT_8K, mqttc)
 
 ## airtalk.on(func)
 
-
-
 注册airtalk事件回调
 
 **参数**
@@ -88,8 +84,6 @@ end)
 ---
 
 ## airtalk.start(uid,ctrl_url,ctrl_port)
-
-
 
 airtalk启动
 
@@ -123,8 +117,6 @@ airtalk.start("123456789012345")
 
 ## airtalk.uplink(on_off)
 
-
-
 airtalk上行控制
 
 **参数**
@@ -151,8 +143,6 @@ airtalk.uplink(false)
 ---
 
 ## airtalk.debug(on_off)
-
-
 
 airtalk的详细调试信息开关
 

@@ -25,8 +25,6 @@ end)
 
 ## lbsLoc2.request(timeout, host, port, reqTime)
 
-
-
 执行定位请求
 
 **参数**

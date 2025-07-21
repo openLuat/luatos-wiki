@@ -46,8 +46,6 @@ end
 
 ## io.exists(path)
 
-
-
 判断文件是否存在
 
 **参数**
@@ -72,8 +70,6 @@ log.info("io", "file exists", io.exists("/boottime"))
 ---
 
 ## io.fileSize(path)
-
-
 
 获取文件大小
 
@@ -102,8 +98,6 @@ end
 ---
 
 ## io.readFile(path, mode, offset, len)
-
-
 
 读取整个文件,请注意内存消耗
 
@@ -136,8 +130,6 @@ local data = io.readFile("/abc.txt", "rb", 128, 512)
 
 ## io.writeFile(path, data)
 
-
-
 将数据写入文件
 
 **参数**
@@ -163,8 +155,6 @@ io.writeFile("/bootime", "1")
 ---
 
 ## io.fill(buff, offset, len)
-
-
 
 读取文件并填充到zbuff内,但不移动指针位置
 
@@ -198,8 +188,6 @@ end
 
 ## io.mkfs(path)
 
-
-
 格式化文件系统,需指定挂载点
 
 **参数**
@@ -226,8 +214,6 @@ log.info("fs", "mkfs", ret, errio)
 ---
 
 ## io.mkdir(path)
-
-
 
 创建文件夹
 
@@ -256,8 +242,6 @@ log.info("fs", "mkdir", ret, errio)
 
 ## io.rmdir(path)
 
-
-
 删除文件夹
 
 **参数**
@@ -284,8 +268,6 @@ log.info("fs", "rmdir", ret, errio)
 ---
 
 ## io.lsdir(path, len, offset)
-
-
 
 列出目录下的文件
 
@@ -319,8 +301,6 @@ end
 ---
 
 ## io.lsmount()
-
-
 
 列出所有挂载点
 

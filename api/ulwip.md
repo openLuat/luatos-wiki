@@ -25,8 +25,6 @@ lua代码 <- ulwip回调函数 <- lwip(netif->low_level_output) <- lwip处理逻
 
 ## ulwip.setup(adapter_index, mac, output_lua_ref, opts)
 
-
-
 初始化lwip netif
 
 **参数**
@@ -65,8 +63,6 @@ end)
 
 ## ulwip.updown(adapter_index, up)
 
-
-
 设置netif的状态
 
 **参数**
@@ -93,8 +89,6 @@ end)
 
 ## ulwip.link(adapter_index, up)
 
-
-
 设置netif的物理链路状态
 
 **参数**
@@ -120,8 +114,6 @@ end)
 ---
 
 ## ulwip.input(adapter_index, data, len, offset)
-
-
 
 往netif输入数据
 
@@ -151,8 +143,6 @@ end)
 
 ## ulwip.dhcp(adapter_index, up)
 
-
-
 启动或关闭dhcp
 
 **参数**
@@ -178,8 +168,6 @@ end)
 ---
 
 ## ulwip.ip(adapter_index, ip, netmask, gw)
-
-
 
 设置或获取ip信息
 
@@ -212,8 +200,6 @@ ulwip.ip(socket.LWIP_STA, "192.168.0.1", "255.255.255.0", "192.168.0.1")
 
 ## ulwip.reg(adapter_index)
 
-
-
 将netif注册到luatos socket中
 
 **参数**
@@ -238,8 +224,6 @@ ulwip.ip(socket.LWIP_STA, "192.168.0.1", "255.255.255.0", "192.168.0.1")
 ---
 
 ## ulwip.xt804_xfer(spi_id, cs_pin, addr, zbuff, len, offset, auto_seek, auto_len)
-
-
 
 操作XT804进行SPI快速收发
 

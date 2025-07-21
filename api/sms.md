@@ -11,8 +11,6 @@
 
 ## sms.send(phone, msg, auto_phone_fix)
 
-
-
 发送短信
 
 **参数**
@@ -37,8 +35,6 @@
 
 ## sms.sendLong(phone, msg, auto_phone_fix).wait()
 
-
-
 发送长短信(每段PDU发送超时时间30s)
 
 **参数**
@@ -62,8 +58,6 @@
 ---
 
 ## sms.setNewSmsCb(func)
-
-
 
 设置新SMS的回调函数
 
@@ -97,8 +91,6 @@ end)
 
 ## sms.autoLong(mode)
 
-
-
 设置长短信的自动合并功能
 
 **参数**
@@ -124,8 +116,6 @@ sms.autoLong(false)
 ---
 
 ## sms.clearLong()
-
-
 
 清除长短信缓存
 

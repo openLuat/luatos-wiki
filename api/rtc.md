@@ -2,8 +2,6 @@
 
 ## rtc.set(tab)
 
-
-
 设置时钟
 
 **参数**
@@ -30,8 +28,6 @@ rtc.set(1652230554)
 
 ## rtc.get()
 
-
-
 获取时钟
 
 **参数**
@@ -56,8 +52,6 @@ log.info("rtc", json.encode(t))
 ---
 
 ## rtc.timerStart(id, tab)
-
-
 
 设置RTC唤醒时间
 
@@ -87,8 +81,6 @@ rtc.timerStart(0, {year=2021,mon=9,day=1,hour=17,min=8,sec=43})
 
 ## rtc.timerStop(id)
 
-
-
 取消RTC唤醒时间
 
 **参数**
@@ -114,8 +106,6 @@ rtc.timerStop(0)
 
 ## rtc.setBaseYear(Base_year)
 
-
-
 设置RTC基准年,不推荐
 
 **参数**
@@ -138,8 +128,6 @@ rtc.setBaseYear(1900)
 ---
 
 ## rtc.timezone(tz)
-
-
 
 读取或设置时区
 

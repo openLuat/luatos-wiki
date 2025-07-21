@@ -40,8 +40,6 @@ end
 
 ## miniz.compress(data, flags)
 
-
-
 快速压缩,需要165kb的系统内存和32kb的LuaVM内存
 
 **参数**
@@ -74,8 +72,6 @@ end
 ---
 
 ## miniz.uncompress(data, flags)
-
-
 
 快速解压,需要32kb的LuaVM内存
 

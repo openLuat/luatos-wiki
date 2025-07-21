@@ -15,8 +15,6 @@ sys.waitUnitl("PING_RESULT", 3000)
 
 ## icmp.setup(id)
 
-
-
 初始化指定网络设备的icmp
 
 **参数**
@@ -42,8 +40,6 @@ icmp.setup(socket.LWIP_GP)
 ---
 
 ## icmp.ping(id, ip, len)
-
-
 
 发起ping(异步的)
 

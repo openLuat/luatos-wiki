@@ -13,8 +13,6 @@
 
 ## netdrv.setup(id, tp, opts)
 
-
-
 初始化指定netdrv设备
 
 **参数**
@@ -51,8 +49,6 @@ netdrv.setup(socket.LWIP_ETH, netdrv.CH390, {spi=0,cs=8,irq=20})
 
 ## netdrv.dhcp(id, enable)
 
-
-
 开启或关闭DHCP
 
 **参数**
@@ -75,8 +71,6 @@ netdrv.setup(socket.LWIP_ETH, netdrv.CH390, {spi=0,cs=8,irq=20})
 ---
 
 ## netdrv.mac(id, new_mac, raw_string)
-
-
 
 设置或获取设备MAC
 
@@ -106,8 +100,6 @@ log.info("netdrv", "mac addr", netdrv.mac(socket.LWIP_ETH))
 ---
 
 ## netdrv.ipv4(id, addr, mark, gw)
-
-
 
 设置或读取ipv4地址
 
@@ -142,8 +134,6 @@ log.info("netdrv", "mac addr", netdrv.mac(socket.LWIP_ETH))
 
 ## netdrv.napt(id)
 
-
-
 开启或关闭NAPT
 
 **参数**
@@ -174,8 +164,6 @@ netdrv.napt(-1)
 
 ## netdrv.link(id)
 
-
-
 获取netdrv的物理连接状态
 
 **参数**
@@ -201,8 +189,6 @@ netdrv.napt(-1)
 
 ## netdrv.ready(id)
 
-
-
 获取netdrv的网络状态
 
 **参数**
@@ -227,8 +213,6 @@ netdrv.napt(-1)
 ---
 
 ## netdrv.ctrl(id, cmd, arg)
-
-
 
 给具体的驱动发送控制指令
 
@@ -258,8 +242,6 @@ netdrv.ctrl(socket.LWIP_ETH, netdrv.CTRL_RESET, netdrv.RESET_HARD)
 ---
 
 ## netdrv.debug(id, enable)
-
-
 
 设置调试信息输出
 

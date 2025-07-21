@@ -15,8 +15,6 @@ local f = io.open("/sd/abc.txt")
 
 ## sdio.init(id)
 
-
-
 初始化sdio
 
 **参数**
@@ -38,8 +36,6 @@ local f = io.open("/sd/abc.txt")
 ---
 
 ## sdio.sd_read(id, offset, len)
-
-
 
 直接读写sd卡上的数据
 
@@ -72,8 +68,6 @@ end
 ---
 
 ## sdio.sd_write(id, data, offset)
-
-
 
 直接写sd卡
 

@@ -2,8 +2,6 @@
 
 ## timer.mdelay(timeout)
 
-
-
 硬阻塞指定时长
 
 **参数**
@@ -30,8 +28,6 @@ timer.mdelay(10)
 ---
 
 ## timer.udelay(timeout)
-
-
 
 硬阻塞指定时长但us级别,不会很精准
 

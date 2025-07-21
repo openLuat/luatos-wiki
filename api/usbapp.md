@@ -12,8 +12,6 @@
 
 ## usbapp.set_id(id, vid, pid)
 
-
-
 USB 设置VID和PID
 
 **参数**
@@ -38,8 +36,6 @@ usbapp.set_id(0, 0x1234, 0x5678)
 ---
 
 ## usbapp.hid_mode(id, mode, buff_size)
-
-
 
 USB HID设备模式
 
@@ -67,8 +63,6 @@ usbapp.hid_mode(0, 1) -- usb hid自定义模式，用于免驱USB交互
 
 ## usbapp.start(id)
 
-
-
 启动USB设备
 
 **参数**
@@ -94,8 +88,6 @@ usbapp.start(0)
 ---
 
 ## usbapp.stop(id)
-
-
 
 关闭USB设备
 
@@ -123,8 +115,6 @@ usbapp.stop(0)
 
 ## usbapp.vhid_upload(id, data)
 
-
-
 USB HID设备上传数据
 
 **参数**
@@ -151,8 +141,6 @@ usbapp.vhid_upload(0, "1234") -- usb hid会模拟敲出1234
 ---
 
 ## usbapp.hid_tx(id, data, start, len)
-
-
 
 USB HID设备上传用户自定义数据
 
@@ -183,8 +171,6 @@ usbapp.hid_tx(0, "1234") -- usb hid上传0x31 0x32 0x33 0x34  + N个0
 
 ## usbapp.hid_rx(id, buff)
 
-
-
 buff形式读接收到的数据，一次读出全部数据存入buff中，如果buff空间不够会自动扩展，目前只有air105支持这个操作
 
 **参数**
@@ -210,8 +196,6 @@ usbapp.hid_rx(0, buff)
 ---
 
 ## usbapp.vhid_cancel_upload(id)
-
-
 
 USB HID设备取消上传数据
 
@@ -239,8 +223,6 @@ usbapp.vhid_cancel_upload(0)
 
 ## usbapp.udisk_attach_sdhc(id)
 
-
-
 USB U盘设备挂载SDHC，TF卡
 
 **参数**
@@ -265,8 +247,6 @@ usbapp.udisk_attach_sdhc(0)
 ---
 
 ## usbapp.udisk_detach_sdhc(id)
-
-
 
 USB U盘设备去除挂载SDHC，TF卡
 

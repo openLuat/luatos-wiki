@@ -26,8 +26,6 @@
 
 ## airlink.init()
 
-
-
 初始化AirLink
 
 **参数**
@@ -52,8 +50,6 @@ airlink.init()
 ---
 
 ## airlink.start(mode)
-
-
 
 启动AirLink
 
@@ -85,8 +81,6 @@ airlink.start(airlink.MODE_SPI_SLAVE)
 
 ## airlink.stop(mode)
 
-
-
 关闭AirLink
 
 **参数**
@@ -111,8 +105,6 @@ airlink.start(airlink.MODE_SPI_SLAVE)
 ---
 
 ## airlink.test(count)
-
-
 
 发送测试指令(nop空指令)
 
@@ -140,8 +132,6 @@ airlink.test(10)
 
 ## airlink.statistics()
 
-
-
 打印统计信息
 
 **参数**
@@ -166,8 +156,6 @@ airlink.statistics()
 
 ## airlink.slave_reboot()
 
-
-
 重启从机
 
 **参数**
@@ -191,8 +179,6 @@ airlink.slave_reboot()
 ---
 
 ## airlink.sdata(data)
-
-
 
 发送自定义数据
 
@@ -219,8 +205,6 @@ airlink.sdata("hello world")
 ---
 
 ## airlink.ready()
-
-
 
 判断是否就绪
 
@@ -250,8 +234,6 @@ end
 ---
 
 ## airlink.config(key, value)
-
-
 
 配置AirLink的参数
 
@@ -283,8 +265,6 @@ airlink.config(airlink.CONF_SPI_IRQ, 12)
 
 ## airlink.sfota(path)
 
-
-
 升级从机固件
 
 **参数**
@@ -312,8 +292,6 @@ airlink.sfota("/luadb/air8000s_v5.bin")
 
 ## airlink.debug(mode)
 
-
-
 调试开关
 
 **参数**
@@ -340,8 +318,6 @@ airlink.debug(1)
 
 ## airlink.pause(mode)
 
-
-
 暂停或回复airlink通信
 
 **参数**
@@ -367,8 +343,6 @@ airlink.pause(1)
 ---
 
 ## airlink.irqmode(mode, master_gpio, slave_gpio)
-
-
 
 开启中断模式
 
@@ -400,8 +374,6 @@ airlink.irqmode(true, 20, 140)
 
 ## airlink.wakeupIrqmode(mode, master_gpio, slave_gpio, irq_mode)
 
-
-
 开启wakeup唤醒中断模式
 
 **参数**
@@ -431,8 +403,6 @@ airlink.wakeupIrqmode(true, 20, 140, gpio.RISING)
 ---
 
 ## airlink.power(enable)
-
-
 
 关闭airlink相关供电
 
@@ -464,8 +434,6 @@ airlink.power(true)
 ---
 
 ## airlink.sver()
-
-
 
 获取从机版本号
 

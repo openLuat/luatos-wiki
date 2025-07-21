@@ -17,8 +17,6 @@ end)
 
 ## xmodem.send(uart_id, uart_br, file_path,type)
 
-
-
 xmodem 发送文件
 
 **参数**
@@ -46,8 +44,6 @@ xmodem.send(2,115200,"/luadb/test.bin")
 ---
 
 ## xmodem.close(uart_id)
-
-
 
 关闭xmodem
 

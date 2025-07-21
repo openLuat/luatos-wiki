@@ -2,8 +2,6 @@
 
 ## iotauth.aliyun(product_key, device_name,device_secret,method,cur_timestamp)
 
-
-
 阿里云物联网平台三元组生成
 
 **参数**
@@ -36,8 +34,6 @@ print(client_id,user_name,password)
 ---
 
 ## iotauth.onenet(produt_id, device_name,key,method,cur_timestamp,version)
-
-
 
 中国移动物联网平台三元组生成
 
@@ -90,8 +86,6 @@ log.info("onenet.old", client_id,user_name,password)
 
 ## iotauth.iotda(device_id,device_secret,cur_timestamp)
 
-
-
 华为物联网平台三元组生成
 
 **参数**
@@ -121,8 +115,6 @@ print(client_id,user_name,password)
 ---
 
 ## iotauth.qcloud(product_id, device_name,device_secret,method,cur_timestamp,sdk_appid)
-
-
 
 腾讯联网平台三元组生成
 
@@ -157,8 +149,6 @@ print(client_id,user_name,password)
 
 ## iotauth.tuya(device_id,device_secret,cur_timestamp)
 
-
-
 涂鸦联网平台三元组生成
 
 **参数**
@@ -188,8 +178,6 @@ print(client_id,user_name,password)
 ---
 
 ## iotauth.baidu(iot_core_id, device_key,device_secret,method,cur_timestamp)
-
-
 
 百度物联网平台三元组生成
 

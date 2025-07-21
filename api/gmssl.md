@@ -11,8 +11,6 @@
 
 ## sm.sm2encrypt(pkx,pky,data, mode, mode2)
 
-
-
 sm2算法加密
 
 **参数**
@@ -43,8 +41,6 @@ sm2算法加密
 
 ## sm.sm2decrypt(private,data,mode,mode2)
 
-
-
 sm2算法解密
 
 **参数**
@@ -74,8 +70,6 @@ sm2算法解密
 
 ## sm.sm3(data)
 
-
-
 sm3算法,算HASH值
 
 **参数**
@@ -101,8 +95,6 @@ log.info("testsm.sm3update",string.toHex(encodeStr))
 ---
 
 ## sm.sm3hmac(data, key)
-
-
 
 sm3算法,算HASH值,但带HMAC
 
@@ -130,8 +122,6 @@ log.info("testsm.sm3update",string.toHex(encodeStr))
 ---
 
 ## gmssl.sm4encrypt(mode,padding,originStr,password)
-
-
 
 SM4加密算法
 
@@ -178,8 +168,6 @@ log.info("testsm.decrypt",gmssl.sm4decrypt("CBC","PKCS5",encodeStr,"123456789012
 
 ## gmssl.sm4decrypt(mode,padding,encodeStr,password)
 
-
-
 SM4解密算法
 
 **参数**
@@ -209,8 +197,6 @@ SM4解密算法
 
 ## sm.sm2sign(private,data,id)
 
-
-
 sm2算法签名
 
 **参数**
@@ -238,8 +224,6 @@ sm2算法签名
 ---
 
 ## sm.sm2verify(pkx, pky, data, id, sig)
-
-
 
 sm2算法验签
 

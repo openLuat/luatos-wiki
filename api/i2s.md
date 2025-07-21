@@ -24,8 +24,6 @@
 
 ## i2s.setup(id, mode, sample, bitw, channel, format, framebit)
 
-
-
 初始化i2s
 
 **参数**
@@ -60,8 +58,6 @@ i2s.setup(0, 0, 44100, 16, 0, 0, 16)
 ---
 
 ## i2s.send(id, data, len)
-
-
 
 发送i2s数据
 
@@ -99,8 +95,6 @@ end
 
 ## i2s.recv(id, buffer, len)
 
-
-
 接收i2s数据，注意在数据在回调时已经存放在zbuff里，目前只有air780exxx系列支持
 
 **参数**
@@ -129,8 +123,6 @@ local succ = i2s.recv(0, buffer, 3200);
 
 ## i2s.close(id)
 
-
-
 关闭i2s
 
 **参数**
@@ -155,8 +147,6 @@ i2s.close(0)
 ---
 
 ## i2s.on(id, func)
-
-
 
 注册I2S事件回调
 
@@ -190,8 +180,6 @@ end)
 
 ## i2s.txStat(id)
 
-
-
 获取i2s的发送缓冲区状态
 
 **参数**
@@ -218,8 +206,6 @@ log.info("i2s发送缓冲区状态", max, remain)
 ---
 
 ## i2s.getPara(id)
-
-
 
 获取I2S参数，参数具体参考setup
 

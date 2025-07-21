@@ -22,8 +22,6 @@
 
 ## camera.init(InitReg_or_cspi_id, cspi_speed, mode, is_msb, rx_bit, seq_type, is_ddr, only_y, scan_mode, w, h)
 
-
-
 初始化摄像头
 
 **参数**
@@ -61,8 +59,6 @@ camera.start(camera_id)--开始指定的camera
 
 ## camera.on(id, event, func)
 
-
-
 注册摄像头事件回调
 
 **参数**
@@ -94,8 +90,6 @@ end)
 
 ## camera.start(id)
 
-
-
 开始指定的camera
 
 **参数**
@@ -120,8 +114,6 @@ camera.start(0)
 ---
 
 ## camera.stop(id)
-
-
 
 停止指定的camera
 
@@ -148,8 +140,6 @@ camera.stop(0)
 
 ## camera.close(id)
 
-
-
 关闭指定的camera，释放相应的IO资源
 
 **参数**
@@ -174,8 +164,6 @@ camera.close(0)
 ---
 
 ## camera.capture(id, save_path, quality, x, y, w, h)
-
-
 
 camera拍照
 
@@ -217,8 +205,6 @@ camera.capture(0, buff, 80)
 
 ## camera.video(id, w, h, out_path)
 
-
-
 camera输出视频流到USB
 
 **参数**
@@ -246,8 +232,6 @@ camera.video(0, 320, 240, uart.VUART_0)
 ---
 
 ## camera.startRaw(id, w, h, buff)
-
-
 
 启动camera输出原始数据到用户的zbuff缓存区，输出1fps后会停止，并通过camera.on设置的回调函数回调接收到的长度，如果需要再次输出，请调用camera.getRaw
 
@@ -277,8 +261,6 @@ camera.startRaw(0, 320, 240, buff)
 
 ## camera.getRaw(id)
 
-
-
 再次启动camera输出原始数据到用户的zbuff缓存区，输出1fps后会停止，并通过camera.on设置的回调函数回调接收到的长度，如果需要再次输出，请继续调用本API
 
 **参数**
@@ -303,8 +285,6 @@ camera.getRaw(0)
 ---
 
 ## camera.preview(id, onoff)
-
-
 
 启停camera预览功能，直接输出到LCD上，只有硬件支持的SOC可以运行
 
@@ -331,8 +311,6 @@ camera.preview(1, true)
 ---
 
 ## camera.config(id, key, value)
-
-
 
 配置摄像头参数
 

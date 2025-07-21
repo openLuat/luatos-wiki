@@ -30,8 +30,6 @@ end
 
 ## wsc:debug(onoff)
 
-
-
 配置是否打开debug信息
 
 **参数**
@@ -53,8 +51,6 @@ end
 ---
 
 ## websocket.create(adapter, url, keepalive, use_ipv6)
-
-
 
 websocket客户端创建
 
@@ -86,8 +82,6 @@ wsc = websocket.create(nil,"wss://air32.cn/abc")
 ---
 
 ## wsc:on(cb)
-
-
 
 注册websocket回调
 
@@ -126,8 +120,6 @@ event的值有:
 
 ## wsc:connect()
 
-
-
 连接服务器
 
 **参数**
@@ -153,8 +145,6 @@ wsc:connect()
 
 ## wsc:autoreconn(reconnect, reconnect_time)
 
-
-
 自动重连
 
 **参数**
@@ -178,8 +168,6 @@ wsc:autoreconn(true)
 ---
 
 ## wsc:send(data, fin, opt)
-
-
 
 发布消息
 
@@ -213,8 +201,6 @@ wsc:send("789", 1)
 
 ## wsc:close()
 
-
-
 websocket客户端关闭(关闭后资源释放无法再使用)
 
 **参数**
@@ -235,8 +221,6 @@ wsc:close()
 ---
 
 ## wsc:ready()
-
-
 
 websocket客户端是否就绪
 
@@ -260,8 +244,6 @@ local stat = wsc:ready()
 ---
 
 ## wsc:headers(headers)
-
-
 
 设置额外的headers
 

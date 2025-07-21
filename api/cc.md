@@ -9,8 +9,6 @@
 
 ## cc.lastNum()
 
-
-
 获取最后一次通话的号码
 
 **参数**
@@ -30,8 +28,6 @@
 ---
 
 ## cc.dial(sim_id, number)
-
-
 
 拨打电话
 
@@ -56,8 +52,6 @@
 
 ## cc.hangUp(sim_id)
 
-
-
 挂断电话
 
 **参数**
@@ -77,8 +71,6 @@
 ---
 
 ## cc.accept(sim_id)
-
-
 
 接听电话
 
@@ -102,8 +94,6 @@
 
 ## cc.init(multimedia_id)
 
-
-
 初始化电话功能
 
 **参数**
@@ -125,8 +115,6 @@
 ---
 
 ## cc.record(on_off,upload_zbuff1, upload_zbuff2, download_zbuff1, download_zbuff2)
-
-
 
 录音通话
 
@@ -164,8 +152,6 @@ cc.record(true, buff1, buff2, buff3, buff4)
 
 ## cc.quality()
 
-
-
 获取当前通话质量
 
 **参数**
@@ -185,8 +171,6 @@ cc.record(true, buff1, buff2, buff3, buff4)
 ---
 
 ## cc.on(event, func)
-
-
 
 注册通话回调
 

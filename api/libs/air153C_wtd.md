@@ -15,8 +15,6 @@
 
 ## air153C_wtd.init(watchdogPin)
 
-
-
 初始化引脚
 
 **参数**
@@ -41,8 +39,6 @@ air153C_wtd.init(28)
 
 ## air153C_wtd.feed_dog(watchdogPin)
 
-
-
 调用此函数进行喂狗
 
 **参数**
@@ -66,8 +62,6 @@ air153C_wtd.feed_dog(28)
 ---
 
 ## air153C_wtd.close_watch_dog(watchdogPin)
-
-
 
 调用此函数关闭喂狗，谨慎使用!
 

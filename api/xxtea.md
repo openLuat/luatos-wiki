@@ -16,8 +16,6 @@ log.info("testCrypto.xxteaTest","decrypt_data:"..decrypt_data)
 
 ## xxtea.encrypt(data, key)
 
-
-
 加密
 
 **参数**
@@ -40,8 +38,6 @@ log.info("testCrypto.xxteaTest","decrypt_data:"..decrypt_data)
 ---
 
 ## xxtea.decrypt(data, key)
-
-
 
 解密
 

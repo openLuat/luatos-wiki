@@ -9,8 +9,6 @@
 
 ## zlib.c(input_file,output_file)
 
-
-
 zlib压缩(需要大约270k内存，大部分mcu不支持)
 
 **参数**
@@ -36,8 +34,6 @@ zlib.c("/sd/1.txt","/sd/zlib")
 ---
 
 ## zlib.d(input_file,output_file)
-
-
 
 zlib解压缩(需要大约18k内存，大部分mcu都支持)
 

@@ -29,8 +29,6 @@
 
 ## socket.localIP(adapter)
 
-
-
 获取本地ip
 
 **参数**
@@ -64,8 +62,6 @@ end)
 ---
 
 ## socket.create(adapter, cb)
-
-
 
 在指定网卡上申请一个socket_ctrl
 
@@ -107,8 +103,6 @@ param3为消息对应的参数，目前只有0和-1，0表示成功或者可能�
 
 ## socket.debug(ctrl, onoff)
 
-
-
 配置是否打开debug信息
 
 **参数**
@@ -135,8 +129,6 @@ socket.debug(ctrl, true)
 ---
 
 ## socket.config(ctrl, local_port, is_udp, is_tls, keep_idle, keep_interval, keep_cnt, server_cert, client_cert, client_key, client_password)
-
-
 
 配置network一些信息，
 
@@ -176,8 +168,6 @@ socket.config(ctrl, nil, nil ,true)
 
 ## socket.linkup(ctrl)
 
-
-
 等待网卡linkup
 
 **参数**
@@ -204,8 +194,6 @@ local succ, result = socket.linkup(ctrl)
 ---
 
 ## socket.connect(ctrl, ip, remote_port, need_ipv6_dns)
-
-
 
 作为客户端连接服务器
 
@@ -247,8 +235,6 @@ local succ, result = socket.connect(ctrl, "netlab.luatos.com", 40123)
 
 ## socket.discon(ctrl)
 
-
-
 作为客户端断开连接
 
 **参数**
@@ -275,8 +261,6 @@ local succ, result = socket.discon(ctrl)
 
 ## socket.close(ctrl)
 
-
-
 强制关闭socket
 
 **参数**
@@ -298,8 +282,6 @@ local succ, result = socket.discon(ctrl)
 ---
 
 ## socket.tx(ctrl, data, ip, port, flag)
-
-
 
 发送数据给对端，UDP单次发送不要超过1460字节，否则很容易失败
 
@@ -332,8 +314,6 @@ local succ, full, result = socket.tx(ctrl, "123456", "xxx.xxx.xxx.xxx", xxxx)
 ---
 
 ## socket.rx(ctrl, buff, flag, limit)
-
-
 
 接收对端发出的数据，注意数据已经缓存在底层，使用本函数只是提取出来，UDP模式下一次只会取出一个数据包
 
@@ -383,8 +363,6 @@ end
 
 ## socket.read(netc, len)
 
-
-
 读取数据(非zbuff版本)
 
 **参数**
@@ -419,8 +397,6 @@ end
 
 ## socket.wait(ctrl)
 
-
-
 等待新的socket消息，在连接成功和发送数据成功后，使用一次将network状态转换到接收新数据
 
 **参数**
@@ -446,8 +422,6 @@ local succ, result = socket.wait(ctrl)
 ---
 
 ## socket.listen(ctrl)
-
-
 
 作为服务端开始监听
 
@@ -475,8 +449,6 @@ local succ, result = socket.listen(ctrl)
 
 ## socket.accept(ctrl)
 
-
-
 作为服务端接收到一个新的客户端，注意，如果是类似W5500的硬件协议栈不支持1对多，则不需要第二个参数
 
 **参数**
@@ -503,8 +475,6 @@ local succ, new_netc = socket.accept(ctrl, cb)
 ---
 
 ## socket.state(ctrl)
-
-
 
 获取socket当前状态
 
@@ -542,8 +512,6 @@ state    0    "硬件离线",
 
 ## socket.release(ctrl)
 
-
-
 主动释放掉network_ctrl
 
 **参数**
@@ -567,8 +535,6 @@ socket.release(ctrl)
 ---
 
 ## socket.setDNS(adapter_index, dns_index, ip)
-
-
 
 设置DNS服务器
 
@@ -599,8 +565,6 @@ socket.setDNS(socket.ETH0, 1, "114.114.114.114")
 ---
 
 ## socket.sslLog(log_level)
-
-
 
 设置SSL的log登记
 
@@ -637,8 +601,6 @@ socket.sslLog(2)
 
 ## socket.adapter(index)
 
-
-
 查看网卡适配器的联网状态
 
 **参数**
@@ -667,8 +629,6 @@ local isReady,default = socket.adapter(socket.ETH0)
 ---
 
 ## socket.remoteIP(ctrl)
-
-
 
 获取对端ip
 
@@ -700,8 +660,6 @@ local ip1,ip2,ip3,ip4 = socket.remoteIP(ctrl)
 
 ## socket.dft(id)
 
-
-
 设置默认网络适配器编号
 
 **参数**
@@ -731,8 +689,6 @@ socket.dft(socket.LWIP_ETH)
 ---
 
 ## socket.sntp(sntp_server)
-
-{bdg-secondary}`适配状态未知`
 
 sntp时间同步
 
@@ -767,8 +723,6 @@ end)
 ---
 
 ## socket.ntptm()
-
-
 
 网络对时后的时间戳(ms级别)
 
@@ -813,8 +767,6 @@ log.info("时间戳", string.format("%u.%03d", tm.tsec, tm.tms))
 ---
 
 ## socket.sntp_port(port)
-
-
 
 设置SNTP服务器的端口号
 

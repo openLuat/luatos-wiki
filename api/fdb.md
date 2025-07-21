@@ -9,8 +9,6 @@
 
 ## fdb.kvdb_init(name, partition)
 
-
-
 初始化kv数据库
 
 **参数**
@@ -44,8 +42,6 @@ end
 
 ## fdb.kv_set(key, value)
 
-
-
 设置一对kv数据
 
 **参数**
@@ -75,8 +71,6 @@ end
 
 ## fdb.kv_get(key, skey)
 
-
-
 根据key获取对应的数据
 
 **参数**
@@ -105,8 +99,6 @@ end
 
 ## fdb.kv_del(key)
 
-
-
 根据key删除数据
 
 **参数**
@@ -134,8 +126,6 @@ end
 
 ## fdb.kv_clr()
 
-
-
 清空整个kv数据库
 
 **参数**
@@ -159,8 +149,6 @@ fdb.kv_clr()
 ---
 
 ## fdb.kv_iter()
-
-
 
 kv数据库迭代器
 
@@ -194,8 +182,6 @@ end
 ---
 
 ## fdb.kv_next(iter)
-
-
 
 kv迭代器获取下一个key
 
@@ -231,8 +217,6 @@ end
 ---
 
 ## fdb.kv_stat()
-
-
 
 获取kv数据库状态
 

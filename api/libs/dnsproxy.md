@@ -9,8 +9,6 @@
 
 ## dnsproxy.setup(adapter, main_adapter)
 
-
-
 创建UDP服务器
 
 **参数**

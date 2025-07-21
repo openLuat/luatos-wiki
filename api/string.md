@@ -2,8 +2,6 @@
 
 ## string.toHex(str, separator)
 
-
-
 将字符串转成HEX
 
 **参数**
@@ -33,8 +31,6 @@ string.toHex("123abc", " ") --> "31 32 33 61 62 63 " 12
 
 ## string.fromHex(hex)
 
-
-
 将HEX转成字符串
 
 **参数**
@@ -60,8 +56,6 @@ string.fromHex("313233616263") -->  "123abc"
 ---
 
 ## string.split(str, delimiter, keepEmtry)
-
-
 
 按照指定分隔符分割字符串
 
@@ -98,8 +92,6 @@ log.info("str.split", #tmp, json.encode(tmp))
 
 ## string.toValue(str)
 
-
-
 返回字符串tonumber的转义字符串(用来支持超过31位整数的转换)
 
 **参数**
@@ -127,8 +119,6 @@ string.toValue("123abc") --> "\1\2\3\a\b\c"  6
 
 ## string.urlEncode("123 abc")
 
-
-
 将字符串进行url编码转换
 
 **参数**
@@ -149,8 +139,6 @@ string.toValue("123abc") --> "\1\2\3\a\b\c"  6
 ---
 
 ## string.toBase64(str)
-
-
 
 将字符串进行base64编码
 
@@ -174,8 +162,6 @@ string.toValue("123abc") --> "\1\2\3\a\b\c"  6
 
 ## string.fromBase64(str)
 
-
-
 将字符串进行base64解码
 
 **参数**
@@ -197,8 +183,6 @@ string.toValue("123abc") --> "\1\2\3\a\b\c"  6
 ---
 
 ## string.toBase32(str)
-
-
 
 将字符串进行base32编码
 
@@ -222,8 +206,6 @@ string.toValue("123abc") --> "\1\2\3\a\b\c"  6
 
 ## string.fromBase32(str)
 
-
-
 将字符串进行base32解码
 
 **参数**
@@ -245,8 +227,6 @@ string.toValue("123abc") --> "\1\2\3\a\b\c"  6
 ---
 
 ## string.startsWith(str, prefix)
-
-
 
 判断字符串前缀
 
@@ -276,8 +256,6 @@ log.info("str", str:startsWith("b"))
 
 ## string.endsWith(str, suffix)
 
-
-
 判断字符串后缀
 
 **参数**
@@ -305,8 +283,6 @@ log.info("str", str:endsWith("b"))
 ---
 
 ## string.trim(str, ltrim, rtrim)
-
-
 
 裁剪字符串,去除头尾的空格
 

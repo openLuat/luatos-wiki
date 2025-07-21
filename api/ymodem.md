@@ -20,8 +20,6 @@ end)
 
 ## ymodem.create(dir_path,file_path)
 
-
-
 创建一个ymodem处理句柄
 
 **参数**
@@ -47,8 +45,6 @@ local handler = ymodem.create("/")
 ---
 
 ## ymodem.receive(handler, data)
-
-
 
 ymodem接收文件数据并保存
 
@@ -81,8 +77,6 @@ no_error,ack,flag,file_done,all_done = ymodem.receive(handler, data)
 
 ## ymodem.reset(handler)
 
-
-
 重置ymodem处理过程
 
 **参数**
@@ -106,8 +100,6 @@ ymodem.reset(handler)
 ---
 
 ## ymodem.release(handler)
-
-
 
 释放ymodem处理句柄
 

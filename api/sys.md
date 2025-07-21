@@ -2,8 +2,6 @@
 
 ## sys.wait(timeout)
 
-
-
 Task协程等待指定时长
 
 **参数**
@@ -32,8 +30,6 @@ end)
 ---
 
 ## sys.waitUntil(topic, timeout)
-
-
 
 Task协程等待指定时长或者特定的topic
 
@@ -66,8 +62,6 @@ end)
 
 ## sys.taskInit(func, arg1, arg2, argN)
 
-
-
 创建一个Task协程
 
 **参数**
@@ -97,8 +91,6 @@ end, "A", "B", "N")
 ---
 
 ## sys.timerStart(func, timeout, arg1, arg2, argN)
-
-
 
 创建一个定时器.非Task,函数里不能直接sys.waitXXX
 
@@ -131,8 +123,6 @@ end, 1000, "A", "B", "N")
 
 ## sys.timerLoopStart(func, timeout, arg1, arg2, argN)
 
-
-
 创建一个循环定时器.非Task,函数里不能直接sys.waitXXX
 
 **参数**
@@ -163,8 +153,6 @@ end, 1000, "A", "B", "N")
 ---
 
 ## sys.timerStop(id)
-
-
 
 关闭一个定时器.
 
@@ -199,8 +187,6 @@ end, 1000, "A", "B", "N")
 
 ## sys.timerStopAll(fnc)
 
-
-
 关闭同一回调函数的所有定时器.
 
 **参数**
@@ -233,8 +219,6 @@ sys.timerStopAll(publicTimerCbFnc)
 
 ## sys.publish(topic, arg1, agr2, argN)
 
-
-
 往特定topic通道发布一个消息
 
 **参数**
@@ -262,8 +246,6 @@ sys.publish("BT_READY", false)
 ---
 
 ## sys.subscribe(topic, func)
-
-
 
 订阅一个topic通道
 
@@ -297,8 +279,6 @@ end)
 
 ## sys.unsubscribe(topic, func)
 
-
-
 取消订阅topic通道
 
 **参数**
@@ -327,8 +307,6 @@ sys.unsubscribe("BT_READY", bt_cb)
 ---
 
 ## sys.run()
-
-
 
 sys库主循环方法,仅允许在main.lua的末尾调用
 

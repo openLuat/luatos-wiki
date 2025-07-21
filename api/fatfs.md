@@ -9,8 +9,6 @@
 
 ## fatfs.mount(mode,mount_point, spiid_or_spidevice, spi_cs, spi_speed, power_pin, power_on_delay, auto_format)
 
-
-
 挂载fatfs
 
 **参数**
@@ -65,8 +63,6 @@
 
 ## fatfs.unmount(mount_point)
 
-
-
 取消挂载fatfs
 
 **参数**
@@ -91,8 +87,6 @@ fatfs.mount("SD")
 ---
 
 ## fatfs.getfree(mount_point)
-
-
 
 获取可用空间信息
 
@@ -131,8 +125,6 @@ fatfs.mount("SD")
 ---
 
 ## fatfs.debug(value)
-
-
 
 设置调试模式
 

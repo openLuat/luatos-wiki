@@ -2,8 +2,6 @@
 
 ## libnet.waitLink(taskName,timeout,...)
 
-
-
 阻塞等待网卡的网络连接上，只能用于sysplus.taskInitEx创建的任务函数中
 
 **参数**
@@ -27,8 +25,6 @@
 ---
 
 ## libnet.connect(taskName,timeout,...)
-
-
 
 阻塞等待IP或者域名连接上，如果加密连接还要等握手完成，只能用于sysplus.taskInitEx创建的任务函数中
 
@@ -54,8 +50,6 @@
 
 ## libnet.listen(taskName,timeout,...)
 
-
-
 阻塞等待客户端连接上，只能用于sysplus.taskInitEx创建的任务函数中
 
 **参数**
@@ -79,8 +73,6 @@
 ---
 
 ## libnet.tx(taskName,timeout,...)
-
-
 
 阻塞等待数据发送完成，只能用于sysplus.taskInitEx创建的任务函数中
 
@@ -107,8 +99,6 @@
 
 ## libnet.wait(taskName,timeout, netc)
 
-
-
 阻塞等待新的网络事件，只能用于sysplus.taskInitEx创建的任务函数中，可以通过sysplus.sendMsg(taskName,socket.EVENT,0)或者sys_send(taskName,socket.EVENT,0)强制退出
 
 **参数**
@@ -133,8 +123,6 @@
 ---
 
 ## libnet.close(taskName,timeout, netc)
-
-
 
 阻塞等待网络断开连接，只能用于sysplus.taskInitEx创建的任务函数中
 

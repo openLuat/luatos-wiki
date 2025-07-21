@@ -11,8 +11,6 @@
 
 ## antbot.init()
 
-
-
 初始化
 
 **参数**
@@ -38,8 +36,6 @@ antbot.init()
 
 ## antbot.app_sta_get()
 
-
-
 获取客户端状态
 
 **参数**
@@ -60,8 +56,6 @@ antbot.init()
 
 ## antbot.version_get()
 
-
-
 获取SDK版本号
 
 **参数**
@@ -81,8 +75,6 @@ antbot.init()
 ---
 
 ## antbot.asset_register(asset_id, asset_type, asset_dataver)
-
-
 
 asset资源注册
 
@@ -108,8 +100,6 @@ asset资源注册
 
 ## antbot.asset_data_publish(data)
 
-
-
 asset资源发布
 
 **参数**
@@ -132,8 +122,6 @@ asset资源发布
 
 ## antbot.device_status_get()
 
-
-
 获取设备状态
 
 **参数**
@@ -153,8 +141,6 @@ asset资源发布
 ---
 
 ## antbot.asset_status_get(asset_id)
-
-
 
 获取assset状态
 
@@ -178,8 +164,6 @@ asset资源发布
 
 ## antbot.channel_switch(cmd)
 
-
-
 切换channel
 
 **参数**
@@ -202,8 +186,6 @@ asset资源发布
 
 ## antbot.config_set(config)
 
-
-
 配置设备
 
 **参数**
@@ -225,8 +207,6 @@ asset资源发布
 ---
 
 ## antbot.config_get()
-
-
 
 获取设备配置
 

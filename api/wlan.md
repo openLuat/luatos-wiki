@@ -24,8 +24,6 @@
 
 ## wlan.init()
 
-
-
 初始化
 
 **参数**
@@ -45,8 +43,6 @@
 ---
 
 ## wlan.setMode(mode)
-
-
 
 设置wifi模式
 
@@ -80,8 +76,6 @@ wlan.setMode(wlan.APSTA)
 
 ## wlan.ready()
 
-
-
 作为STATION时,是否已经连接上AP,且获取IP成功
 
 **参数**
@@ -101,8 +95,6 @@ wlan.setMode(wlan.APSTA)
 ---
 
 ## wlan.connect(ssid, password, auto_reconnect, bssid)
-
-
 
 作为STATION时,连接到指定AP
 
@@ -143,8 +135,6 @@ wlan.connect("myap", "12345678", 1, bssid)
 
 ## wlan.disconnect()
 
-
-
 作为STATION时,断开AP
 
 **参数**
@@ -162,8 +152,6 @@ wlan.connect("myap", "12345678", 1, bssid)
 ---
 
 ## wlan.scan()
-
-
 
 扫描wifi频段
 
@@ -205,8 +193,6 @@ end)
 
 ## wlan.scanResult()
 
-
-
 获取wifi扫描结果
 
 **参数**
@@ -229,8 +215,6 @@ end)
 ---
 
 ## wlan.smartconfig(mode)
-
-
 
 配网
 
@@ -260,8 +244,6 @@ log.info("sc", ret, ssid, passwd)
 
 ## wlan.getMac(tp, hexstr)
 
-
-
 获取mac
 
 **参数**
@@ -284,8 +266,6 @@ log.info("sc", ret, ssid, passwd)
 ---
 
 ## wlan.setMac(tp, mac)
-
-
 
 设置mac
 
@@ -320,8 +300,6 @@ wlan.setMac(0, mac)
 
 ## wlan.getIP()
 
-
-
 获取ip,仅STATION或APSTA模式下有意义
 
 **参数**
@@ -341,8 +319,6 @@ wlan.setMac(0, mac)
 ---
 
 ## wlan.createAP(ssid, passwd, gateway, netmask, channel, opts)
-
-
 
 启动AP
 
@@ -385,8 +361,6 @@ wlan.createAP("luatos1234", "12341234")
 
 ## wlan.stopAP()
 
-
-
 关闭AP功能
 
 **参数**
@@ -409,8 +383,6 @@ wlan.stopAP()
 ---
 
 ## wlan.getInfo()
-
-
 
 获取信息,如AP的bssid,信号强度, STA联网后可获取
 
@@ -444,8 +416,6 @@ log.info("wlan", "info", json.encode(wlan.getInfo()))
 
 ## wlan.powerSave(mode)
 
-
-
 读取或设置省电模式
 
 **参数**
@@ -472,8 +442,6 @@ log.info("wlan", "PS", wlan.powerSave(wlan.PS_NONE))
 ---
 
 ## wlan.hostname(id, new_name)
-
-
 
 读取或设置Hostname
 
@@ -509,8 +477,6 @@ wlan.hostname(0) -- 取STA的hostname
 ---
 
 ## wlan.staIp(dhcp_enable, ip, netmask, gateway)
-
-
 
 设置Station模式下的IP获取模式
 

@@ -42,8 +42,6 @@ ble_device:adv_start()
 
 ## bluetooth.init()
 
-
-
 初始化蓝牙框架, 仅需要调用一次
 
 **参数**
@@ -68,8 +66,6 @@ bluetooth_device = bluetooth.init()
 ---
 
 ## bluetooth.ble(cb)
-
-
 
 创建BLE对象, 需要先调用bluetooth.init()
 

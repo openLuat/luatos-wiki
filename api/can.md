@@ -59,8 +59,6 @@ byte0位置：
 
 ## can.init(id, rx_message_cache_max)
 
-
-
 CAN总线初始化
 
 **参数**
@@ -86,8 +84,6 @@ can.init()
 ---
 
 ## can.on(id, func)
-
-
 
 注册CAN事件回调
 
@@ -116,8 +112,6 @@ end)
 ---
 
 ## can.timing(id, br, PTS, PBS1, PBS2, SJW)
-
-
 
 CAN总线配置时序
 
@@ -157,8 +151,6 @@ can.timing(0, 1000000, 6, 6, 4, 2)
 
 ## can.mode(id, mode)
 
-
-
 CAN总线设置工作模式
 
 **参数**
@@ -184,8 +176,6 @@ can.mode(0, CAN.MODE_NORMAL)
 ---
 
 ## can.node(id, node_id, id_type)
-
-
 
 CAN总线设置节点ID，这是一种简易的过滤规则，只接收和ID完全匹配的消息，和can.filter选择一个使用
 
@@ -214,8 +204,6 @@ can.node(0, 0x123, CAN.STD)
 ---
 
 ## can.filter(id, dual_mode, ACR, AMR)
-
-
 
 CAN总线设置接收过滤模式，当can.node不满足需求时才使用这个，和can.node选择一个使用，过滤模式比较复杂，请参考SJA1000的Pelican模式下滤波
 
@@ -246,8 +234,6 @@ can.filter(0, false, 0x123 << 21, 0x0001fffff) --效果等同于can.node(0, 0x12
 
 ## can.state(id)
 
-
-
 CAN工作状态
 
 **参数**
@@ -272,8 +258,6 @@ can.state(0)
 ---
 
 ## can.tx(id, msg_id, id_type, RTR, need_ack, data)
-
-
 
 CAN发送一条消息
 
@@ -305,8 +289,6 @@ can.tx(id, 0x12345678, CAN.EXT, false, true, "\x00\x01\x02\x03\0x04\x05\0x6\x07"
 
 ## can.rx(id)
 
-
-
 从缓存里读出一条消息
 
 **参数**
@@ -336,8 +318,6 @@ local succ, id, type, rtr, data = can.rx(0)
 
 ## can.stop(id)
 
-
-
 立刻停止当前的发送
 
 **参数**
@@ -362,8 +342,6 @@ can.stop(0)
 ---
 
 ## can.reset(id)
-
-
 
 CAN总线复位，一般用于从总线关闭状态恢复成主动错误
 
@@ -390,8 +368,6 @@ can.reset(0)
 
 ## can.busOff(id)
 
-
-
 CAN总线关闭，此时可以重新进行timing,filter,node等配置
 
 **参数**
@@ -416,8 +392,6 @@ can.busOff(0)
 ---
 
 ## can.deinit(id)
-
-
 
 CAN完全关闭
 
@@ -444,8 +418,6 @@ can.deinit(0)
 
 ## can.debug(on_off)
 
-
-
 CAN debug开关，打开后有更详细的打印
 
 **参数**
@@ -469,8 +441,6 @@ can.debug(true)
 ---
 
 ## can.capacity(id)
-
-
 
 获取CAN时钟特性，包括基础时钟,分频系数范围,CAN的实际波特率=基础时钟/分频系数/(1+PTS+PBS1+PBS2),从时钟特性里能看出对应平台是否能配置出需要的波特率
 

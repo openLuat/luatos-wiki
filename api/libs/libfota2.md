@@ -44,8 +44,6 @@ sys.timerLoopStart(libfota2.request, 4*3600*1000, libfota_cb, opts)
 
 ## libfota2.request(cbFnc, opts)
 
-
-
 fota升级
 
 **参数**

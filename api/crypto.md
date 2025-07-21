@@ -2,8 +2,6 @@
 
 ## crypto.md5(str)
 
-
-
 计算md5值
 
 **参数**
@@ -29,8 +27,6 @@ log.info("md5", crypto.md5("abc"))
 ---
 
 ## crypto.hmac_md5(str, key)
-
-
 
 计算hmac_md5值
 
@@ -59,8 +55,6 @@ log.info("hmac_md5", crypto.hmac_md5("abc", "1234567890"))
 
 ## crypto.sha1(str)
 
-
-
 计算sha1值
 
 **参数**
@@ -86,8 +80,6 @@ log.info("sha1", crypto.sha1("abc"))
 ---
 
 ## crypto.hmac_sha1(str, key)
-
-
 
 计算hmac_sha1值
 
@@ -116,8 +108,6 @@ log.info("hmac_sha1", crypto.hmac_sha1("abc", "1234567890"))
 
 ## crypto.sha256(str)
 
-
-
 计算sha256值
 
 **参数**
@@ -143,8 +133,6 @@ log.info("sha256", crypto.sha256("abc"))
 ---
 
 ## crypto.hmac_sha256(str, key)
-
-
 
 计算hmac_sha256值
 
@@ -173,8 +161,6 @@ log.info("hmac_sha256", crypto.hmac_sha256("abc", "1234567890"))
 
 ## crypto.sha512(str)
 
-
-
 计算sha512值
 
 **参数**
@@ -200,8 +186,6 @@ log.info("sha512", crypto.sha512("abc"))
 ---
 
 ## crypto.hmac_sha512(str, key)
-
-
 
 计算hmac_sha512值
 
@@ -229,8 +213,6 @@ log.info("hmac_sha512", crypto.hmac_sha512("abc", "1234567890"))
 ---
 
 ## crypto.cipher_encrypt(type, padding, str, key, iv)
-
-
 
 对称加密
 
@@ -262,8 +244,6 @@ local data2 = crypto.cipher_encrypt("AES-128-CBC", "PKCS7", "1234567890123456", 
 ---
 
 ## crypto.cipher_decrypt(type, padding, str, key, iv)
-
-
 
 对称解密
 
@@ -298,8 +278,6 @@ local data2 = crypto.cipher_decrypt("AES-128-ECB", "PKCS7", data, "1234567890123
 
 ## crypto.crc16(method, data, poly, initial, finally, inReversem outReverse)
 
-
-
 计算CRC16
 
 **参数**
@@ -332,8 +310,6 @@ local crc = crypto.crc16("")
 
 ## crypto.crc16_modbus(data, start)
 
-
-
 直接计算modbus的crc16值
 
 **参数**
@@ -362,8 +338,6 @@ crc = crypto.crc16_modbus(data, 0xFFFF)
 ---
 
 ## crypto.crc32(data, start, poly, endv)
-
-
 
 计算crc32值
 
@@ -396,8 +370,6 @@ local crc = crypto.crc32(data, 0xFFFFFFFF, 0x04C11DB7, 0xFFFFFFFF) --等同于cr
 
 ## crypto.crc8(data, poly, start, revert)
 
-
-
 计算crc8值
 
 **参数**
@@ -428,8 +400,6 @@ local crc = crypto.crc8(data, 0x31, 0xff, false)
 
 ## crypto.crc7(data, poly, start)
 
-
-
 计算crc7值
 
 **参数**
@@ -459,8 +429,6 @@ local crc = crypto.crc7(data, 0x31, 0xff)
 
 ## crypto.trng(len)
 
-
-
 生成真随机数
 
 **参数**
@@ -488,8 +456,6 @@ local _, ir = pack.unpack(r, "I")
 
 ## crypto.totp(secret,time)
 
-
-
 计算TOTP动态密码的结果
 
 **参数**
@@ -516,8 +482,6 @@ local otp = crypto.totp("asdfassdfasdfass")
 ---
 
 ## crypto.base64_encode(data)
-
-
 
 将数据进行base64编码
 
@@ -549,8 +513,6 @@ log.info("base64", "decode", data, bdata)
 
 ## crypto.base64_decode(data)
 
-
-
 将数据进行base64解码
 
 **参数**
@@ -581,8 +543,6 @@ log.info("base64", "decode", data, bdata)
 
 ## crypto.cipher_list()
 
-
-
 获取当前固件支持的cipher列表
 
 **参数**
@@ -610,8 +570,6 @@ end
 
 ## crypto.cipher_suites()
 
-
-
 获取当前固件支持的cipher suites列表
 
 **参数**
@@ -638,8 +596,6 @@ end
 ---
 
 ## crypto.md_file(tp, path, hmac)
-
-
 
 计算文件的hash值(md5/sha1/sha256及hmac形式)
 
@@ -677,8 +633,6 @@ log.info("hmac_sha256", crypto.md_file("SHA256", "/luadb/logo.jpg", "123456"))
 
 ## crypto.md(tp, data, hmac)
 
-
-
 计算数据的hash值(md5/sha1/sha256及hmac形式)
 
 **参数**
@@ -715,8 +669,6 @@ log.info("hmac_sha256", crypto.md("SHA256", "1234567890", "123456"))
 
 ## crypto.hash_init(tp)
 
-
-
 创建流式hash用的stream
 
 **参数**
@@ -751,8 +703,6 @@ local sha256_stream = crypto.hash_init("SHA256", "123456")
 
 ## crypto.hash_update(stream, data)
 
-
-
 流式hash更新数据
 
 **参数**
@@ -778,8 +728,6 @@ crypto.hash_update(stream, "OK")
 
 ## crypto.hash_finish(stream)
 
-
-
 获取流式hash校验值并释放创建的stream
 
 **参数**
@@ -804,8 +752,6 @@ local hashResult = crypto.hash_finish(stream)
 ---
 
 ## crypto.checksum(data, mode)
-
-
 
 计算checksum校验和
 

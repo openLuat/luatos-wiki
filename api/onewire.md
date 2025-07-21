@@ -9,8 +9,6 @@
 
 ## onewire.init(id)
 
-
-
 初始化单总线
 
 **参数**
@@ -34,8 +32,6 @@ onewire.init(0) --初始化硬件单总线
 ---
 
 ## onewire.timing(id, is_tick, clk_div, tRSTL, tRSTH, tPDHIGH, tPDLOW, tSLOT, tStart, tLOW1, tRDV, tREC)
-
-
 
 配置硬件单总线时序，如果不配置，默认情况下是直接匹配DS18B20
 
@@ -72,8 +68,6 @@ onewire.timing(0, false, 0, 500, 500, 15, 240, 65, 1, 15, 15, 2) --配置单总�
 
 ## onewire.reset(id, need_ack)
 
-
-
 硬件单总线复位
 
 **参数**
@@ -99,8 +93,6 @@ onewire.reset(0, true)
 ---
 
 ## onewire.bit(id, send1bit)
-
-
 
 硬件单总线发送或1bit者接收1bit
 
@@ -128,8 +120,6 @@ onewire.bit(0) --读取1bit数据
 ---
 
 ## onewire.tx(id, data, is_msb, need_reset, need_ack)
-
-
 
 硬件单总线发送N字节数据
 
@@ -161,8 +151,6 @@ local succ = onewire.tx(0, 0x33) --直接发送0x33
 ---
 
 ## onewire.rx(id, len, cmd, buff, is_msb, need_reset, need_ack)
-
-
 
 硬件单总线读取N字节数据
 
@@ -197,8 +185,6 @@ local succ, rx_data = onewire.rx(0, 8, 0x33, buf, nil, true, true) --先发送re
 
 ## onewire.debug(id, onoff)
 
-
-
 单总线调试开关
 
 **参数**
@@ -223,8 +209,6 @@ onewire.debug(0, true)
 ---
 
 ## onewire.deinit(id)
-
-
 
 关闭单总线
 

@@ -2,8 +2,6 @@
 
 ## iconv.open(tocode, fromcode)
 
-
-
 打开相应字符编码转换函数
 
 **参数**
@@ -30,8 +28,6 @@ local ic = iconv.open("utf8", "ucs2be")
 ---
 
 ## ic:iconv(inbuf)
-
-
 
 字符编码转换
 
@@ -61,8 +57,6 @@ end
 ---
 
 ## iconv.close(cd) 
-
-
 
 关闭字符编码转换
 

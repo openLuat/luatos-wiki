@@ -2,8 +2,6 @@
 
 ## fonts.list(tp)
 
-
-
 返回固件支持的字体列表
 
 **参数**
@@ -31,8 +29,6 @@ end
 ---
 
 ## fonts.u8g2_get(name, tp)
-
-
 
 获取字体
 
@@ -71,8 +67,6 @@ end
 ---
 
 ## fonts.u8g2_load(path, path)
-
-
 
 从文件加载字体
 

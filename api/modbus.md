@@ -31,8 +31,6 @@
 
 ## modbus.set_comm_interval_time(master_handler, time_ms)
 
-
-
 设置通讯间隔时间
 
 **参数**
@@ -58,8 +56,6 @@ modbus.set_comm_interval_time(mb_rtu, 100)
 ---
 
 ## modbus.set_comm_timeout(master_handler, time_ms)
-
-
 
 设置通讯超时时间
 
@@ -87,8 +83,6 @@ modbus.set_comm_timeout(mb_rtu, 1000)
 
 ## modbus.set_comm_resend_count(master_handler, resend_count)
 
-
-
 设置消息发送失败、超时重发次数
 
 **参数**
@@ -114,8 +108,6 @@ modbus.set_comm_resend_count(mb_rtu, 1)
 ---
 
 ## modbus.set_comm_reconnection_time(master_handler, reconnection_time)
-
-
 
 设置断线重连时间间隔（该函数仅对TCP类型的主站生效）
 
@@ -143,8 +135,6 @@ modbus.set_comm_reconnection_time(mb_rtu, 5000ms)
 
 ## modbus.get_all_slave_state(master_handler)
 
-
-
 获取所有从站状态
 
 **参数**
@@ -170,8 +160,6 @@ modbus.get_all_slave_state(mb_rtu)
 ---
 
 ## modbus.exec(master_handler, msg_handler)
-
-
 
 执行一条modbus指令。该指令仅执行一次，优先级为最高，执行完成自动结束。
 
@@ -202,8 +190,6 @@ modbus.exec(mb_rtu, msg)
 
 ## modbus.master_start(master_handler)
 
-
-
 启动modbus主协议栈
 
 **参数**
@@ -229,8 +215,6 @@ modbus.master_start(mb_rtu)
 
 ## modbus.master_stop(master_handler)
 
-
-
 停止Modbus主协议栈
 
 **参数**
@@ -255,8 +239,6 @@ modbus.master_stop(mb_rtu)
 ---
 
 ## modbus.add_slave(master_handler, slave_id, ip, port)
-
-
 
 创建并向主站添加一个modbus从站
 
@@ -291,8 +273,6 @@ slave = modbus.add_slave(mb_tcp, 1, "192.168.10.133", 502)
 
 ## modbus.remove_slave(master_handler, slave_handler)
 
-
-
 删除一个从站对象，并删除与之相关的通讯消息句柄。（需在主站停止(modbus.master_stop)时执行该操作，否则无效）
 
 **参数**
@@ -320,8 +300,6 @@ modbus.remove_slave(mb_rtu, slave)
 
 ## modbus.get_slave_state(slave_handler)
 
-
-
 获取一个从站的状态
 
 **参数**
@@ -347,8 +325,6 @@ modbus.get_slave_state(slave)
 ---
 
 ## modbus.create_msg(master_handler, slave_handler, reg_type, opt_type, reg_addr, reg_len, data_addr, comm_period,comm_mode)
-
-
 
 向指定从站，创建并添加一条通讯消息
 
@@ -388,8 +364,6 @@ msg = modbus.create_msg(mb_rtu, slave, modbus.REGISTERS, modbus.READ, 0, 10, zbu
 
 ## modbus.create_slave(type, slave_id, uartid_port, adapter_index)
 
-
-
 创建一个从站句柄
 
 **参数**
@@ -422,8 +396,6 @@ mb_tcp_s = modbus.create_slave(modbus.MODBUS_TCP, 1, 502, socket.LWIP_ETH)
 
 ## modbus.add_block(slave_handler, reg_type, reg_addr, reg_len, data_addr)
 
-
-
 添加一块寄存器内存区
 
 **参数**
@@ -454,8 +426,6 @@ modbus.add_block(mb_tcp_s, modbus.REGISTERS, 0, 32, registers)
 
 ## modbus.slave_start(slave_handler)
 
-
-
 启动modbus从协议栈
 
 **参数**
@@ -481,8 +451,6 @@ modbus.slave_start(mb_tcp_s)
 
 ## modbus.slave_stop(slave_handler)
 
-
-
 停止modbus从协议栈
 
 **参数**
@@ -507,8 +475,6 @@ modbus.slave_stop(mb_tcp_s)
 ---
 
 ## modbus.debug(en)
-
-
 
 开启或关闭debug模式
 

@@ -13,8 +13,6 @@
 
 ## log.setLevel(level)
 
-
-
 设置日志级别
 
 **参数**
@@ -40,8 +38,6 @@ log.setLevel("INFO")
 ---
 
 ## log.style(val)
-
-
 
 设置日志风格
 
@@ -78,8 +74,6 @@ log.style(2) -- 调试风格2
 
 ## log.getLevel()
 
-
-
 获取日志级别
 
 **参数**
@@ -103,8 +97,6 @@ log.getLevel()
 ---
 
 ## log.debug(tag, val, val2, val3, ...)
-
-
 
 输出日志,级别debug
 
@@ -133,8 +125,6 @@ log.debug("onenet", "connect ok")
 
 ## log.info(tag, val, val2, val3, ...)
 
-
-
 输出日志,级别info
 
 **参数**
@@ -162,8 +152,6 @@ log.info("onenet", "connect ok")
 
 ## log.warn(tag, val, val2, val3, ...)
 
-
-
 输出日志,级别warn
 
 **参数**
@@ -190,8 +178,6 @@ log.warn("onenet", "connect ok")
 ---
 
 ## log.error(tag, val, val2, val3, ...)
-
-
 
 输出日志,级别error
 

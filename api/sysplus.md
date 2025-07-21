@@ -13,8 +13,6 @@
 
 ## sysplus.waitMsg(taskName, target, timeout)
 
-
-
 等待接收一个目标消息
 
 **参数**
@@ -43,8 +41,6 @@ sysplus.waitMsg('a', 'b', 1000)
 ---
 
 ## sysplus.sendMsg(taskName, target, arg2, arg3, arg4)
-
-
 
 向目标任务发送一个消息
 
@@ -77,8 +73,6 @@ sysplus.sendMsg('a', 'b')
 
 ## sysplus.taskInitEx(fun, taskName, cbFun, ...)
 
-
-
 创建一个任务线程,在模块最末行调用该函数并注册模块中的任务函数,main.lua导入该模块即可
 
 **参数**
@@ -107,8 +101,6 @@ sysplus.taskInitEx(task1,'a',callback)
 
 ## sysplus.taskDel(taskName)
 
-
-
 删除由taskInitEx创建的任务线程
 
 **参数**
@@ -131,8 +123,6 @@ sysplus.taskDel('a')
 ---
 
 ## sysplus.cleanMsg(taskName)
-
-
 
 清除指定task的消息队列
 

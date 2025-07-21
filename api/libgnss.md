@@ -43,8 +43,6 @@ end)
 
 ## libgnss.parse(str)
 
-
-
 处理nmea数据
 
 **参数**
@@ -70,8 +68,6 @@ log.info("nmea", json.encode(libgnss.getRmc(), "11g"))
 
 ## libgnss.isFix()
 
-
-
 当前是否已经定位成功
 
 **参数**
@@ -94,8 +90,6 @@ log.info("nmea", "isFix", libgnss.isFix())
 ---
 
 ## libgnss.getIntLocation(speed_type)
-
-
 
 获取位置信息
 
@@ -142,8 +136,6 @@ log.info("nmea", "loc", libgnss.getIntLocation(3))
 
 ## libgnss.getRmc(data_mode)
 
-
-
 获取原始RMC位置信息
 
 **参数**
@@ -186,8 +178,6 @@ log.info("nmea", "rmc", json.encode(libgnss.getRmc(2)))
 ---
 
 ## libgnss.getGsv()
-
-
 
 获取原始GSV信息
 
@@ -234,8 +224,6 @@ log.info("nmea", "gsv", json.encode(libgnss.getGsv()))
 ---
 
 ## libgnss.getGsa(data_mode)
-
-
 
 获取原始GSA信息
 
@@ -294,8 +282,6 @@ log.info("nmea", "gsa", json.encode(libgnss.getGsa(), "11g"))
 
 ## libgnss.getVtg(data_mode)
 
-
-
 获取VTA速度信息
 
 **参数**
@@ -331,8 +317,6 @@ log.info("nmea", "vtg", json.encode(libgnss.getVtg()))
 ---
 
 ## libgnss.getZda()
-
-
 
 获取原始ZDA时间和日期信息
 
@@ -370,8 +354,6 @@ log.info("nmea", "zda", json.encode(libgnss.getZda()))
 
 ## libgnss.debug(mode)
 
-
-
 设置调试模式
 
 **参数**
@@ -397,8 +379,6 @@ libgnss.debug(false)
 ---
 
 ## libgnss.getGga(data_mode)
-
-
 
 获取GGA数据
 
@@ -441,8 +421,6 @@ end
 
 ## libgnss.getGll(data_mode)
 
-
-
 获取GLL数据
 
 **参数**
@@ -484,8 +462,6 @@ end
 
 ## libgnss.clear()
 
-
-
 清除历史定位数据
 
 **参数**
@@ -508,8 +484,6 @@ end
 ---
 
 ## libgnss.bind(id, next_id)
-
-
 
 绑定uart端口进行GNSS数据读取
 
@@ -545,8 +519,6 @@ libgnss.bind(2, uart.VUART_0)
 
 ## libgnss.locStr(mode)
 
-
-
 获取位置字符串
 
 **参数**
@@ -571,8 +543,6 @@ libgnss.bind(2, uart.VUART_0)
 
 ## libgnss.rtcAuto(enable)
 
-
-
 定位成功后自动设置RTC
 
 **参数**
@@ -596,8 +566,6 @@ libgnss.rtcAuto(true)
 ---
 
 ## libgnss.on(tp, fn)
-
-
 
 底层事件回调
 
@@ -624,8 +592,6 @@ end)
 ---
 
 ## libgnss.getTxt()
-
-
 
 获取非标的GPTXT数据
 
@@ -658,8 +624,6 @@ log.info("GNSS", libgnss.getTxt())
 ---
 
 ## libgnss.casic_aid(dt, loc)
-
-
 
 合成Air530Z所需要的辅助定位数据
 

@@ -15,8 +15,6 @@ log.info("httpdns", "air32.cn", ip)
 
 ## httpdns.ali(domain_name, opts)
 
-
-
 通过阿里DNS获取结果
 
 **参数**
@@ -46,8 +44,6 @@ log.info("httpdns", "air32.cn", ip)
 ---
 
 ## httpdns.tx(domain_name, opts)
-
-
 
 通过腾讯DNS获取结果
 

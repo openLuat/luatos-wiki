@@ -20,8 +20,6 @@
 
 ## spi.setup(id, cs, CPHA, CPOL, dataw, bandrate, bitdict, ms, mode)
 
-
-
 设置并启用SPI
 
 **参数**
@@ -55,8 +53,6 @@ spi.setup(0,20,0,0,8,2000000,spi.MSB,1,1)
 ---
 
 ## spi.createSoft(cs, mosi, miso, clk, CPHA, CPOL, dataw, bitdict, ms, mode)
-
-
 
 设置并启用软件SPI
 
@@ -94,8 +90,6 @@ local result = spi.send(softSpiDevice, string.char(0x9f))
 
 ## spi.close(id)
 
-
-
 关闭指定的SPI
 
 **参数**
@@ -121,8 +115,6 @@ spi.close(0)
 ---
 
 ## spi.transfer(id, send_data, send_len, recv_len)
-
-
 
 传输SPI数据
 
@@ -156,8 +148,6 @@ local recv = spi.transfer(0, buff)--把zbuff数据从指针开始，全发出去
 ---
 
 ## spi.recv(id, size, buff)
-
-
 
 接收指定长度的SPI数据
 
@@ -194,8 +184,6 @@ local len = spi.recv(0, 4, buff)
 
 ## spi.send(id, data[, len])
 
-
-
 发送SPI数据
 
 **参数**
@@ -227,8 +215,6 @@ local result = spi.send(0, buff)--把zbuff数据从指针开始，全发出去
 ---
 
 ## spi.deviceSetup(id, cs, CPHA, CPOL, dataw, bandrate, bitdict, ms, mode)
-
-
 
 设置并启用SPI(对象方式)
 
@@ -264,8 +250,6 @@ local spi_device = spi.deviceSetup(0,17,0,0,8,2000000,spi.MSB,1,1)
 
 ## spi_device:close()
 
-
-
 关闭指定的SPI(对象方式)
 
 **参数**
@@ -291,8 +275,6 @@ spi_device.close()
 ---
 
 ## spi_device:transfer(send_data[, len])
-
-
 
 传输SPI数据(对象方式)
 
@@ -328,8 +310,6 @@ local recv = spi_device:transfer(buff)--把zbuff数据从指针开始，全发�
 
 ## spi_device:send(data[, len])
 
-
-
 发送SPI数据(对象方式)
 
 **参数**
@@ -362,8 +342,6 @@ local result = spi_device:send(buff)--把zbuff数据从指针开始，全发出�
 
 ## spi_device:recv(size)
 
-
-
 接收指定长度的SPI数据(对象方式)
 
 **参数**
@@ -391,8 +369,6 @@ local recv = spi_device:recv(4)--接收4字节数据
 ---
 
 ## spi.xfer(id, txbuff, rxbuff, rx_len, transfer_done_topic)
-
-
 
 非阻塞方式硬件SPI传输SPI数据，目的为了提高核心利用率。API直接返回是否启动传输，传输完成后通过topic回调，本API适合硬件SPI传输大量数据传输，外设功能（LCD SPI，W5500 SPI之类的）占据的SPI和软件SPI不能用，少量数据传输建议使用传统阻塞型API
 

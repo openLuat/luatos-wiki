@@ -2,8 +2,6 @@
 
 ## sfud.init(spi_id, spi_cs, spi_bandrate)/sfud.init(spi_device)
 
-
-
 初始化sfud
 
 **参数**
@@ -35,8 +33,6 @@ log.info("sfud.init",sfud.init(spi_device))
 
 ## sfud.getDeviceNum()
 
-
-
 获取flash设备信息表中的设备总数
 
 **参数**
@@ -59,8 +55,6 @@ log.info("sfud.getDeviceNum",sfud.getDeviceNum())
 ---
 
 ## sfud.getDevice(index)
-
-
 
 通过flash信息表中的索引获取flash设备
 
@@ -87,8 +81,6 @@ local sfud_device = sfud.getDevice(1)
 
 ## sfud.getDeviceTable()
 
-
-
 获取flash设备信息表
 
 **参数**
@@ -111,8 +103,6 @@ local sfud_device = sfud.getDeviceTable()
 ---
 
 ## sfud.chipErase(flash)
-
-
 
 擦除 Flash 全部数据
 
@@ -138,8 +128,6 @@ sfud.chipErase(flash)
 ---
 
 ## sfud.erase(flash,add,size)
-
-
 
 擦除 Flash 指定地址指定大小，按照flash block大小进行擦除
 
@@ -168,8 +156,6 @@ sfud.erase(flash,add,size)
 
 ## sfud.read(flash, addr, size)
 
-
-
 读取 Flash 数据
 
 **参数**
@@ -196,8 +182,6 @@ log.info("sfud.read",sfud.read(sfud_device,1024,4))
 ---
 
 ## sfud.write(flash, addr,data)
-
-
 
 向 Flash 写数据
 
@@ -226,8 +210,6 @@ log.info("sfud.write",sfud.write(sfud_device,1024,"sfud"))
 
 ## sfud.eraseWrite(flash, addr,data)
 
-
-
 先擦除再往 Flash 写数据
 
 **参数**
@@ -255,8 +237,6 @@ log.info("sfud.eraseWrite",sfud.eraseWrite(sfud_device,1024,"sfud"))
 
 ## sfud.getInfo(flash)
 
-
-
 获取 Flash 容量和page大小
 
 **参数**
@@ -282,8 +262,6 @@ log.info("sfud.getInfo",sfud.getInfo(sfud_device))
 ---
 
 ## sfud.mount(flash, mount_point, offset, maxsize)
-
-
 
 挂载sfud lfs文件系统
 

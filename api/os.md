@@ -11,8 +11,6 @@
 
 ## os.remove(path)
 
-
-
 移除文件
 
 **参数**
@@ -41,8 +39,6 @@ os.remove("/1.txt")
 ---
 
 ## os.rename(old_path, new_path)
-
-
 
 文件重命名
 
@@ -76,8 +72,6 @@ os.rename("/1.txt", "/2.txt")
 
 ## os.clock()
 
-
-
 返回程序使用的按秒计 CPU 时间的近似值
 
 **参数**
@@ -102,8 +96,6 @@ os.rename("/1.txt", "/2.txt")
 ---
 
 ## os.date(fmt, time)
-
-
 
 日期函数
 
@@ -150,8 +142,6 @@ log.info("UTC时间字符串",  json.encode(os.date("!*t")))
 
 ## os.time(mytime)
 
-
-
 时间戳函数
 
 **参数**
@@ -178,8 +168,6 @@ log.info("自定义时间戳", os.time({year=2000, mon=1, day=1, hour=0, min=0, 
 ---
 
 ## os.difftime(timeA, timeB)
-
-
 
 时间差值
 

@@ -65,8 +65,6 @@
 
 ## eink.init(tp, args,spi_device)
 
-
-
 eink显示屏初始化
 
 **参数**
@@ -95,8 +93,6 @@ eink.init(eink.MODEL_4in2bc,{port = "device",pin_dc = 17, pin_pwr = 7,pin_rst = 
 
 ## eink.setup(full, spiid, pin_busy, pin_reset, pin_dc, pin_cs)
 
-
-
 初始化eink
 
 **参数**
@@ -124,8 +120,6 @@ eink.init(eink.MODEL_4in2bc,{port = "device",pin_dc = 17, pin_pwr = 7,pin_rst = 
 
 ## eink.sleep()
 
-
-
 进入休眠模式，再次使用时需要重新初始化
 
 **参数**
@@ -143,8 +137,6 @@ eink.init(eink.MODEL_4in2bc,{port = "device",pin_dc = 17, pin_pwr = 7,pin_rst = 
 ---
 
 ## eink.clear(color, force)
-
-
 
 清除绘图缓冲区，默认不会马上刷新到设备
 
@@ -168,8 +160,6 @@ eink.init(eink.MODEL_4in2bc,{port = "device",pin_dc = 17, pin_pwr = 7,pin_rst = 
 ---
 
 ## eink.setWin(width, height, rotate)
-
-
 
 设置窗口
 
@@ -195,8 +185,6 @@ eink.init(eink.MODEL_4in2bc,{port = "device",pin_dc = 17, pin_pwr = 7,pin_rst = 
 
 ## eink.getWin()
 
-
-
 获取窗口信息
 
 **参数**
@@ -218,8 +206,6 @@ eink.init(eink.MODEL_4in2bc,{port = "device",pin_dc = 17, pin_pwr = 7,pin_rst = 
 ---
 
 ## eink.setFont(font)
-
-
 
 设置字体
 
@@ -244,8 +230,6 @@ eink.setFont(eink.font_opposansm12_chinese)
 ---
 
 ## eink.print(x, y, str, colored)
-
-
 
 绘制字符串
 
@@ -283,8 +267,6 @@ eink.print(10, 20, "LuatOS")
 
 ## eink.show(x, y, noClear)
 
-
-
 将缓冲区图像输出到屏幕
 
 **参数**
@@ -309,8 +291,6 @@ eink.print(10, 20, "LuatOS")
 
 ## eink.draw(buff, buff2, noclear)
 
-
-
 直接输出数据到屏幕,支持双色数据
 
 **参数**
@@ -334,8 +314,6 @@ eink.print(10, 20, "LuatOS")
 ---
 
 ## eink.line(x, y, x2, y2, colored)
-
-
 
 缓冲区绘制线
 
@@ -364,8 +342,6 @@ eink.line(0, 0, 10, 20, 0)
 ---
 
 ## eink.rect(x, y, x2, y2, colored, fill)
-
-
 
 缓冲区绘制矩形
 
@@ -398,8 +374,6 @@ eink.rect(0, 0, 10, 20,0, 1) -- Filled
 
 ## eink.circle(x, y, radius, colored, fill)
 
-
-
 缓冲区绘制圆形
 
 **参数**
@@ -430,8 +404,6 @@ eink.circle(0, 0, 10, 1, 1) -- Filled
 
 ## eink.qrcode(x, y, str, size)
 
-
-
 缓冲区绘制QRCode
 
 **参数**
@@ -457,8 +429,6 @@ eink.circle(0, 0, 10, 1, 1) -- Filled
 
 ## eink.bat(x, y, bat)
 
-
-
 缓冲区绘制电池
 
 **参数**
@@ -482,8 +452,6 @@ eink.circle(0, 0, 10, 1, 1) -- Filled
 ---
 
 ## eink.weather_icon(x, y, code)
-
-
 
 缓冲区绘制天气图标
 
@@ -509,8 +477,6 @@ eink.circle(0, 0, 10, 1, 1) -- Filled
 
 ## eink.model(m)
 
-
-
 设置墨水屏驱动型号
 
 **参数**
@@ -532,8 +498,6 @@ eink.circle(0, 0, 10, 1, 1) -- Filled
 ---
 
 ## eink.drawXbm(x, y, w, h, data)
-
-
 
 绘制位图
 
@@ -567,8 +531,6 @@ eink.drawXbm(0, 0, 16,16, string.char(
 
 ## eink.setCtx(index)
 
-
-
 切换颜色画板, 适合多色墨水屏
 
 **参数**
@@ -593,8 +555,6 @@ eink.setCtx(1)
 ---
 
 ## eink.async(index)
-
-
 
 异步方式，使用此方式需要先 require("sysplus") 之后 eink.clear().wait() eink.show().wait()进行刷屏
 

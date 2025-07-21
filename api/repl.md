@@ -41,8 +41,6 @@ EOF
 
 ## repl.enable(re)
 
-
-
 启用或禁用REPL功能
 
 **参数**
@@ -68,8 +66,6 @@ repl.enable(false)
 ---
 
 ## repl.push(data)
-
-
 
 主动推送待处理的数据到底层
 

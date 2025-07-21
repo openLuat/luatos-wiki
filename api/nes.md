@@ -2,8 +2,6 @@
 
 ## nes.init(file_path)
 
-
-
 nes模拟器初始化
 
 **参数**
@@ -28,8 +26,6 @@ nes.init("/luadb/super_mario.nes")
 ---
 
 ## nes.key(key,val)
-
-
 
 nes模拟器初始化
 

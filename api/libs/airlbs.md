@@ -28,8 +28,6 @@ end)
 
 ## airlbs.request(param)
 
-
-
 获取定位数据
 
 **参数**

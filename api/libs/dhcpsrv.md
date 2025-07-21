@@ -9,8 +9,6 @@
 
 ## dhcpsrv.create(opts)
 
-
-
 创建一个dhcp服务器
 
 **参数**

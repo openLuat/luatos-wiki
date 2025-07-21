@@ -2,8 +2,6 @@
 
 ## ercoap.parse(data)
 
-
-
 解析coap数据包
 
 **参数**
@@ -40,8 +38,6 @@ end
 
 ## ercoap.print(data)
 
-
-
 打印coap数据包
 
 **参数**
@@ -66,8 +62,6 @@ end
 ---
 
 ## ercoap.onenet(tp, product_id, device_name, token, payload)
-
-
 
 快速生成onenet数据包
 

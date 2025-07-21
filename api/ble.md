@@ -52,8 +52,6 @@
 
 ## ble.gatt_create(opts)
 
-
-
 创建一个BLE GATT服务
 
 **参数**
@@ -87,8 +85,6 @@ ble_device:gatt_create(att_db)
 ---
 
 ## ble.adv_create(opts)
-
-
 
 创建一个BLE广播
 
@@ -127,8 +123,6 @@ ble_device:adv_create({
 
 ## ble.adv_start()
 
-
-
 开始广播
 
 **参数**
@@ -155,8 +149,6 @@ ble_device:adv_start()
 
 ## ble.adv_stop()
 
-
-
 主动停止广播
 
 **参数**
@@ -180,8 +172,6 @@ ble_device:adv_stop()
 ---
 
 ## ble.write_notify(opts, value)
-
-
 
 写入带通知的特征值
 
@@ -213,8 +203,6 @@ ble_device:write_notify({
 
 ## ble.write_indicate(opts, value)
 
-
-
 写入带指示的特征值
 
 **参数**
@@ -244,8 +232,6 @@ ble_device:write_indicate({
 ---
 
 ## ble.write_value(opts, value)
-
-
 
 写入特征值
 
@@ -277,8 +263,6 @@ ble_device:write_value({
 
 ## ble.read_value(opts)
 
-
-
 读取特征值
 
 **参数**
@@ -307,8 +291,6 @@ ble_device:read_value({
 ---
 
 ## ble.notify_enable(opts, value)
-
-
 
 开关监听
 
@@ -340,8 +322,6 @@ ble_device:notify_enable({
 
 ## ble.scan_create(addr_mode, scan_interval, scan_window)
 
-
-
 创建一个BLE扫描
 
 **参数**
@@ -370,8 +350,6 @@ ble_device:scan_create(ble.PUBLIC, 100, 100)
 
 ## ble.scan_start()
 
-
-
 开始BLE扫描
 
 **参数**
@@ -398,8 +376,6 @@ ble_device:scan_start()
 
 ## ble.scan_stop()
 
-
-
 停止BLE扫描
 
 **参数**
@@ -424,8 +400,6 @@ ble_device:scan_stop()
 ---
 
 ## ble.connect()
-
-
 
 BLE连接
 
@@ -454,8 +428,6 @@ ble_device:connect(string.fromHex("C8478C4E027D"),0)
 
 ## ble.disconnect()
 
-
-
 BLE断开连接
 
 **参数**
@@ -479,8 +451,6 @@ ble_device:disconnect()
 ---
 
 ## ble.adv_decode(data)
-
-
 
 解码广播数据
 

@@ -9,8 +9,6 @@
 
 ## napt.init(adapter)
 
-
-
 初始化NAPT
 
 **参数**
@@ -32,8 +30,6 @@
 ---
 
 ## napt.rebuild(buff, is_inet, adapter)
-
-
 
 重建MAC包
 
@@ -58,8 +54,6 @@
 ---
 
 ## napt.check()
-
-
 
 检查和清理NAT表
 

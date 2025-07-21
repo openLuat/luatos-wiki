@@ -2,8 +2,6 @@
 
 ## httpsrv.start(port, func, adapter)
 
-
-
 启动并监听一个http端口
 
 **参数**
@@ -53,8 +51,6 @@ end)
 ---
 
 ## httpsrv.stop(port)
-
-
 
 停止http服务
 

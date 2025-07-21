@@ -2,8 +2,6 @@
 
 ## ftp.login(adapter,ip_addr,port,username,password)
 
-
-
 FTP客户端
 
 **参数**
@@ -33,8 +31,6 @@ ftp_login = ftp.login(nil,"xxx")
 ---
 
 ## ftp.command(cmd)
-
-
 
 FTP命令
 
@@ -80,8 +76,6 @@ FTP命令
 
 ## ftp.pull(local_name,remote_name)
 
-
-
 FTP文件下载
 
 **参数**
@@ -107,8 +101,6 @@ ftp.pull("/1222.txt","/1222.txt").wait()
 ---
 
 ## ftp.push(local_name,remote_name)
-
-
 
 FTP文件上传
 
@@ -136,8 +128,6 @@ ftp.push("/1222.txt","/1222.txt").wait()
 
 ## ftp.close()
 
-
-
 FTP客户端关闭
 
 **参数**
@@ -160,8 +150,6 @@ ftp.close().wait()
 ---
 
 ## ftp.debug(onoff)
-
-
 
 配置是否打开debug信息
 

@@ -20,8 +20,6 @@
 
 ## mcu.setClk(mhz)
 
-
-
 设置主频,单位MHZ
 
 **参数**
@@ -62,8 +60,6 @@ sys.wait(1000)
 
 ## mcu.getClk()
 
-
-
 获取主频,单位MHZ
 
 **参数**
@@ -88,8 +84,6 @@ print("Boom", mhz)
 
 ## mcu.unique_id()
 
-
-
 获取设备唯一id. 注意,可能包含不可见字符,如需查看建议toHex()后打印
 
 **参数**
@@ -113,8 +107,6 @@ print("unique_id", unique_id)
 ---
 
 ## mcu.ticks()
-
-
 
 获取启动后的tick数,本身是无符号值,范围0~0xffffffff,lua是有符号计算,计算时超过0x7fffffff会变负数
 
@@ -141,8 +133,6 @@ print("ticks", tick)
 
 ## mcu.hz()
 
-
-
 获取每秒的tick数量
 
 **参数**
@@ -166,8 +156,6 @@ print("mcu.hz", hz)
 ---
 
 ## mcu.reg32(address, value, mask)
-
-
 
 读写mcu的32bit寄存器或者ram,谨慎使用写功能,请熟悉mcu的寄存器使用方法后再使用
 
@@ -196,8 +184,6 @@ local value = mcu.reg32(0x2009FFFC, 0x01, 0x01) --对0x2009FFFC地址上的值,�
 
 ## mcu.x32(value)
 
-
-
 转换10进制数为16进制字符串输出
 
 **参数**
@@ -222,8 +208,6 @@ local value = mcu.x32(0x2009FFFC) --输出"0x2009fffc"
 ---
 
 ## mcu.tick64()
-
-
 
 获取启动后的高精度tick，如果支持bit64库，可以直接输出转换好的bit64结构
 
@@ -251,8 +235,6 @@ print("ticks", tick_str, tick_per)
 ---
 
 ## mcu.dtick64(tick1, tick2, check_value)
-
-
 
 计算2个64bit tick的差值
 
@@ -283,8 +265,6 @@ print("ticks", result, diff_tick)
 
 ## mcu.setXTAL(source_main, source_32k, delay)
 
-
-
 选择时钟源,当前仅air105支持
 
 **参数**
@@ -310,8 +290,6 @@ mcu.setXTAL(true, true, 1248)    --高速时钟使用外部时钟,低速32K使�
 
 ## mcu.hardfault(mode)
 
-
-
 mcu死机时处理模式
 
 **参数**
@@ -336,8 +314,6 @@ mcu.hardfault(2)    --死机后尽量将错误信息提交给外部工具后重�
 ---
 
 ## mcu.iomux(type, channel, value)
-
-
 
 在外设打开前，将外设IO复用到非默认配置上，目前只支持Air780E的部分外设复用到其他配置，这是一个临时接口，如果后续有更合适的api，本接口将不再更新
 
@@ -367,8 +343,6 @@ mcu.iomux(mcu.I2C, 1, 1)    -- Air780E的I2C1复用到gpio4和gpio5
 ---
 
 ## mcu.altfun(type, sn, pad_index, alt_fun, is_input)
-
-
 
 IO外设功能复用选择，注意普通MCU通常是以GPIO号为唯一ID号，但是专用SOC，比如CAT1的，可能以PAD号或者模块pin脚号(pin.xxx后续支持)为唯一ID号。本函数不是所有平台适用
 
@@ -406,8 +380,6 @@ mcu.altfun(mcu.SDI0,0,16)
 ---
 
 ## mcu.ticks2(mode)
-
-
 
 获取高精度的计数
 
@@ -447,8 +419,6 @@ log.info("sec_h", sec_h, "sec_l", sec_l)
 ---
 
 ## mcu.XTALRefOutput(source_main, source_32k)
-
-
 
 晶振参考时钟输出
 

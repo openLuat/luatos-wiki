@@ -10,8 +10,6 @@
 
 ## iperf.server(id)
 
-
-
 启动server模式
 
 **参数**
@@ -40,8 +38,6 @@ end
 ---
 
 ## iperf.client(id)
-
-
 
 启动client模式
 
@@ -81,8 +77,6 @@ end)
 ---
 
 ## iperf.abort()
-
-
 
 关闭iperf
 

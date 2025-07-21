@@ -38,8 +38,6 @@ adc.close(adc.CH_VBAT)
 
 ## adc.open(id)
 
-
-
 打开adc通道
 
 **参数**
@@ -69,8 +67,6 @@ adc.close(4) -- 若需要持续读取, 则不需要close, 功耗会高一点.
 ---
 
 ## adc.setRange(range)
-
-
 
 设置ADC的测量范围，注意这个和具体芯片有关，目前只支持air105/Air780EXXX系列
 
@@ -106,8 +102,6 @@ adc.setRange(adc.ADC_RANGE_MAX) -- 启用分压
 
 ## adc.read(id)
 
-
-
 读取adc通道
 
 **参数**
@@ -139,8 +133,6 @@ adc.close(2)
 
 ## adc.get(id)
 
-
-
 获取adc计算值
 
 **参数**
@@ -170,8 +162,6 @@ adc.close(2) -- 按需关闭
 ---
 
 ## adc.close(id)
-
-
 
 关闭adc通道
 

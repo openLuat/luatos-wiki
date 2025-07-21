@@ -2,8 +2,6 @@
 
 ## rtos.receive(timeout)   
 
-
-
 接受并处理底层消息队列.
 
 **参数**
@@ -25,8 +23,6 @@
 ---
 
 ## rtos.timer_start(id,timeout,_repeat)   
-
-
 
 启动一个定时器
 
@@ -57,8 +53,6 @@ rtos.timer_start(10000, 3000, -1)
 
 ## rtos.timer_stop(id)   
 
-
-
 关闭并释放一个定时器
 
 **参数**
@@ -85,8 +79,6 @@ rtos.timer_stop(id)
 
 ## rtos.reboot()   
 
-
-
 设备重启
 
 **参数**
@@ -106,8 +98,6 @@ rtos.timer_stop(id)
 ---
 
 ## rtos.buildDate()
-
-
 
 获取固件编译日期
 
@@ -133,8 +123,6 @@ local d = rtos.buildDate()
 
 ## rtos.bsp()
 
-
-
 获取硬件bsp型号
 
 **参数**
@@ -159,8 +147,6 @@ local bsp = rtos.bsp()
 
 ## rtos.version()        
 
-
-
 获取固件版本号
 
 **参数**
@@ -184,8 +170,6 @@ local luatos_version = rtos.version()
 ---
 
 ## rtos.standy(timeout)
-
-
 
 进入待机模式, 仅部分设备可用, 本API已废弃, 推荐使用pm库
 
@@ -212,8 +196,6 @@ rtos.standby(5000)
 ---
 
 ## rtos.meminfo(type)
-
-
 
 获取内存信息
 
@@ -244,8 +226,6 @@ log.info("mem.sys", rtos.meminfo("sys"))
 
 ## rtos.firmware()
 
-
-
 返回底层描述信息,格式为 LuatOS_$VERSION_$BSP,可用于OTA升级判断底层信息
 
 **参数**
@@ -269,8 +249,6 @@ log.info("firmware", rtos.firmware())
 ---
 
 ## rtos.setPaths(pathA, pathB, pathC, pathD)
-
-
 
 设置自定义lua脚本搜索路径,优先级高于内置路径
 
@@ -300,8 +278,6 @@ require("sd_user_main") -- 将搜索并加载 /sdcard/user/sd_user_main.luac 和
 
 ## rtos.nop()
 
-
-
 空函数,什么都不做
 
 **参数**
@@ -328,8 +304,6 @@ rtos.nop()
 ---
 
 ## rtos.autoCollectMem(period, warning_level, force_level)
-
-
 
 内存自动收集配置，是lua本身收集机制的一种补充，不是必要的，而且只在luavm空闲时触发
 

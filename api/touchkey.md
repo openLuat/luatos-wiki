@@ -2,8 +2,6 @@
 
 ## touchkey.setup(id, scan_period, window, threshold)
 
-
-
 配置触摸按键
 
 **参数**
@@ -36,8 +34,6 @@ end)
 ---
 
 ## touchkey.close(id)
-
-
 
 关闭初始触摸按键
 
