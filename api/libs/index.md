@@ -8,6 +8,7 @@ air153C_wtd
 airlbs
 dhcpsrv
 dnsproxy
+fota_wifi
 httpdns
 httpplus
 lbsLoc
