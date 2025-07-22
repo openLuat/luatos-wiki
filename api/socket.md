@@ -16,7 +16,6 @@
 |socket.TX_OK|number|TX_OK事件|
 |socket.CLOSED|number|CLOSED事件|
 |socket.LWIP_SPI|number|使用LWIP协议栈的SPI网络|
-|socket.LWIP_UART|number|使用LWIP协议栈的UART网络|
 |socket.LWIP_USER0|number|使用LWIP协议栈的自定义网卡0, 2025.1.12新增|
 |socket.LWIP_USER1|number|使用LWIP协议栈的自定义网卡1, 2025.1.12新增|
 |socket.LWIP_USER2|number|使用LWIP协议栈的自定义网卡2, 2025.1.12新增|

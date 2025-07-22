@@ -15,6 +15,7 @@ lbsLoc2
 libfota
 libfota2
 libnet
+libnetif
 udpsrv
 xmodem
 ```
