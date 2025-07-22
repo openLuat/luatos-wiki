@@ -11,6 +11,87 @@
 
 ```
 
+## libnetif.set_priority_order(new_priority)
+
+设置网络优先级，相应网卡获取到ip且网络正常视为网卡可用，丢失ip视为网卡不可用.(需要在task中调用)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|table|网络优先级列表|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true，失败返回false|
+
+**例子**
+
+```lua
+libnetif.set_priority_order({
+    { -- 最高优先级网络
+        WIFI = { -- WiFi配置
+            ssid = "your_ssid",       -- WiFi名称(string)
+            password = "your_pwd",    -- WiFi密码(string)
+            ping_ip = "112.125.89.8", -- 连通性检测IP(选填参数),默认使用httpdns获取baidu.com的ip作为判断条件，
+                                      -- 注：如果填写ip，则ping通作为判断网络是否可用的条件，
+                                      -- 所以需要根据网络环境填写内网或者外网ip,
+                                      -- 填写外网ip的话要保证外网ip始终可用，
+                                      -- 填写局域网ip的话要确保相应ip固定且能够被ping通
+            ping_time = 10000         -- 填写ping_ip且未ping通时的检测间隔(ms, 可选，默认为10秒)
+                                      -- 定时ping将会影响模块功耗，使用低功耗模式的话可以适当延迟间隔时间
+        }
+    },
+    { -- 次优先级网络
+        ETHERNET = { -- 以太网配置
+            pwrpin = 140,             -- 供电使能引脚(number)
+            ping_ip = "112.125.89.8", -- 连通性检测IP(选填参数),默认使用httpdns获取baidu.com的ip作为判断条件，
+                                      -- 注：如果填写ip，则ping通作为判断网络是否可用的条件，
+                                      -- 所以需要根据网络环境填写内网或者外网ip,
+                                      -- 填写外网ip的话要保证外网ip始终可用，
+                                      -- 填写局域网ip的话要确保相应ip固定且能够被ping通
+            ping_time = 10000         -- 填写ping_ip且未ping通时的检测间隔(ms, 可选,默认为10秒)
+                                      -- 定时ping将会影响模块功耗，使用低功耗模式的话可以适当延迟间隔时间
+            tp = netdrv.CH390         -- 网卡芯片型号(选填参数)，仅spi方式外挂以太网时需要填写。
+            opts = { spi = 1, cs = 12 }   -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。
+        }
+    },
+    { -- 最低优先级网络
+        LWIP_GP = true  -- 启用4G网络
+    }
+})
+
+```
+
+---
+
+## libnetif.notify_status(cb_fnc)
+
+设置网络状态变化回调函数。触发条件：网卡切换或者所有网卡都断网。返回值为:1. 当有可用网络的时候，返回当前使用网卡、网卡id；2. 当没有可用网络的时候，返回 nil、-1 。
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|function|回调函数|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+    libnetif.notify_status(function(net_type,adapter)
+    log.info("可以使用优先级更高的网络:", net_type,adapter)
+    end)
+
+```
+
+---
+
 ## libnetif.setproxy(adapter, main_adapter,other_configs)
 
 设置多网融合模式，例如4G作为数据出口给WIFI或以太网设备上网(需要在task中调用)
