@@ -14,8 +14,8 @@
 |常量|类型|解释|
 |-|-|-|
 |airtalk.PROTOCOL_MQTT|number|语音数据用MQTT传输|
-|airtalk.PROTOCOL_MQTT|number|语音数据用MQTT传输|
-|airtalk.PROTOCOL_MQTT|number|语音数据用MQTT传输|
+|airtalk.MODE_PERSON|number|对讲工作模式1对1|
+|airtalk.MODE_GROUP|number|对讲工作模式多人|
 |airtalk.EVENT_OFF_LINE|number|airtalk离线|
 |airtalk.EVENT_ON_LINE_IDLE|number|airtalk在线处于空闲状态|
 |airtalk.EVENT_PLAY_START|number|airtalk下行播放开始|
