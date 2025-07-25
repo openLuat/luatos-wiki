@@ -62,6 +62,7 @@ lvgl
 max30102
 mcu
 miniz
+misc
 mlx90640
 mobile
 modbus

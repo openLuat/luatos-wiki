@@ -59,6 +59,7 @@
 |[max30102](max30102.md)|`心率模块(MAX30102)`|
 |[mcu](mcu.md)|`封装mcu一些特殊操作`|
 |[miniz](miniz.md)|`简易zlib压缩`|
+|[misc](misc.md)|`杂项驱动，各种非常规驱动，芯片独有驱动都放在这里`|
 |[mlx90640](mlx90640.md)|`红外测温(MLX90640)`|
 |[mobile](mobile.md)|`蜂窝网络`|
 |[modbus](modbus.md)|`modbus主从协议栈协议`|

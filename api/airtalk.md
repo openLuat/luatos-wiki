@@ -13,8 +13,9 @@
 
 |常量|类型|解释|
 |-|-|-|
-|airtalk.PROTOCOL_DEMO_MQTT_8K|number|演示用MQTT协议，音频采样率8K|
-|airtalk.PROTOCOL_DEMO_MQTT_16K|number|演示用MQTT协议，音频采样率16K|
+|airtalk.PROTOCOL_MQTT|number|语音数据用MQTT传输|
+|airtalk.PROTOCOL_MQTT|number|语音数据用MQTT传输|
+|airtalk.PROTOCOL_MQTT|number|语音数据用MQTT传输|
 |airtalk.EVENT_OFF_LINE|number|airtalk离线|
 |airtalk.EVENT_ON_LINE_IDLE|number|airtalk在线处于空闲状态|
 |airtalk.EVENT_PLAY_START|number|airtalk下行播放开始|
@@ -34,7 +35,7 @@
 
 |传入值类型|解释|
 |-|-|
-|int|协议类型，见airtalk.PROTOCOL_XXX|
+|int|语音数据传输协议类型，见airtalk.PROTOCOL_XXX|
 |userdata|network_ctrl或者mqtt客户端，如果协议是mqtt类型，传入mqtt.create返回值，如果是其他类型，传入socket.create的返回值|
 |int|缓冲时间，单位ms，默认500ms，值越小，delay越小，抗网络波动能力越差|
 |int|单次编码帧数，默认值5，不能低于2，不能高于5|
@@ -50,7 +51,7 @@
 
 ```lua
 mqttc = mqtt.create(nil,"120.55.137.106", 1884)
-airtalk.config(airtalk.PROTOCOL_DEMO_MQTT_8K, mqttc)
+airtalk.config(airtalk.PROTOCOL_MQTT, mqttc)
 
 ```
 
@@ -83,7 +84,7 @@ end)
 
 ---
 
-## airtalk.start(uid,ctrl_url,ctrl_port)
+## airtalk.start()
 
 airtalk启动
 
@@ -91,9 +92,6 @@ airtalk启动
 
 |传入值类型|解释|
 |-|-|
-|string|用于确认身份的唯一id，不超过15字节，如果是演示协议，随意填写一个不重复的即可|
-|string|如果协议是非MQTT类型是服务器url，如果是mqtt演示协议，则是通话topic，不填则使用默认topic|
-|int|服务器端口，如果是mqtt协议，不需要填写，mqtt.create已经传入|
 |return|nil|
 
 **返回值**
@@ -104,12 +102,63 @@ airtalk启动
 
 ```lua
 mqttc = mqtt.create(nil,"120.55.137.106", 1884)
-airtalk.config(airtalk.PROTOCOL_DEMO_MQTT_8K, mqttc)
+airtalk.config(airtalk.PROTOCOL_MQTT, mqttc)
 airtalk.on(function(event, param)
     log.info("airtalk event", event, param)
 end)
---airtalk.start("123456789012345", "xxxxxx")    --用户用mqtt测试协议时，应该自己定义topic，防止被别人听
-airtalk.start("123456789012345")
+airtalk.start()
+
+```
+
+---
+
+## airtalk.set_topic(topic)
+
+配置airtalk mqtt类型语音数据的专用topic
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|topic|
+|return|nil|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+airtalk.set_topic("xxxxxxxxxx")
+
+```
+
+---
+
+## airtalk.speech(mode, on_off)
+
+airtalk工作启动/停止
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|工作模式，见airtalk.MODE_XXX|
+|boolean|启停控制，true开始，false停止|
+|return|nil|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+--1对1对讲开始
+airtalk.speech(airtalk.MODE_PERSON,true)
+--1对多对讲开始
+airtalk.speech(airtalk.MODE_GROUP,true)
 
 ```
 
