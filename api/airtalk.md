@@ -112,6 +112,30 @@ airtalk.start()
 
 ---
 
+## airtalk.set_ssrc(ssrc)
+
+配置airtalk RTP协议中的SSRC
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int/string|ssrc，可以是int也是可以8字节string|
+|return|nil|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+
+
+```
+
+---
+
 ## airtalk.set_topic(topic)
 
 配置airtalk mqtt类型语音数据的专用topic
@@ -136,16 +160,17 @@ airtalk.set_topic("xxxxxxxxxx")
 
 ---
 
-## airtalk.speech(mode, on_off)
+## airtalk.speech(on_off, mode, sample)
 
-airtalk工作启动/停止
+airtalk对讲工作启动/停止
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|int|工作模式，见airtalk.MODE_XXX|
 |boolean|启停控制，true开始，false停止|
+|int|工作模式，见airtalk.MODE_XXX|
+|int|音频采样率，目前只有8000和16000，默认16000|
 |return|nil|
 
 **返回值**
@@ -156,9 +181,11 @@ airtalk工作启动/停止
 
 ```lua
 --1对1对讲开始
-airtalk.speech(airtalk.MODE_PERSON,true)
+airtalk.speech(true,airtalk.MODE_PERSON,16000)
 --1对多对讲开始
-airtalk.speech(airtalk.MODE_GROUP,true)
+airtalk.speech(true,airtalk.MODE_GROUP,16000)
+--对讲停止
+airtalk.speech(false)
 
 ```
 

@@ -24,6 +24,7 @@
 |socket.LWIP_USER5|number|使用LWIP协议栈的自定义网卡5, 2025.1.12新增|
 |socket.LWIP_USER6|number|使用LWIP协议栈的自定义网卡6, 2025.1.12新增|
 |socket.LWIP_USER7|number|使用LWIP协议栈的自定义网卡7, 2025.1.12新增|
+|socket.LWIP_GP_GW|number|4G代理网关|
 
 
 ## socket.localIP(adapter)

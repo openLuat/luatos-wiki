@@ -303,7 +303,7 @@ mobile.rtime(3,nil,true) --启用数据传输优化，与基站无数据交互3�
 
 ---
 
-## mobile.apn(index, cid, new_apn_name, user_name, password, ip_type, protocol)
+## mobile.apn(index, cid, new_apn_name, user_name, password, ip_type, protocol, is_del)
 
 获取或设置APN，设置APN必须在入网前就设置好，比如在SIM卡识别完成前就设置好
 
@@ -329,8 +329,12 @@ mobile.rtime(3,nil,true) --启用数据传输优化，与基站无数据交互3�
 **例子**
 
 ```lua
-mobile.apn(0,1,"cmiot","","",nil,0) -- 移动公网卡设置APN为cmiot,一般不用设置
-mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name，user，password联系卡商获取
+-- 注意, 在国内, 公网卡基本上都不需要设置APN, 专网卡才需要设置
+mobile.apn(0,1,"cmiot","","",nil,0)
+
+-- 专网卡设置的demo，name，user，password联系卡商获取
+-- 设置后, 再次立即获取, 并不会返回设置的值, 要等联网成功 - 设置好不会立刻有返回值，需要等网络注册成功
+mobile.apn(0,1,"name","user","password",nil,3)
 
 ```
 
