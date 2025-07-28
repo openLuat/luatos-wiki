@@ -672,6 +672,7 @@ local ip1,ip2,ip3,ip4 = socket.remoteIP(ctrl)
 |返回值类型|解释|
 |-|-|
 |int|默认适配器编号|
+|int|最后一个注册的适配器编号(2025.7.25新增)|
 
 **例子**
 
@@ -682,6 +683,10 @@ local id = socket.dft()
 
 -- 设置默认适配器编号
 socket.dft(socket.LWIP_ETH)
+
+-- 获取当前默认适配器编号, 及最后一个注册的适配器编号
+local id, last_id = socket.dft()
+log.info("当前默认适配器编号", id, "最后一个注册的适配器编号", last_id)
 
 ```
 

@@ -16,6 +16,8 @@
 |mcu.CAMERA|number|外设类型-CAMERA，就是CAM,摄像头|
 |mcu.ONEWIRE|number|外设类型-ONEWIRE，单总线协议|
 |mcu.SDIO|number|外设类型-SDIO，接TF卡|
+|mcu.KEYBORAD|number|外设类型-KEYBORAD，键盘|
+|mcu.ETH|number|外设类型-ETH，网口|
 
 
 ## mcu.setClk(mhz)

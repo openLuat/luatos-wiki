@@ -11,7 +11,7 @@
 
 ## sms.send(phone, msg, auto_phone_fix)
 
-发送短信
+异步发送短信
 
 **参数**
 
@@ -35,7 +35,7 @@
 
 ## sms.sendLong(phone, msg, auto_phone_fix).wait()
 
-发送长短信(每段PDU发送超时时间30s)
+同步发送短信
 
 **参数**
 

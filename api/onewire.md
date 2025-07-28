@@ -226,7 +226,7 @@ onewire.debug(0, true)
 **例子**
 
 ```lua
-onewire.init(0) --初始化硬件单总线
+onewire.deinit(0) --初始化硬件单总线
 
 ```
 
