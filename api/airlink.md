@@ -22,6 +22,7 @@
 |airlink.CONF_SPI_IRQ|number|SPI/UART配置参数, 设置IRQ脚的GPIO|
 |airlink.CONF_SPI_SPEED|number|SPI配置参数, 设置SPI的波特率|
 |airlink.CONF_IRQ_TIMEOUT|number|SPIUART配置参数, 设置IRQ模式的等待超时时间|
+|airlink.CONF_UART_ID|number|UART配置参数, 设置UART的ID|
 
 
 ## airlink.init()

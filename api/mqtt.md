@@ -247,15 +247,23 @@ mqttc:on(function(mqtt_client, event, data, payload, metas)
 end)
 --[[
 event可能出现的值有
-  conack -- 服务器鉴权完成,mqtt连接已经建立, 可以订阅和发布数据了,没有附加数据
-  recv   -- 接收到数据,由服务器下发, data为topic值(string), payload为业务数据(string).metas是元数据(table), 一般不处理. 
+  conack    -- 服务器鉴权完成, 表示mqtt连接已经建立, 可以订阅和发布数据了
+  suback     -- 订阅完成，data为应答结果, true成功，payload为0~2数字表示qos，data为false则失败，payload为失败码，一般是0x80
+  unsuback    -- 取消订阅完成
+  recv       -- 接收到数据,由服务器下发, data为topic值(string), payload为业务数据(string), metas是元数据(table), 一般不处理.
              -- metas包含以下内容
+             -- message_id
              -- qos 取值范围0,1,2
              -- retain 取值范围 0,1
              -- dup 取值范围 0,1
-  sent   -- 发送完成, qos0会马上通知, qos1/qos2会在服务器应答会回调, data为消息id
+  sent       -- 发送完成, qos0会马上通知, qos1/qos2会在服务器应答会回调, data为消息id
   disconnect -- 服务器断开连接,网络问题或服务器踢了客户端,例如clientId重复,超时未上报业务数据
-  pong   -- 收到服务器心跳应答,没有附加数据
+  pong       -- 收到服务器心跳应答,没有附加数据
+  error        -- 严重的异常，会导致断开连接, data(string)为具体异常，有以下几种
+                    -- connect 服务器连接不上
+                    -- tx 发送数据失败
+                    -- conack 服务器鉴权失败，失败码在payload(int)
+                    -- other 其他异常
 ]]
 
 ```

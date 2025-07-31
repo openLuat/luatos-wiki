@@ -17,6 +17,7 @@ libfota
 libfota2
 libnet
 libnetif
+netLed
 udpsrv
 xmodem
 ```
