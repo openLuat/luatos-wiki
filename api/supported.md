@@ -51,7 +51,7 @@
 |[lcdseg](lcdseg.md)|`段式lcd`|
 |[libcoap](libcoap.md)|`coap数据处理`|
 |[libgnss](libgnss.md)|`NMEA数据处理`|
-|[little_flash](little_flash.md)|`LITTLE FLASH 软件包`|
+|[little_flash](little_flash.md)|`flash驱动 软件包(同时支持驱动nor flash和nand flash设备)`|
 |[log](log.md)|`日志库`|
 |[lora](lora.md)|`lora驱动模块`|
 |[lora2](lora2.md)|`lora2驱动模块(支持多挂)`|
@@ -84,7 +84,7 @@
 |[sdio](sdio.md)|`sdio`|
 |[sensor](sensor.md)|`传感器操作库`|
 |[sfd](sfd.md)|`SPI FLASH操作库`|
-|[sfud](sfud.md)|`SPI FLASH sfud软件包`|
+|[sfud](sfud.md)|`flash驱动 软件包(支持驱动nor flash设备)`|
 |[sms](sms.md)|`短信`|
 |[socket](socket.md)|`网络接口`|
 |[softkb](softkb.md)|`软件键盘矩阵`|

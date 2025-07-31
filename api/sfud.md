@@ -1,4 +1,4 @@
-# sfud - SPI FLASH sfud软件包
+# sfud - flash驱动 软件包(支持驱动nor flash设备)
 
 ## sfud.init(spi_id, spi_cs, spi_bandrate)/sfud.init(spi_device)
 

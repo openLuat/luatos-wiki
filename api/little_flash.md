@@ -1,4 +1,4 @@
-# little_flash - LITTLE FLASH 软件包
+# little_flash - flash驱动 软件包(同时支持驱动nor flash和nand flash设备)
 
 ## lf.init(spi_device)
 
