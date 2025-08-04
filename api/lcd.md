@@ -313,8 +313,8 @@ lcd颜色填充
 |-|-|
 |int|左上边缘的X位置.|
 |int|左上边缘的Y位置.|
-|int|右下边缘的X位置.|
-|int|右下边缘的Y位置.|
+|int|右下边缘的X位置(color传入framebuff的zbuff时可选，默认为x+图片宽度).|
+|int|右下边缘的Y位置(color传入framebuff的zbuff时可选，默认为y+图片高度).|
 |string|字符串或zbuff对象|
 
 **返回值**
@@ -763,6 +763,32 @@ lcd.drawXbm(0, 0, 16,16, string.char(
 
 ```lua
 lcd.showImage(0,0,"/luadb/logo.jpg")
+
+```
+
+---
+
+## lcd.image2raw(file)
+
+解码图片,当前只支持jpg,jpeg
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|文件路径|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|userdata|颜色zbuff|
+
+**例子**
+
+```lua
+lcd_zbuff = lcd.image2raw("/luadb/logo.jpg")
+lcd.draw(0, 0, 80, 80, lcd_zbuff)
 
 ```
 
