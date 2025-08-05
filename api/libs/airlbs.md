@@ -1,5 +1,16 @@
 # airlbs - airlbs 定位服务(收费服务，需自行联系销售申请)
 
+**示例**
+
+```lua
+-- lbsloc 是异步回调接口，
+-- lbsloc2 是是同步接口。
+-- lbsloc比lbsloc2多了一个请求地址文本的功能。
+-- lbsloc 和 lbsloc2 都是免费LBS定位的实现方式；
+-- airlbs 扩展库是收费 LBS 的实现方式。
+
+```
+
 ## airlbs.request(param)
 
 获取定位数据

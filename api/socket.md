@@ -150,7 +150,7 @@ socket.debug(ctrl, true)
 |int|tcp keep live模式下的探测间隔时间（秒）|
 |int|tcp keep live模式下的探测次数|
 |string|TCP模式下的服务器ca证书数据，UDP模式下的PSK，不需要加密传输写nil，后续参数也全部nil|
-|string|TCP模式下的客户端ca证书数据，UDP模式下的PSK-ID，TCP模式下如果不需要验证客户端证书时，忽略，一般不需要验证客户端证书|
+|string|TCP模式下的客户端证书数据，UDP模式下的PSK-ID，TCP模式下如果不需要验证客户端证书时，忽略，一般不需要验证客户端证书|
 |string|TCP模式下的客户端私钥加密数据|
 |string|TCP模式下的客户端私钥口令数据|
 
