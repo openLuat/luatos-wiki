@@ -26,7 +26,6 @@
 |[fdb](fdb.md)|`kv数据库,掉电不丢数据`|
 |[fonts](fonts.md)|`字体库`|
 |[fota](fota.md)|`底层固件升级`|
-|[fs](fs.md)|`文件系统额外操作`|
 |[fskv](fskv.md)|`kv数据库,掉电不丢数据`|
 |[ftp](ftp.md)|`ftp 客户端`|
 |[gmssl](gmssl.md)|`国密算法(SM2/SM3/SM4)`|

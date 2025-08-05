@@ -29,7 +29,6 @@ fatfs
 fdb
 fonts
 fota
-fs
 fskv
 ftp
 gmssl

@@ -186,6 +186,36 @@ end
 
 ---
 
+## io.fsstat(path)
+
+获取文件系统信息
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|路径,默认"/",可选|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|获取成功返回true,否则返回false|
+|int|总的block数量|
+|int|已使用的block数量|
+|int|block的大小,单位字节|
+|string|文件系统类型,例如lfs代表littlefs|
+
+**例子**
+
+```lua
+-- 打印根分区的信息
+log.info("fsstat", io.fsstat("/"))
+
+```
+
+---
+
 ## io.mkfs(path)
 
 格式化文件系统,需指定挂载点
