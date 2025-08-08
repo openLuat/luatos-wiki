@@ -8,6 +8,7 @@ air153C_wtd
 airlbs
 dhcpsrv
 dnsproxy
+e_netif
 fota_wifi
 httpdns
 httpplus
@@ -16,7 +17,6 @@ lbsLoc2
 libfota
 libfota2
 libnet
-libnetif
 netLed
 udpsrv
 xmodem
