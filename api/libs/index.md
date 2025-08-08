@@ -8,6 +8,7 @@ air153C_wtd
 airlbs
 dhcpsrv
 dnsproxy
+e_chg
 e_netif
 fota_wifi
 httpdns
