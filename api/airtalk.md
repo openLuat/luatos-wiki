@@ -15,7 +15,8 @@
 |-|-|-|
 |airtalk.PROTOCOL_MQTT|number|语音数据用MQTT传输|
 |airtalk.MODE_PERSON|number|对讲工作模式1对1|
-|airtalk.MODE_GROUP|number|对讲工作模式多人|
+|airtalk.MODE_GROUP_SPEAKER|number|对讲工作模式1对多的发起者，录音上行，不播放|
+|airtalk.MODE_GROUP_LISTENER|number|对讲工作模式1对多的接收者，下行播放，不录音|
 |airtalk.EVENT_OFF_LINE|number|airtalk离线|
 |airtalk.EVENT_ON_LINE_IDLE|number|airtalk在线处于空闲状态|
 |airtalk.EVENT_PLAY_START|number|airtalk下行播放开始|
@@ -25,9 +26,10 @@
 |airtalk.EVENT_AUDIO_START|number|airtalk audio启动，只要上行和下行有一个开始就启动|
 |airtalk.EVENT_AUDIO_END|number|airtalk audio停止，上行和下行都结束才停止|
 |airtalk.EVENT_ERROR|number|airtalk发生异常，后续param为异常值|
+|airtalk.EVENT_ERROR|number|airtalk发生异常，长时间没有收到音频数据|
 
 
-## airtalk.config(protocol,netc,cache_time,encode_cnt,decode_cnt,audio_pm_mode_when_stop)
+## airtalk.config(protocol,netc,cache_time,encode_cnt,decode_cnt,audio_pm_mode_when_stop,no_data_to)
 
 配置airtalk参数
 
@@ -41,6 +43,7 @@
 |int|单次编码帧数，默认值5，不能低于2，不能高于5|
 |int|单次解码帧数，如果缓冲没有足够的帧数，自动补0，默认值5，不能低于2，不能高于10，不能低于encode_cnt, decode_cnt * 4 必须是 encode_cnt的整数倍|
 |int|对讲停止后，audio的pm状态，默认是audio.SHUTDOWN|
+|int|多长时间判定对端长时间无数据发送，超过这个时间会上报event_error，用户决定接下来的操作。默认5000ms，单位ms|
 |return|nil|
 
 **返回值**
@@ -79,6 +82,11 @@ airtalk.config(airtalk.PROTOCOL_MQTT, mqttc)
 airtalk.on(function(event, param)
     log.info("airtalk event", event, param)
 end)
+--[[
+event具体见EVENT_XXX
+param说明:
+目前只有EVENT_ERROR会有param值，为ERROR_XXX
+]]
 
 ```
 
@@ -182,37 +190,12 @@ airtalk对讲工作启动/停止
 ```lua
 --1对1对讲开始
 airtalk.speech(true,airtalk.MODE_PERSON,16000)
---1对多对讲开始
-airtalk.speech(true,airtalk.MODE_GROUP,16000)
+--作为发起方，进行1对多对讲
+airtalk.speech(true,airtalk.MODE_GROUP_SPEAKER,16000)
+--作为接收方，进行1对多对讲
+airtalk.speech(true,airtalk.MODE_GROUP_LISTENER,16000)
 --对讲停止
 airtalk.speech(false)
-
-```
-
----
-
-## airtalk.uplink(on_off)
-
-airtalk上行控制
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|boolean|录音上行控制，true开始，false停止|
-|return|nil|
-
-**返回值**
-
-无
-
-**例子**
-
-```lua
---开始录音
-airtalk.uplink(true)
---停止录音
-airtalk.uplink(false)
 
 ```
 

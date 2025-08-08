@@ -972,3 +972,29 @@ lcd.qspi(0x02, 0x32, 0x12)
 
 ---
 
+## lcd.setAcchw(type,enable)
+
+开启/关闭硬件加速(lcd.init后默认开启所有支持的硬件加速,当使用存在问题时可使用此接口进行开关指定的硬件加速)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|number|type 支持的类型, 可选,默认全部类型 目前支持 lcd.ACC_HW_JPEG lcd.ACC_HW_ALL|
+|bool|enable 开关, 可选 默认关闭 ture开启 false关闭|
+|return|nil|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+    lcd.setAcchw(lcd.ACC_HW_JPEG,false) -- 关闭硬件加速的jpeg解码功能
+    lcd.setAcchw(lcd.ACC_HW_ALL,false) -- 关闭所有硬件加速
+
+```
+
+---
+

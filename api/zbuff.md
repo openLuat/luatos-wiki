@@ -22,7 +22,7 @@
 |-|-|
 |int|字节数|
 |any|可选参数，number时为填充数据，string时为填充字符串|
-|number|可选参数，内存类型，可选：zbuff.HEAP_SRAM(内部sram,默认) zbuff.HEAP_PSRAM(外部psram) zbuff.HEAP_AUTO(自动申请,如存在psram则在psram进行申请,如不存在或失败则在sram进行申请) 注意:此项与硬件支持有关|
+|number|可选参数，内存类型默认自动选择|
 
 **返回值**
 
@@ -42,7 +42,7 @@ local buff = zbuff.create(1024, "123321456654") -- 创建，并填充一个已�
 -- zbuff.create({width,height,bit},data,type)
 -- table 宽度、高度、色位深度
 @int 可选参数，填充数据
-@number 可选参数，内存类型，可选：zbuff.HEAP_SRAM(内部sram,默认) zbuff.HEAP_PSRAM(外部psram) zbuff.HEAP_AUTO(自动申请,如存在psram则在psram进行申请,如不存在或失败则在sram进行申请) 注意:此项与硬件支持有关
+@number 可选参数，内存类型
 @return object zbuff对象，如果创建失败会返回nil
 @usage
 -- 创建zbuff
@@ -629,7 +629,7 @@ buff:del(-1,4)    --从位置used-1开始删除4个字节数据，但是这肯�
 
 ## buff:query(offset,length,isbigend,issigned,isfloat)
 
-按起始位置和长度0~used范围内取出数据，如果是1,2,4,8字节，根据后续参数转换成浮点或者整形
+按起始位置和长度0~used范围内取出数据，如果是1,2,4,8字节，且填写了isbigend参数，则根据isbigend,issigned,isfloat转换成浮点或者整形
 
 **参数**
 
@@ -637,7 +637,7 @@ buff:del(-1,4)    --从位置used-1开始删除4个字节数据，但是这肯�
 |-|-|
 |int|数据的起始位置（起始位置为0）|
 |int|数据的长度|
-|boolean|是否是大端格式，如果为nil，则不会转换，直接字节流输出|
+|boolean|是否是大端格式，如果为nil，则不会转换，直接字节流输出，false为小端格式，true为大端格式|
 |boolean|是否是有符号的，默认为false|
 |boolean|是否是浮点型，默认为false|
 
@@ -645,7 +645,7 @@ buff:del(-1,4)    --从位置used-1开始删除4个字节数据，但是这肯�
 
 |返回值类型|解释|
 |-|-|
-|string|读出来的数据|
+|string|读出来的数据，如果取出数据是1,2,4,8字节，且isbigend填写了true或者false，则输出浮点或者整形|
 
 **例子**
 
