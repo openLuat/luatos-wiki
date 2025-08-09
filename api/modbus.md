@@ -29,9 +29,9 @@
 |modbus.SLAVE_ERROR|number|从站错误|
 
 
-## modbus.create_master(tp, drive_id, comm_interval_time, comm_timeout, comm_resend_count, comm_reconnection_time)
+## modbus.create_master(type, drive_id, comm_interval_time, comm_timeout, comm_resend_count, comm_reconnection_time)
 
-创建一个Modbus_Master句柄
+创建一个 Modbus Master 句柄
 
 **参数**
 
