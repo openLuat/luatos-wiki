@@ -29,6 +29,42 @@
 |modbus.SLAVE_ERROR|number|从站错误|
 
 
+## modbus.create_master(tp, drive_id, comm_interval_time, comm_timeout, comm_resend_count, comm_reconnection_time)
+
+创建一个Modbus_Master句柄
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|通讯类型, 例如 modbus.MODBUS_RTU, modbus.MODBUS_ASCII, modbus.MODBUS_TCP|
+|int|通讯驱动id，如果为COM类型，则为uartid，如果为以太网类型，则为adapter_index|
+|int|若协议类型为modbus.MODBUS_TCP，则跳过该参数。若协议类型为modbus.MODBUS_RTU、modbus.MODBUS_ASCII模式，则该参数为串口的波特率，默认9600。|
+|int|通讯间隔时间,单位ms。默认为100ms|
+|int|通讯超时时间,单位ms。默认为1000ms|
+|int|消息发送失败、超时重发次数。默认为1次|
+|int|断线重连时间间隔，单位ms。默认为5000ms（该参数仅对TCP类型的主站生效）|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|userdata|创建成功返回上下文,否则返回nil|
+
+**例子**
+
+```lua
+-- 使用缺省模式创建，modbus模式为RTU，串口ID为1，波特率为9600
+mb_rtu = modbus.create_master(modbus.MODBUS_RTU, uartid, 9600)
+-- 创建Modbus Master 句柄，modbus模式为TCP；设备类型为有线以太网；通讯间隔时间为100ms；通讯超时时间为1000ms；消息发送失败、超时重发次数为1；断线重连时间间隔为5000ms
+mb_tcp = modbus.create_master(modbus.MODBUS_TCP, socket.LWIP_ETH, 100, 1000, 1, 5000)
+
+-- 注意: 用户在调用该接口之前，需要自行初始化对应的硬件端口。RTU、ASCII模式需初始化uart，TCP模式需初始化网络
+
+```
+
+---
+
 ## modbus.set_comm_interval_time(master_handler, time_ms)
 
 设置通讯间隔时间

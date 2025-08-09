@@ -3,12 +3,12 @@
 **示例**
 
 ```lua
--- 基本用法, 10分钟上报一次,如果有的话
+-- 基本用法, 10分钟上报一次,如果有需要上报的数据.
 if errDump then
     errDump.config(true, 600)
 end
 
--- 附开源服务器端: https://gitee.com/openLuat/luatos-devlog
+-- 默认上报到合宙服务器 dev_msg1.openluat.com 端口 12425
 
 ```
 
@@ -20,7 +20,7 @@ end
 
 |传入值类型|解释|
 |-|-|
-|zbuff|日志信息缓存，如果为nil就不会读出，一般当|
+|zbuff|日志信息缓存，如果为nil就不会读出|
 |int|日志类型，目前只有errDump.TYPE_SYS和errDump.TYPE_USR|
 |boolean|是否删除日志|
 
@@ -76,7 +76,7 @@ errDump.record("socket long time no connect") --记录下"socket long time no co
 |boolean|是否启用记录功能，false的话将不会记录任何日志|
 |int|定时上传周期，单位秒，默认600秒，这个是自动上传时候后的重试时间时间，在开机后或者有record操作后会很快尝试上传到合宙IOT平台一次，如果为0，则不会上传，由用户dump后自己上传自己的平台|
 |string|用户的特殊标识，可以为空|
-|string|设备识别号, 4G设备默认是imei,其他设备默认是mcu.unique_id|
+|string|设备识别号, 4G设备默认是imei,wifi设备默认STA的MAC,其他设备默认是mcu.unique_id|
 |string|服务器域名,默认dev_msg1.openluat.com|
 |int|服务器端口,默认|
 
