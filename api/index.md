@@ -95,7 +95,6 @@ sqlite3
 statem
 string
 sys
-sysplus
 timer
 touchkey
 tp

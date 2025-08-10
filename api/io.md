@@ -216,6 +216,32 @@ log.info("fsstat", io.fsstat("/"))
 
 ---
 
+## io.dexist(path)
+
+判断目录是否存在
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|路径|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|存在返回true,否则返回false|
+
+**例子**
+
+```lua
+log.info("io", "dir exists", io.dexist("/abc"))
+-- 注意, 本函数未可用
+
+```
+
+---
+
 ## io.mkfs(path)
 
 格式化文件系统,需指定挂载点

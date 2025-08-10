@@ -92,7 +92,6 @@
 |[statem](statem.md)|`SM状态机`|
 |[string](string.md)|`字符串操作函数`|
 |[sys](sys.md)|`sys库`|
-|[sysplus](sysplus.md)|`sys库的强力补充`|
 |[timer](timer.md)|`操作底层定时器`|
 |[touchkey](touchkey.md)|`触摸按键`|
 |[tp](tp.md)|`触摸库`|
