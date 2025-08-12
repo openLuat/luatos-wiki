@@ -3,8 +3,7 @@
 **示例**
 
 ```lua
--- 本库仅部分模组固件已添加
--- 当前仅支持server模式, client模式未添加
+-- 支持server模式, 也支持client模式
 
 ```
 
@@ -28,10 +27,15 @@
 
 ```lua
 -- 启动server模式, 监听5001端口
+-- 注意, 该网卡必须已经联网成功, 并且有ip地址
 if iperf then
     log.info("启动iperf服务器端")
     iperf.server(socket.LWIP_ETH)
 end
+-- 测试结果回调
+sys.subscribe("IPERF_REPORT", function(bytes, ms_duration, bandwidth)
+    log.info("iperf", bytes, ms_duration, bandwidth)
+end)
 
 ```
 
@@ -58,6 +62,7 @@ end
 
 ```lua
 -- 启动client模式, 连接服务器的5001端口
+-- 注意, 该网卡必须已经联网成功, 并且有ip地址
 if iperf then
     log.info("启动iperf客户端端")
     -- 47.94.236.172 是演示服务器, 不一定有开启

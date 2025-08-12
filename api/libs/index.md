@@ -9,7 +9,7 @@ airlbs
 dhcpsrv
 dnsproxy
 e_chg
-e_netif
+exnetif
 fota_wifi
 httpdns
 httpplus

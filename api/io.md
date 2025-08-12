@@ -224,19 +224,18 @@ log.info("fsstat", io.fsstat("/"))
 
 |传入值类型|解释|
 |-|-|
-|string|路径|
+|string|目录路径|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|boolean|存在返回true,否则返回false|
+|bool|存在返回true,否则返回false|
 
 **例子**
 
 ```lua
-log.info("io", "dir exists", io.dexist("/abc"))
--- 注意, 本函数未可用
+log.info("io", "dir dexist", io.dexist("/boottime"))
 
 ```
 
