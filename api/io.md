@@ -235,7 +235,8 @@ log.info("fsstat", io.fsstat("/"))
 **例子**
 
 ```lua
-log.info("io", "dir dexist", io.dexist("/boottime"))
+-- 本函数于2025.8.12新增
+log.info("io", "dir存在吗?", io.dexist("/sd/myf"))
 
 ```
 
