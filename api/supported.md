@@ -24,6 +24,7 @@
 |[fastlz](fastlz.md)|`FastLZ压缩`|
 |[fatfs](fatfs.md)|`读写fatfs格式`|
 |[fdb](fdb.md)|`kv数据库,掉电不丢数据`|
+|[fft](fft.md)|`快速傅里叶变换（FFT/IFFT），支持 float32 与 q15 定点内核`|
 |[fonts](fonts.md)|`字体库`|
 |[fota](fota.md)|`底层固件升级`|
 |[fskv](fskv.md)|`kv数据库,掉电不丢数据`|

@@ -27,6 +27,7 @@ errDump
 fastlz
 fatfs
 fdb
+fft
 fonts
 fota
 fskv

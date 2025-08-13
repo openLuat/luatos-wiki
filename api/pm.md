@@ -63,10 +63,9 @@ pm.request(pm.IDLE) -- 通过切换不同的值请求进入不同的休眠模式
 |pm.LDO_CTL|number|Air780EXXX的LDO_CTL(老版硬件手册的DAC_EN，同一个PIN，命名变更)，Air780EXXX的LDO_CTL, 注意audio的默认配置会自动使用这个脚来控制CODEC的使能|
 |pm.PWK_MODE|number|是否Air780EXXX的powerkey滤波模式，true开，注意滤波模式下reset变成直接关机|
 |pm.WORK_MODE|number|Air780EXXX的节能模式，0~3，0完全关闭，1~2普通低功耗，3超低功耗，深度休眠|
-|pm.IOVL|number|所有GPIO高电平电压控制,当前仅Air780EXXX可用|
-|pm.IOVL|number|VMMC电压域IO|
-|pm.IOVL|number|VLCD电压域IO|
-|pm.IOVL|number|WPA输出电压|
+|pm.IOVOL_ALL_GPIO|number|所有GPIO高电平电压控制,当前仅Air780EXXX可用|
+|pm.IOVOL_SDIO|number|VMMC电压域IO|
+|pm.IOVOL_LCD|number|VLCD电压域IO|
 |pm.ID_NATIVE|number|PM控制的ID, 主芯片, 任意芯片的默认值就是它|
 |pm.ID_WIFI|number|PM控制的ID, WIFI芯片, 仅Air8000可用|
 |pm.WIFI_STA_DTIM|number|wifi芯片控制STA模式下的DTIM间隔,单位100ms,默认值是1|

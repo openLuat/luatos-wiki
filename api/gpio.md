@@ -266,7 +266,7 @@ end, 500)
 
 ## gpio.pulse(pin,level,len,delay)
 
-在同一个GPIO输出一组脉冲, 注意, len的单位是bit, 高位在前，高低电平时间均是由delay决定
+在同一个GPIO输出一组脉冲, 注意, len的单位是bit, 高位在前，高低电平时间均是由delay决定。本API是阻塞操作，不可以一次性输出太多的脉冲！！！
 
 **参数**
 
