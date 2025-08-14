@@ -399,7 +399,7 @@ ble_device:scan_stop()
 
 ---
 
-## ble.connect()
+## ble.connect(mac, addr_type)
 
 BLE连接
 

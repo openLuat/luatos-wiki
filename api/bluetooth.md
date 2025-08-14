@@ -132,3 +132,27 @@ ble_device = bluetooth_device:ble(ble_event_cb)
 
 ---
 
+## bluetooth.getMac()
+
+获取蓝牙MAC
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|当前的MAC|
+
+**例子**
+
+```lua
+local mac = bluetooth.getMac()
+log.info("bluetooth mac", mac:toHex())
+
+```
+
+---
+

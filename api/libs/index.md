@@ -9,8 +9,8 @@ airlbs
 dhcpsrv
 dnsproxy
 exchg
+exfotawifi
 exnetif
-fota_wifi
 httpdns
 httpplus
 lbsLoc
