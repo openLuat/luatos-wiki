@@ -443,8 +443,8 @@ local result = audio.vol(0, 90)    --通道0的音量调节到90%，result存放
 |传入值类型|解释|
 |-|-|
 |int|音频通道,例如0|
-|int|总线类型, 例如 audio.BUS_SOFT_DAC|
-|int|硬件id, 例如 总线类型为audio.BUS_I2S时,硬件id即为i2s codec的i2c id|
+|int|总线类型, 例如 audio.BUS_SOFT_DAC, audio.BUS_I2S|
+|table|codec配置参数, 当总线类型为audio.BUS_I2S时生效,table中包括以下字段: <br>chip codec型号,当前支持"es8311"<br>i2cid codec的硬件i2c id<br>i2sid codec的硬件i2s id<br>voltage i2cid codec的初始voltage|
 
 **返回值**
 
