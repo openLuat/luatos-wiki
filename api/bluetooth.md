@@ -132,7 +132,7 @@ ble_device = bluetooth_device:ble(ble_event_cb)
 
 ---
 
-## bluetooth.getMac()
+## bluetooth.mac()
 
 获取蓝牙MAC
 
@@ -149,8 +149,9 @@ ble_device = bluetooth_device:ble(ble_event_cb)
 **例子**
 
 ```lua
-local mac = bluetooth.getMac()
-log.info("bluetooth mac", mac:toHex())
+-- 本函数于2025.8.14新增
+local mac = bluetooth.mac()
+log.info("bluetooth mac", mac and mac:toHex())
 
 ```
 
