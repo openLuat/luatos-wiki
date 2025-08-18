@@ -249,34 +249,6 @@ local succ = mobile.simPin(0, mobile.PIN_VERIFY, "1234")    -- 输入pin码验�
 
 ---
 
-## mobile.rtime(time, auto_reset_stack, data_first)
-
-设置RRC自动释放时间间隔，当开启时后，遇到极弱信号+频繁数据操作可能会引起网络严重故障，因此需要额外设置自动重启协议栈
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|RRC自动释放时间，等同于Air724的AT+RTIME，单位秒，写0或者不写则是停用，不要超过20秒，没有意义|
-|boolean|网络遇到严重故障时尝试自动恢复，和飞行模式/SIM卡切换冲突，true开启，false关闭，留空时，如果设置了时间则自动开启。本参数于2023年9月14日已废弃|
-|boolean|是否启用数据传输优化，true启用，false关闭，留空为false，开启后必须等到TCP数据ACK或者超时失败，或者socket CONNECT完成（无论成功或者失败）才允许RRC提前释放，可能会增加功耗。本参数于2024年8月12日启用|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|nil|无返回值|
-
-**例子**
-
-```lua
-mobile.rtime(3)    --与基站无数据交互3秒后提前释放RRC
-mobile.rtime(3,nil,true) --启用数据传输优化，与基站无数据交互3秒后，提前释放RRC
-
-```
-
----
-
 ## mobile.setAuto(check_sim_period, get_cell_period, search_cell_time, auto_reset_stack, network_check_period)
 
 设置一些辅助周期性或者自动功能，目前支持SIM卡暂时脱离后恢复，周期性获取小区信息，网络遇到严重故障时尝试自动恢复
@@ -884,6 +856,11 @@ mobile.config(mobile.CONF_SIM_WC_MODE, 3)
 ```lua
 local buff = zbuff.create(40)
 mobile.getBand(buff) --输出当前使用的band，band号放在buff内，buff[0]，buff[1]，buff[2] .. buff[buff:used() - 1]
+log.info("当前使用的band:")
+--轮训方式打印所用band
+for i=0,band:used()-1 do
+    log.info("band", band[i])
+end
 
 ```
 
