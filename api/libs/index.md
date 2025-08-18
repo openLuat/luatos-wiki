@@ -10,7 +10,9 @@ dhcpsrv
 dnsproxy
 exchg
 exfotawifi
+exgnss
 exnetif
+exvib
 httpdns
 httpplus
 lbsLoc
