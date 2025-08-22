@@ -21,7 +21,8 @@
 |modbus.READ|number|操作类型，读操作|
 |modbus.WRITE|number|操作类型，写操作|
 |modbus.LOOP|number|通讯模式，自动通讯|
-|modbus.LOOP|number|通讯模式，手动通讯|
+|modbus.EXEC|number|通讯模式，手动通讯|
+|modbus.SINGLE|number|通讯模式，单次通讯，通讯成功即删除|
 |modbus.SLAVE_NORMAL|number|从站状态正常|
 |modbus.SLAVE_OFFLINE|number|从站通讯离线|
 |modbus.SLAVE_UNKNOWN|number|从站状态未知|
@@ -376,7 +377,7 @@ modbus.get_slave_state(slave)
 |int|寄存器数量，最大120|
 |userdata|用户数据缓冲区，通过zbuff.create获取到的上下文|
 |int|通讯周期，默认值1|
-|int|通讯模式，取 modbus.LOOP（自动执行模式）、modbus.EXEC（手动执行模式），默认值为modbus.LOOP|
+|int|通讯模式，取 modbus.LOOP（自动执行模式）、modbus.EXEC（手动执行模式）、modbus.SINGLE（单次模式，通讯成功即释放句柄），默认值为modbus.LOOP|
 
 **返回值**
 
@@ -393,6 +394,36 @@ msg = modbus.create_msg(mb_rtu, slave, modbus.REGISTERS, modbus.READ, 0, 10, zbu
 
 --缺省的写法
 msg = modbus.create_msg(mb_rtu, slave, modbus.REGISTERS, modbus.READ, 0, 10, zbuf)
+
+```
+
+---
+
+## modbus.remove_msg(master_handler, slave_handler, msg_handler)
+
+删除从站消息
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|主站句柄，由modbus.create_master创建|
+|userdata|从站句柄，由modbus.add_slave创建|
+|userdata|消息句柄，由modbus.create_msg创建，默认值为空。若该值为空，则删除指定从站的所有消息；若该值不为空，则删除指定的1条消息|
+|return|无|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+ -- 删除从站的所有消息
+ modbus.remove_msg(master_handler, slave_handler)
+
+  -- 删除从站的指定消息
+ modbus.remove_msg(master_handler, slave_handler, msg_handler)
 
 ```
 
