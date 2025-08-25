@@ -268,3 +268,39 @@ netdrv.debug(0, true)
 
 ---
 
+## netdrv.mreport(config, value)
+
+设置遥测功能（还未实现全部功能）
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|配置项|
+|boolean|设置功能开关|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功与否|
+
+**例子**
+
+```lua
+-- 设置开启与关闭
+netdrv.mreport("enable", true)
+netdrv.mreport("enable", false)
+
+-- 立即上报一次, 无参数的方式调用
+netdrv.mreport()
+
+-- 设置自定义数据
+netdrv.mreport("custom", {abc=1234})
+-- 清除自定义数据
+netdrv.mreport("custom")
+
+```
+
+---
+
