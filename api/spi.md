@@ -107,7 +107,7 @@ local result = spi.send(softSpiDevice, string.char(0x9f))
 **例子**
 
 ```lua
--- 初始化spi
+-- 关闭spi0
 spi.close(0)
 
 ```

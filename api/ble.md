@@ -290,9 +290,9 @@ ble_device:read_value({
 
 ---
 
-## ble.notify_enable(opts, value)
+## ble.notify_enable(opts, enable)
 
-开关监听
+开关通知监听
 
 **参数**
 
@@ -312,6 +312,36 @@ ble_device:read_value({
 ```lua
 -- 写入特征值,填充预设值,被动读取
 ble_device:notify_enable({
+    uuid_service = "FA00", -- 服务的UUID, 可以是16位、32位或128位
+    uuid_characteristic = "EA01", -- 特征的UUID值, 可以是16位、32位或128位
+}, true) -- 开/关
+
+```
+
+---
+
+## ble.indicate_enable(opts, enable)
+
+开关指示监听
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|table|特征值的描述信息|
+|boolean|enable 开/关 可选,默认开|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|是否成功|
+
+**例子**
+
+```lua
+-- 写入特征值,填充预设值,被动读取
+ble_device:indicate_enable({
     uuid_service = "FA00", -- 服务的UUID, 可以是16位、32位或128位
     uuid_characteristic = "EA01", -- 特征的UUID值, 可以是16位、32位或128位
 }, true) -- 开/关
