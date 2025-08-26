@@ -30,6 +30,7 @@
 **例子**
 
 ```lua
+多网优先级模式：
 exnetif.set_priority_order({
     { -- 最高优先级网络
         WIFI = { -- WiFi配置
@@ -78,6 +79,28 @@ exnetif.set_priority_order({
         LWIP_GP = true  -- 启用4G网络
     }
 })
+单网络模式：
+-- 单网络模式下只使用WIFI网络
+    exnetif.set_priority_order({
+        { -- 单网络，打开wifi
+            WIFI = { -- WiFi配置
+                ssid = "test",       -- WiFi名称(string)
+                password = "HZ88888888",    -- WiFi密码(string)
+                single_network = true,    -- 是否单网络模式, 默认false, 单网络模式下只使用WIFI网络
+            }
+        }
+    })
+-- 单网络模式下只使用以太网网络
+    exnetif.set_priority_order({
+        {
+            ETHERNET = { -- 以太网配置
+                pwrpin = 140, -- 供电使能引脚(number)
+                tp = netdrv.CH390, -- 网卡芯片型号(选填参数)，仅spi方式外挂以太网时需要填写。
+                opts = {spi = 1, cs = 12}, -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。
+                single_network = true -- 是否单网络模式, 默认false, 单网络模式下只使用以太网
+            }
+        }
+    })
 
 ```
 
