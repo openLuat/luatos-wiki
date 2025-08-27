@@ -21,7 +21,7 @@ sm2算法加密
 |string|公钥y,必选. HEX字符串|
 |string|待计算的数据,必选,最长32字节, 非HEX字符串|
 |boolean|输出模式,默认false. false-GMSSL默认格式DER, true-网站兼容模式|
-|boolean|标准版本,默认false. false-C1C3C2新国际, true-C1C2C3老国际|
+|boolean|标准版本,默认false. false-C1C3C2新国际, true-C1C2C3老国际. 仅"网站兼容模式"时有效|
 
 **返回值**
 
@@ -248,6 +248,43 @@ sm2算法验签
 ```lua
 -- 本API于 2023.10.19 新增
 -- 具体用法请查阅demo
+
+```
+
+---
+
+## sm.sm2keygen()
+
+SM2密钥生成
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|公钥X, HEX字符串|
+|string|公钥Y, HEX字符串|
+|string|私钥, HEX字符串|
+
+**例子**
+
+```lua
+-- 本函数于2025.8.27新增
+-- 注意返回值是HEX字符串, 传递给sm2系列函数可以直接使用
+-- 如果传递给服务器, 按格式需要, 可能需要 fromHex 操作
+local pkx, pky, private = gmssl.sm2keygen()
+local originStr = "32wrniosadnfvnadsio;fasiow"
+local encodeStr = gmssl.sm2encrypt(pkx,pky,originStr)
+log.info("sm2默认模式", "加密后", encodeStr and  string.toHex(encodeStr))
+if encodeStr then
+    log.info("sm2默认模式", "解密后", gmssl.sm2decrypt(private,encodeStr))
+end
+
+-- 提醒, 生成的密钥对请妥善保管
+-- 一定要看 gmssl.sm2encrypt 的文档和demo
 
 ```
 
