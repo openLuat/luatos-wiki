@@ -122,8 +122,8 @@ gpio.setup(18, 0, nil, nil, 4)
 **例子**
 
 ```lua
--- 捕获pin.PA07为高电平的持续时间
-gpio.caplevel(pin.PA07,1,function(us_int) print(us_float) end)
+-- 捕获GPIO7为高电平的持续时间
+gpio.caplevel(7,1,function(us_int) print(us_float) end)
 
 ```
 
@@ -149,6 +149,8 @@ gpio.caplevel(pin.PA07,1,function(us_int) print(us_float) end)
 **例子**
 
 ```lua
+-- 注意!!! 仅输出状态下,这个函数才有效
+-- 一定要先gpio.setup, 起码执行过一次gpio.setup, 才能使用本函数. 但不需要每次都gpio.setup
 -- 设置gpio17为低电平
 gpio.set(17, 0)
 
@@ -175,8 +177,11 @@ gpio.set(17, 0)
 **例子**
 
 ```lua
+-- 注意!!! 仅输入模式或者中断模式状态下,这个函数才有效
+-- 一定要先gpio.setup, 起码执行过一次gpio.setup, 才能使用本函数. 但不需要每次都gpio.setup
 -- 获取gpio17的当前电平
-gpio.get(17)
+local value = gpio.get(17)
+log.info("gpio", "GPIO17:", value)
 
 ```
 
@@ -184,7 +189,7 @@ gpio.get(17)
 
 ## gpio.close(pin)
 
-关闭管脚功能(高阻输入态),关掉中断
+关闭管脚功能(恢复高阻输入态),关掉中断
 
 **参数**
 
@@ -255,6 +260,7 @@ gpio.setDefaultPull(1)
 ```lua
 -- 本API于 2022.05.17 添加
 -- 假设GPIO16上有LED, 每500ms切换一次开关
+-- 注意!!! 仅输出状态下,这个函数才有效
 gpio.setup(16, 0)
 sys.timerLoopStart(function()
     gpio.toggle(16)
@@ -266,7 +272,7 @@ end, 500)
 
 ## gpio.pulse(pin,level,len,delay)
 
-在同一个GPIO输出一组脉冲, 注意, len的单位是bit, 高位在前，高低电平时间均是由delay决定。本API是阻塞操作，不可以一次性输出太多的脉冲！！！
+在同一个GPIO输出一组脉冲
 
 **参数**
 
@@ -286,8 +292,10 @@ end, 500)
 **例子**
 
 ```lua
--- 通过PB06脚输出输出8个电平变化，while循环次数是0
-gpio.pulse(pin.PB06,0xA9, 8, 0)
+-- 注意, len的单位是bit, 高位在前，高低电平时间均是由delay决定。
+-- 本API是阻塞操作，不可以一次性输出太多的脉冲！！！ 否则会死机!!!
+-- 通过GPIO1脚输出输出8个电平变化，while循环次数是0
+gpio.pulse(1,0xA9, 8, 0)
 
 ```
 
@@ -319,7 +327,7 @@ gpio.pulse(pin.PB06,0xA9, 8, 0)
 -- 1 触发中断后,延迟N个毫秒,期间没有新中断且电平没有变化,上报一次
 
 -- 开启防抖, 模式0-冷却, 中断后马上上报, 但100ms内只上报一次
-gpio.debounce(7, 100) -- 若芯片支持pin库, 可用pin.PA7代替数字7
+gpio.debounce(7, 100) -- 对应GPIO7
 -- 开启防抖, 模式1-延时, 中断后等待100ms,期间若保持该电平了,时间到之后上报一次
 -- 对应的,如果输入的是一个 50hz的方波,那么不会触发任何上报
 gpio.debounce(7, 100, 1)
@@ -333,7 +341,7 @@ gpio.debounce(7, 0)
 
 ## gpio.count(pin)
 
-获取gpio中断数量，并清空累计值，类似air724的脉冲计数
+获取gpio中断数量，并清空累计值
 
 **参数**
 
