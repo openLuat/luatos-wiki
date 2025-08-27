@@ -93,6 +93,34 @@ end)
 
 ---
 
+## pm 
+
+
+
+[pm 接口文档页](https://wiki.luatos.com/api/pm .html)
+
+
+
+### YHM27XX_REG
+
+YHM27XX芯片寄存器信息更新回调
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.subscribe("YHM27XX_REG", function(data)
+    -- 注意, 会一次性读出0-9,总共8个寄存器值
+    log.info("yhm27xx", data and data:toHex())
+end)
+
+```
+
+---
+
 ## touchkey
 
 

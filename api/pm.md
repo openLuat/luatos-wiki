@@ -440,3 +440,65 @@ pm.wakeupPin(8, gpio.RISING)
 
 ---
 
+## pm.chgcmd(pin, chip_id, reg, data)
+
+单总线命令读写YHM27XX
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|yhm27xx_CMD引脚(可选,若传入nil则根据模组型号自动选择)|
+|int|芯片ID|
+|int|读写寄存器地址|
+|int|要写入的数据，如果没填，则表示从寄存器读取数据|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,失败返回false|
+|int|读取成功返回寄存器值，写入成功无返回|
+
+**例子**
+
+```lua
+-- 读取寄存器0x01的值
+local ret = pm.chgcmd(pin, chip_id, 0x01)
+-- 写入寄存器0x01的值为0x55
+local ret = pm.chgcmd(pin, chip_id, 0x01, 0x55)
+
+```
+
+---
+
+## pm.chginfo(pin, chip_id)
+
+获取最新的寄存器信息(异步)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|yhm27xx_CMD引脚(可选,若传入nil则根据模组型号自动选择)|
+|int|芯片ID|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+sys.subscribe("YHM27XX_REG", function(data)
+    -- 注意, 会一次性读出0-9,总共8个寄存器值
+    log.info("yhm27xx", data and data:toHex())
+end)
+yhm27xx.reqinfo(24, 0x04)
+
+```
+
+---
+
