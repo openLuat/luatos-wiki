@@ -125,7 +125,7 @@ audio.recordStop(0)
 
 |传入值类型|解释|
 |-|-|
-|string|or zbuff 音频数据|
+|string/zbuff|音频数据|
 
 **返回值**
 
