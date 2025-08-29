@@ -716,7 +716,7 @@ log.info("当前默认适配器编号", id, "最后一个注册的适配器编�
 
 ---
 
-## socket.sntp(sntp_server)
+## socket.sntp(sntp_server, adapter)
 
 sntp时间同步
 
