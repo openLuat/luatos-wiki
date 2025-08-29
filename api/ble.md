@@ -513,3 +513,28 @@ end
 
 ---
 
+## ble.mac()
+
+获取蓝牙MAC
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|当前的MAC|
+
+**例子**
+
+```lua
+-- 本函数于2025.8.29新增
+local mac = ble.mac()
+log.info("ble mac", mac and mac:toHex())
+
+```
+
+---
+

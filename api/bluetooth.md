@@ -132,28 +132,3 @@ ble_device = bluetooth_device:ble(ble_event_cb)
 
 ---
 
-## bluetooth.mac()
-
-获取蓝牙MAC
-
-**参数**
-
-无
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|string|当前的MAC|
-
-**例子**
-
-```lua
--- 本函数于2025.8.14新增
-local mac = bluetooth.mac()
-log.info("bluetooth mac", mac and mac:toHex())
-
-```
-
----
-
