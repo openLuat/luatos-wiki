@@ -19,7 +19,8 @@
 |modbus.INPUT_REGISTERS|number|输入寄存器|
 |modbus.REGISTERS|number|保持寄存器|
 |modbus.READ|number|操作类型，读操作|
-|modbus.WRITE|number|操作类型，写操作|
+|modbus.WRITE|number|操作类型，写多个寄存器|
+|modbus.WRITE_SINGLE|number|操作类型，写单个寄存器|
 |modbus.LOOP|number|通讯模式，自动通讯|
 |modbus.EXEC|number|通讯模式，手动通讯|
 |modbus.SINGLE|number|通讯模式，单次通讯，通讯成功即删除|
@@ -372,7 +373,7 @@ modbus.get_slave_state(slave)
 |userdata|通过modbus.create_master获取到的上下文|
 |userdata|通过modbus.add_slave获取到的上下文|
 |int|寄存器类型，modbus.CIOLS（线圈）、modbus.INPUTS（触点）、modbus.INPUT_REGISTERS（输入寄存器）、modbus.REGISTERS（保持寄存器）|
-|int|操作类型，modbus.READ（读寄存器）、modbus.WRITE（写寄存器）|
+|int|操作类型，modbus.READ（读寄存器）、modbus.WRITE（写多个寄存器）、modbus.WRITE_SINGLE（写单个寄存器），若此参数为modbus.WRITE_SINGLE类型，则reg_len参数总为1|
 |int|寄存器地址，0-65535|
 |int|寄存器数量，最大120|
 |userdata|用户数据缓冲区，通过zbuff.create获取到的上下文|
