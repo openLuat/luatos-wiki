@@ -1,6 +1,6 @@
 # ftp - ftp 客户端
 
-## ftp.login(adapter,ip_addr,port,username,password, use_ssl)
+## ftp.login(adapter,ip_addr,port,username,password)
 
 FTP客户端
 
@@ -13,7 +13,6 @@ FTP客户端
 |string|port 端口,默认21|
 |string|username 用户名,默认空|
 |string|password 密码, 默认空|
-|bool/table|是否为ssl加密连接,默认不加密,true为无证书最简单的加密|
 
 **返回值**
 
