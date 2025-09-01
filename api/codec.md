@@ -10,6 +10,8 @@
 |codec.AMR_WB|number|AMR-WB格式|
 |codec.VDDA_3V3|number|codec 电压: 3.3V|
 |codec.VDDA_1V8|number|codec 电压: 1.8V|
+|codec.ULAW|number|G711 μ-law格式|
+|codec.ALAW|number|G711 A-law格式|
 
 
 ## codec.create(type, isDecoder, quality)
