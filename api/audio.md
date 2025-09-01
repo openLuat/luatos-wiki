@@ -375,8 +375,8 @@ local result, user_stop, file_no = audio.getError(0)
 **例子**
 
 ```lua
-audio.config(0, pin.PC0, 1)    --PA控制脚是PC0，高电平打开，air105用这个配置就可以用了
-audio.config(0, 25, 1, 6, 200)    --PA控制脚是GPIO25，高电平打开，Air780E云喇叭板用这个配置就可以用了
+--下面的配置是Air780E云喇叭板的配置
+audio.config(0, 25, 1, 6, 200)    --PA控制脚是GPIO25，高电平打开
 
 ```
 

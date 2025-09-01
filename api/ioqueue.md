@@ -96,8 +96,8 @@ ioqueue.delay(0)
 **例子**
 
 ```lua
-ioqueue.setgpio(0,pin.PB01,true,gpio.PULLUP,0) --PB01设置成上拉输入
-ioqueue.setgpio(0,pin.PB01,false,0,1)--PB01设置成默认上下拉输出高电平
+ioqueue.setgpio(0,17,true,gpio.PULLUP,0) --GPIO17设置成上拉输入
+ioqueue.setgpio(0,17,false,0,1)--GPIO17设置成默认上下拉输出高电平
 
 ```
 
@@ -122,7 +122,8 @@ ioqueue.setgpio(0,pin.PB01,false,0,1)--PB01设置成默认上下拉输出高电�
 **例子**
 
 ```lua
-ioqueue.input(0,pin.PB01)
+--- 对GPIO17进行输入读取
+ioqueue.input(0, 17)
 
 
 ```
@@ -149,7 +150,8 @@ ioqueue.input(0,pin.PB01)
 **例子**
 
 ```lua
-ioqueue.output(0,pin.PB01,0)
+-- 对GPIO17输出低电平
+ioqueue.output(0, 17, 0)
 
 ```
 
@@ -177,7 +179,8 @@ ioqueue.output(0,pin.PB01,0)
 **例子**
 
 ```lua
-ioqueue.setcap(0,pin.PB01,gpio.PULLUP,gpio.FALLING,48000000)
+-- 捕获指令
+ioqueue.setcap(0, 17, gpio.PULLUP, gpio.FALLING, 48000000)
 
 ```
 
@@ -226,7 +229,8 @@ ioqueue.capture(0)
 **例子**
 
 ```lua
-ioqueue.capend(0,pin.PB01)
+-- 结束捕获
+ioqueue.capend(0, 17)
 
 ```
 
@@ -404,8 +408,9 @@ local result = ioqueue.done(0)
 **例子**
 
 ```lua
-ioqueue.exti(pin.PB01, gpio.PULLUP, gpio.BOTH, true)
-ioqueue.exti(pin.PB01)
+-- 对GPIO17进行外部中断捕获
+ioqueue.exti(17, gpio.PULLUP, gpio.BOTH, true)
+ioqueue.exti(17)
 
 ```
 
