@@ -11,6 +11,26 @@
 
 ```
 
+## exnetif.check_network_status(interval),
+
+对正常状态的网卡进行ping测试
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|检测间隔时间ms(选填)，不填时只检测一次，填写后将根据间隔时间循环检测，会提高模块功耗|
+
+**返回值**
+
+无
+
+**例子**
+
+无
+
+---
+
 ## exnetif.set_priority_order(new_priority)
 
 设置网络优先级，相应网卡获取到ip且网络正常视为网卡可用，丢失ip视为网卡不可用.(需要在task中调用)
@@ -86,21 +106,28 @@ exnetif.set_priority_order({
             WIFI = { -- WiFi配置
                 ssid = "test",       -- WiFi名称(string)
                 password = "HZ88888888",    -- WiFi密码(string)
-                single_network = true,    -- 是否单网络模式, 默认false, 单网络模式下只使用WIFI网络
             }
         }
     })
--- 单网络模式下只使用以太网网络
+-- 单网络模式下只使用SPI以太网网络
     exnetif.set_priority_order({
         {
             ETHERNET = { -- 以太网配置
                 pwrpin = 140, -- 供电使能引脚(number)
                 tp = netdrv.CH390, -- 网卡芯片型号(选填参数)，仅spi方式外挂以太网时需要填写。
                 opts = {spi = 1, cs = 12}, -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。
-                single_network = true -- 是否单网络模式, 默认false, 单网络模式下只使用以太网
             }
         }
     })
+-- 单网络模式下只使用RMII以太网网络
+    exnetif.set_priority_order({
+        {
+            ETHERNET = { -- 以太网配置
+                pwrpin = 13, -- 供电使能引脚(number)
+            }
+        }
+    })
+-- 单网络4G时不需要调用接口，直接运行业务代码即可
 
 ```
 
@@ -150,8 +177,32 @@ exnetif.set_priority_order({
 **例子**
 
 ```lua
-    --典型应用：
-    -- 4G作为出口供WiFi和以太网设备上网
+    典型应用：
+    -- 以太网WAN提供网络其他设备连接以太网LAN口上网
+    exnetif.setproxy(socket.LWIP_ETH, socket.LWIP_USER1, {
+            ethpower_en = 20,-- 以太网模块的pwrpin引脚(gpio编号)
+            tp = netdrv.CH390, -- 网卡芯片型号(选填参数)，仅spi方式外挂以太网时需要填写。
+            opts = {spi = 0, cs = 8}, -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。
+            main_adapter = {
+                ethpower_en = 21,-- 以太网模块的pwrpin引脚(gpio编号)
+                tp = netdrv.CH390, -- 网卡芯片型号(选填参数)，仅spi方式外挂以太网时需要填写。
+                opts = {spi = 1, cs = 12}
+            }
+        }) then
+    -- wifi_sta提供网络开启wifi_ap热点供设备上网
+    exnetif.setproxy(socket.LWIP_AP, socket.LWIP_STA, {
+            ssid = "test2",                  -- AP热点名称(string)，网卡包含wifi时填写
+            password = "HZ88888888",         -- AP热点密码(string)，网卡包含wifi时填写
+            ap_opts = {                      -- AP模式下配置项(选填参数)
+                hidden = false,              -- 是否隐藏SSID, 默认false,不隐藏
+                max_conn = 4 },              -- 最大客户端数量, 默认4
+            channel = 6,                     -- AP建立的通道, 默认6
+            main_adapter = {
+                ssid = "test",                -- 提供网络的网卡开启参数
+                password = "HZ88888888"
+            }
+        })
+    -- 4G提供网络开启wifi_ap热点供设备上网,其他设备连接以太网LAN口上网
     exnetif.setproxy(socket.LWIP_AP, socket.LWIP_GP, {
         ssid = "Hotspot",                -- WiFi名称(string)，网卡包含wifi时填写
         password = "password123",        -- WiFi密码(string)，网卡包含wifi时填写
@@ -169,42 +220,28 @@ exnetif.set_priority_order({
         adapter_addr = "192.168.5.1",    -- adapter网卡的ip地址(选填),需要自定义ip和网关ip时填写
         adapter_gw= { 192, 168, 5, 1 },   -- adapter网卡的网关地址(选填),需要自定义ip和网关ip时填写
     })
-    -- 以太网作为出口供WiFi设备上网
+    -- 以太网提供网络供WiFi设备上网
     exnetif.setproxy(socket.LWIP_AP, socket.LWIP_ETH, {
         ssid = "Hotspot",                -- WiFi名称(string)，网卡包含wifi时填写
         password = "password123",        -- WiFi密码(string)，网卡包含wifi时填写
-        tp = netdrv.CH390,               -- 网卡芯片型号(选填参数)，仅spi方式外挂以太网时需要填写。
-        opts = { spi = 1, cs = 12},      -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。
-        ethpower_en = 140,               -- 以太网模块的pwrpin引脚(gpio编号)
+        main_adapter={
+            tp = netdrv.CH390,               -- 网卡芯片型号(选填参数)，仅spi方式外挂以太网时需要填写。
+            opts = { spi = 1, cs = 12},      -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。
+            ethpower_en = 140,               -- 以太网模块的pwrpin引脚(gpio编号)
+        }
     })
-    -- 4G作为出口供以太网设备上网
-    exnetif.setproxy(socket.LWIP_ETH, socket.LWIP_GP, {
+    -- WIFI提供网络供以太网设备上网
+    exnetif.setproxy(socket.LWIP_ETH, socket.LWIP_STA, {
         tp = netdrv.CH390,               -- 网卡芯片型号(选填参数)，仅spi方式外挂以太网时需要填写。
         opts = { spi = 1, cs = 12},      -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。
         ethpower_en = 140,               -- 以太网模块的pwrpin引脚(gpio编号)
+        main_adapter = {
+            ssid = "test",                -- 提供网络的网卡开启参数
+            password = "HZ88888888"
+        }
     })
 
 ```
-
----
-
-## exnetif.check_network_status(interval),
-
-对正常状态的网卡进行ping测试
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|检测间隔时间ms(选填)，不填时只检测一次，填写后将根据间隔时间循环检测，会提高模块功耗|
-
-**返回值**
-
-无
-
-**例子**
-
-无
 
 ---
 
