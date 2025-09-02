@@ -304,3 +304,44 @@ netdrv.mreport("custom")
 
 ---
 
+## netdrv.ping(id, ip, len)
+
+发起ping(异步的)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|网络适配器的id|
+|string|目标ip地址,不支持域名!!|
+|int|ping包大小,默认128字节,可以不传|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功与否, 仅代表发送与否,不代表服务器已经响应|
+
+**例子**
+
+```lua
+sys.taskInit(function()
+    -- 要等联网了才能ping
+    sys.waitUntil("IP_READY")
+    sys.wait(1000)
+    while 1 do
+        -- 必须指定使用哪个网卡
+        netdrv.ping(socket.LWIP_GP, "121.14.77.221")
+        sys.waitUntil("PING_RESULT", 3000)
+        sys.wait(3000)
+    end
+end)
+
+sys.subscribe("PING_RESULT", function(id, time, dst)
+    log.info("ping", id, time, dst);
+end)
+
+```
+
+---
+
