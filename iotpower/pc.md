@@ -2,28 +2,14 @@
 
 ## 下载
 
-- 微软商店下载：[微软商店页面](https://www.microsoft.com/store/apps/9N8S8M8226SH)
-- 独立版exe版本：[IoT Power.exe](https://arduino.luatos.com/iotpower/latest.html)（注意微软/360杀软误报，火绒无问题）
+- 微软商店下载(推荐)：[微软商店页面](https://www.microsoft.com/store/apps/9N8S8M8226SH)
+- 独立版exe版本, 请使用LuaTools的资源下载功能进行下载.
 
-<h1 id="win7-notice" style="display: none;">Win7 用户看下面这行！展开！！</h1>
-
-:::{dropdown} win7用户可能需要
-（win10以上免驱，无需手动安装驱动）
-
-IoT Power V1 CP2102驱动：[CP210x_Windows_Drivers](https://www.silabs.com/documents/public/software/CP210x_Windows_Drivers.zip)
-
-IoT Power Pro 驱动：[IoTPowerPro-Driver.7z](https://arduino.luatos.com/iotpower/IoTPowerPro-Driver.7z)
-
-IoT Power CC 驱动：[IoTPower_CC_usb_driver.7z](https://arduino.luatos.com/iotpower/IoTPower_CC_usb_driver.7z)
+不支持 Win7 !!
 
 .net framework 4.6.2：[安装包](https://dotnet.microsoft.com/zh-cn/download/dotnet-framework/thank-you/net462-offline-installer)
 :::
 
-:::{dropdown} 命令行数据记录器
-
-![IoTPower CLI Tool](img/cli_tool.png)
-
-下载：[IoTPower CLI Tool](https://gitee.com/openLuat/iot-power/releases/tag/1.0.0)
 :::
 
 ## 客户端简介
