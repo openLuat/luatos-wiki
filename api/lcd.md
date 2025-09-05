@@ -305,7 +305,7 @@ lcd.setColor(0xFFFF,0x0000)
 
 ## lcd.reset(level)
 
-控制lcd reset pin拉高或者拉低
+控制lcd reset pin拉高或者拉低,2025/9/5启用
 
 **参数**
 
