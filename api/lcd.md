@@ -303,6 +303,30 @@ lcd.setColor(0xFFFF,0x0000)
 
 ---
 
+## lcd.reset(level)
+
+控制lcd reset pin拉高或者拉低
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|reset脚电平，1高电平，0低电平|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- lcd reset脚高电平
+lcd.reset(1)
+
+```
+
+---
+
 ## lcd.draw(x1, y1, x2, y2,color)
 
 lcd颜色填充

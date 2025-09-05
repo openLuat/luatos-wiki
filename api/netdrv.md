@@ -325,6 +325,7 @@ netdrv.mreport("custom")
 **例子**
 
 ```lua
+-- 本功能在2025.9.3新增
 sys.taskInit(function()
     -- 要等联网了才能ping
     sys.waitUntil("IP_READY")
