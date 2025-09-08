@@ -7,7 +7,9 @@ align: center
 **欢迎来到LuatOS**
 
 LuatOS 是针对物联网智能硬件的一款开发框架，和游戏引擎的作用机制类似，采用 Lua 5.3 语言开发嵌入式软件，极大提升了嵌入式软件的稳定性，以及运行效率。
-更详细的开发资料，请查看文档中心：   https://docs.openluat.com
+更详细的开发资料，请查看文档中心：   
+
+[https://docs.openluat.com](https://docs.openluat.com)
 
 
 ```{toctree}
