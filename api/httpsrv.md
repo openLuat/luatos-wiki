@@ -50,7 +50,7 @@ end)
 
 ---
 
-## httpsrv.stop(port)
+## httpsrv.stop(port，no_used, adapter)
 
 停止http服务
 
@@ -59,16 +59,21 @@ end)
 |传入值类型|解释|
 |-|-|
 |int|端口号|
+|nil|固定写nil|
+|int|网络适配器编号, 默认是平台自带的网络协议栈|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|nil|当前无返回值|
+|bool|成功返回true, 否则返回false|
 
 **例子**
 
-无
+```lua
+httpsrv.stop(SERVER_PORT,nil,socket.LWIP_AP)
+
+```
 
 ---
 
