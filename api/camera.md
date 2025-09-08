@@ -349,3 +349,53 @@ camera.config(0, camera.CONF_H264_PMB_BITS, 1)
 
 ---
 
+## camera.pwdn_pin(level)
+
+对于无法用GPIO控制camera pwdn脚的平台，手动控制camera pwdn脚拉高或者拉低,2025/9/6启用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|camera id,例如0|
+|int|pwdn脚电平，1高电平，0低电平|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- camera pwdn脚低电平
+camera.pwdn_pin(camera_id, 0)
+
+```
+
+---
+
+## camera.reset_pin(level)
+
+对于无法用GPIO控制camera reset脚的平台，手动控制camera reset脚拉高或者拉低,2025/9/6启用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|camera id,例如0|
+|int|reset脚电平，1高电平，0低电平|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- camera reset脚高电平
+camera.reset_pin(camera_id, 1)
+
+```
+
+---
+

@@ -303,7 +303,7 @@ lcd.setColor(0xFFFF,0x0000)
 
 ---
 
-## lcd.reset(level)
+## lcd.reset_pin(level)
 
 控制lcd reset pin拉高或者拉低,2025/9/5启用
 
@@ -321,7 +321,7 @@ lcd.setColor(0xFFFF,0x0000)
 
 ```lua
 -- lcd reset脚高电平
-lcd.reset(1)
+lcd.reset_pin(1)
 
 ```
 
