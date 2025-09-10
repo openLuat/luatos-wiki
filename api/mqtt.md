@@ -160,7 +160,7 @@ mqttc = mqtt.create(nil,"120.55.137.106", 8883, {
 -- opts参数说明
 -- ipv6 = true, -- 是否为ipv6连接,默认false
 -- rxSize = 4096, -- mqtt接收缓冲区大小,单位字节,默认32k
--- conn_timeout = 30, -- 连接超时时间,单位秒, 默认15秒
+-- conn_timeout = 15, -- 连接超时时间,按收到conack为止,单位秒, 默认30秒
 
 ```
 
