@@ -9,6 +9,7 @@
 |netdrv.CTRL_RESET|number|控制类型-复位,当前仅支持CH390H|
 |netdrv.RESET_HARD|number|请求对网卡硬复位,当前仅支持CH390H|
 |netdrv.RESET_SOFT|number|请求对网卡软复位,当前仅支持CH390H|
+|netdrv.EVT_SOCKET|number|事件类型-socket事件|
 
 
 ## netdrv.setup(id, tp, opts)
@@ -340,6 +341,58 @@ end)
 
 sys.subscribe("PING_RESULT", function(id, time, dst)
     log.info("ping", id, time, dst);
+end)
+
+```
+
+---
+
+## netdrv.event_subscribe(adapter_id, event_type, callback)
+
+订阅网络事件
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|网络适配器的id|
+|int|事件总类型, 当前支持 netdrv.EVT_SOCKET|
+|function|回调函数 function(id, event, params)|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功与否,成功返回true,否则返回nil|
+
+**例子**
+
+```lua
+-- 订阅socket连接状态变化事件
+netdrv.event_subscribe(socket.LWIP_ETH, netdrv.EVT_SOCKET, function(id, event, params)
+    -- id 是网络适配器id
+    -- event是事件id, 字符串类型, 
+        - create 创建socket对象
+        - release 释放socket对象
+        - connecting 正在连接
+        - connected 连接成功
+        - closed 连接关闭
+        - remote_close 远程关闭
+        - timeout dns解析超时,或者tcp连接超时
+        - error 错误,包括一切异常错误
+        - dns_result dns解析结果, 如果remote_ip为0.0.0.0,表示解析失败
+    -- params是参数表
+        - remote_ip 远端ip地址
+        - remote_port 远端端口
+        - domain_name 远端域名,如果是通过域名连接的话, release时没有这个值, create时也没有
+    log.info("netdrv", "socket event", id, event, json.encode(params or {}))
+    if params then
+        -- params里会有remote_ip, remote_port等信息, 可按需获取
+        local remote_ip = params.remote_ip
+        local remote_port = params.remote_port
+        local domain_name = params.domain_name
+        log.info("netdrv", "socket event", "remote_ip", remote_ip, "remote_port", remote_port, "domain_name", domain_name)
+    end
 end)
 
 ```
