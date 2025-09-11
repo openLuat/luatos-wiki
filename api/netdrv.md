@@ -347,7 +347,7 @@ end)
 
 ---
 
-## netdrv.event_subscribe(adapter_id, event_type, callback)
+## netdrv.on(adapter_id, event_type, callback)
 
 订阅网络事件
 
@@ -369,7 +369,7 @@ end)
 
 ```lua
 -- 订阅socket连接状态变化事件
-netdrv.event_subscribe(socket.LWIP_ETH, netdrv.EVT_SOCKET, function(id, event, params)
+netdrv.on(socket.LWIP_ETH, netdrv.EVT_SOCKET, function(id, event, params)
     -- id 是网络适配器id
     -- event是事件id, 字符串类型, 
         - create 创建socket对象
