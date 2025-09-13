@@ -3,7 +3,8 @@
 **示例**
 
 ```lua
-
+-- 支持  http 1.0 和 http 1.1, 不支持http2.0
+-- 支持 GET/POST/PUT/DELETE/HEAD 等常用方法
 -- http 客户端示例, 详细示例请参考demo
 sys.taskInit(function()
     sys.wait(1000)

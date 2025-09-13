@@ -7,7 +7,7 @@
 
 ```
 
-## iperf.server(id)
+## iperf.server(id, port)
 
 启动server模式
 
@@ -41,7 +41,7 @@ end)
 
 ---
 
-## iperf.client(id)
+## iperf.client(id, ip, port)
 
 启动client模式
 
