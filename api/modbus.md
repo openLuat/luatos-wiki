@@ -31,7 +31,7 @@
 |modbus.SLAVE_ERROR|number|从站错误|
 
 
-## modbus.create_master(type, drive_id, comm_interval_time, comm_timeout, comm_resend_count, comm_reconnection_time)
+## modbus.create_master(type, drive_id, baud_rate, comm_interval_time, comm_timeout, comm_resend_count, comm_reconnection_time)
 
 创建一个 Modbus Master 句柄
 
@@ -41,7 +41,7 @@
 |-|-|
 |int|通讯类型, 例如 modbus.MODBUS_RTU, modbus.MODBUS_ASCII, modbus.MODBUS_TCP|
 |int|通讯驱动id，如果为COM类型，则为uartid，如果为以太网类型，则为adapter_index|
-|int|若协议类型为modbus.MODBUS_TCP，则跳过该参数。若协议类型为modbus.MODBUS_RTU、modbus.MODBUS_ASCII模式，则该参数为串口的波特率，默认9600。|
+|int|若协议类型为modbus.MODBUS_TCP，则跳过该参数。若协议类型为modbus.MODBUS_RTU、modbus.MODBUS_ASCII模式，则该参数为串口的波特率|
 |int|通讯间隔时间,单位ms。默认为100ms|
 |int|通讯超时时间,单位ms。默认为1000ms|
 |int|消息发送失败、超时重发次数。默认为1次|
@@ -430,7 +430,7 @@ msg = modbus.create_msg(mb_rtu, slave, modbus.REGISTERS, modbus.READ, 0, 10, zbu
 
 ---
 
-## modbus.create_slave(type, slave_id, uartid_port, adapter_index)
+## modbus.create_slave(type, slave_id, uartid_port, adapter_index_baud_rate)
 
 创建一个从站句柄
 
@@ -441,7 +441,7 @@ msg = modbus.create_msg(mb_rtu, slave, modbus.REGISTERS, modbus.READ, 0, 10, zbu
 |int|modbus协议类型，modbus.MODBUS_RTU、modbus.MODBUS_ASCII、modbus.MODBUS_TCP|
 |int|从站地址，范围1-247|
 |int|若协议类型为modbus.MODBUS_RTU、modbus.MODBUS_ASCII模式，则该参数为串口ID（uartid）；若协议类型为modbus.MODBUS_TCP则该参数为本地端口号|
-|int|若协议类型为modbus.MODBUS_RTU、modbus.MODBUS_ASCII模式，则该参数为串口的波特率，默认9600；若协议类型为modbus.MODBUS_TCP则该参数为网卡适配器序列号，默认最后一个注册的网卡适配器序号。|
+|int|若协议类型为modbus.MODBUS_RTU、modbus.MODBUS_ASCII模式，则该参数为串口的波特率；若协议类型为modbus.MODBUS_TCP则该参数为网卡适配器序列号，默认最后一个注册的网卡适配器序号。|
 
 **返回值**
 
