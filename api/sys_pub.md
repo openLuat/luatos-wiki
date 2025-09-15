@@ -532,6 +532,33 @@ end)
 
 ---
 
+### RRC_IND
+
+RRC部分信息上报,2025/9/15启用
+
+**额外返回参数**
+
+无
+
+**例子**
+
+```lua
+sys.subscribe("RRC_IND", function(event, value, ...)
+	log.info("rrc status", event, value, ...)
+end)
+event目前有
+1、"DRX",DRX周期值,后续跟1个参数为具体的DRX周期值,单位ms,目前只有320,640,1280,2560
+2、"IDLE_MEAS_THRESHOLD",RRC IDLE下邻区测量阈值,后续跟4个参数为具体的测量阈值,单位dbm
+4个参数分别为sIntraSearchP, sNonIntraSearchP, sIntraSearchQ, sNonIntraSearchQ
+当rsrp <= sIntraSearchP,启动同频邻区测量,低功耗下功耗有所升高
+当rsrp <= sNonIntraSearchP,启动异频邻区测量,低功耗下功耗显著升高
+如果sIntraSearchQ不为0,当rsrq <= sIntraSearchQ,启动同频邻区测量,低功耗下功耗有所升高
+如果sNonIntraSearchQ不为0,当rsrq <= sNonIntraSearchQ,启动异频邻区测量,低功耗下功耗显著升高
+
+```
+
+---
+
 ## socket
 
 
