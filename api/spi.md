@@ -1,5 +1,27 @@
 # spi - spi操作库
 
+**示例**
+
+```lua
+-- 本库支持2套API风格
+-- 1. 老的API,spi.xxx 方式,需要自己控制软件cs引脚，不同设备要手动重新配置spi参数
+-- 2. 新的API(推荐使用), spidevice对象方式,不需要手动控制cs引脚，不同设备也无需重复配置参数,设备内部自动管理
+
+
+-- 老API
+spi.setup(0,nil,0,0,8,2000000,spi.MSB,1,1)
+local result = spi.send(0, "123")--发送123
+local recv = spi.recv(0, 4)--接收4字节数据
+spi.close(0)
+-- 新API
+local spi_device = spi.deviceSetup(0,17,0,0,8,2000000,spi.MSB,1,1)
+local result = spi_device:send("123")--发送123
+local recv = spi_device:recv(4)--接收4字节数据
+spi_device:close()
+
+
+```
+
 ## 常量
 
 |常量|类型|解释|
@@ -268,7 +290,7 @@ local spi_device = spi.deviceSetup(0,17,0,0,8,2000000,spi.MSB,1,1)
 
 ```lua
 -- 初始化spi
-spi_device.close()
+spi_device:close()
 
 ```
 
