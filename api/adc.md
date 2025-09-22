@@ -75,11 +75,12 @@ adc.close(4) -- 若需要持续读取, 则不需要close, 功耗会高一点.
 |传入值类型|解释|
 |-|-|
 |int|range参数,与具体设备有关,比如air105填adc.ADC_RANGE_1_8和adc.ADC_RANGE_3_6|
-|return|nil|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 

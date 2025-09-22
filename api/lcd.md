@@ -248,11 +248,12 @@ lcd命令
 |int|lcd命令模式下的命令值|
 |int/zbuff|lcd命令模式下的参数值，如果只有1个参数，可以用int，如果有多个，使用zbuff传入|
 |int|参数长度，如果上一个参数是int，则忽略长度|
-|return|boolean|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|boolean|成功与否|
 
 **例子**
 
@@ -569,8 +570,7 @@ lcd.drawCircle(120,120,20,0x001F)
 ```lua
 -- 设置为字体,对之后的drawStr有效,调用lcd.drawStr前一定要先设置
 
--- 若提示 "only font pointer is allow" , 则代表当前固件不含对应字体, 可使用云编译服务免费定制
--- 云编译文档: https://wiki.luatos.com/develop/compile/Cloud_compilation.html
+-- 若提示 "only font pointer is allow" , 则代表当前固件不含对应字体
 
 -- lcd库的默认字体均以 lcd.font_ 开头
 lcd.setFont(lcd.font_opposansm12)
@@ -578,6 +578,36 @@ lcd.drawStr(40,10,"drawStr")
 sys.wait(2000)
 lcd.setFont(lcd.font_opposansm12_chinese) -- 具体取值可参考api文档的常量表
 lcd.drawStr(40,40,"drawStr测试")
+
+```
+
+---
+
+## lcd.setFontFile(font, indentation)
+
+设置使用文件系统中的字体文件 
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|filename 字体文件|
+|int|indentation, 等宽字体ascii右侧缩进0~127个pixel，等宽字体的ascii字符可能在右侧有大片空白，用户可以选择删除部分。留空或者超过127则直接删除右半边, 非等宽字体无效|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true, 失败返回nil|
+
+**例子**
+
+```lua
+-- 字体文件制作工具: https://gitee.com/Dozingfiretruck/u8g2_font_tool
+-- 设置为字体,对之后的drawStr有效,调用lcd.drawStr前一定要先设置
+
+lcd.setFontFile("/sd/u8g2_font_opposansm12.bin")
+lcd.drawStr(40,10,"drawStr")
 
 ```
 
@@ -967,11 +997,12 @@ local blue = lcd.rgb565(0x00, 0x00, 0xFF, true)
 |int|帧同步时的地址值，只有无ram的屏幕需要，如果能用0x2c发送数据则不需要这个参数|
 |int|行同步时的指令，一般情况和命令模式下的指令一致，只有无ram的屏幕需要，如果能用0x2c发送数据则不需要这个参数|
 |int|行同步时的地址值，只有无ram的屏幕需要，如果能用0x2c发送数据则不需要这个参数|
-|return|nil|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -993,13 +1024,13 @@ lcd.qspi(0x02, 0x32, 0x12)
 
 **参数**
 
-|传入值类型|解释|
-|-|-|
-|return|nil|
+无
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -1017,11 +1048,12 @@ lcd.qspi(0x02, 0x32, 0x12)
 |-|-|
 |number|type 支持的类型, 可选,默认全部类型 目前支持 lcd.ACC_HW_JPEG lcd.ACC_HW_ALL|
 |bool|enable 开关, 可选 默认关闭 ture开启 false关闭|
-|return|nil|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 

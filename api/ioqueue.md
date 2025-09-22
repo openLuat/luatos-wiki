@@ -11,11 +11,12 @@
 |int|硬件定时器id，默认用0，根据实际MCU确定，air105为0~5，与pwm共用，同一个通道号不能同时为pwm和ioqueue|
 |int|一个完整周期需要的命令，可以比实际的多|
 |int|重复次数,默认是1，如果写0则表示无限次数循环|
-|return|无|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -58,11 +59,12 @@ ioqueue.init(0,10,5) --以timer0为时钟源初始化一个io操作队列，有1
 |传入值类型|解释|
 |-|-|
 |int|硬件定时器id|
-|return|无|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -87,11 +89,12 @@ ioqueue.delay(0)
 |boolean|是否是输入|
 |int|上下拉模式,只能是0,gpio.PULLUP,gpio.PULLDOWN|
 |int|初始输出电平|
-|return|无|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -113,11 +116,12 @@ ioqueue.setgpio(0,17,false,0,1)--GPIO17设置成默认上下拉输出高电平
 |-|-|
 |int|硬件定时器id|
 |int|pin|
-|return|无|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -141,11 +145,12 @@ ioqueue.input(0, 17)
 |int|硬件定时器id|
 |int|pin|
 |int|输出电平|
-|return|无|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -170,11 +175,12 @@ ioqueue.output(0, 17, 0)
 |int|上下拉模式,只能是0,gpio.PULLUP,gpio.PULLDOWN|
 |int|中断模式,只能是gpio.BOTH,gpio.RISING,gpio.FALLING|
 |int|定时器最大计时时间 考虑到lua是int类型，最小0x10000, 最大值为0x7fffffff，默认为最大值|
-|return|无|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -195,11 +201,12 @@ ioqueue.setcap(0, 17, gpio.PULLUP, gpio.FALLING, 48000000)
 |传入值类型|解释|
 |-|-|
 |int|硬件定时器id|
-|return|无|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -220,11 +227,12 @@ ioqueue.capture(0)
 |-|-|
 |int|硬件定时器id|
 |int|pin|
-|return|无|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -273,11 +281,12 @@ local input_cnt, capture_cnt = ioqueue.get(0, input_buff, capture_buff)
 |传入值类型|解释|
 |-|-|
 |int|硬件定时器id|
-|return|无|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -323,11 +332,12 @@ ioqueue.stop(0)
 |传入值类型|解释|
 |-|-|
 |int|硬件定时器id|
-|return|无|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -347,11 +357,12 @@ ioqueue.clear(0)
 |传入值类型|解释|
 |-|-|
 |int|硬件定时器id|
-|return|无|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -399,11 +410,12 @@ local result = ioqueue.done(0)
 |int|上下拉模式,只能是0,gpio.PULLUP,gpio.PULLDOWN|
 |int|中断模式,只能是gpio.BOTH,gpio.RISING,gpio.FALLING|
 |boolean|开关，默认是false关|
-|return|无|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 

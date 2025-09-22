@@ -252,7 +252,7 @@ eink.setFont(eink.font_opposansm12_chinese)
 
 ```lua
 -- 先设置字体, 然后写字
--- 可用字体取决于具体的固件, 如果没有你想要的大小,可以云编译一份自定义固件
+-- 可用字体取决于具体的固件, 如果没有你想要的大小, 请联系销售人员定制
 -- font_opposansm8_chinese
 -- font_opposansm10_chinese
 -- font_opposansm12_chinese

@@ -16,11 +16,12 @@
 |传入值类型|解释|
 |-|-|
 |int|id, 硬件单总线编号,如果只有一条则随意填写|
-|return|nil|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -51,11 +52,12 @@ onewire.init(0) --初始化硬件单总线
 |int|tLOW1, start信号到允许写的时间|
 |int|tRDV, start信号到允许读的时间|
 |int|tREC, 通信结束前恢复时间|
-|return|nil|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -193,11 +195,12 @@ local succ, rx_data = onewire.rx(0, 8, 0x33, buf, nil, true, true) --先发送re
 |-|-|
 |int|id, GPIO模式对应GPIO编号,HW模式是硬件单总线编号,如果只有一条则随意填写|
 |boolean|onoff, true打开,false关闭|
-|return|nil|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 
@@ -217,11 +220,12 @@ onewire.debug(0, true)
 |传入值类型|解释|
 |-|-|
 |int|id, 硬件单总线编号,如果只有一条则随意填写|
-|return|nil|
 
 **返回值**
 
-无
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
 
 **例子**
 

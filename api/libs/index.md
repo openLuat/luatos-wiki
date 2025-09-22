@@ -9,9 +9,9 @@ airlbs
 dhcpsrv
 dnsproxy
 exchg
-exfotawifi
 exgnss
 exnetif
+exremotefile
 exvib
 httpdns
 httpplus

@@ -18,8 +18,6 @@
 
 ```lua
 -- 大部分情况下, 这个库都不会包含在正式版固件里
--- 若需使用,可以参考wiki文档自行编译或使用云编译
--- https://wiki.luatos.com/develop/compile.html
 
 -- 跑分的main.lua 应移除硬狗代码, 防止重启
 -- 若设备支持自动休眠, 应关闭休眠功能

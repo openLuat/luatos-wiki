@@ -542,6 +542,35 @@ modbus.slave_stop(mb_tcp_s)
 
 ---
 
+## modbus.slave_on(slave_handler, cb)
+
+注册modbus从站串口事件回调
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|通过modbus.create_slave获取到的上下文|
+|function|cb 回调函数，参数包括slave_handler, reg_type, opt_type, reg_addr, reg_len|
+|return|无|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 注册modbus从站串口事件回调
+modbus.slave_on(slave_handler, function(slave_handler, reg_type, opt_type, reg_addr, reg_len)
+    -- 用户自定义代码
+    log.info(reg_type, opt_type, reg_addr, reg_len)
+end)
+
+```
+
+---
+
 ## modbus.debug(en)
 
 开启或关闭debug模式
