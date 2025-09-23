@@ -383,7 +383,7 @@ end
 
 ## socket.read(netc, len)
 
-读取数据(非zbuff版本)
+读取数据(非zbuff版本,已废弃)
 
 **参数**
 
