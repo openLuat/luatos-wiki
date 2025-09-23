@@ -28,7 +28,7 @@
 |[fonts](fonts.md)|`字体库`|
 |[fota](fota.md)|`底层固件升级`|
 |[fskv](fskv.md)|`kv数据库,掉电不丢数据`|
-|[ftp](ftp.md)|`ftp 客户端`|
+|[ftp](ftp.md)|`ftp 客户端 (服务器推荐使用vsftpd,其他暂不做支持)`|
 |[gmssl](gmssl.md)|`国密算法(SM2/SM3/SM4)`|
 |[gpio](gpio.md)|`GPIO操作`|
 |[gtfont](gtfont.md)|`高通字库芯片`|

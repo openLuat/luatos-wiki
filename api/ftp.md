@@ -1,4 +1,4 @@
-# ftp - ftp 客户端
+# ftp - ftp 客户端 (服务器推荐使用vsftpd,其他暂不做支持)
 
 ## ftp.login(adapter,ip_addr,port,username,password)
 

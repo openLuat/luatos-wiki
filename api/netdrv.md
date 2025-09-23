@@ -48,7 +48,7 @@ netdrv.setup(socket.LWIP_ETH, netdrv.CH390, {spi=0,cs=8,irq=20})
 
 ---
 
-## netdrv.dhcp(id, enable)
+## netdrv.dhcp(id, enable, name)
 
 开启或关闭DHCP
 
@@ -58,6 +58,7 @@ netdrv.setup(socket.LWIP_ETH, netdrv.CH390, {spi=0,cs=8,irq=20})
 |-|-|
 |int|网络适配器编号, 例如 socket.LWIP_ETH|
 |boolean|开启或者关闭|
+|string|dhcp主机名称, 可选, 最长31字节，填""清除|
 
 **返回值**
 
