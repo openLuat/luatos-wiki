@@ -264,7 +264,7 @@ local result = spi.send(0, buff)--把zbuff数据从指针开始，全发出去
 
 ```lua
 -- 初始化spi
-local spi_device = spi.deviceSetup(0,17,0,0,8,2000000,spi.MSB,1,1)
+spi_device = spi.deviceSetup(0,17,0,0,8,2000000,spi.MSB,1,1)
 
 ```
 
@@ -296,7 +296,7 @@ spi_device:close()
 
 ---
 
-## spi_device:transfer(send_data[, len])
+## spi_device:transfer(send_data, send_len, recv_len)
 
 传输SPI数据(对象方式)
 
@@ -319,7 +319,7 @@ spi_device:close()
 
 ```lua
 -- 初始化spi
-local spi_device = spi.device_setup(0,17,0,0,8,2000000,spi.MSB,1,1)
+spi_device = spi.device_setup(0,17,0,0,8,2000000,spi.MSB,1,1)
 local recv = spi_device:transfer("123")--发送123,并读取数据
 local result = spi_device:transfer({0x00,0x01})--发送0x00,0x01,并读取数据
 
