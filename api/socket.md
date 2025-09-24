@@ -716,6 +716,35 @@ log.info("当前默认适配器编号", id, "最后一个注册的适配器编�
 
 ---
 
+## socket.close_all(id)
+
+断开指定网卡的所有数据链接（实验性支持）
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|适配器编号|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|执行结果|
+
+**例子**
+
+```lua
+-- 本函数于 2025.9.24 新增
+
+-- 断开WIFI网卡上的所有数据链接
+socket.close_all(socket.LWIP_STA)
+
+
+```
+
+---
+
 ## socket.sntp(sntp_server, adapter)
 
 sntp时间同步
