@@ -45,8 +45,6 @@
 |eink.MODEL_7in5b_HD|number|7.5寸b_HD|
 |eink.MODEL_7in5b_V2|number|7.5寸b_V2|
 |eink.font_opposansm12|font|12号字体|
-|eink.font_unifont_t_symbols|font|符号字体|
-|eink.font_open_iconic_weather_6x_t|font|天气字体|
 |eink.font_opposansm16|font|16号字体|
 |eink.font_opposansm18|font|18号字体|
 |eink.font_opposansm20|font|20号字体|

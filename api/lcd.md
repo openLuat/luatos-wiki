@@ -16,8 +16,6 @@
 |常量|类型|解释|
 |-|-|-|
 |lcd.font_opposansm12|font|12号字体|
-|lcd.font_unifont_t_symbols|font|符号字体|
-|lcd.font_open_iconic_weather_6x_t|font|天气字体|
 |lcd.font_opposansm16|font|16号字体|
 |lcd.font_opposansm18|font|18号字体|
 |lcd.font_opposansm20|font|20号字体|

@@ -5,7 +5,7 @@
 ```lua
 -- 具体用法请查看demo
 -- 本库只支持 mqtt 3.1.1, 其他版本例如3.1 或 5 均不支持!!!
--- 只支持纯MQTT/MQTTS通信, 不支持 mqtt over websocket
+-- 现已支持 MQTT over WebSocket（ws/wss），--曾帅 2025-09-23
 
 -- 几个大前提:
 -- 本库是基于TCP链接的, 支持加密TCP和非加密TCP
