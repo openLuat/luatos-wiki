@@ -82,15 +82,13 @@ local result = fota.init(0xe0000000, 0, spi_device, 27)    --EC7XX系列允许�
 
 **参数**
 
-|传入值类型|解释|
-|-|-|
-|boolean|是否完整走完流程，true 表示正确走完流程了|
+无
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|boolean|准备好返回true|
+|boolean|是否完整走完流程，true 表示正确走完流程了|
 
 **例子**
 

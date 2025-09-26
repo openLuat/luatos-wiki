@@ -14,10 +14,10 @@
 |modbus.MODBUS_RTU|number|ModbusRTU模式|
 |modbus.MODBUS_ASCII|number|ModbusASCII模式|
 |modbus.MODBUS_TCP|number|ModbusTCP模式|
-|modbus.CIOLS|number|线圈寄存器|
-|modbus.INPUTS|number|触点寄存器|
-|modbus.INPUT_REGISTERS|number|输入寄存器|
-|modbus.REGISTERS|number|保持寄存器|
+|modbus.COIL_STATUS|number|线圈寄存器|
+|modbus.INPUT_STATUS|number|触点寄存器|
+|modbus.INPUT_REGISTER|number|输入寄存器|
+|modbus.HOLDING_REGISTER|number|保持寄存器|
 |modbus.READ|number|操作类型，读操作|
 |modbus.WRITE|number|操作类型，写多个寄存器|
 |modbus.WRITE_SINGLE|number|操作类型，写单个寄存器|
@@ -372,7 +372,7 @@ modbus.get_slave_state(slave)
 |-|-|
 |userdata|通过modbus.create_master获取到的上下文|
 |userdata|通过modbus.add_slave获取到的上下文|
-|int|寄存器类型，modbus.CIOLS（线圈）、modbus.INPUTS（触点）、modbus.INPUT_REGISTERS（输入寄存器）、modbus.REGISTERS（保持寄存器）|
+|int|寄存器类型，modbus.COIL_STATUS（线圈）、modbus.INPUT_STATUS（触点）、modbus.INPUT_REGISTER（输入寄存器）、modbus.HOLDING_REGISTER（保持寄存器）|
 |int|操作类型，modbus.READ（读寄存器）、modbus.WRITE（写多个寄存器）、modbus.WRITE_SINGLE（写单个寄存器），若此参数为modbus.WRITE_SINGLE类型，则reg_len参数总为1|
 |int|寄存器地址，0-65535|
 |int|寄存器数量，最大120|
@@ -390,11 +390,37 @@ modbus.get_slave_state(slave)
 
 ```lua
 -- 向指定从站，创建并添加一条通讯消息
--- 从 slave 从站中读取消息，寄存器类型为modbus.REGISTERS，操作类型为modbus.READ，寄存器地址为0，寄存器数量为10，数据缓存地址为zbuf，通讯周期为1，通讯模式为modbus.LOOP
-msg = modbus.create_msg(mb_rtu, slave, modbus.REGISTERS, modbus.READ, 0, 10, zbuf, 1, modbus.LOOP)
+-- 从 slave 从站中读取消息，寄存器类型为modbus.HOLDING_REGISTER，操作类型为modbus.READ，寄存器地址为0，寄存器数量为10，数据缓存地址为zbuf，通讯周期为1，通讯模式为modbus.LOOP
+msg = modbus.create_msg(mb_rtu, slave, modbus.HOLDING_REGISTER, modbus.READ, 0, 10, zbuf, 1, modbus.LOOP)
 
 --缺省的写法
-msg = modbus.create_msg(mb_rtu, slave, modbus.REGISTERS, modbus.READ, 0, 10, zbuf)
+msg = modbus.create_msg(mb_rtu, slave, modbus.HOLDING_REGISTER, modbus.READ, 0, 10, zbuf)
+
+```
+
+---
+
+## modbus.set_msg_comm_period(msg_handler, comm_period)
+
+设置消息通讯周期
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|通过modbus.create_msg获取到的上下文|
+|int|通讯周期|
+|return|无|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 设置消息通讯周期为1
+modbus.set_msg_comm_period(msg, 1)
 
 ```
 
@@ -420,11 +446,11 @@ msg = modbus.create_msg(mb_rtu, slave, modbus.REGISTERS, modbus.READ, 0, 10, zbu
 **例子**
 
 ```lua
- -- 删除从站的所有消息
- modbus.remove_msg(master_handler, slave_handler)
+-- 删除从站的所有消息
+modbus.remove_msg(master_handler, slave_handler)
 
-  -- 删除从站的指定消息
- modbus.remove_msg(master_handler, slave_handler, msg_handler)
+-- 删除从站的指定消息
+modbus.remove_msg(master_handler, slave_handler, msg_handler)
 
 ```
 
@@ -471,7 +497,7 @@ mb_tcp_s = modbus.create_slave(modbus.MODBUS_TCP, 1, 502, socket.LWIP_ETH)
 |传入值类型|解释|
 |-|-|
 |userdata|通过modbus.create_slave获取到的上下文|
-|int|寄存器类型，modbus.CIOLS（线圈）、modbus.INPUTS（触点）、modbus.INPUT_REGISTERS（输入寄存器）、modbus.REGISTERS（保持寄存器）|
+|int|寄存器类型，modbus.COIL_STATUS（线圈）、modbus.INPUT_STATUS（触点）、modbus.INPUT_REGISTER（输入寄存器）、modbus.HOLDING_REGISTER（保持寄存器）|
 |int|寄存器地址，0-65535|
 |int|寄存器数量，最大120|
 |userdata|用户数据缓冲区，通过zbuff.create获取到的上下文|
@@ -485,8 +511,8 @@ mb_tcp_s = modbus.create_slave(modbus.MODBUS_TCP, 1, 502, socket.LWIP_ETH)
 **例子**
 
 ```lua
--- 添加一块寄存器内存区，寄存器类型为modbus.REGISTERS，寄存器地址为0，寄存器数量为32，数据缓存地址为registers
-modbus.add_block(mb_tcp_s, modbus.REGISTERS, 0, 32, registers)
+-- 添加一块寄存器内存区，寄存器类型为modbus.HOLDING_REGISTER，寄存器地址为0，寄存器数量为32，数据缓存地址为registers
+modbus.add_block(mb_tcp_s, modbus.HOLDING_REGISTER, 0, 32, registers)
 
 ```
 
