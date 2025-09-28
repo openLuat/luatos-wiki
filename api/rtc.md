@@ -104,30 +104,6 @@ rtc.timerStop(0)
 
 ---
 
-## rtc.setBaseYear(Base_year)
-
-设置RTC基准年,不推荐
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|基准年Base_year,通常1900|
-
-**返回值**
-
-无
-
-**例子**
-
-```lua
--- 本函数已经废弃, 不要使用
-rtc.setBaseYear(1900)
-
-```
-
----
-
 ## rtc.timezone(tz)
 
 读取或设置时区
