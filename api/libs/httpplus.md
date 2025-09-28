@@ -64,7 +64,7 @@ local opts = {
     adapter = nil,    -- 可选,网络适配器编号, 默认是自动选
     timeout = 30,     -- 可选,读取服务器响应的超时时间,单位秒,默认30
     bodyfile = "xxx", -- 可选,直接把文件内容作为body上传, 优先级高于body参数
-    upload_buff = zbuff.create(1024*64) -- 可选,上传时使用的缓冲区,默认会根据型号创建一个buff
+    upload_file_buff = zbuff.create(1024*64) -- 可选,上传时使用的缓冲区,默认会根据型号创建一个buff
 }
 
 local code, resp = httpplus.request({url="https://httpbin.air32.cn/get"})
@@ -80,6 +80,12 @@ if code >= 100 then
     -- 也可以通过uart.tx等支持zbuff的函数转发出去
     -- uart.tx(1, resp.body)
 end
+-- 情况2, code < 0 时, resp会是个错误信息字符串
+
+-- 对upload_file_buff参数的说明
+--   1. 如果上传的文件比较大,建议传入这个参数,避免每次都创建和销毁缓冲区
+--   2. 如果不传入这个参数,本库会根据不同的模组型号创建一个合适的缓冲区
+--   3. 多个同时执行的httpplus请求,不可以共用同一个缓冲区
 
 ```
 
