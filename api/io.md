@@ -40,9 +40,171 @@ if fd then
 
   -- 执行完操作后,一定要关掉文件
   fd:close()
+
+  -- 2025.9.30 新增file:write支持zbuff参数
+  local zbuff = zbuff.create(1024)
+  zbuff:write("hello zbuff")
+  local f = io.open("/test_zbuff.bin", "wb+")
+  f:write(zbuff)
+  f:close()
+  -- 读出数据
+  local f = io.open("/test_zbuff.bin", "rb")
+  local data = f:read("*a")
+  f:close()
+  log.info("data", data)
 end
 
 ```
+
+## file:close()
+
+关闭文件句柄
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|文件句柄, io.open返回的值|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+无
+
+---
+
+## io.open(path, mode)
+
+打开文件,返回句柄
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|文件路径|
+|string|打开模式|
+|see|http://www.lua.org/manual/5.3/manual.html#pdf-io.open|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|userdata|文件句柄,失败返回nil|
+
+**例子**
+
+```lua
+-- 只读模式, 打开文件
+local fd = io.open("/xxx.txt", "rb")
+-- 读写默认,打开文件
+local fd = io.open("/xxx.txt", "wb")
+-- 写入文件,且截断为0字节
+local fd = io.open("/xxx.txt", "wb+")
+-- 追加模式
+local fd = io.open("/xxx.txt", "a")
+-- 若文件打开成功, fd不为nil,否则就是失败了
+if fd then
+  -- 读取指定字节数,如果数据不足,就只返回实际长度的数据
+  local data = fd:read(12)
+
+  -- 数据写入, 仅w或a模式可调用
+  -- 数据需要是字符串, lua的字符串是带长度的,可以包含任何二进制数据
+  fd:write("xxxx") 
+  -- 以下是写入0x12, 0x13
+  fd:write(string.char(0x12, 0x13))
+
+  -- 移动句柄,绝对坐标
+  fd:seek(1024, io.SEEK_SET)
+  -- 移动句柄,相对坐标
+  fd:seek(1024, io.SEEK_CUR)
+  -- 移动句柄,反向绝对坐标,从文件结尾往文件头部算
+  fd:seek(124, io.SEEK_END)
+
+  -- 执行完操作后,一定要关掉文件
+  fd:close()
+end
+
+```
+
+---
+
+## file:write(data)
+
+将数据写入文件
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string/zbuff|数据|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回nil和错误信息|
+
+**例子**
+
+```lua
+local fd = io.open("/xxx.txt", "wb+")
+if fd then
+  -- 数据需要是字符串, lua的字符串是带长度的,可以包含任何二进制数据
+  local ret, err = fd:write("xxxx") 
+  if not ret then
+    log.error("io", "write error", err)
+  end
+  -- 2025.9.30 新增file:write支持zbuff参数
+  local zbuff = zbuff.create(1024)
+  zbuff:write("hello zbuff")
+  local ret, err = fd:write(zbuff)
+  if not ret then
+    log.error("io", "write error", err)
+  end
+  fd:close()
+end
+
+```
+
+---
+
+## file:seek(whence, offset)
+
+移动文件指针
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|whence 定位方式, 可选值有 "set", "cur", "end", 默认 "cur"|
+|int|offset 偏移值, 默认0|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|成功返回当前文件指针位置,否则返回nil和错误信息|
+
+**例子**
+
+```lua
+local fd = io.open("/xxx.txt", "rb")
+if fd then
+  local pos = fd:seek("set", 0)
+  if not pos then
+    log.error("io", "seek error", err)
+  end
+  fd:close()
+end
+
+```
+
+---
 
 ## io.exists(path)
 
@@ -128,7 +290,7 @@ local data = io.readFile("/abc.txt", "rb", 128, 512)
 
 ---
 
-## io.writeFile(path, data)
+## io.writeFile(path, data, mode)
 
 将数据写入文件
 
@@ -138,6 +300,7 @@ local data = io.readFile("/abc.txt", "rb", 128, 512)
 |-|-|
 |string|文件路径|
 |string|数据|
+|string|写入模式, 默认 "wb+"|
 
 **返回值**
 
@@ -148,7 +311,10 @@ local data = io.readFile("/abc.txt", "rb", 128, 512)
 **例子**
 
 ```lua
+-- 将数据写入到文件, 默认是"wb+"模式, 即完全覆写,原有文件数据全部删除, 文件不存在就新建
 io.writeFile("/bootime", "1")
+-- 以"ab+"模式打开文件, 追加数据到文件末尾
+io.writeFile("/bootime", "2", "ab+")
 
 ```
 

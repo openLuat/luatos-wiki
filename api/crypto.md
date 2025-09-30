@@ -285,12 +285,12 @@ local data2 = crypto.cipher_decrypt("AES-128-ECB", "PKCS7", data, "1234567890123
 |传入值类型|解释|
 |-|-|
 |string|CRC16模式（"IBM","MAXIM","USB","MODBUS","CCITT","CCITT-FALSE","X25","XMODEM","DNP","USER-DEFINED"）|
-|string|字符串|
-|int|poly值|
-|int|initial值|
-|int|finally值|
+|string|字符串或者zbuff对象|
+|int|poly值,默认0x0000,范围0-0xFFFF|
+|int|initial值,默认0x0000,范围0-0xFFFF|
+|int|finally值,默认0x0000,范围0-0xFFFF|
 |int|输入反转,1反转,默认0不反转|
-|int|输入反转,1反转,默认0不反转|
+|int|输出反转,1反转,默认0不反转|
 
 **返回值**
 
@@ -301,8 +301,12 @@ local data2 = crypto.cipher_decrypt("AES-128-ECB", "PKCS7", data, "1234567890123
 **例子**
 
 ```lua
--- 计算CRC16
-local crc = crypto.crc16("")
+-- 计算字符串的CRC16
+local crc = crypto.crc16("dfadfasfdsafdasf")
+-- 使用zbuff时,会计算used之后的全部数据,建议使用前seek(0)
+local zbuff = zbuff.create("dfadfasfdsafdasf")
+zbuff:seek(0)
+crc = crypto.crc16(zbuff)
 
 ```
 
