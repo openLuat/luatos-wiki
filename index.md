@@ -11,6 +11,10 @@ LuatOS 是针对物联网智能硬件的一款开发框架，和游戏引擎的�
 
 [https://docs.openluat.com](https://docs.openluat.com)
 
+<script>
+window.location.href = "https://docs.openluat.com";
+</script>
+
 
 ```{toctree}
 :hidden:
