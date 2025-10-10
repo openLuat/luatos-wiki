@@ -154,14 +154,6 @@
               Copyright © <a href="https://luatos.com/">LuatOS团队</a>
             </div>
             {%- endif %}
-            {%- if show_sphinx -%}
-            {% trans %}Made with {% endtrans -%}
-            {% trans %}<a href="https://www.sphinx-doc.org/">Sphinx</a> and {% endtrans -%}
-            <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-            {% trans %}
-            <a href="https://github.com/pradyunsg/furo">Furo</a>
-            {% endtrans %}
-            {% endif -%}
             {%- if last_updated -%}
             <div class="last-updated">
               {% trans last_updated=last_updated|e -%}

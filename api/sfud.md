@@ -91,7 +91,7 @@ local sfud_device = sfud.getDevice(1)
 
 |返回值类型|解释|
 |-|-|
-|userdata|成功返回一个数据结构,否则返回nil|
+|userdata|成功返回一个数据结构,sfud flash tables地址|
 
 **例子**
 
