@@ -13,8 +13,8 @@ spi.setup(0,nil,0,0,8,2000000,spi.MSB,1,1)
 local result = spi.send(0, "123")--发送123
 local recv = spi.recv(0, 4)--接收4字节数据
 spi.close(0)
--- 新API
-local spi_device = spi.deviceSetup(0,17,0,0,8,2000000,spi.MSB,1,1)
+-- 新API, 注意spi_device是一个对象,选一个全局名称, 避免被回收
+spi_device = spi.deviceSetup(0,17,0,0,8,2000000,spi.MSB,1,1)
 local result = spi_device:send("123")--发送123
 local recv = spi_device:recv(4)--接收4字节数据
 spi_device:close()
@@ -147,7 +147,7 @@ spi.close(0)
 |int|SPI号(例如0)或软件SPI对象|
 |string/zbuff|待发送的数据，如果为zbuff数据，则会从对象所处的指针处开始读|
 |int|可选。待发送数据的长度，默认为data长度|
-|int|可选。读取数据的长度，默认为1|
+|int|可选。读取数据的长度，默认为1. 注意, 如果是全双工模式,收发长度必须相等|
 
 **返回值**
 
@@ -204,7 +204,7 @@ local len = spi.recv(0, 4, buff)
 
 ---
 
-## spi.send(id, data[, len])
+## spi.send(id, data, len)
 
 发送SPI数据
 
@@ -307,7 +307,7 @@ spi_device:close()
 |userdata|spi_device|
 |string/zbuff|待发送的数据，如果为zbuff数据，则会从对象所处的指针处开始读|
 |int|可选。待发送数据的长度，默认为data长度|
-|int|可选。读取数据的长度，默认为1|
+|int|可选。读取数据的长度，默认为1. 注意, 如果是全双工模式,收发长度必须相等|
 
 **返回值**
 
