@@ -764,7 +764,7 @@ local font = lvgl.font_get("opposans_m_12")
 
 ## lvgl.font_load(path/spi_device,size,bpp,thickness,cache_size,sty_zh,sty_en)
 
-从文件系统加载字体
+从文件系统加载字体(lvgl官方bin和高通矢量字库芯片使用,lvgl官方bin需要完整加载占用ram极大)
 
 **参数**
 
@@ -817,6 +817,63 @@ local font = lvgl.font_load("/font_32.bin")
 -- N N N N 操作
 -- 确定字体不被使用,不被引用,且内存紧张需要释放
 lvgl.font_free(font)
+
+```
+
+---
+
+## lvgl.font_load_ex(path)
+
+从文件系统加载字体(lvgl_conv_tool制作的字体文件,占用ram小,无需完整加载)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|字体路径|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|userdata|lvgl字体指针|
+
+**例子**
+
+```lua
+-- 使用lvgl_conv_tool制作的字体文件
+-- github: https://github.com/Dozingfiretruck/lvgl_conv_tool
+-- gitee: https://gitee.com/Dozingfiretruck/lvgl_conv_tool
+
+local font = lvgl.font_load_ex("/font_32.bin")
+
+```
+
+---
+
+## lvgl.font_load_ex(font)
+
+释放字体,慎用!!!仅通过font_load_ex加载的字体允许卸载,通过font_get获取的字体不允许卸载
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|字体路径|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|userdata|字体指针|
+
+**例子**
+
+```lua
+local font = lvgl.font_load_ex("/font_32.bin")
+-- N N N N 操作
+-- 确定字体不被使用,不被引用,且内存紧张需要释放
+lvgl.font_free_ex(font)
 
 ```
 
