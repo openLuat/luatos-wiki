@@ -371,7 +371,7 @@ wlan.createAP("luatos1234", "12341234")
 
 |返回值类型|解释|
 |-|-|
-|bool|成功创建返回true,否则返回false|
+|bool|成功返回true,否则返回false|
 
 **例子**
 
