@@ -5,8 +5,6 @@
 ```lua
 -- os模块是lua原生模块, 这份文档是为了方便阐述实际使用中的常见问题
 
--- 原生文档请查阅 https://wiki.luatos.com/_static/lua53doc/manual.html#6.9
-
 ```
 
 ## os.remove(path)
