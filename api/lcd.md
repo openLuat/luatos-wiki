@@ -611,6 +611,36 @@ lcd.drawStr(40,10,"drawStr")
 
 ---
 
+## lcd.getStrWidth(str)
+
+获取字符串宽度 
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|str 要测量的字符串|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|字符串的像素宽度|
+
+**例子**
+
+```lua
+-- 2025-10-15 zengshuai添加
+-- 设置字体
+lcd.setFont(lcd.font_opposansm12_chinese)
+-- 获取字符串宽度
+local width = lcd.getStrWidth("Hello世界")
+print("字符串宽度:", width)
+
+```
+
+---
+
 ## lcd.drawStr(x,y,str,fg_color)
 
 显示字符串
