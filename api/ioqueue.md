@@ -217,7 +217,7 @@ ioqueue.capture(0)
 
 ---
 
-## ioqueue.capend(hwtimer_id,pin)
+## ioqueue.cap_done(hwtimer_id,pin)
 
 对io操作队列增加结束捕获某个IO命令
 
@@ -238,7 +238,7 @@ ioqueue.capture(0)
 
 ```lua
 -- 结束捕获
-ioqueue.capend(0, 17)
+ioqueue.cap_done(0, 17)
 
 ```
 
