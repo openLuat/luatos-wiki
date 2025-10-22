@@ -19,6 +19,8 @@ log.info("mobile.status()", mobile.status())
         end
    end
 end)
+--注意:因使用了sys.wait()所有api需要在协程中使用
+
 
 ```
 
@@ -181,6 +183,101 @@ log.info("mobile.status()", mobile.status())
 end)
 
 ```
+
+---
+
+## netLed.taskLed(ledPinSetFunc)
+
+网络指示灯模块的运行任务
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+无
+
+---
+
+## netLed.setup(flag,ledpin)
+
+初始化网络指示灯并且立即执行配置后的动作
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|bool|flag 是否打开网络指示灯功能,true为打开,false为关闭|
+|number|ledPin 控制网络指示灯闪烁的GPIO引脚,例如pio.P0_1表示GPIO1|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+netLed.setup(true,27)
+
+```
+
+---
+
+## netLed.setBlinkTime(state,on,off)
+
+配置某种工作状态下指示灯点亮和熄灭的时长（如果用户不配置,使用netLed.lua中ledBlinkTime配置的默认值）
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|state 某种工作状态,仅支持"FLYMODE"、"SIMERR"、"IDLE"、"GPRS"、"SCK"|
+|number|on 指示灯点亮时长,单位毫秒,0xFFFF表示常亮,0表示常灭|
+|number|off 指示灯熄灭时长,单位毫秒,0xFFFF表示常灭,0表示常亮|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值 |
+
+**例子**
+
+```lua
+netLed.setBlinkTime("FLYMODE",1000,500) --表示飞行模式工作状态下,指示灯闪烁规律为: 亮1秒,灭0.5秒
+
+```
+
+---
+
+## netLed.setupBreateLed(ledPin)
+
+呼吸灯
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|function|ledPin 呼吸灯的ledPin用gpio.setup注册返回的方法|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+无
 
 ---
 

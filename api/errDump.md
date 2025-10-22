@@ -66,7 +66,7 @@ errDump.record("socket long time no connect") --记录下"socket long time no co
 
 ---
 
-## errDump.config(enable, period, user_flag, custom_id, host, port)
+## errDump.config(enable, period, user_flag, custom_id, host, port, adapter)
 
 配置关键日志上传IOT平台，这里的日志包括引起luavm异常退出的日志和用户通过record写入的日志，类似于air的errDump
 
@@ -79,7 +79,8 @@ errDump.record("socket long time no connect") --记录下"socket long time no co
 |string|用户的特殊标识，可以为空|
 |string|设备识别号, 4G设备默认是imei,wifi设备默认STA的MAC,其他设备默认是mcu.unique_id|
 |string|服务器域名,默认dev_msg1.openluat.com|
-|int|服务器端口,默认|
+|int|服务器端口,默认12425|
+|int|网络适配器,默认-1,一般不需要设置. 2025.10.22 新增|
 
 **返回值**
 
