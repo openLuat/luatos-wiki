@@ -644,6 +644,27 @@ end)
 
 
 
+### SMS_SENT
+
+短信发送结果
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|result|boolean 发送结果，成功为true, 失败为false|
+
+**例子**
+
+```lua
+sys.subscribe("SMS_SENT", function(result)
+    log.info("sms send result", result)
+end)
+
+```
+
+---
+
 ### SMS_INC
 
 收到短信
