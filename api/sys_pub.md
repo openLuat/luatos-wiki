@@ -153,6 +153,37 @@ end)
 
 ---
 
+## airlink
+
+
+
+[airlink接口文档页](https://wiki.luatos.com/api/airlink.html)
+
+
+
+### AIRLINK_SFOTA_DONE
+
+AIRLINK升级结束消息 2025/10/24启用
+
+**额外返回参数**
+
+|返回参数类型|解释|
+|-|-|
+|bool|result, 升级成功为true，否则为false|
+|string|reason, 失败原因，当前取值有"no_memory" 内存不足, "file_error" 文件打开异常|
+
+**例子**
+
+```lua
+-- 订阅式
+sys.subscribe("AIRLINK_SFOTA_DONE", function(result, reason)
+    log.info("airlink fota", result, reason)
+end)
+
+```
+
+---
+
 ## w5500
 
 
