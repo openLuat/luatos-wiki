@@ -467,7 +467,7 @@ local succ, result = socket.listen(ctrl)
 
 ---
 
-## socket.accept(ctrl)
+## socket.accept(ctrl, args)
 
 作为服务端接收到一个新的客户端，注意，如果是类似W5500的硬件协议栈不支持1对多，则不需要第二个参数
 
