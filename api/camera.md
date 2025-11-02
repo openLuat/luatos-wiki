@@ -349,7 +349,7 @@ camera.config(0, camera.CONF_H264_PMB_BITS, 1)
 
 ---
 
-## camera.pwdn_pin(level)
+## camera.pwdn_pin(id, level)
 
 对于无法用GPIO控制camera pwdn脚的平台，手动控制camera pwdn脚拉高或者拉低,2025/9/6启用
 

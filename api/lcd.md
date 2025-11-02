@@ -780,6 +780,57 @@ lcd.drawGtfontUtf8Gray("啊啊啊",32,4,0,40)
 
 ---
 
+## lcd.drawHzfontUtf8(x, y, str, fontSize, [color], [antialias])
+
+使用HzFont绘制UTF-8字符串
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|x 横坐标|
+|int|y 纵坐标（左下角为基准）|
+|string|str UTF-8字符串|
+|int|fontSize 字体大小（像素）|
+|int|color 颜色值（RGB565，缺省为黑色0x000000）|
+|int|antialias 抗锯齿级别（整数，可选）：|
+
+**返回值**
+
+无
+
+**例子**
+
+无
+
+---
+
+## lcd.getHzFontStrWidth(str, fontSize)
+
+获取HzFont渲染下的UTF-8字符串宽度
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|str UTF-8字符串|
+|int|fontSize 字体大小（像素）|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|宽度（像素）|
+
+**例子**
+
+```lua
+local w = lcd.getHzFontStrWidth("Hello世界", 24)
+
+```
+
+---
+
 ## lcd.getSize()
 
 获取屏幕尺寸

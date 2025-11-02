@@ -36,6 +36,7 @@
 |[ht1621](ht1621.md)|`液晶屏驱动(HT1621/HT1621B)`|
 |[http](http.md)|`http 客户端`|
 |[httpsrv](httpsrv.md)|`http服务端`|
+|[hzfont](hzfont.md)|`HzFont字体库`|
 |[i2c](i2c.md)|`I2C操作`|
 |[i2s](i2s.md)|`数字音频`|
 |[icmp](icmp.md)|`ICMP协议(PING)`|

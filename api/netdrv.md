@@ -272,7 +272,7 @@ netdrv.debug(0, true)
 
 ## netdrv.mreport(config, value)
 
-设置遥测功能（还未实现全部功能）
+设置遥测功能，开启后，会自动上报设备信息，2025/9/25启用
 
 **参数**
 
@@ -294,13 +294,14 @@ netdrv.debug(0, true)
 netdrv.mreport("enable", true)
 netdrv.mreport("enable", false)
 
+-- 设置使用的网络适配器，2025/10/30启用
+netdrv.mreport("adapter_id", socket.LWIP_GP)
+netdrv.mreport("adapter_id", socket.LWIP_STA)
+netdrv.mreport("adapter_id", socket.LWIP_ETH)
+
 -- 立即上报一次, 无参数的方式调用
 netdrv.mreport()
 
--- 设置自定义数据
-netdrv.mreport("custom", {abc=1234})
--- 清除自定义数据
-netdrv.mreport("custom")
 
 ```
 

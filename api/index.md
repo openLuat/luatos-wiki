@@ -39,6 +39,7 @@ hmeta
 ht1621
 http
 httpsrv
+hzfont
 i2c
 i2s
 icmp

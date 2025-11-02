@@ -29,6 +29,16 @@
 |modbus.SLAVE_UNKNOWN|number|从站状态未知|
 |modbus.SLAVE_COMM_TIMEOUT|number|从站通讯超时|
 |modbus.SLAVE_ERROR|number|从站错误|
+|modbus.ILLEGAL_FUNCTION|number|不支持请求的功能码|
+|modbus.ILLEGAL_DATA_ADDRESS|number|请求的数据地址无效或超出范围|
+|modbus.ILLEGAL_DATA_VALUE|number|请求的数据值无效|
+|modbus.SLAVE_DEVICE_FAILURE|number|从站在执行操作时发生内部错误|
+|modbus.ACKNOWLEDGE|number|请求已接受，但需要长时间处理|
+|modbus.SLAVE_DEVICE_BUSY|number|从站正忙，无法处理请求|
+|modbus.NEGATIVE_ACKNOWLEDGE|number|无法执行编程功能|
+|modbus.MEMORY_PARITY_ERROR|number|内存奇偶校验错误|
+|modbus.GATEWAY_PATH_UNAVAILABLE|number|网关路径不可用|
+|modbus.GATEWAY_TARGET_NO_RESPONSE|number|网关目标设备无响应|
 
 
 ## modbus.create_master(type, drive_id, baud_rate, comm_interval_time, comm_timeout, comm_resend_count, comm_reconnection_time)
@@ -276,6 +286,52 @@ modbus.master_stop(mb_rtu)
 
 ---
 
+## modbus.master_on(master_handler, cb)
+
+注册modbus主站事件回调
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|userdata|通过modbus.create_master获取到的上下文|
+|function|cb 回调函数，参数包括 handler, comm_mode, event_type, data_content|
+|return|无|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+-- 回调函数参数如下：
+-- 1. handler: 主站句柄 - 标识是哪个Modbus主站触发的事件
+-- 2. comm_mode: 通信模式 - 字符串类型，标识Modbus通信模式，如'rtu'、'ascii'或'tcp'
+-- 3. event_type: 事件类型 - 字符串类型，如'sent'（发送）或'receive'（接收）
+-- 4. data_content: 数据内容 - table类型，包含消息数据和事件标识符信息
+--    - message_data: 报文原始数据 - table类型，包含完整的Modbus原始报文内容
+--    - message_length: 报文长度 - int类型，原始报文的字节长度
+--    - slave_id: 从站地址 - int类型，Modbus协议中的设备地址，用于在总线上标识从站设备
+--    - func_code: 功能码 - int类型，Modbus协议中的功能代码，标识具体的操作类型（如读线圈、读寄存器等）
+--    - opt_type: 操作类型 - int类型，标识具体的操作类型（如读取、写入等）
+--    - reg_type: 寄存器类型 - int类型，标识操作的寄存器类型（如线圈、离散量、保持寄存器、输入寄存器等）
+--    - reg_addr: 寄存器起始地址 - int类型，操作的寄存器起始位置
+--    - reg_len: 寄存器数量 - int类型，需要操作的寄存器数量
+--    - ip_address: 主站IP地址 - 字符串类型，仅TCP模式有效，标识主站的IP地址
+--    - port: 主站端口号 - int类型，仅TCP模式有效，标识主站的端口号
+--    - slave_handler: 从站句柄 - userdata类型， 标识与哪个从站通信的唯一标识符
+--    - msg_handler: 消息句柄 - userdata类型， 标识是哪个通信消息触发的事件
+--    - slave_status: 从站状态码 - 整数类型
+modbus.master_on(master_handler, function(handler, comm_mode, event_type, data_content)
+    -- 用户自定义代码
+
+end)
+
+```
+
+---
+
 ## modbus.add_slave(master_handler, slave_id, ip, port)
 
 创建并向主站添加一个modbus从站
@@ -350,7 +406,7 @@ modbus.remove_slave(mb_rtu, slave)
 
 |返回值类型|解释|
 |-|-|
-|int|modbus.SLAVE_NORMAL（状态正常），modbus.SLAVE_OFFLINE（设备离线），modbus.SLAVE_UNKNOWN（状态未知），modbus.SLAVE_COMM_TIMEOUT（通讯超时，超时N次转化为离线），modbus.SLAVE_ERROR（错误）|
+|int|modbus.SLAVE_NORMAL（状态正常），modbus.SLAVE_OFFLINE（设备离线），modbus.SLAVE_UNKNOWN（状态未知），modbus.SLAVE_COMM_TIMEOUT（通讯超时），modbus.SLAVE_ERROR（错误）......|
 
 **例子**
 
@@ -568,16 +624,16 @@ modbus.slave_stop(mb_tcp_s)
 
 ---
 
-## modbus.slave_on(slave_handler, cb)
+## modbus.slave_on(master_handler, cb)
 
-注册modbus从站串口事件回调
+注册modbus从站事件回调
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
 |userdata|通过modbus.create_slave获取到的上下文|
-|function|cb 回调函数，参数包括slave_handler, reg_type, opt_type, reg_addr, reg_len|
+|function|cb 回调函数，参数包括 handler, comm_mode, event_type, data_content|
 |return|无|
 
 **返回值**
@@ -587,10 +643,24 @@ modbus.slave_stop(mb_tcp_s)
 **例子**
 
 ```lua
--- 注册modbus从站串口事件回调
-modbus.slave_on(slave_handler, function(slave_handler, reg_type, opt_type, reg_addr, reg_len)
-    -- 用户自定义代码
-    log.info(reg_type, opt_type, reg_addr, reg_len)
+-- 回调函数参数如下：
+-- 1. handler: 主站句柄 - 标识是哪个Modbus主站触发的事件
+-- 2. comm_mode: 通信模式 - 字符串类型，标识Modbus通信模式，如'rtu'、'ascii'或'tcp'
+-- 3. event_type: 事件类型 - 字符串类型，如'sent'（发送）或'receive'（接收）
+-- 4. data_content: 数据内容 - table类型，包含消息数据和事件标识符信息
+--    - message_data: 报文原始数据 - table类型，包含完整的Modbus原始报文内容
+--    - message_length: 报文长度 - int类型，原始报文的字节长度
+--    - slave_id: 从站地址 - int类型，Modbus协议中的设备地址，用于在总线上标识从站设备
+--    - func_code: 功能码 - int类型，Modbus协议中的功能代码，标识具体的操作类型（如读线圈、读寄存器等）
+--    - opt_type: 操作类型 - int类型，标识具体的操作类型（如读取、写入等）
+--    - reg_type: 寄存器类型 - int类型，标识操作的寄存器类型（如线圈、离散量、保持寄存器、输入寄存器等）
+--    - reg_addr: 寄存器起始地址 - int类型，操作的寄存器起始位置
+--    - reg_len: 寄存器数量 - int类型，需要操作的寄存器数量
+--    - ip_address: 主站IP地址 - 字符串类型，仅TCP模式有效，标识主站的IP地址
+--    - port: 主站端口号 - int类型，仅TCP模式有效，标识主站的端口号
+modbus.slave_on(slave_handler, function(handler, comm_mode, event_type, data_content)
+ -- 用户自定义代码
+
 end)
 
 ```
