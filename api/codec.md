@@ -77,7 +77,7 @@ local result, audio_format, num_channels, sample_rate, bits_per_sample, is_signe
 
 ---
 
-## codec.data(decoder, out_buff)
+## codec.data(decoder, out_buff, size)
 
 decoder从文件中解析出原始音频数据，比如从MP3文件里解析出PCM数据，这里的文件路径已经在codec.info传入，不需要再次传入
 

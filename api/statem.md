@@ -1,6 +1,6 @@
 # statem - SM状态机
 
-## statem.create(count, repeat)
+## statem.create(count, repeats)
 
 创建一个新的状态机.
 

@@ -1,6 +1,6 @@
 # ir - 红外遥控
 
-## ir.sendNEC(pin, addr, cmd, repeat, disablePWM)
+## ir.sendNEC(pin, addr, cmd, repeats, disablePWM)
 
 发送NEC数据
 

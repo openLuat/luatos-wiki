@@ -20,7 +20,6 @@ lbsLoc2
 libfota
 libfota2
 libnet
-netLed
 udpsrv
 xmodem
 ```

@@ -276,7 +276,7 @@ local data2 = crypto.cipher_decrypt("AES-128-ECB", "PKCS7", data, "1234567890123
 
 ---
 
-## crypto.crc16(method, data, poly, initial, finally, inReversem outReverse)
+## crypto.crc16(method, data, poly, initial, finally, inReversem, outReverse)
 
 计算CRC16
 
@@ -671,7 +671,7 @@ log.info("hmac_sha256", crypto.md("SHA256", "1234567890", "123456"))
 
 ---
 
-## crypto.hash_init(tp)
+## crypto.hash_init(tp, hmac)
 
 创建流式hash用的stream
 

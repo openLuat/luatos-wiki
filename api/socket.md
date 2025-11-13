@@ -441,7 +441,7 @@ local succ, result = socket.wait(ctrl)
 
 ---
 
-## socket.listen(ctrl)
+## socket.listen(ctrl, multi_client)
 
 作为服务端开始监听
 
@@ -450,6 +450,7 @@ local succ, result = socket.wait(ctrl)
 |传入值类型|解释|
 |-|-|
 |user_data|socket.create得到的ctrl|
+|int|等待accept的客户端数量, 默认0不支持, 取值范围0~8|
 
 **返回值**
 
@@ -462,14 +463,18 @@ local succ, result = socket.wait(ctrl)
 
 ```lua
 local succ, result = socket.listen(ctrl)
+-- 注意, 当目标适配器不支持1对多时,multi_client参数无效,并返回错误
+-- 注意, multi_client参数是可选的, 不传或者传0则表示单客户端模式
+-- multi_client 参数是 2025.11.10新增的, 之前的版本不支持
+local succ, result = socket.listen(ctrl, 8)
 
 ```
 
 ---
 
-## socket.accept(ctrl)
+## socket.accept(ctrl, args)
 
-作为服务端接收到一个新的客户端，注意，如果是类似W5500的硬件协议栈不支持1对多，则不需要第二个参数
+作为服务端接收到一个新的客户端
 
 **参数**
 
@@ -484,11 +489,19 @@ local succ, result = socket.listen(ctrl)
 |-|-|
 |boolean|true没有异常发生，false失败了，如果false则不需要看下一个返回值了，如果false，后续要close|
 |user_data|or nil 如果支持1对多，则会返回新的ctrl，自动create，如果不支持则返回nil|
+|string|客户端ip, 2025.11.10新增|
+|int|客户端port, 2025.11.10新增|
 
 **例子**
 
 ```lua
 local succ, new_netc = socket.accept(ctrl, cb)
+-- 注意, 当目标适配器不支持1对多时,new_netc会是nil, 第二个参数无效
+-- 当第二个参数为nil时, 固定为一对一模式, new_netc也会是nil
+
+-- 新增客户端ip和port返回值
+local succ, new_netc, client_ip, client_port = socket.accept(ctrl, "taskName")
+log.info("accept", succ, new_netc, client_ip, client_port)
 
 ```
 

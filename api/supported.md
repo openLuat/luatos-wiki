@@ -75,6 +75,7 @@
 |[pack](pack.md)|`打包和解包格式串`|
 |[pin](pin.md)|`管脚命名映射`|
 |[pins](pins.md)|`管脚外设复用`|
+|[pinyin](pinyin.md)|`拼音输入法核心库`|
 |[pm](pm.md)|`电源管理`|
 |[protobuf](protobuf.md)|`ProtoBuffs编解码`|
 |[pwm](pwm.md)|`PWM模块`|
@@ -111,4 +112,3 @@
 |[yhm27xx](yhm27xx.md)|`yhm27xx充电芯片`|
 |[ymodem](ymodem.md)|`ymodem协议`|
 |[zbuff](zbuff.md)|`c内存数据操作库`|
-|[zlib](zlib.md)|`zlib压缩/解压缩(已废弃)`|

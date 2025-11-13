@@ -1062,7 +1062,7 @@ local blue = lcd.rgb565(0x00, 0x00, 0xFF, true)
 
 ---
 
-## lcd.qspi(1_wire_command, 1_wire_command, 1_wire_command_4_wire_data, 4_wire_command_4_wire_data, vsync_reg, hsync_cmd, hsync_reg)
+## lcd.qspi(1_wire_command, 1_wire_command_4_wire_data, 4_wire_command_4_wire_data, vsync_reg, hsync_cmd, hsync_reg)
 
 硬件lcd qspi接口配置，需要在lcd.init前配置好
 

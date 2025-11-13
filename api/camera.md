@@ -10,6 +10,7 @@
 |camera.DVP|number|摄像头类型，DVP|
 |camera.ROTATE_0|number|摄像头预览，画面不旋转|
 |camera.ROTATE_90|number|摄像头预览，画面旋转90度|
+|camera.ROTATE_180|number|摄像头预览，画面旋转180度|
 |camera.ROTATE_270|number|摄像头预览，画面旋转270度|
 |camera.CONF_H264_QP_INIT|number|H264编码器初始化QP值|
 |camera.CONF_H264_QP_I_MAX|number|H264编码器I的最大QP值|

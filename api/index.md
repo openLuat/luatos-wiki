@@ -78,6 +78,7 @@ otp
 pack
 pin
 pins
+pinyin
 pm
 protobuf
 pwm
@@ -114,5 +115,4 @@ xxtea
 yhm27xx
 ymodem
 zbuff
-zlib
 ```

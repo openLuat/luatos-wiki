@@ -52,7 +52,7 @@ exremotefile.open({
 }, 
 {
     spi_id = 1,                 -- SPI编号
-    spi_cs = 12，               -- CS片选引脚
+    spi_cs = 12,               -- CS片选引脚
     is_8000_development_board = false, -- 是否使用8000开发板
     is_sdio = false             -- 是否使用sdio挂载
 }, 
