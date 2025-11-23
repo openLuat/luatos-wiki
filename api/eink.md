@@ -80,7 +80,7 @@ eink显示屏初始化
 **例子**
 
 ```lua
--- 初始化spi0的eink.MODEL_4in2bc) 注意:eink初始化之前需要先初始化spi
+-- 初始化spi0的eink.MODEL_4in2bc 注意:eink初始化之前需要先初始化spi
 spi_eink = spi.deviceSetup(0,20,0,0,8,20000000,spi.MSB,1,1)
 log.info("eink.init",
 eink.init(eink.MODEL_4in2bc,{port = "device",pin_dc = 17, pin_pwr = 7,pin_rst = 19,direction = 2,w = 160,h = 80,xoffset = 1,yoffset = 26},spi_eink))

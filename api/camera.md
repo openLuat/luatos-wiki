@@ -17,8 +17,11 @@
 |camera.CONF_H264_QP_P_MAX|number|H264编码器P的最大QP值|
 |camera.CONF_H264_IMB_BITS|number|H264编码器IMB_BITS值|
 |camera.CONF_H264_PMB_BITS|number|H264编码器PMB_BITS值|
+|camera.CONF_H264_PFRAME_NUMS|number|H264编码器P帧数量|
 |camera.CONF_PREVIEW_ENABLE|number|是否启动摄像头预览功能，默认开启|
 |camera.CONF_PREVIEW_ROTATE|number|摄像头预览画面的旋转角度|
+|camera.CONF_UVC_FPS|number|设置USB摄像头的帧率|
+|camera.CONF_LOG_LEVEL|number|设置摄像头日志级别|
 
 
 ## camera.init(InitReg_or_cspi_id, cspi_speed, mode, is_msb, rx_bit, seq_type, is_ddr, only_y, scan_mode, w, h)
