@@ -29,6 +29,7 @@
 |modbus.SLAVE_UNKNOWN|number|从站状态未知|
 |modbus.SLAVE_COMM_TIMEOUT|number|从站通讯超时|
 |modbus.SLAVE_ERROR|number|从站错误|
+|modbus.SLAVE_UNOPEND|number|从站未开启|
 |modbus.ILLEGAL_FUNCTION|number|不支持请求的功能码|
 |modbus.ILLEGAL_DATA_ADDRESS|number|请求的数据地址无效或超出范围|
 |modbus.ILLEGAL_DATA_VALUE|number|请求的数据值无效|
@@ -406,7 +407,7 @@ modbus.remove_slave(mb_rtu, slave)
 
 |返回值类型|解释|
 |-|-|
-|int|modbus.SLAVE_NORMAL（状态正常），modbus.SLAVE_OFFLINE（设备离线），modbus.SLAVE_UNKNOWN（状态未知），modbus.SLAVE_COMM_TIMEOUT（通讯超时），modbus.SLAVE_ERROR（错误）......|
+|int|modbus.SLAVE_NORMAL（状态正常），modbus.SLAVE_OFFLINE（设备离线），modbus.SLAVE_UNKNOWN（状态未知），modbus.SLAVE_COMM_TIMEOUT（通讯超时），modbus.SLAVE_ERROR（错误），modbus.SLAVE_UNOPEND（从站未开启）......|
 
 **例子**
 
@@ -431,7 +432,7 @@ modbus.get_slave_state(slave)
 |int|寄存器类型，modbus.COIL_STATUS（线圈）、modbus.INPUT_STATUS（触点）、modbus.INPUT_REGISTER（输入寄存器）、modbus.HOLDING_REGISTER（保持寄存器）|
 |int|操作类型，modbus.READ（读寄存器）、modbus.WRITE（写多个寄存器）、modbus.WRITE_SINGLE（写单个寄存器），若此参数为modbus.WRITE_SINGLE类型，则reg_len参数总为1|
 |int|寄存器地址，0-65535|
-|int|寄存器数量，最大120|
+|int|寄存器数量，最大125|
 |userdata|用户数据缓冲区，通过zbuff.create获取到的上下文|
 |int|通讯周期，默认值1|
 |int|通讯模式，取 modbus.LOOP（自动执行模式）、modbus.EXEC（手动执行模式）、modbus.SINGLE（单次模式，通讯成功即释放句柄），默认值为modbus.LOOP|

@@ -10,8 +10,10 @@ dhcpsrv
 dnsproxy
 exchg
 exgnss
+exlcd
 exnetif
 exremotefile
+extp
 exvib
 httpdns
 httpplus
