@@ -8,7 +8,6 @@ air153C_wtd
 airlbs
 dhcpsrv
 dnsproxy
-exchg
 exgnss
 exlcd
 exnetif

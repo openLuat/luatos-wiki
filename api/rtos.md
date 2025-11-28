@@ -145,13 +145,15 @@ local bsp = rtos.bsp()
 
 ---
 
-## rtos.version()        
+## rtos.version(more)
 
 获取固件版本号
 
 **参数**
 
-无
+|传入值类型|解释|
+|-|-|
+|int|more 可选参数,默认不传. 传入true时,会额外返回数字版本号|
 
 **返回值**
 
@@ -164,6 +166,10 @@ local bsp = rtos.bsp()
 ```lua
 -- 读取版本号
 local luatos_version = rtos.version()
+-- 读取版本号及数字版本号, 2025.11.1之后的固件支持
+-- 如果不是数字固件,luatos_version_num 会是0
+-- 如果是不支持的固件, luatos_version_num 会是nil
+local luatos_version, luatos_version_num = rtos.version(true)
 
 ```
 
