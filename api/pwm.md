@@ -22,6 +22,8 @@ pwm.setDuty(1, 25) -- 设置PWM1占空比25%
 sys.wait(5000) -- 等待5秒
 pwm.stop(1) -- 关闭PWM1
 
+-- 提醒: pwm.setFreq和pwm.setDuty的, 仅在start/open状态下立即生效, stop/close状态是不会生效的
+
 ```
 
 ## pwm.open(channel, period, pulse, pnum, precision)
