@@ -10,6 +10,7 @@ dhcpsrv
 dnsproxy
 exgnss
 exlcd
+exmtn
 exnetif
 exremotefile
 extp
@@ -21,6 +22,7 @@ lbsLoc2
 libfota
 libfota2
 libnet
+netLed
 udpsrv
 xmodem
 ```

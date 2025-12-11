@@ -85,6 +85,7 @@ pwm
 repl
 rsa
 rtc
+rtmp
 rtos
 sdio
 sensor

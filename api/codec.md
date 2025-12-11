@@ -35,6 +35,12 @@
 **例子**
 
 ```lua
+-- 目前支持：
+-- codec.MP3 解码
+-- codec.AMR 编码+解码
+-- codec.AMR_WB 编码(部分BSP支持，例如Air780EHM,Air8000)+解码
+-- codec.WAV WAV本身就是PCM数据，无需编解码
+-- codec.ULAW codec.ALAW 编码+解码
 -- 创建解码器
 local decoder = codec.create(codec.MP3)--创建一个mp3的decoder
 -- 创建编码器
@@ -100,7 +106,7 @@ decoder从文件中解析出原始音频数据，比如从MP3文件里解析出P
 ```lua
 -- 大内存设备
 local buff = zbuff.create(16*1024)
-local result = codec.data(coder, buff)
+local result = codec.data(coder, buff, 8192)
 -- 小内存设备
 local buff = zbuff.create(8*1024)
 local result = codec.data(coder, buff, 4096)
@@ -111,7 +117,7 @@ local result = codec.data(coder, buff, 4096)
 
 ## codec.encode(coder, in_buffer, out_buffer, mode)
 
-编码音频数据，由于flash和ram空间一般比较有限，除了部分bsp有内部amr编码功能，目前只支持amr-nb编码
+编码音频数据，由于flash和ram空间一般比较有限，除了部分bsp有内部amr编码功能以外只支持amr-nb编码
 
 **参数**
 

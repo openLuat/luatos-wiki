@@ -82,6 +82,7 @@
 |[repl](repl.md)|`"读取-求值-输出" 循环`|
 |[rsa](rsa.md)|`RSA加密解密`|
 |[rtc](rtc.md)|`实时时钟`|
+|[rtmp](rtmp.md)|`RTMP 直播推流`|
 |[rtos](rtos.md)|`RTOS底层操作库`|
 |[sdio](sdio.md)|`sdio`|
 |[sensor](sensor.md)|`传感器操作库`|
