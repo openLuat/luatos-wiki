@@ -111,6 +111,7 @@ ulwip
 usb
 usbapp
 videoplayer
+voip
 w5500
 wdt
 websocket
