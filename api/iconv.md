@@ -83,3 +83,55 @@ iconv.close(cd)
 
 ---
 
+## iconv.gb2utf8(str)
+
+GB2312编码字符串转UTF8编码（快捷函数）
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|待转换的GB2312编码字符串|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|成功返回UTF8编码字符串，失败返回nil|
+
+**例子**
+
+```lua
+local utf8str = iconv.gb2utf8("\xC4\xE3\xBA\xC3")  -- 你好
+log.info("iconv", "gb2utf8", utf8str)
+
+```
+
+---
+
+## iconv.utf82gb(str)
+
+UTF8编码字符串转GB2312编码（快捷函数）
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|待转换的UTF8编码字符串|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|成功返回GB2312编码字符串，失败返回nil|
+
+**例子**
+
+```lua
+local gbstr = iconv.utf82gb("\xE4\xBD\xA0\xE5\xA5\xBD")  -- 你好
+log.info("iconv", "utf82gb", gbstr:toHex())
+
+```
+
+---
+

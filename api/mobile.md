@@ -541,7 +541,7 @@ log.info("cell", json.encode(mobile.scell()))
 
 ---
 
-## mobile.flymode(index, enable)
+## mobile.flymode(index, enable, is_async)
 
 进出飞行模式
 
@@ -551,6 +551,7 @@ log.info("cell", json.encode(mobile.scell()))
 |-|-|
 |int|编号,默认0. 在支持双卡的模块上才会出现0或1的情况|
 |bool|是否设置为飞行模式,true为设置, false为退出,可选|
+|bool|是否异步执行，true异步，false同步，兼容之前的使用情况，默认是false。2026.4.15启用|
 
 **返回值**
 

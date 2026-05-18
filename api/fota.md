@@ -211,3 +211,37 @@ local result = fota.finish(true)
 
 ---
 
+## fota.emgsvc(enable, key, interval, exeption_count, normal_count)
+
+配置最小急救子系统服务功能
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|boolean|enable 是否启用|
+|string|key 设备所在的iot项目key|
+|int|interval 急救服务上报间隔，单位: 分钟|
+|int|exeption_count 在用户脚本运行中异常重启次数，超过该次数则启动急救服务|
+|int|normal_count 在最小急救子系统服务脚本中正常重启次数，超过该次数则退出急救服务|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true, 失败返回false|
+
+**例子**
+
+```lua
+// 开启急救服务，上报间隔1小时，异常重启3次启动急救服务，正常重启10次退出急救服务
+local result = fota.emgsvc(true, "StWtlHHhrPkNdELu2MDSaNMMxxxxxxxx", 60, 3, 10)
+
+// 开启急救服务，其他按默认配置, 上报间隔3个小时，异常重启10次启动急救服务，正常重启20次退出急救服务
+local result = fota.emgsvc(true, "StWtlHHhrPkNdELu2MDSaNMMxxxxxxxx")
+
+
+```
+
+---
+

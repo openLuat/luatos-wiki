@@ -29,7 +29,7 @@ rtmp:destroy()
 
 ```
 
-## rtmp.create(url)
+## rtmp.create(url, adapter_id)
 
 创建RTMP推流上下文
 
@@ -38,6 +38,7 @@ rtmp:destroy()
 |传入值类型|解释|
 |-|-|
 |string|url RTMP服务器地址, 格式: rtmp://host:port/app/stream|
+|int|adapter_id 网络适配器ID, 可选, 默认使用系统默认适配器|
 
 **返回值**
 
@@ -86,6 +87,8 @@ rtmp:setCallback(function(state, ...)
         print("推流中")
     elseif state == rtmp.STATE_DISCONNECTING then
         print("正在断开")
+    elseif state == rtmp.STATE_DISCONNECTED then
+        print("已断开连接")
     elseif state == rtmp.STATE_ERROR then
         print("错误:", ...)
     end
@@ -164,6 +167,29 @@ rtmp:disconnect()
 
 ```lua
 rtmp:start()
+
+```
+
+---
+
+## rtmp:stop()
+
+停止RTMP事件轮询
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|nil|无返回值|
+
+**例子**
+
+```lua
+rtmp:stop()
 
 ```
 

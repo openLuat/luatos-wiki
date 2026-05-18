@@ -13,10 +13,12 @@
 |eink.MODEL_1in54c|number|1.54寸c|
 |eink.MODEL_1in54r|number|1.54寸三色屏152*152|
 |eink.MODEL_2in13|number|2.13寸|
+|eink.MODEL_2in13_V4|number|2.13寸V4|
 |eink.MODEL_2in13bc|number|2.13寸bc|
 |eink.MODEL_2in13d|number|2.13寸d|
 |eink.MODEL_2in13_V2|number|2.13寸V2|
-|eink.MODEL_2in54b_V3|number|2.13寸b_V3|
+|eink.MODEL_2in13b_V3|number|2.13寸b_V3|
+|eink.MODEL_2in13b_V4|number|2.13寸b_V4|
 |eink.MODEL_2in66|number|2.66寸|
 |eink.MODEL_2in66b|number|2.66寸b|
 |eink.MODEL_2in7|number|2.7寸|
@@ -95,33 +97,6 @@ eink.init(eink.MODEL_4in2bc,{port = "device",pin_dc = 17, pin_pwr = 7,pin_rst = 
 
 ---
 
-## eink.setup(full, spiid, pin_busy, pin_reset, pin_dc, pin_cs)
-
-初始化eink
-
-**参数**
-
-|传入值类型|解释|
-|-|-|
-|int|全屏刷新0,局部刷新1,默认是全屏刷新|
-|int|所在的spi,默认是0|
-|int|Busy 忙信号管脚|
-|int|Reset 复位管脚|
-|int|DC 数据命令选择管脚|
-|int|CS 使能管脚|
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|boolean|成功返回true,否则返回false|
-
-**例子**
-
-无
-
----
-
 ## eink.sleep()
 
 进入休眠模式，再次使用时需要重新初始化
@@ -179,7 +154,7 @@ eink.init(eink.MODEL_4in2bc,{port = "device",pin_dc = 17, pin_pwr = 7,pin_rst = 
 
 |返回值类型|解释|
 |-|-|
-|nil|无返回值|
+|bool|成功返回true,否则返回false|
 
 **例子**
 
@@ -565,6 +540,115 @@ eink.setCtx(1)
     eink.print(30, 20, "LuatOS-AIR780E",0x00)
     eink.show().wait()
     log.info("e-paper 1.54", "Testing End")
+
+```
+
+---
+
+## eink.drawHzfont(x, y, text, size, antialias)
+
+在EINK屏幕上绘制HzFont UTF-8文本
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|number|x X坐标|
+|number|y Y坐标|
+|string|text UTF-8文本（支持中文、英文、数字）|
+|number|size 字号，范围12-255|
+|number|antialias 抗锯齿等级，-1=自动，1-3=指定等级，可选|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true，失败返回false|
+
+**例子**
+
+```lua
+-- 使用HzFont绘制文本
+hzfont.init()  -- 先初始化HzFont
+eink.drawHzfont(10, 10, "合宙LuatOS", 20, 1)
+eink.drawHzfont(10, 50, "Hello世界", 24, 2)
+
+```
+
+---
+
+## eink.getHzfontWidth(text, size)
+
+获取HzFont UTF-8文本的像素宽度
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|text UTF-8文本|
+|number|size 字号|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|number|文本像素宽度，失败返回0|
+
+**例子**
+
+```lua
+local width = eink.getHzfontWidth("合宙LuatOS", 20)
+log.info("width", width)
+
+```
+
+---
+
+## eink.initHzfont()
+
+初始化HzFont EINK后端
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true，失败返回false|
+
+**例子**
+
+```lua
+eink.initHzfont()
+
+```
+
+---
+
+## eink.setHzfontParams(size, antialias, threshold)
+
+设置HzFont EINK渲染参数
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|number|size 字号，范围12-255|
+|number|antialias 抗锯齿等级，-1=自动，1-3=指定等级，可选|
+|number|threshold 灰度阈值，0-255，可选|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true，失败返回false|
+
+**例子**
+
+```lua
+eink.setHzfontParams(20, 1, 128)
 
 ```
 

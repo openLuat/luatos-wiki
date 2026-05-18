@@ -93,7 +93,8 @@ exnetif.set_priority_order({
             ping_time = 10000,              -- 填写ping_ip且未ping通时的检测间隔(ms, 可选,默认为10秒)
                                             -- 定时ping将会影响模块功耗，使用低功耗模式的话可以适当延迟间隔时间
             tp = netdrv.CH390,              -- 网卡芯片型号(选填参数)，仅spi方式外挂以太网时需要填写。
-            opts = { spi = 1, cs = 12 },    -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。
+            opts = { spi = 1, cs = 12, irq = 19 }, -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。irq为中断引脚(选填参数)，配置后可使用中断模式提高响应速度
+                                            -- 使用CH390H时，推荐将IRQ引脚连接到模组的GPIO，启用中断模式
             static_ip = {                   -- 静态ip配置(选填参数)，不填写则使用dhcp获取ip
                 ipv4 = "192.168.5.100",     -- ip地址(string)
                 mark = "255.255.255.0",     -- 子网掩码(string)
@@ -131,7 +132,7 @@ exnetif.set_priority_order({
             ETHUSER1 = { -- 以太网配置
                 pwrpin = 13, -- 供电使能引脚(number)
                 tp = netdrv.CH390, -- 网卡芯片型号(选填参数)，仅spi方式外挂以太网时需要填写。
-                opts = {spi = 0, cs = 15}, -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。
+                opts = {spi = 0, cs = 15, irq = 18}, -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。irq为中断引脚(选填参数)，配置后可使用中断模式提高响应速度
                 static_ip = {                   -- 静态ip配置(选填参数)，不填写则使用dhcp获取ip
                     ipv4 = "192.168.5.100",     -- ip地址(string)
                     mark = "255.255.255.0",     -- 子网掩码(string)
@@ -145,6 +146,43 @@ exnetif.set_priority_order({
         {
             ETHERNET = { -- 以太网配置
                 pwrpin = 13, -- 供电使能引脚(number)
+            }
+        }
+    })
+-- Air1601单网络模式下使用UART接口外挂4G模组(Air780EPM)
+    exnetif.set_priority_order({
+        {
+            airlink_4G = { -- AirLink 4G配置
+                auto_socket_switch = false,     -- 切换网卡时是否断开之前网卡的所有socket连接并用新的网卡重新建立连接
+                airlink_type = airlink.MODE_UART, -- airlink工作模式：UART模式
+                airlink_uart_id = 3,            -- airlink使用的UART接口ID(选填参数)，UART模式时填写
+                airlink_uart_baud = 2000000,    -- airlink使用的UART波特率(选填参数)，默认2000000
+                airlink_adapter = socket.LWIP_USER0 -- 网卡标识(选填参数)，Air1601使用socket.LWIP_USER0
+            }
+        }
+    })
+-- Air8101单网络模式下使用SPI接口外挂4G模组(Air780EPM)
+    exnetif.set_priority_order({
+        {
+            airlink_4G = { -- AirLink 4G配置
+                auto_socket_switch = false,     -- 切换网卡时是否断开之前网卡的所有socket连接并用新的网卡重新建立连接
+                airlink_type = airlink.MODE_SPI_MASTER, -- airlink工作模式：SPI主模式
+                airlink_spi_id = 0,             -- airlink使用的SPI接口ID(选填参数)，SPI模式时填写
+                airlink_cs_pin = 15,            -- airlink使用的片选引脚gpio号(选填参数)，SPI模式时填写
+                airlink_rdy_pin = 48            -- airlink使用的rdy引脚gpio号(选填参数)，SPI模式时填写
+            }
+        }
+    })
+-- Air1601单网络模式下使用airlink WiFi（WHALE方案）
+    exnetif.set_priority_order({
+        {
+            airlink_wifi = { -- AirLink WiFi配置（Air1601 WHALE方案）
+                auto_socket_switch = false,     -- 切换网卡时是否断开之前网卡的所有socket连接并用新的网卡重新建立连接
+                airlink_type = airlink.MODE_UART, -- airlink工作模式：UART模式
+                airlink_uart_id = 3,            -- airlink使用的UART接口ID(选填参数)，UART模式时填写
+                airlink_uart_baud = 2000000,    -- airlink使用的UART波特率(选填参数)，默认2000000
+                ssid = "your_ssid",             -- WiFi名称(string)
+                password = "your_pwd",           -- WiFi密码(string)
             }
         }
     })
@@ -203,11 +241,11 @@ exnetif.set_priority_order({
     exnetif.setproxy(socket.LWIP_ETH, socket.LWIP_USER1, {
             ethpower_en = 20,-- 以太网模块的pwrpin引脚(gpio编号)
             tp = netdrv.CH390, -- 网卡芯片型号(选填参数)，仅spi方式外挂以太网时需要填写。
-            opts = {spi = 0, cs = 8}, -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。
+            opts = {spi = 0, cs = 8, irq = 19}, -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。irq为中断引脚(选填参数)，配置后可使用中断模式提高响应速度
             main_adapter = {
                 ethpower_en = 21,-- 以太网模块的pwrpin引脚(gpio编号)
                 tp = netdrv.CH390, -- 网卡芯片型号(选填参数)，仅spi方式外挂以太网时需要填写。
-                opts = {spi = 1, cs = 12}
+                opts = {spi = 1, cs = 12, irq = 20} -- irq为中断引脚(选填参数)，配置后可使用中断模式提高响应速度
             }
         }) then
     -- wifi_sta提供网络开启wifi_ap热点供设备上网
@@ -236,7 +274,7 @@ exnetif.set_priority_order({
     })
     exnetif.setproxy(socket.LWIP_ETH, socket.LWIP_GP, {
         tp = netdrv.CH390,               -- 网卡芯片型号(选填参数)，仅spi方式外挂以太网时需要填写。
-        opts = { spi = 1, cs = 12},      -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。
+        opts = { spi = 1, cs = 12, irq = 19}, -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。irq为中断引脚(选填参数)，配置后可使用中断模式提高响应速度
         ethpower_en = 140,               -- 以太网模块的pwrpin引脚(gpio编号)
         adapter_addr = "192.168.5.1",    -- adapter网卡的ip地址(选填),需要自定义ip和网关ip时填写
         adapter_gw= { 192, 168, 5, 1 },   -- adapter网卡的网关地址(选填),需要自定义ip和网关ip时填写
@@ -247,14 +285,14 @@ exnetif.set_priority_order({
         password = "password123",        -- WiFi密码(string)，网卡包含wifi时填写
         main_adapter={
             tp = netdrv.CH390,               -- 网卡芯片型号(选填参数)，仅spi方式外挂以太网时需要填写。
-            opts = { spi = 1, cs = 12},      -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。
+            opts = { spi = 1, cs = 12, irq = 20}, -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。irq为中断引脚(选填参数)，配置后可使用中断模式提高响应速度
             ethpower_en = 140,               -- 以太网模块的pwrpin引脚(gpio编号)
         }
     })
     -- WIFI提供网络供以太网设备上网
     exnetif.setproxy(socket.LWIP_ETH, socket.LWIP_STA, {
         tp = netdrv.CH390,               -- 网卡芯片型号(选填参数)，仅spi方式外挂以太网时需要填写。
-        opts = { spi = 1, cs = 12},      -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。
+        opts = { spi = 1, cs = 12, irq = 19}, -- 外挂方式,需要额外的参数(选填参数)，仅spi方式外挂以太网时需要填写。irq为中断引脚(选填参数)，配置后可使用中断模式提高响应速度
         ethpower_en = 140,               -- 以太网模块的pwrpin引脚(gpio编号)
         main_adapter = {
             ssid = "test",                -- 提供网络的网卡开启参数

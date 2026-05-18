@@ -16,6 +16,9 @@ exmtn
 exnetif
 exremotecam
 exremotefile
+exsip
+exsipclient
+exsipproto
 extp
 exvib
 httpdns

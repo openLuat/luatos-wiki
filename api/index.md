@@ -110,6 +110,7 @@ uart
 ulwip
 usb
 usbapp
+videoplayer
 w5500
 wdt
 websocket

@@ -107,6 +107,7 @@
 |[ulwip](ulwip.md)|`用户空间的lwip集成(开发中)`|
 |[usb](usb.md)|`usb操作库`|
 |[usbapp](usbapp.md)|`USB功能操作`|
+|[videoplayer](videoplayer.md)|`视频播放库`|
 |[w5500](w5500.md)|`w5500以太网驱动`|
 |[wdt](wdt.md)|`watchdog操作库`|
 |[websocket](websocket.md)|`websocket客户端`|

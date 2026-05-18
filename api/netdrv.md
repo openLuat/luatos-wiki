@@ -46,14 +46,13 @@ netdrv.dhcp(socket.LWIP_ETH, true)
 netdrv.setup(socket.LWIP_ETH, netdrv.CH390, {spi=0,cs=8,irq=20})
 
 -- 初始化 OpenVPN 虚拟网卡 (需要通过其他网卡提供网络连接)
--- 支持 TLS 证书认证和静态密钥认证两种模式
+-- 仅支持 TLS 证书认证
 local ok = netdrv.setup(socket.LWIP_USER0, netdrv.OPENVPN, {
-    ovpn_remote_ip = "vpn.example.com",          -- VPN 服务器地址
+    ovpn_remote_ip = "10.0.0.1",                -- VPN 服务器IP地址
     ovpn_remote_port = 1194,                     -- VPN 服务器端口 (默认 1194)
     ovpn_ca_cert = ca_cert_pem_string,           -- CA 证书 (PEM 格式, 可选)
     ovpn_client_cert = client_cert_pem_string,   -- 客户端证书 (PEM 格式, 可选)
     ovpn_client_key = client_key_pem_string,     -- 客户端私钥 (PEM 格式, 可选)
-    ovpn_static_key = static_key_binary,         -- 静态密钥 (可选, 64 字节以内)
 })
 -- 完整示例见 openvpn/example_netdrv.lua
 -- 详细说明见 openvpn/usage.md 和 openvpn/PARAMETER_HANDLING.md
@@ -150,13 +149,13 @@ log.info("netdrv", "mac addr", netdrv.mac(socket.LWIP_ETH))
 
 ## netdrv.napt(id)
 
-开启或关闭NAPT
+开启或关闭NAPT。关闭时会清除所有映射表。开启NAPT前请确保网关适配器已就绪。
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|int|网关适配器的id|
+|int|网关适配器的id, 传-1或nil关闭NAPT并清除所有映射表|
 
 **返回值**
 
@@ -171,7 +170,7 @@ log.info("netdrv", "mac addr", netdrv.mac(socket.LWIP_ETH))
 -- 使用4G网络作为主网关出口
 netdrv.napt(socket.LWIP_GP)
 
--- 关闭napt功能
+-- 关闭napt功能, 清除所有映射表
 netdrv.napt(-1)
 
 ```

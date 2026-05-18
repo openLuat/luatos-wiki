@@ -237,7 +237,7 @@ log.info("sfud.eraseWrite",sfud.eraseWrite(sfud_device,1024,"sfud"))
 
 ## sfud.getInfo(flash)
 
-获取 Flash 容量和page大小
+获取 Flash 信息
 
 **参数**
 
@@ -249,8 +249,9 @@ log.info("sfud.eraseWrite",sfud.eraseWrite(sfud_device,1024,"sfud"))
 
 |返回值类型|解释|
 |-|-|
-|int|Flash 容量|
-|int|page 页大小|
+|int|capacity 总容量 (byte)|
+|int|prog_size 编程最小单位 (byte)|
+|int|erase_size 擦除最小单位 (byte)|
 
 **例子**
 

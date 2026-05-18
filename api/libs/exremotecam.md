@@ -92,6 +92,7 @@ sys.taskInit(camera_start)
 |string|camera_param.brand 摄像头品牌|
 |string|camera_param.host 摄像头/NVR的IP地址|
 |number|camera_param.channel 摄像头通道号（主要用于NVR）|
+|string|camera_param.save_path 照片保存路径（可选，默认为"/sd/1.jpeg"）|
 
 **返回值**
 

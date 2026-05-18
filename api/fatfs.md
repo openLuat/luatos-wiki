@@ -87,7 +87,7 @@
 
 ```lua
 -- 注意, 取消挂载, 在 2025.9.29 之后编译的固件才真正支持
-fatfs.mount("/sd")
+fatfs.unmount("/sd")
 
 ```
 

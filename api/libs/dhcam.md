@@ -168,6 +168,7 @@ URL编码函数，用于将字符串转换为符合URL标准的编码格式
 |table|dahua_param 大华摄像头拍照配置参数|
 |string|dahua_param.host 摄像头/NVR的IP地址|
 |number|dahua_param.channel 摄像头通道号|
+|string|dahua_param.save_path 照片保存路径（可选，默认为"/sd/1.jpeg"）|
 
 **返回值**
 

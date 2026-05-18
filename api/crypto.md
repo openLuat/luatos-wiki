@@ -1,5 +1,17 @@
 # crypto - 加解密和hash函数
 
+## 常量
+
+|常量|类型|解释|
+|-|-|-|
+|crypto.MD_MD5|int|MD5哈希类型常量,用于pk_sign/pk_verify|
+|crypto.MD_SHA1|int|SHA1哈希类型常量,用于pk_sign/pk_verify|
+|crypto.MD_SHA224|int|SHA224哈希类型常量,用于pk_sign/pk_verify|
+|crypto.MD_SHA256|int|SHA256哈希类型常量,用于pk_sign/pk_verify|
+|crypto.MD_SHA384|int|SHA384哈希类型常量,用于pk_sign/pk_verify|
+|crypto.MD_SHA512|int|SHA512哈希类型常量,用于pk_sign/pk_verify|
+
+
 ## crypto.md5(str)
 
 计算md5值
@@ -783,6 +795,127 @@ local hashResult = crypto.hash_finish(stream)
 local ck = crypto.checksum("OK")
 log.info("checksum", "ok", string.format("%02X", ck))
 -- 第二个参数mode在2023.5.23日添加
+
+```
+
+---
+
+## crypto.crc_file(mode, path, ...)
+
+计算文件的CRC校验值
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|CRC模式, "crc32" 计算crc32, "crc8" 计算crc8, "crc16_modbus" 计算modbus crc16, 其他值作为crc16的method参数(IBM/MAXIM/USB/MODBUS/CCITT/CCITT-FALSE/X25/XMODEM/DNP/USER-DEFINED)|
+|string|文件路径|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|CRC值,若文件不存在则无返回值|
+
+**例子**
+
+```lua
+-- 计算文件的CRC32
+local crc = crypto.crc_file("crc32", "/luadb/test.bin")
+-- 计算文件的CRC32,自定义参数
+local crc = crypto.crc_file("crc32", "/luadb/test.bin", 0xFFFFFFFF, 0x04C11DB7, 0xFFFFFFFF)
+-- 计算文件的CRC16 MODBUS
+local crc = crypto.crc_file("crc16_modbus", "/luadb/test.bin")
+-- 计算文件的CRC16 IBM
+local crc = crypto.crc_file("IBM", "/luadb/test.bin")
+-- 计算文件的CRC8
+local crc = crypto.crc_file("crc8", "/luadb/test.bin")
+
+```
+
+---
+
+## crypto.pk_sign(md_type, hash, privkey, password)
+
+使用非对称密钥签名 (RSA/EC 等, 自动识别密钥类型)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|hash算法类型常量, 例如 crypto.MD_SHA256|
+|string|待签名的hash原始字节(非hex), 长度须与hash算法输出匹配|
+|string|私钥数据, 支持PEM格式(-----BEGIN...)和DER二进制两种|
+|string|私钥密码, 可选, 默认为空|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|签名结果(原始字节), 失败返回nil|
+
+**例子**
+
+```lua
+-- RSA 签名示例
+local hash = crypto.sha256("hello world"):fromHex()
+local sig = crypto.pk_sign(crypto.MD_SHA256, hash, privkey_pem)
+log.info("pk", "sign len", sig and #sig or 0)
+
+-- EC 签名示例 (公钥为 SPKI 格式 "-----BEGIN PUBLIC KEY-----")
+local hash = crypto.sha256("hello world"):fromHex()
+local sig = crypto.pk_sign(crypto.MD_SHA256, hash, ec_privkey_pem)
+log.info("pk", "ec sign len", sig and #sig or 0)
+
+```
+
+---
+
+## crypto.pk_verify(md_type, hash, pubkey, signature)
+
+使用非对称公钥验签 (RSA/EC 等, 自动识别密钥类型)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|hash算法类型常量, 例如 crypto.MD_SHA256|
+|string|待验证的hash原始字节(非hex)|
+|string|公钥数据, 支持PEM格式(-----BEGIN...)和DER二进制两种|
+
+**返回值**
+
+无
+
+**例子**
+
+无
+
+---
+
+## crypto.pk_type(key, is_private)
+
+获取密钥类型字符串
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|密钥数据, 支持PEM格式和DER二进制格式|
+|boolean|是否为私钥, true=私钥, false/nil=公钥|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|类型字符串("rsa"/"ec"/"ecdsa"/"ec_dh"等), 解析失败返回nil|
+
+**例子**
+
+```lua
+local ktype = crypto.pk_type(pubkey_pem)            -- 公钥
+local ktype = crypto.pk_type(privkey_pem, true)     -- 私钥
+log.info("pk", "key type", ktype)
 
 ```
 

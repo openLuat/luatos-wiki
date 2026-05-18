@@ -106,3 +106,35 @@ end
 
 ---
 
+## miniz.unzip(zip_file_path, target_dir, debug)
+
+解压ZIP文件到指定目录
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|zip_file_path ZIP文件的完整路径|
+|string|target_dir 目标解压目录的完整路径, 必须以 / 结尾|
+|boolean|debug 可选, 是否输出解压过程日志, 默认为false|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true，失败返回false|
+
+**例子**
+
+```lua
+local success = miniz.unzip("/test/csdk.zip", "/output/", true)
+if success then
+    log.info("unzip", "解压成功")
+else
+    log.error("unzip", "解压失败")
+end
+
+```
+
+---
+

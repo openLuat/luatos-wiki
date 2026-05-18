@@ -71,8 +71,8 @@ sys.taskInit(function()
     end
 end)
 
-sys.subscribe("PING_RESULT", function(id, time, dst)
-    log.info("ping", id, time, dst);
+sys.subscribe("PING_RESULT", function(id, time, dst, ttl)
+    log.info("ping", id, time, dst, ttl);
 end)
 
 ```

@@ -23,6 +23,11 @@
 |camera.CONF_PREVIEW_ROTATE|number|摄像头预览画面的旋转角度|
 |camera.CONF_UVC_FPS|number|设置USB摄像头的帧率|
 |camera.CONF_LOG_LEVEL|number|设置摄像头日志级别|
+|camera.CONF_UVC_FORMAT|number|USB摄像头数据流类型|
+|camera.CONF_UVC_RESOLUTION|number|USB摄像头的数据流中具体数据信息，包括图像大小和帧率|
+|camera.FORMAT_RAW|number|USB摄像头数据流类型无压缩原始图像|
+|camera.FORMAT_MJPG|number|USB摄像头的数据流类型mjpg|
+|camera.FORMAT_H264|number|USB摄像头的数据流类型H264|
 
 
 ## camera.init(InitReg_or_cspi_id, cspi_speed, mode, is_msb, rx_bit, seq_type, is_ddr, only_y, scan_mode, w, h)
@@ -88,12 +93,24 @@ camera.on(0, "scanned", function(id, event)
 --event 多种类型，详见下表
     print(id, event)
 end)
+camera.on(0, "usb_raw", function(app_id, event, param) -- 2026/4/6新增
+--app_id int usb应用id
+--event 多种类型，详见下表
+--param 返回参数
+    print(app_id, event)
+end)
 --[[
-event可能出现的值有
+
+事件名称填 "scanned" 情况下, event可能出现的值有
   boolean型 false   摄像头没有正常工作，检查硬件和软件配置
   boolean型 true    拍照模式下拍照成功并保存完成，可以读取照片文件数据进一步处理，比如读出数据上传
   int型 原始图像大小 RAW模式下，采集完一帧图像后回调，回调值为图像数据大小，可以对传入的zbuff做进一步处理，比如读出数据上传
   string型  扫码结果 扫码模式下扫码成功一次，并且回调解码值，可以对回调值做进一步处理，比如打印到LCD上
+事件名称填 "usb_raw" 情况下, event和param可能出现的值
+  usb.EV_NEW_RX     接收到新的一帧数据，param为zbuff序号，0~2，如果只设置了2个，就是0~1
+  usb.EV_RX_ERR     接收数据发生错误
+  usb.EV_CONNECT    摄像头接入完成，param为hub port序号，1~15
+  usb.EV_DISCONNECT 摄像头拔出，param为hub port序号，1~15
 ]]
 
 ```
@@ -217,7 +234,7 @@ camera.capture(0, buff, 80)
 
 ## camera.video(id, w, h, out_path)
 
-camera输出视频流到USB
+camera输出视频流到USB，即将废弃，不要使用
 
 **参数**
 
@@ -364,6 +381,7 @@ camera.config(0, camera.CONF_H264_PMB_BITS, 1)
 |-|-|
 |int|camera id,例如0|
 |int|pwdn脚电平，1高电平，0低电平|
+|return|nil|
 
 **返回值**
 
@@ -389,6 +407,7 @@ camera.pwdn_pin(camera_id, 0)
 |-|-|
 |int|camera id,例如0|
 |int|reset脚电平，1高电平，0低电平|
+|return|nil|
 
 **返回值**
 
@@ -399,6 +418,154 @@ camera.pwdn_pin(camera_id, 0)
 ```lua
 -- camera reset脚高电平
 camera.reset_pin(camera_id, 1)
+
+```
+
+---
+
+## camera.stream(id, app_id)
+
+camera输出/停止数据流
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|id|camera id|
+|app_id|如果是usb摄像头，则输入usb应用id，其他留空|
+|int|跳帧，针对USB摄像头，跳过N帧后上报，一般情况正常传输是30fps，如果脚本处理不过来，可以跳过N帧上报，默认是0，即不跳|
+|int|图像数据最小长度，针对USB摄像头ISO传输可能漏数据的情况，只有大于最小长度的图像帧会上报，默认是10KB|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+=
+camera.stream(camera.USB, app_id)
+
+```
+
+---
+
+## camera.cache(id, app_id, buff0, buff1, buff2)
+
+配置camera输出数据流到用户指定的zbuff缓存区，需要输入2~3个zbuff，并通过camera.on设置的回调函数返回具体哪一个zbuff有数据 2026/4/5启用
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|id|camera id|
+|app_id|如果是usb摄像头，则输入usb应用id，其他留空|
+|userdata|zbuff0|
+|userdata|zbuff1|
+|userdata|zbuff2|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+buff0 = zbuff.create(1024*768*2)
+buff1 = zbuff.create(1024*768*2)
+buff2 = zbuff.create(1024*768*2)    --可以去掉，最少需要2个缓存
+camera.cache(camera.USB, app_id, buff0, buff1, buff2)
+
+```
+
+---
+
+## camera.get_usb_config(app_id, key, param1, param2)
+
+获取USB摄像头图像参数，根据不同的配置项的id和参数值组合，有不同的返回值组合
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|app_id usb应用id|
+|int|配置项的id，目前只有camera.CONF_UVC_FORMAT,camera.CONF_UVC_RESOLUTION|
+|int|参数1|
+|int|参数2|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+|int|value1|
+|int|value2|
+|int|value3|
+
+**例子**
+
+```lua
+-- 本函数于 2026.4.5 新增, 当前仅Air1601可用
+--配置项的id和参数值组合，及返回如下，第一个返回值固定是成功、失败，不再表述，从第二个返回值开始描述
+--1、查询USB摄像头数据流有多少种类型
+--通常返回1~3, value2和value3是nil
+result,value1 = camera.get_usb_config(id, camera.CONF_UVC_FORMAT)
+--2、查询USB摄像头某种数据流有多少种图像类型，param1在1~组合1的返回值里选
+--通常返回数据流类型(0 原始图像，1 mjpg，2 h264), 图像类型数量1~12, value3是nil
+result,value1,value2 = camera.get_usb_config(id, camera.CONF_UVC_FORMAT, 1)    --数据流1的数据流类型，及包含的图像类型数量
+--3、查询USB摄像头某种数据流下某种图像类型的具体参数，param1选0~2(0 原始图像，1 mjpg，2 h264), param2在1~组合2的返回值图像类型数量里选
+--返回值分别为帧率，图像宽，图像高
+result,fps,w,h = camera.get_usb_config(id, camera.CONF_UVC_RESOLUTION, 1, 3)    --数据流1第4种图像类型的具体值
+-- 打印所有支持的数据类型
+local res, format_num, format_index, frame_num, frame_index, type, fps, w, h
+res, format_num= camera.get_usb_config(camera_id, camera.CONF_UVC_FORMAT)
+log.info("总共有", format_num, "种数据流格式")
+for format_index = 1, format_num, 1 do
+    res, type, frame_num = camera.get_usb_config(camera_id, camera.CONF_UVC_FORMAT, format_index)
+    log.info("数据流序号", format_index, "数据流格式", type, "总共有", frame_num, "图像格式")
+    for frame_index = 1, frame_num, 1 do
+        res, fps, w, h = camera.get_usb_config(camera_id, camera.CONF_UVC_RESOLUTION, format_index, frame_index)
+        log.info("图像格式序号", frame_index, "图像格式", type, "帧率", fps, "图像宽度", w, "图像高度", h)
+    end
+end
+
+```
+
+---
+
+## camera.set_usb_config(app_id, key, param1, param2)
+
+配置USB摄像头图像参数，根据不同的配置项的id和参数值组合，有不同的设置效果
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|int|app_id usb应用id|
+|int|配置项的id，目前只有camera.CONF_UVC_RESOLUTION|
+|int|参数1|
+|int|参数2|
+|int|参数3|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|成功返回true,否则返回false|
+
+**例子**
+
+```lua
+-- 本函数于 2026.4.5 新增, 当前仅Air1601可用
+--配置项的id和参数值组合如下
+--1、设置USB摄像头使用的数据流和图像类型序号
+result = camera.set_usb_config(id, camera.CONF_UVC_RESOLUTION, 1, 5)--配置USB摄像头使用数据流1下第6种图像类型
+--2、设置USB摄像头使用的数据流类型，宽度，高度。注意，如果摄像头不支持，则启动会失败，建议先用get_usb_config查询一下
+result = camera.set_usb_config(id, camera.CONF_UVC_RESOLUTION, camera.FORMAT_MJPG, 1024, 768)--配置USB摄像头使用mjpg方式，宽度1024，高度768
 
 ```
 

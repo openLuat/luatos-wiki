@@ -3,6 +3,12 @@
 **示例**
 
 ```lua
+V1.2：
+修改sdcard_opts参数为可选参数，如果为nil则不挂载SD卡
+修改close()函数，不再强制卸载SD卡，避免影响其他SD卡业务
+V1.1：
+移除sdcard_opts.is_sdio参数、新增sdcard_opts.is_8101参数，用于挂载8101 sd卡
+V1.0：
 注：在使用exremotefile 扩展库时，需要将同一目录下的explorer.html文件烧录进模组中，否则无法启动server服务器来创建文件管理系统!!!
 
 注：如果使用Air8000开发板测试，必须自定义配置is_8000_development_board = true
@@ -11,10 +17,11 @@
 
 本文件的对外接口有2个：
 1、exremotefile.open(ap_opts, sdcard_opts, server_opts)：启动远程文件管理系统，可配置AP参数、SD卡参数和服务器参数
+-- sdcard_opts为nil时，不挂载SD卡，适用于客户自行管理SD卡的场景
 -- 启动后连接AP热点，直接使用luatools日志中默认的地址"http://192.168.4.1:80/explorer.html"来访问文件管理服务器。
 -- 如果使用自定义配置，则需要根据配置中的server_addr和server_port参数来访问文件管理服务器。
 
-2、exremotefile.close()：关闭远程文件管理系统，停止AP热点、卸载SD卡和关闭HTTP服务器
+2、exremotefile.close()：关闭远程文件管理系统，停止AP热点和关闭HTTP服务器（不卸载SD卡）
 
 ```
 
@@ -54,7 +61,7 @@ exremotefile.open({
     spi_id = 1,                 -- SPI编号
     spi_cs = 12,               -- CS片选引脚
     is_8000_development_board = false, -- 是否使用8000开发板
-    is_sdio = false             -- 是否使用sdio挂载
+    is_8101 = false             -- 是否使用sdio挂载
 }, 
 {
     server_addr = "192.168.4.1",    -- 服务器地址
@@ -62,30 +69,6 @@ exremotefile.open({
     user_name = "admin",        -- 用户名
     user_pwd = "123456"          -- 密码
 })
-
-```
-
----
-
-## exremotefile.close()
-
-关闭文件管理系统，包括停止HTTP文件服务器、取消TF/SD卡挂载和停止AP热点
-
-**参数**
-
-无
-
-**返回值**
-
-|返回值类型|解释|
-|-|-|
-|无|无返回值|
-
-**例子**
-
-```lua
--- 关闭文件管理系统
--- exremotefile.close()
 
 ```
 

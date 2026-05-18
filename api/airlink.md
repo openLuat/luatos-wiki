@@ -13,6 +13,13 @@
 
 |常量|类型|解释|
 |-|-|-|
+|airlink.bindTransport|function|绑定 adapter 到指定 transport|
+|airlink.rpc|function|同步调用对端 RPC|
+|airlink.testNanopbGpio|function|nanopb GPIO RPC loopback 自测|
+|airlink.testNanopbUart|function|nanopb UART RPC loopback 自测|
+|airlink.testNanopbWlan|function|nanopb WLAN RPC loopback 自测|
+|airlink.testNanopbPm|function|nanopb PM RPC loopback 自测|
+|airlink.MODE_LOOPBACK|number|airlink.start参数, loopback自测模式|
 |airlink.MODE_SPI_SLAVE|number|airlink.start参数, SPI从机模式|
 |airlink.MODE_SPI_MASTER|number|airlink.start参数, SPI主机模式|
 |airlink.MODE_UART|number|airlink.start参数, UART模式|
@@ -454,6 +461,125 @@ airlink.power(true)
 -- 注意, 获取之前, 需要确定airlink.ready()已经返回true
 log.info("airlink", "从机固件版本号", airlink.sver())
 
+
+```
+
+---
+
+## airlink.testNanopbGpio()
+
+nanopb GPIO RPC loopback 自测
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|0=全部通过, 负值=失败步骤号|
+
+**例子**
+
+```lua
+-- 在 loopback 模式启动后调用
+local rc = airlink.testNanopbGpio()
+assert(rc == 0, "nanopb GPIO RPC 测试失败: " .. tostring(rc))
+
+```
+
+---
+
+## airlink.testNanopbUart()
+
+nanopb UART RPC loopback 自测
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|0=全部通过, 负值=失败步骤号|
+
+**例子**
+
+无
+
+---
+
+## airlink.testNanopbWlan()
+
+nanopb WLAN RPC loopback 自测
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|0=全部通过, 负值=失败步骤号|
+
+**例子**
+
+无
+
+---
+
+## airlink.testNanopbPm()
+
+nanopb PM RPC loopback 自测
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|0=全部通过, 负值=失败步骤号|
+
+**例子**
+
+无
+
+---
+
+## airlink.ping(data, timeout_ms)
+
+发起异步 ping, 结果通过 sys.subscribe("AIRLINK_PING_RESULT", ...) 接收
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string/zbuff|data 要回显的payload, 可为空字符串|
+|int|timeout_ms 超时毫秒数, 默认3000|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|request_id, 成功发起时返回pkgid; 失败返回nil|
+
+**例子**
+
+```lua
+local reqid = airlink.ping("hello", 3000)
+sys.subscribe("AIRLINK_PING_RESULT", function(id, ok, v1, v2)
+    if id ~= reqid then return end
+    if ok then
+        log.info("ping", "rtt=" .. v1 .. "ms echo=" .. v2)
+    else
+        log.info("ping", "failed: " .. tostring(v1))
+    end
+end)
 
 ```
 

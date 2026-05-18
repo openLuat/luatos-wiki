@@ -61,3 +61,45 @@ end)
 
 ---
 
+## airlbs.get_address(lat, lng, param)
+
+获取地址信息
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|param|number 纬度|
+|param|number 经度|
+|param|table 参数 timeout:超时时间,单位毫秒 默认10000 adapter: 网络适配器id,可选,默认是平台自带的网络协议栈|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true,失败会返回false|
+|string|成功返回地址信息,失败返回错误信息|
+
+**例子**
+
+```lua
+--注意:函数内因使用了http.request阻塞接口，所以api需要在协程中使用
+
+local airlbs = require "airlbs"
+
+sys.taskInit(function()
+    -- 等待网络就绪
+    sys.waitUntil("IP_READY")
+    -- 获取地址信息
+    local result, address = airlbs.get_address(lat, lng)
+    if result then
+        log.info("airlbs.get_address", address)
+    else
+        log.info("airlbs.get_address失败", address)
+    end
+end)
+
+```
+
+---
+

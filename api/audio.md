@@ -23,6 +23,7 @@
 |audio.BUS_DAC|number|硬件输出总线，DAC类型|
 |audio.BUS_I2S|number|硬件输出总线，I2S类型|
 |audio.BUS_SOFT_DAC|number|硬件输出总线，软件模式DAC类型|
+|audio.BUS_ADC|number|硬件输入总线，ADC类型|
 |audio.VOLTAGE_1800|number|可配置的codec工作电压，1.8V|
 |audio.VOLTAGE_3300|number|可配置的codec工作电压，3.3V|
 |audio.RECORD_MONO|number|录音使用单声道|
@@ -482,6 +483,8 @@ local result = audio.vol(0, 90)    --通道0的音量调节到90%，result存放
 ```lua
 audio.setBus(0, audio.BUS_SOFT_DAC)    --通道0的硬件输出通道设置为软件DAC
 audio.setBus(0, audio.BUS_I2S,{chip="es8311",i2cid=0,i2sid=0,voltage=codec.VDDA_3V3})    --通道0的硬件输出通道设置为I2S
+audio.setBus(0, audio.BUS_DAC,{dacid=0})    --通道0的硬件输出通道设置为DAC
+audio.setBus(0, audio.BUS_ADC,{adcid=0, adc_chl=audio.CHL_L, sample_rate=audio.SAMP_16000, bits=audio.BITS_16}) --通道0的输入为板载ADC
 
 ```
 
