@@ -423,7 +423,7 @@ camera.reset_pin(camera_id, 1)
 
 ---
 
-## camera.stream(id, app_id)
+## camera.stream(id, app_id, jump_frame_cnt, min_data_len)
 
 camera输出/停止数据流
 
@@ -431,9 +431,9 @@ camera输出/停止数据流
 
 |传入值类型|解释|
 |-|-|
-|id|camera id|
-|app_id|如果是usb摄像头，则输入usb应用id，其他留空|
-|int|跳帧，针对USB摄像头，跳过N帧后上报，一般情况正常传输是30fps，如果脚本处理不过来，可以跳过N帧上报，默认是0，即不跳|
+|int|camera id|
+|int|app_id 如果是usb摄像头，则输入usb应用id，其他留空|
+|int|跳帧，针对USB摄像头，跳过N帧后上报，一般情况正常传输是摄像头最高帧率，如果脚本处理不过来，可以跳过N帧上报，默认是0，即不跳|
 |int|图像数据最小长度，针对USB摄像头ISO传输可能漏数据的情况，只有大于最小长度的图像帧会上报，默认是1KB|
 
 **返回值**
@@ -445,8 +445,8 @@ camera输出/停止数据流
 **例子**
 
 ```lua
-=
-camera.stream(camera.USB, app_id)
+camera.stream(camera.USB, app_id)       --默认不跳帧
+camera.stream(camera.USB, app_id, 1)    --跳过1帧上报
 
 ```
 
