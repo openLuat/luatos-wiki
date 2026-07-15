@@ -106,7 +106,7 @@ end
 
 ---
 
-## miniz.unzip(zip_file_path, target_dir, debug)
+## miniz.unzip(zip_file_path, target_dir, debug, timeout_ms)
 
 解压ZIP文件到指定目录
 
@@ -117,6 +117,7 @@ end
 |string|zip_file_path ZIP文件的完整路径|
 |string|target_dir 目标解压目录的完整路径, 必须以 / 结尾|
 |boolean|debug 可选, 是否输出解压过程日志, 默认为false|
+|int|timeout_ms 可选, 整个unzip过程的超时时间(毫秒), 默认30000|
 
 **返回值**
 

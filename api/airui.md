@@ -91,7 +91,9 @@
 |传入值类型|解释|
 |-|-|
 |table|opts 可选配置|
+|int\|string|opts.mode 可选，休眠模式，支持 airui.SLEEP_MODE_LIGHT / airui.SLEEP_MODE_DEEP，或 "light" / "deep"|
 |bool|opts.power_down_lcd 休眠时是否关闭 LCD 背光，默认 true|
+|note|默认进入深度睡眠|
 
 **返回值**
 
@@ -182,7 +184,7 @@
 
 |返回值类型|解释|
 |-|-|
-|table|状态表，包含 rotation/w/h|
+|table|状态表，包含 rotation/w/h/sleeping/sleep_mode|
 
 **例子**
 

@@ -30,6 +30,7 @@
 |[fota](fota.md)|`底层固件升级`|
 |[fskv](fskv.md)|`kv数据库,掉电不丢数据`|
 |[ftp](ftp.md)|`ftp 客户端 (服务器推荐使用vsftpd,其他暂不做支持)`|
+|[gbc](gbc.md)|`GBC模拟器`|
 |[gmssl](gmssl.md)|`国密算法(SM2/SM3/SM4)`|
 |[gpio](gpio.md)|`GPIO操作`|
 |[gtfont](gtfont.md)|`高通字库芯片`|
@@ -66,7 +67,6 @@
 |[mobile](mobile.md)|`蜂窝网络`|
 |[modbus](modbus.md)|`modbus主从协议栈协议`|
 |[mqtt](mqtt.md)|`mqtt客户端`|
-|[natp](natp.md)|`网络地址端口转换(开发中)`|
 |[ndk](ndk.md)|`在沙盒化的RV32环境中运行MiniRV32IMA镜像`|
 |[nes](nes.md)|`nes模拟器`|
 |[netdrv](netdrv.md)|`网络设备管理`|
@@ -104,7 +104,6 @@
 |[tp](tp.md)|`触摸库`|
 |[u8g2](u8g2.md)|`u8g2图形处理库`|
 |[uart](uart.md)|`串口操作库`|
-|[ulwip](ulwip.md)|`用户空间的lwip集成(开发中)`|
 |[usb](usb.md)|`usb操作库`|
 |[usbapp](usbapp.md)|`USB功能操作`|
 |[videoplayer](videoplayer.md)|`视频播放库`|

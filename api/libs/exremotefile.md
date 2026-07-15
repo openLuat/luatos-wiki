@@ -23,6 +23,13 @@ V1.0：
 
 2、exremotefile.close()：关闭远程文件管理系统，停止AP热点和关闭HTTP服务器（不卸载SD卡）
 
+-- 版本更新说明
+-- 版本号：202607021200
+-- 1、更新时间：2026-07-02 12:00
+-- 2、更新内容
+--    新增exremotefile.version()接口
+--    支持exremotefile库文件版本号管理功能，版本号的格式为：yyyymmddhhmm，表示yyyy年mm月dd日hh时mm分发布的版本
+
 ```
 
 ## exremotefile.open(ap_opts, sdcard_opts, server_opts)

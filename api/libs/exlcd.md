@@ -17,6 +17,13 @@
 5、exlcd.wakeup()：屏幕唤醒
 6、exlcd.get_sleep()：休眠状态查询
 
+-- 版本更新说明
+-- 版本号：202607021200
+-- 1、更新时间：2026-07-02 12:00
+-- 2、更新内容
+--    新增exlcd.version()接口
+--    支持exlcd库文件版本号管理功能，版本号的格式为：yyyymmddhhmm，表示yyyy年mm月dd日hh时mm分发布的版本
+
 ```
 
 ## exlcd.init(param)

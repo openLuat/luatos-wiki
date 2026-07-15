@@ -23,7 +23,6 @@
 |socket.LWIP_STA|number|使用LWIP协议栈的WIFI STA，值为2|
 |socket.LWIP_AP|number|使用LWIP协议栈的WIFI AP，值为3|
 |socket.LWIP_GP|number|使用LWIP协议栈的移动蜂窝模块，值为1|
-|socket.USB|number|使用LWIP协议栈的USB网卡，值为6|
 |socket.LINK|number|LINK事件|
 |socket.ON_LINE|number|ON_LINE事件|
 |socket.EVENT|number|EVENT事件|
@@ -39,6 +38,7 @@
 |socket.LWIP_USER6|number|使用LWIP协议栈的自定义网卡6, 2025.1.12新增|
 |socket.LWIP_USER7|number|使用LWIP协议栈的自定义网卡7, 2025.1.12新增|
 |socket.LWIP_GP_GW|number|4G代理网关|
+|socket.LWIP_USB|number|LWIP-side USB netif (RNDIS/CDC-ECM)|
 
 
 ## socket.localIP(adapter)

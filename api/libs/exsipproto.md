@@ -19,6 +19,7 @@ local auth = proto.digest_auth({
     uri = "sip:example.com"
 })
 
+
 ```
 
 ## exsipproto.parse_headers(resp)

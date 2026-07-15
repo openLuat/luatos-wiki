@@ -6,6 +6,13 @@
 exmtn.init(1, 0)  -- 初始化，1个块，缓存写入
 exmtn.log("info", "tag", "message", 123)  -- 输出运维日志
 
+-- 版本更新说明
+-- 版本号：202607021200
+-- 1、更新时间：2026-07-02 12:00
+-- 2、更新内容
+--    新增exmtn.version()接口
+--    支持exmtn库文件版本号管理功能，版本号的格式为：yyyymmddhhmm，表示yyyy年mm月dd日hh时mm分发布的版本
+
 ```
 
 ## exmtn.init(blocks, write_way)

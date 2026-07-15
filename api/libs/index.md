@@ -9,6 +9,7 @@ airlbs
 dhcam
 dhcpsrv
 dnsproxy
+exaudio
 exgnss
 exlcd
 exmodbus
@@ -28,7 +29,6 @@ lbsLoc2
 libfota
 libfota2
 libnet
-netLed
 udpsrv
 xmodem
 ```

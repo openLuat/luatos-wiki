@@ -11,6 +11,13 @@
 5、modbus:on(callback)：从站注册回调接口，用于处理主站发起的请求（仅适用于 RTU、ASCII、TCP 从站模式）
 6、exmodbus.debug(enable)：设置 debug 开关，开启后会打印接收和发送的原始数据
 
+-- 版本更新说明
+-- 版本号：202607021200
+-- 1、更新时间：2026-07-02 12:00
+-- 2、更新内容
+--    新增exmodbus.version()接口
+--    支持exmodbus库文件版本号管理功能，版本号的格式为：yyyymmddhhmm，表示yyyy年mm月dd日hh时mm分发布的版本
+
 ```
 
 ## exmodbus.debug(enable)

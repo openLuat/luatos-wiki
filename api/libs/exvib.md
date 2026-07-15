@@ -108,6 +108,13 @@ end
 sys.taskInit(vib_fnc)
 
 
+-- 版本更新说明
+-- 版本号：202607021200
+-- 1、更新时间：2026-07-02 12:00
+-- 2、更新内容
+--    新增exvib.version()接口
+--    支持exvib库文件版本号管理功能，版本号的格式为：yyyymmddhhmm，表示yyyy年mm月dd日hh时mm分发布的版本
+
 ```
 
 ## exvib.read_xyz()

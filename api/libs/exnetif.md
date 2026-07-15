@@ -3,12 +3,46 @@
 **示例**
 
 ```lua
-本文件的对外接口有5个：
+本文件的对外接口有9个：
 1、exnetif.set_priority_order(networkConfigs)：设置网络优先级顺序并初始化对应网络(需要在task中调用)
 2、exnetif.notify_status(cb_fnc)：设置网络状态变化回调函数
 3、exnetif.setproxy(adapter, main_adapter,other_configs)：配置网络代理实现多网融合(需要在task中调用)
 4、exnetif.check_network_status(interval),检测间隔时间ms(选填)，不填时只检测一次，填写后将根据间隔时间循环检测，会提高模块功耗
-5、exnetif.close(type, adapter)：关闭指定网卡,内核固件版本号需>=2020
+5、exnetif.close(type, adapter)：关闭网卡功能或多网融合,内核固件版本需为2026年1月后的固件
+6、exnetif.update_wifi(config)：运行时更新WiFi账号密码,用于引擎主机等需要动态获取WiFi凭证的场景
+7、exnetif.switch_upstream_wifi(config)：多网融合代理模式下切换上游WiFi，自动处理NAPT关闭/重开(需要在task中调用)
+8、exnetif.disable_upstream_autoreconnect()：禁用上游WiFi自动重连功能
+9、exnetif.version()：获取库文件版本信息
+
+-- 版本更新说明
+-- 版本号：202607141200
+-- 1、更新时间：2026-07-14 12:00
+-- 2、更新内容
+--    新增exnetif.switch_upstream_wifi(config)接口：多网融合代理模式下切换上游WiFi，封装NAPT关闭→断连→重连→NAPT恢复全流程
+--    新增exnetif.disable_upstream_autoreconnect()接口：禁用上游WiFi自动重连
+--    setproxy 增加 auto_reconnect 参数：建立代理时可选择启用上游WiFi异常掉线自动重连
+--    exnetif.close(true) 同步清理 wifi_config 字段
+
+-- 版本号：202607100900
+-- 1、更新时间：2026-07-10 09:00
+-- 2、更新内容
+--    exnetif.close(true)：完整实现关闭多网融合功能（停止 DHCP 服务器→关闭 DNS 代理→禁用 NAPT→停止代理网卡服务）
+--    exnetif.close(false, socket.LWIP_GP_GW)：支持关闭 airlink 4G 网卡（仅设置 DISCONNECTED 状态+apply_priority，无硬件操作）
+--    setproxy：保存 DHCP 服务器引用和代理网卡列表，支持多次 setproxy 后的全部清理
+--    修复 proxy_state 单值覆盖问题：多次 setproxy 的代理网卡改为数组累积，close(true) 遍历全部关闭
+
+-- 版本号：202607022100
+-- 1、更新时间：2026-07-02 21:00
+-- 2、更新内容
+--    新增exnetif.update_wifi(config)接口
+--    修复： 1601 多网融合设置以太网 airlink over uart 4g顺序后，以太网断开后 4g网络连不上问题，ip_lose_handle 网卡掉线时遗漏恢复 OPENED 网卡
+--    修复： 1601引擎主机的gpio设置与开发板不同，原airlink_wifi_hardware_init函数会导致引擎主机按键中断失效，airlink_wifi_hardware_init 支持 UART/SPI 双模式，目前改为了手动配置
+
+-- 版本号：202607021200
+-- 1、更新时间：2026-07-02 12:00
+-- 2、更新内容
+--    新增exnetif.version()接口
+--    支持exnetif库文件版本号管理功能，版本号的格式为：yyyymmddhhmm，表示yyyy年mm月dd日hh时mm分发布的版本
 
 ```
 
@@ -304,28 +338,94 @@ exnetif.set_priority_order({
 
 ---
 
-## exnetif.close(type,adapter)
+## exnetif.update_wifi(config)
 
-关闭网卡功能。(内核固件版本号需>=2020)
+运行时更新WiFi账号密码。用于如下场景：设备先通过4G/以太网上线获取WiFi凭证，再动态更新WiFi连接信息。
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|param|type boolean 是否为多网融合|
-|param|adapter number 需要关闭的网卡|
+|table|config WiFi配置表|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|boolean|操作结果|
+|boolean|成功返回true，失败返回false|
 
 **例子**
 
 ```lua
-    exnetif.close(true) --关闭多网融合功能
-    exnetif.close(false,socket.LWIP_ETH)  --关闭优先级中的以太网网卡
+    -- 场景：设备通过4G上线后，从服务端获取WiFi账号密码，动态更新
+    exnetif.update_wifi({
+        ssid = "new_wifi_ssid",
+        password = "new_wifi_password",
+        bssid = "AABBCCDDEEFF"  -- 可选，指定BSSID
+    })
+    -- 如果WiFi之前未初始化（未在set_priority_order中配置），会自动初始化并加入优先级列表
+
+```
+
+---
+
+## exnetif.close(type,adapter)
+
+关闭网卡功能。(内核固件版本支持情况：Air8000模组对应V2022版本及以后版本，Air780EPM/EHM/EHV/EGH 模组对应V2024及以后版本，Air1601模组对应V1008版本固件)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|param|type boolean 是否为多网融合(true=关闭多网融合, false=关闭单个网卡)|
+|param|adapter number 需要关闭的网卡，可选值: socket.LWIP_ETH/LWIP_USER1/LWIP_STA/LWIP_AP/LWIP_GP/LWIP_GP_GW|
+
+**返回值**
+
+无
+
+**例子**
+
+无
+
+---
+
+## exnetif.switch_upstream_wifi(config)
+
+切换代理模式下的上游WiFi网络。用于场景：多网融合（如ETH -> STA）运行时切换上游WiFi凭证。
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|table|config WiFi配置表|
+
+**返回值**
+
+无
+
+**例子**
+
+无
+
+---
+
+## exnetif.disable_upstream_autoreconnect()
+
+禁用上游WiFi自动重连功能
+
+**参数**
+
+无
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+    exnetif.disable_upstream_autoreconnect()
 
 ```
 

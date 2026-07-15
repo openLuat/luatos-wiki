@@ -267,7 +267,7 @@ print("ticks", result, diff_tick)
 
 ## mcu.setXTAL(source_main, source_32k, delay)
 
-选择时钟源,当前仅air105支持
+选择时钟源,当前无模组支持
 
 **参数**
 

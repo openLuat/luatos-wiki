@@ -290,3 +290,177 @@ end
 
 ---
 
+## gmssl.sm2pointmul(k, px, py)
+
+SM2标量点乘: R = k * P
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|标量k, HEX字符串(64字符)|
+|string|点P的x坐标, HEX字符串(64字符)|
+|string|点P的y坐标, HEX字符串(64字符)|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|结果点R的x坐标, HEX字符串(64字符)|
+|string|结果点R的y坐标, HEX字符串(64字符)|
+
+**例子**
+
+```lua
+-- 计算 R = k * P (核心用于 GBT 32918.3-2016 SM2密钥交换)
+local rx, ry = gmssl.sm2pointmul(kHex, pxHex, pyHex)
+-- 本函数于2026.02.02新增,用于支持SM2密钥交换协议
+
+```
+
+---
+
+## gmssl.sm2ecdh(private, peerPx, peerPy)
+
+SM2 ECDH密钥协商: S = d * P
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|己方私钥, HEX字符串(64字符)|
+|string|对方公钥X, HEX字符串(64字符)|
+|string|对方公钥Y, HEX字符串(64字符)|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|协商结果点的x坐标, HEX字符串(64字符)|
+|string|协商结果点的y坐标, HEX字符串(64字符)|
+
+**例子**
+
+```lua
+-- ECDH协商: 己方私钥 * 对方公钥
+local sx, sy = gmssl.sm2ecdh(privateKey, peerPkx, peerPky)
+-- 用于 GBT 32918.3-2016 SM2密钥交换协议
+-- 本函数于2026.02.02新增
+
+```
+
+---
+
+## gmssl.sm2pointadd(px1, py1, px2, py2)
+
+SM2椭圆曲线点加运算: R = P + Q
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|点P的x坐标, HEX字符串(64字符)|
+|string|点P的y坐标, HEX字符串(64字符)|
+|string|点Q的x坐标, HEX字符串(64字符)|
+|string|点Q的y坐标, HEX字符串(64字符)|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|结果点R的x坐标, HEX字符串(64字符), 失败返回nil|
+|string|结果点R的y坐标, HEX字符串(64字符), 失败返回nil|
+
+**例子**
+
+```lua
+-- 计算 R = P + Q (用于 GBT 32918.3-2016 SM2密钥交换协议的 [h*t]*(P+Q) 步骤)
+local rx, ry = gmssl.sm2pointadd(px1, py1, px2, py2)
+-- 本函数用于 SM2 密钥交换协议 GB/T 32918.3-2016
+
+```
+
+---
+
+## gmssl.sm2pointisoncurve(px, py)
+
+SM2判断点是否在椭圆曲线上
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|点P的x坐标, HEX字符串(64字符)|
+|string|点P的y坐标, HEX字符串(64字符)|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|boolean|点在曲线上返回true, 否则返回false|
+
+**例子**
+
+```lua
+-- 用于 GBT 32918.3-2016 SM2密钥交换协议的公钥合法性校验
+local ok = gmssl.sm2pointisoncurve(px, py)
+-- 本函数用于 SM2 密钥交换协议, 协议要求校验对方临时公钥是否在曲线上
+
+```
+
+---
+
+## gmssl.sm2bnadd(a, b)
+
+SM2 GF(n)模加: r = (a + b) mod n
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|操作数a, HEX字符串(64字符), 256-bit大整数|
+|string|操作数b, HEX字符串(64字符), 256-bit大整数|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|结果r, HEX字符串(64字符), (a+b) mod SM2曲线阶n|
+
+**例子**
+
+```lua
+-- GBT 32918.3-2016 SM2密钥交换协议中的模n大数运算
+local r = gmssl.sm2bnadd(aHex, bHex)
+
+```
+
+---
+
+## gmssl.sm2bnmul(a, b)
+
+SM2 GF(n)模乘: r = (a * b) mod n
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|操作数a, HEX字符串(64字符), 256-bit大整数|
+|string|操作数b, HEX字符串(64字符), 256-bit大整数|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|结果r, HEX字符串(64字符), (a*b) mod SM2曲线阶n|
+
+**例子**
+
+```lua
+-- GBT 32918.3-2016 SM2密钥交换协议中的模n大数运算
+local r = gmssl.sm2bnmul(aHex, bHex)
+
+```
+
+---
+

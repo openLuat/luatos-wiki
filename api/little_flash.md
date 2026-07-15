@@ -187,7 +187,7 @@ log.info("lf.getInfo",lf.getInfo(lf_device))
 
 ---
 
-## lf.mount(flash, mount_point, offset, maxsize)
+## lf.mount(flash, mount_point, offset, maxsize, opts)
 
 挂载 little_flash lfs文件系统
 
@@ -199,6 +199,7 @@ log.info("lf.getInfo",lf.getInfo(lf_device))
 |string|mount_point 挂载目录名|
 |int|起始偏移量,默认0|
 |int|总大小, 默认是整个flash|
+|table/string|opts 可选, 文件系统选择. nil/"lfs2"为默认; 可传"pgfs"/"tfs"或{fs="pgfs"}、{fs="tfs"}|
 
 **返回值**
 
@@ -212,6 +213,54 @@ log.info("lf.getInfo",lf.getInfo(lf_device))
 log.info("lf.mount",lf.mount(little_flash_device,"/little_flash"))
 
 ```
+
+---
+
+## lf.unmount(mount_point)
+
+取消挂载 little_flash 文件系统
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|mount_point 挂载目录名|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|成功返回true|
+
+**例子**
+
+```lua
+log.info("lf.unmount", lf.unmount("/little_flash"))
+
+```
+
+---
+
+## lf.pgfsctl(cmd, value)
+
+PGFS runtime control helper
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|cmd lock_mode\|powercut_stage\|corrupt_latest_cp\|bad_block_once\|reset_runtime\|run_c_tests|
+|string/bool|value value for command|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|bool|success|
+
+**例子**
+
+无
 
 ---
 

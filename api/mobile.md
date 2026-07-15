@@ -146,6 +146,28 @@ log.info("simid", mobile.simid())
 
 ---
 
+## mobile.muidSet(muid)
+
+设置MUID
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|muid MUID字符串|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|0成功, -1失败|
+
+**例子**
+
+无
+
+---
+
 ## mobile.iccid(id)
 
 获取或设置ICCID
@@ -899,54 +921,248 @@ mobile.setBand(buff, 4) --设置使用的band一共4个，为3,5,8,40
 
 ---
 
-## mobile.nstOnOff(onoff, uart_id)
+## mobile.rfTestMode(uart_id, onoff)
 
-RF测试开关和配置
+RF测试:进入/退出模式 (同 nstOnOff, 推荐用这个)
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|boolean|true开启测试模式，false关闭|
-|int|串口号|
+|int|串口号,默认 VUART_0|
+|boolean|true 进入, false 退出|
+|return|nil|
 
 **返回值**
 
-|返回值类型|解释|
-|-|-|
-|nil|无返回值|
+无
 
 **例子**
 
 ```lua
-mobile.nstOnOff(true, uart.VUART_0)    --打开测试模式，并且用虚拟串口发送结果
-mobile.nstOnOff(false) --关闭测试模式
+mobile.rfTestMode(uart.VUART_0, true)
+mobile.rfTestMode(nil, false)
 
 ```
 
 ---
 
-## mobile.nstInput(data)
+## mobile.rfTestInput(data)
 
-RF测试数据输入
+RF测试:喂入字节 (同 nstInput, 推荐用这个)
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|string|or zbuff 用户从串口获取的数据，注意，当获取完所有数据后，需要再传一个nil来作为传输结束|
+|string|or zbuff 字节流; 传 nil 表示 flush|
+|return|nil|
+
+**返回值**
+
+无
+
+**例子**
+
+```lua
+mobile.rfTestInput(uart_data)
+mobile.rfTestInput(nil)
+
+```
+
+---
+
+## mobile.rfTestParam(key, value, is_set)
+
+RF测试:查询/设置 PC 端"模组"参数 (NPI 位 / 状态机 / 错误注入)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|key  "rfCaliDone" / "rfNSTDone" / "rfCTDone" / "state" / "erfMode"|
+|int|value   读时忽略, 写时给值|
+|boolean|is_set true=写, false=读 (默认读)|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|nil|无返回值|
+|int|读时返回值; 写时返回 0 成功 / -1 失败|
 
 **例子**
 
 ```lua
-mobile.nstInput(uart_data)
-mobile.nstInput(nil)
+print(mobile.rfTestParam("state"))  -- 0
+mobile.rfTestParam("rfCaliDone", 1, true)
+
+```
+
+---
+
+## mobile.rfTestImei()
+
+RF测试:读 IMEI 字符串 (15 位 ASCII)
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|15 位 IMEI, 失败返回 nil|
+
+**例子**
+
+```lua
+print(mobile.rfTestImei())  --> 864317081553409
+
+```
+
+---
+
+## mobile.rfTestImeiSet(imei)
+
+RF测试:写 IMEI 字符串 (15 位 ASCII)
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|imei 15 位 IMEI|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|0 成功, -1 长度错误|
+
+**例子**
+
+```lua
+mobile.rfTestImeiSet("864317081553409")
+
+```
+
+---
+
+## mobile.rfTestGmData()
+
+RF测试:读 Golden Unit 数据
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|数据字符串, 失败返回 nil|
+
+**例子**
+
+```lua
+print(mobile.rfTestGmData())
+
+```
+
+---
+
+## mobile.rfTestGmDataSet(data)
+
+RF测试:写 Golden Unit 数据
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|data 数据字符串|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|0 成功, -1 失败|
+
+**例子**
+
+```lua
+mobile.rfTestGmDataSet("golden data")
+
+```
+
+---
+
+## mobile.rfTestNst(hex)
+
+RF测试: NST 校准/非信令指令同步处理
+
+**参数**
+
+|传入值类型|解释|
+|-|-|
+|string|hex 输入的 hex 字符串, 如 "02040900..."|
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|int|0 成功, -2 CRC 错误, -3 数据块索引错误, 其他错误|
+|string/nil|成功且有输出时返回响应字符串 (如 "MT0204..."), 否则 nil|
+
+**例子**
+
+```lua
+local rc, resp = mobile.rfTestNst("02040900010003000500080022002600270028002900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000034126000076A")
+
+```
+
+---
+
+## mobile.rfTestVersion()
+
+RF测试:读取 RF/CP 版本及模块信息
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|AT+ECVERSION? 响应体多行字符串,失败返回nil|
+
+**例子**
+
+```lua
+local info = mobile.rfTestVersion()
+
+```
+
+---
+
+## mobile.rfTestBandList()
+
+RF测试:读取支持的频段列表
+
+**参数**
+
+无
+
+**返回值**
+
+|返回值类型|解释|
+|-|-|
+|string|逗号分隔的频段列表,失败返回nil|
+
+**例子**
+
+```lua
+local bands = mobile.rfTestBandList()
 
 ```
 

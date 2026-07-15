@@ -11,6 +11,13 @@
         require "dhcam" -- 首先加载具体型号的摄像头功能模块（如大华）
         require "exremotecam" -- 然后加载exremotecam主模块
 
+-- 版本更新说明
+-- 版本号：202607021200
+-- 1、更新时间：2026-07-02 12:00
+-- 2、更新内容
+--    新增dhcam.version()接口
+--    支持dhcam库文件版本号管理功能，版本号的格式为：yyyymmddhhmm，表示yyyy年mm月dd日hh时mm分发布的版本
+
 ```
 
 ## split_string_by_pipe(input_str,return_type)
@@ -144,6 +151,8 @@ URL编码函数，用于将字符串转换为符合URL标准的编码格式
 |number|dahua_param.channel 摄像头通道号，默认为全局的DH_channel|
 |number|dahua_param.x OSD显示的X坐标，默认为0|
 |number|dahua_param.y OSD显示的Y坐标，默认为0|
+|string|dahua_param.username 摄像头登录用户名（可选，默认为"admin"）|
+|string|dahua_param.password 摄像头登录密码（可选，默认为"Air123456"）|
 
 **返回值**
 
@@ -169,6 +178,8 @@ URL编码函数，用于将字符串转换为符合URL标准的编码格式
 |string|dahua_param.host 摄像头/NVR的IP地址|
 |number|dahua_param.channel 摄像头通道号|
 |string|dahua_param.save_path 照片保存路径（可选，默认为"/sd/1.jpeg"）|
+|string|dahua_param.username 摄像头登录用户名（可选，默认为"admin"）|
+|string|dahua_param.password 摄像头登录密码（可选，默认为"Air123456"）|
 
 **返回值**
 

@@ -23,6 +23,7 @@
 |airlink.MODE_SPI_SLAVE|number|airlink.start参数, SPI从机模式|
 |airlink.MODE_SPI_MASTER|number|airlink.start参数, SPI主机模式|
 |airlink.MODE_UART|number|airlink.start参数, UART模式|
+|airlink.MODE_HSPI_MASTER|number|airlink.start参数, XT804 HSPI主机模式|
 |airlink.CONF_SPI_ID|number|SPI配置参数, 设置SPI的ID|
 |airlink.CONF_SPI_CS|number|SPI配置参数, 设置SPI的CS脚的GPIO|
 |airlink.CONF_SPI_RDY|number|SPI/UART配置参数, 设置RDY脚的GPIO|

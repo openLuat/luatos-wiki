@@ -24,8 +24,8 @@ adc.close(adc.CH_VBAT)
 
 |常量|类型|解释|
 |-|-|-|
-|adc.ADC_RANGE_3_6|number|air105的ADC分压电阻开启，范围0~3.76V|
-|adc.ADC_RANGE_1_8|number|air105的ADC分压电阻关闭，范围0~1.88V|
+|adc.ADC_RANGE_3_6|number|ADC分压电阻开启，范围0~3.76V|
+|adc.ADC_RANGE_1_8|number|ADC分压电阻关闭，范围0~1.88V|
 |adc.ADC_RANGE_3_8|number|air780E开启ADC0,1分压电阻，范围0~3.8V，将要废弃，不建议使用|
 |adc.ADC_RANGE_1_2|number|air780E关闭ADC0,1分压电阻，范围0~1.2V，将要废弃，不建议使用|
 |adc.ADC_RANGE_MAX|number|ADC开启内部分压后所能到达最大量程，由具体芯片决定|
@@ -68,13 +68,13 @@ adc.close(4) -- 若需要持续读取, 则不需要close, 功耗会高一点.
 
 ## adc.setRange(range)
 
-设置ADC的测量范围，注意这个和具体芯片有关，目前只支持air105/Air780EXXX系列
+设置ADC的测量范围
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|int|range参数,与具体设备有关,比如air105填adc.ADC_RANGE_1_8和adc.ADC_RANGE_3_6|
+|int|range参数,与具体设备有关|
 
 **返回值**
 
@@ -86,12 +86,6 @@ adc.close(4) -- 若需要持续读取, 则不需要close, 功耗会高一点.
 
 ```lua
 -- 本函数要在调用adc.open之前就调用, 之后调用无效!!!
-
--- 关闭air105内部分压
-adc.setRange(adc.ADC_RANGE_1_8)
--- 打开air105内部分压
-adc.setRange(adc.ADC_RANGE_3_6)
-
 
 -- Air780EXXX支持多种，但是建议用以下2种
 adc.setRange(adc.ADC_RANGE_MIN) -- 关闭分压

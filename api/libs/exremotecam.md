@@ -24,14 +24,18 @@ local osd_param = {
     channel = 0,  -- 摄像头通道号
     text = "行1|行2|行3",  -- OSD文本内容，需用竖线分隔，格式如"1111|2222|3333|4444"
     x = 0,  -- 显示位置的X坐标
-    y = 2000  -- 显示位置的Y坐标
+    y = 2000,  -- 显示位置的Y坐标
+    username = "admin",  -- 摄像头登录用户名
+    password = "Air123456"  -- 摄像头登录密码
 }
 
 -- 拍照功能参数配置表
 local photo_param = {
     brand = "dhcam",  -- 摄像头品牌，当前仅支持"dhcam"(大华)
     host = "192.168.1.108",  -- 摄像头/NVR的IP地址
-    channel = 0  -- 摄像头通道号
+    channel = 0,  -- 摄像头通道号
+    username = "admin",  -- 摄像头登录用户名
+    password = "Air123456"  -- 摄像头登录密码
 }
 
 function camera_start()
@@ -50,6 +54,13 @@ end
 
 sys.taskInit(camera_start)
 
+-- 版本更新说明
+-- 版本号：202607021200
+-- 1、更新时间：2026-07-02 12:00
+-- 2、更新内容
+--    新增exremotecam.version()接口
+--    支持exremotecam库文件版本号管理功能，版本号的格式为：yyyymmddhhmm，表示yyyy年mm月dd日hh时mm分发布的版本
+
 ```
 
 ## exremotecam.osd(camera_param)
@@ -67,6 +78,8 @@ sys.taskInit(camera_start)
 |string|camera_param.text OSD文本内容，需用竖线分隔|
 |number|camera_param.x 显示位置的X坐标|
 |number|camera_param.y 显示位置的Y坐标|
+|string|camera_param.username 摄像头登录用户名（可选，默认为"admin"）|
+|string|camera_param.password 摄像头登录密码（可选，默认为"Air123456"）|
 
 **返回值**
 
@@ -93,6 +106,8 @@ sys.taskInit(camera_start)
 |string|camera_param.host 摄像头/NVR的IP地址|
 |number|camera_param.channel 摄像头通道号（主要用于NVR）|
 |string|camera_param.save_path 照片保存路径（可选，默认为"/sd/1.jpeg"）|
+|string|camera_param.username 摄像头登录用户名（可选，默认为"admin"）|
+|string|camera_param.password 摄像头登录密码（可选，默认为"Air123456"）|
 
 **返回值**
 

@@ -33,6 +33,7 @@ fonts
 fota
 fskv
 ftp
+gbc
 gmssl
 gpio
 gtfont
@@ -69,7 +70,6 @@ mlx90640
 mobile
 modbus
 mqtt
-natp
 ndk
 nes
 netdrv
@@ -107,7 +107,6 @@ touchkey
 tp
 u8g2
 uart
-ulwip
 usb
 usbapp
 videoplayer

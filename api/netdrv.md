@@ -11,6 +11,10 @@
 |netdrv.RESET_HARD|number|请求对网卡硬复位,当前仅支持CH390H|
 |netdrv.RESET_SOFT|number|请求对网卡软复位,当前仅支持CH390H|
 |netdrv.EVT_SOCKET|number|事件类型-socket事件|
+|netdrv.CH_HW|number|数据包通道-物理硬件 (HW RX = FROM_HW, send_raw target TO_HW)|
+|netdrv.CH_LWIP|number|数据包通道-LWIP协议栈 (send_raw target TO_LWIP, 未来 FROM_LWIP)|
+|netdrv.CH_NAPT|number|数据包通道-NAPT层 (send_raw target TO_NAPT, 未来 FROM_NAPT)|
+|netdrv.EVT_PKG|number|事件类型-数据包事件|
 
 
 ## netdrv.setup(id, tp, opts)
@@ -370,55 +374,24 @@ end)
 
 ---
 
-## netdrv.on(adapter_id, event_type, callback)
+## netdrv.send_raw(id, target, zbuff, len)
 
-订阅网络事件
+直接向 netdrv 链路投递原始数据包
 
 **参数**
 
 |传入值类型|解释|
 |-|-|
-|int|网络适配器的id|
-|int|事件总类型, 当前支持 netdrv.EVT_SOCKET|
-|function|回调函数 function(id, event, params)|
+|int|网络适配器编号|
+|int|投递目标 (target/dst):|
 
 **返回值**
 
-|返回值类型|解释|
-|-|-|
-|bool|成功与否,成功返回true,否则返回nil|
+无
 
 **例子**
 
-```lua
--- 订阅socket连接状态变化事件
-netdrv.on(socket.LWIP_ETH, netdrv.EVT_SOCKET, function(id, event, params)
-    -- id 是网络适配器id
-    -- event是事件id, 字符串类型, 
-        - create 创建socket对象
-        - release 释放socket对象
-        - connecting 正在连接, 域名解析成功后出现
-        - connected 连接成功, TCP三次握手成功后出现
-        - closed 连接关闭
-        - remote_close 远程关闭, 网络中断,或者服务器主动断开
-        - timeout dns解析超时,或者tcp连接超时
-        - error 错误,包括一切异常错误
-    -- params是参数表
-        - remote_ip 远端ip地址,未必存在
-        - remote_port 远端端口,未必存在
-        - online_ip 实际连接的ip地址,未必存在
-        - domain_name 远端域名,如果是通过域名连接的话, release时没有这个值, create时也没有
-    log.info("netdrv", "socket event", id, event, json.encode(params or {}))
-    if params then
-        -- params里会有remote_ip, remote_port等信息, 可按需获取
-        local remote_ip = params.remote_ip
-        local remote_port = params.remote_port
-        local domain_name = params.domain_name
-        log.info("netdrv", "socket event", "remote_ip", remote_ip, "remote_port", remote_port, "domain_name", domain_name)
-    end
-end)
-
-```
+无
 
 ---
 

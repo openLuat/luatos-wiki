@@ -3,20 +3,30 @@
 **示例**
 
 ```lua
--- 载入一个RV32镜像并执行若干步
-local ctx, err = ndk.rv32i("/luadb/app.bin", 32 * 1024, 1024)
+-- 最小生命周期: create -> info -> setData -> exec -> getData -> stop/reset -> release
+local ctx, err = ndk.rv32i("/luadb/baremetal.bin", 32 * 1024, 1024)
 if not ctx then
     log.error("ndk", err)
     return
 end
-local ok, ret = ndk.exec(ctx, {steps = 100000, elapsed = 500})
-if ok then
-    log.info("ndk", "retval", ret)
+local info = ndk.info(ctx)
+log.info("ndk", "mem", info.mem, "exchange", info.exchange, "abi", info.abi_version, "features", info.features, "last_error", info.last_error)
+ndk.setData(ctx, "ping")
+local ok, ret, mcause, mtval = ndk.exec(ctx, {steps = 100000, elapsed = 500})
+if not ok then
+    log.error("ndk", ret, mcause, mtval)
+    ndk.stop(ctx, 1000)
+    return
 end
+log.info("ndk", "retval", ret, "data", ndk.getData(ctx, 16, 0))
+ndk.stop(ctx, 1000) -- 空闲态也可安全调用
+ndk.reset(ctx)
+ctx = nil
+collectgarbage("collect")
 
 ```
 
-## ndk.rv32i(path, mem_size, exchange_size)
+## ndk.rv32i(path, mem_size, exchange_size, opts)
 
 创建并加载一个RV32镜像
 
@@ -25,8 +35,9 @@ end
 |传入值类型|解释|
 |-|-|
 |string|path 镜像路径|
-|int|mem_size 可选，沙盒RAM大小，默认 LUAT_NDK_DEFAULT_RAM_SIZE|
-|int|exchange_size 可选，交换区大小，默认 LUAT_NDK_DEFAULT_EXCHANGE_SIZE|
+|int|mem_size 可选，沙盒RAM大小，默认 8 KiB，最大 512 KiB（LUAT_NDK_MAX_RAM_SIZE）|
+|int|exchange_size 可选，交换区大小，默认 LUAT_NDK_DEFAULT_EXCHANGE_SIZE，必须小于 mem_size|
+|table|opts 可选，目前支持 {isa="rv32ima"\|"rv32imf"}|
 
 **返回值**
 
@@ -98,14 +109,14 @@ end
 |传入值类型|解释|
 |-|-|
 |userdata|ctx ndk.rv32i 返回的上下文|
-|int\|table|opts 步数或表 {steps=步数, elapsed=每步时间us}，步数为0使用默认预算|
+|int\|table|opts 步数或表 {steps=步数, elapsed=每步时间us}，steps=0 表示不限步数（运行到 SYSCON 退出、ecall、trap 或 ndk.stop）|
 |int|elapsed_us 可选，opts为数字时的步时间us|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|boolean,int|成功返回 true,retval；失败返回 false,err,mcause,mtval|
+|boolean,int|成功返回 true,retval；失败返回 false,err,mcause,mtval。运行中调用会返回 busy|
 
 **例子**
 
@@ -127,7 +138,7 @@ end
 
 |返回值类型|解释|
 |-|-|
-|boolean|成功返回 true，失败返回 false,err|
+|boolean|成功返回 true，失败返回 false,err。运行中/停止中调用会返回 busy|
 
 **例子**
 
@@ -144,14 +155,14 @@ end
 |传入值类型|解释|
 |-|-|
 |userdata|ctx ndk.rv32i 返回的上下文|
-|int\|table|opts 步数或表 {steps=步数, elapsed=每步时间us}|
+|int\|table|opts 步数或表 {steps=步数, elapsed=每步时间us}，steps=0 表示不限步数|
 |int|elapsed_us 可选，opts为数字时的步时间us|
 
 **返回值**
 
 |返回值类型|解释|
 |-|-|
-|int|线程ID，失败返回 nil,err|
+|int|线程ID（递增），失败返回 nil,err。运行中/停止中调用会返回 busy|
 
 **例子**
 
@@ -174,7 +185,7 @@ end
 
 |返回值类型|解释|
 |-|-|
-|boolean|成功返回 true，失败返回 false,err|
+|boolean|成功返回 true，失败返回 false,err。空闲态调用为幂等成功；wait_ms=0可用于非阻塞轮询|
 
 **例子**
 
@@ -196,7 +207,7 @@ end
 
 |返回值类型|解释|
 |-|-|
-|table|包含 mem/exchange/exchange_addr/image/running/mcause/mtval|
+|table|包含 mem/exchange/exchange_addr/image/running/mcause/mtval/abi_magic/abi_version/features/last_error/event_slots/isa/flen/fcsr/frm/fflags，便于判断生命周期状态和ABI能力|
 
 **例子**
 
